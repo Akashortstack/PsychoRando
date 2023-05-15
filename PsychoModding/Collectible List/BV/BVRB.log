@@ -1,0 +1,36 @@
+Game: Engine Listing objects of class global.collectibles.EmotionalBaggageTag
+Game: Engine global.collectibles.EmotionalBaggageTag EmoTag04 Position X,Y,Z 8 150 -2813 Orientation OX,OY,OZ 2 -27 -4
+Game: Engine global.collectibles.EmotionalBaggageTag EmoTag01 Position X,Y,Z -2284 921 -3038 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.EmotionalBaggageTag EmoTag02 Position X,Y,Z -583 1946 -5915 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.EmotionalBaggageTag EmoTag03 Position X,Y,Z -3152 2856 -11986 Orientation OX,OY,OZ 0 0 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class global.collectibles.EmotionalBaggage
+Game: Engine global.collectibles.EmotionalBaggage EmoBag04 Position X,Y,Z 1104 136 1266 Orientation OX,OY,OZ 2 -43 9
+Game: Engine global.collectibles.EmotionalBaggage EmoBag02 Position X,Y,Z -2112 1943 -286 Orientation OX,OY,OZ -2 177 -3
+Game: Engine global.collectibles.EmotionalBaggage EmoBag03 Position X,Y,Z 827 1624 -4369 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.EmotionalBaggage EmoBag01 Position X,Y,Z -10083 1028 1218 Orientation OX,OY,OZ 0 0 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class global.collectibles.MaxLivesUp
+Game: Engine global.collectibles.MaxLivesUp MaxLivesUp1 Position X,Y,Z 2032 2680 -6940 Orientation OX,OY,OZ 0 0 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class global.collectibles.MaxAmmoUp
+Game: Engine global.collectibles.MaxAmmoUp MaxAmmoUp Position X,Y,Z -6709 2471 -2290 Orientation OX,OY,OZ 0 -168 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class global.characters.Vault
+Game: Engine global.characters.Vault gardenVault Position X,Y,Z -11151 2332 231 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.characters.Vault SewerVault Position X,Y,Z -7967 -72 -9302 Orientation OX,OY,OZ 0 0 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class bv.props.MagicPainting
+Game: Engine bv.props.MagicPainting Rose3Painting Position X,Y,Z -717 -241 4557 Orientation OX,OY,OZ -20 167 0
+Game: Engine bv.props.MagicPainting ArchPainting Position X,Y,Z 171 -167 4168 Orientation OX,OY,OZ -3 -149 5
+Game: Engine bv.props.MagicPainting LadderPainting Position X,Y,Z -8865 1282 694 Orientation OX,OY,OZ -19 -147 -5
+Game: Engine bv.props.MagicPainting Rose2Painting Position X,Y,Z -9112 1280 815 Orientation OX,OY,OZ -21 -156 0
+Game: Engine bv.props.MagicPainting VinePainting Position X,Y,Z -8276 992 -10941 Orientation OX,OY,OZ 3 110 22
+Game: Engine bv.props.MagicPainting WindowPainting Position X,Y,Z -8440 937 -11320 Orientation OX,OY,OZ -7 110 11
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class bv.props.Card
+Game: Engine bv.props.Card TigerPaintingCard Position X,Y,Z -4170 392 -3368 Orientation OX,OY,OZ 0 29 0
+Game: Engine bv.props.Card DragonPaintingCard Position X,Y,Z -6803 595 -3813 Orientation OX,OY,OZ 0 -72 0
+Game: Engine bv.props.Card CobraPaintingCard Position X,Y,Z 485 1495 -6179 Orientation OX,OY,OZ 0 73 0
+Game: Engine bv.props.Card EaglePaintingCard Position X,Y,Z -2338 1183 -8868 Orientation OX,OY,OZ 0 -30 0
+Game: Engine !!!!!!!!!!!!!!!!!

@@ -1,0 +1,24 @@
+Game: Engine Listing objects of class global.collectibles.EmotionalBaggageTag
+Game: Engine global.collectibles.EmotionalBaggageTag EmoTagSteamertrunk Position X,Y,Z -2141 -250 -1356 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.EmotionalBaggageTag EmoTagPurse Position X,Y,Z 1993 0 910 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.EmotionalBaggageTag EmoTagSuitcase Position X,Y,Z -4366 1467 3354 Orientation OX,OY,OZ 0 0 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class global.collectibles.EmotionalBaggage
+Game: Engine bb.props.EmotionalBaggage EmoBagPurse Position X,Y,Z 2634 619 -2170 Orientation OX,OY,OZ 0 -107 0
+Game: Engine bb.props.EmotionalBaggage EmoBagSuitcase Position X,Y,Z 2354 0 2076 Orientation OX,OY,OZ 0 -116 0
+Game: Engine bb.props.EmotionalBaggage EmoBagSteamertrunk Position X,Y,Z -2673 1467 3361 Orientation OX,OY,OZ 0 -125 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class global.collectibles.MaxAmmoUp
+Game: Engine global.collectibles.MaxAmmoUp MaxAmmoUp Position X,Y,Z 1882 1329 -4238 Orientation OX,OY,OZ 0 -63 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class global.characters.Vault
+Game: Engine global.characters.Vault vault1 Position X,Y,Z -3133 421 1999 Orientation OX,OY,OZ 0 -70 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class th.props.Candle
+Game: Engine th.props.Candle Candle Position X,Y,Z -4017 2198 3492 Orientation OX,OY,OZ 0 -79 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class th.props.Script
+Game: Engine th.props.Script Script_KnightOfJoy Position X,Y,Z 22 2206 676 Orientation OX,OY,OZ 0 0 0
+Game: Engine th.props.Script Script_HagathaHome Position X,Y,Z -370 2961 1354 Orientation OX,OY,OZ 0 0 0
+Game: Engine th.props.Script Script_LoveBoat Position X,Y,Z -130 3431 1230 Orientation OX,OY,OZ 0 0 0
+Game: Engine !!!!!!!!!!!!!!!!!

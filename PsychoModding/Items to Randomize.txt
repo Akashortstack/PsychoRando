@@ -1,0 +1,118 @@
+Items to Randomize
+
+Custom Rando PsiCards and PsiMarkers
+    'global.collectibles.CustomPsiCard'
+    'global.collectibles.CustomPsiChallengeMarker'
+--How many?
+
+
+Custom Rando Arrowhead Bundles
+    'global.collectibles.SmallArrowheadBundle'
+    'global.collectibles.MediumArrowheadBundle'
+--How many?
+
+
+Custom Rando Scavenger Hunt Items
+    'Global.Collectibles.scavDoubloon', 'scavDoubloon'
+    'Global.Collectibles.scavEagleClaw', 'scavEagleClaw'
+    'Global.Collectibles.ScavDiversHelmet', 'ScavDiversHelmet'
+    'Global.Collectibles.ScavComic', 'ScavComic'
+    'Global.Collectibles.ScavHuntPipe', 'ScavHuntPipe'
+    'Global.Collectibles.ScavSandwich', 'ScavSandwich'
+    'Global.Collectibles.scavVoodooDollie', 'scavVoodooDollie'
+    'Global.Collectibles.ScavSkull', 'ScavSkull'
+    'Global.Collectibles.ScavPirateScope', 'ScavPirateScope'
+    'Global.Collectibles.ScavGoldenAcorn', 'ScavGoldenAcorn'
+    'Global.Collectibles.ScavEye', 'ScavEye'
+    'Global.Collectibles.ScavEgg', 'ScavEgg'
+    'Global.Collectibles.ScavIdol', 'ScavIdol'
+    'Global.Collectibles.ScavBone', 'ScavBone'
+    'Global.Collectibles.scavFossil', 'scavFossil'
+    'Global.Collectibles.ScavHuntGoldWatch', 'ScavHuntGoldWatch'
+--One Each
+
+
+Custom Progressive Psi Powers
+    'global.collectibles.Marksmanship'
+    'global.collectibles.Marksmanship'
+    'global.collectibles.Marksmanship'
+    'global.collectibles.Firestarting'
+    'global.collectibles.Firestarting'
+    'global.collectibles.Confusion'
+    'global.collectibles.Confusion'
+    'global.collectibles.Levitation'
+    'global.collectibles.Levitation'
+    'global.collectibles.Levitation'
+    'global.collectibles.Telekinesis'
+    'global.collectibles.Telekinesis'
+    'global.collectibles.Invisibility'
+    'global.collectibles.Invisibility'
+    'global.collectibles.Clairvoyance'
+    'global.collectibles.Clairvoyance'
+    'global.collectibles.Shield'
+    'global.collectibles.Shield'
+    'global.collectibles.Shield'
+
+
+Custom Rando Emotional Baggage Tags
+    'global.collectibles.RandoSuitcaseTag'
+    'global.collectibles.RandoPurseTag'
+    'global.collectibles.RandoHatboxTag'
+    'global.collectibles.RandoSteamertrunkTag'
+    'global.collectibles.RandoDufflebagTag'
+--How many?
+
+
+Custom Rando Emotional Baggage
+    'global.collectibles.RandoSuitcase'
+    'global.collectibles.RandoPurse'
+    'global.collectibles.RandoHatbox'
+    'global.collectibles.RandoSteamertrunk'
+    'global.collectibles.RandoDufflebag'
+--How many?
+
+
+Custom Vaults
+    'Global.Characters.Vault'
+--How many?
+
+
+Props from MM 
+    'global.props.PropFlowers'
+    'global.props.PropHedgeTrimmers'
+    'global.props.PropHelmet'
+    'global.props.PropPhone'
+    'global.props.PropPlunger'
+    'global.props.PropRifle'
+    'global.props.PropRollingPin'
+    'global.props.PropSign'
+    'global.props.PropWaterCan'
+--One each
+
+Props from TH 
+    'global.props.Candle'
+    'global.props.Candle'
+    'global.props.Megaphone'
+    
+    --Possibly randomized later, leaving Vanilla for now.
+    'global.props.Script_KnightOfJoy'
+    'global.props.Script_LoveBoat' 
+    'global.props.Script_HagathaHome'
+
+Props from WW
+    'global.props.Peasant1Item' --Fred's Note
+    'global.props.Peasant2Item' --Priceless Coin
+    'global.props.Peasant3Item' --Rifle
+
+Props from BV
+--These can't be added until Shop Rando is implemented
+    'bv.props.MagicPainting' 'Rose3Painting'
+    'bv.props.MagicPainting' 'ArchPainting'
+    'bv.props.MagicPainting' 'LadderPainting'
+    'bv.props.MagicPainting' 'Rose2Painting'
+    'bv.props.MagicPainting' 'VinePainting'
+    'bv.props.MagicPainting' 'WindowPainting'
+
+Possible to use for checking level type for which objects to load?
+    --if strfind(FindScriptObject('LevelScript').Type, 'BV') then
+    

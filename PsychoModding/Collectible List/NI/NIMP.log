@@ -1,0 +1,21 @@
+Game: Engine Listing objects of class global.collectibles.EmotionalBaggageTag
+Game: Engine global.collectibles.EmotionalBaggageTag EmoTagSteamertrunk Position X,Y,Z 2693 -645 -8500 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.EmotionalBaggageTag EmoTagHatbox Position X,Y,Z 3869 -82 -18945 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.EmotionalBaggageTag EmoTagPurse Position X,Y,Z -2209 -3186 -3497 Orientation OX,OY,OZ 0 46 0
+Game: Engine global.collectibles.EmotionalBaggageTag EmoTagDufflebag Position X,Y,Z -1805 -228 -16247 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.EmotionalBaggageTag EmoTagSuitcase Position X,Y,Z 650 -510 -21602 Orientation OX,OY,OZ 0 0 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class global.collectibles.EmotionalBaggage
+Game: Engine global.collectibles.EmotionalBaggage EmoBagHatbox Position X,Y,Z 13624 430 -8900 Orientation OX,OY,OZ 0 -152 0
+Game: Engine global.collectibles.EmotionalBaggage EmoBagPurse Position X,Y,Z 1900 -604 -12903 Orientation OX,OY,OZ 0 9 0
+Game: Engine global.collectibles.EmotionalBaggage EmoBagSteamertrunk Position X,Y,Z 545 716 -13798 Orientation OX,OY,OZ 0 -62 0
+Game: Engine global.collectibles.EmotionalBaggage EmoBagSuitcase Position X,Y,Z 4077 426 -22925 Orientation OX,OY,OZ 0 158 0
+Game: Engine global.collectibles.EmotionalBaggage EmoBagDufflebag Position X,Y,Z 604 1113 -22266 Orientation OX,OY,OZ -19 124 -6
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class global.collectibles.MaxLivesUp
+Game: Engine global.collectibles.MaxLivesUp MaxLivesUp1 Position X,Y,Z 12707 421 -11504 Orientation OX,OY,OZ 0 0 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class global.characters.Vault
+Game: Engine global.characters.Vault CaravanVault Position X,Y,Z 34503 23 993 Orientation OX,OY,OZ 0 -11 0
+Game: Engine global.characters.Vault TubVault Position X,Y,Z 13527 293 -12247 Orientation OX,OY,OZ 0 119 0
+Game: Engine !!!!!!!!!!!!!!!!!

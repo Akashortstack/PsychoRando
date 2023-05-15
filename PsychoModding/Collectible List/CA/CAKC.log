@@ -1,0 +1,20 @@
+Game: Engine Listing objects of class global.collectibles.PSIChallengeCard
+Game: Engine global.collectibles.PSIChallengeCard PsiCards10 Position X,Y,Z -6797 3365 -16380 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.PSIChallengeCard PsiCards1 Position X,Y,Z -6662 4834 -16859 Orientation OX,OY,OZ 0 -118 0
+Game: Engine global.collectibles.PSIChallengeCard PsiCards11 Position X,Y,Z -8613 3409 -15159 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.PSIChallengeCard PsiCards9 Position X,Y,Z -8245 5489 -16566 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.PSIChallengeCard PsiCards3 Position X,Y,Z -5629 4510 -13242 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.PSIChallengeCard PsiCards4 Position X,Y,Z -8250 4672 -17194 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.PSIChallengeCard PsiCards7 Position X,Y,Z -5826 5921 -17086 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.PSIChallengeCard PsiCards6 Position X,Y,Z -4437 5240 -15717 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.PSIChallengeCard PsiCards8 Position X,Y,Z -8241 6295 -18064 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.PSIChallengeCard PsiCards12 Position X,Y,Z -3861 5656 -12938 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.PSIChallengeCard PsiCards5 Position X,Y,Z -3621 5509 -11089 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.PSIChallengeCard PsiCards2 Position X,Y,Z -9914 8434 -18209 Orientation OX,OY,OZ 0 0 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class global.collectibles.PSIChallengeMarker
+Game: Engine global.collectibles.PsiChallengeMarker PsiChallengeMarker Position X,Y,Z -5282 7580 -17131 Orientation OX,OY,OZ -2 -71 1
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class ca.props.ScavengerHuntItem
+Game: Engine ca.props.ScavengerHuntItem ScavSandwich Position X,Y,Z -4885 4255 -19145 Orientation OX,OY,OZ 0 0 0
+Game: Engine !!!!!!!!!!!!!!!!!

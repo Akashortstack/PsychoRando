@@ -1,0 +1,28 @@
+Game: Engine Listing objects of class global.collectibles.PSIChallengeCard
+Game: Engine global.collectibles.PSIChallengeCard PsiCard7 Position X,Y,Z -403 -1233 8950 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.PSIChallengeCard PsiCard8 Position X,Y,Z 267 668 7040 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.PSIChallengeCard PsiCard1 Position X,Y,Z 2389 -54 7041 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.PSIChallengeCard PsiCard6 Position X,Y,Z -854 323 2986 Orientation OX,OY,OZ 0 0 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class global.collectibles.PSIChallengeMarker
+Game: Engine global.collectibles.PsiChallengeMarker PsiChallengeMarker Position X,Y,Z -562 399 8091 Orientation OX,OY,OZ 0 0 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class global.collectibles.BrainJar
+Game: Engine global.collectibles.BrainJar BrainJarJT Position X,Y,Z -845 30 6736 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.BrainJar BrainJarFranke Position X,Y,Z 981 298 2902 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.BrainJar BrainJarKitty Position X,Y,Z 2110 305 2224 Orientation OX,OY,OZ 0 0 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class ca.props.ScavengerHuntItem
+Game: Engine ca.props.ScavengerHuntItem ScavHuntGoldWatch Position X,Y,Z 99 756 5515 Orientation OX,OY,OZ 0 0 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class as.props.LilisBracelet
+Game: Engine as.props.LilisBracelet LiliBracelet Position X,Y,Z 184 -1498 8893 Orientation OX,OY,OZ 0 -3 -1
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class as.props.AS_CrowFeather
+Game: Engine as.props.AS_CrowFeather CrowFeather Position X,Y,Z 56 498 5765 Orientation OX,OY,OZ 0 0 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class as.props.AS_hand
+Game: Engine as.props.AS_hand LobatoHand Position X,Y,Z 3150 100 1295 Orientation OX,OY,OZ 0 0 0
+Game: Engine !!!!!!!!!!!!!!!!!
+
+NOTE: LobatoHand (gloria's trophy) will need special coding to prevent pickup until gloria's level complete

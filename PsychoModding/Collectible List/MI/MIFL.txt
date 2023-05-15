@@ -1,0 +1,16 @@
+Game: Engine Listing objects of class global.collectibles.EmotionalBaggageTag
+Game: Engine global.collectibles.EmotionalBaggageTag dufflebagtag Position X,Y,Z -19249 7142 29935 Orientation OX,OY,OZ 0 0 0
+Game: Engine global.collectibles.EmotionalBaggageTag steamertrunktag Position X,Y,Z -20143 11734 26556 Orientation OX,OY,OZ 0 -159 -3
+Game: Engine global.collectibles.EmotionalBaggageTag hatBoxtag Position X,Y,Z -18415 14813 26121 Orientation OX,OY,OZ 0 71 0
+Game: Engine global.collectibles.EmotionalBaggageTag pursetag Position X,Y,Z -19528 23610 29712 Orientation OX,OY,OZ 0 125 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class global.collectibles.EmotionalBaggage
+Game: Engine global.collectibles.EmotionalBaggage dufflebag Position X,Y,Z -19976 10155 24167 Orientation OX,OY,OZ 0 -81 0
+Game: Engine global.collectibles.EmotionalBaggage SteamerTrunk Position X,Y,Z -22356 15996 26767 Orientation OX,OY,OZ 0 134 0
+Game: Engine global.collectibles.EmotionalBaggage hatBox Position X,Y,Z -18472 22382 22091 Orientation OX,OY,OZ 0 -30 0
+Game: Engine global.collectibles.EmotionalBaggage purse Position X,Y,Z -21000 29640 32184 Orientation OX,OY,OZ 0 -89 0
+Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class global.characters.Vault
+Game: Engine global.characters.Vault MIFL1_Vault Position X,Y,Z -23438 11229 21816 Orientation OX,OY,OZ 0 24 0
+Game: Engine global.characters.Vault MIFL3_Vault Position X,Y,Z -22571 23009 32232 Orientation OX,OY,OZ 0 125 0
+Game: Engine !!!!!!!!!!!!!!!!!
