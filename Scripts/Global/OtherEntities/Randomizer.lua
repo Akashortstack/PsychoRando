@@ -49,7 +49,10 @@ function Randomizer(Ob)
 
             elseif strfind(FindScriptObject('LevelScript').Type, 'ww.WWMA') then
                 foreach_entity_oftype('ww.props.PricelessCoin', function(ent) ent:killSelf() end)
-                foreach_entity_oftype('ww.props.Rifle', function(ent) ent:killSelf() end)  
+                foreach_entity_oftype('ww.props.Rifle', function(ent) ent:killSelf() end)
+
+            elseif strfind(FindScriptObject('LevelScript').Type, 'bv.BVRB') then
+                foreach_entity_oftype('global.collectibles.MaxConfusionUp', function(ent) ent:killSelf() end)  
 
             end
         elseif strfind(FindScriptObject('LevelScript').levelType, 'real') then

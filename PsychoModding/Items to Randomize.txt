@@ -2,15 +2,69 @@ Items to Randomize
 
 Custom Rando PsiCards and PsiMarkers
     'global.collectibles.CustomPsiCard'
-    'global.collectibles.CustomPsiChallengeMarker'
---How many?
-
+    
+--117 Total, Change to Junk/Filler item?
 
 Custom Rando Arrowhead Bundles
     'global.collectibles.SmallArrowheadBundle'
     'global.collectibles.MediumArrowheadBundle'
---How many?
+--How many? Junk/Filler item?
 
+Custom Rando PsiMarkers
+    'global.collectibles.CustomPsiChallengeMarker'
+    'global.collectibles.CustomPsiChallengeMarker'
+    'global.collectibles.CustomPsiChallengeMarker'
+    'global.collectibles.CustomPsiChallengeMarker'
+    'global.collectibles.CustomPsiChallengeMarker'
+    'global.collectibles.CustomPsiChallengeMarker'
+    'global.collectibles.CustomPsiChallengeMarker'
+    'global.collectibles.CustomPsiChallengeMarker'
+    'global.collectibles.CustomPsiChallengeMarker'
+
+    --9 Total
+
+MaxAmmoUp
+    'Global.Collectibles.MaxAmmoUp'
+    'Global.Collectibles.MaxAmmoUp'
+    'Global.Collectibles.MaxAmmoUp'
+    'Global.Collectibles.MaxAmmoUp'
+    'Global.Collectibles.MaxAmmoUp'
+    'Global.Collectibles.MaxAmmoUp'
+
+    --6 Total
+
+MaxLivesUp
+    'Global.Collectibles.MaxLivesUp'
+    'Global.Collectibles.MaxLivesUp'
+    'Global.Collectibles.MaxLivesUp'
+    'Global.Collectibles.MaxLivesUp'
+    'Global.Collectibles.MaxLivesUp'
+    'Global.Collectibles.MaxLivesUp'
+
+    --6 Total
+
+Rando Brain Jars
+    'global.collectibles.BrainJar', 'BrainJarElton'
+    'global.collectibles.BrainJar', 'BrainJarBobby'
+    'global.collectibles.BrainJar', 'BrainJarDogen'
+    'global.collectibles.BrainJar', 'BrainJarBenny'
+    'global.collectibles.BrainJar', 'BrainJarElka'
+    'global.collectibles.BrainJar', 'BrainJarKitty'
+    'global.collectibles.BrainJar', 'BrainJarChloe'
+    'global.collectibles.BrainJar', 'BrainJarFranke'
+    'global.collectibles.BrainJar', 'BrainJarJT'
+    'global.collectibles.BrainJar', 'BrainJarQuentin'
+    'global.collectibles.BrainJar', 'BrainJarVernon'
+    'global.collectibles.BrainJar', 'BrainJarMilka'
+    'global.collectibles.BrainJar', 'BrainJarCrystal'
+    'global.collectibles.BrainJar', 'BrainJarClem'
+    'global.collectibles.BrainJar', 'BrainJarNils'
+    'global.collectibles.BrainJar', 'BrainJarMaloof'
+    'global.collectibles.BrainJar', 'BrainJarMikhail'
+    'global.collectibles.BrainJar', 'BrainJarPhoebe'
+    'global.collectibles.BrainJar', 'BrainJarChops'
+
+    --19 Total
 
 Custom Rando Scavenger Hunt Items
     'Global.Collectibles.scavDoubloon', 'scavDoubloon'
@@ -29,26 +83,35 @@ Custom Rando Scavenger Hunt Items
     'Global.Collectibles.ScavBone', 'ScavBone'
     'Global.Collectibles.scavFossil', 'scavFossil'
     'Global.Collectibles.ScavHuntGoldWatch', 'ScavHuntGoldWatch'
---One Each
+
+    --16 Total
+
 
 
 Custom Progressive Psi Powers
     'global.collectibles.Marksmanship'
     'global.collectibles.Marksmanship'
     'global.collectibles.Marksmanship'
+
     'global.collectibles.Firestarting'
     'global.collectibles.Firestarting'
+
     'global.collectibles.Confusion'
     'global.collectibles.Confusion'
+
     'global.collectibles.Levitation'
     'global.collectibles.Levitation'
     'global.collectibles.Levitation'
+
     'global.collectibles.Telekinesis'
     'global.collectibles.Telekinesis'
+
     'global.collectibles.Invisibility'
     'global.collectibles.Invisibility'
+
     'global.collectibles.Clairvoyance'
     'global.collectibles.Clairvoyance'
+
     'global.collectibles.Shield'
     'global.collectibles.Shield'
     'global.collectibles.Shield'
@@ -56,26 +119,145 @@ Custom Progressive Psi Powers
 
 Custom Rando Emotional Baggage Tags
     'global.collectibles.RandoSuitcaseTag'
+    'global.collectibles.RandoSuitcaseTag'
+    'global.collectibles.RandoSuitcaseTag'
+    'global.collectibles.RandoSuitcaseTag'
+    'global.collectibles.RandoSuitcaseTag'
+    'global.collectibles.RandoSuitcaseTag'
+    'global.collectibles.RandoSuitcaseTag'
+    'global.collectibles.RandoSuitcaseTag'
+    'global.collectibles.RandoSuitcaseTag'
+    'global.collectibles.RandoSuitcaseTag'
+
     'global.collectibles.RandoPurseTag'
+    'global.collectibles.RandoPurseTag'
+    'global.collectibles.RandoPurseTag'
+    'global.collectibles.RandoPurseTag'
+    'global.collectibles.RandoPurseTag'
+    'global.collectibles.RandoPurseTag'
+    'global.collectibles.RandoPurseTag'
+    'global.collectibles.RandoPurseTag'
+    'global.collectibles.RandoPurseTag'
+    'global.collectibles.RandoPurseTag'
+
     'global.collectibles.RandoHatboxTag'
+    'global.collectibles.RandoHatboxTag'
+    'global.collectibles.RandoHatboxTag'
+    'global.collectibles.RandoHatboxTag'
+    'global.collectibles.RandoHatboxTag'
+    'global.collectibles.RandoHatboxTag'
+    'global.collectibles.RandoHatboxTag'
+    'global.collectibles.RandoHatboxTag'
+    'global.collectibles.RandoHatboxTag'
+    'global.collectibles.RandoHatboxTag'
+
     'global.collectibles.RandoSteamertrunkTag'
+    'global.collectibles.RandoSteamertrunkTag'
+    'global.collectibles.RandoSteamertrunkTag'
+    'global.collectibles.RandoSteamertrunkTag'
+    'global.collectibles.RandoSteamertrunkTag'
+    'global.collectibles.RandoSteamertrunkTag'
+    'global.collectibles.RandoSteamertrunkTag'
+    'global.collectibles.RandoSteamertrunkTag'
+    'global.collectibles.RandoSteamertrunkTag'
+    'global.collectibles.RandoSteamertrunkTag'
+
     'global.collectibles.RandoDufflebagTag'
---How many?
+    'global.collectibles.RandoDufflebagTag'
+    'global.collectibles.RandoDufflebagTag'
+    'global.collectibles.RandoDufflebagTag'
+    'global.collectibles.RandoDufflebagTag'
+    'global.collectibles.RandoDufflebagTag'
+    'global.collectibles.RandoDufflebagTag'
+    'global.collectibles.RandoDufflebagTag'
+    'global.collectibles.RandoDufflebagTag'
+    'global.collectibles.RandoDufflebagTag'
+
+    --10 of Each
+
 
 
 Custom Rando Emotional Baggage
     'global.collectibles.RandoSuitcase'
+    'global.collectibles.RandoSuitcase'
+    'global.collectibles.RandoSuitcase'
+    'global.collectibles.RandoSuitcase'
+    'global.collectibles.RandoSuitcase'
+    'global.collectibles.RandoSuitcase'
+    'global.collectibles.RandoSuitcase'
+    'global.collectibles.RandoSuitcase'
+    'global.collectibles.RandoSuitcase'
+    'global.collectibles.RandoSuitcase'
+
     'global.collectibles.RandoPurse'
+    'global.collectibles.RandoPurse'
+    'global.collectibles.RandoPurse'
+    'global.collectibles.RandoPurse'
+    'global.collectibles.RandoPurse'
+    'global.collectibles.RandoPurse'
+    'global.collectibles.RandoPurse'
+    'global.collectibles.RandoPurse'
+    'global.collectibles.RandoPurse'
+    'global.collectibles.RandoPurse'
+
     'global.collectibles.RandoHatbox'
+    'global.collectibles.RandoHatbox'
+    'global.collectibles.RandoHatbox'
+    'global.collectibles.RandoHatbox'
+    'global.collectibles.RandoHatbox'
+    'global.collectibles.RandoHatbox'
+    'global.collectibles.RandoHatbox'
+    'global.collectibles.RandoHatbox'
+    'global.collectibles.RandoHatbox'
+    'global.collectibles.RandoHatbox'
+
     'global.collectibles.RandoSteamertrunk'
+    'global.collectibles.RandoSteamertrunk'
+    'global.collectibles.RandoSteamertrunk'
+    'global.collectibles.RandoSteamertrunk'
+    'global.collectibles.RandoSteamertrunk'
+    'global.collectibles.RandoSteamertrunk'
+    'global.collectibles.RandoSteamertrunk'
+    'global.collectibles.RandoSteamertrunk'
+    'global.collectibles.RandoSteamertrunk'
+    'global.collectibles.RandoSteamertrunk'
+
     'global.collectibles.RandoDufflebag'
---How many?
+    'global.collectibles.RandoDufflebag'
+    'global.collectibles.RandoDufflebag'
+    'global.collectibles.RandoDufflebag'
+    'global.collectibles.RandoDufflebag'
+    'global.collectibles.RandoDufflebag'
+    'global.collectibles.RandoDufflebag'
+    'global.collectibles.RandoDufflebag'
+    'global.collectibles.RandoDufflebag'
+    'global.collectibles.RandoDufflebag'
+
+    --10 of Each
 
 
 Custom Vaults
     'Global.Characters.Vault'
---How many?
+    'Global.Characters.Vault'
+    'Global.Characters.Vault'
+    'Global.Characters.Vault'
+    'Global.Characters.Vault'
+    'Global.Characters.Vault'
+    'Global.Characters.Vault'
+    'Global.Characters.Vault'
+    'Global.Characters.Vault'
+    'Global.Characters.Vault'
+    'Global.Characters.Vault'
+    'Global.Characters.Vault'
+    'Global.Characters.Vault'
+    'Global.Characters.Vault'
+    'Global.Characters.Vault'
+    'Global.Characters.Vault'
+    'Global.Characters.Vault'
+    'Global.Characters.Vault'
+    'Global.Characters.Vault'
 
+    --19 Total Vaults
 
 Props from MM 
     'global.props.PropFlowers'
@@ -87,7 +269,6 @@ Props from MM
     'global.props.PropRollingPin'
     'global.props.PropSign'
     'global.props.PropWaterCan'
---One each
 
 Props from TH 
     'global.props.Candle'
@@ -95,9 +276,9 @@ Props from TH
     'global.props.Megaphone'
     
     --Possibly randomized later, leaving Vanilla for now.
-    'global.props.Script_KnightOfJoy'
-    'global.props.Script_LoveBoat' 
-    'global.props.Script_HagathaHome'
+    --'global.props.Script_KnightOfJoy'
+    --'global.props.Script_LoveBoat' 
+    --'global.props.Script_HagathaHome'
 
 Props from WW
     'global.props.Peasant1Item' --Fred's Note
@@ -106,13 +287,12 @@ Props from WW
 
 Props from BV
 --These can't be added until Shop Rando is implemented
-    'bv.props.MagicPainting' 'Rose3Painting'
-    'bv.props.MagicPainting' 'ArchPainting'
-    'bv.props.MagicPainting' 'LadderPainting'
-    'bv.props.MagicPainting' 'Rose2Painting'
-    'bv.props.MagicPainting' 'VinePainting'
-    'bv.props.MagicPainting' 'WindowPainting'
+    --'bv.props.MagicPainting' 'Rose3Painting'
+    --'bv.props.MagicPainting' 'ArchPainting'
+    --'bv.props.MagicPainting' 'LadderPainting'
+    --'bv.props.MagicPainting' 'Rose2Painting'
+    --'bv.props.MagicPainting' 'VinePainting'
+    --'bv.props.MagicPainting' 'WindowPainting'
 
-Possible to use for checking level type for which objects to load?
-    --if strfind(FindScriptObject('LevelScript').Type, 'BV') then
+
     
