@@ -294,5 +294,13 @@ Props from BV
     --'bv.props.MagicPainting' 'VinePainting'
     --'bv.props.MagicPainting' 'WindowPainting'
 
+Props from AS
+    'global.props.Cake' 'Cake'
+    'global.props.LilisBracelet' 'LiliBracelet'
+    'global.props.AS_hand' 'LobatoHand'
+    'global.props.AS_StraightJacket' 'StraightJacket'
+    'global.props.AS_Painting' 'LobatoPainting'
+
+    --'as.props.PokeyProp' 'PokeyProp'
 
     

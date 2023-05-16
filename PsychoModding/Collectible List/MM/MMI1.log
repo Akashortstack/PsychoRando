@@ -25,6 +25,9 @@ Game: Engine Listing objects of class global.characters.Vault
 Game: Engine mm.characters.Vault vaulty1 Position X,Y,Z 37449 -36123 -8403 Orientation OX,OY,OZ 0 0 0
 Game: Engine mm.characters.Vault vaulty2 Position X,Y,Z 54275 -33701 -2863 Orientation OX,OY,OZ 161 33 -85
 Game: Engine !!!!!!!!!!!!!!!!!
+Game: Engine Listing objects of class global.collectibles.PsiPower
+Game: Engine global.collectibles.PsiPower LSO_Clairvoyance Position X,Y,Z 16807 9324 -26821 Orientation OX,OY,OZ 88 0 89
+Game: Engine !!!!!!!!!!!!!!!!!
 Game: Engine Listing objects of class mm.props.PropSign
 Game: Engine mm.props.PropSign Sign Position X,Y,Z 46391 -29286 -17896 Orientation OX,OY,OZ -143 168 -53
 Game: Engine !!!!!!!!!!!!!!!!!
