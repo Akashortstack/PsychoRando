@@ -1,0 +1,22 @@
+Listing objects of class global.collectibles.EmotionalBaggageTag
+global.collectibles.EmotionalBaggageTag EmoTagSuitcase1 Position X,Y,Z 49303 -32124 -12316 Orientation OX,OY,OZ 4 38 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.EmotionalBaggage
+global.collectibles.EmotionalBaggage EmoBagSteamertrunk Position X,Y,Z 42685 -30805 4210 Orientation OX,OY,OZ -2 -4 0
+global.collectibles.EmotionalBaggage EmoBagSuitcase Position X,Y,Z 49974 -23919 1151 Orientation OX,OY,OZ -102 141 66
+!!!!!!!!!!!!!!!!!
+
+Listing objects of class mm.props.PropSign
+mm.props.PropSign Sign Position X,Y,Z 44291 -32828 -22357 Orientation OX,OY,OZ -143 168 -53
+!!!!!!!!!!!!!!!!!
+NOTE: Why is this here?
+
+
+Listing objects of class mm.props.PropPhone
+!!!!!!!!!!!!!!!!!
+NOTE: Only spawns object after cutscene, in MMI2.lua 
+
+Listing objects of class mm.props.PropHelmet
+MM.Props.PropHelmet Helmet Position X,Y,Z 42921.7 -29806.8 2366.5 Orientation OX,OY,OZ 0 0 0
+!!!!!!!!!!!!!!!!!
+NOTE: Only spawns object after cutscene, in MMI2.lua 

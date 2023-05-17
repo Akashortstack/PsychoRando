@@ -1,0 +1,25 @@
+Listing objects of class global.collectibles.PSIChallengeCard
+global.collectibles.PSIChallengeCard PsiCard12 Position X,Y,Z 7382 747 9353 Orientation OX,OY,OZ 0 0 0
+global.collectibles.PSIChallengeCard PsiCard9 Position X,Y,Z 7218 2356 7608 Orientation OX,OY,OZ 0 0 0
+global.collectibles.PSIChallengeCard PsiCard11 Position X,Y,Z 7494 720 13974 Orientation OX,OY,OZ 0 0 0
+global.collectibles.PSIChallengeCard PsiCard8 Position X,Y,Z 9243 1861 6689 Orientation OX,OY,OZ 0 0 0
+global.collectibles.PSIChallengeCard PsiCard17 Position X,Y,Z 5380 3087 9700 Orientation OX,OY,OZ 0 -17 0
+global.collectibles.PSIChallengeCard PsiCard15 Position X,Y,Z 4853 2673 11231 Orientation OX,OY,OZ 0 0 0
+global.collectibles.PSIChallengeCard PsiCard6 Position X,Y,Z 13225 709 10626 Orientation OX,OY,OZ 0 0 0
+global.collectibles.PSIChallengeCard PsiCard14 Position X,Y,Z 12594 375 7903 Orientation OX,OY,OZ 0 0 0
+global.collectibles.PSIChallengeCard PsiCard7 Position X,Y,Z 11949 421 14426 Orientation OX,OY,OZ 0 0 0
+global.collectibles.PSIChallengeCard PsiCard10 Position X,Y,Z 3817 1411 8836 Orientation OX,OY,OZ 0 0 0
+global.collectibles.PSIChallengeCard PsiCard Position X,Y,Z 8979 2250 15694 Orientation OX,OY,OZ 0 0 0
+global.collectibles.PSIChallengeCard PsiCard5 Position X,Y,Z 13397 378 13652 Orientation OX,OY,OZ 0 0 0
+global.collectibles.PSIChallengeCard PsiCard2 Position X,Y,Z 6988 2114 16007 Orientation OX,OY,OZ 0 0 0
+global.collectibles.PSIChallengeCard PsiCard1 Position X,Y,Z 9722 1326 16642 Orientation OX,OY,OZ 0 0 0
+global.collectibles.PSIChallengeCard PsiCard3 Position X,Y,Z 10974 955 16992 Orientation OX,OY,OZ 0 0 0
+global.collectibles.PSIChallengeCard PsiCard4 Position X,Y,Z 14043 1715 14937 Orientation OX,OY,OZ 0 0 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.PSIChallengeMarker
+global.collectibles.PsiChallengeMarker PsiChallengeMarker Position X,Y,Z 10977 2042 7806 Orientation OX,OY,OZ 0 0 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class ca.props.ScavengerHuntItem
+ca.props.ScavengerHuntItem ScavComic Position X,Y,Z 7812 1673 7547 Orientation OX,OY,OZ 0 0 0
+ca.props.ScavengerHuntItem ScavDiversHelmet Position X,Y,Z 6025 2423 16395 Orientation OX,OY,OZ 0 0 0
+!!!!!!!!!!!!!!!!!

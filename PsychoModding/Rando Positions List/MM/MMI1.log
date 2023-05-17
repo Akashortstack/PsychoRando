@@ -1,0 +1,49 @@
+Listing objects of class global.collectibles.EmotionalBaggageTag
+global.collectibles.EmotionalBaggageTag EmoTagDufflebag Position X,Y,Z 15603 1464 -28180 Orientation OX,OY,OZ 0 -89 0
+global.collectibles.EmotionalBaggageTag EmoTagHatbox Position X,Y,Z 38276 -36118 -9751 Orientation OX,OY,OZ -13 50 -4
+global.collectibles.EmotionalBaggageTag EmoTagSteamertrunk Position X,Y,Z 52339 -28808 -10817 Orientation OX,OY,OZ -19 44 75
+global.collectibles.EmotionalBaggageTag EmoTagSuitcase1 Position X,Y,Z 49303 -32124 -12316 Orientation OX,OY,OZ 4 38 0
+global.collectibles.EmotionalBaggageTag EmoTagSuitcase Position X,Y,Z 46881 -32509 -8474 Orientation OX,OY,OZ -21 20 8
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.EmotionalBaggage
+global.collectibles.EmotionalBaggage EmoBagPurse Position X,Y,Z 18174 1410 -27787 Orientation OX,OY,OZ 1 5 0
+global.collectibles.EmotionalBaggage EmoBagSuitcase Position X,Y,Z 49974 -23919 1151 Orientation OX,OY,OZ -102 141 66
+global.collectibles.EmotionalBaggage EmoBagHatbox Position X,Y,Z 51818 -31078 -5866 Orientation OX,OY,OZ 88 -67 36
+global.collectibles.EmotionalBaggage EmoBagDufflebag Position X,Y,Z 55736 -38952 -4843 Orientation OX,OY,OZ -156 172 -65
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.MaxLivesUp
+global.collectibles.MaxLivesUp MaxLivesUp1 Position X,Y,Z 37993 -38043 -5503 Orientation OX,OY,OZ -34 179 11
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.MaxAmmoUp
+global.collectibles.MaxAmmoUp MaxPsiBlastAmmo Position X,Y,Z 19236 1462 -27810 Orientation OX,OY,OZ 0 -77 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.OneUp
+global.collectibles.OneUp OneUp1 Position X,Y,Z 48881 -23596 2322 Orientation OX,OY,OZ -127 168 16
+global.collectibles.OneUp OneUp2 Position X,Y,Z 54655 -34030 -1600 Orientation OX,OY,OZ -166 -138 -78
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.characters.Vault
+mm.characters.Vault vaulty1 Position X,Y,Z 37449 -36123 -8403 Orientation OX,OY,OZ 0 0 0
+mm.characters.Vault vaulty2 Position X,Y,Z 54275 -33701 -2863 Orientation OX,OY,OZ 161 33 -85
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.PsiPower
+global.collectibles.PsiPower LSO_Clairvoyance Position X,Y,Z 16807 9324 -26821 Orientation OX,OY,OZ 88 0 89
+!!!!!!!!!!!!!!!!!
+Listing objects of class mm.props.PropSign
+mm.props.PropSign Sign Position X,Y,Z 46391 -29286 -17896 Orientation OX,OY,OZ -143 168 -53
+!!!!!!!!!!!!!!!!!
+Listing objects of class mm.props.PropRollingPin
+mm.props.PropRollingPin RollingPin Position X,Y,Z 14012 1472 -27498 Orientation OX,OY,OZ 0 151 -3
+!!!!!!!!!!!!!!!!!
+Listing objects of class mm.props.PropPlunger
+mm.props.PropPlunger Plunger Position X,Y,Z -12940 3048 -28723 Orientation OX,OY,OZ 0 0 0
+!!!!!!!!!!!!!!!!!
+
+Listing objects of class mm.props.PropWaterCan
+mm.props.PropWaterCan WaterCan Position X,Y,Z 49643 -26013 -496 Orientation OX,OY,OZ 27 -25 -3
+!!!!!!!!!!!!!!!!!
+Listing objects of class mm.props.PropHedgeTrimmers
+mm.props.PropHedgeTrimmers HedgeTrimmers Position X,Y,Z 52485 -29921 -11122 Orientation OX,OY,OZ 0 0 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class mm.props.PropFlowers
+mm.props.PropFlowers Flowers Position X,Y,Z 49127 -31686 2498 Orientation OX,OY,OZ -172 30 -86
+!!!!!!!!!!!!!!!!!

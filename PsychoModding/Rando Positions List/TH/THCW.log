@@ -1,0 +1,29 @@
+Listing objects of class global.collectibles.EmotionalBaggageTag
+global.collectibles.EmotionalBaggageTag dufflebag_tag Position X,Y,Z -1692 -1766 -4130 Orientation OX,OY,OZ 0 0 0
+global.collectibles.EmotionalBaggageTag hatbox_tag Position X,Y,Z -308 302 -6002 Orientation OX,OY,OZ 0 0 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.EmotionalBaggage
+global.collectibles.EmotionalBaggage dufflebag Position X,Y,Z -3463 877 -2246 Orientation OX,OY,OZ 0 179 0
+global.collectibles.EmotionalBaggage hatbox Position X,Y,Z 424 -516 -5335 Orientation OX,OY,OZ 0 0 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.OneUp
+global.collectibles.OneUp OneUp1 Position X,Y,Z -437 -324 -6010 Orientation OX,OY,OZ 0 0 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.characters.Vault
+global.characters.Vault CWvault Position X,Y,Z -1297 -509 -5263 Orientation OX,OY,OZ 0 0 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class th.props.Candle
+th.props.Candle Candle Position X,Y,Z 554 2881 -2672 Orientation OX,OY,OZ -5 2 -33
+!!!!!!!!!!!!!!!!!
+
+
+--Locations are New and not in Vanilla
+
+--Start of Catwalks
+Position X,Y,Z 2999, 1, 2721 Orientation OX,OY,OZ 0, -169, 0
+
+--After triple yellow->orange trampolines, platform
+Position X,Y,Z 966, -1418, -4787 Orientation OX,OY,OZ 0, -177, 0
+
+--end of Catwalks
+Position X,Y,Z 3121, 2876, -2582 Orientation OX,OY,OZ 0, -83, 0

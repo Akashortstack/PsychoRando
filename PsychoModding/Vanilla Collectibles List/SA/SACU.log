@@ -1,0 +1,31 @@
+Listing objects of class global.collectibles.EmotionalBaggageTag
+global.collectibles.EmotionalBaggageTag EmoTag4 Position X,Y,Z 19 -2128 -1848 Orientation OX,OY,OZ 90 179 61
+global.collectibles.EmotionalBaggageTag EmoTag5 Position X,Y,Z 398 -3956 -843 Orientation OX,OY,OZ 180 0 0
+global.collectibles.EmotionalBaggageTag EmoTag2 Position X,Y,Z -1371 751 513 Orientation OX,OY,OZ -33 103 -32
+global.collectibles.EmotionalBaggageTag EmoTag1 Position X,Y,Z -262 564 -378 Orientation OX,OY,OZ 0 54 0
+global.collectibles.EmotionalBaggageTag EmoTag3 Position X,Y,Z 2021 -1558 753 Orientation OX,OY,OZ 0 18 -90
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.EmotionalBaggage
+global.collectibles.EmotionalBaggage EmoBag1 Position X,Y,Z -1455 5 491 Orientation OX,OY,OZ 0 -37 0
+global.collectibles.EmotionalBaggage EmoBag5 Position X,Y,Z 379 -4862 422 Orientation OX,OY,OZ 174 131 -8
+global.collectibles.EmotionalBaggage EmoBag4 Position X,Y,Z -291 -538 -2863 Orientation OX,OY,OZ 87 180 3
+global.collectibles.EmotionalBaggage EmoBag2 Position X,Y,Z -274 1748 -1546 Orientation OX,OY,OZ 1 -121 1
+global.collectibles.EmotionalBaggage EmoBag3 Position X,Y,Z 3822 -842 2596 Orientation OX,OY,OZ 0 76 -90
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.MaxLivesUp
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.MaxAmmoUp
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.OneUp
+global.collectibles.OneUp OneUp4 Position X,Y,Z 273 -4924 -148 Orientation OX,OY,OZ 180 0 0
+global.collectibles.OneUp OneUp1 Position X,Y,Z 1832 799 -1348 Orientation OX,OY,OZ 0 0 0
+global.collectibles.OneUp OneUp3 Position X,Y,Z 1853 -2948 -4743 Orientation OX,OY,OZ -90 0 0
+global.collectibles.OneUp OneUp2 Position X,Y,Z 4187 -1867 -1747 Orientation OX,OY,OZ 0 0 -90
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.characters.Vault
+sa.characters.Vault Vault2 Position X,Y,Z -1984 -1913 0 Orientation OX,OY,OZ 178 0 -90
+sa.characters.Vault Vault1 Position X,Y,Z -7 487 -28 Orientation OX,OY,OZ 0 -42 0
+!!!!!!!!!!!!!!!!!
+
+NOTE: This level is potentially a nightmare...
+Figure out how to spawn items in chunks when level geometry changes

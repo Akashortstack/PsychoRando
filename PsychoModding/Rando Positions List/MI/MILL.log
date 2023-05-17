@@ -1,0 +1,20 @@
+Listing objects of class global.collectibles.EmotionalBaggageTag
+global.collectibles.EmotionalBaggageTag suitecase_tag Position X,Y,Z 17393 -5479 -21342 Orientation OX,OY,OZ 0 0 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.EmotionalBaggage
+global.collectibles.EmotionalBaggage suitcase Position X,Y,Z 19431 -1669 -22105 Orientation OX,OY,OZ 0 -76 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.MaxAmmoUp
+global.collectibles.MaxAmmoUp MaxAmmoUp Position X,Y,Z 18938 -1889 -18444 Orientation OX,OY,OZ 0 -164 0
+!!!!!!!!!!!!!!!!!
+
+--Following Locations are New and not in Vanilla
+
+--Final Room, Center walkway
+Position X,Y,Z 21816, -1771, -24854 Orientation OX,OY,OZ 0, -50, 0
+
+--Final Room, left side platform
+Position X,Y,Z 22713, -1417, -27891 Orientation OX,OY,OZ 0, -23, 0
+
+--Final Room, right side platform
+Position X,Y,Z 24969, -1416, -25257 Orientation OX,OY,OZ 0, -78, 0

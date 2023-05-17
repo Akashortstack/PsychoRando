@@ -597,7 +597,7 @@ function BVRB(Ob)
 	-- For invoking from the GetConfusion cutscene.
 
 	function Ob:csShowConfusionBadge()
-		--edit Removed to stop Confusion from Appearing
+		--edit Removed to stop ConfusionPower from Appearing
 		--if (not FindScriptObject('ConfusionPower')) then
 		--	local c = SpawnScript('Global.Collectibles.PsiPower', 'ConfusionPower', 'self.power = \'Confusion\'')
 		--	c:setPosition(1140, 1795, -3660)

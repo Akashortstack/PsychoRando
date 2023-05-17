@@ -1,0 +1,24 @@
+Listing objects of class global.collectibles.PSIChallengeCard
+global.collectibles.PSIChallengeCard PsiCard5 Position X,Y,Z 558 948 599 Orientation OX,OY,OZ 0 0 0
+global.collectibles.PSIChallengeCard PsiCard2 Position X,Y,Z 319 955 2184 Orientation OX,OY,OZ 0 0 0
+global.collectibles.PSIChallengeCard PsiCard1 Position X,Y,Z -1495 1206 1267 Orientation OX,OY,OZ 0 0 0
+global.collectibles.PSIChallengeCard PsiCard3 Position X,Y,Z -2302 1249 93 Orientation OX,OY,OZ 0 0 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.PSIChallengeMarker
+global.collectibles.PsiChallengeMarker PsiChallengeMarker Position X,Y,Z -1394 2209 -283 Orientation OX,OY,OZ 0 0 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.BrainJar
+global.collectibles.BrainJar BrainJarMilka Position X,Y,Z -866 208 1586 Orientation OX,OY,OZ 0 0 0
+global.collectibles.BrainJar BrainJarChloe Position X,Y,Z 1570 514 -782 Orientation OX,OY,OZ 0 0 0
+global.collectibles.BrainJar BrainJarMaloof Position X,Y,Z -175 814 -710 Orientation OX,OY,OZ 0 0 0
+global.collectibles.BrainJar BrainJarChops Position X,Y,Z -1040 1178 1998 Orientation OX,OY,OZ 0 0 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class as.props.AS_StraightJacket
+as.props.AS_StraightJacket StraightJacket Position X,Y,Z -75 104 1691 Orientation OX,OY,OZ 0 180 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class as.props.AS_Painting
+as.props.AS_Painting LobatoPainting Position X,Y,Z -1128 1301 -330 Orientation OX,OY,OZ 0 -96 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class as.props.AS_CrowFeather
+as.props.AS_CrowFeather CrowFeather Position X,Y,Z -897 272 1634 Orientation OX,OY,OZ 0 -6 -1
+!!!!!!!!!!!!!!!!!

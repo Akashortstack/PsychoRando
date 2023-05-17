@@ -1,0 +1,23 @@
+Listing objects of class ca.props.ScavengerHuntItem
+ca.props.ScavengerHuntItem scavVoodooDollie Position X,Y,Z 7636 984 -7760 Orientation OX,OY,OZ 0 -68 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.DowsingRod
+global.collectibles.DowsingRod DowsingRod Position X,Y,Z 6159 166 -6242 Orientation OX,OY,OZ 119 -29 52
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.MentalMagnet
+global.collectibles.MentalMagnet MentalMagnet Position X,Y,Z 6246 252 -6249 Orientation OX,OY,OZ 0 17 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.PSIChallengeCore
+global.collectibles.PSIChallengeCore PSIChallengeCore Position X,Y,Z 6296 174 -6276 Orientation OX,OY,OZ 0 180 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.PSIBallColor
+global.collectibles.PSIBallColor PSIBallColor Position X,Y,Z 6302 223 -6266 Orientation OX,OY,OZ 0 0 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.DreamFluff
+global.collectibles.DreamFluff DreamFluff Position X,Y,Z 6357 164 -6287 Orientation OX,OY,OZ 0 -179 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.CobwebDuster
+global.collectibles.CobwebDuster CobwebDuster Position X,Y,Z 6382 218 -6287 Orientation OX,OY,OZ -110 -75 -90
+!!!!!!!!!!!!!!!!!
+
+NOTE: Shop items will need special coding for replacement!

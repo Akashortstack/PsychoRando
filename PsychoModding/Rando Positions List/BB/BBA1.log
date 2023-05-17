@@ -1,0 +1,8 @@
+Listing objects of class global.collectibles.EmotionalBaggageTag
+global.collectibles.EmotionalBaggageTag EmoTagSteamertrunk Position X,Y,Z -6261 -2491 7933 Orientation OX,OY,OZ 0 -90 0
+global.collectibles.EmotionalBaggageTag EmoTagSuitcase Position X,Y,Z -4451 -1115 7062 Orientation OX,OY,OZ 0 0 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.EmotionalBaggage
+bb.props.EmotionalBaggage EmoBagSteamertrunk Position X,Y,Z -8089 -2453 7797 Orientation OX,OY,OZ 0 0 0
+bb.props.EmotionalBaggage EmoBagSuitcase Position X,Y,Z 6656 -104 5872 Orientation OX,OY,OZ 0 -160 0
+!!!!!!!!!!!!!!!!!

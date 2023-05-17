@@ -1,0 +1,16 @@
+Listing objects of class global.collectibles.EmotionalBaggageTag
+global.collectibles.EmotionalBaggageTag EmoTagSuitcase1 Position X,Y,Z 49303 -32124 -12316 Orientation OX,OY,OZ 4 38 0
+!!!!!!!!!!!!!!!!!
+Listing objects of class global.collectibles.EmotionalBaggage
+global.collectibles.EmotionalBaggage EmoBagSteamertrunk Position X,Y,Z 42685 -30805 4210 Orientation OX,OY,OZ -2 -4 0
+global.collectibles.EmotionalBaggage EmoBagSuitcase Position X,Y,Z 49974 -23919 1151 Orientation OX,OY,OZ -102 141 66
+!!!!!!!!!!!!!!!!!
+
+--Locations are New and not in Vanilla
+
+--In front of Squirt's House
+Position X,Y,Z 7155, -2730, 13135 Orientation OX,OY,OZ 0, -124, 0
+
+--Right of Squirt's House
+Position X,Y,Z 6654, -2728, 16460 Orientation OX,OY,OZ -1, -171, 1
+

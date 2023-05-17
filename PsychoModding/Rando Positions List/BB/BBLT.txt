@@ -1,0 +1,7 @@
+--Locations are New and not in Vanilla
+
+--Left side of ending podium
+Position X,Y,Z -6407, -1931, 5691 Orientation OX,OY,OZ 0, 153, 0
+
+--Right side of ending podium
+Position X,Y,Z -6864, -1914, 5331 Orientation OX,OY,OZ 0, 140, 0

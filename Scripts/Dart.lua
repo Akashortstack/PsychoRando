@@ -2757,7 +2757,7 @@ function Dart(Ob)
 -- ****************************************************************************
 
 ------CUSTOM BAGGAGE TAG HANDLER------
---Stores 
+--Stores BaggageTag in global inventory
 	function Ob:onCollectedSuitcaseTag(value,from)
 		value = tonumber(value)
 		self.stats.CollectedSuitcaseTag = self.stats.CollectedSuitcaseTag + value
@@ -2787,50 +2787,50 @@ function Dart(Ob)
 
 ------CUSTOM BAGGAGE HANDLER------
 --Removes Baggage Tag from inventory, increases Collected Baggage, Increases Rank
-function Ob:onCollectedSuitcase(value,from)
-	value = tonumber(value)
-	self.stats.CollectedSuitcaseTag = self.stats.CollectedSuitcaseTag - value
-	self.stats.CollectedSuitcase = self.stats.CollectedSuitcase + value
-	self:incrementRank()
-end
+	function Ob:onCollectedSuitcase(value,from)
+		value = tonumber(value)
+		self.stats.CollectedSuitcaseTag = self.stats.CollectedSuitcaseTag - value
+		self.stats.CollectedSuitcase = self.stats.CollectedSuitcase + value
+		self:incrementRank()
+	end
 
-function Ob:onCollectedPurse(value,from)
-	value = tonumber(value)
-	self.stats.CollectedPurseTag = self.stats.CollectedPurseTag - value
-	self.stats.CollectedPurse = self.stats.CollectedPurse + value
-	self:incrementRank()
-end
+	function Ob:onCollectedPurse(value,from)
+		value = tonumber(value)
+		self.stats.CollectedPurseTag = self.stats.CollectedPurseTag - value
+		self.stats.CollectedPurse = self.stats.CollectedPurse + value
+		self:incrementRank()
+	end
 
-function Ob:onCollectedHatbox(value,from)
-	value = tonumber(value)
-	self.stats.CollectedHatboxTag = self.stats.CollectedHatboxTag - value
-	self.stats.CollectedHatbox = self.stats.CollectedHatbox + value
-	self:incrementRank()
-end
+	function Ob:onCollectedHatbox(value,from)
+		value = tonumber(value)
+		self.stats.CollectedHatboxTag = self.stats.CollectedHatboxTag - value
+		self.stats.CollectedHatbox = self.stats.CollectedHatbox + value
+		self:incrementRank()
+	end
 
-function Ob:onCollectedSteamertrunk(value,from)
-	value = tonumber(value)
-	self.stats.CollectedSteamertrunkTag = self.stats.CollectedSteamertrunkTag - value
-	self.stats.CollectedSteamertrunk = self.stats.CollectedSteamertrunk + value
-	self:incrementRank()
-end
+	function Ob:onCollectedSteamertrunk(value,from)
+		value = tonumber(value)
+		self.stats.CollectedSteamertrunkTag = self.stats.CollectedSteamertrunkTag - value
+		self.stats.CollectedSteamertrunk = self.stats.CollectedSteamertrunk + value
+		self:incrementRank()
+	end
 
-function Ob:onCollectedDufflebag(value,from)
-	value = tonumber(value)
-	self.stats.CollectedDufflebagTag = self.stats.CollectedDufflebagTag - value
-	self.stats.CollectedDufflebag = self.stats.CollectedDufflebag + value
-	self:incrementRank()
-end
+	function Ob:onCollectedDufflebag(value,from)
+		value = tonumber(value)
+		self.stats.CollectedDufflebagTag = self.stats.CollectedDufflebagTag - value
+		self.stats.CollectedDufflebag = self.stats.CollectedDufflebag + value
+		self:incrementRank()
+	end
 
 -- ****************************************************************************
 
 ------CUSTOM VAULT HANDLER------
 --Increases Rank when you open a vault
-function Ob:onCollectedVault(value,from)
-	value = tonumber(value)
-	self.stats.CollectedVault = self.stats.CollectedVault + value
-	self:incrementRank()
-end
+	function Ob:onCollectedVault(value,from)
+		value = tonumber(value)
+		self.stats.CollectedVault = self.stats.CollectedVault + value
+		self:incrementRank()
+	end
 
 -- ****************************************************************************
 

@@ -21,7 +21,7 @@ Custom Rando PsiMarkers
     'global.collectibles.CustomPsiChallengeMarker'
     'global.collectibles.CustomPsiChallengeMarker'
 
-    --9 Total
+--9 Total
 
 MaxAmmoUp
     'Global.Collectibles.MaxAmmoUp'
@@ -31,7 +31,7 @@ MaxAmmoUp
     'Global.Collectibles.MaxAmmoUp'
     'Global.Collectibles.MaxAmmoUp'
 
-    --6 Total
+--6 Total
 
 MaxLivesUp
     'Global.Collectibles.MaxLivesUp'
@@ -41,7 +41,7 @@ MaxLivesUp
     'Global.Collectibles.MaxLivesUp'
     'Global.Collectibles.MaxLivesUp'
 
-    --6 Total
+--6 Total
 
 Rando Brain Jars
     'global.collectibles.BrainJar', 'BrainJarElton'
@@ -64,7 +64,7 @@ Rando Brain Jars
     'global.collectibles.BrainJar', 'BrainJarPhoebe'
     'global.collectibles.BrainJar', 'BrainJarChops'
 
-    --19 Total
+--19 Total
 
 Custom Rando Scavenger Hunt Items
     'Global.Collectibles.scavDoubloon', 'scavDoubloon'
@@ -84,7 +84,7 @@ Custom Rando Scavenger Hunt Items
     'Global.Collectibles.scavFossil', 'scavFossil'
     'Global.Collectibles.ScavHuntGoldWatch', 'ScavHuntGoldWatch'
 
-    --16 Total
+--16 Total
 
 
 
@@ -173,7 +173,7 @@ Custom Rando Emotional Baggage Tags
     'global.collectibles.RandoDufflebagTag'
     'global.collectibles.RandoDufflebagTag'
 
-    --10 of Each
+--10 of Each, 50 Total Tags
 
 
 
@@ -233,7 +233,7 @@ Custom Rando Emotional Baggage
     'global.collectibles.RandoDufflebag'
     'global.collectibles.RandoDufflebag'
 
-    --10 of Each
+--10 of Each, 50 Total Baggage
 
 
 Custom Vaults
@@ -257,7 +257,7 @@ Custom Vaults
     'Global.Characters.Vault'
     'Global.Characters.Vault'
 
-    --19 Total Vaults
+--19 Total Vaults
 
 Props from MM 
     'global.props.PropFlowers'
@@ -275,10 +275,10 @@ Props from TH
     'global.props.Candle'
     'global.props.Megaphone'
     
-    --Possibly randomized later, leaving Vanilla for now.
-    --'global.props.Script_KnightOfJoy'
-    --'global.props.Script_LoveBoat' 
-    --'global.props.Script_HagathaHome'
+--Possibly randomized later, leaving Vanilla for now.
+--'global.props.Script_KnightOfJoy'
+--'global.props.Script_LoveBoat' 
+--'global.props.Script_HagathaHome'
 
 Props from WW
     'global.props.Peasant1Item' --Fred's Note
@@ -287,12 +287,12 @@ Props from WW
 
 Props from BV
 --These can't be added until Shop Rando is implemented
-    --'bv.props.MagicPainting' 'Rose3Painting'
-    --'bv.props.MagicPainting' 'ArchPainting'
-    --'bv.props.MagicPainting' 'LadderPainting'
-    --'bv.props.MagicPainting' 'Rose2Painting'
-    --'bv.props.MagicPainting' 'VinePainting'
-    --'bv.props.MagicPainting' 'WindowPainting'
+--'bv.props.MagicPainting' 'Rose3Painting'
+--'bv.props.MagicPainting' 'ArchPainting'
+--'bv.props.MagicPainting' 'LadderPainting'
+--'bv.props.MagicPainting' 'Rose2Painting'
+--'bv.props.MagicPainting' 'VinePainting'
+--'bv.props.MagicPainting' 'WindowPainting'
 
 Props from AS
     'global.props.Cake' 'Cake'
@@ -301,6 +301,6 @@ Props from AS
     'global.props.AS_StraightJacket' 'StraightJacket'
     'global.props.AS_Painting' 'LobatoPainting'
 
-    --'as.props.PokeyProp' 'PokeyProp'
+--'as.props.PokeyProp' 'PokeyProp'
 
     

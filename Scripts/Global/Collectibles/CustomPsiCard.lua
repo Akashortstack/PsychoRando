@@ -82,6 +82,12 @@ function CustomPsiCard(Ob)
 			self.bOnSpline = 0
 		end
 		self:sendMessage(Global.player, 'CollectedPSIChallengeCard', self.value, 1)
+		--edit to track 
+		self:sendMessage(Global.player, 'CollectedSuitcase', self.value, 1)
+
+		--edit
+		GamePrint("Collected "..self.Name)
+		
 		if self.bDynamicallyCreated ~= 1 then -- only want to register ourself if we werent spawned
 			CollectiblePickedUp(self)
 		end

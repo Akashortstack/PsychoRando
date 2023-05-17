@@ -111,11 +111,11 @@ function RankPowerManager(Ob)
 				--Encouragement = "/GLZF046TO/ 95" -- INFINITE AMMO upgrade at rank: 95
 			},
 			[95] = { 
-				--bInfiniteAmmo = 1,
+				bInfiniteAmmo = 1,
 				--Encouragement = "/GLZF049TO/"
 			},
 			[100] = { 
-				--bMaxPsycadetRank = 1,
+				bMaxPsycadetRank = 1,
 				--Encouragement = ''
 			},
 		}
