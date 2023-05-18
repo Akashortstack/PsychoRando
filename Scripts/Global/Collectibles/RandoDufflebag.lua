@@ -42,7 +42,6 @@ function RandoDufflebag(Ob)
 		Ob.noticePlayerRadius = 200
 		Ob.bCollected = 0
 		--edit
-		Ob.value = 1
 		Ob.level = 'all'
 
 		Ob.SIM_CULL_DIST = 2000	
@@ -69,14 +68,21 @@ function RandoDufflebag(Ob)
 			GamePrint('ERROR: There is no such baggage type as '..(self.sBaggageType or 'nil')..'.  I recommend you change it.')
 			self:setState('ErrorKill')
 			return
-		end                                  
+		end  
+		
+		--edit
+		if Global.player.stats.RandoDufflebag[self.Name] == 'collected' then
+			self:killSelf()
+		end
+		
 		self.leftTear = SpawnScript('Global.Effects.EmoBagTearFX', self.Name..'LeftTear')
 		self.rightTear = SpawnScript('Global.Effects.EmoBagTearFX', self.Name..'RightTear')
 		
-		if Global.player.stats.baggageCollected[self.sBaggageType] == 1 then
-			self:killSelf()
-			return nil
-		end
+		--edit Removed
+		--if Global.player.stats.baggageCollected[self.sBaggageType] == 1 then
+		--	self:killSelf()
+		--	return nil
+		--end
 		%Ob.Parent.onBeginLevel(self)
 		--edit
 		self:loadMesh('GlobalModels/CO_Collectibles/CO_dufflebag.plb')
@@ -237,10 +243,11 @@ function RandoDufflebag(Ob)
 	function Ob:stateActivated()
 		--edit stat type
 		if (Global.player.stats.CollectedDufflebagTag >= 1) then -- player has collected our matching tag
-			--edit to remove from total count
-			self:sendMessage(Global.player, 'CollectedDufflebag', self.value, 1)
-			GamePrint('GotItem!')
-			--self.bCollected = 1
+			--edit to sendMessage to Dart
+			self:sendMessage(Global.player, 'CollectedDufflebag', self.Name, 1)
+			GamePrint('GotItem '..self.Name)
+
+			self.bCollected = 1
 			Global.player:setNewAction('Stand')
             self:killTimer(self.dieTimerID)
 			StopSound(self.whimperSound)

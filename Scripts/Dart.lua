@@ -1079,8 +1079,8 @@ function Dart(Ob)
 		    'shownpokey', 'clairvoyanced',
 			--edit Custom StatNames
 			'CollectedSuitcaseTag', 'CollectedPurseTag', 'CollectedHatboxTag', 'CollectedSteamertrunkTag', 'CollectedDufflebagTag',
-			'CollectedSuitcase', 'CollectedPurse', 'CollectedHatbox', 'CollectedSteamertrunk', 'CollectedDufflebag', 
-			'CollectedVault'
+			'RandoHatbox', 'RandoSuitcase', 'RandoPurse', 'RandoSteamertrunk', 'RandoDufflebag',
+			'CollectedVault',
 			}
 
 	--Called whenever the player saves their game
@@ -1170,6 +1170,9 @@ function Dart(Ob)
 			self.stats[statID] = 5
 		elseif statID == 'confusionAmmo' then
 			self.stats[statID] = self.stats.confusionMaxAmmo or 5
+		--edit adding all Rando Baggage as Tables
+		elseif statID == 'RandoHatbox' or statID == 'RandoSuitcase' or statID == 'RandoPurse' or statID == 'RandoSteamertrunk' or statID == 'RandoDufflebag' then
+			self.stats[statID] = {}	
 		else
 			self.stats[statID] = 0
 		end
@@ -1193,7 +1196,6 @@ function Dart(Ob)
 		end
 		AdjustPsiBlastAmmo(amount)
 	end
-	
 	
 --- ****************************************************************************
 -- Health Stats Adjustment
@@ -2787,38 +2789,43 @@ function Dart(Ob)
 
 ------CUSTOM BAGGAGE HANDLER------
 --Removes Baggage Tag from inventory, increases Collected Baggage, Increases Rank
-	function Ob:onCollectedSuitcase(value,from)
-		value = tonumber(value)
+	function Ob:onCollectedSuitcase(name,from)
+		self.stats.RandoSuitcase[name] = 'collected' 
+		GamePrint('Test '..name)
+		local value = 1
 		self.stats.CollectedSuitcaseTag = self.stats.CollectedSuitcaseTag - value
-		self.stats.CollectedSuitcase = self.stats.CollectedSuitcase + value
 		self:incrementRank()
 	end
 
-	function Ob:onCollectedPurse(value,from)
-		value = tonumber(value)
+	function Ob:onCollectedPurse(name,from)
+		self.stats.RandoPurse[name] = 'collected' 
+		GamePrint('Test '..name)
+		local value = 1
 		self.stats.CollectedPurseTag = self.stats.CollectedPurseTag - value
-		self.stats.CollectedPurse = self.stats.CollectedPurse + value
 		self:incrementRank()
 	end
 
-	function Ob:onCollectedHatbox(value,from)
-		value = tonumber(value)
+	function Ob:onCollectedHatbox(name,from)
+		self.stats.RandoHatbox[name] = 'collected' 
+		GamePrint('Test '..name)
+		local value = 1
 		self.stats.CollectedHatboxTag = self.stats.CollectedHatboxTag - value
-		self.stats.CollectedHatbox = self.stats.CollectedHatbox + value
 		self:incrementRank()
 	end
 
-	function Ob:onCollectedSteamertrunk(value,from)
-		value = tonumber(value)
+	function Ob:onCollectedSteamertrunk(name,from)
+		self.stats.RandoSteamertrunk[name] = 'collected' 
+		GamePrint('Test '..name)
+		local value = 1
 		self.stats.CollectedSteamertrunkTag = self.stats.CollectedSteamertrunkTag - value
-		self.stats.CollectedSteamertrunk = self.stats.CollectedSteamertrunk + value
 		self:incrementRank()
 	end
 
-	function Ob:onCollectedDufflebag(value,from)
-		value = tonumber(value)
+	function Ob:onCollectedDufflebag(name,from)
+		self.stats.RandoDufflebag[name] = 'collected' 
+		GamePrint('Test '..name)
+		local value = 1
 		self.stats.CollectedDufflebagTag = self.stats.CollectedDufflebagTag - value
-		self.stats.CollectedDufflebag = self.stats.CollectedDufflebag + value
 		self:incrementRank()
 	end
 
