@@ -115,12 +115,22 @@ function Vault(Ob)
 			},
 		}
 		Global.levelScript.numVaultsInLevel = Global.levelScript.numVaultsInLevel + 1
+
+		--edit
+		if Global.player.stats.CollectedVault[self.Name] == 'collected' then
+			self:killSelf()
+		end
+
+		--edit Removed
+		--[[
 		if (Global:loadGlobal(self.saveVariable) == 1) then
 			self:killSelf()	-- true if we were already collected
 			return
 		else
 	  		%Ob.Parent.onBeginLevel(self) -- parent takes care of our collision
-		end
+		end]]
+		%Ob.Parent.onBeginLevel(self) -- parent takes care of our collision
+
 		
 		SetPhysicsFlag(self, PHYSICS_NAVIGATION, 1)
 
@@ -191,13 +201,15 @@ function Vault(Ob)
     
 	--Got Melee'd.  Vault must die. 
 	function Ob:stateDie()
-		--edit to give player (something) on Collect in Dart.lua, currently Figment LevelUp 
-        self:sendMessage(Global.player, 'CollectedVault', 1, 1)
-        GamePrint('GotItem!')
+		--edit sendMessage to Dart
+        self:sendMessage(Global.player, 'CollectedVault', self.Name, 1)
 
 		Global.cutsceneScript.vault = self
 		Global.cutsceneScript:runCutscene('VaultCollection',1,0,0)
+		
 		self:setState(nil)
+		
+        
 	
 															
 								

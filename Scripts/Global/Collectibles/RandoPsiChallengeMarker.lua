@@ -15,7 +15,7 @@
 --
 --  (not really)
 
-function CustomPsiChallengeMarker(Ob)
+function RandoPsiChallengeMarker(Ob)
 
 	if (not Ob) then
 		Ob = CreateObject('Global.Props.HeldObject')
@@ -48,6 +48,12 @@ function CustomPsiChallengeMarker(Ob)
 			self:killSelf()
 			return nil
 		end
+
+		--edit
+		if Global.player.stats.RandoPsiMarker[self.Name] == 'collected' then
+			self:killSelf()
+		end
+		
 		%Ob.Parent.onBeginLevel(self)
 		SetSimulationCullDistance(self, self.SIM_CULL_DIST)
 		
@@ -142,6 +148,10 @@ function CustomPsiChallengeMarker(Ob)
 		Global.player:replaceSelectedItemInPsack()
 		Global.player.invDisplayer:invItemAdded(self,0,0)
 		self:sendMessage(Global.player, 'PSIChallengeMarker', self.value, 1)
+
+		--edit sendMessage to Dart
+		self:sendMessage(Global.player, 'RandoPsiMarker', self.Name, 1)
+
 		UI_AdjustCollectible('PSIMarker', 1, self)
 		self:killSelf()
 	end

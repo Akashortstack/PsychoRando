@@ -1080,7 +1080,10 @@ function Dart(Ob)
 			--edit Custom StatNames
 			'CollectedSuitcaseTag', 'CollectedPurseTag', 'CollectedHatboxTag', 'CollectedSteamertrunkTag', 'CollectedDufflebagTag',
 			'RandoHatbox', 'RandoSuitcase', 'RandoPurse', 'RandoSteamertrunk', 'RandoDufflebag',
-			'CollectedVault',
+			'RandoHatboxTag', 'RandoSuitcaseTag', 'RandoPurseTag', 'RandoSteamertrunkTag', 'RandoDufflebagTag',
+			'RandoLevitation', 'RandoClairvoyance', 'RandoConfusion', 'RandoFirestarting', 'RandoInvisibility', 'RandoMarksmanship', 'RandoShield', 'RandoTelekinesis',
+			'ArrowheadBundleSmall', 'ArrowheadBundleMedium',
+			'CollectedVault', 'RandoPsiCard', 'RandoPsiMarker'
 			}
 
 	--Called whenever the player saves their game
@@ -1172,7 +1175,16 @@ function Dart(Ob)
 			self.stats[statID] = self.stats.confusionMaxAmmo or 5
 		--edit adding all Rando Baggage as Tables
 		elseif statID == 'RandoHatbox' or statID == 'RandoSuitcase' or statID == 'RandoPurse' or statID == 'RandoSteamertrunk' or statID == 'RandoDufflebag' then
-			self.stats[statID] = {}	
+			self.stats[statID] = {}
+		--edit adding all Rando Baggage Tags as Tables
+		elseif statID == 'RandoHatboxTag' or statID == 'RandoSuitcaseTag' or statID == 'RandoPurseTag' or statID == 'RandoSteamertrunkTag' or statID == 'RandoDufflebagTag' then
+			self.stats[statID] = {}
+		--edit adding Vaults, PsiCards, PsiMarkers, and ArrowheadBundles as Tables
+		elseif statID == 'CollectedVault' or statID == 'RandoPsiCard' or statID == 'RandoPsiMarker' or statID == 'ArrowheadBundleSmall' or statID == 'ArrowheadBundleMedium' then
+			self.stats[statID] = {}
+		--edit adding all PsiPowers with Progressive powers as Tables
+		elseif statID == 'RandoClairvoyance' or statID == 'RandoConfusion' or statID == 'RandoFirestarting' or statID == 'RandoInvisibility' or statID == 'RandoLevitation' or statID == 'RandoMarksmanship' or statID == 'RandoShield' or statID == 'RandoTelekinesis' then
+			self.stats[statID] = {}				
 		else
 			self.stats[statID] = 0
 		end
@@ -2759,39 +2771,49 @@ function Dart(Ob)
 -- ****************************************************************************
 
 ------CUSTOM BAGGAGE TAG HANDLER------
---Stores BaggageTag in global inventory
-	function Ob:onCollectedSuitcaseTag(value,from)
-		value = tonumber(value)
+--Stores Collected BaggageTag, Global Key
+	function Ob:onCollectedSuitcaseTag(name,from)
+		self.stats.RandoSuitcaseTag[name] = 'collected' 
+		GamePrint('Stored '..name)
+		local value = 1
 		self.stats.CollectedSuitcaseTag = self.stats.CollectedSuitcaseTag + value
 	end
 
-	function Ob:onCollectedPurseTag(value,from)
-		value = tonumber(value)
+	function Ob:onCollectedPurseTag(name,from)
+		self.stats.RandoPurseTag[name] = 'collected' 
+		GamePrint('Stored '..name)
+		local value = 1
 		self.stats.CollectedPurseTag = self.stats.CollectedPurseTag + value
 	end
 
-	function Ob:onCollectedHatboxTag(value,from)
-		value = tonumber(value)
+	function Ob:onCollectedHatboxTag(name,from)
+		self.stats.RandoHatboxTag[name] = 'collected' 
+		GamePrint('Stored '..name)
+		local value = 1
 		self.stats.CollectedHatboxTag = self.stats.CollectedHatboxTag + value
 	end
 
-	function Ob:onCollectedSteamertrunkTag(value,from)
-		value = tonumber(value)
+	function Ob:onCollectedSteamertrunkTag(name,from)
+		self.stats.RandoSteamertrunkTag[name] = 'collected' 
+		GamePrint('Stored '..name)
+		local value = 1
 		self.stats.CollectedSteamertrunkTag = self.stats.CollectedSteamertrunkTag + value
 	end
 
-	function Ob:onCollectedDufflebagTag(value,from)
-		value = tonumber(value)
+	function Ob:onCollectedDufflebagTag(name,from)
+		self.stats.RandoDufflebagTag[name] = 'collected' 
+		GamePrint('Stored '..name)
+		local value = 1
 		self.stats.CollectedDufflebagTag = self.stats.CollectedDufflebagTag + value
 	end
 
 -- ****************************************************************************
 
 ------CUSTOM BAGGAGE HANDLER------
---Removes Baggage Tag from inventory, increases Collected Baggage, Increases Rank
+--Removes Baggage Tag from inventory, stores Collected Baggage, Increases Rank, Global Lock
 	function Ob:onCollectedSuitcase(name,from)
 		self.stats.RandoSuitcase[name] = 'collected' 
-		GamePrint('Test '..name)
+		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedSuitcaseTag = self.stats.CollectedSuitcaseTag - value
 		self:incrementRank()
@@ -2799,7 +2821,7 @@ function Dart(Ob)
 
 	function Ob:onCollectedPurse(name,from)
 		self.stats.RandoPurse[name] = 'collected' 
-		GamePrint('Test '..name)
+		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedPurseTag = self.stats.CollectedPurseTag - value
 		self:incrementRank()
@@ -2807,7 +2829,7 @@ function Dart(Ob)
 
 	function Ob:onCollectedHatbox(name,from)
 		self.stats.RandoHatbox[name] = 'collected' 
-		GamePrint('Test '..name)
+		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedHatboxTag = self.stats.CollectedHatboxTag - value
 		self:incrementRank()
@@ -2815,7 +2837,7 @@ function Dart(Ob)
 
 	function Ob:onCollectedSteamertrunk(name,from)
 		self.stats.RandoSteamertrunk[name] = 'collected' 
-		GamePrint('Test '..name)
+		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedSteamertrunkTag = self.stats.CollectedSteamertrunkTag - value
 		self:incrementRank()
@@ -2823,7 +2845,7 @@ function Dart(Ob)
 
 	function Ob:onCollectedDufflebag(name,from)
 		self.stats.RandoDufflebag[name] = 'collected' 
-		GamePrint('Test '..name)
+		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedDufflebagTag = self.stats.CollectedDufflebagTag - value
 		self:incrementRank()
@@ -2831,13 +2853,89 @@ function Dart(Ob)
 
 -- ****************************************************************************
 
+------CUSTOM RANDOPSIPOWERS HANDLERS------
+--Stores Collected RandoPsiPowers and Progressive Powerups
+function Ob:onRandoClairvoyance(name,from)
+	self.stats.RandoClairvoyance[name] = 'collected' 
+	GamePrint('Stored '..name)
+end
+
+function Ob:onRandoConfusion(name,from)
+	self.stats.RandoConfusion[name] = 'collected' 
+	GamePrint('Stored '..name)
+end
+
+function Ob:onRandoFirestarting(name,from)
+	self.stats.RandoFirestarting[name] = 'collected' 
+	GamePrint('Stored '..name)
+end
+
+function Ob:onRandoInvisibility(name,from)
+	self.stats.RandoInvisibility[name] = 'collected' 
+	GamePrint('Stored '..name)
+end
+
+function Ob:onRandoLevitation(name,from)
+	self.stats.RandoLevitation[name] = 'collected' 
+	GamePrint('Stored '..name)
+end
+
+function Ob:onRandoMarksmanship(name,from)
+	self.stats.RandoMarksmanship[name] = 'collected' 
+	GamePrint('Stored '..name)
+end
+
+function Ob:onRandoShield(name,from)
+	self.stats.RandoShield[name] = 'collected' 
+	GamePrint('Stored '..name)
+end
+
+function Ob:onRandoTelekinesis(name,from)
+	self.stats.RandoTelekinesis[name] = 'collected' 
+	GamePrint('Stored '..name)
+end
+
+-- ****************************************************************************
+
+------CUSTOM RANDOPSICARD HANDLER------
+--Stores Collected RandoPsiCard
+function Ob:onRandoPsiCard(name,from)
+	self.stats.RandoPsiCard[name] = 'collected' 
+	GamePrint('Stored '..name)
+end
+
+-- ****************************************************************************
+
+------CUSTOM RANDOPSIMARKER HANDLER------
+--Stores Collected RandoPsiMarker
+function Ob:onRandoPsiMarker(name,from)
+	self.stats.RandoPsiMarker[name] = 'collected' 
+	GamePrint('Stored '..name)
+end
+
+-- ****************************************************************************
+
 ------CUSTOM VAULT HANDLER------
---Increases Rank when you open a vault
-	function Ob:onCollectedVault(value,from)
-		value = tonumber(value)
-		self.stats.CollectedVault = self.stats.CollectedVault + value
+--Stores CollectedVault, Increases Rank when you open a vault
+	function Ob:onCollectedVault(name,from)
+		self.stats.CollectedVault[name] = 'collected' 
+		GamePrint('Stored '..name)
 		self:incrementRank()
 	end
+
+-- ****************************************************************************
+
+------CUSTOM ARROWHEADBUNDLE HANDLERS------
+--Stores collected ArrowheadBundles
+function Ob:onArrowheadBundleSmall(name,from)
+	self.stats.ArrowheadBundleSmall[name] = 'collected' 
+	GamePrint('Stored '..name)
+end
+
+function Ob:onArrowheadBundleMedium(name,from)
+	self.stats.ArrowheadBundleMedium[name] = 'collected' 
+	GamePrint('Stored '..name)
+end
 
 -- ****************************************************************************
 

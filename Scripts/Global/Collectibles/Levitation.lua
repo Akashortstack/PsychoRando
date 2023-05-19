@@ -26,10 +26,11 @@ function Levitation(Ob)
 	
 		--self.meshName = 'GlobalModels/GO_GlobalObjects/meritbadges/'..strlower(self.power)..'.plb'
 		
-		if Global:loadGlobal('bGot'..self.power) == 1 then
+		--edit
+		if Global.player.stats.RandoLevitation[self.Name] == 'collected' then
 			self:killSelf()
-			return
 		end
+
 		self.pickupSpritePath = 'Textures/icons/PsiPowers/'..self.power..'.tga'
 		
 		if self.power == 'Clairvoyance' then
@@ -103,6 +104,7 @@ function Levitation(Ob)
 		
 		if self:getConstant() == kPOWER_CLAIRVOYANCE then
 			Yield()
+			edit remove tutorial
 			Global.levelScript:addTutorialBox("/GLZF028TO/")
 		end
 
@@ -120,8 +122,9 @@ function Levitation(Ob)
 				Global:saveGlobal('bSuperSpikeBall', 1)
 			end
 		end
-		--edit removed for progressive powerup
+		--edit removed for progressive powerup, handled in RankPowerManager.lua
 		--Global:saveGlobal('bGotRando'..self.power, 1)
+		
 		EnablePower(self:getConstant())
 
 		-- Show any max ammo ups in the level, if they exist.
@@ -129,14 +132,19 @@ function Levitation(Ob)
 			local showFunc = function(ent) ent:show() end
 			foreach_entity_ofexacttype('global.collectibles.MaxConfusionUp', showFunc)
 		end
+
+		--edit sendMessage to Dart
+		self:sendMessage(Global.player, 'RandoLevitation', self.Name, 1)
 		
 		-- I believe these are the only two powers in the game acquired this way, if others
 		-- are for some reason, god save us all.
+		--edit Removes auto customize for these powers
+		--[[
         if (self:getConstant() == kPOWER_CLAIRVOYANCE) then
 			MapPowerToButton(kPOWER_CLAIRVOYANCE,kQUICKPICK_BLACK)		
 		elseif (self:getConstant() == kPOWER_CONFUSION) then
 			MapPowerToButton(kPOWER_CONFUSION,kQUICKPICK_BLACK)		
-		end
+		end]]
 
 		if (self.power == 'Clairvoyance') then
 			Global.goalManager:activate('TryClair')

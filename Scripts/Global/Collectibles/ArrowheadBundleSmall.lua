@@ -1,5 +1,5 @@
 --*
---*              "SmallArrowheadBundle.lua"                
+--*              "ArrowheadBundleSmall.lua"                
 --*  
 --*       from  P S Y C H O N A U T S
 --*
@@ -8,7 +8,7 @@
 --*        Proprietary and Confidential
 --*
 
-function SmallArrowheadBundle(Ob)
+function ArrowheadBundleSmall(Ob)
 	if not Ob then
 		Ob = CreateObject('Global.Props.HeldObject')
 		--edit 
@@ -23,11 +23,13 @@ function SmallArrowheadBundle(Ob)
 	function Ob:onBeginLevel()
 
 		self.meshName = 'Characters/MentalArrowhead.plb'
+
+		--edit
+		if Global.player.stats.ArrowheadBundleSmall[self.Name] == 'collected' then
+			self:killSelf()
+		end
         
 		%Ob.Parent.onBeginLevel(self)
-		--edit, effect removed for Visibility
-		--self.effect = SpawnScript('Global.Effects.PsiPowerUpFX')
-		--self.effect:run(self)
 
 		--edit to fix scale and orientation
 		SetScale(self, 0.5,0.5,0.5)
@@ -61,6 +63,10 @@ function SmallArrowheadBundle(Ob)
 		--edit
 		UI_AdjustCollectible('arrowhead', self.value, self)
 		SendMessage(self, self.player, 'Arrowhead', self.value)
+
+		--edit sendMessage to Dart
+		self:sendMessage(Global.player, 'ArrowheadBundleSmall', self.Name, 1)
+
 		self:killSelf()
 	end
 

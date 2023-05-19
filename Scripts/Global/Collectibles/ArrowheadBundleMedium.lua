@@ -8,7 +8,7 @@
 --*        Proprietary and Confidential
 --*
 
-function MediumArrowheadBundle(Ob)
+function ArrowheadBundleMedium(Ob)
 	if not Ob then
 		Ob = CreateObject('Global.Props.HeldObject')
 		--edit 
@@ -23,11 +23,13 @@ function MediumArrowheadBundle(Ob)
 	function Ob:onBeginLevel()
 
 		self.meshName = 'Characters/MentalArrowhead.plb'
+
+		--edit
+		if Global.player.stats.ArrowheadBundleMedium[self.Name] == 'collected' then
+			self:killSelf()
+		end
         
 		%Ob.Parent.onBeginLevel(self)
-		--edit, effect removed for Visibility
-		--self.effect = SpawnScript('Global.Effects.PsiPowerUpFX')
-		--self.effect:run(self)
 
 		--edit to fix scale and orientation
 		SetScale(self, 1,1,1)
@@ -61,6 +63,10 @@ function MediumArrowheadBundle(Ob)
 		--edit
 		UI_AdjustCollectible('arrowhead', self.value, self)
 		SendMessage(self, self.player, 'Arrowhead', self.value)
+
+		--edit sendMessage to Dart
+		self:sendMessage(Global.player, 'ArrowheadBundleMedium', self.Name, 1)
+
 		self:killSelf()
 	end
 

@@ -37,7 +37,6 @@ function RandoPurseTag(Ob)
 		Ob.sBaggageType = 'purse_tag' -- Editable
 		Ob.invSortKey = 15
 		--edit
-		Ob.value = 1
 		Ob.level = 'all'
 		Ob.collSphereRadius = 50
 		
@@ -65,11 +64,19 @@ function RandoPurseTag(Ob)
 			GamePrint('ERROR: No tag type found.  Defaulting to hatbox_tag.')
 			self.sBaggageType = 'hatbox_tag'
 		end
-		self.sBaggageType = strlower(self.sBaggageType)
+
+		--edit
+		if Global.player.stats.RandoPurseTag[self.Name] == 'collected' then
+			self:killSelf()
+		end
+
+		--edit Removed
+		--[[self.sBaggageType = strlower(self.sBaggageType)
 		if Global.player.stats.bagTagsCollected[self:getBagType()] == 1 then
 			self:killSelf()
 			return nil			   
-		end
+		end]]
+
         --edit        
 		self.meshName = 'GlobalModels/Objects/HeldObjects/purse_tag.plb'
 		
@@ -157,10 +164,9 @@ function RandoPurseTag(Ob)
 			self:loadAnim('Anims/Emotional Baggage/suitcaseTag_default.jan', 0, 0)
 		end	
 		Yield()   --so the default anim loads so the clutch looks right
-		--edit Collected Purse Tag
-		self:sendMessage(Global.player, 'CollectedPurseTag', self.value, 1)
-		GamePrint('GotItem!')
-		--self:sendMessage(Global.player, 'EmotionalBagTag', bagType)
+		--edit to sendMessage to Dart
+		self:sendMessage(Global.player, 'CollectedPurseTag', self.Name, 1)
+		GamePrint('GotItem '..self.Name)
 
 		Global.player.invDisplayer:journalItemAdded(self)
 		self:killSelf()
@@ -220,19 +226,7 @@ function RandoPurseTag(Ob)
 	]]--
     end
 
-	--edit 
-		 
-	-------------------------------------------------------------------
-	--               MISCELLANEOUS
-	-------------------------------------------------------------------
-	
-	--edit
-	--function Ob:onAddedToInventory(data, from)
 
-		--self:sendMessage(Global.player, 'CollectedSuitcaseTag', self.value, 1)
-	--end
-
-	-------------------------------------------------------------------	
 	return Ob
 
 end

@@ -8,7 +8,7 @@
 --*        Proprietary and Confidential
 --*
 --edit name
-function CustomPsiCard(Ob)
+function RandoPsiCard(Ob)
 	if not Ob then
 		Ob = CreateObject('Global.Props.HeldObject')
 		Ob.dependencies = {
@@ -48,6 +48,12 @@ function CustomPsiCard(Ob)
 			self:killSelf()
 			return
 		end
+
+		--edit
+		if Global.player.stats.RandoPsiCard[self.Name] == 'collected' then
+			self:killSelf()
+		end
+
 		%Ob.Parent.onBeginLevel(self)
 		Global.levelScript:getPool('Global.Effects.PsiChallengeCardFX'):setLowerLimit(5)
 		self.effect = Global.levelScript:getPool('Global.Effects.PsiChallengeCardFX'):get()
@@ -82,11 +88,9 @@ function CustomPsiCard(Ob)
 			self.bOnSpline = 0
 		end
 		self:sendMessage(Global.player, 'CollectedPSIChallengeCard', self.value, 1)
-		--edit to track 
-		self:sendMessage(Global.player, 'CollectedSuitcase', self.value, 1)
 
-		--edit
-		GamePrint("Collected "..self.Name)
+		--edit sendMessage to Dart
+		self:sendMessage(Global.player, 'RandoPsiCard', self.Name, 1)
 		
 		if self.bDynamicallyCreated ~= 1 then -- only want to register ourself if we werent spawned
 			CollectiblePickedUp(self)
