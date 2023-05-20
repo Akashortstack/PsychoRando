@@ -58,12 +58,17 @@ function Candle(Ob)
 		%Ob.Parent.onAddedToInventory(self, data, from)
 		if (GetCurrentLevelName() == 'THFB') then
 			Global:clearInventory(self)
+		else
+			--edit sendMessage to Dart
+			self:sendMessage(Global.player, 'RandoProp', self.Name, 1)	
 		end
 		self:fireDissipate()	
 		Global:save('bGotCandle', 1)
 		if (Global.goalManager:isActive('FindCandle') == 1) then
 			Global.goalManager:activate('LightCandle')
 		end
+
+		
 	end
 	
 --**************************************************************************************

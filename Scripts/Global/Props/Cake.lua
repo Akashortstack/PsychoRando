@@ -65,6 +65,10 @@ function Cake(Ob)
 		if (pokey) then
 			pokey:activateCakeFollowing()
 		end
+
+		--edit sendMessage to Dart
+		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
+
 	end
     
 	function Ob:onActivateFromInventory(data, from)

@@ -56,6 +56,10 @@ function PropFlowers(Ob)
 			--Now use the flower to get into the graveyard
 			Global.goalManager:activate('Graveyard')
 		end
+
+		--edit sendMessage to Dart
+		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
+		
 	end
 
 --**************************************************************************************************

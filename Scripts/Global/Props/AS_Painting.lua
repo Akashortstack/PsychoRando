@@ -152,6 +152,21 @@ function AS_Painting(Ob)
 	
 		
 --  M E S S A G E   H A N D L E R S  *****************************************************
+
+	--edit
+	function Ob:addToInventory(bHoldImmediately, bSilent)
+        if (self.rMovementThread) then
+			self.rMovementThread:killSelf()
+		end
+		self:beNotPickupable()
+		self.player:addToInventory(self, (self.bAutoSelect == 1 and 1) or bHoldImmediately, bSilent)
+		--self:setVelocity(0, 0, 0)
+
+		--edit sendMessage to Dart
+		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
+
+		self:setState(nil)
+	end
 	
 	function Ob:onAccessGranted(data, from)
 		self:accessGranted()

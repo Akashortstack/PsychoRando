@@ -1083,7 +1083,7 @@ function Dart(Ob)
 			'RandoHatboxTag', 'RandoSuitcaseTag', 'RandoPurseTag', 'RandoSteamertrunkTag', 'RandoDufflebagTag',
 			'RandoLevitation', 'RandoClairvoyance', 'RandoConfusion', 'RandoFirestarting', 'RandoInvisibility', 'RandoMarksmanship', 'RandoShield', 'RandoTelekinesis',
 			'ArrowheadBundleSmall', 'ArrowheadBundleMedium',
-			'CollectedVault', 'RandoPsiCard', 'RandoPsiMarker'
+			'CollectedVault', 'RandoPsiCard', 'RandoPsiMarker', 'RandoLivesUp', 'RandoAmmoUp', 'RandoProp'
 			}
 
 	--Called whenever the player saves their game
@@ -1184,6 +1184,12 @@ function Dart(Ob)
 			self.stats[statID] = {}
 		--edit adding all PsiPowers with Progressive powers as Tables
 		elseif statID == 'RandoClairvoyance' or statID == 'RandoConfusion' or statID == 'RandoFirestarting' or statID == 'RandoInvisibility' or statID == 'RandoLevitation' or statID == 'RandoMarksmanship' or statID == 'RandoShield' or statID == 'RandoTelekinesis' then
+			self.stats[statID] = {}
+		--edit adding RandoLivesUp and RandoAmmoUp as Tables
+		elseif statID == 'RandoLivesUp' or statID == 'RandoAmmoUp' then
+			self.stats[statID] = {}
+		--edit adding all RandoProp Items as Table
+		elseif statID == 'RandoProp' then
 			self.stats[statID] = {}				
 		else
 			self.stats[statID] = 0
@@ -2853,70 +2859,78 @@ function Dart(Ob)
 
 -- ****************************************************************************
 
-------CUSTOM RANDOPSIPOWERS HANDLERS------
---Stores Collected RandoPsiPowers and Progressive Powerups
-function Ob:onRandoClairvoyance(name,from)
-	self.stats.RandoClairvoyance[name] = 'collected' 
-	GamePrint('Stored '..name)
-end
+	------CUSTOM RANDOPSIPOWERS HANDLERS------
+	--Stores Collected RandoPsiPowers and Progressive Powerups
+	function Ob:onRandoClairvoyance(name,from)
+		self.stats.RandoClairvoyance[name] = 'collected' 
+		GamePrint('Stored '..name)
+	end
 
-function Ob:onRandoConfusion(name,from)
-	self.stats.RandoConfusion[name] = 'collected' 
-	GamePrint('Stored '..name)
-end
+	function Ob:onRandoConfusion(name,from)
+		self.stats.RandoConfusion[name] = 'collected' 
+		GamePrint('Stored '..name)
+	end
 
-function Ob:onRandoFirestarting(name,from)
-	self.stats.RandoFirestarting[name] = 'collected' 
-	GamePrint('Stored '..name)
-end
+	function Ob:onRandoFirestarting(name,from)
+		self.stats.RandoFirestarting[name] = 'collected' 
+		GamePrint('Stored '..name)
+	end
 
-function Ob:onRandoInvisibility(name,from)
-	self.stats.RandoInvisibility[name] = 'collected' 
-	GamePrint('Stored '..name)
-end
+	function Ob:onRandoInvisibility(name,from)
+		self.stats.RandoInvisibility[name] = 'collected' 
+		GamePrint('Stored '..name)
+	end
 
-function Ob:onRandoLevitation(name,from)
-	self.stats.RandoLevitation[name] = 'collected' 
-	GamePrint('Stored '..name)
-end
+	function Ob:onRandoLevitation(name,from)
+		self.stats.RandoLevitation[name] = 'collected' 
+		GamePrint('Stored '..name)
+	end
 
-function Ob:onRandoMarksmanship(name,from)
-	self.stats.RandoMarksmanship[name] = 'collected' 
-	GamePrint('Stored '..name)
-end
+	function Ob:onRandoMarksmanship(name,from)
+		self.stats.RandoMarksmanship[name] = 'collected' 
+		GamePrint('Stored '..name)
+	end
 
-function Ob:onRandoShield(name,from)
-	self.stats.RandoShield[name] = 'collected' 
-	GamePrint('Stored '..name)
-end
+	function Ob:onRandoShield(name,from)
+		self.stats.RandoShield[name] = 'collected' 
+		GamePrint('Stored '..name)
+	end
 
-function Ob:onRandoTelekinesis(name,from)
-	self.stats.RandoTelekinesis[name] = 'collected' 
-	GamePrint('Stored '..name)
-end
-
--- ****************************************************************************
-
-------CUSTOM RANDOPSICARD HANDLER------
---Stores Collected RandoPsiCard
-function Ob:onRandoPsiCard(name,from)
-	self.stats.RandoPsiCard[name] = 'collected' 
-	GamePrint('Stored '..name)
-end
+	function Ob:onRandoTelekinesis(name,from)
+		self.stats.RandoTelekinesis[name] = 'collected' 
+		GamePrint('Stored '..name)
+	end
 
 -- ****************************************************************************
 
-------CUSTOM RANDOPSIMARKER HANDLER------
---Stores Collected RandoPsiMarker
-function Ob:onRandoPsiMarker(name,from)
-	self.stats.RandoPsiMarker[name] = 'collected' 
-	GamePrint('Stored '..name)
-end
+	------CUSTOM RANDOPSICARD HANDLER------
+	--Stores Collected RandoPsiCard
+	function Ob:onRandoPsiCard(name,from)
+		self.stats.RandoPsiCard[name] = 'collected' 
+		GamePrint('Stored '..name)
+	end
 
 -- ****************************************************************************
 
-------CUSTOM VAULT HANDLER------
---Stores CollectedVault, Increases Rank when you open a vault
+	------CUSTOM RANDOPSIMARKER HANDLER------
+	--Stores Collected RandoPsiMarker
+	function Ob:onRandoPsiMarker(name,from)
+		self.stats.RandoPsiMarker[name] = 'collected' 
+		GamePrint('Stored '..name)
+	end
+
+-- ****************************************************************************
+
+	------CUSTOM RANDOPROP HANDLER------
+	--Stores Collected Prop
+	function Ob:onRandoProp(name,from)
+		self.stats.RandoProp[name] = 'collected' 
+		GamePrint('Stored '..name)
+	end
+
+-- ****************************************************************************
+	------CUSTOM VAULT HANDLER------
+	--Stores CollectedVault, Increases Rank when you open a vault
 	function Ob:onCollectedVault(name,from)
 		self.stats.CollectedVault[name] = 'collected' 
 		GamePrint('Stored '..name)
@@ -2925,17 +2939,31 @@ end
 
 -- ****************************************************************************
 
-------CUSTOM ARROWHEADBUNDLE HANDLERS------
---Stores collected ArrowheadBundles
-function Ob:onArrowheadBundleSmall(name,from)
-	self.stats.ArrowheadBundleSmall[name] = 'collected' 
-	GamePrint('Stored '..name)
-end
+	------CUSTOM MAXLIVES AND MAXAMMO HANDLER------
+	--Stores RandoLivesUp and RandoAmmoUp
+	function Ob:onRandoLivesUp(name,from)
+		self.stats.RandoLivesUp[name] = 'collected' 
+		GamePrint('Stored '..name)
+	end
 
-function Ob:onArrowheadBundleMedium(name,from)
-	self.stats.ArrowheadBundleMedium[name] = 'collected' 
-	GamePrint('Stored '..name)
-end
+	function Ob:onRandoAmmoUp(name,from)
+		self.stats.RandoAmmoUp[name] = 'collected' 
+		GamePrint('Stored '..name)
+	end
+
+-- ****************************************************************************
+
+	------CUSTOM ARROWHEADBUNDLE HANDLERS------
+	--Stores collected ArrowheadBundles
+	function Ob:onArrowheadBundleSmall(name,from)
+		self.stats.ArrowheadBundleSmall[name] = 'collected' 
+		GamePrint('Stored '..name)
+	end
+
+	function Ob:onArrowheadBundleMedium(name,from)
+		self.stats.ArrowheadBundleMedium[name] = 'collected' 
+		GamePrint('Stored '..name)
+	end
 
 -- ****************************************************************************
 

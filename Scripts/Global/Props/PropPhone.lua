@@ -73,6 +73,9 @@ function PropPhone(Ob)
 				Global.cutsceneScript:runCutscene('PickUpPhone',nil,nil,nil,0,nil, nil, 1)
 			end
 		end
+
+		--edit sendMessage to Dart
+		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
 	end
 
 --**************************************************************************************************

@@ -278,6 +278,9 @@ function AS_hand(Ob)
 	function Ob:onAddedToInventory(data, from)
 		%Ob.Parent.onAddedToInventory(self, data, from)
 		self:stopGlint()
+
+		--edit sendMessage to Dart
+		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
 	end
 
 	function Ob:onRemovedFromInventory(data, from)

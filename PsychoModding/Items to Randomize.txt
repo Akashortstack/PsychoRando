@@ -1,45 +1,45 @@
 Items to Randomize
 
 Custom Rando PsiCards and PsiMarkers
-    'global.collectibles.CustomPsiCard'
+    'global.collectibles.RandoPsiCard'
     
---117 Total, Change to Junk/Filler item?
+--117 Total, Change to Junk/Filler item? Reduce number to 90?
 
 Custom Rando Arrowhead Bundles
-    'global.collectibles.SmallArrowheadBundle'
-    'global.collectibles.MediumArrowheadBundle'
+    'global.collectibles.ArrowheadBundleSmall'
+    'global.collectibles.ArrowheadBundleMedium'
 --How many? Junk/Filler item?
 
 Custom Rando PsiMarkers
-    'global.collectibles.CustomPsiChallengeMarker'
-    'global.collectibles.CustomPsiChallengeMarker'
-    'global.collectibles.CustomPsiChallengeMarker'
-    'global.collectibles.CustomPsiChallengeMarker'
-    'global.collectibles.CustomPsiChallengeMarker'
-    'global.collectibles.CustomPsiChallengeMarker'
-    'global.collectibles.CustomPsiChallengeMarker'
-    'global.collectibles.CustomPsiChallengeMarker'
-    'global.collectibles.CustomPsiChallengeMarker'
+    'global.collectibles.RandoPsiChallengeMarker'
+    'global.collectibles.RandoPsiChallengeMarker'
+    'global.collectibles.RandoPsiChallengeMarker'
+    'global.collectibles.RandoPsiChallengeMarker'
+    'global.collectibles.RandoPsiChallengeMarker'
+    'global.collectibles.RandoPsiChallengeMarker'
+    'global.collectibles.RandoPsiChallengeMarker'
+    'global.collectibles.RandoPsiChallengeMarker'
+    'global.collectibles.RandoPsiChallengeMarker'
 
 --9 Total
 
 MaxAmmoUp
-    'Global.Collectibles.MaxAmmoUp'
-    'Global.Collectibles.MaxAmmoUp'
-    'Global.Collectibles.MaxAmmoUp'
-    'Global.Collectibles.MaxAmmoUp'
-    'Global.Collectibles.MaxAmmoUp'
-    'Global.Collectibles.MaxAmmoUp'
+    'Global.Collectibles.RandoAmmoUp'
+    'Global.Collectibles.RandoAmmoUp'
+    'Global.Collectibles.RandoAmmoUp'
+    'Global.Collectibles.RandoAmmoUp'
+    'Global.Collectibles.RandoAmmoUp'
+    'Global.Collectibles.RandoAmmoUp'
 
 --6 Total
 
 MaxLivesUp
-    'Global.Collectibles.MaxLivesUp'
-    'Global.Collectibles.MaxLivesUp'
-    'Global.Collectibles.MaxLivesUp'
-    'Global.Collectibles.MaxLivesUp'
-    'Global.Collectibles.MaxLivesUp'
-    'Global.Collectibles.MaxLivesUp'
+    'Global.Collectibles.RandoLivesUp'
+    'Global.Collectibles.RandoLivesUp'
+    'Global.Collectibles.RandoLivesUp'
+    'Global.Collectibles.RandoLivesUp'
+    'Global.Collectibles.RandoLivesUp'
+    'Global.Collectibles.RandoLivesUp'
 
 --6 Total
 
@@ -260,20 +260,22 @@ Custom Vaults
 --19 Total Vaults
 
 Props from MM 
-    'global.props.PropFlowers'
-    'global.props.PropHedgeTrimmers'
-    'global.props.PropHelmet'
-    'global.props.PropPhone'
-    'global.props.PropPlunger'
-    'global.props.PropRifle'
-    'global.props.PropRollingPin'
-    'global.props.PropSign'
-    'global.props.PropWaterCan'
+    'global.props.PropFlowers' 'PropFlowers'
+    'global.props.PropHedgeTrimmers' 'PropHedgeTrimmers'
+    'global.props.PropHelmet' 'PropHelmet'
+    'global.props.PropPlunger' 'PropPlunger'
+    'global.props.PropRifle' 'PropRifle'
+    'global.props.PropRollingPin' 'PropRollingPin'
+    'global.props.PropSign' 'PropSign'
+    'global.props.PropWaterCan' 'PropWaterCan'
+
+    --Does this need randomized? Key for finishing MM
+    'global.props.PropPhone' 'PropPhone' 
 
 Props from TH 
-    'global.props.Candle'
-    'global.props.Candle'
-    'global.props.Megaphone'
+    'global.props.Candle1' 'Candle'
+    'global.props.Candle2' 'Candle'
+    'global.props.Megaphone' 'Megaphone'
     
 --Possibly randomized later, leaving Vanilla for now.
 --'global.props.Script_KnightOfJoy'
@@ -281,9 +283,9 @@ Props from TH
 --'global.props.Script_HagathaHome'
 
 Props from WW
-    'global.props.Peasant1Item' --Fred's Note
-    'global.props.Peasant2Item' --Priceless Coin
-    'global.props.Peasant3Item' --Rifle
+    'global.props.Peasant1Item' 'Peasant1Item' --Fred's Note
+    'global.props.Peasant2Item' 'Peasant2Item' --Priceless Coin
+    'global.props.Peasant3Item' 'Peasant3Item' --Rifle
 
 Props from BV
 --These can't be added until Shop Rando is implemented

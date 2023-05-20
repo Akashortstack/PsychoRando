@@ -265,6 +265,10 @@ function Script_LoveBoat(Ob)
 --			self.becky.whichScript = self.scriptName
 --			self.becky:setState('ReceiveScript')
 		end
+
+		--edit sendMessage to Dart
+		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
+		
 	end
 --*******************************************************************************
 

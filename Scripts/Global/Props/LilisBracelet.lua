@@ -45,8 +45,24 @@ function LilisBracelet(Ob)
 		else
 			self.ClairvoyanceTarget = 'Lili'
 			self.ownerName = 'Lili' 
-		end			
+		end	
+
         %Ob.Parent.onBeginLevel(self)                             
+	end
+	
+	--edit
+	function Ob:addToInventory(bHoldImmediately, bSilent)
+        if (self.rMovementThread) then
+			self.rMovementThread:killSelf()
+		end
+		self:beNotPickupable()
+		self.player:addToInventory(self, (self.bAutoSelect == 1 and 1) or bHoldImmediately, bSilent)
+		--self:setVelocity(0, 0, 0)
+
+		--edit sendMessage to Dart
+		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
+
+		self:setState(nil)
 	end
 	
 	function Ob:stateClairvoyance()

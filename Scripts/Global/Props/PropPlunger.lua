@@ -34,7 +34,8 @@ function PropPlunger(Ob)
 		Ob.bClairvoyancePlayerControl = 1
 		Ob.ownerName = 'GmanPlunger1'
 
-		Ob.interestFXName = 'Global.Effects.SupremeInterestFX'
+		--edit removed because too shiny?
+		--Ob.interestFXName = 'Global.Effects.SupremeInterestFX'
 		
 		-- set up anism
         Ob.loopAnim = 'UsePlunger_loop'
@@ -61,6 +62,10 @@ function PropPlunger(Ob)
 			Global.goalManager:activate('Sewers')
 		end
 		self:show()
+
+		--edit sendMessage to Dart
+		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
+
 	end
 	
 --**************************************************************************************************
