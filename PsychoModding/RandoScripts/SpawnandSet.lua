@@ -1,19 +1,45 @@
---[[Functions for Spawning various items
---IF the item is Global.Props, requires following code before SpawnScript
-
-if Global.player.stats.RandoProp['name'] == 'collected' then
-    return nil
-else
-
-]]
 
 
+--testing complete function for spawning any item
+
+function placeRandoObject(class, name, x, y, z, ox, oy, oz)
+    --check if item is RandoProp, if item has been collected don't spawn 
+    if Global.player.stats.RandoProp[name] == 'collected' then
+        return nil
+    else
+        --Spawn item, set position, set orientation
+        local place = SpawnScript(class, name)
+        place:setPosition(x, y, z)
+        place:setOrientation(ox, oy, oz)
+         --code for fixing Baggage Collect Radius
+        if class == 'global.collectibles.RandoSuitcase' or class == 'global.collectibles.RandoPurse' or class == 'global.collectibles.RandoHatbox' or class == 'global.collectibles.RandoSteamertrunk' or class == 'global.collectibles.RandoDufflebag' then
+            place:SetCollectRadius()
+        end
+        --Moves PsiChallenge Marker Up by 100, can apply to more items if needed
+        if class == 'global.collectibles.RandoPsiChallengeMarker' then
+            place:setPosition(place:getPosInFrontOf(0, 100))
+        end
+        --if more items need conditional changes, add code below
+
+        GamePrint("Created "..name)
+
+    end
+    
+end
+
+-- Order for function: (class, name, x, y, z, ox, oy, oz)
+placeRandoObject('global.props.PropWaterCan', 'PropWaterCan', -6000, 4510, -13242)
+placeRandoObject('global.collectibles.RandoPsiChallengeMarker', 'Marker1', -5629, 4510, -13242)
+
+
+
+--Legacy Functions for Spawning various items
 function RandoBrainJarElton()
     local place = SpawnScript('global.collectibles.BrainJar', 'BrainJarElton');
     place:setPosition(-5629, 4510, -13242);
     place:setOrientation(0, 0, 0);
 end
-RandoBrainJarElton()
+
 
 function RandoPropWaterCan()
     if Global.player.stats.RandoProp['PropWaterCan'] == 'collected' then
@@ -24,7 +50,6 @@ function RandoPropWaterCan()
     place:setOrientation(0, 0, 0);
     end
 end
-RandoPropWaterCan()
 
 
 function RandoMarker()
@@ -34,7 +59,6 @@ function RandoMarker()
     place:setPosition(place:getPosInFrontOf(0, 100))
 end
 
-RandoMarker()
 
 function RandoVault()
     local place = SpawnScript('Global.Characters.Vault', 'Vault3');
@@ -42,7 +66,6 @@ function RandoVault()
     place:setOrientation(0, 0, 0);
 end
 
-RandoVault()
 
 function RandoMaxAmmoUp()
     local place = SpawnScript('global.collectibles.RandoAmmoUp', 'Ammo1');
@@ -50,7 +73,6 @@ function RandoMaxAmmoUp()
     place:setOrientation(0, 0, 0);
 end
 
-RandoMaxAmmoUp()
 
 function MediumArrowheadBundle()
     local place = SpawnScript('global.collectibles.MediumArrowheadBundle');
@@ -59,7 +81,6 @@ function MediumArrowheadBundle()
     GamePrint('Created MediumArrowheadBundle!')
 end
 
-MediumArrowheadBundle()
 
 function RandoMarksmanship()
     local place = SpawnScript('global.collectibles.Marksmanship');
@@ -68,8 +89,6 @@ function RandoMarksmanship()
     GamePrint('Created Marksmanship!')
 end
 
-RandoMarksmanship()
-
 
 function RandoCard()
     local place = SpawnScript('global.collectibles.RandoPsiCard', 'Card2');
@@ -77,7 +96,6 @@ function RandoCard()
     place:setOrientation(0, 0, 0);
 end
 
-RandoCard()
 
 function SpawnRandoSteamertrunkTag()
     local place = SpawnScript('global.collectibles.RandoSteamertrunkTag', 'Tag1');
@@ -91,15 +109,14 @@ function SpawnRandoSteamertrunk()
     place:setOrientation(0, 0, 0);
     place:SetCollectRadius();  
 end
-SpawnRandoSteamertrunkTag()
-SpawnRandoSteamertrunk()
+
 
 function SpawnRandoScavBone()
     local place = SpawnScript('global.collectibles.ScavBone', 'ScavBone');
     place:setPosition(-5629, 4510, -13242);
     place:setOrientation(0, 0, 0);
 end
-SpawnRandoScavBone()
+
 
 function SpawnRandoTelekinesis()
     local place = SpawnScript('global.collectibles.Telekinesis', 'Telekinesis1');
@@ -107,12 +124,9 @@ function SpawnRandoTelekinesis()
     place:setOrientation(0, 0, 0);
 end
 
-SpawnRandoTelekinesis()
 
 function SpawnArrowheadBundleMedium()
     local place = SpawnScript('global.collectibles.ArrowheadBundleMedium', 'Medium1');
     place:setPosition(-5629, 4510, -13242);
     place:setOrientation(0, 0, 0);
 end
-
-SpawnArrowheadBundleMedium()
