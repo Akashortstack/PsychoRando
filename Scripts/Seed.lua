@@ -3,8 +3,9 @@ function Seed(Ob)
         Ob = CreateObject('ScriptBase')
         Ob.checks_list = { 
             item1 = {
-                class = 'global.collectibles.RandoPsiCard', 
-                name = 'Card1',
+                class = 'global.props.AS_Painting', 
+                name = 'LobatoPainting',
+                levelName = 'CAKC',
                 x = -5629, 
                 y = 4510, 
                 z = -13242,
@@ -15,6 +16,7 @@ function Seed(Ob)
             item2 = {
                 class = 'global.collectibles.RandoSuitcase',
                 name = 'Suitcase3',
+                levelName = 'CAKC',
                 x = -6000, 
                 y = 4510, 
                 z = -13242,
@@ -28,22 +30,26 @@ function Seed(Ob)
 
     end
 
-    function Ob:placeObjectsCAKC()
+
+    --function that places
+    function Ob:placeCollectibles()
         local level = (Global.levelScript:getLevelName())
-        if level ~= 'CAKC' then return
-        else
-            local index = 1 
-            local check 
-            while self.checks_list['item'..index] ~= nil do
-                check = self.checks_list['item'..index]
-                index = index+1
-                placeRandoObject(check.class, check.name, check.x, check.y, check.z, check.ox, check.oy, check.oz)
+        local rando = fso('Randomizer')
+        local index = 1 
+        local check 
+        while self.checks_list['item'..index] ~= nil do        
+            check = self.checks_list['item'..index]
+            if check.levelName ~= level then 
+                return
+            else
+                
+                rando:placeRandoObject(check.class, check.name, check.x, check.y, check.z, check.ox, check.oy, check.oz)
             end
-            
+            index = index+1
         end
     end
 
-    function Ob:placeRandoObject(class, name, x, y, z, ox, oy, oz)
+    --[[function Ob:placeRandoObject(class, name, x, y, z, ox, oy, oz)
         --checks if Global.player.stats.RandoProp exists if item is RandoProp, if item has been collected don't spawn 
         if Global.player.stats.RandoProp[name] == 'collected' then
             return nil
@@ -63,7 +69,7 @@ function Seed(Ob)
             --if more items need conditional changes, add code below
     
         end
-    end
+    end]]
         
     return Ob
 end

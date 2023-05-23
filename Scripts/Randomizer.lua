@@ -8,10 +8,6 @@ function Randomizer(Ob)
         %Ob.Parent.onBeginLevel(self)
     end
 
-    function Ob:stateRun()
-
-    end
-
     function Ob:removeCollectibles()
         if strfind(FindScriptObject('LevelScript').levelType, 'real') then
             foreach_entity_oftype('global.collectibles.PSIChallengeCard', function(ent) ent:killSelf() end)
@@ -72,31 +68,8 @@ function Randomizer(Ob)
         end
     end
 
-
-    --edit NEEDS WORK
-    function Ob:addCollectibles()
-        --gets current level name
-        local level = (Global.levelScript:getLevelName())
-
-        --[[ --edit need to iterate through every level name in the game, add elseif statements.
-
-        --need to replace below
-        with function that calls SpawnScript('Seed'), list of placeRandoObject for each item location in the level
-        Ex. if level == 'CAKC' then
-            local items = SpawnScript('Seed')
-            items:placeObjectsCAKC
-            
-        ]]
-        if level == 'CAKC' then
-            placeRandoObject('global.props.PropSign', 'PropSign', -5629, 4510, -13242)
-            GamePrint("Created PropSign")
-        else
-            GamePrint("Level not randomized, Nothing spawned")
-        end
-    end
-
-    function placeRandoObject(class, name, x, y, z, ox, oy, oz)
-        --check if item is RandoProp, if item has been collected don't spawn 
+    function Ob:placeRandoObject(class, name, x, y, z, ox, oy, oz)
+        --checks if Global.player.stats.RandoProp exists if item is RandoProp, if item has been collected don't spawn 
         if Global.player.stats.RandoProp[name] == 'collected' then
             return nil
         else
@@ -115,34 +88,6 @@ function Randomizer(Ob)
             --if more items need conditional changes, add code below
     
         end
-        
-    end
-
-    --[[edit Needs code to read Randomized TXT file, line by line
-    repeat for each line, line1->lineX
-    output class1, name1 ; class2, name2 etc.    
-
-    ]]
-
-
-
-    function Ob:placeListCAKC()
-        placeRandoObject(class1, name1, -6797, 3365, -16380)
-        placeRandoObject(class1, name1, -6662, 4834, -16859)
-        placeRandoObject(class1, name1, -8613, 3409, -15159)
-        placeRandoObject(class1, name1, -8245, 5489, -16566)
-        placeRandoObject(class1, name1, -5629, 4510, -13242)
-        placeRandoObject(class1, name1, -8250, 4672, -17194)
-        placeRandoObject(class1, name1, -5826, 5921, -17086)
-        placeRandoObject(class1, name1, -4437, 5240, -15717)
-        placeRandoObject(class1, name1, -8241, 6295, -18064)
-        placeRandoObject(class1, name1, -3861, 5656, -12938)
-        placeRandoObject(class1, name1, -3621, 5509, -11089)
-        placeRandoObject(class1, name1, -9914, 8434, -18209)
-        placeRandoObject(class1, name1, -5282, 7580, -17131)
-        placeRandoObject(class1, name1, -4885, 4255, -19145)
-
-
     end
    
 
