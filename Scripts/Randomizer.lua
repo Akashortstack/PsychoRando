@@ -68,6 +68,7 @@ function Randomizer(Ob)
         end
     end
 
+    --variables sent from Seed.lua
     function Ob:placeRandoObject(class, name, x, y, z, ox, oy, oz)
         --checks if Global.player.stats.RandoProp exists if item is RandoProp, if item has been collected don't spawn 
         if Global.player.stats.RandoProp[name] == 'collected' then

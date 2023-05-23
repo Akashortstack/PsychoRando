@@ -102,11 +102,12 @@ function Levitation(Ob)
 		self:sleep(.5)
 		self:playVideo('cutScenes/prerendered/'..strlower(self.power)..'meritbadge.xmv')
 		
+		--[[edit remove tutorial
 		if self:getConstant() == kPOWER_CLAIRVOYANCE then
 			Yield()
-			edit remove tutorial
+			
 			Global.levelScript:addTutorialBox("/GLZF028TO/")
-		end
+		end]]
 
 		--edit, effect removed for Visibility
 		--self.effect:killSelf()

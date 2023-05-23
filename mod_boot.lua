@@ -4,6 +4,5 @@ function RandoPlacer()
 	local seed = SpawnScript('Seed', 'Seed');
     rando:removeCollectibles();
 	seed:placeCollectibles();
-	--rando:addCollectibles();	
 end
 
