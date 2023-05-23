@@ -461,12 +461,12 @@ item38 = {
     oz = 0,
 },
 
---NEXT
-item35 = {
+--CAMA
+item39 = {
     class = '',
     name = '',
 
-    levelName = 'CARE',
+    levelName = 'CAMA',
     x = -10781, 
     y = 1949, 
     z = -8730,
@@ -478,7 +478,7 @@ item35 = {
     class = '',
     name = '',
 
-    levelName = 'CARE',
+    levelName = 'CAMA',
     x = -10781, 
     y = 1949, 
     z = -8730,
@@ -490,7 +490,7 @@ item35 = {
     class = '',
     name = '',
 
-    levelName = 'CARE',
+    levelName = 'CAMA',
     x = -10781, 
     y = 1949, 
     z = -8730,
@@ -502,7 +502,7 @@ item35 = {
     class = '',
     name = '',
 
-    levelName = 'CARE',
+    levelName = 'CAMA',
     x = -10781, 
     y = 1949, 
     z = -8730,
@@ -514,7 +514,7 @@ item35 = {
     class = '',
     name = '',
 
-    levelName = 'CARE',
+    levelName = 'CAMA',
     x = -10781, 
     y = 1949, 
     z = -8730,
@@ -526,7 +526,7 @@ item35 = {
     class = '',
     name = '',
 
-    levelName = 'CARE',
+    levelName = 'CAMA',
     x = -10781, 
     y = 1949, 
     z = -8730,

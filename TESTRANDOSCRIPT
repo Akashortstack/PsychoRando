@@ -1,4 +1,35 @@
+-- creates a list from 1 to N
+function range(start, stop, step)
+    step = step or 1
 
+    local result = {}
+
+    if step > 0 then
+        local index = 1
+        for i = start, stop - 1, step do
+            result[index] = i
+            index = index + 1
+        end
+    elseif step < 0 then
+        local index = 1
+        for i = start, stop + 1, step do
+            result[index] = i
+            index = index + 1
+        end
+    end
+
+    return result
+end
+
+-- shuffles a list
+function shuffle(list)
+    local n = tableLength(list)
+    for i = n, 2, -1 do
+        local j = random(i)
+        list[i], list[j] = list[j], list[i]
+    end
+    return list
+end
 
 -- gets length of a table
 function tableLength(tbl)
@@ -11,15 +42,19 @@ function tableLength(tbl)
     return count
 end
 
-
-function RandInt(iSeedLow, iSeedHigh)
-	if (iSeedLow and iSeedHigh)	then
-		return floor(random(iSeedLow, iSeedHigh + .9))
-	elseif (iSeedLow) then
-		return floor(random(iSeedLow + .9))
-	else
-		return floor(random(2.9)-1)
-	end
+-- makes a deepcopy
+function deepcopy(orig)
+    local copy = {}
+    local i = 1
+    while orig[i] ~= nil do
+        if type(orig[i]) == 'table' then
+            copy[i] = deepcopy(orig[i])
+        else
+            copy[i] = orig[i]
+        end
+        i = i + 1
+    end
+    return copy
 end
 
 
@@ -214,24 +249,18 @@ function Seed(Ob)
 
     function Ob:randomizeChecks()
         local num_checks = tableLength(self.checks_list)
- 
-        for i = num_checks, 2, -1 do
-            local j = RandInt(1, i)
-            GamePrint("Test "..self.checks_list[i]['class'])
-            GamePrint("Test "..self.checks_list[j]['class'])
-            GamePrint("Test "..i)
-            GamePrint("Test "..j)
-            self.checks_list[i] = self.checks_list[i-1]
-            GamePrint("Test 2 "..self.checks_list[i]['class'])
-            GamePrint("Test 2 "..self.checks_list[j]['class'])
-            GamePrint("Test 2 "..i)
-            GamePrint("Test 2 "..j)
-            self.checks_list[i].name, self.checks_list[j].name = self.checks_list[j].name, self.checks_list[i].name
-            local pointer = self.checks_list[i].class 
-            self.checks_list[i].class = self.checks_list[j].class
-            self.checks_list[j].class =  pointer
+        local orig_list = range(1, num_checks+1)
+        local shuffled_list = shuffle(orig_list)
+        local randomized_checks_list = deepcopy(self.checks_list)
+    
+        local i = 1
+        while randomized_checks_list[i] ~= nil do
+            GamePrint("Made "..randomized_checks_list[i].class)
+            randomized_checks_list[i].class = self.checks_list[shuffled_list[i]].class
+            randomized_checks_list[i].name = self.checks_list[shuffled_list[i]].name
+            i = i + 1
         end
-       
+        self.checks_list = randomized_checks_list
     end
 
 
