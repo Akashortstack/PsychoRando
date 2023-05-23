@@ -46,14 +46,15 @@ function Vault(Ob)
 		Ob.bDetailCull = 0 -- Editable
 		
 		-- Flee data
-		Ob.triggerRadius = 1800			--Start fleeing at this point
+		--edit to make smaller
+		Ob.triggerRadius = 450			--Start fleeing at this point
+		Ob.safeRetreatDist = 470        --Stop fleeing
+
 		Ob.ts_flee = nil	-- reference to trigger sphere telling us to flee from player
 		Ob.lookAheadDist = 1000
 		Ob.fleeHeight = 18
 		Ob.height = 150
         Ob.rotationSpeed = 200
-		
-		Ob.safeRetreatDist = 2000
 		
 		Ob.tNameToTitleMap = {
 			BVRBVault1 = "/GLZH007TO/",--DIALOG=<<Edgar\'s Lament>>

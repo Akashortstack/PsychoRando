@@ -28,5 +28,7 @@ Listing objects of class ca.props.ScavengerHuntItem
 ca.props.ScavengerHuntItem ScavEgg Position X,Y,Z -12376 766 -3647 Orientation OX,OY,OZ 0 0 0
 ca.props.ScavengerHuntItem ScavBone Position X,Y,Z -16416 3254 -4802 Orientation OX,OY,OZ 0 0 0
 ca.props.ScavengerHuntItem ScavHuntPipe Position X,Y,Z -7218 489 -6388 Orientation OX,OY,OZ 0 0 0
+
+--This position needs updated, puzzle item
 ca.props.PSIBlastPuzzleHuntItem ScavIdol Position X,Y,Z -10000 -10000 -10000 Orientation OX,OY,OZ 0 178 0
 !!!!!!!!!!!!!!!!!

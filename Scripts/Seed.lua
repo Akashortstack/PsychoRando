@@ -5,6 +5,7 @@ function Seed(Ob)
             item1 = {
                 class = 'global.collectibles.RandoPsiCard', 
                 name = 'Card1',
+
                 levelName = 'CAKC',
                 x = -6797,   
                 y = 3365, 
@@ -16,6 +17,7 @@ function Seed(Ob)
             item2 = {
                 class = 'global.collectibles.RandoPsiCard',
                 name = 'Card2',
+
                 levelName = 'CAKC',
                 x = -6662,   
                 y = 4834, 
@@ -27,6 +29,7 @@ function Seed(Ob)
             item3 = {
                 class = 'Global.Collectibles.RandoLivesUp',
                 name = 'LifeUp1',
+
                 levelName = 'CAKC',
                 x = -8613,   
                 y = 3409, 
@@ -38,6 +41,7 @@ function Seed(Ob)
             item4 = {
                 class = 'global.collectibles.BrainJar',
                 name = 'BrainJarElton',
+
                 levelName = 'CAKC',
                 x = -8245,   
                 y = 5489, 
@@ -49,6 +53,7 @@ function Seed(Ob)
             item5 = {
                 class = 'Global.Collectibles.ScavEgg',
                 name = 'ScavEgg',
+                
                 levelName = 'CAKC',
                 x = -5629,   
                 y = 4510, 
@@ -60,6 +65,7 @@ function Seed(Ob)
             item6 = {
                 class = 'global.collectibles.Firestarting',
                 name = 'Firestarting1',
+
                 levelName = 'CAKC',
                 x = -8250,   
                 y = 4672, 
@@ -71,6 +77,7 @@ function Seed(Ob)
             item7 = {
                 class = 'global.collectibles.Levitation',
                 name = 'Levitation1',
+
                 levelName = 'CAKC',
                 x = -5826,   
                 y = 5921, 
@@ -82,6 +89,7 @@ function Seed(Ob)
             item8 = {
                 class = 'global.collectibles.RandoSuitcaseTag',
                 name = 'SuitcaseTag1',
+
                 levelName = 'CAKC',
                 x = -4437,   
                 y = 5240, 
@@ -93,6 +101,7 @@ function Seed(Ob)
             item9 = {
                 class = 'global.collectibles.RandoSuitcase',
                 name = 'Suitcase3',
+
                 levelName = 'CAKC',
                 x = -8241, 
                 y = 6295, 
@@ -104,6 +113,7 @@ function Seed(Ob)
             item10 = {
                 class = 'Global.Characters.Vault',
                 name = 'Vault1',
+
                 levelName = 'CAKC',
                 x = -3861, 
                 y = 5656, 
@@ -115,6 +125,7 @@ function Seed(Ob)
             item11 = {
                 class = 'global.props.PropRollingPin',
                 name = 'PropRollingPin',
+                
                 levelName = 'CAKC',
                 x = -3621, 
                 y = 5509, 
@@ -126,6 +137,7 @@ function Seed(Ob)
             item12 = {
                 class = 'global.props.Peasant2Item',
                 name = 'Peasant2Item',
+
                 levelName = 'CAKC',
                 x = -9914, 
                 y = 8434, 
@@ -137,6 +149,7 @@ function Seed(Ob)
             item13 = {
                 class = 'global.props.AS_Painting',
                 name = 'LobatoPainting',
+
                 levelName = 'CAKC',
                 x = -5282, 
                 y = 7580, 
@@ -145,19 +158,6 @@ function Seed(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item14 = {
-                class = 'global.collectibles.RandoPsiChallengeMarker',
-                name = 'Marker1',
-                levelName = 'CAKC',
-                x = -4885, 
-                y = 4255, 
-                z = -19145,
-                ox = 0,
-                oy = 0,
-                oz = 0,
-            },
-
-
 
 
         }
