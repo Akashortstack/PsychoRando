@@ -12,27 +12,69 @@ function tableLength(tbl)
 end
 
 
-function RandInt(iSeedLow, iSeedHigh)
-	if (iSeedLow and iSeedHigh)	then
-		return floor(random(iSeedLow, iSeedHigh + .9))
-	elseif (iSeedLow) then
-		return floor(random(iSeedLow + .9))
-	else
-		return floor(random(2.9)-1)
-	end
-end
-
-
-
 
 function Seed(Ob)
     if ( not Ob ) then
         Ob = CreateObject('ScriptBase')
-        Ob.checks_list = { 
+        Ob.checksList = { 
             {
                 class = 'global.collectibles.RandoPsiCard', 
                 name = 'Card1',
+            },
+            {
+                class = 'global.collectibles.RandoPsiCard',
+                name = 'Card2',
+            },
+            {
+                class = 'Global.Collectibles.RandoLivesUp',
+                name = 'LifeUp1',
+            },
+            {
+                class = 'global.collectibles.BrainJar',
+                name = 'BrainJarElton',
+            },
+            {
+                class = 'Global.Collectibles.ScavEgg',
+                name = 'ScavEgg',
+            },
+            {
+                class = 'global.collectibles.Firestarting',
+                name = 'Firestarting1',
+            },
+            {
+                class = 'global.collectibles.Levitation',
+                name = 'Levitation1',
+            },
+            {
+                class = 'global.collectibles.RandoSuitcaseTag',
+                name = 'SuitcaseTag1',
+            },
+            {
+                class = 'global.collectibles.RandoSuitcase',
+                name = 'Suitcase3',
+            },
+            {
+                class = 'Global.Characters.Vault',
+                name = 'Vault1',
+            },
+            {
+                class = 'global.props.PropRollingPin',
+                name = 'PropRollingPin',
+            },
+            {
+                class = 'global.props.Peasant2Item',
+                name = 'Peasant2Item',
+            },
+            {
+                class = 'global.props.AS_Painting',
+                name = 'LobatoPainting',
+            },
 
+
+        }
+
+        Ob.positionsList = {
+            item1 = {
                 levelName = 'CAKC',
                 x = -6797,   
                 y = 3365, 
@@ -41,10 +83,7 @@ function Seed(Ob)
                 oy = 0,
                 oz = 0,
             },
-            {
-                class = 'global.collectibles.RandoPsiCard',
-                name = 'Card2',
-
+            item2 = {
                 levelName = 'CAKC',
                 x = -6662,   
                 y = 4834, 
@@ -53,10 +92,7 @@ function Seed(Ob)
                 oy = 0,
                 oz = 0,
             },
-            {
-                class = 'Global.Collectibles.RandoLivesUp',
-                name = 'LifeUp1',
-
+            item3 = {
                 levelName = 'CAKC',
                 x = -8613,   
                 y = 3409, 
@@ -65,10 +101,7 @@ function Seed(Ob)
                 oy = 0,
                 oz = 0,
             },
-            {
-                class = 'global.collectibles.BrainJar',
-                name = 'BrainJarElton',
-
+            item4 = {
                 levelName = 'CAKC',
                 x = -8245,   
                 y = 5489, 
@@ -77,10 +110,7 @@ function Seed(Ob)
                 oy = 0,
                 oz = 0,
             },
-            {
-                class = 'Global.Collectibles.ScavEgg',
-                name = 'ScavEgg',
-                
+            item5 = {
                 levelName = 'CAKC',
                 x = -5629,   
                 y = 4510, 
@@ -89,10 +119,7 @@ function Seed(Ob)
                 oy = 0,
                 oz = 0,
             },
-            {
-                class = 'global.collectibles.Firestarting',
-                name = 'Firestarting1',
-
+            item6 = {
                 levelName = 'CAKC',
                 x = -8250,   
                 y = 4672, 
@@ -101,10 +128,7 @@ function Seed(Ob)
                 oy = 0,
                 oz = 0,
             },
-            {
-                class = 'global.collectibles.Levitation',
-                name = 'Levitation1',
-
+            item7 = {
                 levelName = 'CAKC',
                 x = -5826,   
                 y = 5921, 
@@ -113,10 +137,7 @@ function Seed(Ob)
                 oy = 0,
                 oz = 0,
             },
-            {
-                class = 'global.collectibles.RandoSuitcaseTag',
-                name = 'SuitcaseTag1',
-
+            item8 = {
                 levelName = 'CAKC',
                 x = -4437,   
                 y = 5240, 
@@ -125,10 +146,7 @@ function Seed(Ob)
                 oy = 0,
                 oz = 0,
             },
-            {
-                class = 'global.collectibles.RandoSuitcase',
-                name = 'Suitcase3',
-
+            item9 = {
                 levelName = 'CAKC',
                 x = -8241, 
                 y = 6295, 
@@ -137,10 +155,7 @@ function Seed(Ob)
                 oy = 0,
                 oz = 0,
             },
-            {
-                class = 'Global.Characters.Vault',
-                name = 'Vault1',
-
+            item10 = {
                 levelName = 'CAKC',
                 x = -3861, 
                 y = 5656, 
@@ -149,10 +164,7 @@ function Seed(Ob)
                 oy = 0,
                 oz = 0,
             },
-            {
-                class = 'global.props.PropRollingPin',
-                name = 'PropRollingPin',
-                
+            item11 = {
                 levelName = 'CAKC',
                 x = -3621, 
                 y = 5509, 
@@ -161,10 +173,7 @@ function Seed(Ob)
                 oy = 0,
                 oz = 0,
             },
-            {
-                class = 'global.props.Peasant2Item',
-                name = 'Peasant2Item',
-
+            item12 = {
                 levelName = 'CAKC',
                 x = -9914, 
                 y = 8434, 
@@ -173,10 +182,7 @@ function Seed(Ob)
                 oy = 0,
                 oz = 0,
             },
-            {
-                class = 'global.props.AS_Painting',
-                name = 'LobatoPainting',
-
+            item13 = {
                 levelName = 'CAKC',
                 x = -5282, 
                 y = 7580, 
@@ -185,54 +191,58 @@ function Seed(Ob)
                 oy = 0,
                 oz = 0,
             },
-
-
         }
 
-       
+        Ob.randoList = {}
 
     end
 
 
-    --function that reads each item(x) in Ob.checks_list for level and position
+    --function that reads each item(x) in Ob.checksList for level and position
     function Ob:placeCollectibles()
         --check current level name
         local level = (Global.levelScript:getLevelName())
         local rando = fso('Randomizer')
         local index = 1 
         local check 
-        --loops through each item in Ob.checks_list
-        while self.checks_list[index] ~= nil do        
-            check = self.checks_list[index]
+        local set
+        --loops through each item in Ob.checksList and Ob.positionsList
+        while self.positionsList['item'..index] ~= nil do
+            check = self.checksList[index]        
+            set = self.positionsList['item'..index]
+
             --compare item's level type to current level
-            if check.levelName == level then   
-                rando:placeRandoObject(check.class, check.name, check.x, check.y, check.z, check.ox, check.oy, check.oz)
+            if set.levelName == level then   
+                rando:placeRandoObject(check.class, check.name, set.x, set.y, set.z, set.ox, set.oy, set.oz)
             end
             index = index+1
         end
     end
 
     function Ob:randomizeChecks()
-        local num_checks = tableLength(self.checks_list)
- 
-        for i = num_checks, 2, -1 do
-            local j = RandInt(1, i)
-            GamePrint("Test "..self.checks_list[i]['class'])
-            GamePrint("Test "..self.checks_list[j]['class'])
-            GamePrint("Test "..i)
-            GamePrint("Test "..j)
-            self.checks_list[i] = self.checks_list[i-1]
-            GamePrint("Test 2 "..self.checks_list[i]['class'])
-            GamePrint("Test 2 "..self.checks_list[j]['class'])
-            GamePrint("Test 2 "..i)
-            GamePrint("Test 2 "..j)
-            self.checks_list[i].name, self.checks_list[j].name = self.checks_list[j].name, self.checks_list[i].name
-            local pointer = self.checks_list[i].class 
-            self.checks_list[i].class = self.checks_list[j].class
-            self.checks_list[j].class =  pointer
+        --[[self.randoList = self.checksList
+        local shuffled_list = shuffle(self.randoList)
+        GamePrint("Test "..shuffled_list[1].class)
+        ]]
+        local n = tableLength(self.checksList)
+        for i = n, 2, -1 do
+            local j = random(i)
+            self.checksList[i], self.checksList[j] = self.checksList[j], self.checksList[i]
         end
-       
+        GamePrint("Test "..self.checksList[1].class)
     end
+        -- shuffles a list
+    function Ob:shuffle(list)
+        local n = tableLength(list)
+        for i = n, 2, -1 do
+            local j = random(i)
+            list[i], list[j] = list[j], list[i]
+        end
+        return list
+    end
+    
+
+    
 
 
 
