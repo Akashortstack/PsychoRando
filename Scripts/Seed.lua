@@ -1,6 +1,4 @@
-
-
--- gets length of a table
+-- gets length of a table, used in Ob:randomizeChecks
 function tableLength(tbl)
     local count = 0
     local i = 1
@@ -11,68 +9,11 @@ function tableLength(tbl)
     return count
 end
 
-
-
 function Seed(Ob)
     if ( not Ob ) then
         Ob = CreateObject('ScriptBase')
-        Ob.checksList = { 
-            {
-                class = 'global.collectibles.RandoPsiCard', 
-                name = 'Card1',
-            },
-            {
-                class = 'global.collectibles.RandoPsiCard',
-                name = 'Card2',
-            },
-            {
-                class = 'Global.Collectibles.RandoLivesUp',
-                name = 'LifeUp1',
-            },
-            {
-                class = 'global.collectibles.BrainJar',
-                name = 'BrainJarElton',
-            },
-            {
-                class = 'Global.Collectibles.ScavEgg',
-                name = 'ScavEgg',
-            },
-            {
-                class = 'global.collectibles.Firestarting',
-                name = 'Firestarting1',
-            },
-            {
-                class = 'global.collectibles.Levitation',
-                name = 'Levitation1',
-            },
-            {
-                class = 'global.collectibles.RandoSuitcaseTag',
-                name = 'SuitcaseTag1',
-            },
-            {
-                class = 'global.collectibles.RandoSuitcase',
-                name = 'Suitcase3',
-            },
-            {
-                class = 'Global.Characters.Vault',
-                name = 'Vault1',
-            },
-            {
-                class = 'global.props.PropRollingPin',
-                name = 'PropRollingPin',
-            },
-            {
-                class = 'global.props.Peasant2Item',
-                name = 'Peasant2Item',
-            },
-            {
-                class = 'global.props.AS_Painting',
-                name = 'LobatoPainting',
-            },
-
-
-        }
-
+        --[[list of all check positions in the game,
+        special case items should go at end of list]]
         Ob.positionsList = {
             item1 = {
                 levelName = 'CAKC',
@@ -193,7 +134,8 @@ function Seed(Ob)
             },
         }
 
-        Ob.randoList = {}
+        Ob.randoclassList = {}
+        Ob.randonameList = {}
 
     end
 
@@ -204,48 +146,75 @@ function Seed(Ob)
         local level = (Global.levelScript:getLevelName())
         local rando = fso('Randomizer')
         local index = 1 
-        local check 
+        local randoClass 
+        local randoName
         local set
-        --loops through each item in Ob.checksList and Ob.positionsList
+        --loops through each item in Ob.randoclassList, Ob.randonameList, and Ob.positionsList
         while self.positionsList['item'..index] ~= nil do
-            check = self.checksList[index]        
+            randoClass = self.randoclassList[index]      
+            randoName = self.randonameList[index]
             set = self.positionsList['item'..index]
 
-            --compare item's level type to current level
+            --compare item's level type to current level, spawns if true
             if set.levelName == level then   
-                rando:placeRandoObject(check.class, check.name, set.x, set.y, set.z, set.ox, set.oy, set.oz)
+                rando:placeRandoObject(randoClass, randoName, set.x, set.y, set.z, set.ox, set.oy, set.oz)
             end
             index = index+1
         end
     end
 
+    --[[ function that randomizes all checks in the game, keeping class paired with name
+    Ex. item 1 in classTable always pairs with item 1 in nameTable
+    ]]
     function Ob:randomizeChecks()
-        --[[self.randoList = self.checksList
-        local shuffled_list = shuffle(self.randoList)
-        GamePrint("Test "..shuffled_list[1].class)
-        ]]
-        local n = tableLength(self.checksList)
+        --TEST LIST, NEEDS UPDATED TO FULL LIST
+        local classTable = {
+            'global.collectibles.RandoPsiCard', 
+            'global.collectibles.RandoPsiCard',
+            'Global.Collectibles.RandoLivesUp',
+            'global.collectibles.BrainJar',
+            'Global.Collectibles.ScavEgg',
+            'global.collectibles.Firestarting',
+            'global.collectibles.Levitation',
+            'global.collectibles.RandoSuitcaseTag',
+            'global.collectibles.RandoSuitcase',
+            'Global.Characters.Vault',
+            'global.props.PropRollingPin',
+            'global.props.Peasant2Item',
+            'global.props.AS_Painting',
+        }
+
+        --TEST LIST, NEEDS UPDATED TO FULL LIST
+        local nameTable = {
+            'Card1',
+            'Card2',
+            'LifeUp1',
+            'BrainJarElton',
+            'ScavEgg',
+            'Firestarting1',
+            'Levitation1',
+            'SuitcaseTag1',
+            'Suitcase3',
+            'Vault1',
+            'PropRollingPin',
+            'Peasant2Item',
+            'LobatoPainting',
+        }
+        --get total number of item in classTable
+        local n = tableLength(classTable)
+        --shuffle loop
         for i = n, 2, -1 do
             local j = random(i)
-            self.checksList[i], self.checksList[j] = self.checksList[j], self.checksList[i]
+            classTable[i], classTable[j] = classTable[j], classTable[i]
+            nameTable[i], nameTable[j] = nameTable[j], nameTable[i]
         end
-        GamePrint("Test "..self.checksList[1].class)
+
+        --write results to new, permanent tables
+        self.randoclassList = classTable
+        self.randonameList = nameTable
+       
     end
-        -- shuffles a list
-    function Ob:shuffle(list)
-        local n = tableLength(list)
-        for i = n, 2, -1 do
-            local j = random(i)
-            list[i], list[j] = list[j], list[i]
-        end
-        return list
-    end
-    
-
-    
-
-
-
+   
     --[[ Moved to Randomizer.lua
 
     function Ob:placeRandoObject(class, name, x, y, z, ox, oy, oz)

@@ -23,8 +23,10 @@ global.collectibles.PsiChallengeMarker PsiChallengeMarker Position X,Y,Z 67 666 
 global.collectibles.PsiChallengeMarker PsiChallengeMarker30 Position X,Y,Z 6913 4212 -4829 Orientation OX,OY,OZ 0 0 0
 !!!!!!!!!!!!!!!!!
 Listing objects of class ca.props.ScavengerHuntItem
+ca.props.ScavengerHuntItem ScavPirateScope Position X,Y,Z 11570 1996 -2299 Orientation OX,OY,OZ 0 0 0
+
+--Below are puzzle items, require special coding
 ca.props.ScavengerHuntItem ScavEye Position X,Y,Z 5084 -208 -3311 Orientation OX,OY,OZ 0 0 0
 ca.props.ScavengerHuntItem ScavGoldenAcorn Position X,Y,Z 10455 0 -3724 Orientation OX,OY,OZ 0 0 0
-ca.props.ScavengerHuntItem ScavPirateScope Position X,Y,Z 11570 1996 -2299 Orientation OX,OY,OZ 0 0 0
 ca.props.ScavengerHuntItem ScavSkull Position X,Y,Z 10498 -34 -8117 Orientation OX,OY,OZ 0 0 0
 !!!!!!!!!!!!!!!!!

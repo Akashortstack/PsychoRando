@@ -1,6 +1,10 @@
 Listing objects of class ca.props.ScavengerHuntItem
 ca.props.ScavengerHuntItem scavVoodooDollie Position X,Y,Z 7636 984 -7760 Orientation OX,OY,OZ 0 -68 0
 !!!!!!!!!!!!!!!!!
+
+
+NOTE: Shop items will need special coding for replacement! Not randomized!
+
 Listing objects of class global.collectibles.DowsingRod
 global.collectibles.DowsingRod DowsingRod Position X,Y,Z 6159 166 -6242 Orientation OX,OY,OZ 119 -29 52
 !!!!!!!!!!!!!!!!!
@@ -20,4 +24,3 @@ Listing objects of class global.collectibles.CobwebDuster
 global.collectibles.CobwebDuster CobwebDuster Position X,Y,Z 6382 218 -6287 Orientation OX,OY,OZ -110 -75 -90
 !!!!!!!!!!!!!!!!!
 
-NOTE: Shop items will need special coding for replacement!
