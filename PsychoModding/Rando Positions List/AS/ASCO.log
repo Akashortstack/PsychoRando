@@ -13,12 +13,11 @@ global.collectibles.BrainJar BrainJarChloe Position X,Y,Z 1570 514 -782 Orientat
 global.collectibles.BrainJar BrainJarMaloof Position X,Y,Z -175 814 -710 Orientation OX,OY,OZ 0 0 0
 global.collectibles.BrainJar BrainJarChops Position X,Y,Z -1040 1178 1998 Orientation OX,OY,OZ 0 0 0
 !!!!!!!!!!!!!!!!!
+
+--Need coding to prevent pickup until level is complete.
 Listing objects of class as.props.AS_StraightJacket
 as.props.AS_StraightJacket StraightJacket Position X,Y,Z -75 104 1691 Orientation OX,OY,OZ 0 180 0
 !!!!!!!!!!!!!!!!!
 Listing objects of class as.props.AS_Painting
 as.props.AS_Painting LobatoPainting Position X,Y,Z -1128 1301 -330 Orientation OX,OY,OZ 0 -96 0
-!!!!!!!!!!!!!!!!!
-Listing objects of class as.props.AS_CrowFeather
-as.props.AS_CrowFeather CrowFeather Position X,Y,Z -897 272 1634 Orientation OX,OY,OZ 0 -6 -1
 !!!!!!!!!!!!!!!!!

@@ -18,11 +18,10 @@ ca.props.ScavengerHuntItem ScavHuntGoldWatch Position X,Y,Z 99 756 5515 Orientat
 Listing objects of class as.props.LilisBracelet
 as.props.LilisBracelet LiliBracelet Position X,Y,Z 184 -1498 8893 Orientation OX,OY,OZ 0 -3 -1
 !!!!!!!!!!!!!!!!!
-Listing objects of class as.props.AS_CrowFeather
-as.props.AS_CrowFeather CrowFeather Position X,Y,Z 56 498 5765 Orientation OX,OY,OZ 0 0 0
-!!!!!!!!!!!!!!!!!
+
+NOTE: LobatoHand (gloria's trophy) replacement will need special coding to prevent pickup until gloria's level complete
 Listing objects of class as.props.AS_hand
 as.props.AS_hand LobatoHand Position X,Y,Z 3150 100 1295 Orientation OX,OY,OZ 0 0 0
 !!!!!!!!!!!!!!!!!
 
-NOTE: LobatoHand (gloria's trophy) will need special coding to prevent pickup until gloria's level complete
+NOTE: LobatoHand (gloria's trophy) replacement will need special coding to prevent pickup until gloria's level complete

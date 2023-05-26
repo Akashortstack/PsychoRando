@@ -32,6 +32,7 @@ placeRandoObject('global.props.PropWaterCan', 'PropWaterCan', -6000, 4510, -1324
 placeRandoObject('global.collectibles.RandoPsiChallengeMarker', 'Marker1', -5629, 4510, -13242)
 
 
+--*******************************************************--
 
 --Legacy Functions for Spawning various items
 function RandoBrainJarElton()

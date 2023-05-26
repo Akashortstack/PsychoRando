@@ -37,7 +37,6 @@ mm.props.PropRollingPin RollingPin Position X,Y,Z 14012 1472 -27498 Orientation 
 Listing objects of class mm.props.PropPlunger
 mm.props.PropPlunger Plunger Position X,Y,Z -12940 3048 -28723 Orientation OX,OY,OZ 0 0 0
 !!!!!!!!!!!!!!!!!
-
 Listing objects of class mm.props.PropWaterCan
 mm.props.PropWaterCan WaterCan Position X,Y,Z 49643 -26013 -496 Orientation OX,OY,OZ 27 -25 -3
 !!!!!!!!!!!!!!!!!

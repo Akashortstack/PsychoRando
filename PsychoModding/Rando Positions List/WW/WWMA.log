@@ -26,6 +26,9 @@ Listing objects of class global.characters.Vault
 global.characters.Vault vault1 Position X,Y,Z 13099 -17850 1858 Orientation OX,OY,OZ 0 -15 0
 global.characters.Vault vault2 Position X,Y,Z 19216 -18331 23129 Orientation OX,OY,OZ 0 -15 0
 !!!!!!!!!!!!!!!!!
+
+
+--Positions need coding to behave properly
 Listing objects of class ww.props.PricelessCoin
 ww.props.PricelessCoin Peasant2Item Position X,Y,Z -44408 8978 5315 Orientation OX,OY,OZ 0 14 4
 !!!!!!!!!!!!!!!!!

@@ -2,9 +2,10 @@ add_hook('beginlevel', 'RandoPlacer')
 function RandoPlacer()
 	local rando = SpawnScript('Randomizer', 'Randomizer');
 	local seed = SpawnScript('Seed', 'Seed');
+	SpawnScript('Positions', 'Positions')
     rando:removeCollectibles();
 	seed:randomizeChecks();
-	seed:placeCollectibles();
+	rando:placeCollectibles();
 
 	--Use these for spawning specific items for debug
 	--rando:placeRandoObject(class, name, x, y, z, ox, oy, oz)

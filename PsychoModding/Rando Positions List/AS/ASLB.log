@@ -12,8 +12,9 @@ global.collectibles.BrainJar BrainJarElton Position X,Y,Z 1357 3182 -183 Orienta
 Listing objects of class as.props.Cake
 as.props.Cake Cake Position X,Y,Z 142 3364 -438 Orientation OX,OY,OZ 5 0 -11
 !!!!!!!!!!!!!!!!!
+
+NOTE: PokeyProp spawns after using cake and telekinesis to get pokeylope out of container.
 Listing objects of class as.props.PokeyProp
 as.props.PokeyProp PokeyProp Position X,Y,Z -244 2344 -506 Orientation OX,OY,OZ 0 -10 -3
 !!!!!!!!!!!!!!!!!
 
-NOTE: PokeyProp spawns after using cake and telekinesis to get pokeylope out of container.
