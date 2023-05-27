@@ -80,10 +80,10 @@ function Randomizer(Ob)
         local randoName
         local randoPosition
         --loops through each item in Seed.randoclassList, Seed.randonameList, and Positions.positionsList
-        while positions.positionList['item'..index] ~= nil do
+        while positions.positionsList['item'..index] ~= nil do
             randoClass = classes.randoclassList[index]      
             randoName = names.randonameList[index]
-            randoPosition = positions.positionList['item'..index]
+            randoPosition = positions.positionsList['item'..index]
 
             --compare item's level type to current level, sends to spawn if true
             if randoPosition.levelName == level then   

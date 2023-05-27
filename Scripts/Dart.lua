@@ -1083,7 +1083,7 @@ function Dart(Ob)
 			'RandoHatboxTag', 'RandoSuitcaseTag', 'RandoPurseTag', 'RandoSteamertrunkTag', 'RandoDufflebagTag',
 			'RandoLevitation', 'RandoClairvoyance', 'RandoConfusion', 'RandoFirestarting', 'RandoInvisibility', 'RandoMarksmanship', 'RandoShield', 'RandoTelekinesis',
 			'ArrowheadBundleSmall', 'ArrowheadBundleMedium',
-			'CollectedVault', 'RandoPsiCard', 'RandoPsiMarker', 'RandoLivesUp', 'RandoAmmoUp', 'RandoProp'
+			'CollectedVault', 'RandoPsiCard', 'RandoPsiMarker', 'RandoLivesUp', 'RandoAmmoUp', 'RandoProp',
 			}
 
 	--Called whenever the player saves their game

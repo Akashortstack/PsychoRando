@@ -1,10 +1,13 @@
+
 add_hook('beginlevel', 'RandoPlacer')
 function RandoPlacer()
 	local rando = SpawnScript('Randomizer', 'Randomizer');
-	local seed = SpawnScript('Seed', 'Seed');
-	SpawnScript('Positions', 'Positions')
-    rando:removeCollectibles();
+	local pos = SpawnScript('Positions', 'Positions')
+	local seed = SpawnScript('Seed', 'Seed')
+	pos:fillTable()
+	seed:fillTable()
 	seed:randomizeChecks();
+    rando:removeCollectibles();
 	rando:placeCollectibles();
 
 	--Use these for spawning specific items for debug

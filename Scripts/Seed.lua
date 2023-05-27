@@ -12,9 +12,48 @@ end
 function Seed(Ob)
     if ( not Ob ) then
         Ob = CreateObject('ScriptBase')
+        Ob.seed = {}
         Ob.randoclassList = {}
         Ob.randonameList = {}
 
+    end
+
+    function Ob:fillTable()
+        --PASTE SEED STRING HERE
+        local SEED_GOES_HERE = {
+            78, 131, 162, 6, 222, 242, 3, 240, 250, 257,
+            103, 287, 228, 98, 303, 101, 69, 4, 283, 104,
+            215, 29, 168, 199, 16, 164, 237, 17, 238, 110,
+            223, 265, 133, 2, 236, 79, 175, 53, 59, 109,
+            182, 119, 267, 159, 106, 220, 232, 92, 243, 40,
+            268, 261, 214, 165, 256, 212, 33, 36, 145, 231,
+            84, 198, 246, 183, 52, 302, 48, 226, 87, 124,
+            75, 93, 25, 74, 209, 50, 176, 144, 180, 258,
+            70, 274, 82, 169, 147, 221, 166, 1, 149, 102,
+            249, 67, 202, 137, 289, 41, 178, 197, 100, 179,
+            155, 201, 111, 83, 5, 27, 88, 134, 57, 91,
+            225, 247, 234, 123, 150, 293, 171, 146, 65, 260,
+            195, 264, 108, 286, 8, 35, 63, 170, 125, 304,
+            96, 298, 206, 271, 99, 10, 7, 217, 280, 158,
+            278, 270, 118, 273, 213, 205, 252, 301, 152, 22,
+            300, 128, 140, 248, 282, 219, 126, 120, 139, 46,
+            157, 191, 121, 77, 297, 269, 34, 172, 151, 60,
+            141, 38, 299, 66, 68, 208, 233, 253, 143, 44,
+            80, 259, 55, 181, 276, 211, 291, 148, 161, 138,
+            76, 32, 239, 305, 117, 288, 81, 189, 54, 210,
+            24, 107, 154, 218, 203, 21, 272, 207, 187, 43,
+            185, 224, 49, 113, 294, 193, 244, 23, 263, 200,
+            95, 227, 255, 306, 47, 295, 72, 136, 245, 127,
+            194, 130, 14, 160, 192, 45, 42, 90, 167, 97,
+            112, 61, 266, 64, 284, 13, 39, 241, 129, 277,
+            296, 11, 281, 28, 31, 85, 71, 9, 94, 142,
+            292, 177, 86, 279, 290, 56, 105, 73, 62, 251,
+            196, 174, 20, 51, 37, 135, 18, 262, 114, 122,
+            184, 204, 229, 163, 188, 15, 19, 58, 153, 115,
+            275, 216, 173, 132, 30, 230, 156, 235, 285, 89,
+            190, 116, 26, 12, 254, 186
+        }
+        self.seed = SEED_GOES_HERE
     end
 
     --[[ function that randomizes all checks in the game, keeping class paired with name
@@ -270,32 +309,32 @@ function Seed(Ob)
             'global.props.AS_Painting',
 
             --15 Rando Arrowhead Bundles Small
-            'global.collectibles.AhS',
-            'global.collectibles.AhS',
-            'global.collectibles.AhS',
-            'global.collectibles.AhS',
-            'global.collectibles.AhS',
-            'global.collectibles.AhS',
-            'global.collectibles.AhS',
-            'global.collectibles.AhS',
-            'global.collectibles.AhS',
-            'global.collectibles.AhS',
-            'global.collectibles.AhS',
-            'global.collectibles.AhS',
-            'global.collectibles.AhS',
-            'global.collectibles.AhS',
-            'global.collectibles.AhS',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
 
             --9 Rando Arrowhead Bundles Medium
-            'global.collectibles.AhM',
-            'global.collectibles.AhM',
-            'global.collectibles.AhM',
-            'global.collectibles.AhM',
-            'global.collectibles.AhM',
-            'global.collectibles.AhM',
-            'global.collectibles.AhM',
-            'global.collectibles.AhM',
-            'global.collectibles.AhM',
+            'global.collectibles.ArrowheadBundleMedium',
+            'global.collectibles.ArrowheadBundleMedium',
+            'global.collectibles.ArrowheadBundleMedium',
+            'global.collectibles.ArrowheadBundleMedium',
+            'global.collectibles.ArrowheadBundleMedium',
+            'global.collectibles.ArrowheadBundleMedium',
+            'global.collectibles.ArrowheadBundleMedium',
+            'global.collectibles.ArrowheadBundleMedium',
+            'global.collectibles.ArrowheadBundleMedium',
 
             --70 Psicards, filler item, increase if adding more positions
             --Increase name too!
@@ -557,11 +596,11 @@ function Seed(Ob)
             'Cake', 'LiliBracelet', 'LobatoHand', 'StraightJacket', 'LobatoPainting',
 
             --15 Rando Arrowhead Bundles Small
-            'AhS1', 'AhS2', 'AhS3', 'AhS4', 'AhS5', 'AhS6', 'AhS7', 'AhS8', 'AhS9', 'AhS10',
-            'AhS11', 'AhS12', 'AhS13', 'AhS14', 'AhS15',
+            'ArrowheadBundleSmall1', 'ArrowheadBundleSmall2', 'ArrowheadBundleSmall3', 'ArrowheadBundleSmall4', 'ArrowheadBundleSmall5', 'ArrowheadBundleSmall6', 'ArrowheadBundleSmall7', 'ArrowheadBundleSmall8', 'ArrowheadBundleSmall9', 'ArrowheadBundleSmall10',
+            'ArrowheadBundleSmall11', 'ArrowheadBundleSmall12', 'ArrowheadBundleSmall13', 'ArrowheadBundleSmall14', 'ArrowheadBundleSmall15',
 
             --9 Rando Arrowhead Bundles Medium
-            'AhM1', 'AhM2', 'AhM3', 'AhM4', 'AhM5', 'AhM6', 'AhM7', 'AhM8', 'AhM9',
+            'ArrowheadBundleMedium1', 'ArrowheadBundleMedium2', 'ArrowheadBundleMedium3', 'ArrowheadBundleMedium4', 'ArrowheadBundleMedium5', 'ArrowheadBundleMedium6', 'ArrowheadBundleMedium7', 'ArrowheadBundleMedium8', 'ArrowheadBundleMedium9',
 
             --70 Psicards, filler item, increase if adding more positions
             'Card1', 'Card2', 'Card3', 'Card4', 'Card5', 'Card6', 'Card7', 'Card8', 'Card9', 'Card10',
@@ -575,12 +614,16 @@ function Seed(Ob)
         --get total number of item in classTable
         local n = tableLength(classTable)
         --shuffle loop
+        local index = 1
+        local randolist = self.seed
+
         for i = n, 2, -1 do
-            local j = random(i)
+            local j = randolist[index]
             classTable[i], classTable[j] = classTable[j], classTable[i]
             nameTable[i], nameTable[j] = nameTable[j], nameTable[i]
+            index = index+1
         end
-        --write results to new, permanent tables
+        --write results to new tables
         self.randoclassList = classTable
         self.randonameList = nameTable
        
