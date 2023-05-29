@@ -1,4 +1,9 @@
-
+add_hook('startup', 'RandoSetup')
+function RandoSetup()
+	if (not Global:load('CALevelState', 'CA')) or Global:load('CALevelState', 'CA') ~= 7 then
+		Global:save('CALevelState', 7, 'CA')
+	end
+end
 add_hook('beginlevel', 'RandoPlacer')
 function RandoPlacer()
 	local rando = SpawnScript('Randomizer', 'Randomizer');

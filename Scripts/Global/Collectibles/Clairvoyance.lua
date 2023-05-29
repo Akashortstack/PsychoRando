@@ -12,6 +12,10 @@ function Clairvoyance(Ob)
 	if not Ob then
 		Ob = CreateObject('Global.Props.HeldObject')
 		Ob.power = 'Clairvoyance' -- Editable
+
+		--edit Extra Visibility, helps in night levels
+		Ob.interestFXName = 'Global.Effects.SupremeInterestFX'
+		
 	end	
 	
 	function Ob:onBeginLevel()

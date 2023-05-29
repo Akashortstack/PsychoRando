@@ -301,12 +301,13 @@ function Seed(Ob)
             'global.props.Peasant2Item',  --Priceless Coin
             'global.props.Peasant3Item',  --Rifle
 
-            --Current Props from AS, 5 total
+            --Current Props from AS, 6 total
             'global.props.Cake', 
             'global.props.LilisBracelet', 
             'global.props.AS_hand', 
             'global.props.AS_StraightJacket',
             'global.props.AS_Painting',
+            'global.props.AS_SeaUrchinWhistle',
 
             --15 Rando Arrowhead Bundles Small
             'global.collectibles.ArrowheadBundleSmall',
@@ -336,9 +337,8 @@ function Seed(Ob)
             'global.collectibles.ArrowheadBundleMedium',
             'global.collectibles.ArrowheadBundleMedium',
 
-            --70 Psicards, filler item, increase if adding more positions
+            --69 Psicards, filler item, increase if adding more positions
             --Increase name too!
-            'global.collectibles.RandoPsiCard',
             'global.collectibles.RandoPsiCard',
             'global.collectibles.RandoPsiCard',
             'global.collectibles.RandoPsiCard',
@@ -592,8 +592,8 @@ function Seed(Ob)
             'Peasant2Item', --Priceless Coin
             'Peasant3Item', --Rifle
 
-            --Current Props from AS, 5 total
-            'Cake', 'LiliBracelet', 'LobatoHand', 'StraightJacket', 'LobatoPainting',
+            --Current Props from AS, 6 total
+            'Cake', 'LiliBracelet', 'LobatoHand', 'StraightJacket', 'LobatoPainting',  'SeaUrchinWhistle',
 
             --15 Rando Arrowhead Bundles Small
             'ArrowheadBundleSmall1', 'ArrowheadBundleSmall2', 'ArrowheadBundleSmall3', 'ArrowheadBundleSmall4', 'ArrowheadBundleSmall5', 'ArrowheadBundleSmall6', 'ArrowheadBundleSmall7', 'ArrowheadBundleSmall8', 'ArrowheadBundleSmall9', 'ArrowheadBundleSmall10',
@@ -602,14 +602,14 @@ function Seed(Ob)
             --9 Rando Arrowhead Bundles Medium
             'ArrowheadBundleMedium1', 'ArrowheadBundleMedium2', 'ArrowheadBundleMedium3', 'ArrowheadBundleMedium4', 'ArrowheadBundleMedium5', 'ArrowheadBundleMedium6', 'ArrowheadBundleMedium7', 'ArrowheadBundleMedium8', 'ArrowheadBundleMedium9',
 
-            --70 Psicards, filler item, increase if adding more positions
+            --69 Psicards, filler item, increase if adding more positions
             'Card1', 'Card2', 'Card3', 'Card4', 'Card5', 'Card6', 'Card7', 'Card8', 'Card9', 'Card10',
             'Card11', 'Card12', 'Card13', 'Card14', 'Card15', 'Card16', 'Card17', 'Card18', 'Card19', 'Card20',
             'Card21', 'Card22', 'Card23', 'Card24', 'Card25', 'Card26', 'Card27', 'Card28', 'Card29', 'Card30', 
             'Card31', 'Card32', 'Card33', 'Card34', 'Card35', 'Card36', 'Card37', 'Card38', 'Card39', 'Card40',
             'Card41', 'Card42', 'Card43', 'Card44', 'Card45', 'Card46', 'Card47', 'Card48', 'Card49', 'Card50',
             'Card51', 'Card52', 'Card53', 'Card54', 'Card55', 'Card56', 'Card57', 'Card58', 'Card59', 'Card60',
-            'Card61', 'Card62', 'Card63', 'Card64', 'Card65', 'Card66', 'Card67', 'Card68', 'Card69', 'Card70',
+            'Card61', 'Card62', 'Card63', 'Card64', 'Card65', 'Card66', 'Card67', 'Card68', 'Card69',
         }
         --get total number of item in classTable
         local n = tableLength(classTable)

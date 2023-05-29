@@ -322,6 +322,7 @@ Props from BV
     'global.props.AS_hand' 'LobatoHand'
     'global.props.AS_StraightJacket' 'StraightJacket'
     'global.props.AS_Painting' 'LobatoPainting'
+    'global.props.AS_SeaUrchinWhistle', 'SeaUrchinWhistle' --Lungfish call
 
 --'as.props.PokeyProp' 'PokeyProp'
 

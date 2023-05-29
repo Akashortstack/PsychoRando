@@ -14,6 +14,10 @@ function Levitation(Ob)
 		Ob.power = 'Levitation' -- Editable
 		--edit for Levitation texture, using Clairvoyance Mesh as base
 		Ob.meshName = 'GlobalModels/GO_GlobalObjects/meritbadges/clairvoyance.plb'
+
+		--edit Extra Visibility, helps in night levels
+		Ob.interestFXName = 'Global.Effects.SupremeInterestFX'
+
 		Ob.dependencies = {
 			textures = {
 				'Textures/icons/PsiPowers/Levitation.dds' --Since we load replace the texture after-the-fact, we tell the game we depend on it so it gets preloaded

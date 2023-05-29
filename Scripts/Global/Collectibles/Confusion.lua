@@ -14,6 +14,10 @@ function Confusion(Ob)
 		Ob.power = 'Confusion' -- Editable
 		--edit for Confusion texture, using Clairvoyance Mesh as base
 		Ob.meshName = 'GlobalModels/GO_GlobalObjects/meritbadges/clairvoyance.plb'
+
+		--edit Extra Visibility, helps in night levels
+		Ob.interestFXName = 'Global.Effects.SupremeInterestFX'
+		
 		Ob.dependencies = {
 			textures = {
 				'Textures/icons/PsiPowers/Confusion.dds' --Since we load replace the texture after-the-fact, we tell the game we depend on it so it gets preloaded

@@ -14,9 +14,13 @@ function Marksmanship(Ob)
 		Ob.power = 'Marksmanship' -- Editable
 		--edit for Marksmanship texture, using Clairvoyance Mesh as base
 		Ob.meshName = 'GlobalModels/GO_GlobalObjects/meritbadges/clairvoyance.plb'
+
+		--edit Extra Visibility, helps in night levels
+		Ob.interestFXName = 'Global.Effects.SupremeInterestFX'
+
 		Ob.dependencies = {
 			textures = {
-				'Textures/icons/PsiPowers/Marksmanship.dds' --Since we load replace the texture after-the-fact, we tell the game we depend on it so it gets preloaded
+				'Textures/icons/PsiPowers/Marksmanship_LIT.dds' --Since we load replace the texture after-the-fact, we tell the game we depend on it so it gets preloaded
 			}
 		}
 	end	
@@ -53,14 +57,14 @@ function Marksmanship(Ob)
         
 		%Ob.Parent.onBeginLevel(self)
 		--edit, swapping texture to match power_LIT
-		SetBaseTexture(self,'Textures/icons/PsiPowers/Marksmanship_LIT.dds')
+		SetBaseTexture(self,'Textures/icons/PsiPowers/Marksmanship_patch.dds')
 
 		--edit removing PsiPowerFX for Visibility
 		--self.effect = SpawnScript('Global.Effects.PsiPowerUpFX')
 		--self.effect:run(self)
 
 		--edit to fix scale and orientation
-		self:setScale(25)
+		self:setScale(35)
 		self.mover:setOrientation(ApplyOrientation(0, 0, 0, self.mover:getOrientation()))
 		self:setState(nil)
 	end
