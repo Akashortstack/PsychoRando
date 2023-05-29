@@ -212,7 +212,8 @@ function BVRB(Ob)
 	
 	function Ob:onBeginLevel()
 		--Player must have gotten at least this far
-		Global:setLevelToCompleted('MM')
+		--edit Removed
+		--Global:setLevelToCompleted('MM')
 
 		%Ob.Parent.onBeginLevel(self)
 		
@@ -397,11 +398,12 @@ function BVRB(Ob)
 		SpawnScript('BV.Effects.SewerPaintDripFX'):run()
 
 		-- confusion to be enabled later, by the Matador
-		if Global:loadGlobal('bGotConfusion') ~= 1 then
+		--edit keep confusion if found somewhere else
+		--[[if Global:loadGlobal('bGotConfusion') ~= 1 then
 			if (self.demoLevel ~= 1) then
 				DisablePower(kPOWER_CONFUSION)
 			end
-		end
+		end]]
 		  
         local tramp = FindScriptObject('TrampolineAwning')
 		if tramp then tramp.sound = LoadSound('raz_awning_bounce') end

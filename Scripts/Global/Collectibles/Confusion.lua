@@ -70,10 +70,11 @@ function Confusion(Ob)
 	end
 
 	function Ob:onPostBeginLevel()
-		if Global:loadGlobal('bGot'..self.power) == 1 then
+		--edit remove
+		--[[if Global:loadGlobal('bGot'..self.power) == 1 then
 			self:killSelf()
 			return
-		end
+		end]]
 		%Ob.Parent.onPostBeginLevel(self)
 	end
 
@@ -104,8 +105,8 @@ function Confusion(Ob)
 
 		self:makeInvisible(1)
 		self:sleep(.5)
-		self:playVideo('cutScenes/prerendered/'..strlower(self.power)..'meritbadge.xmv')
-		
+		--edit removed cutscene
+		--self:playVideo('cutScenes/prerendered/'..strlower(self.power)..'meritbadge.xmv')		
 		if self:getConstant() == kPOWER_CLAIRVOYANCE then
 			Yield()
 			Global.levelScript:addTutorialBox("/GLZF028TO/")

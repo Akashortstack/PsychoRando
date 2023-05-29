@@ -21,37 +21,37 @@ function Seed(Ob)
     function Ob:fillTable()
         --PASTE SEED STRING HERE
         local SEED_GOES_HERE = {
-            78, 131, 162, 6, 222, 242, 3, 240, 250, 257,
-            103, 287, 228, 98, 303, 101, 69, 4, 283, 104,
-            215, 29, 168, 199, 16, 164, 237, 17, 238, 110,
-            223, 265, 133, 2, 236, 79, 175, 53, 59, 109,
-            182, 119, 267, 159, 106, 220, 232, 92, 243, 40,
-            268, 261, 214, 165, 256, 212, 33, 36, 145, 231,
-            84, 198, 246, 183, 52, 302, 48, 226, 87, 124,
-            75, 93, 25, 74, 209, 50, 176, 144, 180, 258,
-            70, 274, 82, 169, 147, 221, 166, 1, 149, 102,
-            249, 67, 202, 137, 289, 41, 178, 197, 100, 179,
-            155, 201, 111, 83, 5, 27, 88, 134, 57, 91,
-            225, 247, 234, 123, 150, 293, 171, 146, 65, 260,
-            195, 264, 108, 286, 8, 35, 63, 170, 125, 304,
-            96, 298, 206, 271, 99, 10, 7, 217, 280, 158,
-            278, 270, 118, 273, 213, 205, 252, 301, 152, 22,
-            300, 128, 140, 248, 282, 219, 126, 120, 139, 46,
-            157, 191, 121, 77, 297, 269, 34, 172, 151, 60,
-            141, 38, 299, 66, 68, 208, 233, 253, 143, 44,
-            80, 259, 55, 181, 276, 211, 291, 148, 161, 138,
-            76, 32, 239, 305, 117, 288, 81, 189, 54, 210,
-            24, 107, 154, 218, 203, 21, 272, 207, 187, 43,
-            185, 224, 49, 113, 294, 193, 244, 23, 263, 200,
-            95, 227, 255, 306, 47, 295, 72, 136, 245, 127,
-            194, 130, 14, 160, 192, 45, 42, 90, 167, 97,
-            112, 61, 266, 64, 284, 13, 39, 241, 129, 277,
-            296, 11, 281, 28, 31, 85, 71, 9, 94, 142,
-            292, 177, 86, 279, 290, 56, 105, 73, 62, 251,
-            196, 174, 20, 51, 37, 135, 18, 262, 114, 122,
-            184, 204, 229, 163, 188, 15, 19, 58, 153, 115,
-            275, 216, 173, 132, 30, 230, 156, 235, 285, 89,
-            190, 116, 26, 12, 254, 186
+            274, 208, 146, 152, 101, 118, 83, 244, 73, 92,
+            131, 158, 174, 25, 17, 190, 70, 219, 177, 11,
+            292, 225, 228, 103, 1, 77, 122, 207, 173, 235,
+            234, 243, 217, 164, 71, 9, 50, 149, 86, 206,
+            104, 2, 91, 215, 188, 141, 148, 105, 153, 47,
+            186, 123, 230, 306, 209, 205, 281, 287, 41, 55,
+            193, 289, 283, 296, 238, 285, 143, 246, 56, 109,
+            97, 241, 115, 248, 20, 288, 187, 211, 78, 133,
+            21, 52, 19, 61, 42, 60, 151, 231, 22, 26,
+            121, 107, 232, 257, 276, 268, 44, 263, 178, 160,
+            224, 204, 14, 29, 39, 181, 236, 272, 15, 301,
+            262, 85, 198, 240, 166, 176, 102, 89, 54, 7,
+            31, 125, 168, 171, 75, 145, 290, 65, 165, 114,
+            57, 167, 303, 194, 201, 259, 112, 24, 95, 136,
+            108, 264, 295, 183, 157, 179, 5, 254, 162, 36,
+            53, 222, 126, 156, 293, 113, 37, 116, 138, 38,
+            280, 189, 72, 93, 256, 265, 33, 277, 79, 16,
+            150, 45, 68, 172, 214, 66, 237, 210, 267, 245,
+            251, 12, 247, 200, 278, 154, 28, 124, 81, 74,
+            239, 218, 117, 249, 227, 110, 196, 273, 269, 30,
+            308, 300, 139, 59, 128, 84, 302, 266, 82, 203,
+            163, 261, 282, 132, 135, 27, 98, 147, 94, 279,
+            99, 304, 180, 255, 233, 4, 67, 299, 169, 23,
+            284, 3, 170, 161, 226, 140, 58, 270, 134, 119,
+            202, 175, 144, 213, 159, 223, 88, 294, 252, 80,
+            48, 155, 130, 197, 182, 142, 199, 192, 275, 69,
+            6, 40, 137, 111, 242, 271, 18, 120, 51, 96,
+            35, 127, 195, 220, 46, 34, 305, 8, 43, 64,
+            191, 129, 106, 32, 62, 49, 298, 216, 307, 258,
+            250, 63, 13, 260, 10, 297, 87, 100, 90, 212,
+            229, 291, 221, 76, 185, 184, 286, 253
         }
         self.seed = SEED_GOES_HERE
     end
@@ -282,10 +282,9 @@ function Seed(Ob)
             'Global.Characters.Vault',
             'Global.Characters.Vault',
 
-            --Current Props from MM, 7 total
+            --Current Props from MM, 6 total
             'global.props.PropFlowers',
             'global.props.PropHedgeTrimmers',
-            'global.props.PropHelmet',
             'global.props.PropPlunger', 
             'global.props.PropRollingPin',
             'global.props.PropSign',
@@ -309,7 +308,8 @@ function Seed(Ob)
             'global.props.AS_Painting',
             'global.props.AS_SeaUrchinWhistle',
 
-            --15 Rando Arrowhead Bundles Small
+            --16 Rando Arrowhead Bundles Small
+            'global.collectibles.ArrowheadBundleSmall',
             'global.collectibles.ArrowheadBundleSmall',
             'global.collectibles.ArrowheadBundleSmall',
             'global.collectibles.ArrowheadBundleSmall',
@@ -326,7 +326,8 @@ function Seed(Ob)
             'global.collectibles.ArrowheadBundleSmall',
             'global.collectibles.ArrowheadBundleSmall',
 
-            --9 Rando Arrowhead Bundles Medium
+            --10 Rando Arrowhead Bundles Medium
+            'global.collectibles.ArrowheadBundleMedium',
             'global.collectibles.ArrowheadBundleMedium',
             'global.collectibles.ArrowheadBundleMedium',
             'global.collectibles.ArrowheadBundleMedium',
@@ -337,7 +338,7 @@ function Seed(Ob)
             'global.collectibles.ArrowheadBundleMedium',
             'global.collectibles.ArrowheadBundleMedium',
 
-            --69 Psicards, filler item, increase if adding more positions
+            --70 Psicards, filler item, increase if adding more positions
             --Increase name too!
             'global.collectibles.RandoPsiCard',
             'global.collectibles.RandoPsiCard',
@@ -408,6 +409,8 @@ function Seed(Ob)
             'global.collectibles.RandoPsiCard',
             'global.collectibles.RandoPsiCard',
             'global.collectibles.RandoPsiCard',
+            'global.collectibles.RandoPsiCard',
+
 
         }
 
@@ -581,8 +584,8 @@ function Seed(Ob)
             'Vault1', 'Vault2', 'Vault3', 'Vault4', 'Vault5', 'Vault6', 'Vault7', 'Vault8', 'Vault9', 'Vault10',
             'Vault11', 'Vault12', 'Vault13', 'Vault14', 'Vault15', 'Vault16', 'Vault17','Vault18', 'Vault19',
 
-            --Current Props from MM, 7 total
-            'PropFlowers', 'PropHedgeTrimmers', 'PropHelmet', 'PropPlunger', 'PropRollingPin', 'PropSign', 'PropWaterCan',
+            --Current Props from MM, 6 total
+            'PropFlowers', 'PropHedgeTrimmers', 'PropPlunger', 'PropRollingPin', 'PropSign', 'PropWaterCan',
 
             --Current Props from TH, 3 total
             'Candle1', 'Candle2', 'Megaphone',
@@ -595,21 +598,21 @@ function Seed(Ob)
             --Current Props from AS, 6 total
             'Cake', 'LiliBracelet', 'LobatoHand', 'StraightJacket', 'LobatoPainting',  'SeaUrchinWhistle',
 
-            --15 Rando Arrowhead Bundles Small
+            --16 Rando Arrowhead Bundles Small
             'ArrowheadBundleSmall1', 'ArrowheadBundleSmall2', 'ArrowheadBundleSmall3', 'ArrowheadBundleSmall4', 'ArrowheadBundleSmall5', 'ArrowheadBundleSmall6', 'ArrowheadBundleSmall7', 'ArrowheadBundleSmall8', 'ArrowheadBundleSmall9', 'ArrowheadBundleSmall10',
-            'ArrowheadBundleSmall11', 'ArrowheadBundleSmall12', 'ArrowheadBundleSmall13', 'ArrowheadBundleSmall14', 'ArrowheadBundleSmall15',
+            'ArrowheadBundleSmall11', 'ArrowheadBundleSmall12', 'ArrowheadBundleSmall13', 'ArrowheadBundleSmall14', 'ArrowheadBundleSmall15', 'ArrowheadBundleSmall16',
 
             --9 Rando Arrowhead Bundles Medium
-            'ArrowheadBundleMedium1', 'ArrowheadBundleMedium2', 'ArrowheadBundleMedium3', 'ArrowheadBundleMedium4', 'ArrowheadBundleMedium5', 'ArrowheadBundleMedium6', 'ArrowheadBundleMedium7', 'ArrowheadBundleMedium8', 'ArrowheadBundleMedium9',
+            'ArrowheadBundleMedium1', 'ArrowheadBundleMedium2', 'ArrowheadBundleMedium3', 'ArrowheadBundleMedium4', 'ArrowheadBundleMedium5', 'ArrowheadBundleMedium6', 'ArrowheadBundleMedium7', 'ArrowheadBundleMedium8', 'ArrowheadBundleMedium9', 'ArrowheadBundleMedium10',
 
-            --69 Psicards, filler item, increase if adding more positions
+            --70 Psicards, filler item, increase if adding more positions
             'Card1', 'Card2', 'Card3', 'Card4', 'Card5', 'Card6', 'Card7', 'Card8', 'Card9', 'Card10',
             'Card11', 'Card12', 'Card13', 'Card14', 'Card15', 'Card16', 'Card17', 'Card18', 'Card19', 'Card20',
             'Card21', 'Card22', 'Card23', 'Card24', 'Card25', 'Card26', 'Card27', 'Card28', 'Card29', 'Card30', 
             'Card31', 'Card32', 'Card33', 'Card34', 'Card35', 'Card36', 'Card37', 'Card38', 'Card39', 'Card40',
             'Card41', 'Card42', 'Card43', 'Card44', 'Card45', 'Card46', 'Card47', 'Card48', 'Card49', 'Card50',
             'Card51', 'Card52', 'Card53', 'Card54', 'Card55', 'Card56', 'Card57', 'Card58', 'Card59', 'Card60',
-            'Card61', 'Card62', 'Card63', 'Card64', 'Card65', 'Card66', 'Card67', 'Card68', 'Card69',
+            'Card61', 'Card62', 'Card63', 'Card64', 'Card65', 'Card66', 'Card67', 'Card68', 'Card69', 'Card70',
         }
         --get total number of item in classTable
         local n = tableLength(classTable)

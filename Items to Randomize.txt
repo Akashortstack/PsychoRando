@@ -282,7 +282,6 @@ Custom Vaults
 Props from MM 
     'global.props.PropFlowers' 'PropFlowers'
     'global.props.PropHedgeTrimmers' 'PropHedgeTrimmers'
-    'global.props.PropHelmet' 'PropHelmet'
     'global.props.PropPlunger' 'PropPlunger'
     'global.props.PropRollingPin' 'PropRollingPin'
     'global.props.PropSign' 'PropSign'
@@ -291,6 +290,8 @@ Props from MM
     --Keys for finishing MM, not currently randomized
     'global.props.PropPhone' 'PropPhone'
     'global.props.PropRifle' 'PropRifle' 
+    'global.props.PropHelmet' 'PropHelmet'
+
 
 Props from TH 
     'global.props.Candle1' 'Candle'

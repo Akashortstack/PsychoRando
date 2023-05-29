@@ -2742,11 +2742,31 @@ item295 = {
     oz = 0,
 },
 
+--BVES, Edgar's Sanctuary
+item296 = {        
+    levelName = 'BVES',
+    x = -1062, 
+    y = 571, 
+    z = -2330,
+    ox = 0,
+    oy = 20,
+    oz = 0,
+},
+item297 = {        
+    levelName = 'BVES',
+    x = 2310, 
+    y = 32, 
+    z = 1207,
+    ox = 0,
+    oy = -161,
+    oz = 0,
+},
+
 --*******************************************************--
 --MC, MEAT CIRCUS
 
 --MCTC, Main Level
-item296 = {        
+item298 = {        
     levelName = 'MCTC',
     x = 248, 
     y = 766, 
@@ -2755,7 +2775,7 @@ item296 = {
     oy = 0,
     oz = 0,
 },
-item297 = {        
+item299 = {        
     levelName = 'MCTC',
     x = 294, 
     y = -596, 
@@ -2764,7 +2784,7 @@ item297 = {
     oy = 0,
     oz = 0,
 },
-item298 = {        
+item300 = {        
     levelName = 'MCTC',
     x = -3487, 
     y = 2103, 
@@ -2773,7 +2793,7 @@ item298 = {
     oy = 0,
     oz = 0,
 },
-item299 = {        
+item301 = {        
     levelName = 'MCTC',
     x = -2163, 
     y = -14647, 
@@ -2782,7 +2802,7 @@ item299 = {
     oy = 0,
     oz = 0,
 },
-item300 = {        
+item302 = {        
     levelName = 'MCTC',
     x = 1719, 
     y = -23392, 
@@ -2791,7 +2811,7 @@ item300 = {
     oy = 0,
     oz = 0,
 },
-item301 = {        
+item303 = {        
     levelName = 'MCTC',
     x = 3856, 
     y = 3594, 
@@ -2800,7 +2820,7 @@ item301 = {
     oy = -69,
     oz = 0,
 },
-item302 = {        
+item304 = {        
     levelName = 'MCTC',
     x = 1848, 
     y = 3543, 
@@ -2809,7 +2829,7 @@ item302 = {
     oy = 178,
     oz = 0,
 },
-item303 = {        
+item305 = {        
     levelName = 'MCTC',
     x = -70, 
     y = -39, 
@@ -2818,7 +2838,7 @@ item303 = {
     oy = -3,
     oz = 0,
 },
-item304 = {        
+item306 = {        
     levelName = 'MCTC',
     x = -943, 
     y = -1373, 
@@ -2827,7 +2847,7 @@ item304 = {
     oy = 42,
     oz = 24,
 },
-item305 = {        
+item307 = {        
     levelName = 'MCTC',
     x = 1150, 
     y = -20270, 
@@ -2836,7 +2856,7 @@ item305 = {
     oy = 0,
     oz = 0,
 },
-item306 = {        
+item308 = {        
     levelName = 'MCTC',
     x = -2223, 
     y = -14639, 

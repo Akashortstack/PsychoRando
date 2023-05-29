@@ -162,10 +162,12 @@ function RandoPurse(Ob)
 		SetEntityFlag(self, ENTITY_LIGHT_RIG, 1)
 		SetEntityLightRigScale(self, 3, 1, 3)
 
-		-- set up trigger sphere so we can detect when the player is near and thus check if the player has our matching emo bag tag
+		--edit moved to SetCollectRadius()
+		--[[ set up trigger sphere so we can detect when the player is near and thus check if the player has our matching emo bag tag
 		local x,y,z = self:getPosition()
 		self.ts_collect = TriggerSphere_New(x, y, z, self.noticePlayerRadius)
 		Trigger_RegisterListener(self.ts_collect, self)		
+		]]	
 		
 		self.matchSound = self:loadSound('EmotBaggage_Succes')
 		self.noMatchSound = self:loadSound('flower_off')

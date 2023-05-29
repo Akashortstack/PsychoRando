@@ -1,0 +1,20 @@
+--Sandwhich is not pickupable if in vanilla level
+
+--End of BB loads into CAKC Day
+
+--move MM item (vanilla is hatbox behind cobweb, current seed is shield) 
+so it can't be grabbed through walls, doesn't clip through floor
+
+--MI start rebinds levitation power 
+
+--end of MI loads into CABH Day
+
+--Rank up milestones need updated
+
+--!!!!!! EDGAR'S SANCTUARY POSITIONS MISSED!!! NEED TO ADD!!!
+
+--Adjust cobweb duster price to 500, easier to get. Other shop adjustments?
+
+--Needs logic!!! How do we implement this?
+
+--Saves do not load properly...
