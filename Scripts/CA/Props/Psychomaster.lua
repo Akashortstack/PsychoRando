@@ -28,7 +28,7 @@ function Psychomaster(Ob)
 		LockMeshEntityLODLevel(self, 1)
 		SetEntityFlag(self, ENTITY_DETAIL_CULLING, 0)
 		SetSimulationCullDistance(self, 0)
-		AddFontTexturedMesh(self,"Everything's Random! Find Disguise and Cake!", 255, 255, 255) -- r,g,b is the text color. This function will take the mesh and texture it with the text you pass in.
+		AddFontTexturedMesh(self,"Everything's Randomized! Good Luck!", 255, 255, 255) -- r,g,b is the text color. This function will take the mesh and texture it with the text you pass in.
 	end
 
 	return Ob

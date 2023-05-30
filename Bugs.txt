@@ -1,13 +1,9 @@
 --Sandwhich is not pickupable if in vanilla level
 
---End of BB loads into CAKC Day
-
---move MM item (vanilla is hatbox behind cobweb, current seed is shield) 
+--move MM item (vanilla is hatbox behind cobweb)
 so it can't be grabbed through walls, doesn't clip through floor
 
 --MI start rebinds levitation power 
-
---end of MI loads into CABH Day
 
 --Rank up milestones need updated
 
@@ -17,4 +13,4 @@ so it can't be grabbed through walls, doesn't clip through floor
 
 --Needs logic!!! How do we implement this?
 
---Saves do not load properly...
+--Saves do not always load properly...

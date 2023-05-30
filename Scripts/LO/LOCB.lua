@@ -261,7 +261,9 @@ function LOCB(Ob)
 	function Ob:stateEndLevel()
 		self:playVideo('cutScenes/prerendered/love.xmv')
 		self:playVideo('cutScenes/prerendered/lllv.xmv')
-		Global.levelScript:loadNewLevel('ASGR',0,1)		
+		--edit return to CU instead
+		Global.levelScript:returnToCU()
+		--Global.levelScript:loadNewLevel('ASGR',0,1)		
 		self:setState(nil)
 	end
 	

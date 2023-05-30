@@ -1029,7 +1029,9 @@ function WWMACutscenes(Ob)
 	function Ob:stateCleanupCSWWNS()
 		Global.goalManager:deactivate('HelpFred')
 		Global:setLevelToCompleted('WW')
-		Global.levelScript:loadNewLevel('ASCO', 1, 1)		
+		--edit return to CU instead
+		Global.levelScript:returnToCU()
+		--Global.levelScript:loadNewLevel('ASCO', 1, 1)		
 		self:endCutscene()
 	end
 
