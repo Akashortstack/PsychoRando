@@ -265,8 +265,21 @@ function MCTC(Ob)
 		-- Spawn a fake butcher, just to do saylines
 		self.butcher = SpawnScript('ScriptBase', 'Butcher', 'self.charName = \'ButcherSilhouette\'')
 		
-		--register the end of level trigger volume to add a brain for completing this level
-		RegisterTriggerVolume(self, 'tv_MCTCtoMCBB') 
+		--[[ --edit Prevent entering last level unless player has defeated Oleander BrainTank,
+		spawn DoorFatLady.lua prop as a visual blocker
+		]]
+		if (Global:loadGlobal('bSavedLili') == 1) then
+			--register the end of level trigger volume to add a brain for completing this level
+			RegisterTriggerVolume(self, 'tv_MCTCtoMCBB') 
+		else
+			remove = fso('MCTCtoMCBB')
+			remove:killSelf()
+			--spawn DoorFatLady
+			local door = SpawnScript('global.props.DoorFatLady', 'NO_ENTRY')
+			door:setPosition(-1615, -1597, 16200)
+			door:setOrientation(0, -178, 0)
+		end
+
 
 		--Put all tightropes in the tent interior domain.  Kind of hacky, but what are you gonna do about it?  Huh?		
 		foreach_entity_oftype('global.props.Tightrope', function(t) SetEntityDomain(t, 'TentInteriorDOMAIN') end)

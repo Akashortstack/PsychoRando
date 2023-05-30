@@ -728,8 +728,8 @@ function LevelScript(Ob)
 
 		local brainJars = 0
 		local bGetFakePowers = 0
+		--edit removed bGetFakePowers for Rando Testing
 		--Game wasn't loaded from the main menu.  Allow for ranking funny business.
-		--edit removed for Rando Testing
 		if self:getLevelPrefix() == 'LO' and startRank < 20 then
 			--bGetFakePowers = 1
 			startRank = 20
@@ -769,11 +769,12 @@ function LevelScript(Ob)
 			startRank = 75
 			brainJars = 19
 
-			if (Global:loadGlobal('bSavedLili') ~= 1) then
+			--edit removed for RandoTesting
+			--[[if (Global:loadGlobal('bSavedLili') ~= 1) then
 				--Give Raz lili's brain
 				Global.player:incrementMaxHealth(1)
 				Global:saveGlobal('bSavedLili', 1)
-			end
+			end]]
 		end
 
 		--Because all fake ranks are above 30, we can enable all powers if rank was faked

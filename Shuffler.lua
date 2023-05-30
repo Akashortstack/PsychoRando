@@ -10,7 +10,7 @@ local function shuffleList(list)
   end
 end
 
--- Create the list of numbers from 1 to 306
+-- Create the list of numbers from 1 to 308
 local list = {}
 for i = 1, 308 do
   list[i] = i
