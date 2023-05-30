@@ -66,8 +66,9 @@ function MIMM(Ob)
 	function Ob:onPreBeginLevel()
 		%Ob.Parent.onPreBeginLevel(self)
 		if (self:isLevelCompleted() ~= 1) then
-			EnablePower(kPOWER_LEVITATION, 1)
-			Global:saveGlobal('bHasLevitationLearnersPermit', 1)
+			--edit removed
+			--EnablePower(kPOWER_LEVITATION, 1)
+			--Global:saveGlobal('bHasLevitationLearnersPermit', 1)
 			--Global:setLevelToCompleted('SA')
 		end
 	end

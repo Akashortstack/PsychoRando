@@ -120,7 +120,7 @@ function MIFL(Ob)
 		if (self:isLevelCompleted() ~= 1) then
 			--edit removed, don't get levitation early
 			--EnablePower(kPOWER_LEVITATION, 1)
-			Global:saveGlobal('bHasLevitationLearnersPermit', 1)
+			--Global:saveGlobal('bHasLevitationLearnersPermit', 1)
 			--Global:setLevelToCompleted('SA')
 			--[[
 			if GetMappedPower(kQUICKPICK_TRIGR) == kPOWER_LEVITATION then MapPowerToButton(kPOWER_NONE,kQUICKPICK_TRIGR) end
