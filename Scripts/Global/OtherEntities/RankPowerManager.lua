@@ -35,7 +35,9 @@ function RankPowerManager(Ob)
 				ShieldDuration = 4,
 				TKRange = 4,
 				TKDamage = 1,
-				Encouragement = "/GLZF014TO/ 10", -- New Psi power at rank: 10
+				--edit Custom Encouragement, NEED LOCALIZATION
+				Encouragement = "Next Item at Rank: 10",
+
 				bAirMeleeCharge = 0,
 				bPKDetonate = 0,
 				SuperShield = 0,
@@ -48,75 +50,49 @@ function RankPowerManager(Ob)
 				bInfiniteAmmo = 0,
 				bMaxPsycadetRank = 0,
 			},
-			--edit to remove powers and upgrades from rank up
+			--[[ --edit to remove powers and upgrades from rank up,
+			Custom Encouragements, NEED LOCALIZATION
+			]]
 			[10] = {
 				--PsiPower = kPOWER_FIRESTARTING,
-				--Encouragement = "/GLZF014TO/ 20", -- New Psi power at rank: 20
+				Encouragement = "Next Item at Rank: 20", 
 			},
 			[20] = { 
 				--PsiPower = kPOWER_TELEKINESIS,
-				--Encouragement = "/GLZF014TO/ 30", -- New Psi power at rank: 30
+				Encouragement = "Next Item at Rank: 30",
 			},
 			[30] = { 
 				--PsiPower = kPOWER_INVISIBILITY,
-				--Encouragement = "/GLZF009TO/ 35", -- PALM BOMB upgrade at rank: 35
-			},
-			[35] = { 
-				--bAirMeleeCharge = 1,
-				--Encouragement = "/GLZF026TO/ 40", -- PSI BLAST upgrade at rank: 40
+				Encouragement = "Next Item at Rank: 40",
 			},
 			[40] = { 
 				--bChainBlast = 1,
-				--Encouragement = "/GLZF010TO/ 45", -- PYROKINESIS upgrade at rank: 45
-			},
-			[45] = {
-				--bPKDetonate = 1,
-				--Encouragement = "/GLZF013TO/ 50", -- LEVITATION upgrade at rank: 50
+				Encouragement = "Next Item at Rank: 50",
 			},
 			[50] = {
 				--bSpikeBall = 1,
-				--Encouragement = "/GLZF012TO/ 55", -- SHIELD upgrade at rank: 55
-			},
-			[55] = {
-				--SuperShield = 1,
-				--Encouragement = "/GLZF011TO/ 60", -- INVISIBILITY upgrade at rank: 60
+				Encouragement = "Next Item at Rank: 60",
 			},
 			[60] = { 
 				--InvisDuration = 20,
-				--Encouragement = "/GLZF032TO/ 65", -- TELEKINESIS upgrade at rank: 65
-			},
-			[65] = { 
-				--TKRange = Ob.TKRangeUpgradeValue,
-				--TKDamage = 2,
-				--Encouragement = "/GLZF026TO/ 70" -- PSI BLAST upgrade at rank: 70
+				Encouragement = "Next Item at Rank: 70",
 			},
 			[70] = { 
 				--bSuperChainBlast = 1,
-				--Encouragement = "/GLZF013TO/ 75" -- LEVITATION upgrade at rank: 75
-			},
-			[75] = { 
-				--bSuperSpikeBall = 1,
-				--Encouragement = "/GLZF012TO/ 80" -- SHIELD upgrade at rank: 80
+				Encouragement = "Next Item at Rank: 80",
 			},
 			[80] = { 
 				--bDamageShield = 1,
-				--Encouragement = "/GLZF033TO/ 85" -- CONFUSION upgrade at rank: 85
-			},
-			[85] = { 
-				--ConfusionDuration = Ob.confusionDurationUpgradeValue,
-				--Encouragement = "/GLZF045TO/ 90" -- REGENERATION upgrade at rank: 90
+				Encouragement = "Next Item at Rank: 90",
 			},
 			[90] = { 
 				--bHealthRegeneration = 1,
-				--Encouragement = "/GLZF046TO/ 95" -- INFINITE AMMO upgrade at rank: 95
-			},
-			[95] = { 
-				bInfiniteAmmo = 1,
-				--Encouragement = "/GLZF049TO/"
+				Encouragement = "Next Item at Rank: 100",
 			},
 			[100] = { 
+				bInfiniteAmmo = 1,
 				bMaxPsycadetRank = 1,
-				--Encouragement = ''
+				Encouragement = '',
 			},
 		}
 
