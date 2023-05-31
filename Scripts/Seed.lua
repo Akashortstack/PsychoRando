@@ -21,37 +21,38 @@ function Seed(Ob)
     function Ob:fillTable()
         --PASTE SEED STRING HERE
         local SEED_GOES_HERE = {
-            180, 48, 221, 2, 113, 101, 93, 96, 23, 18,
-            217, 75, 252, 133, 239, 43, 187, 32, 55, 52,
-            219, 14, 140, 104, 59, 15, 167, 286, 216, 256,
-            274, 33, 99, 192, 269, 10, 108, 179, 170, 83,
-            162, 54, 97, 138, 9, 57, 3, 266, 204, 265,
-            175, 26, 141, 128, 276, 226, 285, 232, 110, 64,
-            206, 255, 134, 271, 85, 149, 227, 282, 185, 13,
-            106, 230, 268, 272, 79, 100, 91, 211, 301, 73,
-            6, 275, 62, 280, 307, 247, 299, 233, 145, 304,
-            166, 98, 236, 130, 143, 87, 41, 120, 158, 37,
-            20, 157, 171, 5, 191, 71, 213, 34, 95, 150,
-            66, 154, 215, 197, 56, 292, 70, 30, 1, 288,
-            279, 39, 22, 278, 201, 194, 60, 151, 231, 142,
-            246, 50, 240, 117, 283, 118, 238, 186, 193, 184,
-            225, 4, 159, 281, 223, 28, 189, 53, 220, 229,
-            243, 68, 302, 61, 169, 86, 112, 114, 257, 67,
-            8, 38, 163, 160, 267, 173, 148, 228, 131, 89,
-            181, 24, 291, 212, 121, 172, 19, 119, 25, 188,
-            165, 153, 290, 168, 46, 200, 195, 209, 69, 237,
-            125, 29, 31, 222, 196, 251, 300, 42, 7, 182,
-            305, 218, 105, 245, 177, 250, 146, 161, 82, 88,
-            72, 293, 207, 202, 284, 63, 65, 253, 289, 208,
-            139, 258, 45, 183, 235, 248, 259, 11, 35, 176,
-            27, 234, 303, 123, 205, 273, 241, 129, 84, 144,
-            94, 102, 21, 147, 249, 199, 210, 296, 78, 152,
-            51, 40, 295, 308, 16, 36, 137, 214, 244, 262,
-            81, 74, 306, 80, 107, 224, 103, 277, 47, 58,
-            136, 242, 270, 298, 49, 90, 263, 198, 77, 155,
-            287, 260, 178, 122, 116, 254, 115, 44, 135, 92,
-            127, 203, 76, 294, 111, 132, 17, 164, 190, 174,
-            261, 297, 12, 156, 124, 126, 264, 109
+            103, 94, 283, 166, 36, 272, 44, 15, 303, 37,
+            113, 174, 116, 49, 134, 22, 123, 66, 187, 48,
+            160, 158, 78, 139, 68, 238, 234, 249, 127, 278,
+            225, 31, 61, 112, 34, 40, 86, 76, 20, 97,
+            214, 142, 168, 141, 191, 298, 223, 152, 156, 248,
+            293, 177, 93, 257, 101, 65, 289, 74, 219, 24,
+            193, 144, 137, 83, 261, 47, 138, 118, 2, 275,
+            301, 244, 211, 41, 110, 108, 176, 310, 58, 255,
+            167, 295, 233, 162, 77, 250, 147, 5, 117, 30,
+            307, 80, 16, 75, 28, 17, 170, 106, 205, 38,
+            220, 201, 114, 9, 276, 128, 175, 84, 292, 267,
+            122, 235, 182, 151, 121, 92, 136, 18, 87, 99,
+            216, 253, 165, 14, 277, 232, 161, 196, 96, 229,
+            279, 204, 60, 284, 263, 290, 282, 258, 21, 203,
+            63, 124, 188, 280, 224, 208, 183, 33, 26, 6,
+            184, 131, 192, 46, 129, 185, 306, 111, 109, 140,
+            27, 241, 270, 271, 173, 54, 189, 212, 190, 79,
+            98, 287, 164, 67, 105, 256, 143, 91, 227, 181,
+            69, 42, 242, 202, 45, 23, 29, 19, 51, 104,
+            296, 71, 231, 1, 56, 198, 197, 32, 53, 245,
+            268, 125, 217, 230, 222, 199, 178, 304, 70, 50,
+            251, 213, 59, 85, 286, 100, 260, 115, 228, 157,
+            25, 35, 247, 265, 64, 146, 294, 172, 254, 186,
+            264, 302, 11, 207, 171, 145, 159, 107, 81, 8,
+            273, 90, 72, 73, 266, 119, 226, 88, 218, 135,
+            12, 95, 153, 55, 155, 308, 309, 281, 221, 269,
+            215, 13, 195, 299, 291, 4, 154, 237, 89, 297,
+            130, 7, 82, 239, 102, 200, 243, 3, 194, 149,
+            209, 52, 288, 180, 169, 179, 10, 150, 206, 236,
+            246, 300, 285, 252, 62, 126, 210, 163, 259, 120,
+            262, 148, 132, 305, 274, 133, 43, 57, 240, 39,
+            311, 312
         }
         self.seed = SEED_GOES_HERE
     end
@@ -78,7 +79,8 @@ function Seed(Ob)
             'Global.Collectibles.RandoLivesUp',
             'Global.Collectibles.RandoLivesUp',
 
-            --9 Challenge Markers
+            --10 Challenge Markers
+            'global.collectibles.RandoPsiChallengeMarker',
             'global.collectibles.RandoPsiChallengeMarker',
             'global.collectibles.RandoPsiChallengeMarker',
             'global.collectibles.RandoPsiChallengeMarker',
@@ -308,7 +310,10 @@ function Seed(Ob)
             'global.props.AS_Painting',
             'global.props.AS_SeaUrchinWhistle',
 
-            --16 Rando Arrowhead Bundles Small
+            --19 Rando Arrowhead Bundles Small
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
             'global.collectibles.ArrowheadBundleSmall',
             'global.collectibles.ArrowheadBundleSmall',
             'global.collectibles.ArrowheadBundleSmall',
@@ -433,7 +438,7 @@ function Seed(Ob)
             'LivesUp5',
             'LivesUp6',
 
-            --9 Challenge Markers
+            --10 Challenge Markers
             'Marker1',
             'Marker2',
             'Marker3',
@@ -443,6 +448,7 @@ function Seed(Ob)
             'Marker7',
             'Marker8',
             'Marker9',
+            'Marker10',
            
             --19 Brain Jars, Unique Names
             'BrainJarElton',
@@ -598,12 +604,12 @@ function Seed(Ob)
             --Current Props from AS, 6 total
             'Cake', 'LiliBracelet', 'LobatoHand', 'StraightJacket', 'LobatoPainting',  'SeaUrchinWhistle',
 
-            --16 Rando Arrowhead Bundles Small
-            'ArrowheadBundleSmall1', 'ArrowheadBundleSmall2', 'ArrowheadBundleSmall3', 'ArrowheadBundleSmall4', 'ArrowheadBundleSmall5', 'ArrowheadBundleSmall6', 'ArrowheadBundleSmall7', 'ArrowheadBundleSmall8', 'ArrowheadBundleSmall9', 'ArrowheadBundleSmall10',
-            'ArrowheadBundleSmall11', 'ArrowheadBundleSmall12', 'ArrowheadBundleSmall13', 'ArrowheadBundleSmall14', 'ArrowheadBundleSmall15', 'ArrowheadBundleSmall16',
+            --19 Rando Arrowhead Bundles Small
+            'AHSmall1', 'AHSmall2', 'AHSmall3', 'AHSmall4', 'AHSmall5', 'AHSmall6', 'AHSmall7', 'AHSmall8', 'AHSmall9', 'AHSmall10',
+            'AHSmall11', 'AHSmall12', 'AHSmall13', 'AHSmall14', 'AHSmall15', 'AHSmall16', 'AHSmall17', 'AHSmall18', 'AHSmall19',
 
-            --9 Rando Arrowhead Bundles Medium
-            'ArrowheadBundleMedium1', 'ArrowheadBundleMedium2', 'ArrowheadBundleMedium3', 'ArrowheadBundleMedium4', 'ArrowheadBundleMedium5', 'ArrowheadBundleMedium6', 'ArrowheadBundleMedium7', 'ArrowheadBundleMedium8', 'ArrowheadBundleMedium9', 'ArrowheadBundleMedium10',
+            --10 Rando Arrowhead Bundles Medium
+            'AHMedium1', 'AHMedium2', 'AHMedium3', 'AHMedium4', 'AHMedium5', 'AHMedium6', 'AHMedium7', 'AHMedium8', 'AHMedium9', 'AHMedium10',
 
             --70 Psicards, filler item, increase if adding more positions
             'Card1', 'Card2', 'Card3', 'Card4', 'Card5', 'Card6', 'Card7', 'Card8', 'Card9', 'Card10',

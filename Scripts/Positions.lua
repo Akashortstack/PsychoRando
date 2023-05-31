@@ -2877,6 +2877,52 @@ function Positions(Ob)
             },
 
 
+            --*******************************************************--
+            --CA PUZZLE ITEMS
+            --CAKC, Ice Block Puzzle
+            item309 = {        
+                levelName = 'CAKC',
+                x = -4885, 
+                y = 4255, 
+                z = -19145,
+                ox = 0,
+                oy = 0,
+                oz = 0,
+                puzzle = 'ice'
+            },
+            --CAGP, Squirrel Puzzle
+            item310 = {        
+                levelName = 'CAGP',
+                x = 10455, 
+                y = 0, 
+                z = -3724,
+                ox = 0,
+                oy = 0,
+                oz = 0,
+                puzzle = 'squirrel'
+            },
+            --CAGP, Behind Grate, no puzzle coding currently
+            item311 = {        
+                levelName = 'CAGP',
+                x = 4900, 
+                y = -208, 
+                z = -2750,
+                ox = 0,
+                oy = 0,
+                oz = 0,
+            },
+            item312 = {        
+                levelName = 'CAGP',
+                x = 10498, 
+                y = -34, 
+                z = -8117,
+                ox = 0,
+                oy = 0,
+                oz = 0,
+                puzzle = 'geyser'
+            },
+            
+
 
 
             --*******************************************************--

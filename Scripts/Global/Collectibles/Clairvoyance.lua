@@ -56,7 +56,7 @@ function Clairvoyance(Ob)
 		--self.effect:run(self)
 
 		--edit to fix scale and orientation
-		self:setScale(25)
+		self:setScale(30)
 		self.mover:setOrientation(ApplyOrientation(0, 0, 0, self.mover:getOrientation()))
 		self:setState(nil)
 	end

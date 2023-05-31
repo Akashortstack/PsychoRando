@@ -21,6 +21,11 @@ function Peasant1Item(Ob)
 		Ob.pickupSpriteName = 'WW_FredsNote'  -- Editable
 		Ob.clutchAnim = 'Anims/DartNew/BodyParts/Hold_FistLoosePalmUp_ArmLf.jan'  -- Editable
 	end
+	--edit to increase scale, easier to find
+	function Ob:onBeginLevel()
+		%Ob.Parent.onBeginLevel(self)
+		self:setScale(2)
+	end
 
 	function Ob.onActivateFail(data, from)
 		Global.player:sayLine("/WWBY000RA/", 0, 1, nil, 1, nil, 1) --<<I'm saving this note for that guy who thinks Fred doesn't care about him.>>--

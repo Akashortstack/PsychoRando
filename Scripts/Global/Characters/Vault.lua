@@ -159,8 +159,9 @@ function Vault(Ob)
 		self.rMeleeImpactSound = self:loadSound('raz_melee_hit')
 		self.homex, self.homey, self.homez = self:getPosition()
         self.lastx, self.lasty, self.lastz = self:getPosition()
-		
-		self:setScale(2.8,2.8,2.8)      --Embiggen the vault because otherwise it's half submerged in paint
+
+		--edit reduced from 2.8 to 2.6
+		self:setScale(2.6,2.6,2.6)      --Embiggen the vault because otherwise it's half submerged in paint
 		SetMeshIsBackwards(self, 1)
 		
 		-- make the vaults teeny in LOMA

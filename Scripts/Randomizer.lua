@@ -86,14 +86,14 @@ function Randomizer(Ob)
 
             --compare item's level type to current level, sends to spawn if true
             if randoPosition.levelName == level then   
-                self:placeRandoObject(randoClass, randoName, randoPosition.x, randoPosition.y, randoPosition.z, randoPosition.ox, randoPosition.oy, randoPosition.oz)
+                self:placeRandoObject(randoClass, randoName, randoPosition.x, randoPosition.y, randoPosition.z, randoPosition.ox, randoPosition.oy, randoPosition.oz, randoPosition.puzzle)
             end
             index = index+1
         end
     end
 
     --Handles placing Objects
-    function Ob:placeRandoObject(class, name, x, y, z, ox, oy, oz)
+    function Ob:placeRandoObject(class, name, x, y, z, ox, oy, oz, puzzle)
         --checks if Global.player.stats.RandoProp exists if item is RandoProp, if item has been collected don't spawn 
         if Global.player.stats.RandoProp[name] == 'collected' then
             return nil
@@ -109,6 +109,20 @@ function Randomizer(Ob)
             --Moves PsiChallenge Marker Up by 100, can apply to more items if needed
             if class == 'global.collectibles.RandoPsiChallengeMarker' then
                 place:setPosition(place:getPosInFrontOf(0, 100))
+            end
+            --code for IceBlock puzzle in CAKC
+            if puzzle == 'ice' then
+                local block = FindScriptObject('ScavIceBlock')
+                block.itemEncased = name
+            end
+            --code for Squirrel Acorn puzzle in CAGP
+            if puzzle == 'squirrel' then
+                local squirrel = FindScriptObject('ScavengerSquirrel')
+                squirrel.acorn = name
+            end
+            if puzzle == 'geyser' then
+                local geyser = FindScriptObject('geyser1')
+                geyser.itemPlugging = name
             end
             --if more items need conditional changes, add code below
     

@@ -1,9 +1,5 @@
---Sandwhich is not pickupable if in vanilla level
-
 --move MM item (vanilla is hatbox behind cobweb)
 so it can't be grabbed through walls, doesn't clip through floor
-
---Adjust cobweb duster price to 600, easier to get. Other shop adjustments?
 
 --Needs logic!!! How do we implement this?
 
