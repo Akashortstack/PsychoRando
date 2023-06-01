@@ -21,38 +21,39 @@ function Seed(Ob)
     function Ob:fillTable()
         --PASTE SEED STRING HERE
         local SEED_GOES_HERE = {
-            103, 94, 283, 166, 36, 272, 44, 15, 303, 37,
-            113, 174, 116, 49, 134, 22, 123, 66, 187, 48,
-            160, 158, 78, 139, 68, 238, 234, 249, 127, 278,
-            225, 31, 61, 112, 34, 40, 86, 76, 20, 97,
-            214, 142, 168, 141, 191, 298, 223, 152, 156, 248,
-            293, 177, 93, 257, 101, 65, 289, 74, 219, 24,
-            193, 144, 137, 83, 261, 47, 138, 118, 2, 275,
-            301, 244, 211, 41, 110, 108, 176, 310, 58, 255,
-            167, 295, 233, 162, 77, 250, 147, 5, 117, 30,
-            307, 80, 16, 75, 28, 17, 170, 106, 205, 38,
-            220, 201, 114, 9, 276, 128, 175, 84, 292, 267,
-            122, 235, 182, 151, 121, 92, 136, 18, 87, 99,
-            216, 253, 165, 14, 277, 232, 161, 196, 96, 229,
-            279, 204, 60, 284, 263, 290, 282, 258, 21, 203,
-            63, 124, 188, 280, 224, 208, 183, 33, 26, 6,
-            184, 131, 192, 46, 129, 185, 306, 111, 109, 140,
-            27, 241, 270, 271, 173, 54, 189, 212, 190, 79,
-            98, 287, 164, 67, 105, 256, 143, 91, 227, 181,
-            69, 42, 242, 202, 45, 23, 29, 19, 51, 104,
-            296, 71, 231, 1, 56, 198, 197, 32, 53, 245,
-            268, 125, 217, 230, 222, 199, 178, 304, 70, 50,
-            251, 213, 59, 85, 286, 100, 260, 115, 228, 157,
-            25, 35, 247, 265, 64, 146, 294, 172, 254, 186,
-            264, 302, 11, 207, 171, 145, 159, 107, 81, 8,
-            273, 90, 72, 73, 266, 119, 226, 88, 218, 135,
-            12, 95, 153, 55, 155, 308, 309, 281, 221, 269,
-            215, 13, 195, 299, 291, 4, 154, 237, 89, 297,
-            130, 7, 82, 239, 102, 200, 243, 3, 194, 149,
-            209, 52, 288, 180, 169, 179, 10, 150, 206, 236,
-            246, 300, 285, 252, 62, 126, 210, 163, 259, 120,
-            262, 148, 132, 305, 274, 133, 43, 57, 240, 39,
-            311, 312
+            31, 15, 84, 137, 127, 118, 76, 153, 238, 78,
+            256, 173, 198, 261, 37, 141, 247, 36, 300, 22,
+            304, 168, 166, 216, 296, 185, 144, 181, 142, 40,
+            14, 263, 101, 167, 171, 66, 249, 286, 48, 92,
+            158, 138, 183, 147, 155, 315, 289, 114, 94, 20,
+            192, 290, 228, 190, 227, 97, 86, 301, 49, 134,
+            224, 34, 123, 122, 68, 44, 160, 242, 277, 61,
+            116, 175, 65, 103, 219, 294, 174, 288, 260, 117,
+            264, 291, 74, 24, 217, 152, 280, 47, 110, 93,
+            18, 2, 225, 272, 188, 83, 309, 232, 41, 136,
+            108, 273, 156, 322, 58, 128, 184, 306, 257, 278,
+            77, 151, 193, 113, 303, 5, 87, 106, 189, 30,
+            318, 80, 16, 112, 75, 28, 241, 17, 121, 187,
+            38, 9, 314, 196, 139, 170, 201, 72, 99, 284,
+            258, 182, 271, 96, 253, 177, 213, 205, 60, 226,
+            214, 161, 293, 233, 21, 223, 63, 124, 207, 165,
+            248, 229, 202, 33, 26, 6, 203, 131, 211, 46,
+            129, 204, 162, 317, 111, 109, 140, 27, 283, 231,
+            281, 191, 54, 208, 244, 268, 79, 98, 176, 298,
+            164, 67, 105, 295, 320, 143, 91, 251, 287, 69,
+            42, 90, 222, 45, 23, 29, 19, 51, 104, 307,
+            71, 245, 1, 56, 218, 197, 212, 32, 53, 312,
+            159, 125, 267, 254, 275, 199, 178, 220, 81, 70,
+            50, 12, 230, 235, 59, 85, 297, 255, 100, 270,
+            115, 305, 157, 234, 25, 35, 250, 119, 64, 146,
+            265, 172, 266, 186, 269, 313, 11, 145, 107, 8,
+            73, 276, 88, 135, 95, 55, 321, 292, 221, 279,
+            215, 13, 195, 310, 302, 4, 154, 237, 89, 308,
+            130, 7, 82, 239, 282, 102, 200, 243, 3, 194,
+            149, 209, 52, 299, 180, 169, 179, 10, 150, 206,
+            236, 246, 311, 285, 252, 62, 126, 210, 163, 259,
+            120, 262, 148, 132, 316, 274, 133, 43, 319, 57,
+            240, 39, 323
         }
         self.seed = SEED_GOES_HERE
     end
@@ -310,7 +311,19 @@ function Seed(Ob)
             'global.props.AS_Painting',
             'global.props.AS_SeaUrchinWhistle',
 
-            --19 Rando Arrowhead Bundles Small
+            --31 Rando Arrowhead Bundles Small
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
+            'global.collectibles.ArrowheadBundleSmall',
             'global.collectibles.ArrowheadBundleSmall',
             'global.collectibles.ArrowheadBundleSmall',
             'global.collectibles.ArrowheadBundleSmall',
@@ -604,10 +617,11 @@ function Seed(Ob)
             --Current Props from AS, 6 total
             'Cake', 'LiliBracelet', 'LobatoHand', 'StraightJacket', 'LobatoPainting',  'SeaUrchinWhistle',
 
-            --19 Rando Arrowhead Bundles Small
+            --21 Rando Arrowhead Bundles Small
             'AHSmall1', 'AHSmall2', 'AHSmall3', 'AHSmall4', 'AHSmall5', 'AHSmall6', 'AHSmall7', 'AHSmall8', 'AHSmall9', 'AHSmall10',
-            'AHSmall11', 'AHSmall12', 'AHSmall13', 'AHSmall14', 'AHSmall15', 'AHSmall16', 'AHSmall17', 'AHSmall18', 'AHSmall19',
-
+            'AHSmall11', 'AHSmall12', 'AHSmall13', 'AHSmall14', 'AHSmall15', 'AHSmall16', 'AHSmall17', 'AHSmall18', 'AHSmall19', 'AHSmall20',
+            'AHSmall21', 'AHSmall22', 'AHSmall23', 'AHSmall24', 'AHSmall25', 'AHSmall26', 'AHSmall27', 'AHSmall28', 'AHSmall29', 'AHSmall30', 
+            'AHSmall31', 
             --10 Rando Arrowhead Bundles Medium
             'AHMedium1', 'AHMedium2', 'AHMedium3', 'AHMedium4', 'AHMedium5', 'AHMedium6', 'AHMedium7', 'AHMedium8', 'AHMedium9', 'AHMedium10',
 

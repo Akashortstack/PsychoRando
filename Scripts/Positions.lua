@@ -2911,6 +2911,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
+            --CAGP, Two Geysers puzzle
             item312 = {        
                 levelName = 'CAGP',
                 x = 10498, 
@@ -2921,24 +2922,141 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'geyser'
             },
-            
+            --CARE, Hornet Nest puzzle
+            item313 = {        
+                levelName = 'CARE',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 178,
+                oz = 0,
+                puzzle = 'hive'
+            },
+
+            --*******************************************************--
+            --[[CAJA, RANK UP ITEMS
+            Spawns item for every 10 rankss, moved to Main Platform on Rank requirement
+            ]]
+            --Rank 10
+            item314 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank10'
+            },
+            --Rank 20
+            item315 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank20'
+            },
+            --Rank 30
+            item316 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank30'
+            },
+            --Rank 40
+            item317 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank40'
+            },
+            --Rank 50
+            item318 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank50'
+            },
+            --Rank 60
+            item319 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank60'
+            },
+            --Rank 70
+            item320 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank70'
+            },
+            --Rank 80
+            item321 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank80'
+            },
+            --Rank 90
+            item322 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank90'
+            },
+            --Rank 100
+            item323 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank100'
+            },           
 
 
 
             --*******************************************************--
             --SA, SASHA'S SHOOTING GALLERY
-            --SACU
+            --SACU              
+                --ca.props.PSIBlastPuzzleHuntItem ScavIdol Position X,Y,Z -10000 -10000 -10000 Orientation OX,OY,OZ 0 178 0
 
-
-
-            --[[ List of items that need special placement coding, add to end of item list 
-                --CAKC Frozen Sandwhich, how do we freeze this?
-                ca.props.ScavengerHuntItem ScavSandwich Position X,Y,Z -4885 4255 -19145 Orientation OX,OY,OZ 0 0 0
-
-                --This position needs updated, puzzle item
-                ca.props.PSIBlastPuzzleHuntItem ScavIdol Position X,Y,Z -10000 -10000 -10000 Orientation OX,OY,OZ 0 178 0
-
-            ]]
+            
         }
         self.positionsList = posTable
         

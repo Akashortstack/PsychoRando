@@ -1,7 +1,7 @@
---Put code into Lua Compiler, outputs Seed
+-- Run code in Lua, outputs Seed
 -- Function to shuffle the list using Fisher-Yates algorithm
 local function shuffleList(list)
-    math.randomseed(1234)
+  math.randomseed(1234)
   local random = math.random
   local length = #list
   for i = length, 2, -1 do
@@ -10,28 +10,27 @@ local function shuffleList(list)
   end
 end
 
--- Create the list of numbers from 1 to 310
+-- Create the list of numbers from 1 to 323
 local list = {}
-for i = 1, 310 do
+for i = 1, 323 do
   list[i] = i
 end
 
 -- Shuffle the list
 shuffleList(list)
 
--- Print the shuffled list with comma and line formatting
-for i = 1, 310 do
-  io.write(list[i])
+-- Create and open the output file in write mode
+local file = io.open("Seed.txt", "w")
+
+-- Print the shuffled list with comma and line formatting to the file
+for i = 1, 323 do
+  file:write(list[i])
   if i % 10 == 0 then
-    io.write(",\n")
-  elseif i ~= 310 then
-    io.write(", ")
+    file:write(",\n")
+  elseif i ~= 323 then
+    file:write(", ")
   end
 end
 
-
---[[Example Seed
-
-
-
-    ]]
+-- Close the file
+file:close()

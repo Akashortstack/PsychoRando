@@ -120,9 +120,68 @@ function Randomizer(Ob)
                 local squirrel = FindScriptObject('ScavengerSquirrel')
                 squirrel.acorn = name
             end
+            --code for Two Geysers Skull puzzle in CAGP
             if puzzle == 'geyser' then
                 local geyser = FindScriptObject('geyser1')
                 geyser.itemPlugging = name
+            end
+            --code for Hornet Nest Fertility Idol puzzle in CARE
+            if puzzle == 'hive' then
+                local hive = FindScriptObject('ScavHornetNest')
+                hive.huntItem = name
+            end
+
+            --[[code for RankUp checks, each level is separate
+            Handled by RankUpPlacer, spawned in CAJA levelscript]]
+            --Rank10
+            if puzzle == 'rank10' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank10 = name
+            end
+            --Rank20
+            if puzzle == 'rank20' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank20 = name
+            end
+            --Rank30
+            if puzzle == 'rank30' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank30 = name
+            end
+            --Rank40
+            if puzzle == 'rank40' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank40 = name
+            end
+            --Rank50
+            if puzzle == 'rank50' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank50 = name
+            end
+            --Rank60
+            if puzzle == 'rank60' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank60 = name
+            end
+            --Rank70
+            if puzzle == 'rank70' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank70 = name
+            end
+            --Rank80
+            if puzzle == 'rank80' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank80 = name
+            end
+            --Rank90
+            if puzzle == 'rank90' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank90 = name
+            end
+            --Rank100
+            if puzzle == 'rank100' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank100 = name
             end
             --if more items need conditional changes, add code below
     
