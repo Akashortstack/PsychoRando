@@ -215,6 +215,9 @@ function WWMA(Ob)
 		self.cutsceneScript:fadeToBlack(0)
 		SetSkyBox('Levels/WW_WaterlooWorld/WW_skydome.plb')
 
+		--edit Create WWPuzzlePlacer
+		self.puzzles = SpawnScript('WW.WWPuzzlePlacer', 'WWPuzzlePlacer')
+
 		-- place napoleon in scale B
 		local napoleonB = SpawnScript('WW.Characters.Napoleon', 'NapoleonScaleB', 'self.sScale = \'B\'')
 --		SetEntityDomain(napoleonB,'LSOScaleBDOMAIN')
@@ -470,7 +473,7 @@ function WWMA(Ob)
 			curse.trigPlaneYOffset = 130
 		end
 		
-		self:hidePeasant3Item()
+		--self:hidePeasant3Item()
 		
 		local p3stack = FindScriptObject('Bighaypilesack')
 		if p3stack ~= nil then
@@ -902,9 +905,11 @@ function WWMA(Ob)
 	end	
 	
 	function Ob:onGPGFireDissipate( data, from )
-		if (Global:load('GamePieceMilitia3Active') ~= 1 and Global:load('GamePieceMilitia3Killed') ~= 1) then		
-			self:showPeasant3Item()
-		end
+		--edit removed condition
+		--if (Global:load('GamePieceMilitia3Active') ~= 1 and Global:load('GamePieceMilitia3Killed') ~= 1) then	
+		local burned = fso('WWPuzzlePlacer')	
+		burned:HaybalePuzzle()
+		--end
 	end
 
 --*************************************************************************************************
@@ -1049,18 +1054,14 @@ function WWMA(Ob)
 	end
 	
 	function Ob:hidePeasant3Item()
-		local p3item = FindScriptObject('Peasant3Item')
-		if p3item ~= nil then
-			p3item:hide()		
-		end	
+		--edit removed, done by WWPuzzlePlacer.lua instead
+
 	end
 	
 	function Ob:showPeasant3Item()
-		local p3item = FindScriptObject('Peasant3Item')
-		if p3item ~= nil then
-			p3item:show()	
-			Global.cutsceneScript:runCutscene('FoundRifle')
-		end		
+		--edit removed, moved to onGPGFireDissipate 
+		--self.puzzles:p3Puzzle()
+		--Global.cutsceneScript:runCutscene('FoundRifle')
 	end
 
 	function Ob:setDoorThreeUnavail(bOn)

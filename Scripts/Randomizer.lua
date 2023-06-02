@@ -67,7 +67,7 @@ function Randomizer(Ob)
         end
     end
 
-    --function that reads each item(x) in Seed.checksList  and position
+    --function that reads each item(index) in Seed.lua and Positions.lua
     function Ob:placeCollectibles()
         --check current level name
         local level = (Global.levelScript:getLevelName())
@@ -183,6 +183,41 @@ function Randomizer(Ob)
                 local ref = FindScriptObject('RankUpPlacer')
                 ref.randoRank100 = name
             end
+            --[[Locations in WW spawned by cutscenes]]
+            --Helping Peasant 1 with Fred's Note
+            if puzzle == 'p1Help' then
+                local ref = FindScriptObject('WWPuzzlePlacer')
+                ref.p1Helped = name
+            end
+            --Helping Peasant 2 with Priceless Coin
+            if puzzle == 'p2Help' then
+                local ref = FindScriptObject('WWPuzzlePlacer')
+                ref.p2Helped = name
+            end
+            --Helping Peasant 3 with Musket
+            if puzzle == 'p3Help' then
+                local ref = FindScriptObject('WWPuzzlePlacer')
+                ref.p3Helped = name
+            end
+            --Helping Carpenter
+            if puzzle == 'CarpHelp' then
+                local ref = FindScriptObject('WWPuzzlePlacer')
+                ref.carpenterHelped = name
+            end
+            --Helping Knight
+            if puzzle == 'KnightHelp' then
+                local ref = FindScriptObject('WWPuzzlePlacer')
+                ref.knightHelped = name
+            end
+            --Burning Haybale location
+            if puzzle == 'haybale' then
+                local ref = FindScriptObject('WWPuzzlePlacer')
+                ref.p3Puzzle = name
+            end
+            
+            
+            
+
             --if more items need conditional changes, add code below
     
         end

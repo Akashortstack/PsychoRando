@@ -53,7 +53,7 @@ function Seed(Ob)
             149, 209, 52, 299, 180, 169, 179, 10, 150, 206,
             236, 246, 311, 285, 252, 62, 126, 210, 163, 259,
             120, 262, 148, 132, 316, 274, 133, 43, 319, 57,
-            240, 39, 323
+            240, 39, 323, 324, 325, 326, 327, 328, 329
         }
         self.seed = SEED_GOES_HERE
     end
@@ -311,8 +311,7 @@ function Seed(Ob)
             'global.props.AS_Painting',
             'global.props.AS_SeaUrchinWhistle',
 
-            --31 Rando Arrowhead Bundles Small
-            'global.collectibles.ArrowheadBundleSmall',
+            --30 Rando Arrowhead Bundles Small
             'global.collectibles.ArrowheadBundleSmall',
             'global.collectibles.ArrowheadBundleSmall',
             'global.collectibles.ArrowheadBundleSmall',
@@ -356,8 +355,15 @@ function Seed(Ob)
             'global.collectibles.ArrowheadBundleMedium',
             'global.collectibles.ArrowheadBundleMedium',
 
-            --70 Psicards, filler item, increase if adding more positions
+            --77 Psicards, filler item, increase if adding more positions
             --Increase name too!
+            'global.collectibles.RandoPsiCard',
+            'global.collectibles.RandoPsiCard',
+            'global.collectibles.RandoPsiCard',
+            'global.collectibles.RandoPsiCard',
+            'global.collectibles.RandoPsiCard',
+            'global.collectibles.RandoPsiCard',
+            'global.collectibles.RandoPsiCard',
             'global.collectibles.RandoPsiCard',
             'global.collectibles.RandoPsiCard',
             'global.collectibles.RandoPsiCard',
@@ -617,15 +623,15 @@ function Seed(Ob)
             --Current Props from AS, 6 total
             'Cake', 'LiliBracelet', 'LobatoHand', 'StraightJacket', 'LobatoPainting',  'SeaUrchinWhistle',
 
-            --21 Rando Arrowhead Bundles Small
+            --30 Rando Arrowhead Bundles Small
             'AHSmall1', 'AHSmall2', 'AHSmall3', 'AHSmall4', 'AHSmall5', 'AHSmall6', 'AHSmall7', 'AHSmall8', 'AHSmall9', 'AHSmall10',
             'AHSmall11', 'AHSmall12', 'AHSmall13', 'AHSmall14', 'AHSmall15', 'AHSmall16', 'AHSmall17', 'AHSmall18', 'AHSmall19', 'AHSmall20',
             'AHSmall21', 'AHSmall22', 'AHSmall23', 'AHSmall24', 'AHSmall25', 'AHSmall26', 'AHSmall27', 'AHSmall28', 'AHSmall29', 'AHSmall30', 
-            'AHSmall31', 
+
             --10 Rando Arrowhead Bundles Medium
             'AHMedium1', 'AHMedium2', 'AHMedium3', 'AHMedium4', 'AHMedium5', 'AHMedium6', 'AHMedium7', 'AHMedium8', 'AHMedium9', 'AHMedium10',
 
-            --70 Psicards, filler item, increase if adding more positions
+            --77 Psicards, filler item, increase if adding more positions
             'Card1', 'Card2', 'Card3', 'Card4', 'Card5', 'Card6', 'Card7', 'Card8', 'Card9', 'Card10',
             'Card11', 'Card12', 'Card13', 'Card14', 'Card15', 'Card16', 'Card17', 'Card18', 'Card19', 'Card20',
             'Card21', 'Card22', 'Card23', 'Card24', 'Card25', 'Card26', 'Card27', 'Card28', 'Card29', 'Card30', 
@@ -633,6 +639,7 @@ function Seed(Ob)
             'Card41', 'Card42', 'Card43', 'Card44', 'Card45', 'Card46', 'Card47', 'Card48', 'Card49', 'Card50',
             'Card51', 'Card52', 'Card53', 'Card54', 'Card55', 'Card56', 'Card57', 'Card58', 'Card59', 'Card60',
             'Card61', 'Card62', 'Card63', 'Card64', 'Card65', 'Card66', 'Card67', 'Card68', 'Card69', 'Card70',
+            'Card71', 'Card72', 'Card73', 'Card74', 'Card75', 'Card76', 'Card77', 
         }
         --get total number of item in classTable
         local n = tableLength(classTable)

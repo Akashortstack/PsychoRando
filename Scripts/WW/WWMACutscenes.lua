@@ -929,7 +929,11 @@ function WWMACutscenes(Ob)
 		Global.player:setOrientation(0, -102.4, 0)
 		self:cleanupLoopingAnims()
 		self:gamePieceAppearCleanup()
-		Global.goalManager:deactivate('Carpenter')		
+		Global.goalManager:deactivate('Carpenter')
+		--edit Spawn Rando Reward!
+		local helped = fso('WWPuzzlePlacer')	
+		helped:carpenterHelp()
+
 		self:endCutscene()
 	end
 
@@ -938,6 +942,10 @@ function WWMACutscenes(Ob)
 		Global.player:setOrientation(0, 104.5, 0)
 		self:cleanupLoopingAnims()
 		self:gamePieceAppearCleanup()
+		--edit Spawn Rando Reward!
+		local helped = fso('WWPuzzlePlacer')	
+		helped:knightHelp()
+
 		self:endCutscene()
 		local restaurant = FindScriptObject('Restaurant')
 		restaurant:changeState(1)
@@ -957,6 +965,10 @@ function WWMACutscenes(Ob)
 		Global.player:setOrientation(0, -34.3, 0)
 		self:cleanupLoopingAnims()
 		self:gamePieceAppearCleanup()
+		--edit Spawn Rando Reward!
+		local helped = fso('WWPuzzlePlacer')	
+		helped:peasant1Help()
+
 		self:endCutscene()
 	end
 
@@ -969,6 +981,10 @@ function WWMACutscenes(Ob)
 		if (gun) then
 			gun:killSelf()
 		end
+		--edit Spawn Rando Reward!
+		local helped = fso('WWPuzzlePlacer')	
+		helped:peasant3Help()
+
 		self:endCutscene()
 	end
 
@@ -981,6 +997,10 @@ function WWMACutscenes(Ob)
 		if (coin) then
 			coin:killSelf()
 		end
+		--edit Spawn Rando Reward!
+		local helped = fso('WWPuzzlePlacer')	
+		helped:peasant2Help()
+
 		self:endCutscene()
 	end
 	
@@ -993,6 +1013,10 @@ function WWMACutscenes(Ob)
 		if (coin) then
 			coin:killSelf()
 		end
+		--edit Spawn Rando Reward!
+		local helped = fso('WWPuzzlePlacer')	
+		helped:peasant2Help()
+
 		self:endCutscene()
 	end
 

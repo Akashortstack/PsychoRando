@@ -10,9 +10,9 @@ local function shuffleList(list)
   end
 end
 
--- Create the list of numbers from 1 to 323
+-- Create the list of numbers from 1 to 329
 local list = {}
-for i = 1, 323 do
+for i = 1, 329 do
   list[i] = i
 end
 
@@ -23,11 +23,11 @@ shuffleList(list)
 local file = io.open("Seed.txt", "w")
 
 -- Print the shuffled list with comma and line formatting to the file
-for i = 1, 323 do
+for i = 1, 329 do
   file:write(list[i])
   if i % 10 == 0 then
     file:write(",\n")
-  elseif i ~= 323 then
+  elseif i ~= 329 then
     file:write(", ")
   end
 end

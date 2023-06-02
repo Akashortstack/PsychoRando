@@ -3048,7 +3048,76 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'rank100'
             },           
-
+            --*******************************************************--
+            --WW, Waterloo World Puzzles
+            --Peasant 1 Helped
+            item324 = {        
+                levelName = 'WWMA',
+                x = -10000, 
+                y = -25000, 
+                z = -10000,
+                ox = 0,
+                oy = -179,
+                oz = 0,
+                puzzle = 'p1Help'
+            },
+            --Peasant 2 Helped
+            item325 = {        
+                levelName = 'WWMA',
+                x = -10000, 
+                y = -25000, 
+                z = -10000,
+                ox = 0,
+                oy = 99,
+                oz = 0,
+                puzzle = 'p2Help'
+            },
+            --Peasant 3 Helped
+            item326 = {        
+                levelName = 'WWMA',
+                x = -10000, 
+                y = -25000, 
+                z = -10000,
+                ox = 0,
+                oy = -69,
+                oz = 0,
+                puzzle = 'p3Help'
+            },
+            --Carpenter Helped
+            item327 = {        
+                levelName = 'WWMA',
+                x = -10000, 
+                y = -25000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'CarpHelp'
+            },
+            --Knight Helped
+            item328 = {        
+                levelName = 'WWMA',
+                x = -10000, 
+                y = -25000, 
+                z = -10000,
+                ox = 0,
+                oy = -55,
+                oz = 0,
+                puzzle = 'KnightHelp'
+            },
+            --Musket Haybale location
+            item329 = {        
+                levelName = 'WWMA',
+                x = -10000, 
+                y = -25000, 
+                z = -10000,
+                ox = 0,
+                oy = 0,
+                oz = 0,
+                puzzle = 'haybale'
+            },
+                
+  
 
 
             --*******************************************************--
