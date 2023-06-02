@@ -1,7 +1,8 @@
 -- Run code in Lua, outputs Seed
 -- Function to shuffle the list using Fisher-Yates algorithm
 local function shuffleList(list)
-  math.randomseed(1234)
+  --edit to set the seed
+  math.randomseed(6969)
   local random = math.random
   local length = #list
   for i = length, 2, -1 do

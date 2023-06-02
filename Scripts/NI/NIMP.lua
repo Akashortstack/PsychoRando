@@ -103,10 +103,12 @@ function NIMP(Ob)
 		if (not niPhase) then
 			if (Global:loadGlobal('bNICompleted') == 1) then
 				niPhase = 4
+			--edit removed to stop weird stuff
+			--[[
 			elseif (Global:loadGlobal('bMICompleted') == 1) then
 				niPhase = 3
 			elseif (Global:loadGlobal('bSACompleted') == 1) then
-				niPhase = 2
+				niPhase = 2]]
 			else
 				niPhase = 1
 			end
@@ -124,6 +126,9 @@ function NIMP(Ob)
 		local lungFishGlassWall = FindScriptObject('lungfishblocker')
 		
 		local startState = nil
+
+		--edit removing most of this to prevent spawn issues after completing other levels
+		--[[
 		if (Global:loadGlobal('bNICompleted') == 1) then
 			if (not Global:getPlayerRespawnPointName()) then
 	            Global:setPlayerRespawnPointName('respawnpoint1')
@@ -134,7 +139,8 @@ function NIMP(Ob)
 			if lungFishGlassWall then
 				lungFishGlassWall:killSelf()
 			end
-		elseif (Global:loadGlobal('bSACompleted') == 1) or (Global:loadGlobal('brokeNIMPEgg') == 1) then	-- spawn at egg
+		else]]
+		if --[[(Global:loadGlobal('bSACompleted') == 1) or ]](Global:loadGlobal('brokeNIMPEgg') == 1) then	-- spawn at egg
             Global:setPlayerRespawnPointName('respawnpoint1')
 		else
 			SetSwitchableCollisionEnable(2,1)

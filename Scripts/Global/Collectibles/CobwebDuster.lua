@@ -41,8 +41,8 @@ function CobwebDuster(Ob)
 		Ob.speed = 1000	-- game distance units per second
 		Ob.splineTime = 0
 		-- SHOP STUFF
-		--edit to make cheaper, but increase rank required, original 800 and 20
-		Ob.iPrice = 600
+		--edit to increase rank required, original 20
+		Ob.iPrice = 800
 		Ob.iRank = 30 -- Editable
 		Ob.iNumStock = 1 -- Editable
 

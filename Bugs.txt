@@ -1,6 +1,23 @@
+
+
+General Bugs:
+
+--KNOWN ASTRALATHE BUG, WW has crashes if you let cutscenes play in entirety,
+skip cutscene to avoid!!!
+
 --move MM item (vanilla is hatbox behind cobweb)
 so it can't be grabbed through walls, doesn't clip through floor
 
+--Vaults in MM tend to float away? Gravity not applied correctly.
+
+
+THINGS TO DO:
 --Needs logic!!! How do we implement this?
 
+--Sasha's Shooting Gallery Needs implemented.
+
+--Black Velvetopia potential shop rando? Card Reward rando? Needs something...
+
 --Loading saves often crashes the game
+
+--CA Lodge Shop Rando?
