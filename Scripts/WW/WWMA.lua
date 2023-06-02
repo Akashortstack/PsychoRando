@@ -353,6 +353,34 @@ function WWMA(Ob)
 --			end
 --		end		
 
+
+		--edit Spawn Rando Rewards if already done, but not picked up.
+		if Global:load('bCarpenterBecomesPiecePlayed') == 1 then
+			local helped = fso('WWPuzzlePlacer')	
+			helped:carpenterHelp()
+		end
+
+		if Global:load('bPeasantOneBecomesSoldierPlayed') == 1 then
+			local helped = fso('WWPuzzlePlacer')	
+			helped:peasant1Help()
+		end
+
+		if Global:load('bPeasantTwoBecomesSoldierPlayed') == 1 then
+			local helped = fso('WWPuzzlePlacer')	
+			helped:peasant2Help()
+		end
+
+		if Global:load('bPeasantThreeBecomesSoldierPlayed') == 1 then
+			local helped = fso('WWPuzzlePlacer')	
+			helped:peasant3Help()
+		end
+
+		if Global:load('bKnightBecomesPiecePlayed') == 1 then
+			local helped = fso('WWPuzzlePlacer')	
+			helped:knightHelp()
+		end
+
+
 		-- placing the fireplace particle emitter
 		self.firePlaceEmitter = SpawnScript('WW.Effects.fireFX')
 		SetEntityDomain(self.firePlaceEmitter, 'LSOScaleADOMAIN')
