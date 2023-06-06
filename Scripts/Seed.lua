@@ -21,49 +21,96 @@ function Seed(Ob)
     function Ob:fillTable()
         --PASTE SEED STRING HERE
         local SEED_GOES_HERE = {
-            141, 75, 238, 1, 54, 248, 271, 56, 232, 259,
-            57, 138, 32, 245, 2, 93, 187, 186, 59, 140,
-            287, 108, 252, 211, 48, 302, 169, 269, 113, 243,
-            274, 173, 23, 55, 52, 162, 18, 283, 15, 33,
-            14, 215, 5, 171, 325, 110, 145, 253, 216, 3,
-            99, 10, 289, 43, 230, 240, 235, 16, 304, 101,
-            257, 184, 147, 123, 159, 9, 218, 249, 278, 26,
-            265, 22, 64, 143, 279, 315, 30, 79, 170, 313,
-            192, 251, 83, 13, 150, 194, 85, 292, 258, 206,
-            98, 328, 130, 179, 228, 236, 95, 100, 73, 6,
-            293, 62, 151, 295, 96, 91, 281, 154, 322, 166,
-            229, 97, 102, 231, 188, 288, 149, 189, 157, 273,
-            87, 106, 41, 128, 104, 120, 299, 323, 197, 37,
-            20, 181, 133, 71, 167, 34, 66, 39, 227, 70,
-            158, 307, 298, 222, 225, 60, 199, 301, 185, 134,
-            223, 50, 193, 117, 142, 201, 118, 129, 256, 217,
-            320, 200, 4, 180, 300, 305, 28, 213, 53, 255,
-            35, 267, 68, 318, 61, 209, 86, 112, 114, 275,
-            175, 67, 8, 38, 163, 160, 285, 195, 148, 11,
-            131, 89, 204, 24, 310, 237, 196, 121, 172, 19,
-            119, 25, 212, 165, 153, 312, 168, 46, 191, 250,
-            219, 233, 69, 266, 125, 29, 31, 226, 220, 51,
-            321, 42, 7, 182, 326, 286, 105, 268, 177, 291,
-            146, 161, 82, 284, 88, 72, 314, 207, 202, 239,
-            221, 277, 311, 234, 63, 65, 316, 246, 308, 290,
-            208, 139, 276, 45, 183, 241, 262, 317, 176, 27,
-            324, 205, 247, 84, 144, 94, 21, 78, 210, 152,
-            40, 329, 272, 36, 137, 214, 244, 280, 81, 74,
-            327, 80, 107, 224, 103, 296, 47, 58, 136, 242,
-            270, 319, 49, 90, 282, 263, 198, 77, 155, 306,
-            260, 178, 122, 116, 254, 115, 44, 135, 92, 127,
-            303, 309, 203, 76, 294, 111, 132, 17, 164, 190,
-            174, 261, 297, 12, 156, 124, 126, 264, 109
+            110, 61, 9, 2, 294, 180, 293, 160, 3, 221,
+            34, 165, 156, 261, 251, 155, 324, 32, 92, 121,
+            314, 237, 188, 85, 54, 53, 198, 186, 107, 172,
+            142, 113, 56, 132, 57, 16, 309, 59, 175, 300,
+            67, 62, 134, 241, 72, 182, 64, 153, 171, 184,
+            66, 252, 227, 229, 201, 114, 211, 39, 99, 228,
+            125, 41, 96, 254, 315, 71, 12, 214, 265, 256,
+            282, 224, 14, 260, 243, 208, 203, 283, 235, 281,
+            238, 193, 25, 40, 295, 118, 58, 95, 27, 196,
+            327, 287, 159, 38, 15, 299, 223, 26, 205, 169,
+            18, 100, 106, 70, 274, 29, 225, 140, 20, 1,
+            328, 286, 298, 105, 168, 48, 206, 272, 126, 244,
+            11, 269, 316, 306, 255, 164, 148, 195, 49, 273,
+            24, 80, 179, 109, 226, 119, 101, 240, 289, 264,
+            278, 8, 177, 149, 128, 4, 302, 311, 213, 84,
+            231, 218, 151, 37, 199, 42, 94, 135, 194, 245,
+            44, 88, 291, 55, 318, 173, 323, 69, 250, 220,
+            124, 275, 73, 50, 285, 158, 36, 60, 187, 280,
+            35, 78, 247, 81, 279, 90, 98, 5, 257, 162,
+            230, 7, 150, 136, 321, 122, 65, 304, 63, 329,
+            93, 270, 52, 326, 276, 319, 267, 133, 127, 296,
+            68, 138, 131, 215, 200, 112, 271, 91, 161, 176,
+            51, 305, 145, 170, 33, 17, 116, 307, 259, 317,
+            130, 209, 202, 79, 102, 313, 253, 129, 86, 13,
+            262, 236, 103, 217, 284, 166, 297, 115, 43, 189,
+            30, 249, 207, 89, 75, 76, 23, 19, 303, 147,
+            204, 143, 222, 190, 141, 154, 266, 82, 219, 83,
+            152, 144, 104, 47, 97, 288, 248, 325, 117, 242,
+            146, 120, 290, 77, 6, 174, 232, 322, 308, 258,
+            185, 87, 210, 167, 239, 46, 28, 320, 263, 234,
+            233, 31, 216, 212, 22, 123, 137, 292, 21, 268,
+            45, 277, 312, 10, 139, 111, 246, 74, 192, 301,
+            163, 157, 310, 108, 191, 183, 181, 197, 178
         }
         self.seed = SEED_GOES_HERE
     end
 
     --[[ function that randomizes all checks in the game, keeping class paired with name
-    Ex. item 1 in classTable always pairs with item 1 in nameTable
+    Ex. item 1 in oldclassTable always pairs with item 1 in oldnameTable
     ]]
     function Ob:randomizeChecks()
-        --TEST LIST, NEEDS UPDATED TO FULL LIST
-        local classTable = {
+        --LIST MUST MATCH oldnameTable ONE FOR ONE, OR ELSE...
+        local oldclassTable = {
+            --Current Props from AS, 6 total
+            'global.props.AS_SeaUrchinWhistle',
+            'global.props.AS_hand', 
+            'global.props.AS_StraightJacket',
+            'global.props.AS_Painting',
+            'global.props.Cake',
+            'global.props.LilisBracelet', 
+
+            --Current Props from MM, 6 total
+            'global.props.PropSign',
+            'global.props.PropFlowers',
+            'global.props.PropPlunger', 
+            'global.props.PropHedgeTrimmers',
+            'global.props.PropRollingPin',
+            'global.props.PropWaterCan',
+
+            --Current Props from TH, 3 total
+            'global.props.Candle',
+            'global.props.Candle',
+            'global.props.Megaphone',
+
+            --Props from WW, 3 total
+            'global.props.Peasant1Item',  --Fred's Note
+            'global.props.Peasant2Item',  --Priceless Coin
+            'global.props.Peasant3Item',  --Rifle
+
+            --19 Psi Powers, Some Different Classes
+            'global.collectibles.Marksmanship', 
+            'global.collectibles.Marksmanship', 
+            'global.collectibles.Marksmanship', 
+            'global.collectibles.Firestarting', 
+            'global.collectibles.Firestarting', 
+            'global.collectibles.Confusion', 
+            'global.collectibles.Confusion', 
+            'global.collectibles.Levitation', 
+            'global.collectibles.Levitation', 
+            'global.collectibles.Levitation', 
+            'global.collectibles.Telekinesis', 
+            'global.collectibles.Telekinesis', 
+            'global.collectibles.Invisibility', 
+            'global.collectibles.Invisibility', 
+            'global.collectibles.Clairvoyance', 
+            'global.collectibles.Clairvoyance', 
+            'global.collectibles.Shield', 
+            'global.collectibles.Shield', 
+            'global.collectibles.Shield', 
+
             --6 Max Ammo Up
             'Global.Collectibles.RandoAmmoUp',
             'Global.Collectibles.RandoAmmoUp',
@@ -130,27 +177,6 @@ function Seed(Ob)
             'Global.Collectibles.ScavBone', 
             'Global.Collectibles.scavFossil', 
             'Global.Collectibles.ScavHuntGoldWatch', 
-
-            --19 Psi Powers, Some Different Classes
-            'global.collectibles.Marksmanship', 
-            'global.collectibles.Marksmanship', 
-            'global.collectibles.Marksmanship', 
-            'global.collectibles.Firestarting', 
-            'global.collectibles.Firestarting', 
-            'global.collectibles.Confusion', 
-            'global.collectibles.Confusion', 
-            'global.collectibles.Levitation', 
-            'global.collectibles.Levitation', 
-            'global.collectibles.Levitation', 
-            'global.collectibles.Telekinesis', 
-            'global.collectibles.Telekinesis', 
-            'global.collectibles.Invisibility', 
-            'global.collectibles.Invisibility', 
-            'global.collectibles.Clairvoyance', 
-            'global.collectibles.Clairvoyance', 
-            'global.collectibles.Shield', 
-            'global.collectibles.Shield', 
-            'global.collectibles.Shield', 
 
             --50 Emotional Baggage Tags, 10 of each Type
             'global.collectibles.RandoSuitcaseTag', 
@@ -285,32 +311,6 @@ function Seed(Ob)
             'Global.Characters.Vault',
             'Global.Characters.Vault',
 
-            --Current Props from MM, 6 total
-            'global.props.PropFlowers',
-            'global.props.PropHedgeTrimmers',
-            'global.props.PropPlunger', 
-            'global.props.PropRollingPin',
-            'global.props.PropSign',
-            'global.props.PropWaterCan',
-
-            --Current Props from TH, 3 total
-            'global.props.Candle',
-            'global.props.Candle',
-            'global.props.Megaphone',
-
-            --Props from WW, 3 total
-            'global.props.Peasant1Item',  --Fred's Note
-            'global.props.Peasant2Item',  --Priceless Coin
-            'global.props.Peasant3Item',  --Rifle
-
-            --Current Props from AS, 6 total
-            'global.props.Cake', 
-            'global.props.LilisBracelet', 
-            'global.props.AS_hand', 
-            'global.props.AS_StraightJacket',
-            'global.props.AS_Painting',
-            'global.props.AS_SeaUrchinWhistle',
-
             --30 Rando Arrowhead Bundles Small
             'global.collectibles.ArrowheadBundleSmall',
             'global.collectibles.ArrowheadBundleSmall',
@@ -355,7 +355,7 @@ function Seed(Ob)
             'global.collectibles.ArrowheadBundleMedium',
             'global.collectibles.ArrowheadBundleMedium',
 
-            --77 Psicards, filler item, increase if adding more positions
+            --76 Psicards, filler item, increase if adding more positions
             --Increase name too!
             'global.collectibles.RandoPsiCard',
             'global.collectibles.RandoPsiCard',
@@ -433,13 +433,47 @@ function Seed(Ob)
             'global.collectibles.RandoPsiCard',
             'global.collectibles.RandoPsiCard',
             'global.collectibles.RandoPsiCard',
-            'global.collectibles.RandoPsiCard',
 
 
         }
 
-        --TEST LIST, NEEDS UPDATED TO FULL LIST
-        local nameTable = {
+        --LIST MUST MATCH oldclassTable ONE FOR ONE, OR ELSE...
+        local oldnameTable = {
+
+            --Current Props from AS, 6 total
+            'SeaUrchinWhistle', 'LobatoHand', 'StraightJacket', 'LobatoPainting', 'Cake', 'LiliBracelet', 
+
+            --Current Props from MM, 6 total
+            'PropSign', 'PropFlowers', 'PropPlunger', 'PropHedgeTrimmers', 'PropRollingPin', 'PropWaterCan',
+
+            --Current Props from TH, 3 total
+            'Candle1', 'Candle2', 'Megaphone',
+
+            --Props from WW, 3 total
+            'Peasant1Item', --Fred's Note
+            'Peasant2Item', --Priceless Coin
+            'Peasant3Item', --Rifle
+
+            --19 Psi Powers, Some Different Names to match Class
+            'Marksmanship1',
+            'Marksmanship2',
+            'Marksmanship3',
+            'Firestarting1',
+            'Firestarting2',
+            'Confusion1',
+            'Confusion2',
+            'Levitation1',
+            'Levitation2',
+            'Levitation3',
+            'Telekinesis1',
+            'Telekinesis2',
+            'Invisibility1',
+            'Invisibility2',
+            'Clairvoyance1',
+            'Clairvoyance2',
+            'Shield1',
+            'Shield2',
+            'Shield3',
 
             --6 Max Ammo Up
             'AmmoUp1',
@@ -508,27 +542,6 @@ function Seed(Ob)
             'scavFossil',
             'ScavHuntGoldWatch',
 
-            --19 Psi Powers, Some Different Names to match Class
-            'Marksmanship1',
-            'Marksmanship2',
-            'Marksmanship3',
-            'Firestarting1',
-            'Firestarting2',
-            'Confusion1',
-            'Confusion2',
-            'Levitation1',
-            'Levitation2',
-            'Levitation3',
-            'Telekinesis1',
-            'Telekinesis2',
-            'Invisibility1',
-            'Invisibility2',
-            'Clairvoyance1',
-            'Clairvoyance2',
-            'Shield1',
-            'Shield2',
-            'Shield3',
-
             --50 Emotional Baggage Tags, 10 of each Type
             'SuitcaseTag1',
             'SuitcaseTag2',
@@ -586,16 +599,7 @@ function Seed(Ob)
             'DuffleT10',
 
             --50 Emotional Baggage, 10 of each Type
-            'Suitcase1',
-            'Suitcase2',
-            'Suitcase3',
-            'Suitcase4',
-            'Suitcase5',
-            'Suitcase6',
-            'Suitcase7',
-            'Suitcase8',
-            'Suitcase9',
-            'Suitcase10',
+            'Suitcase1', 'Suitcase2', 'Suitcase3', 'Suitcase4', 'Suitcase5', 'Suitcase6', 'Suitcase7', 'Suitcase8', 'Suitcase9', 'Suitcase10',
 
             'Purse1', 'Purse2', 'Purse3', 'Purse4', 'Purse5', 'Purse6', 'Purse7', 'Purse8', 'Purse9', 'Purse10',
 
@@ -609,20 +613,6 @@ function Seed(Ob)
             'Vault1', 'Vault2', 'Vault3', 'Vault4', 'Vault5', 'Vault6', 'Vault7', 'Vault8', 'Vault9', 'Vault10',
             'Vault11', 'Vault12', 'Vault13', 'Vault14', 'Vault15', 'Vault16', 'Vault17','Vault18', 'Vault19',
 
-            --Current Props from MM, 6 total
-            'PropFlowers', 'PropHedgeTrimmers', 'PropPlunger', 'PropRollingPin', 'PropSign', 'PropWaterCan',
-
-            --Current Props from TH, 3 total
-            'Candle1', 'Candle2', 'Megaphone',
-
-            --Props from WW, 3 total
-            'Peasant1Item', --Fred's Note
-            'Peasant2Item', --Priceless Coin
-            'Peasant3Item', --Rifle
-
-            --Current Props from AS, 6 total
-            'Cake', 'LiliBracelet', 'LobatoHand', 'StraightJacket', 'LobatoPainting',  'SeaUrchinWhistle',
-
             --30 Rando Arrowhead Bundles Small
             'AHSmall1', 'AHSmall2', 'AHSmall3', 'AHSmall4', 'AHSmall5', 'AHSmall6', 'AHSmall7', 'AHSmall8', 'AHSmall9', 'AHSmall10',
             'AHSmall11', 'AHSmall12', 'AHSmall13', 'AHSmall14', 'AHSmall15', 'AHSmall16', 'AHSmall17', 'AHSmall18', 'AHSmall19', 'AHSmall20',
@@ -631,7 +621,7 @@ function Seed(Ob)
             --10 Rando Arrowhead Bundles Medium
             'AHMedium1', 'AHMedium2', 'AHMedium3', 'AHMedium4', 'AHMedium5', 'AHMedium6', 'AHMedium7', 'AHMedium8', 'AHMedium9', 'AHMedium10',
 
-            --77 Psicards, filler item, increase if adding more positions
+            --76 Psicards, filler item, increase if adding more positions
             'Card1', 'Card2', 'Card3', 'Card4', 'Card5', 'Card6', 'Card7', 'Card8', 'Card9', 'Card10',
             'Card11', 'Card12', 'Card13', 'Card14', 'Card15', 'Card16', 'Card17', 'Card18', 'Card19', 'Card20',
             'Card21', 'Card22', 'Card23', 'Card24', 'Card25', 'Card26', 'Card27', 'Card28', 'Card29', 'Card30', 
@@ -639,23 +629,29 @@ function Seed(Ob)
             'Card41', 'Card42', 'Card43', 'Card44', 'Card45', 'Card46', 'Card47', 'Card48', 'Card49', 'Card50',
             'Card51', 'Card52', 'Card53', 'Card54', 'Card55', 'Card56', 'Card57', 'Card58', 'Card59', 'Card60',
             'Card61', 'Card62', 'Card63', 'Card64', 'Card65', 'Card66', 'Card67', 'Card68', 'Card69', 'Card70',
-            'Card71', 'Card72', 'Card73', 'Card74', 'Card75', 'Card76', 'Card77', 
+            'Card71', 'Card72', 'Card73', 'Card74', 'Card75', 'Card76', 
         }
-        --get total number of item in classTable
-        local n = tableLength(classTable)
-        --shuffle loop
+
+        local newclassTable = {}
+
+        local newnameTable = {}
+
+        --get total number of item in oldclassTable
+        local n = tableLength(oldnameTable)
+        GamePrint('Length = '..n)
+        --pairing loop
         local index = 1
         local randolist = self.seed
 
-        for i = n, 2, -1 do
+        for i = 1, n do
             local j = randolist[index]
-            classTable[i], classTable[j] = classTable[j], classTable[i]
-            nameTable[i], nameTable[j] = nameTable[j], nameTable[i]
+            newclassTable[i] = oldclassTable[j] 
+            newnameTable[i] = oldnameTable[j]
             index = index+1
         end
         --write results to new tables
-        self.randoclassList = classTable
-        self.randonameList = nameTable
+        self.randoclassList = newclassTable
+        self.randonameList = newnameTable
        
     end
         

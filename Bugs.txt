@@ -3,21 +3,35 @@
 General Bugs:
 
 --KNOWN ASTRALATHE BUG, WW has crashes if you let cutscenes play in entirety,
-skip cutscene to avoid!!!
+skip cutscenes to avoid!!!
 
---move MM item (vanilla is hatbox behind cobweb)
-so it can't be grabbed through walls, doesn't clip through floor
+--Hornet Nest didn't spawn, maybe because fertility idol already collected?
 
---Vaults in MM tend to float away? Gravity not applied correctly.
+--ScavSquirrel Didn't spawn, already collected golden acorn, Ford Scav hunt items turned in before.
+--Geyser item didn't load, also after scav hunt turn in
+
+--Prop Helmet, Prop Phone, and paintings from BV appear as "unknown text string" in inventory,
+need to adjust text on these items.
+
+--move MM item (hatbox behind cobweb) to the right so it can't be grabbed through walls, doesn't clip through floor
+
+--Gravity sometimes not applied correctly in MM
+    --item in Post Office (vanilla baggage) sometimes in floor
+    --Vaults in MM sometimes float away into the void
 
 
 THINGS TO DO:
 --Needs logic!!! How do we implement this?
+    --Randomization method update, SeedGenerator.lua change
+
+--Create a lua script for creating SpoilerLog.txt
 
 --Sasha's Shooting Gallery Needs implemented.
 
+--Brains Collected in menu should be viewable whenever, currently only if you've found a brain in AS
+
 --Black Velvetopia potential shop rando? Card Reward rando? Needs something...
 
---Loading saves often crashes the game
+--Trying to load saves often crashes the game, potentially an Astralathe problem?
 
 --CA Lodge Shop Rando?

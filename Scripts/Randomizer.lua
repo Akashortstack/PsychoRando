@@ -83,6 +83,8 @@ function Randomizer(Ob)
             randoClass = classes.randoclassList[index]      
             randoName = names.randonameList[index]
             randoPosition = positions.positionsList['item'..index]
+            --HACK, prints "Spoiler Log"
+            GamePrint("Spoiler Item"..index..", Class "..randoClass..", Name "..randoName)
 
             --compare item's level type to current level, sends to spawn if true
             if randoPosition.levelName == level then   
@@ -105,10 +107,6 @@ function Randomizer(Ob)
              --code for fixing Baggage Collect Radius
             if class == 'global.collectibles.RandoSuitcase' or class == 'global.collectibles.RandoPurse' or class == 'global.collectibles.RandoHatbox' or class == 'global.collectibles.RandoSteamertrunk' or class == 'global.collectibles.RandoDufflebag' then
                 place:SetCollectRadius()
-            end
-            --Moves PsiChallenge Marker Up by 100, can apply to more items if needed
-            if class == 'global.collectibles.RandoPsiChallengeMarker' then
-                place:setPosition(place:getPosInFrontOf(0, 100))
             end
             --code for IceBlock puzzle in CAKC
             if puzzle == 'ice' then
@@ -214,11 +212,12 @@ function Randomizer(Ob)
                 local ref = FindScriptObject('WWPuzzlePlacer')
                 ref.p3Puzzle = name
             end
-            
-            
-            
 
-            --if more items need conditional changes, add code below
+            --if more items need conditional changes, add code here
+
+
+
+
     
         end
     end

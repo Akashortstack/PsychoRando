@@ -11,8 +11,9 @@
 function ArrowheadBundleSmall(Ob)
 	if not Ob then
 		Ob = CreateObject('Global.Props.HeldObject')
-		--edit 
-		Ob.value = 50
+		--edit value for amount of arrowheads given
+		Ob.value = 25
+
 		Ob.dependencies = {
 			meshes = { 'Characters/MentalArrowhead.plb' }
 		}

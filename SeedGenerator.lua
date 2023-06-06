@@ -2,7 +2,7 @@
 -- Function to shuffle the list using Fisher-Yates algorithm
 local function shuffleList(list)
   --edit to set the seed
-  math.randomseed(6969)
+  math.randomseed(os.time())
   local random = math.random
   local length = #list
   for i = length, 2, -1 do
