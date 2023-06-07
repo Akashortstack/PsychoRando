@@ -206,7 +206,7 @@ function Vault(Ob)
 		--edit sendMessage to Dart
         self:sendMessage(Global.player, 'CollectedVault', self.Name, 1)
 
-		--edit removing to prevent taking away player control
+		--edit removing cutscene to prevent taking away player control, handled below instead
 		--Global.cutsceneScript.vault = self
 		--Global.cutsceneScript:runCutscene('VaultCollection',1,0,0)
 
