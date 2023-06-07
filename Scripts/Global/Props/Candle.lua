@@ -64,9 +64,10 @@ function Candle(Ob)
 		end
 		self:fireDissipate()	
 		Global:save('bGotCandle', 1)
-		if (Global.goalManager:isActive('FindCandle') == 1) then
+		--edit remove goalmanager stuff
+		--[[if (Global.goalManager:isActive('FindCandle') == 1) then
 			Global.goalManager:activate('LightCandle')
-		end
+		end]]
 
 		
 	end

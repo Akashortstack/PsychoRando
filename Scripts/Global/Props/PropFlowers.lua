@@ -52,10 +52,11 @@ function PropFlowers(Ob)
 
 	function Ob:onAddedToInventory(data, from)
 		%Ob.Parent.onAddedToInventory(self, data, from)
-		if (self.bReincarnated ~= 1) then
+		--edit remove goalmanager stuff
+		--[[if (self.bReincarnated ~= 1) then
 			--Now use the flower to get into the graveyard
 			Global.goalManager:activate('Graveyard')
-		end
+		end]]
 
 		--edit sendMessage to Dart
 		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)

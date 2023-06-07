@@ -56,11 +56,12 @@ function PropPlunger(Ob)
 
 	function Ob:onAddedToInventory(data, from)
 		%Ob.Parent.onAddedToInventory(self, data, from)
-		if (self.bReincarnated ~= 1) then
+		--edit remove goalmanager stuff
+		--[[if (self.bReincarnated ~= 1) then
 			--Plunger has been found.  Deactivate goal
 			Global.goalManager:deactivate('Plunger')
 			Global.goalManager:activate('Sewers')
-		end
+		end]]
 		self:show()
 
 		--edit sendMessage to Dart

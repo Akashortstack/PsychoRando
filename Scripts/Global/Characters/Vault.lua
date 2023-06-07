@@ -206,17 +206,14 @@ function Vault(Ob)
 		--edit sendMessage to Dart
         self:sendMessage(Global.player, 'CollectedVault', self.Name, 1)
 
-		Global.cutsceneScript.vault = self
-		Global.cutsceneScript:runCutscene('VaultCollection',1,0,0)
-		
-		self:setState(nil)
-		
-        
-	
+		--edit removing to prevent taking away player control
+		--Global.cutsceneScript.vault = self
+		--Global.cutsceneScript:runCutscene('VaultCollection',1,0,0)
+
 															
-								
+--edit bringing this back to keep player control when killing vault								
 -- all this moved into global cutscene script
---[[		
+		
 		self.Dying = 1
 		self:killAllTimers()
 		self.proximityLine = nil
@@ -224,14 +221,20 @@ function Vault(Ob)
 		-- impact sound
 		self:playSound(self.rMeleeImpactSound)
 
+		--edit fixing arrowhead
+		self:spawnGoodie(kGOODIE_ARROWHEAD)
+		--[[
 		local arrowhead = SpawnScript('Global.Collectibles.MentalArrowhead')
+
 		local x,y,z = Global.player:getPosition()
 		local ox,oy,oz = GetEntityOrientationVector(Global.player,0,0.5,1);
 		x = x + ox * 150;
 		y = y + oy * 150;
 		z = z + oz * 150;
-		arrowhead:setPosition(x,y,z);
-		arrowhead:setOrientation(Global.player:getOrientation())
+
+		--arrowhead:setPosition(x,y,z);
+		--arrowhead:setOrientation(Global.player:getOrientation())
+		]]
 		
 		self:setAnim(self.animsTable.TakeDamage)
 		
@@ -240,24 +243,28 @@ function Vault(Ob)
 		self:playAnimBlocking(self.animsTable.Open)
 	
 		self:sleep(.2)
-		Global:saveGlobal(self.saveVariable, 1)
+		--edit removing reel related stuff
+		--[[Global:saveGlobal(self.saveVariable, 1)
 		self:sendMessage(Global.player, 'Vault', self.reelName)
 		Global.scrapbookHandler:onScrapbookActivate(self.reelName,nil,self.reelSleeveTitle)
 		JournalAddScrapbookItem(self.reelName,self.reelSleeveTitle)
-        
+		]]
+		--edit add Yield
+		Yield()
+
 		SetEntityAlpha(self, 0, 0.5) 
 --		SetEntityAlpha(self.reel, 0, 0.5) 
 		self:sleep(.2)
-		
-		if (Global:loadGlobal('SeenVaultTutorialPopup') ~= 1) then
+		--edit remove tutorial
+		--[[if (Global:loadGlobal('SeenVaultTutorialPopup') ~= 1) then
 			Global:saveGlobal('SeenVaultTutorialPopup', 1)
 			Global.levelScript:addTutorialBox("/GLZG035TO/", 'Textures/Objects/vault_reel_front.tga')--DIALOG=<<To view this MEMORY again, check out the MEMORIES page in your JOURNAL. /Journal/>>
-		end
+		end]]
 		
 --		self.reel:killSelf()
 		self:killSelf()
 		self:setState(nil)
-]]--
+
 	end
 
 -- ***************************************************************************************    

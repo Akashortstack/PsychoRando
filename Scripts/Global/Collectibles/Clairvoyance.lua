@@ -142,10 +142,10 @@ function Clairvoyance(Ob)
 		elseif (self:getConstant() == kPOWER_CONFUSION) then
 			MapPowerToButton(kPOWER_CONFUSION,kQUICKPICK_BLACK)		
 		end]]
-
-		if (self.power == 'Clairvoyance') then
+		--edit removes goal update
+		--[[if (self.power == 'Clairvoyance') then
 			Global.goalManager:activate('TryClair')
-		end
+		end]]
 
 		self:killSelf()
 	end
