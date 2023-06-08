@@ -213,9 +213,11 @@ function CABH_NIGHT(Ob)
 				Yield() 
 			end
 		end
-		self:playVideo('cutScenes/prerendered/calk.xmv')
+		--edit remove cutscene
+		--self:playVideo('cutScenes/prerendered/calk.xmv')
 		Global:save('bLiliKidnapped', 1)
-		Global.cutsceneScript:runCutscene('CABH7PostLiliKidnapping', 1)
+		--edit remove cutscene
+		--Global.cutsceneScript:runCutscene('CABH7PostLiliKidnapping', 1)
 		Global.goalManager:activate('RescueLili') -- Explicitly activate this so that it doesn't go away.
 		Global.goalManager:activate('DefeatLungfish')
 		

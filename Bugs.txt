@@ -5,9 +5,11 @@ General Bugs:
 --KNOWN ASTRALATHE BUG, WW has crashes if you let cutscenes play in entirety,
 skip cutscenes to avoid!!!
 
---Hornet Nest didn't spawn, maybe because fertility idol already collected?
+--PsiPowers hard to distinguish from each other because of lighting issues. How to fix?
 
---ScavSquirrel Didn't spawn, already collected golden acorn, Ford Scav hunt items turned in before.
+--Hornet Nest sometimes doesn't spawn, maybe because fertility idol already collected?
+
+--ScavSquirrel sometimes doesn't spawn, already collected golden acorn, Ford Scav hunt items turned in before.
 --Geyser item didn't load, also after scav hunt turn in
 
 --Prop Helmet, Prop Phone, and paintings from BV appear as "unknown text string" in inventory,
@@ -24,11 +26,11 @@ THINGS TO DO:
 --Needs logic!!! How do we implement this?
     --Randomization method update, SeedGenerator.lua change
 
---Create a lua script for creating SpoilerLog.txt
+--Update generator script to create SpoilerLog.txt
 
 --Sasha's Shooting Gallery Needs implemented.
 
---Brains Collected in menu should be viewable whenever, currently only if you've found a brain in AS
+--Brains Collected in menu should be viewable whenever, currently only if you've entered AS
 
 --Black Velvetopia potential shop rando? Card Reward rando? Needs something...
 
