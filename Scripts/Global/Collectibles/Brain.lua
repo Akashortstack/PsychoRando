@@ -152,7 +152,8 @@ function Brain(Ob)
 
 		--TODO here: find out what in cutscene blocks the word display, and Stop it for this scene
 		local bFreezeCam = (Global:load('bASBQRebrainingHintPlayed') ~= 1) --Freeze cam if running hint CS
-		Global.cutsceneScript:runCutscene('KissBrain', 0, bFreezeCam, 1, 0)
+		--edit remove
+		--Global.cutsceneScript:runCutscene('KissBrain', 0, bFreezeCam, 1, 0)
 		self:setState('KissBrain')
 	end
 
@@ -169,14 +170,17 @@ function Brain(Ob)
 	--Play kissing animation
 	function Ob:stateKissBrain()		   
 		-- Motion-blurred fade to black, showing only raz and brain
+		--edit remove effects
+		--[[
 		SetMotionBlurState(kMOTIONBLURSTATE_FADE_TO_BLACK, 1.5)
 		SetEntityFlag(Global.player, ENTITY_POST_EFFECTS, 1)
 		SetEntityFlag(self, ENTITY_POST_EFFECTS, 1)
 		SetEntityFlag(Global.levelScript.rInstaHintFord, ENTITY_POST_EFFECTS, 1)
-
-		self:sleep(0.5)
-		Global.player:tkPickupItem(self, 1)
-		self:sleep(1)
+		]]
+		--self:sleep(0.5)
+		--edit removing TK to keep player control when getting brain
+		--Global.player:tkPickupItem(self, 1)
+		--self:sleep(1)
 
 		--Wait for held item to be put away.
 		Global.player:replaceSelectedItemInPsack(1, 1)
@@ -189,20 +193,23 @@ function Brain(Ob)
 		EnableLooking(Global.player,0)
 		
 		Global.player.invDisplayer:invItemAdded(self, 0, 1, 1, 1, 1)
-		
+		--edit give it time to show inventory item added
+		self:sleep(2)
+		--edit removing animations to keep player control when getting brain
+		--[[
 		--play look at brain anim
-		Global.player:loadAnim('Anims/DartNew/KissBrain_Idle.jan',.2,1)
+		--Global.player:loadAnim('Anims/DartNew/KissBrain_Idle.jan',.2,1)
 
 		--edit Removing Quips because they don't play in all levels, only AS
 		--Needs Fixed in Future
 		--Global.player:sayLine( self.razQuips[ self.who ], 1, 1, nil, nil, nil, 1)
 		
 		--Start kissing anim
-		LoadAnim(Global.player,'Anims/DartNew/KissBrain.jan',.1,0)
+		--LoadAnim(Global.player,'Anims/DartNew/KissBrain.jan',.1,0)
 
 		--Wait for kissing to finish
-		while (GetAnimCompletion(Global.player) < 1) do Yield() end
-		
+		--while (GetAnimCompletion(Global.player) < 1) do Yield() end
+		]]
 		self:setState(nil)
 	end
 	
@@ -226,13 +233,17 @@ function Brain(Ob)
 		--SetMotionBlurState(kMOTIONBLURSTATE_FADE_TO_BLACK, 0)
 		
 		--Show tutorial box
+		--edit Removing tutorial box
+		--[[
 		if (Global:loadGlobal('bSeenBrainTutorialBox') ~= 1) then
-			--edit Removing tutorial box
-			--Global.levelScript:addTutorialBox("/ASZG000TO/", 'Textures/icons/InventoryItems/BrainJar.dds', 1)--DIALOG=<<Excellent find! A fellow cadet\'s brain! If you take it back to Ford Cruller for recranialization, your total mental health potential will be increased!>>
+			Global.levelScript:addTutorialBox("/ASZG000TO/", 'Textures/icons/InventoryItems/BrainJar.dds', 1)--DIALOG=<<Excellent find! A fellow cadet\'s brain! If you take it back to Ford Cruller for recranialization, your total mental health potential will be increased!>>
 			Global:saveGlobal('bSeenBrainTutorialBox', 1)
 		end
+		]]
 
-		--Show ford hint cutscene if this is the first one		
+		--Show ford hint cutscene if this is the first one
+		--edit Removing tutorial
+		--[[
 		if (Global:load('bASBQRebrainingHintPlayed') ~= 1) then
 			Global.cutsceneScript:oneShot(Global.player, 170, 70, Global.player.height - 10, -10, 10, 0)
 			Global.cutsceneScript:runCutscene('ASBQRebrainingHint')
@@ -241,6 +252,7 @@ function Brain(Ob)
 			Global.cutsceneScript:waitForEnd()
 			SetMotionBlurState(kMOTIONBLURSTATE_NONE, 0.5)	
 		end
+		]]
 
   		-- Motion-blurred fade to black, showing only raz and brain
   		SetMotionBlurState(kMOTIONBLURSTATE_STANDARD, 0.5)
