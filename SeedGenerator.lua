@@ -68,17 +68,41 @@ end
 checkLogic(list)
 
 -- Create and open the output file in write mode
-local file = io.open("Seed.txt", "w")
+local file = io.open("RandoSeed.lua", "w")
 
--- Print the shuffled list with comma and line formatting to the file
-for i = 1, 329 do
-  file:write(list[i])
-  if i % 10 == 0 then
-    file:write(",\n")
-  elseif i ~= 329 then
-    file:write(", ")
+--first part of coding structure
+local text1 = [[function RandoSeed(Ob)
+  if ( not Ob ) then
+      Ob = CreateObject('ScriptBase')
+      Ob.seed = {}
+
   end
-end
 
--- Close the file
-file:close()
+  function Ob:fillTable()
+      --PASTE SEED STRING HERE
+      local SEED_GOES_HERE = {
+      
+  ]]
+
+  file:write(text1)
+  
+  -- Print the shuffled list with comma and line formatting to the file
+  for i = 1, 329 do
+      file:write(list[i])
+      if i % 10 == 0 then
+      file:write(",\n")
+      elseif i ~= 329 then
+      file:write(", ")
+      end
+  end
+
+  local text2 = [[ }
+  self.seed = SEED_GOES_HERE
+  end
+  return Ob
+  end]]
+
+  file:write(text2)
+
+  -- Close the file
+  file:close()

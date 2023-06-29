@@ -73,8 +73,8 @@ function Randomizer(Ob)
         local level = (Global.levelScript:getLevelName())
         local index = 1
         local positions = fso('Positions', 'Positions')
-        local classes = fso('Seed', 'Seed')
-        local names = fso('Seed', 'Seed')
+        local classes = fso('ShuffleItems', 'ShuffleItems')
+        local names = fso('ShuffleItems', 'ShuffleItems')
         local randoClass 
         local randoName
         local randoPosition
@@ -84,7 +84,7 @@ function Randomizer(Ob)
             randoName = names.randonameList[index]
             randoPosition = positions.positionsList['item'..index]
             --HACK, prints "Spoiler Log"
-            GamePrint("Spoiler Item"..index..", Class "..randoClass..", Name "..randoName)
+            --GamePrint("Spoiler Item"..index..", Class "..randoClass..", Name "..randoName)
 
             --compare item's level type to current level, sends to spawn if true
             if randoPosition.levelName == level then   

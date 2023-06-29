@@ -14,12 +14,15 @@ add_hook('beginlevel', 'RandoPlacer')
 function RandoPlacer()
 	local rando = SpawnScript('Randomizer', 'Randomizer')
 	local pos = SpawnScript('Positions', 'Positions')
-	local seed = SpawnScript('Seed', 'Seed')
+	local seed = SpawnScript('RandoSeed', 'RandoSeed')
+	local shuffle = SpawnScript('ShuffleItems', 'ShuffleItems')
+
 	--fillTable used to avoid Lua max variable limitations
 	pos:fillTable()
 	seed:fillTable()
+
 	--shuffles item Class and Name tables for Randomizer.lua to use
-	seed:randomizeChecks()
+	shuffle:randomizeChecks()
 	--removes vanilla items from current level
     rando:removeCollectibles()
 	--adds randomized items to current level
