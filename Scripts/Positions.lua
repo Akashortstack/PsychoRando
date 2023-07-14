@@ -2936,10 +2936,21 @@ function Positions(Ob)
 
             --*******************************************************--
             --[[CAJA, RANK UP ITEMS
-            Spawns item for every 10 rankss, moved to Main Platform on Rank requirement
+            Spawns item for every 10 ranks, moved to Main Platform on Rank requirement
             ]]
-            --Rank 10
+            --Rank 5
             item314 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank5'
+            },
+            --Rank 10
+            item315 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -2949,8 +2960,19 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'rank10'
             },
+            --Rank 15
+            item316 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank15'
+            },
             --Rank 20
-            item315 = {        
+            item317 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -2960,8 +2982,19 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'rank20'
             },
+            --Rank 25
+            item318 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank25'
+            },
             --Rank 30
-            item316 = {        
+            item319 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -2971,8 +3004,19 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'rank30'
             },
+            --Rank 35
+            item320 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank35'
+            },
             --Rank 40
-            item317 = {        
+            item321 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -2982,8 +3026,19 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'rank40'
             },
+            --Rank 45
+            item322 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank45'
+            },
             --Rank 50
-            item318 = {        
+            item323 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -2993,8 +3048,19 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'rank50'
             },
+            --Rank 55
+            item324 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank55'
+            },
             --Rank 60
-            item319 = {        
+            item325 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -3004,8 +3070,19 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'rank60'
             },
+            --Rank 65
+            item326 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank65'
+            },
             --Rank 70
-            item320 = {        
+            item327 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -3015,8 +3092,19 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'rank70'
             },
+            --Rank 75
+            item328 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank75'
+            },
             --Rank 80
-            item321 = {        
+            item329 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -3026,8 +3114,19 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'rank80'
             },
+            --Rank 85
+            item330 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank85'
+            },
             --Rank 90
-            item322 = {        
+            item331 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -3037,8 +3136,19 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'rank90'
             },
+            --Rank 95
+            item332 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank95'
+            },
             --Rank 100
-            item323 = {        
+            item333 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -3051,7 +3161,7 @@ function Positions(Ob)
             --*******************************************************--
             --WW, Waterloo World Puzzles
             --Peasant 1 Helped
-            item324 = {        
+            item334 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 
@@ -3062,7 +3172,7 @@ function Positions(Ob)
                 puzzle = 'p1Help'
             },
             --Peasant 2 Helped
-            item325 = {        
+            item335 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 
@@ -3073,7 +3183,7 @@ function Positions(Ob)
                 puzzle = 'p2Help'
             },
             --Peasant 3 Helped
-            item326 = {        
+            item336 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 
@@ -3084,7 +3194,7 @@ function Positions(Ob)
                 puzzle = 'p3Help'
             },
             --Carpenter Helped
-            item327 = {        
+            item337 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 
@@ -3095,7 +3205,7 @@ function Positions(Ob)
                 puzzle = 'CarpHelp'
             },
             --Knight Helped
-            item328 = {        
+            item338 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 
@@ -3106,7 +3216,7 @@ function Positions(Ob)
                 puzzle = 'KnightHelp'
             },
             --Musket Haybale location
-            item329 = {        
+            item339 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 

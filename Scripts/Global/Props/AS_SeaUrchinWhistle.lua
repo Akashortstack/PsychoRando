@@ -54,6 +54,14 @@ function AS_SeaUrchinWhistle(Ob)
 		}
 	end
 
+	--edit to sendMessage to Dart on pickup
+	function Ob:onAddedToInventory(data, from)
+		%Ob.Parent.onAddedToInventory(self, data, from)
+		--edit sendMessage to Dart
+		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)	
+	end
+
+
 	function Ob:onBeginLevel()
 		%Ob.Parent.onBeginLevel(self)
 --		self.toot = LoadSound('Sounds/FX/TEMPSeaUrchinWhistle.wav')

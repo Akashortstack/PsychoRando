@@ -131,50 +131,100 @@ function Randomizer(Ob)
 
             --[[code for RankUp checks, each level is separate
             Handled by RankUpPlacer, spawned in CAJA levelscript]]
+            --Rank5
+            if puzzle == 'rank5' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank5 = name
+            end
             --Rank10
             if puzzle == 'rank10' then
                 local ref = FindScriptObject('RankUpPlacer')
                 ref.randoRank10 = name
+            end
+            --Rank15
+            if puzzle == 'rank15' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank15 = name
             end
             --Rank20
             if puzzle == 'rank20' then
                 local ref = FindScriptObject('RankUpPlacer')
                 ref.randoRank20 = name
             end
+            --Rank25
+            if puzzle == 'rank25' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank25 = name
+            end
             --Rank30
             if puzzle == 'rank30' then
                 local ref = FindScriptObject('RankUpPlacer')
                 ref.randoRank30 = name
+            end
+            --Rank35
+            if puzzle == 'rank35' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank35 = name
             end
             --Rank40
             if puzzle == 'rank40' then
                 local ref = FindScriptObject('RankUpPlacer')
                 ref.randoRank40 = name
             end
+            --Rank45
+            if puzzle == 'rank45' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank45 = name
+            end
             --Rank50
             if puzzle == 'rank50' then
                 local ref = FindScriptObject('RankUpPlacer')
                 ref.randoRank50 = name
+            end
+            --Rank55
+            if puzzle == 'rank55' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank55 = name
             end
             --Rank60
             if puzzle == 'rank60' then
                 local ref = FindScriptObject('RankUpPlacer')
                 ref.randoRank60 = name
             end
+            --Rank65
+            if puzzle == 'rank65' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank65 = name
+            end
             --Rank70
             if puzzle == 'rank70' then
                 local ref = FindScriptObject('RankUpPlacer')
                 ref.randoRank70 = name
+            end
+            --Rank75
+            if puzzle == 'rank75' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank75 = name
             end
             --Rank80
             if puzzle == 'rank80' then
                 local ref = FindScriptObject('RankUpPlacer')
                 ref.randoRank80 = name
             end
+            --Rank85
+            if puzzle == 'rank85' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank85 = name
+            end
             --Rank90
             if puzzle == 'rank90' then
                 local ref = FindScriptObject('RankUpPlacer')
                 ref.randoRank90 = name
+            end
+            --Rank95
+            if puzzle == 'rank95' then
+                local ref = FindScriptObject('RankUpPlacer')
+                ref.randoRank95 = name
             end
             --Rank100
             if puzzle == 'rank100' then

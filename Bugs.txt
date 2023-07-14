@@ -5,7 +5,7 @@ General Bugs:
 --KNOWN ASTRALATHE BUG, WW has crashes if you let cutscenes play in entirety,
 skip cutscenes to avoid!!!
 
---PsiPowers hard to distinguish from each other because of lighting issues. How to fix?
+--PsiPowers hard to see because of lighting issues. How to fix?
 
 --Hornet Nest sometimes doesn't spawn, maybe because fertility idol already collected?
 
@@ -23,17 +23,16 @@ need to adjust text on these items.
 
 
 THINGS TO DO:
---Needs logic!!! How do we implement this?
-    --Randomization method update, SeedGenerator.lua change
+
+--Needs better logic!!! How do we implement this?
+    --Randomization method update, SeedGenerator.lua change, potentially changing to C++ code
 
 --Update generator script to create SpoilerLog.txt
 
---Sasha's Shooting Gallery Needs implemented.
-
---Brains Collected in menu should be viewable whenever, currently only if you've entered AS
+--Sasha's Shooting Gallery needs implemented.
 
 --Black Velvetopia potential shop rando? Card Reward rando? Needs something...
 
---Trying to load saves often crashes the game, potentially an Astralathe problem?
+--Trying to load saves sometimes crashes the game, has improved recently but still keeping an eye on this
 
---CA Lodge Shop Rando?
+--CA Lodge Shop Rando? Causes MAJOR logic problems involving cobweb duster

@@ -36,7 +36,7 @@ function RankPowerManager(Ob)
 				TKRange = 4,
 				TKDamage = 1,
 				--edit Custom Encouragement, NEED LOCALIZATION
-				Encouragement = "Next Item at Rank: 10",
+				Encouragement = "Next Item at Rank 5",
 
 				bAirMeleeCharge = 0,
 				bPKDetonate = 0,
@@ -53,41 +53,71 @@ function RankPowerManager(Ob)
 			--[[ --edit to remove powers and upgrades from rank up,
 			Custom Encouragements, NEED LOCALIZATION
 			]]
+			[5] = {
+				Encouragement = "Next Item at Rank 10", 
+			},
 			[10] = {
 				--PsiPower = kPOWER_FIRESTARTING,
-				Encouragement = "Next Item at Rank: 20", 
+				Encouragement = "Next Item at Rank 15", 
+			},
+			[15] = {
+				Encouragement = "Next Item at Rank 20", 
 			},
 			[20] = { 
 				--PsiPower = kPOWER_TELEKINESIS,
-				Encouragement = "Next Item at Rank: 30",
+				Encouragement = "Next Item at Rank 25",
+			},
+			[25] = {
+				Encouragement = "Next Item at Rank 30", 
 			},
 			[30] = { 
 				--PsiPower = kPOWER_INVISIBILITY,
-				Encouragement = "Next Item at Rank: 40",
+				Encouragement = "Next Item at Rank 35",
+			},
+			[35] = {
+				Encouragement = "Next Item at Rank 40", 
 			},
 			[40] = { 
 				--bChainBlast = 1,
-				Encouragement = "Next Item at Rank: 50",
+				Encouragement = "Next Item at Rank 45",
+			},
+			[45] = {
+				Encouragement = "Next Item at Rank 50", 
 			},
 			[50] = {
 				--bSpikeBall = 1,
-				Encouragement = "Next Item at Rank: 60",
+				Encouragement = "Next Item at Rank 55",
+			},
+			[55] = {
+				Encouragement = "Next Item at Rank 60", 
 			},
 			[60] = { 
 				--InvisDuration = 20,
-				Encouragement = "Next Item at Rank: 70",
+				Encouragement = "Next Item at Rank 65",
+			},
+			[65] = {
+				Encouragement = "Next Item at Rank 70", 
 			},
 			[70] = { 
 				--bSuperChainBlast = 1,
-				Encouragement = "Next Item at Rank: 80",
+				Encouragement = "Next Item at Rank 75",
+			},
+			[75] = {
+				Encouragement = "Next Item at Rank 80", 
 			},
 			[80] = { 
 				--bDamageShield = 1,
-				Encouragement = "Next Item at Rank: 90",
+				Encouragement = "Next Item at Rank 85",
+			},
+			[86] = {
+				Encouragement = "Next Item at Rank 90", 
 			},
 			[90] = { 
 				--bHealthRegeneration = 1,
-				Encouragement = "Next Item at Rank: 100",
+				Encouragement = "Next Item at Rank 95",
+			},
+			[95] = {
+				Encouragement = "Next Item at Rank 100", 
 			},
 			[100] = { 
 				bInfiniteAmmo = 1,

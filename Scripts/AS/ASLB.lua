@@ -264,6 +264,11 @@ function ASLB(Ob)
 			elseif (data == 'tv_TeaRoomIntro' and Global.player:isInInventory('PokeyProp') == 1 ) then
 				Global.player:setSelectedItem('PokeyProp')
 				self:sendMessage(FindScriptObject('Sheegor'), 'Item', 'PokeyProp', 0 )
+				--edit
+				local pokeyBrain = FindScriptObject('PokeyBrain')
+				if (pokeyBrain ~= nil) then
+					pokeyBrain:moveToPedstalTwo()
+				end
 			end
 		elseif from then
 			local ob = FindScriptObject('PokeyBrain')
