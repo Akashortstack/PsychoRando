@@ -38,11 +38,13 @@ function ScavengerSquirrel(Ob)
 			self:killSelf() 
 			self.noAcorn = 1
 			return
-		elseif Global.player.stats.scavengerHuntItems ~= nil and Global.player.stats.scavengerHuntItems['ScavGoldenAcorn'] ~= nil then 
+		--edit removed
+		--[[elseif Global.player.stats.scavengerHuntItems ~= nil and Global.player.stats.scavengerHuntItems['ScavGoldenAcorn'] ~= nil then 
 			-- didnt find the acorn, kill de squirrel
 			self:killSelf() 	
 			self.noAcorn = 1
 			return
+			]]
 		elseif self.acorn and self.acorn.bCollected == 1 then 
 			-- didnt find the acorn, kill de squirrel... third times the charm
 			self:killSelf() 	
@@ -63,9 +65,15 @@ function ScavengerSquirrel(Ob)
 		if (self.acorn ~= nil and self.noAcorn ~= 1) then
 			self.acorn:setOrientation(0,0,0)
 			self:setOrientation(0,0,0)
-			self.acorn:beNotPickupable()
+
+			--edit changed to hide()
+			self.acorn:hide()
+			--self.acorn:beNotPickupable()
 			self.acorn.bUseDefaultUncollectedAnim = 0
-			self.acorn:bePickupable()
+			--edit changed to show()
+			self.acorn:show()
+			--self.acorn:bePickupable()
+
 			local me = self
 			self.acorn.onTKPickup = function(self)
 				%me.onTKPickup(%me)
@@ -118,7 +126,10 @@ function ScavengerSquirrel(Ob)
 	function Ob:stateScare()
 		self.bHidden = 1
 		if self.acorn then
-			self.acorn:beNotPickupable()
+			--edit changed to hide()
+			self.acorn:hide()
+			--self.acorn:beNotPickupable()
+
 			self.acorn:setOrientation(0,0,0)
 			LoadAnim(self.acorn, self.acornFlee , 0, 0)
 		end
@@ -162,7 +173,9 @@ function ScavengerSquirrel(Ob)
 		self:setAnim(self.animsTable.idle)
 		if self.acorn then
 			LoadAnim(self.acorn, self.acornIdle)
-			self.acorn:bePickupable()
+			--edit changed to show()
+			self.acorn:show()
+			--self.acorn:bePickupable()
 		end
 		self:setState(nil)
 	end

@@ -36,7 +36,9 @@ function HornetNest(Ob)
 		self:setEntityInterestLevel(self.interestLevel)
 		self.huntItem = FindScriptObject(self.huntItem)
 		SetEntityFlag(self, ENTITY_ZLOCK, 1)
-		if not self.huntItem or self.huntItem.bCollected == 1 then
+
+		--edit remove or self.huntItem.bCollected == 1 
+		if not self.huntItem then
 			self:killSelf()
 		else
 			self.swarmEffects = SpawnScript('CA.Effects.HornetSwarmFX', 'SwarmEffects', '', 1)

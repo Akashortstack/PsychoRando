@@ -27,7 +27,8 @@ function Geyser(Ob)
 
 		if self.itemPlugging and self.itemPlugging ~= '' and Global:load('bSolvedGeyserPuzzle') ~= 1 then
 			self.itemPlugging = FindScriptObject(self.itemPlugging)
-			if self.itemPlugging.bInInventory == 1 then self.itemPlugging = nil end
+			--edit remove
+			--if self.itemPlugging.bInInventory == 1 then self.itemPlugging = nil end
 			if self.itemPlugging then 
 				self.bPlugged = 1
 				Global.notSaved.pluggedGeyser = self.Name
