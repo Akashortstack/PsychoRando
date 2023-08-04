@@ -1,4 +1,16 @@
---*******************************************************--
+function Positions(Ob)
+    if ( not Ob ) then
+        Ob = CreateObject('ScriptBase')
+        --[[list of all check positions in the game,
+        special case items should go at end of list]]
+        Ob.positionsList = {}
+    end
+
+    function Ob:fillTable()
+        local posTable ={
+
+
+            --*******************************************************--
             --CA, CAMPGROUNDS
 
             --CAKC, Kids Cabins
@@ -2924,10 +2936,21 @@
 
             --*******************************************************--
             --[[CAJA, RANK UP ITEMS
-            Spawns item for every 10 rankss, moved to Main Platform on Rank requirement
+            Spawns item for every 10 ranks, moved to Main Platform on Rank requirement
             ]]
-            --Rank 10
+            --Rank 5
             item314 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank5'
+            },
+            --Rank 10
+            item315 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -2937,8 +2960,19 @@
                 oz = 0,
                 puzzle = 'rank10'
             },
+            --Rank 15
+            item316 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank15'
+            },
             --Rank 20
-            item315 = {        
+            item317 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -2948,8 +2982,19 @@
                 oz = 0,
                 puzzle = 'rank20'
             },
+            --Rank 25
+            item318 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank25'
+            },
             --Rank 30
-            item316 = {        
+            item319 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -2959,8 +3004,19 @@
                 oz = 0,
                 puzzle = 'rank30'
             },
+            --Rank 35
+            item320 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank35'
+            },
             --Rank 40
-            item317 = {        
+            item321 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -2970,8 +3026,19 @@
                 oz = 0,
                 puzzle = 'rank40'
             },
+            --Rank 45
+            item322 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank45'
+            },
             --Rank 50
-            item318 = {        
+            item323 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -2981,8 +3048,19 @@
                 oz = 0,
                 puzzle = 'rank50'
             },
+            --Rank 55
+            item324 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank55'
+            },
             --Rank 60
-            item319 = {        
+            item325 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -2992,8 +3070,19 @@
                 oz = 0,
                 puzzle = 'rank60'
             },
+            --Rank 65
+            item326 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank65'
+            },
             --Rank 70
-            item320 = {        
+            item327 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -3003,8 +3092,19 @@
                 oz = 0,
                 puzzle = 'rank70'
             },
+            --Rank 75
+            item328 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank75'
+            },
             --Rank 80
-            item321 = {        
+            item329 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -3014,8 +3114,19 @@
                 oz = 0,
                 puzzle = 'rank80'
             },
+            --Rank 85
+            item330 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank85'
+            },
             --Rank 90
-            item322 = {        
+            item331 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -3025,8 +3136,19 @@
                 oz = 0,
                 puzzle = 'rank90'
             },
+            --Rank 95
+            item332 = {        
+                levelName = 'CAJA',
+                x = -10000, 
+                y = -10000, 
+                z = -10000,
+                ox = 0,
+                oy = 68,
+                oz = 0,
+                puzzle = 'rank95'
+            },
             --Rank 100
-            item323 = {        
+            item333 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -3039,7 +3161,7 @@
             --*******************************************************--
             --WW, Waterloo World Puzzles
             --Peasant 1 Helped
-            item324 = {        
+            item334 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 
@@ -3050,7 +3172,7 @@
                 puzzle = 'p1Help'
             },
             --Peasant 2 Helped
-            item325 = {        
+            item335 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 
@@ -3061,7 +3183,7 @@
                 puzzle = 'p2Help'
             },
             --Peasant 3 Helped
-            item326 = {        
+            item336 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 
@@ -3072,7 +3194,7 @@
                 puzzle = 'p3Help'
             },
             --Carpenter Helped
-            item327 = {        
+            item337 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 
@@ -3083,7 +3205,7 @@
                 puzzle = 'CarpHelp'
             },
             --Knight Helped
-            item328 = {        
+            item338 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 
@@ -3094,7 +3216,7 @@
                 puzzle = 'KnightHelp'
             },
             --Musket Haybale location
-            item329 = {        
+            item339 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 
@@ -3103,4 +3225,196 @@
                 oy = 0,
                 oz = 0,
                 puzzle = 'haybale'
+            },        
+  
+            --*******************************************************--
+            --SA, SASHA'S SHOOTING GALLERY
+            --SACU
+            
+            --Cube Face One
+            item340 = {        
+                levelName = 'SACU',
+                x = -262, 
+                y = 564, 
+                z = -378,
+                ox = 0,
+                oy = 54,
+                oz = 0,
+                puzzle = 'face1item1'
+            }, 
+            
+            item341 = {        
+                levelName = 'SACU',
+                x = -1371, 
+                y = 751, 
+                z = 513,
+                ox = -33,
+                oy = 103,
+                oz = -32,
+                puzzle = 'face1item2'
             },
+            
+            item342 = {        
+                levelName = 'SACU',
+                x = -7, 
+                y = 487, 
+                z = -28,
+                ox = 0,
+                oy = -42,
+                oz = 0,
+                puzzle = 'face1item3'
+            }, 
+
+            item343 = {        
+                levelName = 'SACU',
+                x = -1455, 
+                y = 5, 
+                z = 491,
+                ox = 0,
+                oy = -37,
+                oz = 0,
+                puzzle = 'face1item4'
+            }, 
+
+            item344 = {        
+                levelName = 'SACU',
+                x = 1832, 
+                y = 799, 
+                z = -1348,
+                ox = 0,
+                oy = 0,
+                oz = 0,
+                puzzle = 'face1item5'
+            },
+
+            item345 = {        
+                levelName = 'SACU',
+                x = -274, 
+                y = 1748, 
+                z = -1546,
+                ox = 0,
+                oy = -121,
+                oz = 0,
+                puzzle = 'face1item6'
+            },
+
+            --Cube Face Two
+            item346 = {        
+                levelName = 'SACU',
+                x = 2021, 
+                y = -1558, 
+                z = 753,
+                ox = 0,
+                oy = 18,
+                oz = -90,
+                puzzle = 'face2item1'
+            },
+
+            item347 = {        
+                levelName = 'SACU',
+                x = 3920, 
+                y = -900, 
+                z = 2650,
+                ox = 0,
+                oy = 76,
+                oz = -90,
+                puzzle = 'face2item2'
+            },
+
+            item348 = {        
+                levelName = 'SACU',
+                x = 4187, 
+                y = -1867, 
+                z = -1747,
+                ox = 0,
+                oy = 0,
+                oz = -90,
+                puzzle = 'face2item3'
+            },
+
+            --Cube Face Three
+            item349 = {        
+                levelName = 'SACU',
+                x = 19, 
+                y = -2128, 
+                z = -1848,
+                ox = 90,
+                oy = 179,
+                oz = 61,
+                puzzle = 'face3item1'
+            },
+
+            item350 = {        
+                levelName = 'SACU',
+                x = -291, 
+                y = -538, 
+                z = -2863,
+                ox = 87,
+                oy = 180,
+                oz = 3,
+                puzzle = 'face3item2'
+            },
+
+            item351 = {        
+                levelName = 'SACU',
+                x = 1853, 
+                y = -2948, 
+                z = -4743,
+                ox = -90,
+                oy = 0,
+                oz = 0,
+                puzzle = 'face3item3'
+            },
+
+            item352 = {        
+                levelName = 'SACU',
+                x = -1984, 
+                y = -1913, 
+                z = 0,
+                ox = 178,
+                oy = 0,
+                oz = -90,
+                puzzle = 'face3item4'
+            },
+
+            --Cube Face Four
+            item353 = {        
+                levelName = 'SACU',
+                x = 398, 
+                y = -3956, 
+                z = -843,
+                ox = 180,
+                oy = 0,
+                oz = 0,
+                puzzle = 'face4item1'
+            },
+
+            item354 = {        
+                levelName = 'SACU',
+                x = 379, 
+                y = -4862, 
+                z = 422,
+                ox = 174,
+                oy = 131,
+                oz = -8,
+                puzzle = 'face4item2'
+            },
+
+            item355 = {        
+                levelName = 'SACU',
+                x = 273, 
+                y = -4924, 
+                z = -148,
+                ox = 180,
+                oy = 0,
+                oz = 0,
+                puzzle = 'face4item3'
+            },
+
+            
+        }
+        self.positionsList = posTable
+        
+    end
+    return Ob
+end

@@ -3225,15 +3225,191 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
                 puzzle = 'haybale'
-            },
-                
+            },        
   
-
-
             --*******************************************************--
             --SA, SASHA'S SHOOTING GALLERY
-            --SACU              
-                --ca.props.PSIBlastPuzzleHuntItem ScavIdol Position X,Y,Z -10000 -10000 -10000 Orientation OX,OY,OZ 0 178 0
+            --SACU
+            
+            --Cube Face One
+            item340 = {        
+                levelName = 'SACU',
+                x = -262, 
+                y = 564, 
+                z = -378,
+                ox = 0,
+                oy = 54,
+                oz = 0,
+                puzzle = 'face1item1'
+            }, 
+            
+            item341 = {        
+                levelName = 'SACU',
+                x = -1371, 
+                y = 751, 
+                z = 513,
+                ox = -33,
+                oy = 103,
+                oz = -32,
+                puzzle = 'face1item2'
+            },
+            
+            item342 = {        
+                levelName = 'SACU',
+                x = -7, 
+                y = 487, 
+                z = -28,
+                ox = 0,
+                oy = -42,
+                oz = 0,
+                puzzle = 'face1item3'
+            }, 
+
+            item343 = {        
+                levelName = 'SACU',
+                x = -1455, 
+                y = 5, 
+                z = 491,
+                ox = 0,
+                oy = -37,
+                oz = 0,
+                puzzle = 'face1item4'
+            }, 
+
+            item344 = {        
+                levelName = 'SACU',
+                x = 1832, 
+                y = 799, 
+                z = -1348,
+                ox = 0,
+                oy = 0,
+                oz = 0,
+                puzzle = 'face1item5'
+            },
+
+            item345 = {        
+                levelName = 'SACU',
+                x = -274, 
+                y = 1748, 
+                z = -1546,
+                ox = 0,
+                oy = -121,
+                oz = 0,
+                puzzle = 'face1item6'
+            },
+
+            --Cube Face Two
+            item346 = {        
+                levelName = 'SACU',
+                x = 2021, 
+                y = -1558, 
+                z = 753,
+                ox = 0,
+                oy = 18,
+                oz = -90,
+                puzzle = 'face2item1'
+            },
+
+            item347 = {        
+                levelName = 'SACU',
+                x = 3920, 
+                y = -900, 
+                z = 2650,
+                ox = 0,
+                oy = 76,
+                oz = -90,
+                puzzle = 'face2item2'
+            },
+
+            item348 = {        
+                levelName = 'SACU',
+                x = 4187, 
+                y = -1867, 
+                z = -1747,
+                ox = 0,
+                oy = 0,
+                oz = -90,
+                puzzle = 'face2item3'
+            },
+
+            --Cube Face Three
+            item349 = {        
+                levelName = 'SACU',
+                x = 19, 
+                y = -2128, 
+                z = -1848,
+                ox = 90,
+                oy = 179,
+                oz = 61,
+                puzzle = 'face3item1'
+            },
+
+            item350 = {        
+                levelName = 'SACU',
+                x = -291, 
+                y = -538, 
+                z = -2863,
+                ox = 87,
+                oy = 180,
+                oz = 3,
+                puzzle = 'face3item2'
+            },
+
+            item351 = {        
+                levelName = 'SACU',
+                x = 1853, 
+                y = -2948, 
+                z = -4743,
+                ox = -90,
+                oy = 0,
+                oz = 0,
+                puzzle = 'face3item3'
+            },
+
+            item352 = {        
+                levelName = 'SACU',
+                x = -1984, 
+                y = -1913, 
+                z = 0,
+                ox = 178,
+                oy = 0,
+                oz = -90,
+                puzzle = 'face3item4'
+            },
+
+            --Cube Face Four
+            item353 = {        
+                levelName = 'SACU',
+                x = 398, 
+                y = -3956, 
+                z = -843,
+                ox = 180,
+                oy = 0,
+                oz = 0,
+                puzzle = 'face4item1'
+            },
+
+            item354 = {        
+                levelName = 'SACU',
+                x = 379, 
+                y = -4862, 
+                z = 422,
+                ox = 174,
+                oy = 131,
+                oz = -8,
+                puzzle = 'face4item2'
+            },
+
+            item355 = {        
+                levelName = 'SACU',
+                x = 273, 
+                y = -4924, 
+                z = -148,
+                ox = 180,
+                oy = 0,
+                oz = 0,
+                puzzle = 'face4item3'
+            },
 
             
         }

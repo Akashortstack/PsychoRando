@@ -27,5 +27,3 @@ sa.characters.Vault Vault2 Position X,Y,Z -1984 -1913 0 Orientation OX,OY,OZ 178
 sa.characters.Vault Vault1 Position X,Y,Z -7 487 -28 Orientation OX,OY,OZ 0 -42 0
 !!!!!!!!!!!!!!!!!
 
-NOTE: This level is potentially a nightmare...
-Figure out how to spawn items in chunks when level geometry changes

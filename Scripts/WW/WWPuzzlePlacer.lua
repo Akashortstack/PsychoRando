@@ -1,18 +1,16 @@
 
---[[Script that handles placing randomized items in WWMA]]
+--[[Script that handles placing special, condition based items in WWMA]]
 
 
 function WWPuzzlePlacer(Ob)
     if ( not Ob ) then
         Ob = CreateObject('ScriptBase')
         --list of referenced items for WW Puzzle Items
-		
 		Ob.p1Helped = nil
 		Ob.p2Helped = nil
 		Ob.p3Helped = nil
 		Ob.carpenterHelped = nil
 		Ob.knightHelped = nil
-		--hide/show handled by WWMA.lua
 		Ob.p3Puzzle = nil
     end
 
@@ -74,7 +72,7 @@ function WWPuzzlePlacer(Ob)
 			
 		    YouWin:setPosition(23210, -19151, 18198)
         else
-            GamePrint('p3Puzzle Already Collected')
+            GamePrint('HaybalePuzzle Already Collected')
 		end
 	end
 

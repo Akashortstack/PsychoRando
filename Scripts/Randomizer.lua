@@ -231,6 +231,7 @@ function Randomizer(Ob)
                 local ref = FindScriptObject('RankUpPlacer')
                 ref.randoRank100 = name
             end
+
             --[[Locations in WW spawned by cutscenes]]
             --Helping Peasant 1 with Fred's Note
             if puzzle == 'p1Help' then
@@ -263,10 +264,96 @@ function Randomizer(Ob)
                 ref.p3Puzzle = name
             end
 
+
+            --[[Sasha's Shooting Gallery]]
+
+            --Cube Face One
+            if puzzle == 'face1item1' then
+                local ref = FindScriptObject('SAItemPlacer')
+                ref.face1item1 = name
+            end
+
+            if puzzle == 'face1item2' then
+                local ref = FindScriptObject('SAItemPlacer')
+                ref.face1item2 = name
+            end
+
+            if puzzle == 'face1item3' then
+                local ref = FindScriptObject('SAItemPlacer')
+                ref.face1item3 = name
+            end
+
+            if puzzle == 'face1item4' then
+                local ref = FindScriptObject('SAItemPlacer')
+                ref.face1item4 = name
+            end
+
+            if puzzle == 'face1item5' then
+                local ref = FindScriptObject('SAItemPlacer')
+                ref.face1item5 = name
+            end
+
+            if puzzle == 'face1item6' then
+                local ref = FindScriptObject('SAItemPlacer')
+                ref.face1item6 = name
+            end
+
+            --Cube Face Two
+            if puzzle == 'face2item1' then
+                local ref = FindScriptObject('SAItemPlacer')
+                ref.face2item1 = name
+            end
+
+            if puzzle == 'face2item2' then
+                local ref = FindScriptObject('SAItemPlacer')
+                ref.face2item2 = name
+            end
+
+            if puzzle == 'face2item3' then
+                local ref = FindScriptObject('SAItemPlacer')
+                ref.face2item3 = name
+            end
+
+            --Cube Face Three
+
+            if puzzle == 'face3item1' then
+                local ref = FindScriptObject('SAItemPlacer')
+                ref.face3item1 = name
+            end
+
+            if puzzle == 'face3item2' then
+                local ref = FindScriptObject('SAItemPlacer')
+                ref.face3item2 = name
+            end
+
+            if puzzle == 'face3item3' then
+                local ref = FindScriptObject('SAItemPlacer')
+                ref.face3item3 = name
+            end
+
+            if puzzle == 'face3item4' then
+                local ref = FindScriptObject('SAItemPlacer')
+                ref.face3item4 = name
+            end
+
+            --Cube Face Four
+
+            if puzzle == 'face4item1' then
+                local ref = FindScriptObject('SAItemPlacer')
+                ref.face4item1 = name
+            end
+
+            if puzzle == 'face4item2' then
+                local ref = FindScriptObject('SAItemPlacer')
+                ref.face4item2 = name
+            end
+
+            if puzzle == 'face4item3' then
+                local ref = FindScriptObject('SAItemPlacer')
+                ref.face4item3 = name
+            end
+
             --if more items need conditional changes, add code here
-
-
-
 
     
         end

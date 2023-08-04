@@ -108,11 +108,17 @@ function SACUCutscenes(Ob)
 		Yield()
 		self:placeChar(Global.player, 297.2,-3658.9,113.1, 180,38,0)
 		SetEntityGravityDir(Global.player, 0, -1, 0)
+
 		self:endCutscene(1, 1)
    		Global.levelScript.razOnExtrudedFace = 0
 		Global.levelScript.farCam = Global.camControl:pushAndSetChase(self, 2500, 30)
 		JournalAddMovie('cutscenes/prerendered/saco.bik')
 		MoveCameraToIdeal()
+
+		--edit adding collectible spawns
+		local puzzle = fso('SAItemPlacer')
+		puzzle:revealPuzzleItems(1)
+
 		self:fadeIn(1,1)
 		self:setState(nil)
 	end
@@ -162,7 +168,11 @@ function SACUCutscenes(Ob)
    		Global.levelScript.razOnExtrudedFace = 0
 		Global.camControl:removeCam(Global.levelScript.farCam)
 		Global.levelScript.farCam = Global.camControl:pushAndSetChase(self, 2500, 30)  
-		MoveCameraToIdeal() 	
+		MoveCameraToIdeal()
+		
+		--edit adding collectible spawns
+		local puzzle = fso('SAItemPlacer')
+		puzzle:revealPuzzleItems(2)
 		
 		self:runCutscene('SashaDoorHint3')
 	end
@@ -223,6 +233,11 @@ function SACUCutscenes(Ob)
 		Global.camControl:removeCam(Global.levelScript.farCam)
 		Global.levelScript.farCam = Global.camControl:pushAndSetChase(self, 2500, 30)
 		MoveCameraToIdeal()
+
+		--edit adding collectible spawns
+		local puzzle = fso('SAItemPlacer')
+		puzzle:revealPuzzleItems(3)
+
 	end
 
 
@@ -274,6 +289,11 @@ function SACUCutscenes(Ob)
 		Global.camControl:removeCam(Global.levelScript.farCam)
 		Global.levelScript.farCam = Global.camControl:pushAndSetChase(self, 2500, 30)
 		MoveCameraToIdeal()
+
+		--edit adding collectible spawns
+		local puzzle = fso('SAItemPlacer')
+		puzzle:revealPuzzleItems(4)
+		
 	end
 
 
@@ -300,6 +320,10 @@ function SACUCutscenes(Ob)
 		self:getFace(6):setState('Close')
 		Global:save('currentFace', nil)
 		Global:save('SAMadeToMegaCensor',1) 
+
+		--edit remove all collectible spawns
+		local puzzle = fso('SAItemPlacer')
+		puzzle:revealPuzzleItems(0)
 		
 		self:fadeToBlack(0)
 		self.sasha = FindScriptObject('Sasha')
@@ -1253,23 +1277,44 @@ function SACUCutscenes(Ob)
 				self:playVideo('cutScenes/prerendered/SACU_Face1_implosion.bik', 0, 0, 0)
 				Global.player:setPosition(30.3, -4.5, -189.3)
 				Global.player:setOrientation(0, -35.6, 0)
+
+				--edit remove all collectible spawns
+				local puzzle = fso('SAItemPlacer')
+				puzzle:revealPuzzleItems(0)
+				
 			elseif (face == 2) then
 				self:playVideo('cutScenes/prerendered/SACU_Face2_implosion.bik', 0, 0, 0)
 				Global.player:setPosition(1827.2, -1515.9, -190.7)
 				Global.player:setOrientation(0.1, 33.5, -90)
+
+				--edit remove all collectible spawns
+				local puzzle = fso('SAItemPlacer')
+				puzzle:revealPuzzleItems(0)
+
 			elseif (face == 3) then
 				self:playVideo('cutScenes/prerendered/SACU_Face3_implosion.bik', 0, 0, 0)
 				Global.player:setPosition(-285.9, -1863.3, -1827.1)
 				Global.player:setOrientation(-90, 0, -18)
+
+				--edit remove all collectible spawns
+				local puzzle = fso('SAItemPlacer')
+				puzzle:revealPuzzleItems(0)
+
 			elseif (face == 6) then
 				self:playVideo('cutScenes/prerendered/SACU_Face6_implosion.bik', 0, 0, 0)
 				Global.player:setPosition(-155.4, -3658.6, -370.8)
-				Global.player:setOrientation(180, -140.5, 0)			
+				Global.player:setOrientation(180, -140.5, 0)
+				
+				--edit remove all collectible spawns
+				local puzzle = fso('SAItemPlacer')
+				puzzle:revealPuzzleItems(0)
+
 			end
 			Global.player:snapToGround(100)
 			self:sleep(1)
 		end
 		self:endCutscene()	
+
    		Global.levelScript.razOnExtrudedFace = 0
 		Global:setPlayerRespawnPointName(nil)
 
@@ -1289,6 +1334,10 @@ function SACUCutscenes(Ob)
 		local face = self:getFace(1)
 		face:setState('Open')
 		self:playVideo('cutscenes/prerendered/SACU_Face1.bik', 0, 0, 0)
+
+		--edit adding collectible spawns
+		local puzzle = fso('SAItemPlacer')
+		puzzle:revealPuzzleItems(1)
 
 		self:fadeToBlack(0)
 		Yield()
@@ -1313,6 +1362,11 @@ function SACUCutscenes(Ob)
 		
 		self:playVideo('cutscenes/prerendered/SACU_Face2.bik', 0, 0, 0)
 		self:endCutscene()
+
+		--edit adding collectible spawns
+		local puzzle = fso('SAItemPlacer')
+		puzzle:revealPuzzleItems(2)
+
 		self:placeChar(Global.player, 1827.9, -195.5, -1624.9, 0.1, 52.3, -90)
 		
    		Global.levelScript.razOnExtrudedFace = 1
@@ -1341,6 +1395,11 @@ function SACUCutscenes(Ob)
 		--put raz at center of previous face 
 		self:playVideo('cutscenes/prerendered/SACU_Face3.bik', 0, 0, 0)
 		self:endCutscene()
+
+		--edit adding collectible spawns
+		local puzzle = fso('SAItemPlacer')
+		puzzle:revealPuzzleItems(3)
+
 		self:placeChar(Global.player,-1508.6, -3344.1, -1826.8, -90, 0, -35.6)
 
 		--Move on to face 3
@@ -1363,6 +1422,10 @@ function SACUCutscenes(Ob)
 		self:placeChar(Global.player, -853.9, -3658.6, -1543.7, 180, -128.8, 0)
 		self:playVideo('cutscenes/prerendered/SACU_Face6.bik', 0, 0, 0)
 		self:endCutscene()
+
+		--edit adding collectible spawns
+		local puzzle = fso('SAItemPlacer')
+		puzzle:revealPuzzleItems(4)
 		
 		--Move on to face 4
    		Global.levelScript.razOnExtrudedFace = 1
@@ -1405,6 +1468,9 @@ function SACUCutscenes(Ob)
 	
 --**************************************************************************************************
 	
+
+
+
 	return Ob
 end
 
