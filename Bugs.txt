@@ -9,7 +9,6 @@ skip cutscenes to avoid!!!
 
 --Hornet Nest sometimes doesn't spawn, maybe because fertility idol already collected?
 
---ScavSquirrel sometimes doesn't spawn, already collected golden acorn, Ford Scav hunt items turned in before.
 --Geyser item didn't load, also after scav hunt turn in
 
 --Prop Helmet, Prop Phone, and paintings from BV appear as "unknown text string" in inventory,
@@ -24,14 +23,21 @@ need to adjust text on these items.
 
 THINGS TO DO:
 
+--Fix Bacon so it can be used after entering Meat Circus
+
+--Set Starting PsiCores to 99, turn in for free in Meat Circus anyways
+
+--Start with Mental Magnet? Make Mental Magnet cheaper? Still want Arrowheads to be useful,
+even after Cobweb Duster
+
+--Custom Shop item for Psi Challenge Markers...? Help rank up with Arrowheads
+
 --Needs better logic!!! How do we implement this?
-    --Randomization method update, SeedGenerator.lua change, potentially changing to C++ code
+    --Randomization method update, SeedGenerator overhaul
 
---Update generator script to create SpoilerLog.txt
+--Update seed generator script to create SpoilerLog.txt
 
---Sasha's Shooting Gallery needs implemented.
-
---Black Velvetopia potential shop rando? Card Reward rando? Needs something...
+--Black Velvetopia potential shop rando? Card Reward rando? Needs rework...
 
 --Trying to load saves sometimes crashes the game, has improved recently but still keeping an eye on this
 

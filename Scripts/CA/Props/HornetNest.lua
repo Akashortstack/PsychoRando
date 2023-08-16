@@ -37,8 +37,8 @@ function HornetNest(Ob)
 		self.huntItem = FindScriptObject(self.huntItem)
 		SetEntityFlag(self, ENTITY_ZLOCK, 1)
 
-		--edit remove or self.huntItem.bCollected == 1 
-		if not self.huntItem then
+		--edit moved to onPostBeginLevel(), removed or self.huntItem.bCollected == 1 
+		--[[if not self.huntItem then
 			self:killSelf()
 		else
 			self.swarmEffects = SpawnScript('CA.Effects.HornetSwarmFX', 'SwarmEffects', '', 1)
@@ -48,6 +48,7 @@ function HornetNest(Ob)
 			self.beeSound = LoadSound('Beehive')
 			self:playSound(self.beeSound)
 		end
+		]]
         
         SetSimulationCullDistance( self, 6000)
         
@@ -58,7 +59,15 @@ function HornetNest(Ob)
 	function Ob:onPostBeginLevel()
 		--edit remove or self.huntItem.bCollected == 1 
 		if not self.huntItem then
+			self:killSelf()
 			return
+		else
+			self.swarmEffects = SpawnScript('CA.Effects.HornetSwarmFX', 'SwarmEffects', '', 1)
+			self.swarmEffects:attach(self)
+			self.swarmEffects:run()
+			GamePrint('FRIG')
+			self.beeSound = LoadSound('Beehive')
+			self:playSound(self.beeSound)
 		end
 		%Ob.Parent.onPostBeginLevel(self)
 		-- hide the item for now
