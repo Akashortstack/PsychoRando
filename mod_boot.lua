@@ -8,6 +8,11 @@ function RandoSetup()
 	if Global:loadGlobal('bSeenASIN') ~= 1 then
 		Global:saveGlobal('bSeenASIN', 1)
 	end
+
+	--Start with Mental Magnet
+	if Global:loadGlobal('bHasMentalMagnet') ~= 1 then
+		Global:saveGlobal('bHasMentalMagnet', 1) 
+	end
 end
 
 add_hook('beginlevel', 'RandoPlacer')
