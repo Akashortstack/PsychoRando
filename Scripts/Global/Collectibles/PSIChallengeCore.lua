@@ -40,6 +40,9 @@ function PSIChallengeCore(Ob)
 			ry = -165,
 			rz = 0,
 		}
+		--edit to make look like Marker in Shop
+		Ob.spinAnim = 'Anims/PSIChallenge/Spin.jan'
+		
 		-- END SHOP STUFF
 		Ob.dependencies = {
 			scripts = {'Global.Effects.PsiCoreFX',},
@@ -50,11 +53,18 @@ function PSIChallengeCore(Ob)
 	function Ob:onSpawn()
 		%Ob.Parent.onSpawn(self)
 		self.iNumStock = -1
+
 	end
 
 	function Ob:onBeginLevel()
         %Ob.Parent.onBeginLevel(self)
-		self:loadAnim(self.shelfIdleAnim, 0, 0)	-- 0 blend time and no looping, just want to initilize the position of the mesh
+		--edit
+		self:loadAnim(self.spinAnim, 0.2, 1)
+		--self:loadAnim(self.shelfIdleAnim, 0, 0)	-- 0 blend time and no looping, just want to initilize the position of the mesh
+		
+		--edit Scale
+		self:setScale(0.6)
+
 		self.psiCoreFX = SpawnScript('Global.Effects.PsiCoreFX')
 		if GetCurrentLevelName() ~= 'CALI' then
 			self.psiCoreFX:attach(self, nil, 1)

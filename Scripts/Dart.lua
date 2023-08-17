@@ -1133,7 +1133,7 @@ function Dart(Ob)
 		self:setRank(self.stats.rank or 1) -- set up various benefits of rank
 		-- Do other things we need to based on loaded stats.
 		SetPsiBlastAmmo(self.stats.psiBlastAmmo)
-		--edit to make PsiCores always equal 50
+		--edit to make PsiCores always equal 42
 		self.stats.PSIChallengeCores = 42
 		self.stats.coresInInv = 42
 	end
