@@ -23,8 +23,6 @@ need to adjust text on these items.
 
 THINGS TO DO:
 
---Fix Ford Cutscene to transition from "Are you Ready?" to brain turn in.
-
 --Needs better logic!!! How do we implement this?
     --Randomization method update, SeedGenerator overhaul
 
