@@ -19,9 +19,10 @@ function PSIChallengeCore(Ob)
 		Ob.initialState = nil
 		Ob.inventoryscale = 1
 		Ob.heldscale = 0.2
-		Ob.displayName = "/GLZB011TO/"--DIALOG=<<PSI Challenge Core>>
+		Ob.displayName = "/GLZB000TO/"--DIALOG=<<PSI Challenge Marker>>
 		Ob.sItemExplanation = "/GLZB058TO/" --DIALOG=<<Used to make PSI CHALLENGE MARKERS.>>
-		Ob.pickupSpriteName = 'PsiChallengeCore'
+		--edit
+		Ob.pickupSpriteName = 'PsiChallengeMarker'
 		Ob.shelfIdleAnim = 'Anims/PSIChallenge/ShelfIdle.jan'	-- used to make cards go away so that mesh looks like core not marker
 		
 		-- SHOP STUFF
@@ -83,10 +84,9 @@ function PSIChallengeCore(Ob)
 			self.psiCoreFX:killSelf()
 		end
 
-		self:sendMessage(Global.player, 'CollectedPSICore', 1)
-
 		--edit give player a Psi Challenge Marker 
 		self:sendMessage(Global.player, 'PSIChallengeMarker', self.value, 1)
+		--self:sendMessage(Global.player, 'CollectedPSICore', 1)
 		
 		-- remove self from the inventory
 		Global.player:removeFromInventory(self)
