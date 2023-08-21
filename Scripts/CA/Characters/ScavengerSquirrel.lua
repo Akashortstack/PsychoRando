@@ -45,11 +45,13 @@ function ScavengerSquirrel(Ob)
 			self.noAcorn = 1
 			return
 			]]
-		elseif self.acorn and self.acorn.bCollected == 1 then 
+			
+		--edit removed this too
+		--[[elseif self.acorn and self.acorn.bCollected == 1 then 
 			-- didnt find the acorn, kill de squirrel... third times the charm
 			self:killSelf() 	
 			self.noAcorn = 1
-			return
+			return]]
 		end
 		%Ob.Parent.onBeginLevel(self)
 		SetPhysicsFlag(self, PHYSICS_APPLYGRAVITY, 0)

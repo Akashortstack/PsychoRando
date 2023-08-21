@@ -2,6 +2,8 @@
 
 General Bugs:
 
+--Gloria's Trophy will spawn in it's vanilla location if placed within the Asylum Entrance
+
 --KNOWN ASTRALATHE BUG, WW has crashes if you let cutscenes play in entirety,
 skip cutscenes to avoid!!!
 
@@ -9,7 +11,11 @@ skip cutscenes to avoid!!!
 
 --Hornet Nest sometimes doesn't spawn, maybe because fertility idol already collected?
 
---Geyser item also sometimes doesn't load
+--Below issues possibly caused by turning in scavenger hunt items to Ford?
+
+    --Geyser item sometimes doesn't load
+
+    --Squirrel Disappears sometimes...
 
 --Prop Helmet, Prop Phone, and paintings from BV appear as "unknown text string" in inventory,
 need to adjust text on these items.
@@ -22,6 +28,10 @@ need to adjust text on these items.
 
 
 THINGS TO DO:
+
+--Waterloo World Fireplace collectible position
+
+--Vaults in Lungfishopolis are tiny, make bigger
 
 --Needs better logic!!! How do we implement this?
     --Randomization method update, SeedGenerator overhaul

@@ -23,7 +23,9 @@ function RandoPsiCard(Ob)
 		Ob.HeldPosX = 20
 		Ob.HeldPosY = 20
 		Ob.HeldRotZ = 10
-		Ob.iTriggerSphereRadius = 75
+
+		--edit increased to make easier to collect, original value 75
+		Ob.iTriggerSphereRadius = 150
 		Ob.iTriggerSphereOffset = 30
 		Ob.value = 1
 		Ob.level = 'all'
