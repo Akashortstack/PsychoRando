@@ -165,14 +165,16 @@ function Vault(Ob)
 		SetMeshIsBackwards(self, 1)
 		
 		-- make the vaults teeny in LOMA
-		if (GetCurrentLevelName() == 'LOMA') then
+		--removed, Normal Size Vaults Please
+		
+		--[[if (GetCurrentLevelName() == 'LOMA') then
 			self:setScale(0.5)
 			SetEntityCollideCylinder(self, 20, 130)
 			MakeSharedTableWritable(self.animsTable)
 			self.animsTable.Walk.speed = 2.0
 		else
 			SetEntityCollideSphere(self, 120, 0, 80, 30)  -- set collide sphere ourself so its more accurate
-		end
+		end]]
         
 		self:setAnim(self.animsTable.Idle)
 		

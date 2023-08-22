@@ -2,7 +2,10 @@
 
 General Bugs:
 
---Gloria's Trophy will spawn in it's vanilla location if placed within the Asylum Entrance
+--Sasha's Shooting Gallery can softlock during tutorial if player doesn't collect Health Drop in time.
+--Made worse by Mental Magnet. Do I need to disable during this?
+
+--Gloria's Trophy will spawn in it's vanilla location if placed within the Asylum Entrance (ASGR)
 
 --KNOWN ASTRALATHE BUG, WW has crashes if you let cutscenes play in entirety,
 skip cutscenes to avoid!!!
@@ -29,9 +32,13 @@ need to adjust text on these items.
 
 THINGS TO DO:
 
---Waterloo World Fireplace collectible position
+--Create incentive to FINISH a level. One brain of health isn't good enough.
 
---Vaults in Lungfishopolis are tiny, make bigger
+--Add reward for helping Dogen cross the Minefield? MISSABLE! Slow check, +1 item for BB. 
+
+--Waterloo World Fireplace collectible position needs added
+
+--Speed up animations in Lungfishopolis? QoL change?
 
 --Needs better logic!!! How do we implement this?
     --Randomization method update, SeedGenerator overhaul
