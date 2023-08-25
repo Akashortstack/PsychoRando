@@ -165,6 +165,9 @@ function SACU(Ob)
 		Ob.theme = 'SashasCube'
 		Ob.secondLevelTheme = 'SashasAction'	-- this should be set as the level theme at a later point in the game
 		Ob.bSaveMusic = 1
+
+		--edit variable for disabling/re-enabling Mental Magnet during tutorial
+		Ob.magnet = 0
 	end
 	
 	function Ob:testCam()
@@ -236,6 +239,14 @@ function SACU(Ob)
 		end
 
 		self:setState('DisableKludge')
+
+		--edit to disable Mental Magnet if tutorial isn't completed.
+		if (Global:loadGlobal('bTutorialFinished') ~= 1) then
+			if (Global:loadGlobal('bHasMentalMagnet') == 1) then
+				Global:saveGlobal('bHasMentalMagnet', 0)
+				self.magnet = 1
+			end
+		end
 	end
 
 	function Ob:onPostBeginLevel()
@@ -278,6 +289,12 @@ function SACU(Ob)
 	function Ob:onEndLevel()
 		%Ob.Parent.onEndLevel(self)
 		RestoreFordCheering()
+		--edit re-enabled Mental Magnet if disabled
+		if self.magnet == 1 then
+			Global:saveGlobal('bHasMentalMagnet', 1)
+			self.magnet = 0
+		end
+
 	end
 	
 	function Ob:stateDisableKludge()

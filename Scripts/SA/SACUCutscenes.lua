@@ -119,6 +119,13 @@ function SACUCutscenes(Ob)
 		local puzzle = fso('SAItemPlacer')
 		puzzle:revealPuzzleItems(1)
 
+		--edit re-enable Mental Magnet if disabled by tutorial
+		local checkmagnet = FindScriptObject('LevelScript')
+		if checkmagnet.magnet == 1 then
+			Global:saveGlobal('bHasMentalMagnet', 1)
+			checkmagnet.magnet = 0
+		end
+
 		self:fadeIn(1,1)
 		self:setState(nil)
 	end

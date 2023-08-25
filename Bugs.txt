@@ -2,8 +2,7 @@
 
 General Bugs:
 
---Sasha's Shooting Gallery can softlock during tutorial if player doesn't collect Health Drop in time.
---Made worse by Mental Magnet. Do I need to disable during this?
+--Vanilla game bug: Sasha's Shooting Gallery can softlock during tutorial if player doesn't collect Health Drop in time.
 
 --Gloria's Trophy will spawn in it's vanilla location if placed within the Asylum Entrance (ASGR)
 
@@ -33,8 +32,6 @@ need to adjust text on these items.
 THINGS TO DO:
 
 --Create incentive to FINISH a level. One brain of health isn't good enough.
-
---Add reward for helping Dogen cross the Minefield? MISSABLE! Slow check, +1 item for BB. 
 
 --Waterloo World Fireplace collectible position needs added
 
