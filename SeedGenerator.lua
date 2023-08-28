@@ -10,9 +10,9 @@ local function shuffleList(list)
   end
 end
 
--- Create the list of numbers from 1 to 355
+-- Create the list of numbers from 1 to 360
 local list = {}
-for i = 1, 355 do
+for i = 1, 360 do
   list[i] = i
 end
 
@@ -87,11 +87,11 @@ local text1 = [[function RandoSeed(Ob)
   file:write(text1)
   
   -- Print the shuffled list with comma and line formatting to the file
-  for i = 1, 355 do
+  for i = 1, 360 do
       file:write(list[i])
       if i % 10 == 0 then
       file:write(",\n")
-      elseif i ~= 355 then
+      elseif i ~= 360 then
       file:write(", ")
       end
   end

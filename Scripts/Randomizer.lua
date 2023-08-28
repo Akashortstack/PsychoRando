@@ -8,7 +8,7 @@ function Randomizer(Ob)
         %Ob.Parent.onBeginLevel(self)
     end
 
-    function Ob:removeCollectibles()
+    --[[function Ob:removeCollectibles()
         if strfind(FindScriptObject('LevelScript').levelType, 'real') then
             foreach_entity_oftype('global.collectibles.PSIChallengeCard', function(ent) ent:killSelf() end)
             foreach_entity_oftype('global.collectibles.PsiChallengeMarker', function(ent) ent:killSelf() end)
@@ -26,8 +26,8 @@ function Randomizer(Ob)
             GamePrint("ERROR, FAILED TO FIND LEVEL TYPE")
         end
 
-        if strfind(FindScriptObject('LevelScript').levelType, 'mental') then
-            if strfind(FindScriptObject('LevelScript').Type, 'mm.MMI1') then
+
+        if strfind(FindScriptObject('LevelScript').Type, 'mm.MMI1') then
                 foreach_entity_oftype('global.collectibles.PsiPower', function(ent) ent:killSelf() end)
                 foreach_entity_oftype('mm.props.PropSign', function(ent) ent:killSelf() end)
                 foreach_entity_oftype('mm.props.PropRollingPin', function(ent) ent:killSelf() end)
@@ -36,36 +36,34 @@ function Randomizer(Ob)
                 foreach_entity_oftype('mm.props.PropHedgeTrimmers', function(ent) ent:killSelf() end)
                 foreach_entity_oftype('mm.props.PropFlowers', function(ent) ent:killSelf() end)
 
-            elseif strfind(FindScriptObject('LevelScript').Type, 'th.THMS') then
+        elseif strfind(FindScriptObject('LevelScript').Type, 'th.THMS') then
                 foreach_entity_oftype('th.props.Candle', function(ent) ent:killSelf() end)
 
-            elseif strfind(FindScriptObject('LevelScript').Type, 'th.THCW') then
+        elseif strfind(FindScriptObject('LevelScript').Type, 'th.THCW') then
                 foreach_entity_oftype('th.props.Candle', function(ent) ent:killSelf() end)
 
-            elseif strfind(FindScriptObject('LevelScript').Type, 'ww.WWMA') then
+        elseif strfind(FindScriptObject('LevelScript').Type, 'ww.WWMA') then
                 foreach_entity_oftype('ww.props.PricelessCoin', function(ent) ent:killSelf() end)
                 foreach_entity_oftype('ww.props.Rifle', function(ent) ent:killSelf() end)
 
-            elseif strfind(FindScriptObject('LevelScript').Type, 'bv.BVRB') then
+        elseif strfind(FindScriptObject('LevelScript').Type, 'bv.BVRB') then
                 foreach_entity_oftype('global.collectibles.MaxConfusionUp', function(ent) ent:killSelf() end)  
 
-            end
-        elseif strfind(FindScriptObject('LevelScript').levelType, 'real') then
-            if strfind(FindScriptObject('LevelScript').Type, 'as.ASGR') then
+        
+        elseif strfind(FindScriptObject('LevelScript').Type, 'as.ASGR') then
                 foreach_entity_oftype('as.props.AS_hand', function(ent) ent:killSelf() end)
                 foreach_entity_oftype('as.props.LilisBracelet', function(ent) ent:killSelf() end)
-            elseif strfind(FindScriptObject('LevelScript').Type, 'as.ASCO') then
+        elseif strfind(FindScriptObject('LevelScript').Type, 'as.ASCO') then
                 foreach_entity_oftype('as.props.AS_StraightJacket', function(ent) ent:killSelf() end)
                 foreach_entity_oftype('as.props.AS_Painting', function(ent) ent:killSelf() end)
-            elseif strfind(FindScriptObject('LevelScript').Type, 'as.ASLB') then
+        elseif strfind(FindScriptObject('LevelScript').Type, 'as.ASLB') then
                 foreach_entity_oftype('as.props.Cake', function(ent) ent:killSelf() end)
                 --foreach_entity_oftype('as.props.PokeyProp', function(ent) ent:killSelf() end)
-            end
-
+        
         else
             GamePrint("WARNING, LEVEL NAME NOT LISTED")
         end
-    end
+    end]]
 
     --function that reads each item(index) in Seed.lua and Positions.lua
     function Ob:placeCollectibles()
@@ -108,25 +106,26 @@ function Randomizer(Ob)
             if class == 'global.collectibles.RandoSuitcase' or class == 'global.collectibles.RandoPurse' or class == 'global.collectibles.RandoHatbox' or class == 'global.collectibles.RandoSteamertrunk' or class == 'global.collectibles.RandoDufflebag' then
                 place:SetCollectRadius()
             end
+        end
             --code for IceBlock puzzle in CAKC
             if puzzle == 'ice' then
-                local block = FindScriptObject('ScavIceBlock')
-                block.itemEncased = name
+                local ref = FindScriptObject('ScavIceBlock')
+                ref.itemEncased = name
             end
             --code for Squirrel Acorn puzzle in CAGP
             if puzzle == 'squirrel' then
-                local squirrel = FindScriptObject('ScavengerSquirrel')
-                squirrel.acorn = name
+                local ref = FindScriptObject('ScavengerSquirrel')
+                ref.acorn = name
             end
             --code for Two Geysers Skull puzzle in CAGP
             if puzzle == 'geyser' then
-                local geyser = FindScriptObject('geyser1')
-                geyser.itemPlugging = name
+                local ref = FindScriptObject('geyser1')
+                ref.itemPlugging = name
             end
             --code for Hornet Nest Fertility Idol puzzle in CARE
             if puzzle == 'hive' then
-                local hive = FindScriptObject('ScavHornetNest')
-                hive.huntItem = name
+                local ref = FindScriptObject('ScavHornetNest')
+                ref.huntItem = name
             end
 
             --[[code for RankUp checks, each level is separate
@@ -353,10 +352,34 @@ function Randomizer(Ob)
                 ref.face4item3 = name
             end
 
+            --[[Black Velvetopia]]
+
+            --BV After Wrestler Checks
+            
+            if puzzle == 'tiger' then
+                local ref = FindScriptObject('BVItemPlacer')
+                ref.tigerBeat = name
+            end
+
+            if puzzle == 'dragon' then
+                local ref = FindScriptObject('BVItemPlacer')
+                ref.dragonBeat = name
+            end
+            
+            if puzzle == 'eagle' then
+                local ref = FindScriptObject('BVItemPlacer')
+                ref.eagleBeat = name
+            end
+            
+            if puzzle == 'cobra' then
+                local ref = FindScriptObject('BVItemPlacer')
+                ref.cobraBeat = name
+            end
+
             --if more items need conditional changes, add code here
 
     
-        end
+        
     end
    
 

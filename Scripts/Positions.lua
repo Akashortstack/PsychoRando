@@ -3411,6 +3411,65 @@ function Positions(Ob)
                 puzzle = 'face4item3'
             },
 
+            --*******************************************************--
+            --BV, Black Velvetopia After Wrestler checks
+            --BVES
+
+            item356 = {        
+                levelName = 'BVES',
+                x = -2125, 
+                y = 14, 
+                z = -664,
+                ox = 0,
+                oy = -107,
+                oz = 0,
+                puzzle = 'tiger'
+            },
+            item357 = {        
+                levelName = 'BVES',
+                x = 680, 
+                y = 13, 
+                z = -2102,
+                ox = 0,
+                oy = 165,
+                oz = 0,
+                puzzle = 'eagle'
+            },
+            item358 = {        
+                levelName = 'BVES',
+                x = -154, 
+                y = 17, 
+                z = 2249,
+                ox = 0,
+                oy = -11,
+                oz = 0,
+                puzzle = 'dragon'
+            },
+            item359 = {        
+                levelName = 'BVES',
+                x = 2149, 
+                y = 15, 
+                z = 459,
+                ox = 0,
+                oy = 71,
+                oz = 0,
+                puzzle = 'cobra'
+            },
+            --*******************************************************--
+            --WW, WATERLOO WORLD
+
+            --WWMA, Inside the Fireplace
+
+            item360 = {        
+                levelName = 'WWMA',
+                x = -44408, 
+                y = 8978, 
+                z = 5315,
+                ox = 0,
+                oy = 14,
+                oz = 4,
+            },
+
             
         }
         self.positionsList = posTable

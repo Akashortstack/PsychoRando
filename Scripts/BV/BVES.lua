@@ -218,6 +218,10 @@ function BVES(Ob)
 			foreach_entity_oftype('BV.Props.LevelLoadPainting', function(ent) ent.bCanLoad = 1 end)
 		end
 
+		--edit spawn BVItemPlacer
+		self.itemPlacer = SpawnScript('BV.BVItemPlacer', 'BVItemPlacer')
+		
+
 		self.rTornadoSoundHandle = LoadSound('Tornado')
 		Global.player.charName = 'BVraz'
 	end
@@ -225,6 +229,10 @@ function BVES(Ob)
 	
 	function Ob:onPostBeginLevel()
 		%Ob.Parent.onPostBeginLevel(self)
+
+		--edit
+		self.itemPlacer:wrestlerChecks()
+		
 		if self.Fountain1SoundLocator then
 			self.Fountain1SoundLocator:playSound(self.rFountainSound)
 		end
