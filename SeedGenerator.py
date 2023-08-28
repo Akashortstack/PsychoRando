@@ -1,6 +1,6 @@
 import random
 
-items = list(range(1, 356))
+items = list(range(1, 361))
 
 random.shuffle(items)
 

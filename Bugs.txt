@@ -30,8 +30,6 @@ THINGS TO DO:
 
 --Create incentive to FINISH a level. One brain of health isn't good enough.
 
---Waterloo World Fireplace collectible position needs added
-
 --Speed up animations in Lungfishopolis? QoL change?
 
 --Needs better logic!!! How do we implement this?
@@ -41,7 +39,7 @@ THINGS TO DO:
 
 --Update seed generator and randomizer to support different settings
 
---Black Velvetopia potential shop rando? Card Reward rando? Needs rework...
+--Black Velvetopia potential shop rando? Card Reward rando? Needs work...
 
 --Trying to load saves sometimes crashes the game, has improved recently but still keeping an eye on this
 
