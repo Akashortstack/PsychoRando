@@ -8,6 +8,10 @@ def check_logic(lst):
     index = 0
     length = len(lst)
     goal = True
+    firstClairo = 0
+    trophy = 0
+    jacket = 0
+    painting = 0
 
     while index < length:
         j = lst[index]
@@ -20,10 +24,22 @@ def check_logic(lst):
 
         # Checks if Gloria's Trophy, Straight Jacket, and Lobato Painting are in Upper Floors of AS
         if j == 2 or j == 3 or j == 4:
+            if j == 2: trophy = index
+            if j == 3: jacket = index
+            if j == 4: painting = index
             if 188 <= index <= 221:
                 goal = False
                 break
-        
+
+        if j == 33: firstClairo = index
+        if j == 34:
+            # Checks if Clairvoyance is unobtainable. Avoiding Clairvoyance being locked in MM and ASUP with one disguise item also being in those locations
+            if ((222 <= firstClairo <= 245 and 222 <= index <= 245 
+            or (222 <= firstClairo <= 245 and 188 <= index <= 221 or 222 <= index <= 245 and 188 <= firstClairo <= 221)) 
+            and (222 <= trophy <= 245 or 222 <= jacket <= 245 or 222 <= painting <= 245)):
+                print("Clairvoyances were in MM/ASUP with a disguise in those levels too or both were in MM with a disguise item also in MM")
+                goal = False
+            break
         index += 1
 
     if not goal:
