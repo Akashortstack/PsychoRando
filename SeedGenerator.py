@@ -1,6 +1,6 @@
 import random
 
-items = list(range(1, 361))
+items = list(range(1, 356))
 
 random.shuffle(items)
 
@@ -23,7 +23,16 @@ def check_logic(lst):
             if 188 <= index <= 221:
                 goal = False
                 break
-        
+
+        if j == 34:
+            # Checks if Clairvoyance is unobtainable.
+            # Avoiding Clairvoyance being locked in MM and ASUP with one disguise/lungfishcall item also being in those locations
+            if ((222 <= lst.index(33) <= 245 and 222 <= index <= 245 
+            or (222 <= lst.index(33) <= 245 and 188 <= index <= 221 or 222 <= index <= 245 and 188 <= lst.index(33) <= 221)) 
+            and (222 <= lst.index(2) <= 245 or 222 <= lst.index(3) <= 245 or 222 <= lst.index(4) <= 245 or 222 <= lst.index(1) <= 245)):
+                print("Clairvoyances were in MM/ASUP with a disguise in those levels too or both were in MM with a disguise item also in MM")
+                goal = False
+                break
         index += 1
 
     if not goal:
