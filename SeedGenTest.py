@@ -1,8 +1,6 @@
 import unittest
 from SeedGenerator import check_logic
 
-
-
 class TestGeneration(unittest.TestCase):
 
     def test_Check_Logic(self):
