@@ -2,44 +2,20 @@ import random
 
 items = list(range(1, 361))
 
-random.shuffle(items)
-
 def check_logic(lst):
-    index = 0
-    length = len(lst)
-    goal = True
+    random.shuffle(lst)
 
-    while index < length:
-        j = lst[index]
-
-        # Checks if Lungfish Call is in AS
-        if j == 1:
-            if 169 <= index <= 221:
-                goal = False
-                break
-
-        # Checks if Gloria's Trophy, Straight Jacket, and Lobato Painting are in Upper Floors of AS
-        if j == 2 or j == 3 or j == 4:
-            if 188 <= index <= 221:
-                goal = False
-                break
-
-        if j == 34:
-            # Checks if Clairvoyance is unobtainable.
-            # Avoiding Clairvoyance being locked in MM and ASUP with one disguise/lungfishcall item also being in those locations
-            if ((222 <= lst.index(33) <= 245 and 222 <= index <= 245 
-            or (222 <= lst.index(33) <= 245 and 188 <= index <= 221 or 222 <= index <= 245 and 188 <= lst.index(33) <= 221)) 
-            and (222 <= lst.index(2) <= 245 or 222 <= lst.index(3) <= 245 or 222 <= lst.index(4) <= 245 or 222 <= lst.index(1) <= 245)):
-                print("Clairvoyances were in MM/ASUP with a disguise in those levels too or both were in MM with a disguise item also in MM")
-                goal = False
-                break
-        index += 1
-
-    if not goal:
-        print("Seed not beatable, Re-rolling!")
-        # Reshuffle Items for new result
-        random.shuffle(lst)
-        # Rerun the function
+    # Checks if Lungfish Call is in AS
+    # Checks if Gloria's Trophy, Straight Jacket, and Lobato Painting are in Upper Floors of AS
+    if 169 <= lst.index(1) <= 221 or 188 <= lst.index(2) <= 221 or 188 <= lst.index(3) <= 221 or 188 <= lst.index(4) <= 221:
+        print("Seed not beatable, Re-rolling! ")
+        check_logic(lst)
+    # Checks if Clairvoyance is unobtainable.
+    # Avoiding Clairvoyance being locked in MM and ASUP with one disguise/lungfishcall item also being in those locations
+    if ((222 <= lst.index(33) <= 245 and 222 <= lst.index(34) <= 245 
+    or (222 <= lst.index(33) <= 245 and 188 <= lst.index(34) <= 221 or 222 <= lst.index(34) <= 245 and 188 <= lst.index(33) <= 221)) 
+    and (222 <= lst.index(1) <= 245 or 222 <= lst.index(2) <= 245 or 222 <= lst.index(3) <= 245 or 222 <= lst.index(4) <= 245)):
+        print("Clairvoyances were in MM/ASUP with a disguise in those levels too or both were in MM with a disguise item also in MM ")
         check_logic(lst)
 
 check_logic(items)
