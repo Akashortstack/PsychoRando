@@ -28,8 +28,6 @@ skip cutscenes to avoid!!!
 
 THINGS TO DO:
 
---Create incentive to FINISH a level. One brain of health isn't good enough.
-
 --Speed up animations in Lungfishopolis? QoL change?
 
 --Needs better logic!!! How do we implement this?
@@ -42,5 +40,3 @@ THINGS TO DO:
 --Black Velvetopia potential shop rando? Card Reward rando? Needs work...
 
 --Trying to load saves sometimes crashes the game, has improved recently but still keeping an eye on this
-
---CA Lodge Shop Rando? Causes MAJOR logic problems involving cobweb duster

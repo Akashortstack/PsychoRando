@@ -376,6 +376,44 @@ function Randomizer(Ob)
                 ref.cobraBeat = name
             end
 
+            --[[CASA Level Done Checks]]
+            if puzzle == 'bbDone' then
+                local ref = FindScriptObject('LevelDonePlacer')
+                ref.bbDone = name
+            end
+            if puzzle == 'saDone' then
+                local ref = FindScriptObject('LevelDonePlacer')
+                ref.saDone = name
+            end
+            if puzzle == 'miDone' then
+                local ref = FindScriptObject('LevelDonePlacer')
+                ref.miDone = name
+            end
+            if puzzle == 'niDone' then
+                local ref = FindScriptObject('LevelDonePlacer')
+                ref.niDone = name
+            end
+            if puzzle == 'loDone' then
+                local ref = FindScriptObject('LevelDonePlacer')
+                ref.loDone = name
+            end
+            if puzzle == 'mmDone' then
+                local ref = FindScriptObject('LevelDonePlacer')
+                ref.mmDone = name
+            end
+            if puzzle == 'thDone' then
+                local ref = FindScriptObject('LevelDonePlacer')
+                ref.thDone = name
+            end
+            if puzzle == 'wwDone' then
+                local ref = FindScriptObject('LevelDonePlacer')
+                ref.wwDone = name
+            end
+            if puzzle == 'bvDone' then
+                local ref = FindScriptObject('LevelDonePlacer')
+                ref.bvDone = name
+            end
+
             --if more items need conditional changes, add code here
 
     

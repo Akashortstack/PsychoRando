@@ -3455,6 +3455,7 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'cobra'
             },
+
             --*******************************************************--
             --WW, WATERLOO WORLD
 
@@ -3469,6 +3470,99 @@ function Positions(Ob)
                 oy = 14,
                 oz = 4,
             },
+
+            --*******************************************************--
+            --CASA, Collective Unconscious Level Checks
+            item361 = {        
+                levelName = 'CASA',
+                x = -12954, 
+                y = 11560, 
+                z = -5523,
+                ox = 0,
+                oy = -158,
+                oz = 0,
+                puzzle = 'bbDone'
+            },
+            item362 = {        
+                levelName = 'CASA',
+                x = -13922, 
+                y = 11352, 
+                z = -4566,
+                ox = 0,
+                oy = -90,
+                oz = 0,
+                puzzle = 'saDone'
+            },
+            item363 = {        
+                levelName = 'CASA',
+                x = -10778, 
+                y = 11432, 
+                z = -4760,
+                ox = 0,
+                oy = 109,
+                oz = 0,
+                puzzle = 'miDone'
+            },
+            item364 = {        
+                levelName = 'CASA',
+                x = -11139, 
+                y = 11486, 
+                z = -5505,
+                ox = 0,
+                oy = 157,
+                oz = 0,
+                puzzle = 'niDone'
+            },
+            item365 = {        
+                levelName = 'CASA',
+                x = -11962, 
+                y = 11615, 
+                z = -5630,
+                ox = 0,
+                oy = -170,
+                oz = 0,
+                puzzle = 'loDone'
+            },
+            item366 = {        
+                levelName = 'CASA',
+                x = -11357, 
+                y = 11476, 
+                z = -3457,
+                ox = 0,
+                oy = 38,
+                oz = 0,
+                puzzle = 'mmDone'
+            },
+            item367 = {        
+                levelName = 'CASA',
+                x = -13645, 
+                y = 11449, 
+                z = -5125,
+                ox = 0,
+                oy = -122,
+                oz = 0,
+                puzzle = 'thDone'
+            },
+            item368 = {        
+                levelName = 'CASA',
+                x = -10758, 
+                y = 11438, 
+                z = -4170,
+                ox = 0,
+                oy = 85,
+                oz = 0,
+                puzzle = 'wwDone'
+            },
+            item369 = {        
+                levelName = 'CASA',
+                x = -13691, 
+                y = 11326, 
+                z = -3785,
+                ox = 0,
+                oy = -54,
+                oz = 0,
+                puzzle = 'bvDone'
+            },  
 
             
         }

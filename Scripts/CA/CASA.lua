@@ -177,6 +177,10 @@ function CASA(Ob)
 		for level, indicator in self.indicators do
 			self:setCUIndicators( level, indicator )
 		end
+
+		--edit Spawn LevelDonePlacer.lua
+		self.finished = SpawnScript('CA.LevelDonePlacer', 'LevelDonePlacer')
+
 	end
 
 	function Ob:onPostBeginLevel()
@@ -208,6 +212,9 @@ function CASA(Ob)
 
 			SpawnScript('CA.Props.Psychomaster')
         end
+
+		--edit Spawn LevelDonePlacer Items
+		self.finished:levelsDone()
 
 
         --[[

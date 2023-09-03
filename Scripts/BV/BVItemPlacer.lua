@@ -28,12 +28,12 @@ function BVItemPlacer(Ob)
         end
         if dragon ~= nil then
             dragon:hide()
-            GamePrint("Dragon Hidden")
         end
         if cobra ~= nil then
             cobra:hide()
         end
 
+        --reveal if wrestler defeated
         if (Global:load('tigerDefeated') == 1) and tiger ~= nil then
             tiger:show()
         end
@@ -42,7 +42,6 @@ function BVItemPlacer(Ob)
         end
         if (Global:load('dragonDefeated') == 1) and dragon ~= nil then
             dragon:show()
-            GamePrint("Dragon Show")
         end
         if (Global:load('cobraDefeated') == 1) and cobra ~= nil then
             cobra:show()
