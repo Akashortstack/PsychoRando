@@ -176,9 +176,13 @@ function NIMP(Ob)
 			RegisterTriggerVolume(self, 'tv_towerbase')
 			RegisterTriggerVolume(self, 'tv_yawHint08')-- can use this to trigger pulled out to learn Levitation CS
 			RegisterTriggerVolume(self, 'tv_LungfishLightTrigger')
+			--edit moved from Phase 3
+			RegisterTriggerVolume(self, 'tv_towertop')
+
 			Global.goalManager:activate('BigMonster', nil, 1)
 		elseif (niPhase == 3) then
-			RegisterTriggerVolume(self, 'tv_towertop')
+			--edit moved to Phase 2
+			--RegisterTriggerVolume(self, 'tv_towertop')
 			Global.goalManager:activate('GetInsideTower', 1 ,1)
 			self:activateLungfishLight()
 		elseif( niPhase == 4 ) then
@@ -439,8 +443,9 @@ function NIMP(Ob)
 				--edit return to CU instead
 				Global.levelScript:returnToCU()
 				--Global.levelScript:loadNewLevel('CASA', 0, 1)
-			elseif tvName == 'tv_yawHint08' then
-				self.cutsceneScript:runCutscene('GoToMI', 0, 0)
+				--edit removing to prevent pulled out climbing thorn tower
+			--[[elseif tvName == 'tv_yawHint08' then
+				self.cutsceneScript:runCutscene('GoToMI', 0, 0)]]
 			elseif (strfind(tvName, 'tv_BunnyGoTo')) and self.bunny then
 				-- these are special triggers that are named 'tv_BunnyGoToXXX'
 				-- the number is extracted below and then the bunny is told to go to the new waypoint
