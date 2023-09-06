@@ -6,6 +6,8 @@ General Bugs:
 
 --Gloria's Trophy will spawn in it's vanilla location if placed within the Asylum Entrance (ASGR)
 
+-=-Milka's Brain Defaults to Vanilla location in Crow Basket if spawned in Asylum Lower Levels
+
 --KNOWN ASTRALATHE BUG, WW has crashes if you let cutscenes play in entirety,
 skip cutscenes to avoid!!!
 
@@ -32,8 +34,7 @@ THINGS TO DO:
 
 --Fix BTE kicking player out before Dogen and brain tank fight
 
---Add a few more junk items 
-    --Feather
+--Add a few more junk items? 
     --?
 
 --Speed up animations in Lungfishopolis? QoL change?

@@ -13,16 +13,10 @@ function RandoOarsmansBadge(Ob)
 		self.meshName = 'Levels/CA_Campgrounds/Props/OarsmansBadge.plb'
         self.pickupSpritePath = 'Textures/icons/PsiPowers/Orsman.tga'
         self.displayName = "Oarsman's Badge"--DIALOG Oarsman's Badge, Needs Localization
-
-
-		--edit
-		if Global.player.stats.RandoProp[self.Name] == 'collected' then
-			self:killSelf()
-		end
         
 		%Ob.Parent.onBeginLevel(self)
         --edit to fix scale and orientation
-		self:setScale(20)
+		self:setScale(15)
         self.mover:setOrientation(ApplyOrientation(0, 180, 90, self.mover:getOrientation()))
 
 		--self.mover:setOrientation(ApplyOrientation(0, 0, 0, self.mover:getOrientation()))

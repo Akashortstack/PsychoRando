@@ -14,6 +14,7 @@ function CollectibleRemover(Ob)
             foreach_entity_oftype('global.collectibles.PsiChallengeMarker', function(ent) ent:killSelf() end)
             foreach_entity_oftype('ca.props.ScavengerHuntItem', function(ent) ent:killSelf() end)
             foreach_entity_oftype('global.collectibles.BrainJar', function(ent) ent:killSelf() end)
+            foreach_entity_oftype('AS.Props.AS_CrowFeather', function(ent) ent:killSelf() end)
 
         elseif strfind(FindScriptObject('LevelScript').levelType, 'mental') then
             foreach_entity_oftype('global.collectibles.EmotionalBaggage', function(ent) ent:killSelf() end)
