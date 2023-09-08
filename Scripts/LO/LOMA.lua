@@ -193,7 +193,7 @@ function LOMA(Ob)
 		--Player must have gotten at least this far
 		--Global:setLevelToCompleted('NI')
 		%Ob.Parent.onBeginLevel(self)
-		
+		--edit remove?
 		Global.player.Razilla = 1
 		self.RazillaWalk = LoadSound('LOFootsteps')
 		self.RazillaLand = LoadSound('LOJumpLand')
@@ -281,6 +281,7 @@ function LOMA(Ob)
 
 		self.rVolcanoAmbientSound = LoadSound('Volcano')
 		-- put all the slow raz stuff in this function found in LevelScript.lua
+		--edit remove for QOL?
 		self:startSlowLORaz()
 		
 		if (Global:loadGlobal('bLOCompleted') == 1) then
@@ -301,6 +302,7 @@ function LOMA(Ob)
 		-- END ENEMY SPAWNING CODE DONT DELETE
 		
 		--So we can keep raz off the ball
+		--edit remove, stay on the ball!?
 		Global.player:addSpamListener('ControlHandlerChanged', self)
 
 		--For razilla stomping

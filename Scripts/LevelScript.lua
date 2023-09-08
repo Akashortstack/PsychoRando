@@ -1749,6 +1749,7 @@ function LevelScript(Ob)
 	
 	function Ob:startSlowLORaz()
 		-- If you change this, change it in LOCB.
+		--edit removing for Qol?
 		SetAnimSpeedScale(Global.player, .55)
 		self.oldEnglish = GetPhysicsConstant(PHYSICS_MAXENGLISHSPEED)
 		self.oldEnglish2 = GetPhysicsConstant(PHYSICS_MAXENGLISHSPEED2)

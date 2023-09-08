@@ -32,8 +32,6 @@ THINGS TO DO:
 
 --Locations List Document
 
---Fix BTE kicking player out before Dogen and brain tank fight
-
 --Add a few more junk items? 
     --?
 

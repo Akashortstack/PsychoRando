@@ -56,11 +56,14 @@ function Button(Ob)
 		end
 	end
 
-    function Ob:statePickup()
-
+	function Ob:onAddedToInventory()
+		%Ob.Parent.onAddedToInventory(self)		
 		--sendMessage to Dart
 		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
+	end
 
+
+    function Ob:statePickup()
         Global.player.invDisplayer:invItemAdded(self,0,0,nil,1)
 		self:killSelf()
 	end

@@ -102,7 +102,11 @@ function NIBA(Ob)
 		--Killed brain tank, which means done with Sasha's advanced training!  Yes!!!
 		Global.goalManager:activate('MeetLili')
 		Global:setLevelToCompleted('NI')
-		self:loadNewLevel('CASA',0,1)
+
+		--edit return to CU instead
+		Global.levelScript:returnToCU()
+		--self:loadNewLevel('CASA',0,1)
+		
 		self:setState(nil)
 	end
 
