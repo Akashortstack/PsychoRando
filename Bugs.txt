@@ -2,6 +2,12 @@
 
 General Bugs:
 
+--EXTRA TWO LOCATIONS IN MMI2, UNOBTAINABLE
+
+--Gloria's Theater returning after Boss Fight, stage changes is broken
+
+--Collecting Steamertrunk in BB causes player to teleport to vanilla steamertrunk location
+
 --Vanilla game bug: Sasha's Shooting Gallery can softlock during tutorial if player doesn't collect Health Drop in time.
 
 --Gloria's Trophy will spawn in it's vanilla location if placed within the Asylum Entrance (ASGR)

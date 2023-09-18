@@ -2655,7 +2655,7 @@ function Positions(Ob)
             item285 = {        
                 levelName = 'BVRB',
                 x = -2284, 
-                y = 2284, 
+                y = 920, 
                 z = -3038,
                 ox = 0,
                 oy = 0,

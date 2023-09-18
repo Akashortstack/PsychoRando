@@ -36,7 +36,8 @@ function Geyser(Ob)
 			self.pluggedEmitter:run(self)
 			self:loadMesh('Levels/CA_Campgrounds/Props/GeyserTubeBlocked.plb')
 		else
-			self.itemPlugging = nil
+			--edit removed
+			--self.itemPlugging = nil
 			Global.notSaved.normalGeyser = self.Name
 		end
 		if self.tvName and self.tvName ~= '' then
@@ -56,7 +57,8 @@ function Geyser(Ob)
 		%Ob.Parent.onPostBeginLevel(self)
 		--edit moved to use 
 		self.itemPlugging = FindScriptObject(self.itemPlugging)
-		if not Global.notSaved.pluggedGeyser then Global:save('bSolvedGeyserPuzzle', 1) end
+		--edit removed
+		--if not Global.notSaved.pluggedGeyser then Global:save('bSolvedGeyserPuzzle', 1) end
 		if self.itemPlugging and self.itemPlugging ~= '' and Global:load('bSolvedGeyserPuzzle') ~= 1 then 
 			self.itemPlugging:beNotPickupable() 
 			self.oldItemOnItem = self.itemPlugging.onItem

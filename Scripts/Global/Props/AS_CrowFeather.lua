@@ -91,7 +91,8 @@ function AS_CrowFeather(Ob)
 	end]]
 
 	--edit sendMessage to Dart
-	function Ob:statePickup()
+	function Ob:onAddedToInventory()
+		%Ob.Parent.onAddedToInventory(self)		
 		--sendMessage to Dart
 		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
 	end
