@@ -1,14 +1,3 @@
---
--- $Id$
--- $Author$
---
--- Psychonauts
--- (c) 2000 - 2003 Double Fine Productions
--- Proprietary and Confidential
---
--- GLOBALS ControlTable, kCONTROL_TIGHTROPE2, PlayerSetLookTargetSearchDist, TightropeAddVel
-  
--- until new build comes in
 if not kfRAZ_HEIGHT then
 	kfRAZ_HEIGHT = 150
 	kfRAZ_HEAD_RADIUS = 40

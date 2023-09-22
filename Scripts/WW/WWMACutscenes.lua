@@ -1,15 +1,3 @@
---      WWMACutscenes.lua
---
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential
---
---		Directions:  rename this script to {Level}Cutscenes ie 'BVRBCutscenes' and place in the same
---					directory as the level script (ie as BVRB).  to run these cutscenes, from your script
---					call self.levelScript.cutsceneScript:runCutscene(nameOfCutscene), 
---					where state..nameOfCutscene exists in this cutscene script.
---
-
 function WWMACutscenes(Ob)
 	function construct()
 		local Ob = CreateObject('Global.Camera.CutsceneScript')

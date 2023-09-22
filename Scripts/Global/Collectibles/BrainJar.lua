@@ -1,14 +1,3 @@
---*
---*              "Co_Brain.lua"                
---*  
---*       from  P S Y C H O N A U T S
---*
---*  (c) 2003 Double Fine Productions, Inc.  
---*            All Rights Reserved.
---*        Proprietary and Confidential
---*
---************************************************************************************************* 
---
 -- This represents the brain while it is in the Jar.  When attacked, the Jar explodes and leaves
 -- behind the actual collectible Brain object.
 

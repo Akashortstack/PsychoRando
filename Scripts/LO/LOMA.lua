@@ -1,15 +1,3 @@
---		LOMA.lua
---
---      
---
---
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential
---
---      Amy Unger
----------------------------------------------------------------------------------
-
 function LOMA(Ob)
 	
 	-- Constructor

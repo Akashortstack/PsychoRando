@@ -1,15 +1,3 @@
---* CUSTOM RANDO ITEM!!!
---*              "ScavengerHuntItem.lua"                
---*  
---*       from  P S Y C H O N A U T S
---*
---*  (c) 2003 Double Fine Productions, Inc.  
---*            All Rights Reserved.
---*        Proprietary and Confidential
---*
---*	Amy Unger and Bingus
-
---edited name to match
 function ScavIdol(Ob)
 
 	if (Ob == nil) then

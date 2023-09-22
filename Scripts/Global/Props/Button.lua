@@ -1,13 +1,3 @@
---
---  Button.lua
---  
---  from  P S Y C H O N A U T S
---
---  (c) 2003 Double Fine Productions, Inc.  
---  All Rights Reserved.
---  Proprietary, Confidential and shazam
---
-
 function Button(Ob)
 	if not Ob then
 		Ob = CreateObject('Global.Props.HeldObject')

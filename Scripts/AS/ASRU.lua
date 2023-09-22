@@ -1,13 +1,3 @@
-
---      ASRU.lua
---
---      Level Script
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential and Asian Pimp
---
---
-
 function ASRU(Ob)
 	if not Ob then
 		Ob = CreateObject('AS.ASLevelScript')

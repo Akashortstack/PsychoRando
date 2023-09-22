@@ -1,14 +1,3 @@
---      MCTC.lua
---
---      Level Script
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential and Asian Pimp
---
---      Joe Ching
---
--- GLOBALS gRailTransitions
-
 function MCTC(Ob)
 	-- Constructor
 	if (not Ob) then

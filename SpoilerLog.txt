@@ -1,0 +1,427 @@
+Sasha's Underground Lab (CASA)
+LOCATION 1: Behind Furniture (Card) has ITEM 255: AHLarge7
+LOCATION 2: Staircase Ledges (Card) has ITEM 108: PurseTag4
+LOCATION 3: Upper Ledge (Fossil) has ITEM 45: MaxLivesUp2
+
+GPC and Wilderness (CAGP)
+LOCATION 4: Top of GPC (Card) has ITEM 138: DuffleTag4
+LOCATION 5: Under GPC (Card) has ITEM 12: Prop WaterCan
+LOCATION 6: Mountain Lion Log Bridge (Card) has ITEM 122: HatboxTag8
+LOCATION 7: Above Entrance to Lake (Card) has ITEM 68: BrainJarJT
+LOCATION 8: Rock Wall Behind Tree (Card) has ITEM 132: SteamerTag8
+LOCATION 9: Rock Wall Top (Pirate Scope) has ITEM 78: BrainJarChops
+LOCATION 10: Tree Near Fence (Card) has ITEM 336: Card78
+LOCATION 11: Tree Near Geyser (Card) has ITEM 149: Suitcase5
+LOCATION 12: Fence Behind GPC (Card) has ITEM 93: Fossil
+LOCATION 13: Near the Bear (Card) has ITEM 105: PurseTag1
+LOCATION 14: Rocky Platforms Behind GPC Right (Card) has ITEM 62: BrainJarDogen
+LOCATION 15: Rocky Platforms Behind GPC Left (Card) has ITEM 227: AHSmall14
+LOCATION 16: Top of Log Flume (Card) has ITEM 124: HatboxTag10
+LOCATION 17: Ride the Log Flume (Card) has ITEM 237: AHSmall24
+LOCATION 18: Bottom of Log Flume (Card) has ITEM 323: Card65
+LOCATION 19: Big Rock Near Ford (Card) has ITEM 321: Card63
+LOCATION 20: Ruined Cabin (Challenge Marker) has ITEM 303: Card45
+LOCATION 21: Branch Swinging Course Start (Card) has ITEM 296: Card38
+LOCATION 22: Branch Swinging Course Mid (Card) has ITEM 82: Psy Comic
+LOCATION 23: Branch Swinging Course End (Challenge Marker) has ITEM 325: Card67
+LOCATION 24: Branch Above Squirrel (Card) has ITEM 3: Straight Jacket
+LOCATION 25: Creek Grate (Glass Eye) has ITEM 31: Invisibility1
+LOCATION 26: Squirrel's Acorn (Golden Acorn) has ITEM 196: Vault2
+LOCATION 27: Geyser (Miner's Skull) has ITEM 219: AHSmall6
+
+Main Campgrounds (CAMA)
+LOCATION 28: Fence Near Kids' Cabins (Card) has ITEM 95: SuitcaseTag1
+LOCATION 29: Under Lodge Front Steps (Card) has ITEM 38: AmmoUp1
+LOCATION 30: Behind Tree Near Lodge (Card) has ITEM 177: Steamertrunk3
+LOCATION 31: Under the Lodge (Gold Doubloon) has ITEM 182: Steamertrunk8
+LOCATION 32: Loudspeaker 1 Platform  (Card) has ITEM 30: Telekinesis2
+LOCATION 33: Under Lodge Metal Roof (Card) has ITEM 67: BrainJarFranke
+LOCATION 34: Loudspeaker Tightrope Walk (Card) has ITEM 273: Card15
+LOCATION 35: Loudspeaker 2 Platform (Card) has ITEM 106: PurseTag2
+LOCATION 36: Lodge Roof (Challenge Marker) has ITEM 192: Dufflebag8
+LOCATION 37: Metal Roof Outcropping (Card) has ITEM 88: Golden Acorn
+LOCATION 38: Loudspeaker Above Stump (Card) has ITEM 361: Button
+LOCATION 39: Tree Platform Left (Card) has ITEM 343: Card85
+LOCATION 40: Tree Platform Right (Eagle Claw) has ITEM 299: Card41
+LOCATION 41: Rock Wall Top (Card) has ITEM 21: Marksmanship3
+LOCATION 42: Parking Lot Arch (Card) has ITEM 99: SuitcaseTag5
+LOCATION 43: Parking Lot Small Log (Card) has ITEM 59: ChallengeMarker10
+LOCATION 44: Oleander's Car (Card) has ITEM 246: AHSmall33
+LOCATION 45: Parking Lot Basketball Hoop (Card) has ITEM 307: Card49
+LOCATION 46: Parking Lot History Board (Card) has ITEM 139: DuffleTag5
+LOCATION 47: Parking Lot Outhouse (Card) has ITEM 71: BrainJarMilka
+LOCATION 48: Rock Near Bench (Card) has ITEM 352: Card94
+
+Kids' Cabins (CAKC)
+LOCATION 49: Grinding on the Roots (Card) has ITEM 1: Lungfish Call
+LOCATION 50: Under Stairs (Card) has ITEM 14: Candle2
+LOCATION 51: Top of Loudspeaker (Card) has ITEM 141: DuffleTag7
+LOCATION 52: Cabin Roof 1 (Card) has ITEM 249: AHLarge1
+LOCATION 53: Trampoline Above Outhouse (Card) has ITEM 4: Lobato Painting
+LOCATION 54: Trampoline Platform (Challenge Marker) has ITEM 338: Card80
+LOCATION 55: Cabins Outhouse (Card) has ITEM 234: AHSmall21
+LOCATION 56: Behind Cabin (Card) has ITEM 278: Card20
+LOCATION 57: Roof of Cabin 2 (Card) has ITEM 243: AHSmall30
+LOCATION 58: Cave Entrance (Card) has ITEM 203: Vault9
+LOCATION 59: Deep Cave Path (Card) has ITEM 6: Lilis Bracelet
+LOCATION 60: Deep Cave Ladder (Card) has ITEM 116: HatboxTag2
+LOCATION 61: High-Up Tightrope (Card) has ITEM 81: Divers Helmet
+LOCATION 62: Cave Refrigerator (Turkey Sandwich) has ITEM 101: SuitcaseTag7
+LOCATION 63: Graveyard Bear (Card) has ITEM 7: Prop Sign
+
+Reception Area (CARE)
+LOCATION 64: Near Beehive (Card) has ITEM 133: SteamerTag9
+LOCATION 65: Mineshaft Trailer Entrance (Card) has ITEM 289: Card31
+LOCATION 66: Tightrope Start (Card) has ITEM 318: Card60
+LOCATION 67: Tightrope End (Card) has ITEM 284: Card26
+LOCATION 68: Rocks Near Trailer (Card) has ITEM 197: Vault3
+LOCATION 69: Fireplace Tree Lower (Card) has ITEM 142: DuffleTag8
+LOCATION 70: Fireplace Tree Rock (Card) has ITEM 112: PurseTag8
+LOCATION 71: Swamp Skinny Poles (Card) has ITEM 33: Clairvoyance1
+LOCATION 72: Big Log Platform (Card) has ITEM 42: AmmoUp5
+LOCATION 73: Above Waterfall Left (Card) has ITEM 165: Hatbox1
+LOCATION 74: Above Waterfall Right (Card) has ITEM 209: Vault15
+LOCATION 75: Behind the Waterfall (Card) has ITEM 35: Shield1
+LOCATION 76: Weird Tree Left (Cherry Wood Pipe) has ITEM 286: Card28
+LOCATION 77: Weird Tree Right (Card) has ITEM 130: SteamerTag6
+LOCATION 78: Log Hill Top (Card) has ITEM 181: Steamertrunk7
+LOCATION 79: Log Hill Behind (Card) has ITEM 275: Card17
+LOCATION 80: Mineshaft Grind Rail (Card) has ITEM 274: Card16
+LOCATION 81: Mineshaft Upper Entrance (Card) has ITEM 260: Card2
+LOCATION 82: Mineshaft Above Upper Entrance (Card) has ITEM 28: Levitation3
+LOCATION 83: Inside Mineshaft (Card) has ITEM 222: AHSmall9
+LOCATION 84: Mineshaft Bear (Card) has ITEM 180: Steamertrunk6
+LOCATION 85: Swamp Bird's Nest (Condor Egg) has ITEM 320: Card62
+LOCATION 86: Collapsed Cave (Challenge Marker) has ITEM 48: MaxLivesUp5
+LOCATION 87: Fireplace Tree Top (Dinosaur Bone) has ITEM 137: DuffleTag3
+LOCATION 88: Hornet Nest (Fertility Idol) has ITEM 84: Turkey Sandwich
+
+Lake and Boathouse (CABH)
+LOCATION 89: Under the First Bridge (Card) has ITEM 89: Glass Eye
+LOCATION 90: Behind Stump (Card) has ITEM 198: Vault4
+LOCATION 91: Left of Entrance Rock Wall (Card) has ITEM 148: Suitcase4
+LOCATION 92: Poles on Lake (Card) has ITEM 90: Egg
+LOCATION 93: Bathysphere Roof (Card) has ITEM 295: Card37
+LOCATION 94: Bathysphere Dock (Card) has ITEM 76: BrainJarMikhail
+LOCATION 95: Metal Roof Above Ford (Card) has ITEM 315: Card57
+LOCATION 96: Above Ford Ropes (Card) has ITEM 118: HatboxTag4
+LOCATION 97: Above Ford Cabin Platform (Card) has ITEM 282: Card24
+LOCATION 98: Outside Cougar Cave (Card) has ITEM 188: Dufflebag4
+LOCATION 99: Inside Cougar Cave (Diver's Helmet) has ITEM 290: Card32
+LOCATION 100: Bulletin Board Bushes (Card) has ITEM 126: SteamerTag2
+LOCATION 101: Pink Trees Swinging (Card) has ITEM 166: Hatbox2
+LOCATION 102: Pink Trees Platform (Card) has ITEM 231: AHSmall18
+LOCATION 103: Rock Wall Upper (Card) has ITEM 211: Vault17
+LOCATION 104: Lake Shore (Card) has ITEM 221: AHSmall8
+LOCATION 105: Tiny Island (Card) has ITEM 339: Card81
+LOCATION 106: Top of Big Rock (Challenge Marker) has ITEM 185: Dufflebag1
+LOCATION 107: Rock Wall Gap (Psychonauts Comic #1) has ITEM 117: HatboxTag3
+
+Main Lodge (CALI)
+LOCATION 108: Main Lodge Rafters (Voodoo Doll) has ITEM 319: Card61
+
+Ford's Sanctuary (CAJA)
+LOCATION 109: Top of Sanctuary (Card) has ITEM 233: AHSmall20
+LOCATION 110: Bottom of Sanctuary (Card) has ITEM 225: AHSmall12
+
+Rando Only Rank Checks (CABH)
+LOCATION 111: PSI Rank 05 has ITEM 334: Card76
+LOCATION 112: PSI Rank 10 has ITEM 276: Card18
+LOCATION 113: PSI Rank 15 has ITEM 300: Card42
+LOCATION 114: PSI Rank 20 has ITEM 305: Card47
+LOCATION 115: PSI Rank 25 has ITEM 97: SuitcaseTag3
+LOCATION 116: PSI Rank 30 has ITEM 220: AHSmall7
+LOCATION 117: PSI Rank 35 has ITEM 44: MaxLivesUp1
+LOCATION 118: PSI Rank 40 has ITEM 16: Freds Note
+LOCATION 119: PSI Rank 45 has ITEM 17: Priceless Coin
+LOCATION 120: PSI Rank 50 has ITEM 342: Card84
+LOCATION 121: PSI Rank 55 has ITEM 94: Gold Watch
+LOCATION 122: PSI Rank 60 has ITEM 144: DuffleTag10
+LOCATION 123: PSI Rank 65 has ITEM 345: Card87
+LOCATION 124: PSI Rank 70 has ITEM 74: BrainJarNils
+LOCATION 125: PSI Rank 75 has ITEM 292: Card34
+LOCATION 126: PSI Rank 80 has ITEM 265: Card7
+LOCATION 127: PSI Rank 85 has ITEM 57: ChallengeMarker8
+LOCATION 128: PSI Rank 90 has ITEM 20: Marksmanship2
+LOCATION 129: PSI Rank 95 has ITEM 327: Card69
+LOCATION 130: PSI Rank 100 has ITEM 8: Prop Flowers
+
+Asylum Grounds (ASGR)
+LOCATION 131: Rock Wall Bottom (Lili's Bracelet) has ITEM 98: SuitcaseTag4
+LOCATION 132: Rock Wall Ladder (Card) has ITEM 362: Feather
+LOCATION 133: Outside Front Gate (Challenge Marker) has ITEM 288: Card30
+LOCATION 134: Pillar Above Gate (Card) has ITEM 41: AmmoUp4
+LOCATION 135: Fountain Top (Gold Watch) has ITEM 135: DuffleTag1
+LOCATION 136: Hedge Alcove (JT's Brain) has ITEM 120: HatboxTag6
+LOCATION 137: Asylum Doors Right (Franke's Brain) has ITEM 263: Card5
+LOCATION 138: Asylum Doors Left (Card) has ITEM 40: AmmoUp3
+LOCATION 139: Corner Near Fence (Card) has ITEM 235: AHSmall22
+LOCATION 140: Ledge Before Gloria (Kitty's Brain) has ITEM 80: Eagle Claw
+LOCATION 141: Above Elevator (Card) has ITEM 91: Fertility Idol
+LOCATION 142: Crow's Basket (Milka's Brain) has ITEM 271: Card13
+LOCATION 143: Ledge Above Fred Left (Chops' Brain) has ITEM 157: Purse3
+LOCATION 144: Ledge Above Fred Right (Card) has ITEM 52: ChallengeMarker3
+LOCATION 145: Ledge Opposite Elevator (Card) has ITEM 86: Miner Skull
+LOCATION 146: Edgar's Room (Card) has ITEM 160: Purse6
+LOCATION 147: Behind Elevator (Maloof's Brain) has ITEM 337: Card79
+LOCATION 148: Junk Corner (Chloe's Brain) has ITEM 123: HatboxTag9
+LOCATION 149: Above Edgar (Challenge Marker) has ITEM 121: HatboxTag7
+
+Asylum Upper Level (ASUP)
+LOCATION 150: Behind Mattress Wall (Card) has ITEM 298: Card40
+LOCATION 151: Checkered Bathroom (Benny's Brain) has ITEM 317: Card59
+LOCATION 152: Room Near Checkered Bathroom (Card) has ITEM 215: AHSmall2
+LOCATION 153: Elevator Shaft (Card) has ITEM 226: AHSmall13
+LOCATION 154: Room Left of Pipe Slide (Bobby's Brain) has ITEM 72: BrainJarCrystal
+LOCATION 155: Floating in Hole (Card) has ITEM 236: AHSmall23
+LOCATION 156: Next to Hole (Card) has ITEM 217: AHSmall4
+LOCATION 157: Crumbling Outer Wall Planks (Elka's Brain) has ITEM 109: PurseTag5
+LOCATION 158: Crumbling Outer Wall Pillar (Card) has ITEM 36: Shield2
+LOCATION 159: Crumbling Outer Wall Below Platform (Card) has ITEM 85: Voodoo Doll
+LOCATION 160: Crumbling Outer Wall Platform (Card) has ITEM 29: Telekinesis1
+LOCATION 161: Room Above Tilted Stairs (Card) has ITEM 100: SuitcaseTag6
+LOCATION 162: Acid Room Floor (Card) has ITEM 79: Gold Doubloon
+LOCATION 163: Acid Room Table (Card) has ITEM 163: Purse9
+LOCATION 164: Acid Room Window (Quentin's Brain) has ITEM 200: Vault6
+LOCATION 165: Acid Room Overhang (Card) has ITEM 15: Megaphone
+LOCATION 166: Small Windows Ledge (Dogen's Brain) has ITEM 353: Card95
+LOCATION 167: Round Wood Platform (Card) has ITEM 43: AmmoUp6
+LOCATION 168: Grate Climb Bottom (Phoebe's Brain) has ITEM 266: Card8
+LOCATION 169: Grate Climb Mid (Card) has ITEM 50: ChallengeMarker1
+LOCATION 170: Sink Platform Left (Card) has ITEM 359: Card101
+LOCATION 171: Sink Platform Right (Crystal's Brain) has ITEM 58: ChallengeMarker9
+LOCATION 172: Pipes Below Chair Door (Challenge Marker) has ITEM 176: Steamertrunk2
+LOCATION 173: Room Opposite Chair Door (Clem's Brain) has ITEM 341: Card83
+LOCATION 174: Pipe Slide Near Chair Door (Card) has ITEM 54: ChallengeMarker5
+LOCATION 175: Rafters Above Chair Door (Nil's Brain) has ITEM 212: Vault18
+
+Dr. Lobato's Laboratory (ASLB)
+LOCATION 176: Lab Caged Crow Left (Card) has ITEM 27: Levitation2
+LOCATION 177: Lab Caged Crow Right (Vernon's Brain) has ITEM 172: Hatbox8
+LOCATION 178: Next to Pokeylope (Card) has ITEM 169: Hatbox5
+LOCATION 179: Lab Top Railing Left 1 (Card) has ITEM 241: AHSmall28
+LOCATION 180: Lab Top Railing Left 2 (Jarred Brain) has ITEM 150: Suitcase6
+LOCATION 181: Lab Top Elevator (Jarred Brain) has ITEM 178: Steamertrunk4
+LOCATION 182: Lab Top Railing Right (Card) has ITEM 204: Vault10
+LOCATION 183: Tea Room (Birthday Cake) has ITEM 259: Card1
+
+Obstacle Course 1 (BBA1)
+LOCATION 184: Jumping Tutorial 1 (Steamer Trunk) has ITEM 145: Suitcase1
+LOCATION 185: Jumping Tutorial 2 (Steamer Trunk Tag) has ITEM 143: DuffleTag9
+LOCATION 186: Pole-Climbing Tutorial Floor (Suitcase Tag) has ITEM 354: Card96
+LOCATION 187: Below the Triple Trampolines (Suitcase) has ITEM 187: Dufflebag3
+
+Obstacle Course 2 (BBA2)
+LOCATION 188: Giant Soldier Cut-Out (Vault) has ITEM 322: Card64
+LOCATION 189: Dodging Bullets 1 (Hatbox Tag) has ITEM 310: Card52
+LOCATION 190: Dodging Bullets 2 (Hatbox) has ITEM 350: Card92
+LOCATION 191: Machine Gun Turret (Dufflebag Tag) has ITEM 245: AHSmall32
+LOCATION 192: Pole-Swinging Tutorial (Dufflebag) has ITEM 251: AHLarge3
+LOCATION 193: Trapeze Cobweb (Vault) has ITEM 285: Card27
+LOCATION 194: Trapeze Platform (Purse Tag) has ITEM 313: Card55
+LOCATION 195: Inside Plane Wreckage (Purse) has ITEM 238: AHSmall25
+
+Obstacle Course Finale (BBLT)
+LOCATION 196: End of Obstacle Course Left has ITEM 242: AHSmall29
+LOCATION 197: End of Obstacle Course Right has ITEM 316: Card58
+LOCATION 198: Basic Braining Complete has ITEM 55: ChallengeMarker6
+
+Cube Face 1 (SACU)
+LOCATION 199: On the Bed (Memory Vault) has ITEM 5: Cake
+LOCATION 200: On the Pillow (Dufflebag Tag) has ITEM 113: PurseTag9
+LOCATION 201: Building Blocks Left (Hatbox Tag) has ITEM 281: Card23
+LOCATION 202: Building Blocks Below (Dufflebag) has ITEM 19: Marksmanship1
+LOCATION 203: Building Blocks Right (One-Up) has ITEM 156: Purse2
+LOCATION 204: Top of Bed Frame (Hatbox) has ITEM 308: Card50
+
+Cube Face 2 (SACU)
+LOCATION 205: Round Platforms Bottom (Purse Tag) has ITEM 304: Card46
+LOCATION 206: Round Platforms Near Valve (Purse) has ITEM 152: Suitcase8
+LOCATION 207: Round Platforms Far from Valve (One-Up) has ITEM 146: Suitcase2
+
+Cube Face 3 (SACU)
+LOCATION 208: Side of Cube Face 3 (Vault) has ITEM 129: SteamerTag5
+LOCATION 209: Bottom of Shoebox Ladder (Steamer Trunk Tag) has ITEM 358: Card100
+LOCATION 210: Shoebox Pedestal (Steamer Trunk) has ITEM 46: MaxLivesUp3
+LOCATION 211: Shoebox Tower Top (One-Up) has ITEM 297: Card39
+
+Cube Face 4 (SACU)
+LOCATION 212: Flame Tower Steps (Suitcase Tag) has ITEM 335: Card77
+LOCATION 213: Flame Tower Top 1 (Suitcase) has ITEM 311: Card53
+LOCATION 214: Flame Tower Top 2 (One-Up) has ITEM 114: PurseTag10
+LOCATION 215: Sasha's Shooting Gallery Complete has ITEM 49: MaxLivesUp6
+
+The Lounge (MIFL)
+LOCATION 216: Intro Rings Tutorial (Dufflebag Tag) has ITEM 306: Card48
+LOCATION 217: Dancing Camper Platform 1 (Dufflebag) has ITEM 250: AHLarge2
+LOCATION 218: Demon Room (Memory Vault) has ITEM 205: Vault11
+LOCATION 219: Windy Ladder Bottom (Steamer Trunk Tag) has ITEM 210: Vault16
+LOCATION 220: Pinball Plunger (Hatbox Tag) has ITEM 170: Hatbox6
+LOCATION 221: Plunger Party Ledge (Steamer Trunk) has ITEM 13: Candle1
+LOCATION 222: Grindrail Rings (Hatbox) has ITEM 110: PurseTag6
+LOCATION 223: Censor Hallway (Purse Tag) has ITEM 56: ChallengeMarker7
+LOCATION 224: Pink Bowl Bottom (Vault) has ITEM 214: AHSmall1
+LOCATION 225: Pink Bowl Small Platform (Purse) has ITEM 257: AHLarge9
+
+The Party (MILL)
+LOCATION 226: Bubbly Fan Bottom (Suitcase Tag) has ITEM 252: AHLarge4
+LOCATION 227: Bubbly Fan Platform (Ammo Upgrade) has ITEM 104: SuitcaseTag10
+LOCATION 228: Bubbly Fan Top (Suitcase) has ITEM 184: Steamertrunk10
+LOCATION 229: Milla's Party Room has ITEM 355: Card97
+LOCATION 230: Milla's Dance Party Complete has ITEM 216: AHSmall3
+
+The Nightmare Woods (NIMP)
+LOCATION 231: Outside Caravan (Vault) has ITEM 199: Vault5
+LOCATION 232: Behind the Egg (Purse Tag) has ITEM 24: Confusion1
+LOCATION 233: Shadow Monster Path (Steamer Trunk Tag) has ITEM 254: AHLarge6
+LOCATION 234: Shadow Monster Blue Mushrooms (Purse) has ITEM 151: Suitcase7
+LOCATION 235: Ledge Behind Shadow Monster (Steamer Trunk) has ITEM 240: AHSmall27
+LOCATION 236: Below the Steep Ledge (Dufflebag Tag) has ITEM 264: Card6
+LOCATION 237: Forest Path Blue Mushrooms (Suitcase Tag) has ITEM 256: AHLarge8
+LOCATION 238: Forest Blue Ledge (Suitcase) has ITEM 128: SteamerTag4
+LOCATION 239: Forest High Platform (Dufflebag) has ITEM 167: Hatbox3
+LOCATION 240: Forest Path Thorns (Hatbox Tag) has ITEM 357: Card99
+LOCATION 241: Behind Thorn Tower Left (Hatbox) has ITEM 347: Card89
+LOCATION 242: Behind Thorn Tower Mid (Max Lives) has ITEM 96: SuitcaseTag2
+LOCATION 243: Behind Thorn Tower Right (Vault) has ITEM 333: Card75
+
+The Brain Tank (NIBA)
+LOCATION 244: Brain Tumbler Experiment Complete has ITEM 202: Vault8
+
+Lungfishopolis City (LOMA)
+LOCATION 245: Skyscraper Start (One Up) has ITEM 174: Hatbox10
+LOCATION 246: Corner Near Jail (Dufflebag) has ITEM 201: Vault7
+LOCATION 247: Skyscraper before Dam (Purse Tag) has ITEM 279: Card21
+LOCATION 248: Behind Lasers Left 1 (Dufflebag Tag) has ITEM 230: AHSmall17
+LOCATION 249: Behind Lasers Left 2 (Vault) has ITEM 102: SuitcaseTag8
+LOCATION 250: Behind Lasers Right (Purse) has ITEM 270: Card12
+LOCATION 251: Blimp Hop (Hatbox Tag) has ITEM 239: AHSmall26
+LOCATION 252: End of Dam (Hatbox) has ITEM 291: Card33
+LOCATION 253: End of Dam Platform (One Up) has ITEM 349: Card91
+LOCATION 254: Skyscraper after Dam (Ammo Up) has ITEM 87: Pirate Scope
+LOCATION 255: Near Battleships (Steamertrunk Tag) has ITEM 119: HatboxTag5
+LOCATION 256: On the Bridge (One Up) has ITEM 171: Hatbox7
+LOCATION 257: Ground after Bridge (Vault) has ITEM 360: Oarsmans Badge
+LOCATION 258: Skyscraper after Bridge (Steamertrunk) has ITEM 161: Purse7
+LOCATION 259: Tunnel (Suitcase Tag) has ITEM 25: Confusion2
+LOCATION 260: Final Skyscrapers Left (Max Lives) has ITEM 51: ChallengeMarker2
+LOCATION 261: Final Skyscrapers Right (Suitcase) has ITEM 223: AHSmall10
+
+Kochamara Arena (LOCB)
+LOCATION 262: Kochamara Intro Left has ITEM 312: Card54
+LOCATION 263: Kochamara Intro Right has ITEM 213: Vault19
+LOCATION 264: Lungfishopolis Complete has ITEM 83: Wood Pipe
+
+The Neighborhood 1 (MMI1)
+LOCATION 265: Boyd's Fridge (Clairvoyance) has ITEM 346: Card88
+LOCATION 266: First House (Dufflebag Tag) has ITEM 344: Card86
+LOCATION 267: Second House (Rolling Pin) has ITEM 65: BrainJarKitty
+LOCATION 268: Car Trunk 1 (Stop Sign) has ITEM 186: Dufflebag2
+LOCATION 269: Roof after Road Crew  (Purse Tag) has ITEM 294: Card36
+LOCATION 270: Car Trunk 2 (Hedge Trimmers) has ITEM 194: Dufflebag10
+LOCATION 271: Car House Backyard (Steamertrunk Tag) has ITEM 60: BrainJarElton
+LOCATION 272: Inside Webbed Garage (Hatbox) has ITEM 155: Purse1
+LOCATION 273: Graveyard Patio (Vault) has ITEM 324: Card66
+LOCATION 274: Graveyard Behind Tree (One Up) has ITEM 11: Prop RollingPin
+LOCATION 275: Behind Graveyard (Dufflebag) has ITEM 22: Pyrokinesis1
+LOCATION 276: Hedge Maze (Flowers) has ITEM 115: HatboxTag1
+LOCATION 277: Car Trunk 3 (Watering Can) has ITEM 191: Dufflebag7
+LOCATION 278: Post Office Roof (One Up) has ITEM 158: Purse4
+LOCATION 279: Post Office Lobby (Suitcase) has ITEM 69: BrainJarQuentin
+LOCATION 280: Post Office Basement (Plunger) has ITEM 73: BrainJarClem
+LOCATION 281: Landscapers House Backyard (Suitcase Tag) has ITEM 18: Rifle
+LOCATION 282: Landscapers House Table (Purse) has ITEM 153: Suitcase9
+LOCATION 283: Landscapers House Kitchen (Ammo Up) has ITEM 229: AHSmall16
+LOCATION 284: Powerline Island Sandbox (Hatbox Tag) has ITEM 47: MaxLivesUp4
+LOCATION 285: Powerline Island Left (Memory Vault) has ITEM 173: Hatbox9
+LOCATION 286: Powerline Island Right (Max Lives) has ITEM 147: Suitcase3
+
+The Neighborhood 2 (MMI2)
+LOCATION 287: Behind Book Depository (Steamer Trunk) has ITEM 183: Steamertrunk9
+LOCATION 288: Milkman Complete has ITEM 340: Card82
+
+The Stage (THMS)
+LOCATION 289: Near the Critic (Purse) has ITEM 277: Card19
+LOCATION 290: In the Audience (Ammo Up) has ITEM 64: BrainJarElka
+LOCATION 291: Below the Spotlight (Steamertrunk Tag) has ITEM 195: Vault1
+LOCATION 292: Behind Stage (Purse Tag) has ITEM 26: Levitation1
+LOCATION 293: Behind Stage Cobweb (Suitcase) has ITEM 269: Card11
+LOCATION 294: Storage Room Floor (Vault) has ITEM 248: AHSmall35
+LOCATION 295: Storage Room Left (Steamertrunk) has ITEM 351: Card93
+LOCATION 296: Storage Room Right Lower (Suitcase Tag) has ITEM 218: AHSmall5
+LOCATION 297: Storage Room Right Upper (Candle #1) has ITEM 37: Shield3
+LOCATION 298: Bonita's Room has ITEM 272: Card14
+
+The Catwalks (THCW)
+LOCATION 299: Doghouse Slicers (Dufflebag Tag) has ITEM 314: Card56
+LOCATION 300: Big Platform 1 (Hatbox) has ITEM 244: AHSmall31
+LOCATION 301: Big Platform 2 (Vault) has ITEM 70: BrainJarVernon
+LOCATION 302: Big Platform 3 (One Up) has ITEM 247: AHSmall34
+LOCATION 303: Big Platform Above (Hatbox Tag) has ITEM 228: AHSmall15
+LOCATION 304: Next to Oatmeal (Dufflebag) has ITEM 348: Card90
+LOCATION 305: Candle Basket (Candle #2) has ITEM 193: Dufflebag9
+LOCATION 306: Catwalks Start has ITEM 140: DuffleTag6
+LOCATION 307: After Trampolines has ITEM 53: ChallengeMarker4
+LOCATION 308: Gloria's Theater Complete has ITEM 301: Card43
+
+Waterloo World (WWMA)
+LOCATION 309: Fred's Room (Hatbox Tag) has ITEM 2: Glorias Trophy
+LOCATION 310: The Fireplace (Priceless Coin) has ITEM 331: Card73
+LOCATION 311: Game Board (Suitcase Tag) has ITEM 330: Card72
+LOCATION 312: Carpenter's Roof (Vault) has ITEM 208: Vault14
+LOCATION 313: Tightrope Room (Dufflebag) has ITEM 206: Vault12
+LOCATION 314: Outside Villager 1 House (One Up) has ITEM 253: AHLarge5
+LOCATION 315: Small Arch Top (Max Lives) has ITEM 175: Steamertrunk1
+LOCATION 316: Small Arch Below (Purse Tag) has ITEM 293: Card35
+LOCATION 317: Top of Villager 2's House (Dufflebag Tag) has ITEM 9: Prop Plunger
+LOCATION 318: Top of Villager 3's House (Ammo Up) has ITEM 283: Card25
+LOCATION 319: Castle Tower (One Up) has ITEM 127: SteamerTag3
+LOCATION 320: Castle Inside (Vault) has ITEM 261: Card3
+LOCATION 321: Castle Wall (Steamertrunk) has ITEM 302: Card44
+LOCATION 322: Under the Guillotine (Suitcase) has ITEM 267: Card9
+LOCATION 323: Fred's House Basement (Hatbox) has ITEM 168: Hatbox4
+LOCATION 324: Blacksmith's Left Building (Purse) has ITEM 131: SteamerTag7
+LOCATION 325: Blacksmith's Right Building (Steamertrunk Tag) has ITEM 111: PurseTag7
+LOCATION 326: Blacksmith's Haybale (The Musket) has ITEM 107: PurseTag3
+LOCATION 327: Help the Carpenter has ITEM 207: Vault13
+LOCATION 328: Help Villager 1 has ITEM 356: Card98
+LOCATION 329: Help the Knight has ITEM 179: Steamertrunk5
+LOCATION 330: Help Villager 2 has ITEM 77: BrainJarPhoebe
+LOCATION 331: Help Villager 3 has ITEM 134: SteamerTag10
+LOCATION 332: Waterloo World Complete has ITEM 39: AmmoUp2
+
+Running Against the Bull (BVRB)
+LOCATION 333: Club Street Lady (Steamertrunk) has ITEM 232: AHSmall19
+LOCATION 334: Club Street Metal Balcony (Dufflebag Tag) has ITEM 32: Invisibility2
+LOCATION 335: Heart Street HIGH Balcony (Ammo Up) has ITEM 63: BrainJarBenny
+LOCATION 336: Alleyways Ledge (Hatbox Tag) has ITEM 280: Card22
+LOCATION 337: Sewers Main (Vault) has ITEM 162: Purse8
+LOCATION 338: Club Street Gated (Steamer Trunk Tag) has ITEM 309: Card51
+LOCATION 339: Burn the Logs (Dufflebag) has ITEM 224: AHSmall11
+LOCATION 340: The Garden (Vault) has ITEM 61: BrainJarBobby
+LOCATION 341: Near Diego's House (Max Lives) has ITEM 10: Prop HedgeTrimmers
+LOCATION 342: Diego's Bed (Suitcase Tag) has ITEM 189: Dufflebag5
+LOCATION 343: Diego's Room (Hatbox) has ITEM 75: BrainJarMaloof
+LOCATION 344: Diego's House Grindrail (Suitcase) has ITEM 258: AHLarge10
+
+Edgar's Sanctuary (BVES)
+LOCATION 345: Sanctuary Balcony (Purse Tag) has ITEM 34: Clairvoyance2
+LOCATION 346: Sanctuary Ground (Purse) has ITEM 268: Card10
+LOCATION 347: Tiger Wrestler has ITEM 154: Suitcase10
+LOCATION 348: Dragon Wrestler has ITEM 92: Dinosaur Bone
+LOCATION 349: Eagle Wrestler has ITEM 159: Purse5
+LOCATION 350: Cobra Wrestler has ITEM 103: SuitcaseTag9
+LOCATION 351: Black Velvetopia Complete has ITEM 332: Card74
+
+Meat Circus Main (MCTC)
+LOCATION 352: Entrance Awning (Steamertrunk Tag) has ITEM 23: Pyrokinesis2
+LOCATION 353: Crumbling Path (Steamertrunk) has ITEM 125: SteamerTag1
+LOCATION 354: Crumbling Path End (Hatbox Tag) has ITEM 329: Card71
+LOCATION 355: Ollie Escort Floor (Suitcase Tag) has ITEM 190: Dufflebag6
+LOCATION 356: Ollie Escort Middle (Hatbox) has ITEM 164: Purse10
+LOCATION 357: Ollie Escort Top Left (Vault) has ITEM 328: Card70
+LOCATION 358: Ollie Escort Top Right (Purse Tag) has ITEM 326: Card68
+LOCATION 359: Tunnel of Love Start (Purse) has ITEM 66: BrainJarChloe
+LOCATION 360: Tunnel of Love Corner (Suitcase) has ITEM 136: DuffleTag2
+LOCATION 361: Tunnel of Love Rail (Dufflebag Tag) has ITEM 262: Card4
+LOCATION 362: Next to the Fat Lady (Dufflebag) has ITEM 287: Card29

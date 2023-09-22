@@ -1,12 +1,3 @@
---
---		'MatadorBoss'
---		Thien Tran
---
---		(c) 2003 Double Fine Productions, Inc.
---		All Rights Reserved.
---		Proprietary and Confidential
---		
-
 function MatadorBoss(Ob)
 
 	if not Ob then

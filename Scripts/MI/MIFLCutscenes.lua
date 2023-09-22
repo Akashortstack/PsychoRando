@@ -1,10 +1,3 @@
---      MIFLCutscenes.lua
---
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential
---
-
 function MIFLCutscenes(Ob)
 	if not Ob then
 		Ob = CreateObject('Global.Camera.CutsceneScript')

@@ -1,14 +1,3 @@
-
---      BBLT.lua
---
---      Level Script
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential and Asian Pimp
---
---
-
--- Script File for Basic Braining Log Trap
 function BBLT(Ob)
 	if not Ob then
 		Ob = CreateObject('LevelScript')

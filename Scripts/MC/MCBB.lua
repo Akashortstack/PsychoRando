@@ -1,13 +1,3 @@
---      MCBB.lua
---
---      Level Script
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential and Asian Pimp
---
---      
---
-
 function MCBB(Ob)
 	-- Constructor
 	if (not Ob) then

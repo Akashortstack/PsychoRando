@@ -1,14 +1,3 @@
---      AsCo.lua
---
---      Asylum Courtyard Level Script
---
---
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential
---
---
-
 function ASCO(Ob)
 	if (Ob == nil) then
 		Ob = CreateObject('AS.ASLevelScript')

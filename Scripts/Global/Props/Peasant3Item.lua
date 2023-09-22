@@ -1,13 +1,3 @@
---      Rifle.lua
---  
---
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential
---
---     
---
-
 function Peasant3Item(Ob)
 
 	if (not Ob) then

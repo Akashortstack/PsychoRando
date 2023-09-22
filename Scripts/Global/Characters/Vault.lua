@@ -1,10 +1,3 @@
---      Vault
---
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential
---
-
 function Vault(Ob)
 	if (not Ob) then
 		Ob = CreateObject('Global.Characters.ActionActor')

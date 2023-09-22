@@ -1,14 +1,3 @@
---      ASLB.lua
---
---      Asylum Lab Level Script
---
---
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential
---
---
-
 function ASLB(Ob)
 	if (Ob == nil) then
 		-- Constructor

@@ -1,16 +1,3 @@
---      WWMA.lua
---
---      Waterloo World Level Script
---
---
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential
---
---     
---
--- GLOBALS WWHexTable
-
 function WWMA(Ob)
 
 	if (not Ob) then

@@ -1,9 +1,3 @@
---  BVMA.lua
---
---  for   P S Y C H O N A U T S
---  (c) Double Fine Productions
---  Proprietary and Confidential
-
 function BVMA(Ob)
 	-- Constructor
 	if (Ob == nil) then									   

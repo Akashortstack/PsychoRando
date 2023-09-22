@@ -1,13 +1,3 @@
-
---      MMDM.lua
---
---      Level Script
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential
---
---
-
 function MMDM(Ob)
 	if not Ob then
 		Ob = CreateObject('LevelScript')

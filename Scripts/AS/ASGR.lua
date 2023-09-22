@@ -1,15 +1,3 @@
---      ASGR.lua
---
---      Asylum Grounds Level Script
---
---
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential
---
---      Gaurav Mathur
---
-
 function ASGR(Ob)
 	if not Ob then
 	Ob = CreateObject('AS.ASLevelScript')

@@ -1,20 +1,3 @@
---
---      PsiChallengeMarker.lua                
---  
---      from  P S Y C H O N A U T S
---
---  (c) 2003 Double Fine Productions, Inc.  
---            All Rights Reserved.
---        Proprietary and Confidential
---
---  created by Tim Schafer
---  modified by Gaurav Mathur
---  completely revamped by Steve Chen
---  
---  ...
---
---  (not really)
-
 function RandoPsiChallengeMarker(Ob)
 
 	if (not Ob) then

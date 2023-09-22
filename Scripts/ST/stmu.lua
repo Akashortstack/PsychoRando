@@ -1,15 +1,3 @@
---*
---*		"BunkhouseUI.lua"
---*		Wilson Hom
---*		from  P S Y C H O N A U T S
---*
---*		(c) 2003 Double Fine Productions, Inc.
---*		All Rights Reserved.
---*		Proprietary and Confidential and pimp
---*
-
--- Constructor ****************************************************************
-
 function STMU(Ob)
     if not Ob then
        	Ob = CreateObject( 'LevelScript', 'STMU' )

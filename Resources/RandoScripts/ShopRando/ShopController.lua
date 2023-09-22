@@ -1,11 +1,3 @@
---      ShopController.lua
---
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential
---
---      Kee Chi
-
 function ShopController(Ob)
 
 	if (Ob == nil) then

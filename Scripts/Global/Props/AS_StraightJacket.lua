@@ -1,15 +1,3 @@
---
---	AS_StraightJacket.lua                
---	This script controls Fred's straightjacket.  
---	Raz needs it as part of his Doctor Loboto disguise.
---  
---  from  P S Y C H O N A U T S
--- 	(c) 2003 Double Fine Productions, Inc.  
---  All Rights Reserved.
---	
---  Proprietary and Confidential
---
-
 function AS_StraightJacket(Ob)
 	if not Ob then
 		--edit

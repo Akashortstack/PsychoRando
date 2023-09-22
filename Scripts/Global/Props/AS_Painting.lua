@@ -1,16 +1,3 @@
---
---	AS_Painting.lua                
---	This script controls the appearance of the Loboto painting that Raz uses
---	as part of his Doctor Loboto disguise.
---  
---  from  P S Y C H O N A U T S
---
---  (c) 2003 Double Fine Productions, Inc.  
---  All Rights Reserved.
---  Proprietary and Confidential
---
---
-
 function AS_Painting(Ob)
 
 	if (Ob == nil) then

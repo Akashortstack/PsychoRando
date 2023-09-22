@@ -1,12 +1,3 @@
---      SA_LAB_Braintumbler.lua
---
---      This script loads meshes specified in Maya using self.meshname, for example:
---      self.meshname = 'Levels/MI_MillaBrain/MI_introScreens.plb' 
---
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential
-
 function SA_LAB_Braintumbler(Ob)
 	if not Ob then
 		Ob = CreateObject('Global.Props.Animator')

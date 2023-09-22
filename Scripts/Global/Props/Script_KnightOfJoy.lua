@@ -1,13 +1,3 @@
---		Script.lua
---
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential
---
---      Thien Tran
---		
----------------------------------------------------------------------------------
-
 function Script_KnightOfJoy(Ob)
 	
 	-- Constructor

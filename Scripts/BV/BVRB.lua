@@ -1,11 +1,3 @@
---  BVRB.lua
---
---  for   P S Y C H O N A U T S
---  (c) Double Fine Productions
---  Proprietary and Confidential
---
---  Kee Chi
-
 function BVRB(Ob)
 	-- Constructor
 	if (Ob == nil) then									   

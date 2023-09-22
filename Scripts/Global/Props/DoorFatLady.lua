@@ -1,20 +1,3 @@
---
---  FatLady
---  
---  from  P S Y C H O N A U T S
---
---  (c) 2003 Double Fine Productions, Inc.  
---  All Rights Reserved.
---  Proprietary and Confidential
--- 
---  Joe Virskus
---
---  NOTE:  I know I duplicated a lot of stuff in Animator.lua, but this thing had to be a Trampoline,
---  and so I couldn't inherit from Animator.
---  UPDATE:  In retrospect, I should have inherited from Animator and duplicated Trampoline.  Oh well.
-
-
-
 function DoorFatLady(Ob)
 	if not Ob then
 		Ob = CreateObject('Global.Props.Trampoline')

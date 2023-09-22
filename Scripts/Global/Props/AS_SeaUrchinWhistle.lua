@@ -1,17 +1,3 @@
---
---  AS_SeaUrchinWhistle.lua
---
---	Raz uses the Sea Urchin Whistle to call the Lungfish
---	when he needs a ride between the Asylum and the Campgrounds.                
---
---  
---  from  P S Y C H O N A U T S
---
---  (c) 2003 Double Fine Productions, Inc.  
---  All Rights Reserved.
---  Proprietary and Confidential
---
-
 function AS_SeaUrchinWhistle(Ob)
 	if (Ob == nil) then
 		Ob = CreateObject('Global.Props.HeldObject')

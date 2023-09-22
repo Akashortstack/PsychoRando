@@ -1,10 +1,3 @@
---      CASA.lua
---
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential
---
-
 function CASA(Ob)
 	if not Ob then
 		Ob = CreateObject('CA.CALevelScript')

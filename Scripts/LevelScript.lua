@@ -1,13 +1,3 @@
---      LevelScript.lua
---
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential
---
---	All level scripts should extend this.
---
---	Matt Franklin
-
 function LevelScript(Ob)
 	if not Ob then
 		Ob = CreateObject('ScriptBase')

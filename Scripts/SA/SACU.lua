@@ -1,15 +1,3 @@
---      SA.lua
---
---      Sasha's Cube Script
---
---
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential
---
---      Erik Wolpaw
----------------------------------------------------------------------------------
-
 function SACU(Ob)
 	
 	-- Constructor

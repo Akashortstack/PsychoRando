@@ -1,13 +1,3 @@
---      PricelessCoin.lua
---  
---
---      for   P S Y C H O N A U T S
---      (c) Double Fine Productions
---      Proprietary and Confidential
---
---     
---
-
 function Peasant2Item(Ob)
 	if not Ob then
 		--edit to make Global

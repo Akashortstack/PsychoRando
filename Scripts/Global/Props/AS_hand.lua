@@ -1,14 +1,3 @@
---
---	AS_hand.lua                
---	This is Gloria's Trophy script.  Raz uses the trophy as part of his Loboto disguise.
---	  
---  from  P S Y C H O N A U T S
---*
---*  (c) 2003 Double Fine Productions, Inc.  
---*            All Rights Reserved.
---*        Proprietary and Confidential
---*
-
 function AS_hand(Ob)
 
 	if (Ob == nil) then

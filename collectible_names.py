@@ -1,20 +1,20 @@
 collectiblenames = [
 #Current Props from AS, 6 total
-'SeaUrchinWhistle', 'LobatoHand', 'StraightJacket', 'LobatoPainting', 'Cake', 'LiliBracelet', 
+'Lungfish Call', 'Glorias Trophy', 'Straight Jacket', 'Lobato Painting', 'Cake', 'Lilis Bracelet', 
 #Current Props from MM, 6 total
-'PropSign', 'PropFlowers', 'PropPlunger', 'PropHedgeTrimmers', 'PropRollingPin', 'PropWaterCan',
+'Prop Sign', 'Prop Flowers', 'Prop Plunger', 'Prop HedgeTrimmers', 'Prop RollingPin', 'Prop WaterCan',
 #Current Props from TH, 3 total
 'Candle1', 'Candle2', 'Megaphone',
 #Props from WW, 3 total
-'Peasant1Item', #Fred's Note
-'Peasant2Item', #Priceless Coin
-'Peasant3Item', #Rifle
+'Freds Note', #Fred's Note
+'Priceless Coin', #Priceless Coin
+'Rifle', #Rifle
 #19 Psi Powers, Some Different Names to match Class
 'Marksmanship1',
 'Marksmanship2',
 'Marksmanship3',
-'Firestarting1',
-'Firestarting2',
+'Pyrokinesis1',
+'Pyrokinesis2',
 'Confusion1',
 'Confusion2',
 'Levitation1',
@@ -39,24 +39,24 @@ collectiblenames = [
 'AmmoUp6',
 
 #6 Max Lives Up
-'LivesUp1',
-'LivesUp2',
-'LivesUp3',
-'LivesUp4',
-'LivesUp5',
-'LivesUp6',
+'MaxLivesUp1',
+'MaxLivesUp2',
+'MaxLivesUp3',
+'MaxLivesUp4',
+'MaxLivesUp5',
+'MaxLivesUp6',
 
-#10 Challenge Markers
-'Marker1',
-'Marker2',
-'Marker3',
-'Marker4',
-'Marker5',
-'Marker6',
-'Marker7',
-'Marker8',
-'Marker9',
-'Marker10',
+#10 Challenge ChallengeMarkers
+'ChallengeMarker1',
+'ChallengeMarker2',
+'ChallengeMarker3',
+'ChallengeMarker4',
+'ChallengeMarker5',
+'ChallengeMarker6',
+'ChallengeMarker7',
+'ChallengeMarker8',
+'ChallengeMarker9',
+'ChallengeMarker10',
            
 #19 Brain Jars, Unique Names
 'BrainJarElton',
@@ -80,22 +80,22 @@ collectiblenames = [
 'BrainJarChops',
 
 #16 Scavenger Hunt Items, Unique Names, in Order
-'scavDoubloon',
-'scavEagleClaw',
-'ScavDiversHelmet',
-'ScavComic',
-'ScavHuntPipe',
-'ScavSandwich',
-'scavVoodooDollie',
-'ScavSkull',
-'ScavPirateScope',
-'ScavGoldenAcorn',
-'ScavEye',
-'ScavEgg',
-'ScavIdol',
-'ScavBone',
-'scavFossil',
-'ScavHuntGoldWatch',
+'Gold Doubloon',
+'Eagle Claw',
+'Divers Helmet',
+'Psy Comic',
+'Wood Pipe',
+'Turkey Sandwich',
+'Voodoo Doll',
+'Miner Skull',
+'Pirate Scope',
+'Golden Acorn',
+'Glass Eye',
+'Egg',
+'Fertility Idol',
+'Dinosaur Bone',
+'Fossil',
+'Gold Watch',
 
 #50 Emotional Baggage Tags, 10 of each Type
 'SuitcaseTag1',
@@ -131,27 +131,27 @@ collectiblenames = [
 'HatboxTag9',
 'HatboxTag10',
 
-'SteamT1',
-'SteamT2',
-'SteamT3',
-'SteamT4',
-'SteamT5',
-'SteamT6',
-'SteamT7',
-'SteamT8',
-'SteamT9',
-'SteamT10',
+'SteamerTag1',
+'SteamerTag2',
+'SteamerTag3',
+'SteamerTag4',
+'SteamerTag5',
+'SteamerTag6',
+'SteamerTag7',
+'SteamerTag8',
+'SteamerTag9',
+'SteamerTag10',
 
-'DuffleT1',
-'DuffleT2',
-'DuffleT3',
-'DuffleT4',
-'DuffleT5',
-'DuffleT6',
-'DuffleT7',
-'DuffleT8',
-'DuffleT9',
-'DuffleT10',
+'DuffleTag1',
+'DuffleTag2',
+'DuffleTag3',
+'DuffleTag4',
+'DuffleTag5',
+'DuffleTag6',
+'DuffleTag7',
+'DuffleTag8',
+'DuffleTag9',
+'DuffleTag10',
 
 #50 Emotional Baggage, 10 of each Type
 'Suitcase1', 'Suitcase2', 'Suitcase3', 'Suitcase4', 'Suitcase5', 'Suitcase6', 'Suitcase7', 'Suitcase8', 'Suitcase9', 'Suitcase10',
@@ -160,9 +160,9 @@ collectiblenames = [
 
 'Hatbox1', 'Hatbox2', 'Hatbox3', 'Hatbox4', 'Hatbox5', 'Hatbox6', 'Hatbox7', 'Hatbox8','Hatbox9','Hatbox10',
 
-'Steam1', 'Steam2', 'Steam3', 'Steam4', 'Steam5', 'Steam6', 'Steam7', 'Steam8', 'Steam9', 'Steam10',
+'Steamertrunk1', 'Steamertrunk2', 'Steamertrunk3', 'Steamertrunk4', 'Steamertrunk5', 'Steamertrunk6', 'Steamertrunk7', 'Steamertrunk8', 'Steamertrunk9', 'Steamertrunk10',
 
-'Duffle1', 'Duffle2', 'Duffle3', 'Duffle4', 'Duffle5', 'Duffle6', 'Duffle7', 'Duffle8', 'Duffle9', 'Duffle10',
+'Dufflebag1', 'Dufflebag2', 'Dufflebag3', 'Dufflebag4', 'Dufflebag5', 'Dufflebag6', 'Dufflebag7', 'Dufflebag8', 'Dufflebag9', 'Dufflebag10',
 
 #19 Vaults
 'Vault1', 'Vault2', 'Vault3', 'Vault4', 'Vault5', 'Vault6', 'Vault7', 'Vault8', 'Vault9', 'Vault10',
@@ -173,8 +173,8 @@ collectiblenames = [
 'AHSmall11', 'AHSmall12', 'AHSmall13', 'AHSmall14', 'AHSmall15', 'AHSmall16', 'AHSmall17', 'AHSmall18', 'AHSmall19', 'AHSmall20',
 'AHSmall21', 'AHSmall22', 'AHSmall23', 'AHSmall24', 'AHSmall25', 'AHSmall26', 'AHSmall27', 'AHSmall28', 'AHSmall29', 'AHSmall30', 
 'AHSmall31', 'AHSmall32', 'AHSmall33', 'AHSmall34', 'AHSmall35',
-#10 Rando Arrowhead Bundles Medium
-'AHMedium1', 'AHMedium2', 'AHMedium3', 'AHMedium4', 'AHMedium5', 'AHMedium6', 'AHMedium7', 'AHMedium8', 'AHMedium9', 'AHMedium10',
+#10 Rando Arrowhead Bundles Large
+'AHLarge1', 'AHLarge2', 'AHLarge3', 'AHLarge4', 'AHLarge5', 'AHLarge6', 'AHLarge7', 'AHLarge8', 'AHLarge9', 'AHLarge10',
 
 #101 Psicards, filler item, increase if adding more positions
 'Card1', 'Card2', 'Card3', 'Card4', 'Card5', 'Card6', 'Card7', 'Card8', 'Card9', 'Card10',

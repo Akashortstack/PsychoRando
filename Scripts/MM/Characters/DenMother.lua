@@ -1,11 +1,3 @@
---
---		"DenMother"
---
---		(c) 2003 Double Fine Productions, Inc.
---		All Rights Reserved.
---		Proprietary and Confidential and Toaster
---		
-
 function DenMother(Ob)
 	function construct()
 		local Ob = CreateObject('Global.Enemies.BossMain')
