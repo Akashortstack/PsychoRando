@@ -21,27 +21,6 @@ function ScavengerSquirrel(Ob)
 	end
 	
 	function Ob:onBeginLevel()
-		self.acorn = FindScriptObject(self.acorn)
-		if self.acorn == nil then 
-			-- didnt find the acorn, kill de squirrel
-			self:killSelf() 
-			self.noAcorn = 1
-			return
-		--edit removed
-		--[[elseif Global.player.stats.scavengerHuntItems ~= nil and Global.player.stats.scavengerHuntItems['ScavGoldenAcorn'] ~= nil then 
-			-- didnt find the acorn, kill de squirrel
-			self:killSelf() 	
-			self.noAcorn = 1
-			return
-			]]
-			
-		--edit removed this too
-		--[[elseif self.acorn and self.acorn.bCollected == 1 then 
-			-- didnt find the acorn, kill de squirrel... third times the charm
-			self:killSelf() 	
-			self.noAcorn = 1
-			return]]
-		end
 		%Ob.Parent.onBeginLevel(self)
 		SetPhysicsFlag(self, PHYSICS_APPLYGRAVITY, 0)
 		SetPhysicsFlag(self, PHYSICS_COLLIDER, 0)
@@ -51,6 +30,12 @@ function ScavengerSquirrel(Ob)
 	function Ob:onPostBeginLevel()
 		--edit to make work with rando
 		self.acorn = FindScriptObject(self.acorn)
+		if self.acorn == nil then 
+			-- didnt find the acorn, kill de squirrel
+			self:killSelf() 
+			self.noAcorn = 1
+			return
+		end
 		
 		%Ob.Parent.onPostBeginLevel(self)
 		if (self.acorn ~= nil and self.noAcorn ~= 1) then

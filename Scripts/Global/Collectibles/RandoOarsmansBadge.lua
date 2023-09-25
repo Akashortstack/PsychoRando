@@ -16,7 +16,7 @@ function RandoOarsmansBadge(Ob)
         
 		%Ob.Parent.onBeginLevel(self)
         --edit to fix scale and orientation
-		self:setScale(10)
+		self:setScale(11)
         self.mover:setOrientation(ApplyOrientation(0, 180, 90, self.mover:getOrientation()))
 
 		--self.mover:setOrientation(ApplyOrientation(0, 0, 0, self.mover:getOrientation()))
