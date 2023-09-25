@@ -181,7 +181,6 @@ function LOMA(Ob)
 		--Player must have gotten at least this far
 		--Global:setLevelToCompleted('NI')
 		%Ob.Parent.onBeginLevel(self)
-		--edit remove?
 		Global.player.Razilla = 1
 		self.RazillaWalk = LoadSound('LOFootsteps')
 		self.RazillaLand = LoadSound('LOJumpLand')

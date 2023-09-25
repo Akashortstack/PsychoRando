@@ -105,9 +105,9 @@ function RankPowerManager(Ob)
 				Encouragement = "Next Item at Rank 95",
 			},
 			[95] = {
-				Encouragement = "Next Item at Rank 100", 
+				Encouragement = "Next Item at Rank 101", 
 			},
-			[100] = { 
+			[101] = { 
 				bInfiniteAmmo = 1,
 				bMaxPsycadetRank = 1,
 				Encouragement = '',

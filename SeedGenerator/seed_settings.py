@@ -1,2 +1,2 @@
 spoilerlog = True
-startcobwebduster = False
+startcobwebduster = True

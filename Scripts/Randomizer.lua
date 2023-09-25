@@ -168,10 +168,10 @@ function Randomizer(Ob)
                 local ref = FindScriptObject('RankUpPlacer')
                 ref.randoRank95 = name
             end
-            --Rank100
-            if puzzle == 'rank100' then
+            --Rank101
+            if puzzle == 'rank101' then
                 local ref = FindScriptObject('RankUpPlacer')
-                ref.randoRank100 = name
+                ref.randoRank101 = name
             end
 
             --[[Locations in WW spawned by cutscenes]]

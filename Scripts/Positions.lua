@@ -1238,7 +1238,7 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'rank95'
             },
-            --Rank 100
+            --Rank 101
             item130 = {        
                 levelName = 'CAJA',
                 x = -10000, 
@@ -1247,7 +1247,7 @@ function Positions(Ob)
                 ox = 0,
                 oy = 68,
                 oz = 0,
-                puzzle = 'rank100'
+                puzzle = 'rank101'
             }, 
 
             --*******************************************************--

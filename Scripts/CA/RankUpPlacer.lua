@@ -25,7 +25,7 @@ function RankUpPlacer(Ob)
 		Ob.randoRank85 = nil
 		Ob.randoRank90 = nil
 		Ob.randoRank95 = nil
-		Ob.randoRank100 = nil
+		Ob.randoRank101 = nil
     end
 
 	-- checks player rank, moves appropriate rando items to platform if item still exists
@@ -250,15 +250,15 @@ function RankUpPlacer(Ob)
 			GamePrint('Not Rank 95 Yet')
 		end
 
-        if rank >= 100 and self.randoRank100 ~= nil then
-			local YouWin = FindScriptObject(self.randoRank100)
+        if rank >= 101 and self.randoRank101 ~= nil then
+			local YouWin = FindScriptObject(self.randoRank101)
 			if YouWin ~= nil then
 			    YouWin:setPosition(1129, 1193, -1610)
             else
-                GamePrint('Rank100 Already Collected')
+                GamePrint('Rank101 Already Collected')
             end
 		else
-			GamePrint('Not Rank 100 Yet')
+			GamePrint('Not Rank 101 Yet')
 		end
 
 	end
