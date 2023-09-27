@@ -1,5 +1,5 @@
 import random
-from seed_settings import spoilerlog, startcobwebduster
+import seed_settings
 from location_names import locationnames
 from collectible_names import collectiblenames
 
@@ -63,7 +63,7 @@ with open("RandoSeed.lua", "w") as file:
     file.write(text1)
 
     #write cobwebduster setting, make boolean uppercase for Game
-    cobwebsetting = str(startcobwebduster).upper()
+    cobwebsetting = str(seed_settings.startcobwebduster).upper()
     file.write(f"Ob.startcobweb = {cobwebsetting}\n")
 
     text2 = '''end
@@ -96,7 +96,7 @@ with open("RandoSeed.lua", "w") as file:
 
     file.write(text3)
 #Future Settings Option, Toggles Spoiler Log
-if spoilerlog == True:
+if seed_settings.spoilerlog == True:
     # Create and open the output file for SpoilerLog.txt
     with open("SpoilerLog.txt", "w") as file:
         count = 1

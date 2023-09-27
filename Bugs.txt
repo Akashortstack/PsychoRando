@@ -2,8 +2,6 @@
 
 General Bugs:
 
---EXTRA TWO LOCATIONS IN MMI2, UNOBTAINABLE
-
 --Gloria's Theater returning after Boss Fight, stage changes is broken
 
 --Collecting Steamertrunk in BB causes player to teleport to vanilla steamertrunk location
@@ -21,13 +19,11 @@ skip cutscenes to avoid!!!
 
 --Hornet Nest sometimes doesn't spawn, maybe because fertility idol already collected?
 
---Items on CubeFace4 need position adjusted, inside platforms of level.
-
---Below issues possibly caused by turning in scavenger hunt items to Ford?
+--Below issues can happen randomly, keep trying different fixes
 
     --Geyser item sometimes doesn't load
 
-    --Squirrel Disappears sometimes...
+    --Squirrel Disappears sometimes
 
 --move MM item (hatbox behind cobweb) to the right so it can't be grabbed through walls, doesn't clip through floor
 
@@ -35,23 +31,16 @@ skip cutscenes to avoid!!!
     --item in Post Office (vanilla baggage) sometimes in floor
     --Vaults in MM sometimes float away into the void
 
-
 THINGS TO DO:
 
---Locations List Document
-
---Add a few more junk items? 
-    --?
+--Add more junk items? 
 
 --Speed up animations in Lungfishopolis? QoL change?
 
 --Needs better logic!!! How do we implement this?
     --Randomization method update, SeedGenerator overhaul
 
---Update seed generator script to create SpoilerLog.txt
+--Update seed generator and randomizer to support different settings, add settings page and "Generate" Button
 
---Update seed generator and randomizer to support different settings
-
---Black Velvetopia potential shop rando? Card Reward rando? Needs work...
-
---Trying to load saves sometimes crashes the game, has improved recently but still keeping an eye on this
+--Black Velvetopia potential shop painting rando? Card Reward rando? Needs work...
+    --Could remove shop functionality entirely, just be collectible spots. Doesn't feel good.

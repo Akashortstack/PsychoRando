@@ -1,14 +1,18 @@
 collectiblenames = [
 #Current Props from AS, 6 total
-'Lungfish Call', 'Glorias Trophy', 'Straight Jacket', 'Lobato Painting', 'Cake', 'Lilis Bracelet', 
+'Lungfish Call', 'Glorias Trophy', 'Straight Jacket', 'Lobato Painting', 'Cake', 'Lilis Bracelet',
+
 #Current Props from MM, 6 total
 'Prop Sign', 'Prop Flowers', 'Prop Plunger', 'Prop HedgeTrimmers', 'Prop RollingPin', 'Prop WaterCan',
+
 #Current Props from TH, 3 total
 'Candle1', 'Candle2', 'Megaphone',
+
 #Props from WW, 3 total
 'Freds Note', #Fred's Note
 'Priceless Coin', #Priceless Coin
 'Rifle', #Rifle
+
 #19 Psi Powers, Some Different Names to match Class
 'Marksmanship1',
 'Marksmanship2',
@@ -173,10 +177,11 @@ collectiblenames = [
 'AHSmall11', 'AHSmall12', 'AHSmall13', 'AHSmall14', 'AHSmall15', 'AHSmall16', 'AHSmall17', 'AHSmall18', 'AHSmall19', 'AHSmall20',
 'AHSmall21', 'AHSmall22', 'AHSmall23', 'AHSmall24', 'AHSmall25', 'AHSmall26', 'AHSmall27', 'AHSmall28', 'AHSmall29', 'AHSmall30', 
 'AHSmall31', 'AHSmall32', 'AHSmall33', 'AHSmall34', 'AHSmall35',
-#10 Rando Arrowhead Bundles Large
-'AHLarge1', 'AHLarge2', 'AHLarge3', 'AHLarge4', 'AHLarge5', 'AHLarge6', 'AHLarge7', 'AHLarge8', 'AHLarge9', 'AHLarge10',
 
-#101 Psicards, filler item, increase if adding more positions
+#7 Rando Arrowhead Bundles Large
+'AHLarge1', 'AHLarge2', 'AHLarge3', 'AHLarge4', 'AHLarge5', 'AHLarge6', 'AHLarge7',
+
+#104 Psicards, filler item, increase if adding more positions
 'Card1', 'Card2', 'Card3', 'Card4', 'Card5', 'Card6', 'Card7', 'Card8', 'Card9', 'Card10',
 'Card11', 'Card12', 'Card13', 'Card14', 'Card15', 'Card16', 'Card17', 'Card18', 'Card19', 'Card20',
 'Card21', 'Card22', 'Card23', 'Card24', 'Card25', 'Card26', 'Card27', 'Card28', 'Card29', 'Card30', 
@@ -187,7 +192,7 @@ collectiblenames = [
 'Card71', 'Card72', 'Card73', 'Card74', 'Card75', 'Card76', 'Card77', 'Card78', 'Card79', 'Card80', 
 'Card81', 'Card82', 'Card83', 'Card84', 'Card85', 'Card86', 'Card87', 'Card88', 'Card89', 'Card90', 
 'Card91', 'Card92', 'Card93', 'Card94', 'Card95', 'Card96', 'Card97', 'Card98', 'Card99', 'Card100',
-'Card101', 
+'Card101', 'Card102', 'Card103', 'Card104', 
 
 #Oarsman's Badge
 'Oarsmans Badge',
