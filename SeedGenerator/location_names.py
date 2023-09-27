@@ -139,7 +139,7 @@ locationnames = [
 "PSI Rank 85",
 "PSI Rank 90",
 "PSI Rank 95",
-"PSI Rank 100",
+"PSI Rank 101",
 
 #THORNEY TOWERS
 #Asylum Grounds (ASGR)
