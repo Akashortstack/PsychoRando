@@ -294,8 +294,7 @@ function RankPowerManager(Ob)
 	
 	--Put any special code you need for a certain rank inside of this function
 	function Ob:onRank(rank, bSilent)
-		--edit increased rank to 30
-		if (rank == 30) and (Global:isInInventory('CobwebDuster') ~= 1) then
+		if (rank == 20) and (Global:isInInventory('CobwebDuster') ~= 1) then
 			Global.goalManager:activate('CobwebDuster', bSilent)
 			if (Global:isInInventory('DowsingRod') ~= 1) then
 				Global.goalManager:activate('GetDowsingRod', bSilent)
