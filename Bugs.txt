@@ -33,6 +33,8 @@ skip cutscenes to avoid!!!
 
 THINGS TO DO:
 
+--Add requirements to enter Sasha's and Milla's minds? Learner's Permits?
+
 --Add more junk items? 
 
 --Speed up animations in Lungfishopolis? QoL change?

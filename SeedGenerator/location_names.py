@@ -1,11 +1,11 @@
 locationnames = [
 
-#WHISPERING ROCK SUMMER CAMP
-#Sasha's Underground Lab (CASA)
+# WHISPERING ROCK SUMMER CAMP
+# Sasha's Underground Lab (CASA)
 "Behind Furniture (Card)",
 "Staircase Ledges (Card)",
 "Upper Ledge (Fossil)",
-#GPC and Wilderness (CAGP)
+# GPC and Wilderness (CAGP)
 "Top of GPC (Card)",
 "Under GPC (Card)",
 "Mountain Lion Log Bridge (Card)",
@@ -30,7 +30,7 @@ locationnames = [
 "Creek Grate (Glass Eye)",
 "Squirrel's Acorn (Golden Acorn)",
 "Geyser (Miner's Skull)",
-#Main Campgrounds (CAMA)
+# Main Campgrounds (CAMA)
 "Fence Near Kids' Cabins (Card)",
 "Under Lodge Front Steps (Card)",
 "Behind Tree Near Lodge (Card)",
@@ -52,7 +52,7 @@ locationnames = [
 "Parking Lot History Board (Card)",
 "Parking Lot Outhouse (Card)",
 "Rock Near Bench (Card)",
-#Kids' Cabins (CAKC)
+# Kids' Cabins (CAKC)
 "Grinding on the Roots (Card)",
 "Under Stairs (Card)",
 "Top of Loudspeaker (Card)",
@@ -67,7 +67,7 @@ locationnames = [
 "Deep Cave Ladder (Card)",
 "High-Up Tightrope (Card)",
 "Cave Refrigerator (Turkey Sandwich)",
-#Reception Area (CARE)
+# Reception Area (CARE)
 "Graveyard Bear (Card)",
 "Near Beehive (Card)",
 "Mineshaft Trailer Entrance (Card)",
@@ -94,7 +94,7 @@ locationnames = [
 "Collapsed Cave (Challenge Marker)",
 "Fireplace Tree Top (Dinosaur Bone)",
 "Hornet Nest (Fertility Idol)",
-#Lake and Boathouse (CABH)
+# Lake and Boathouse (CABH)
 "Under the First Bridge (Card)",
 "Behind Stump (Card)",
 "Left of Entrance Rock Wall (Card)",
@@ -113,13 +113,13 @@ locationnames = [
 "Lake Shore (Card)",
 "Tiny Island (Card)",
 "Top of Big Rock (Challenge Marker)",
-"Rock Wall Gap (Psychonauts Comic #1)",
-#Main Lodge (CALI)
+"Rock Wall Gap (Psychonauts Comic # 1)",
+# Main Lodge (CALI)
 "Main Lodge Rafters (Voodoo Doll)",
-#Ford's Sanctuary (CAJA)
+# Ford's Sanctuary (CAJA)
 "Top of Sanctuary (Card)",
 "Bottom of Sanctuary (Card)",
-#Rando Only Rank Checks
+# Rando Only Rank Checks
 "PSI Rank 05",
 "PSI Rank 10",
 "PSI Rank 15",
@@ -141,8 +141,8 @@ locationnames = [
 "PSI Rank 95",
 "PSI Rank 101",
 
-#THORNEY TOWERS
-#Asylum Grounds (ASGR)
+# THORNEY TOWERS
+# Asylum Grounds (ASGR)
 "Rock Wall Bottom (Lili's Bracelet)",
 "Rock Wall Ladder (Card)",
 "Outside Front Gate (Challenge Marker)",
@@ -153,7 +153,7 @@ locationnames = [
 "Asylum Doors Left (Card)",
 "Corner Near Fence (Card)",
 "Ledge Before Gloria (Kitty's Brain)",
-#Asylum Lower Level (ASCO)
+# Asylum Lower Level (ASCO)
 "Above Elevator (Card)",
 "Crow's Basket (Milka's Brain)",
 "Ledge Above Fred Left (Chops' Brain)",
@@ -163,7 +163,7 @@ locationnames = [
 "Behind Elevator (Maloof's Brain)",
 "Junk Corner (Chloe's Brain)",
 "Above Edgar (Challenge Marker)",
-#Asylum Upper Level (ASUP)
+# Asylum Upper Level (ASUP)
 "Behind Mattress Wall (Card)",
 "Checkered Bathroom (Benny's Brain)",
 "Room Near Checkered Bathroom (Card)",
@@ -190,7 +190,7 @@ locationnames = [
 "Room Opposite Chair Door (Clem's Brain)",
 "Pipe Slide Near Chair Door (Card)",
 "Rafters Above Chair Door (Nil's Brain)",
-#Dr. Loboto's Laboratory (ASLB)
+# Dr. Loboto's Laboratory (ASLB)
 "Lab Caged Crow Left (Card)",
 "Lab Caged Crow Right (Vernon's Brain)",
 "Next to Pokeylope (Card)",
@@ -200,13 +200,13 @@ locationnames = [
 "Lab Top Railing Right (Card)",
 "Tea Room (Birthday Cake)",
 
-#BASIC BRAINING
-#Obstacle Course 1 (BBA1)
+# BASIC BRAINING
+# Obstacle Course 1 (BBA1)
 "Jumping Tutorial 1 (Steamer Trunk)",
 "Jumping Tutorial 2 (Steamer Trunk Tag)",
 "Pole-Climbing Tutorial Floor (Suitcase Tag)",
 "Below the Triple Trampolines (Suitcase)",
-#Obstacle Course 2 (BBA2)
+# Obstacle Course 2 (BBA2)
 "Giant Soldier Cut-Out (Vault)",
 "Dodging Bullets 1 (Hatbox Tag)",
 "Dodging Bullets 2 (Hatbox)",
@@ -215,36 +215,36 @@ locationnames = [
 "Trapeze Cobweb (Vault)",
 "Trapeze Platform (Purse Tag)",
 "Inside Plane Wreckage (Purse)",
-#Obstacle Course Finale (BBLT)
+# Obstacle Course Finale (BBLT)
 "End of Obstacle Course Left",
 "End of Obstacle Course Right",
 "Basic Braining Complete",
 
-#SASHA'S SHOOTING GALLERY
-#Cube Face 1 (SACU)
+# SASHA'S SHOOTING GALLERY
+# Cube Face 1 (SACU)
 "On the Bed (Memory Vault)",
 "On the Pillow (Dufflebag Tag)",
 "Building Blocks Left (Hatbox Tag)",
 "Building Blocks Below (Dufflebag)",
 "Building Blocks Right (One-Up)",
 "Top of Bed Frame (Hatbox)",
-#Cube Face 2 (SACU)
+# Cube Face 2 (SACU)
 "Round Platforms Bottom (Purse Tag)",
 "Round Platforms Near Valve (Purse)",
 "Round Platforms Far from Valve (One-Up)",
-#Cube Face 3 (SACU)
+# Cube Face 3 (SACU)
 "Side of Cube Face 3 (Vault)",
 "Bottom of Shoebox Ladder (Steamer Trunk Tag)",
 "Shoebox Pedestal (Steamer Trunk)",
 "Shoebox Tower Top (One-Up)",
-#Cube Face 4 (SACU)
+# Cube Face 4 (SACU)
 "Flame Tower Steps (Suitcase Tag)",
 "Flame Tower Top 1 (Suitcase)",
 "Flame Tower Top 2 (One-Up)",
 "Sasha's Shooting Gallery Complete",
 
-#MILLA'S DANCE PARTY
-#The Lounge (MIFL)
+# MILLA'S DANCE PARTY
+# The Lounge (MIFL)
 "Intro Rings Tutorial (Dufflebag Tag)",
 "Dancing Camper Platform 1 (Dufflebag)",
 "Demon Room (Memory Vault)",
@@ -255,15 +255,15 @@ locationnames = [
 "Censor Hallway (Purse Tag)",
 "Pink Bowl Bottom (Vault)",
 "Pink Bowl Small Platform (Purse)",
-#The Party (MILL)
+# The Party (MILL)
 "Bubbly Fan Bottom (Suitcase Tag)",
 "Bubbly Fan Platform (Ammo Upgrade)",
 "Bubbly Fan Top (Suitcase)",
 "Milla's Party Room",
 "Milla's Dance Party Complete",
 
-#BRAIN TUMBLER EXPERIMENT
-#The Nightmare Woods (NIMP)
+# BRAIN TUMBLER EXPERIMENT
+# The Nightmare Woods (NIMP)
 "Outside Caravan (Vault)",
 "Behind the Egg (Purse Tag)",
 "Shadow Monster Path (Steamer Trunk Tag)",
@@ -277,11 +277,11 @@ locationnames = [
 "Behind Thorn Tower Left (Hatbox)",
 "Behind Thorn Tower Mid (Max Lives)",
 "Behind Thorn Tower Right (Vault)",
-#The Brain Tank (NIBA)
+# The Brain Tank (NIBA)
 "Brain Tumbler Experiment Complete",
 
-#LUNGFISHOPOLIS
-#Lungfishopolis City (LOMA)
+# LUNGFISHOPOLIS
+# Lungfishopolis City (LOMA)
 "Skyscraper Start (One Up)",
 "Corner Near Jail (Dufflebag)",
 "Skyscraper before Dam (Purse Tag)",
@@ -299,13 +299,13 @@ locationnames = [
 "Tunnel (Suitcase Tag)",
 "Final Skyscrapers Left (Max Lives)",
 "Final Skyscrapers Right (Suitcase)",
-#Kochamara Arena (LOCB)
+# Kochamara Arena (LOCB)
 "Kochamara Intro Left",
 "Kochamara Intro Right",
 "Lungfishopolis Complete",
 
-#THE MILKMAN CONSPIRACY
-#The Neighborhood 1 (MMI1)
+# THE MILKMAN CONSPIRACY
+# The Neighborhood 1 (MMI1)
 "Boyd's Fridge (Clairvoyance)",
 "First House (Dufflebag Tag)",
 "Second House (Rolling Pin)",
@@ -328,12 +328,12 @@ locationnames = [
 "Powerline Island Sandbox (Hatbox Tag)",
 "Powerline Island Left (Memory Vault)",
 "Powerline Island Right (Max Lives)",
-#The Neighborhood 2 (MMI2)
+# The Neighborhood 2 (MMI2)
 "Behind Book Depository (Steamer Trunk)",
 "Milkman Complete",
 
-#GLORIA'S THEATER
-#The Stage (THMS)
+# GLORIA'S THEATER
+# The Stage (THMS)
 "Near the Critic (Purse)",
 "In the Audience (Ammo Up)",
 "Below the Spotlight (Steamertrunk Tag)",
@@ -342,21 +342,21 @@ locationnames = [
 "Storage Room Floor (Vault)",
 "Storage Room Left (Steamertrunk)",
 "Storage Room Right Lower (Suitcase Tag)",
-"Storage Room Right Upper (Candle #1)",
+"Storage Room Right Upper (Candle # 1)",
 "Bonita's Room",
-#The Catwalks (THCW)
+# The Catwalks (THCW)
 "Doghouse Slicers (Dufflebag Tag)",
 "Big Platform 1 (Hatbox)",
 "Big Platform 2 (Vault)",
 "Big Platform 3 (One Up)",
 "Big Platform Above (Hatbox Tag)",
 "Next to Oatmeal (Dufflebag)",
-"Candle Basket (Candle #2)",
+"Candle Basket (Candle # 2)",
 "Catwalks Start",
 "After Trampolines",
 "Gloria's Theater Complete",
 
-#WATERLOO WORLD (WWMA)
+# WATERLOO WORLD (WWMA)
 "Fred's Room (Hatbox Tag)",
 "The Fireplace (Priceless Coin)",
 "Game Board (Suitcase Tag)",
@@ -382,8 +382,8 @@ locationnames = [
 "Help Villager 3",
 "Waterloo World Complete",
 
-#BLACK VELVETOPIA
-#Running Against the Bull (BVRB)
+# BLACK VELVETOPIA
+# Running Against the Bull (BVRB)
 "Club Street Lady (Steamertrunk)",
 "Club Street Metal Balcony (Dufflebag Tag)",
 "Heart Street HIGH Balcony (Ammo Up)",
@@ -396,7 +396,7 @@ locationnames = [
 "Diego's Bed (Suitcase Tag)",
 "Diego's Room (Hatbox)",
 "Diego's House Grindrail (Suitcase)",
-#Edgar's Sanctuary (BVES)
+# Edgar's Sanctuary (BVES)
 "Sanctuary Balcony (Purse Tag)",
 "Sanctuary Ground (Purse)",
 "Tiger Wrestler",
@@ -405,8 +405,8 @@ locationnames = [
 "Cobra Wrestler",
 "Black Velvetopia Complete",
 
-#MEAT CIRCUS
-#Meat Circus Main (MCTC)
+# MEAT CIRCUS
+# Meat Circus Main (MCTC)
 "Entrance Awning (Steamertrunk Tag)",
 "Crumbling Path (Steamertrunk)",
 "Crumbling Path End (Hatbox Tag)",
