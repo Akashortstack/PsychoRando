@@ -9,8 +9,9 @@ game_graph = nx.Graph()
 
 
 #Empty Inventory Table
-player_inventory = ["Cobweb Duster",]
+empty_inventory = ["Cobweb Duster",]
 
+# List of items placed in nodes by create_seed
 vanilla_list = [
 #Current Props from AS, 6 total
 'Lungfish Call', "Gloria's Trophy", 'Straight Jacket', 'Lobato Painting', 'Cake', 'Lilis Bracelet',
@@ -618,7 +619,7 @@ def fill_locations(graph, item_list):
             graph.nodes["Meat Circus Main: Oly Escort (MCTC)"]["items"].append(item)
 
 # Function to collect items in a node
-def get_items_in_node(graph, node_name):
+def get_items_in_node(graph, node_name, inventory):
     if graph.has_node(node_name):
         node_data = graph.nodes[node_name]
         #Checks if location has items
@@ -628,20 +629,20 @@ def get_items_in_node(graph, node_name):
             items_to_collect = list(node_data["items"])
             # Add each item to player_inventory
             for item in items_to_collect:                
-                player_inventory.append(item)
+                inventory.append(item)
                 node_data["items"].remove(item)
                 #print(item)
     return None  # Node not found or no items in the node
 
 # Function to check if the player meets the requirements to traverse an edge
-def traverse_edge(graph, source_node, target_node, player_inventory):
+def traverse_edge(graph, source_node, target_node, inventory):
     if graph.has_edge(source_node, target_node):
         edge_data = graph[source_node][target_node]
         if "requirements" in edge_data:  # Check if edge has requirements
             missing_items = []  # Tracks any missing items to print
 
             for required_item in edge_data["requirements"]:  #Compares inventory to requirements
-                if required_item not in player_inventory:
+                if required_item not in inventory:
                     missing_items.append(required_item)  # Add to missing items table
 
             if missing_items:
@@ -652,10 +653,10 @@ def traverse_edge(graph, source_node, target_node, player_inventory):
 
             else:  # missing_items is empty
                 #print("Requirements Met!")
-                get_items_in_node(graph, target_node)  # Collect all items in location!
+                get_items_in_node(graph, target_node, inventory)  # Collect all items in location!
                 return True
         else:  # No specific requirements
-            get_items_in_node(graph, target_node)
+            get_items_in_node(graph, target_node, inventory)
             return True  
     else:  # Edge doesn't exist
         print("Edge does not exist")
@@ -709,6 +710,9 @@ def create_seed():
         # Create copy of graph for adding items and checking
         world_copy = copy.deepcopy(game_graph)
 
+        #Create copy of empty inventory
+        player_inventory = copy.deepcopy(empty_inventory)
+
         # Put shuffled items in locations
         fill_locations(world_copy, shuffled_list)
 
@@ -718,7 +722,7 @@ def create_seed():
         if base_check == False:
             print("Base Check Failed.")
         else:        
-            get_items_in_node(world_copy, "Start")  #Start at Start!
+            get_items_in_node(world_copy, "Start", player_inventory)  #Start at Start!
             print(f"Player Inventory: {player_inventory}\n")
             world_count = 0
             while "Goal" not in player_inventory and world_count < 6: 

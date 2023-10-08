@@ -739,8 +739,8 @@ def create_seed():
         print("Too many attempts!")
         return None
 
-#seed, spoiler_names = create_seed()
+seed, spoiler_names = create_seed()
 
-#print(seed)
-#print(spoiler_names)
+print(seed)
+print(spoiler_names)
 
