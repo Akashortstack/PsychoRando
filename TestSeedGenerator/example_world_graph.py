@@ -25,7 +25,7 @@ vanilla_list = ["apple", "banana", "cherry", "Levitation", "date", "elderberry",
 shuffled_list = []
 
 #Empty Inventory Table
-player_inventory = []
+player_inventory = ["Cobweb Duster",]
 
 # Function to check indexes in list and add to location
 def fill_locations(graph, item_list):
