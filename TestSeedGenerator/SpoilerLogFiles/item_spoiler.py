@@ -1,4 +1,4 @@
-collectiblenames = [
+item_spoiler_list = [
 #Current Props from AS, 6 total
 'Lungfish Call', 'Glorias Trophy', 'Straight Jacket', 'Lobato Painting', 'Cake', 'Lilis Bracelet',
 

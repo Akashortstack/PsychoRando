@@ -254,21 +254,6 @@ function MCTC(Ob)
 		-- Spawn a fake butcher, just to do saylines
 		self.butcher = SpawnScript('ScriptBase', 'Butcher', 'self.charName = \'ButcherSilhouette\'')
 		
-		--[[ --edit Prevent entering last level unless player has defeated Oleander BrainTank,
-		spawn DoorFatLady.lua prop as a visual blocker
-		]]
-		if (Global:loadGlobal('bSavedLili') == 1) then
-			--register the end of level trigger volume to add a brain for completing this level
-			RegisterTriggerVolume(self, 'tv_MCTCtoMCBB') 
-		else
-			remove = fso('MCTCtoMCBB')
-			remove:killSelf()
-			--spawn DoorFatLady
-			local door = SpawnScript('global.props.DoorFatLady', 'NO_ENTRY')
-			door:setPosition(-1615, -1597, 16200)
-			door:setOrientation(0, -178, 0)
-		end
-
 
 		--Put all tightropes in the tent interior domain.  Kind of hacky, but what are you gonna do about it?  Huh?		
 		foreach_entity_oftype('global.props.Tightrope', function(t) SetEntityDomain(t, 'TentInteriorDOMAIN') end)
@@ -284,6 +269,57 @@ function MCTC(Ob)
 
 	function Ob:onPostBeginLevel()
 		%Ob.Parent.onPostBeginLevel(self)
+
+		--[[ --edit Prevent entering last level unless player has defeated Oleander BrainTank,
+		check for any settings requirements,
+		spawn DoorFatLady.lua prop as a visual blocker
+		]]
+		local seedsettings = fso('RandoSeed', 'RandoSeed')
+		local victoryMet = TRUE
+		local brainsMet = TRUE
+		local scavhuntMet = TRUE
+
+		--check if Coach Oleander defeated
+		if seedsettings.finalboss == TRUE then
+			if (Global:loadGlobal('bSavedLili') == 1) then
+				GamePrint('Lili Saved!')
+			else
+				victoryMet = FALSE
+			end
+		end
+
+		if seedsettings.brainhunt == TRUE then
+			--check if all 19 brains have been redeemed
+			if (Global:loadGlobal('totalBrainsRedeemed') == 19) then
+				GamePrint('All Brains Redeemed!') 
+			else 
+				brainsMet = FALSE
+			end
+		end
+
+		if seedsettings.scavengerhunt == TRUE then
+			--check if all 16 scav items have been redeemed
+			if (Global:loadGlobal('numRedeemedScavengerHuntItems') == 16) then
+				GamePrint('All ScavHunt Redeemed!') 
+			else 
+				scavhuntMet = FALSE
+			end
+		end
+		
+		
+		if victoryMet == FALSE or brainsMet == FALSE or scavhuntMet == FALSE then
+			remove = fso('MCTCtoMCBB')
+			remove:killSelf()
+			--spawn DoorFatLady
+			local door = SpawnScript('global.props.DoorFatLady', 'NO_ENTRY')
+			door:setPosition(-1615, -1597, 16200)
+			door:setOrientation(0, -178, 0)
+		else
+			--register the end of level trigger volume to add a brain for completing this level
+			RegisterTriggerVolume(self, 'tv_MCTCtoMCBB')
+		end
+
+		
 
 		if (Global:load('bCaravanIntroPlayed') ~= 1) then
 			Global.cutsceneScript:runCutscene('CaravanIntro')

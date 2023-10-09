@@ -1,2 +1,5 @@
 spoilerlog = True
-startcobwebduster = False
+startcobwebduster = True
+brainhunt = True
+scavengerhunt = True
+finalboss = True

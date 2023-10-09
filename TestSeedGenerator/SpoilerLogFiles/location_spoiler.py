@@ -1,4 +1,4 @@
-locationnames = [
+location_spoiler_list = [
 
 # WHISPERING ROCK SUMMER CAMP
 # Sasha's Underground Lab (CASA)
