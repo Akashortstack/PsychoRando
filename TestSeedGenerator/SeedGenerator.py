@@ -267,7 +267,7 @@ game_graph.add_edge("Start", "Victory", requirements = [])
 
 
 
-if seed_settings.finalboss:
+if seed_settings.beatoleander:
     game_graph.edges["Start", "Victory"]["requirements"].extend(["Cobweb Duster", "Levitation", "Pyrokinesis", "Telekinesis", "Lungfish Call", "Lobato Painting", "Gloria's Trophy", "Straight Jacket", "Cake",])
 if seed_settings.brainhunt:
     game_graph.edges["Start", "Victory"]["requirements"].extend([
@@ -611,9 +611,9 @@ with open("RandoSeed.lua", "w") as file:
     scavengerhuntsetting = str(seed_settings.scavengerhunt).upper()
     file.write(f"Ob.scavengerhunt = {scavengerhuntsetting}\n")
 
-    #write finalboss setting, make boolean uppercase for Game
-    finalbosssetting = str(seed_settings.finalboss).upper()
-    file.write(f"Ob.finalboss = {finalbosssetting}\n")
+    #write beatoleander setting, make boolean uppercase for Game
+    beatoleandersetting = str(seed_settings.beatoleander).upper()
+    file.write(f"Ob.beatoleander = {beatoleandersetting}\n")
 
     text2 = '''end
 

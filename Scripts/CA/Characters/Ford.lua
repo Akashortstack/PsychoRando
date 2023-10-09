@@ -828,6 +828,9 @@ function Ford(Ob)
 			Global.cutsceneScript:runCutscene('FordScavengerFull', 1)
 			Global.goalManager:deactivate('ScavengerHunt1',1)
 			Global.goalManager:deactivate('ScavengerHunt2')
+			--edit to fix redeem Scav Hunt items bug
+			Global:saveGlobal('bRedeemed16ScavengerItems', 1)
+
 		elseif (Global:loadGlobal('bCollected8ScavengerItems') == 1 and Global:load('bFordScavengerHalfPlayed') ~= 1 and Global:load('bFordScavengerFullPlayed') ~= 1) then
 			Global.cutsceneScript:runCutscene('FordScavengerHalf', 1)
 			Global.goalManager:deactivate('ScavengerHunt1')

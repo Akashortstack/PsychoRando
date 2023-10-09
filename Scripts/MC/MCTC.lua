@@ -280,7 +280,7 @@ function MCTC(Ob)
 		local scavhuntMet = TRUE
 
 		--check if Coach Oleander defeated
-		if seedsettings.finalboss == TRUE then
+		if seedsettings.beatoleander == TRUE then
 			if (Global:loadGlobal('bSavedLili') == 1) then
 				GamePrint('Lili Saved!')
 			else
@@ -299,8 +299,8 @@ function MCTC(Ob)
 
 		if seedsettings.scavengerhunt == TRUE then
 			--check if all 16 scav items have been redeemed
-			if (Global:loadGlobal('numRedeemedScavengerHuntItems') == 16) then
-				GamePrint('All ScavHunt Redeemed!') 
+			if (Global:loadGlobal('bRedeemed16ScavengerItems') == 1) then
+				GamePrint('All ScavHunt Redeemed!')
 			else 
 				scavhuntMet = FALSE
 			end
