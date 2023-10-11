@@ -1,13 +1,30 @@
 import networkx as nx
 import random
 import copy
-import seed_settings
+# import seed_settings
 from item_names import item_names_list
 from SpoilerLogFiles.item_spoiler import item_spoiler_list
 from SpoilerLogFiles.location_spoiler import location_spoiler_list
+import configparser
 
+# Create a configparser object
+config = configparser.ConfigParser()
+
+# Read the config.ini file
+config.read('config.ini')
+
+# Config.ini settings 
+seed_settings_spoilerlog = config['SeedSettings']['spoilerlog']
+seed_settings_startcobwebduster = config['SeedSettings']['startcobwebduster']
+seed_settings_beatoleander = config['SeedSettings']['beatoleander']
+seed_settings_everylocation = config['SeedSettings']['everylocation']
+seed_settings_rank101 = config['SeedSettings']['rank101']
+seed_settings_brainhunt = config['SeedSettings']['brainhunt']
+seed_settings_scavengerhunt = config['SeedSettings']['scavengerhunt']
+
+
+# Create Game Graph
 game_graph = nx.Graph()
-
 
 #Empty Inventory Table
 empty_inventory = ["Cobweb Duster",]
@@ -266,10 +283,13 @@ game_graph.add_edge("Start", "Meat Circus Main: Oly Escort (MCTC)", requirements
 game_graph.add_edge("Start", "Victory", requirements = [])
 
 
-
-if seed_settings.beatoleander:
+if seed_settings_everylocation == 'True':
+    game_graph.edges["Start", "Victory"]["requirements"].extend(["Cobweb Duster", "Levitation", "Pyrokinesis", "Telekinesis", "Confusion", "Marksmanship", "Clairvoyance", "Shield", "Invisibility", 
+    "Lungfish Call", "Lobato Painting", "Gloria's Trophy", "Straight Jacket", "Cake", "Candle1", "Candle2", "Megaphone", "Prop Sign", "Prop Plunger", "Prop Flowers", "Prop HedgeTrimmers", "Prop Rolling Pin", "Fred's Letter", "Priceless Coin", "Musket",])
+elif seed_settings_beatoleander == 'True':
     game_graph.edges["Start", "Victory"]["requirements"].extend(["Cobweb Duster", "Levitation", "Pyrokinesis", "Telekinesis", "Lungfish Call", "Lobato Painting", "Gloria's Trophy", "Straight Jacket", "Cake",])
-if seed_settings.brainhunt:
+
+if seed_settings_brainhunt == 'True':  #Add all brains to victory requirement
     game_graph.edges["Start", "Victory"]["requirements"].extend([
     'BrainJarElton',
     'BrainJarBobby',
@@ -291,7 +311,8 @@ if seed_settings.brainhunt:
     'BrainJarPhoebe',
     'BrainJarChops',
     ])
-if seed_settings.scavengerhunt:
+
+if seed_settings_scavengerhunt == 'True':  #Add all scav hunt items to victory requirement
    game_graph.edges["Start", "Victory"]["requirements"].extend([
     'Gold Doubloon',
     'Eagle Claw',
@@ -598,22 +619,33 @@ with open("RandoSeed.lua", "w") as file:
       Ob.seed = {}
       '''
     file.write(text1)
+    
+    # Section where all settings booleans are written to RandoSeed.lua
 
-    #write cobwebduster setting, make boolean uppercase for Game
-    cobwebsetting = str(seed_settings.startcobwebduster).upper()
-    file.write(f"Ob.startcobweb = {cobwebsetting}\n")
+    # write cobwebduster setting, make boolean uppercase for Game
+    startcobwebsetting = str(seed_settings_startcobwebduster).upper()
+    file.write(f"Ob.startcobweb = {startcobwebsetting}\n")
 
-    #write brainhunt setting, make boolean uppercase for Game
-    brainhuntsetting = str(seed_settings.brainhunt).upper()
+    # write beatoleander setting, make boolean uppercase for Game
+    beatoleandersetting = str(seed_settings_beatoleander).upper()
+    file.write(f"Ob.beatoleander = {beatoleandersetting}\n")
+
+    # write everylocation setting, make boolean uppercase for Game
+    everylocationsetting = str(seed_settings_everylocation).upper()
+    file.write(f"Ob.everylocation = {everylocationsetting}\n")
+
+    # write rank101 setting, make boolean uppercase for Game
+    rank101setting = str(seed_settings_rank101).upper()
+    file.write(f"Ob.rank101 = {rank101setting}\n")
+
+    # write brainhunt setting, make boolean uppercase for Game
+    brainhuntsetting = str(seed_settings_brainhunt).upper()
     file.write(f"Ob.brainhunt = {brainhuntsetting}\n")
 
-    #write scavengerhunt setting, make boolean uppercase for Game
-    scavengerhuntsetting = str(seed_settings.scavengerhunt).upper()
+    # write scavengerhunt setting, make boolean uppercase for Game
+    scavengerhuntsetting = str(seed_settings_scavengerhunt).upper()
     file.write(f"Ob.scavengerhunt = {scavengerhuntsetting}\n")
 
-    #write beatoleander setting, make boolean uppercase for Game
-    beatoleandersetting = str(seed_settings.beatoleander).upper()
-    file.write(f"Ob.beatoleander = {beatoleandersetting}\n")
 
     text2 = '''end
 
@@ -645,7 +677,8 @@ with open("RandoSeed.lua", "w") as file:
 
     file.write(text3)
 #Future Settings Option, Toggles Spoiler Log
-if seed_settings.spoilerlog == True:
+if seed_settings_spoilerlog == 'True':
+    print ('Spoiler Log True!')
     # Create and open the output file for SpoilerLog.txt
     with open("SpoilerLog.txt", "w") as file:
         count = 1

@@ -276,6 +276,7 @@ function MCTC(Ob)
 		]]
 		local seedsettings = fso('RandoSeed', 'RandoSeed')
 		local victoryMet = TRUE
+		local rank101Met = TRUE
 		local brainsMet = TRUE
 		local scavhuntMet = TRUE
 
@@ -285,6 +286,14 @@ function MCTC(Ob)
 				GamePrint('Lili Saved!')
 			else
 				victoryMet = FALSE
+			end
+		end
+
+		if seedsettings.rank101 == TRUE then
+			if (Global:loadGlobal('rank') >= 101) then
+				GamePrint('Rank 101 Achieved!')
+			else
+				rank101Met = FALSE
 			end
 		end
 
@@ -307,7 +316,8 @@ function MCTC(Ob)
 		end
 		
 		
-		if victoryMet == FALSE or brainsMet == FALSE or scavhuntMet == FALSE then
+		if victoryMet == FALSE or brainsMet == FALSE or scavhuntMet == FALSE or rank101Met == FALSE then
+			GamePrint('Missing Win Condition, Spawn Fat Lady')
 			remove = fso('MCTCtoMCBB')
 			remove:killSelf()
 			--spawn DoorFatLady
@@ -315,6 +325,7 @@ function MCTC(Ob)
 			door:setPosition(-1615, -1597, 16200)
 			door:setOrientation(0, -178, 0)
 		else
+			GamePrint('Remove Fat Lady')
 			--register the end of level trigger volume to add a brain for completing this level
 			RegisterTriggerVolume(self, 'tv_MCTCtoMCBB')
 		end
