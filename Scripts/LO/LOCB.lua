@@ -142,15 +142,17 @@ function LOCB(Ob)
 
 		Global.camControl:pushAndSetChase(self, nil, -5, 225)
 
+		--edit moved to onPostBeginLevel()
 		-- put all the slow raz stuff in this function found in LevelScript.lua
-		self:startSlowLORaz()		
+		--self:startSlowLORaz()		
 
 		self.rWindSoundHandle = LoadSound('TowerWind')
 		
 		Global.goalManager:activate('DefeatKochamera')
 		
+		--edit moved to onPostBeginLevel() for QOL
 		--So we can keep raz off the ball
-		Global.player:addSpamListener('ControlHandlerChanged', self)
+		--Global.player:addSpamListener('ControlHandlerChanged', self)
 
 		--For razilla stomping
 		Global.player:addSpamListener('Collide', self) 
@@ -161,6 +163,16 @@ function LOCB(Ob)
 	
 	function Ob:onPostBeginLevel()
 		%Ob.Parent.onPostBeginLevel(self)
+
+		-- put all the slow raz stuff in this function found in LevelScript.lua
+		self:startSlowLORaz()
+		
+		--edit only add if fasterLO QOL FALSE
+		local seedsettings = fso('RandoSeed', 'Randoseed')
+		if seedsettings == FALSE then
+			--So we can keep raz off the ball
+			Global.player:addSpamListener('ControlHandlerChanged', self)
+		end
 
 		local w = FindScriptObject('waterbeforedam')
 		if ( w ) then

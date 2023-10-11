@@ -1739,8 +1739,14 @@ function LevelScript(Ob)
 	
 	function Ob:startSlowLORaz()
 		-- If you change this, change it in LOCB.
-		--edit removing for Qol?
-		SetAnimSpeedScale(Global.player, .55)
+		--edit adjust value from .55 to .75 for LO QOL
+		local seedsettings = fso('RandoSeed', 'RandoSeed')
+		if seedsettings.fasterLO == TRUE then
+			GamePrint("ZOOM!")
+			SetAnimSpeedScale(Global.player, .75)
+		else
+			SetAnimSpeedScale(Global.player, .55)
+		end
 		self.oldEnglish = GetPhysicsConstant(PHYSICS_MAXENGLISHSPEED)
 		self.oldEnglish2 = GetPhysicsConstant(PHYSICS_MAXENGLISHSPEED2)
 		SetPhysicsConstant(Global.player, PHYSICS_MAXENGLISHSPEED, 200)

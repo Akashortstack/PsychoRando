@@ -267,9 +267,10 @@ function LOMA(Ob)
 		Trigger_RegisterListener(self.rVolcanoTSHandle, self)
 
 		self.rVolcanoAmbientSound = LoadSound('Volcano')
+
+		--edit moved to onPostBeginLevel()
 		-- put all the slow raz stuff in this function found in LevelScript.lua
-		--edit remove for QOL?
-		self:startSlowLORaz()
+		--self:startSlowLORaz()
 		
 		if (Global:loadGlobal('bLOCompleted') == 1) then
 			RegisterTriggerVolume(self, 'tv_plane1')
@@ -288,9 +289,9 @@ function LOMA(Ob)
 		end
 		-- END ENEMY SPAWNING CODE DONT DELETE
 		
+		--edit moved to onPostBeginLevel for LO QOL
 		--So we can keep raz off the ball
-		--edit remove, stay on the ball!?
-		Global.player:addSpamListener('ControlHandlerChanged', self)
+		--Global.player:addSpamListener('ControlHandlerChanged', self)
 
 		--For razilla stomping
 		Global.player:addSpamListener('Collide', self) 
@@ -304,6 +305,16 @@ function LOMA(Ob)
 
 	function Ob:onPostBeginLevel()
 		%Ob.Parent.onPostBeginLevel(self)
+
+		-- put all the slow raz stuff in this function found in LevelScript.lua
+		self:startSlowLORaz()
+
+		--edit only add if fasterLO QOL FALSE
+		local seedsettings = fso('RandoSeed', 'Randoseed')
+		if seedsettings == FALSE then
+			--So we can keep raz off the ball
+			Global.player:addSpamListener('ControlHandlerChanged', self)
+		end
 
 		-- hack to remove this while Fred's out
 		local etruckcs = FindScriptObject('electrotruckCutscene', 1)
