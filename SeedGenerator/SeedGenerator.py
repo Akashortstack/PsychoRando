@@ -1,11 +1,10 @@
 import networkx as nx
 import random
 import copy
-# import seed_settings
+import configparser
 from item_names import item_names_list
 from SpoilerLogFiles.item_spoiler import item_spoiler_list
 from SpoilerLogFiles.location_spoiler import location_spoiler_list
-import configparser
 
 # Create a configparser object
 config = configparser.ConfigParser()
@@ -13,16 +12,20 @@ config = configparser.ConfigParser()
 # Read the config.ini file
 config.read('config.ini')
 
-# Config.ini settings 
-seed_settings_spoilerlog = config['SeedSettings']['spoilerlog']
+# Config.ini SeedSettings 
 seed_settings_startcobwebduster = config['SeedSettings']['startcobwebduster']
 seed_settings_beatoleander = config['SeedSettings']['beatoleander']
-seed_settings_everylocation = config['SeedSettings']['everylocation']
+seed_settings_everylocationpossible = config['SeedSettings']['everylocationpossible']
 seed_settings_rank101 = config['SeedSettings']['rank101']
 seed_settings_brainhunt = config['SeedSettings']['brainhunt']
 seed_settings_scavengerhunt = config['SeedSettings']['scavengerhunt']
 
+# Config.ini QualityOfLife 
 seed_settings_fasterLO = config['QualityOfLife']['fasterLO']
+
+# Config.ini AdditionalFiles 
+seed_settings_spoilerlog = config['AdditionalFiles']['spoilerlog']
+
 
 
 # Create Game Graph
@@ -285,7 +288,7 @@ game_graph.add_edge("Start", "Meat Circus Main: Oly Escort (MCTC)", requirements
 game_graph.add_edge("Start", "Victory", requirements = [])
 
 
-if seed_settings_everylocation == 'True':
+if seed_settings_everylocationpossible == 'True':
     game_graph.edges["Start", "Victory"]["requirements"].extend(["Cobweb Duster", "Levitation", "Pyrokinesis", "Telekinesis", "Confusion", "Marksmanship", "Clairvoyance", "Shield", "Invisibility", 
     "Lungfish Call", "Lobato Painting", "Gloria's Trophy", "Straight Jacket", "Cake", "Candle1", "Candle2", "Megaphone", "Prop Sign", "Prop Plunger", "Prop Flowers", "Prop HedgeTrimmers", "Prop Rolling Pin", "Fred's Letter", "Priceless Coin", "Musket",])
 elif seed_settings_beatoleander == 'True':
@@ -632,9 +635,9 @@ with open("RandoSeed.lua", "w") as file:
     beatoleandersetting = str(seed_settings_beatoleander).upper()
     file.write(f"Ob.beatoleander = {beatoleandersetting}\n")
 
-    # write everylocation setting, make boolean uppercase for Game
-    everylocationsetting = str(seed_settings_everylocation).upper()
-    file.write(f"Ob.everylocation = {everylocationsetting}\n")
+    # write everylocationpossible setting, make boolean uppercase for Game
+    everylocationpossiblesetting = str(seed_settings_everylocationpossible).upper()
+    file.write(f"Ob.everylocationpossible = {everylocationpossiblesetting}\n")
 
     # write rank101 setting, make boolean uppercase for Game
     rank101setting = str(seed_settings_rank101).upper()
