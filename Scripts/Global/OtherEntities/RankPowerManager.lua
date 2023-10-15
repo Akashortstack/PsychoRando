@@ -97,7 +97,7 @@ function RankPowerManager(Ob)
 				--bDamageShield = 1,
 				Encouragement = "Next Item at Rank 85",
 			},
-			[86] = {
+			[85] = {
 				Encouragement = "Next Item at Rank 90", 
 			},
 			[90] = { 

@@ -206,7 +206,9 @@ function Brain(Ob)
 	
 	function Ob:endStateKissBrain()
 		-- make double sure this gets turned back on
-		Global.player:loadAnim('anims/DartNew/StandStill.jan', .2,0)
+		--edit removed to prevent dropping like a rock
+		--Global.player:loadAnim('anims/DartNew/StandStill.jan', .2,0)
+		
 		UnLoadPriorityAnim(Global.player,1)
 		EnableLooking(Global.player,1)
 		Global.player.invDisplayer:invItemAdded(self, 1, 0)

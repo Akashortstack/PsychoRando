@@ -37,7 +37,10 @@ function Vault(Ob)
 		Ob.runSound = 'VaultFS'
 		
 		Ob.bDetailCull = 0 -- Editable
-		
+
+		--edit to prevent vaults from falling to ground
+		Ob.bSnapEntityToGround = 0
+
 		-- Flee data
 		--edit to make smaller
 		Ob.triggerRadius = 450			--Start fleeing at this point
@@ -128,6 +131,13 @@ function Vault(Ob)
 		
 		SetPhysicsFlag(self, PHYSICS_NAVIGATION, 1)
 
+		--edit to prevent from falling in air, and can be stood on top of
+		SetPhysicsFlag(self, PHYSICS_ORIENTTOGRAVITY, 0)
+		SetPhysicsFlag(self, PHYSICS_APPLYGRAVITY, 0)
+		SetEntityFlag(self, ENTITY_CANNOTBESTOODON, 0)
+
+
+
 		-- Setting the nav group explicitly will cause the physics system to
 		-- constrain the entity to the appropriate nav polys
 		SetNavGroup(self, 0)
@@ -158,7 +168,7 @@ function Vault(Ob)
 		SetMeshIsBackwards(self, 1)
 		
 		-- make the vaults teeny in LOMA
-		--removed, Normal Size Vaults Please
+		--edit removed, Normal Size Vaults Please
 		
 		--[[if (GetCurrentLevelName() == 'LOMA') then
 			self:setScale(0.5)

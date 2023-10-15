@@ -25,24 +25,18 @@ skip cutscenes to avoid!!!
 
     --Squirrel Disappears sometimes
 
---move MM item (hatbox behind cobweb) to the right so it can't be grabbed through walls, doesn't clip through floor
-
---Gravity sometimes not applied correctly in MM
-    --item in Post Office (vanilla baggage) sometimes in floor
-    --Vaults in MM sometimes float away into the void
+--Some locations need adjusting cleanup
+    --item in MM Post Office (vanilla baggage) sometimes in floor
 
 THINGS TO DO:
+
+--Create Item Tracker
 
 --Add requirements to enter Sasha's and Milla's minds? Learner's Permits?
 
 --Add more junk items? 
 
---Speed up animations in Lungfishopolis? QoL change?
-
---Needs better logic!!! How do we implement this?
-    --Randomization method update, SeedGenerator overhaul
-
---Update seed generator and randomizer to support different settings, add settings page and "Generate" Button
+--Update seed generator, add settings page and "Generate" Button
 
 --Black Velvetopia potential shop painting rando? Card Reward rando? Needs work...
     --Could remove shop functionality entirely, just be collectible spots. Doesn't feel good.
