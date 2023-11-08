@@ -10,10 +10,12 @@ function Clairvoyance(Ob)
 	
 	function Ob:onBeginLevel()
 		self.meshName = 'GlobalModels/GO_GlobalObjects/meritbadges/'..strlower(self.power)..'.plb'
-		if Global:loadGlobal('bGot'..self.power) == 1 then
+
+		--edit remove
+		--[[if Global:loadGlobal('bGot'..self.power) == 1 then
 			self:killSelf()
 			return
-		end
+		end]]
 
 		--edit
 		if Global.player.stats.RandoClairvoyance[self.Name] == 'collected' then

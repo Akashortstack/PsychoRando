@@ -120,10 +120,11 @@ function Confusion(Ob)
 		EnablePower(self:getConstant())
 
 		-- Show any max ammo ups in the level, if they exist.
-		if self.power == 'Confusion' then
+		--edit removed
+		--[[if self.power == 'Confusion' then
 			local showFunc = function(ent) ent:show() end
 			foreach_entity_ofexacttype('global.collectibles.MaxConfusionUp', showFunc)
-		end
+		end]]
 
 		--edit sendMessage to Dart
 		self:sendMessage(Global.player, 'RandoConfusion', self.Name, 1)
