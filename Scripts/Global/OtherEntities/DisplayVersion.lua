@@ -4,7 +4,7 @@ function DisplayVersion(Ob)
     end
 
     Ob.modName = "PsychoRando"
-    Ob.version = "v0.7.0-BETA"
+    Ob.version = "v0.8.0-BETA"
 
     Ob.modNameHandle = nil
     Ob.modVersionHandle = nil

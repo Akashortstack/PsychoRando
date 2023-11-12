@@ -203,4 +203,7 @@ item_names_list = [
 
 #Crow Feather
 'Feather',
+
+#Cobweb Duster
+'Cobweb Duster',
 ]

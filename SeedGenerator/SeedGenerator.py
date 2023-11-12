@@ -14,6 +14,7 @@ config.read('config.ini')
 
 # Config.ini SeedSettings 
 seed_settings_startcobwebduster = config['SeedSettings']['startcobwebduster']
+seed_settings_randomizecobwebduster = config['SeedSettings']['randomizecobwebduster']
 seed_settings_beatoleander = config['SeedSettings']['beatoleander']
 seed_settings_everylocationpossible = config['SeedSettings']['everylocationpossible']
 seed_settings_rank101 = config['SeedSettings']['rank101']
@@ -32,7 +33,7 @@ seed_settings_spoilerlog = config['AdditionalFiles']['spoilerlog']
 game_graph = nx.Graph()
 
 #Empty Inventory Table
-empty_inventory = ["Cobweb Duster",]
+empty_inventory = []
 
 # Add nodes (locations) to the graph
 
@@ -156,6 +157,9 @@ game_graph.add_node("Edgar's Sanctuary: Boss (BVES)", items = [])  # Need Cobweb
 # MEAT CIRCUS
 game_graph.add_node("Meat Circus Main (MCTC)", items = [])  # Need Cobweb Duster
 game_graph.add_node("Meat Circus Main: Oly Escort (MCTC)", items = [])  # Need Cobweb Duster, Telekinesis, Levitation?
+
+# DUMMY LOCATION FOR COBWEB DUSTER
+game_graph.add_node("DUMMY LOCATION (NOT COLLECTIBLE)", items = []) # Dummy location for handling Cobweb Duster Randomization
 
 # Collected if all requirements are met
 game_graph.add_node("Victory", items = ["Goal",])
@@ -287,6 +291,9 @@ game_graph.add_edge("Start", "Meat Circus Main: Oly Escort (MCTC)", requirements
 # Collected if all requirements are met
 game_graph.add_edge("Start", "Victory", requirements = [])
 
+# Add Cobweb Duster to logic starting inventory if not randomized
+if seed_settings_randomizecobwebduster == 'False' or seed_settings_startcobwebduster == 'True':
+    empty_inventory.append("Cobweb Duster")
 
 if seed_settings_everylocationpossible == 'True':
     game_graph.edges["Start", "Victory"]["requirements"].extend(["Cobweb Duster", "Levitation", "Pyrokinesis", "Telekinesis", "Confusion", "Marksmanship", "Clairvoyance", "Shield", "Invisibility", 
@@ -485,6 +492,10 @@ def fill_locations(graph, item_list):
             graph.nodes["Meat Circus Main (MCTC)"]["items"].append(item)
         if 354<=index<=361:
             graph.nodes["Meat Circus Main: Oly Escort (MCTC)"]["items"].append(item)
+        #Dummy Location for Cobweb Duster Randomization
+        if 362<=index:
+            graph.nodes["DUMMY LOCATION (NOT COLLECTIBLE)"]["items"].append(item)
+
 
 # Function to collect items in a node
 def get_items_in_node(graph, node_name, inventory):
@@ -563,13 +574,12 @@ def check_impossible(graph):
 
 def create_seed():
     beatable = False
-    # THIS NEEDS FIXED, LOCATIONS ARE NOT BEING CLEARED EACH LOOP
     count = 0
-    while not beatable and count < 100:
+    while not beatable and count < 50:
         copy_list = []
         copy_list = item_names_list
-        # Shuffle item list with numbers 1 to 363 and item names
-        item_values = list(range(1, 363))
+        # Shuffle item list with numbers 1 to 364 and item names
+        item_values = list(range(1, 364))
         combined_items = list(zip(copy_list, item_values, item_spoiler_list))
         random.shuffle(combined_items)
         #Unzip
@@ -580,6 +590,20 @@ def create_seed():
 
         #Create copy of empty inventory
         player_inventory = copy.deepcopy(empty_inventory)
+
+        # Handle Randomize Cobweb Setting
+        if seed_settings_randomizecobwebduster == 'False' or seed_settings_startcobwebduster == 'True':
+            # Remove Cobweb Duster from list and place at end
+            shuffled_list = [item for item in shuffled_list if item != 'Cobweb Duster']
+            shuffled_list.append('Cobweb Duster')
+            shuffled_values = [item for item in shuffled_values if item != 363]
+            shuffled_values.append(363)
+        else:
+            # Remove Card104 and place at end if randomizecobweduster == True
+            shuffled_list = [item for item in shuffled_list if item != 'Card104']
+            shuffled_list.append('Card104')
+            shuffled_values = [item for item in shuffled_values if item != 359]
+            shuffled_values.append(359)
 
         # Put shuffled items in locations
         fill_locations(world_copy, shuffled_list)
@@ -627,9 +651,13 @@ with open("RandoSeed.lua", "w") as file:
     
     # Section where all settings booleans are written to RandoSeed.lua
 
-    # write cobwebduster setting, make boolean uppercase for Game
+    # write startcobwebduster setting, make boolean uppercase for Game
     startcobwebsetting = str(seed_settings_startcobwebduster).upper()
     file.write(f"Ob.startcobweb = {startcobwebsetting}\n")
+
+    # write randomizecobwebduster setting, make boolean uppercase for Game
+    randomizecobwebsetting = str(seed_settings_randomizecobwebduster).upper()
+    file.write(f"Ob.randomizecobwebduster = {randomizecobwebsetting}\n")
 
     # write beatoleander setting, make boolean uppercase for Game
     beatoleandersetting = str(seed_settings_beatoleander).upper()
@@ -691,8 +719,23 @@ if seed_settings_spoilerlog == 'True':
     # Create and open the output file for SpoilerLog.txt
     with open("SpoilerLog.txt", "w") as file:
         count = 1
+        if seed_settings_randomizecobwebduster == 'False' or seed_settings_startcobwebduster == 'True':
+            # Remove Cobweb Duster from list and place at end
+            spoiler_names = [item for item in spoiler_names if item != 'Cobweb Duster']
+            spoiler_names.append('Cobweb Duster')
+            seed = [item for item in seed if item != 363]
+            seed.append('363')
+        else:
+            # Remove Card104 and place at end if randomizecobweduster == True
+            spoiler_names = [item for item in spoiler_names if item != 'Card104']
+            spoiler_names.append('Card104')
+            seed = [item for item in seed if item != 359]
+            seed.append('359')
+
+        #Seperate Checks by Location
         for location_spoiler_list, seed, spoiler_names in zip(location_spoiler_list, seed, spoiler_names):
-            #Seperate Checks by Location
+            # Handle Randomize Cobweb Setting
+            
             if count == 1:
                 file.write(f"Sasha's Underground Lab (CASA)\n")
 
@@ -791,6 +834,9 @@ if seed_settings_spoilerlog == 'True':
 
             if count == 352:
                 file.write(f"\nMeat Circus Main (MCTC)\n")
+                
+            if count == 363:
+                file.write(f"\nDUMMY LOCATIONS (NOT COLLECTIBLE)\n")
 
             #Write each Location with each shuffled Item
             file.write(f"LOCATION {count}: {location_spoiler_list} has ITEM {seed}: {spoiler_names}\n")

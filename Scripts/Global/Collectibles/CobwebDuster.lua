@@ -15,6 +15,12 @@ function CobwebDuster(Ob)
 		Ob.HeldRotZ = -6.658;
 		Ob.clutchAnim = 'Anims/DartNew/BodyParts/DusterRetractIdle_ShoulderJALf_1.jan'
 		Ob.bUseOnly = 1
+
+		--edit
+		Ob.interestFXName = 'Global.Effects.SupremeInterestFX'
+		Ob.bSold = 1
+		Ob.bUseDefaultUncollectedAnim = 1
+
 		-- END HELD OBJECT VARS
 		
 		Ob.bLarge = 1	-- used by Global.OtherEntities.InvAdder.lua
@@ -111,7 +117,12 @@ function CobwebDuster(Ob)
 			self:attachGrabber(1)
 		end
 	end
-	function Ob:onBeginLevel()									   		
+	function Ob:onBeginLevel()	
+
+		if Global:loadGlobal('CobwebDusterCollected') == 1 then
+			self:hide()
+		end
+
 		%Ob.Parent.onBeginLevel(self)
         	self.splinePts = {}
 		self.grabber:setPosition(self.grabberOffX, self.grabberOffY, self.grabberOffZ)
@@ -140,14 +151,32 @@ function CobwebDuster(Ob)
 		self.rCoilOutSoundHandle = LoadSound('CobwebDusterCoilOut')
 		self.bUsingLoom = 0
 
+		
+
 		self:setState(nil)	
 	end                                               
 
 	function Ob:onPostBeginLevel()
+
 		%Ob.Parent.onPostBeginLevel(self)
 		if GetEntityDomain(self.grabber) ~= 'InvItems' then 
 			self.grabber:setAnim('GrabberRetract') 
 		end-- grabber's setAnim only takes animName and block
+
+		
+		--edit to work properly inside the shop, no animation or interestFX
+		local cobweb = FindScriptObject('RandoSeed')
+		if cobweb.randomizecobwebduster == FALSE and (Global.player:isInInventory('CobwebDuster') ~= 1) then
+			self.bSold = 0
+			self.interestFX:stop(1, 0, 1)
+			self.interestFX = nil
+			DetachEntityFromParent(self)
+			KillScript(self.mover)
+			self.mover = nil
+			
+		end
+	
+
 	end
 
 	function Ob:onEndLevel()

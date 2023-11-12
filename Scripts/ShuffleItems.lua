@@ -432,6 +432,9 @@ function ShuffleItems(Ob)
             --Crow Feather
             'global.props.AS_CrowFeather',
 
+            --Cobweb Duster
+            'global.collectibles.CobwebDuster',
+
 
         }
 
@@ -640,6 +643,9 @@ function ShuffleItems(Ob)
 
             --Crow Feather
             'Feather',
+
+            --Cobweb Duster
+            'Cobweb Duster',
         }
 
         local newclassTable = {}

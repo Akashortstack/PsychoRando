@@ -61,8 +61,6 @@ function CollectibleRemover(Ob)
                 foreach_entity_oftype('as.props.Cake', function(ent) ent:killSelf() end)
                 --foreach_entity_oftype('as.props.PokeyProp', function(ent) ent:killSelf() end)
         
-        else
-            GamePrint("WARNING, LEVEL NAME NOT LISTED")
         end
     end
     

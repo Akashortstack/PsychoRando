@@ -107,8 +107,8 @@ location_spoiler_list = [
 "Outside Cougar Cave (Card)",
 "Inside Cougar Cave (Diver's Helmet)",
 "Bulletin Board Bushes (Card)",
-"Pink Trees Swinging (Card)",
-"Pink Trees Platform (Card)",
+"Pink Trees Platform Left (Card)",
+"Pink Trees Platform Right (Card)",
 "Rock Wall Upper (Card)",
 "Lake Shore (Card)",
 "Tiny Island (Card)",
@@ -418,5 +418,9 @@ location_spoiler_list = [
 "Tunnel of Love Corner (Suitcase)",
 "Tunnel of Love Rail (Dufflebag Tag)",
 "Next to the Fat Lady (Dufflebag)",
+
+# DUMMY LOCATIONS
+# NOT COLLECTIBLE
+"DUMMY LOCATION (NOT COLLECTIBLE)",
 
 ]

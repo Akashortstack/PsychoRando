@@ -2,9 +2,9 @@
 
 General Bugs:
 
---Gloria's Theater returning after Boss Fight, stage changes is broken
-
 --Collecting Steamertrunk in BB causes player to teleport to vanilla steamertrunk location
+
+--Gloria's Theater can potentially crash very late into a seed. Cause unknown.
 
 --Vanilla game bug: Sasha's Shooting Gallery can softlock during tutorial if player doesn't collect Health Drop in time.
 

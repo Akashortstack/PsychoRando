@@ -202,12 +202,14 @@ function CASA(Ob)
                 local salts = SpawnScript('Global.Collectibles.SmellingSalts', 'SmellingSalts')
                 Global.player:addToInventory(salts,0,1)
             end
-			--Setting to start with Cobweb Duster
+			--Setting to start with Cobweb Duster, or Save that Cobweb Duster is Randomized
 			local cobweb = FindScriptObject('RandoSeed')
 			if (Global.player:isInInventory('CobwebDuster') ~= 1) and cobweb.startcobweb == TRUE then
 				GamePrint('start cobweb = True!')
 				local duster = SpawnScript('Global.Collectibles.CobwebDuster', 'CobwebDuster')
                 Global.player:addToInventory(duster,0,1)
+			elseif cobweb.randomizecobwebduster == TRUE and Global:loadGlobal('bCobwebRandomized') ~= 1 then
+				Global:saveGlobal('bCobwebRandomized', 1)
 			end
 
 			SpawnScript('CA.Props.Psychomaster')
