@@ -4,7 +4,7 @@ General Bugs:
 
 --Collecting Steamertrunk in BB causes player to teleport to vanilla steamertrunk location
 
---Gloria's Theater can potentially crash very late into a seed. Cause unknown.
+--Gloria's Theater can potentially crash very late into a seed. Cause Unknown, possibly goal manager related?
 
 --Vanilla game bug: Sasha's Shooting Gallery can softlock during tutorial if player doesn't collect Health Drop in time.
 
@@ -17,18 +17,23 @@ skip cutscenes to avoid!!!
 
 --PsiPowers hard to see because of lighting issues. How to fix?
 
---Hornet Nest sometimes doesn't spawn, maybe because fertility idol already collected?
-
 --Below issues can happen randomly, keep trying different fixes
 
     --Geyser item sometimes doesn't load
 
     --Squirrel Disappears sometimes
 
+    --Hornet Nest sometimes doesn't spawn, maybe because fertility idol already collected?
+
 --Some locations need adjusting cleanup
     --item in MM Post Office (vanilla baggage) sometimes in floor
 
 THINGS TO DO:
+
+--Update Item and Location pool to contain Max Confusion Up and ALL its spawn locations
+    --Waterloo World on top of Knight House
+    --Gloria's Theater Catwalks Slide
+    --Meat Circus End of Broken Road
 
 --Create Item Tracker
 

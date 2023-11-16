@@ -502,7 +502,7 @@ function THMS(Ob)
 		--Need some postBeginLevel revisiting garbage
 		if (Global:loadGlobal('bTHCompleted') == 1) then
 			--Put the candle in the lamp
-			--edit here for post-TH fix?
+			--edit here for post-TH fix
 			local candle = SpawnScript('TH.Props.Candle', 'Candle')
 			local arcLamp = FindScriptObject('DaySwitch')
 			arcLamp:attachCandle(candle)

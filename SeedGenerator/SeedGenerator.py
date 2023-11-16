@@ -14,6 +14,7 @@ config.read('config.ini')
 
 # Config.ini SeedSettings 
 seed_settings_startcobwebduster = config['SeedSettings']['startcobwebduster']
+seed_settings_startlevitation = config['SeedSettings']['startlevitation']
 seed_settings_randomizecobwebduster = config['SeedSettings']['randomizecobwebduster']
 seed_settings_beatoleander = config['SeedSettings']['beatoleander']
 seed_settings_everylocationpossible = config['SeedSettings']['everylocationpossible']
@@ -292,6 +293,10 @@ game_graph.add_edge("Start", "Meat Circus Main: Oly Escort (MCTC)", requirements
 game_graph.add_edge("Start", "Victory", requirements = [])
 
 # Add Cobweb Duster to logic starting inventory if not randomized
+if seed_settings_startlevitation == 'True':
+    empty_inventory.append("Levitation")
+
+# Add Levitation to logic starting inventory if starting with it
 if seed_settings_randomizecobwebduster == 'False' or seed_settings_startcobwebduster == 'True':
     empty_inventory.append("Cobweb Duster")
 
@@ -579,7 +584,8 @@ def create_seed():
         copy_list = []
         copy_list = item_names_list
         # Shuffle item list with numbers 1 to 364 and item names
-        item_values = list(range(1, 364))
+        # MUST BE ONE MORE THAN TOTAL ITEMS IN GAME
+        item_values = list(range(1, 365))
         combined_items = list(zip(copy_list, item_values, item_spoiler_list))
         random.shuffle(combined_items)
         #Unzip
@@ -596,14 +602,28 @@ def create_seed():
             # Remove Cobweb Duster from list and place at end
             shuffled_list = [item for item in shuffled_list if item != 'Cobweb Duster']
             shuffled_list.append('Cobweb Duster')
-            shuffled_values = [item for item in shuffled_values if item != 363]
-            shuffled_values.append(363)
+            shuffled_values = [item for item in shuffled_values if item != 364]
+            shuffled_values.append(364)
         else:
-            # Remove Card104 and place at end if randomizecobweduster == True
-            shuffled_list = [item for item in shuffled_list if item != 'Card104']
-            shuffled_list.append('Card104')
+            # Remove Card111 and place at end if randomizecobweduster == True
+            shuffled_list = [item for item in shuffled_list if item != 'Card111']
+            shuffled_list.append('Card111')
             shuffled_values = [item for item in shuffled_values if item != 359]
             shuffled_values.append(359)
+
+        # Handle Start Levitation Setting
+        if seed_settings_startlevitation == 'True':
+            # Remove StartLevitation from list and place at end
+            shuffled_list = [item for item in shuffled_list if item != 'StartLevitation']
+            shuffled_list.append('StartLevitation')
+            shuffled_values = [item for item in shuffled_values if item != 26]
+            shuffled_values.append(26)
+        else:
+            # Remove Card111 and place at end if randomizecobweduster == True
+            shuffled_list = [item for item in shuffled_list if item != 'Card112']
+            shuffled_list.append('Card112')
+            shuffled_values = [item for item in shuffled_values if item != 360]
+            shuffled_values.append(360)
 
         # Put shuffled items in locations
         fill_locations(world_copy, shuffled_list)
@@ -655,6 +675,10 @@ with open("RandoSeed.lua", "w") as file:
     startcobwebsetting = str(seed_settings_startcobwebduster).upper()
     file.write(f"Ob.startcobweb = {startcobwebsetting}\n")
 
+    # write startcobwebduster setting, make boolean uppercase for Game
+    startlevitationsetting = str(seed_settings_startlevitation).upper()
+    file.write(f"Ob.startlevitation = {startlevitationsetting}\n")
+
     # write randomizecobwebduster setting, make boolean uppercase for Game
     randomizecobwebsetting = str(seed_settings_randomizecobwebduster).upper()
     file.write(f"Ob.randomizecobwebduster = {randomizecobwebsetting}\n")
@@ -679,7 +703,7 @@ with open("RandoSeed.lua", "w") as file:
     scavengerhuntsetting = str(seed_settings_scavengerhunt).upper()
     file.write(f"Ob.scavengerhunt = {scavengerhuntsetting}\n")
 
-    # write scavengerhunt setting, make boolean uppercase for Game
+    # write fasterLOsetting setting, make boolean uppercase for Game
     fasterLOsetting = str(seed_settings_fasterLO).upper()
     file.write(f"Ob.fasterLO = {fasterLOsetting}\n")
 
@@ -713,7 +737,7 @@ with open("RandoSeed.lua", "w") as file:
 '''
 
     file.write(text3)
-#Future Settings Option, Toggles Spoiler Log
+#Toggles Spoiler Log
 if seed_settings_spoilerlog == 'True':
     print ('Spoiler Log True!')
     # Create and open the output file for SpoilerLog.txt
@@ -723,14 +747,28 @@ if seed_settings_spoilerlog == 'True':
             # Remove Cobweb Duster from list and place at end
             spoiler_names = [item for item in spoiler_names if item != 'Cobweb Duster']
             spoiler_names.append('Cobweb Duster')
-            seed = [item for item in seed if item != 363]
-            seed.append('363')
+            seed = [item for item in seed if item != 364]
+            seed.append('364')
         else:
-            # Remove Card104 and place at end if randomizecobweduster == True
-            spoiler_names = [item for item in spoiler_names if item != 'Card104']
-            spoiler_names.append('Card104')
+            # Remove Card111 and place at end if randomizecobweduster == True
+            spoiler_names = [item for item in spoiler_names if item != 'Card111']
+            spoiler_names.append('Card111')
             seed = [item for item in seed if item != 359]
             seed.append('359')
+
+        # Handle Start Levitation Setting
+        if seed_settings_startlevitation == 'True':
+            # Remove StartLevitation from list and place at end
+            spoiler_names = [item for item in spoiler_names if item != 'Levitation1']
+            spoiler_names.append('Levitation1')
+            seed = [item for item in seed if item != 26]
+            seed.append('26')
+        else:
+            # Remove Card111 and place at end if randomizecobweduster == True
+            spoiler_names = [item for item in spoiler_names if item != 'Card112']
+            spoiler_names.append('Card112')
+            seed = [item for item in seed if item != 360]
+            seed.append('360')
 
         #Seperate Checks by Location
         for location_spoiler_list, seed, spoiler_names in zip(location_spoiler_list, seed, spoiler_names):

@@ -23,6 +23,7 @@ function CollectibleRemover(Ob)
             foreach_entity_oftype('global.collectibles.MaxAmmoUp', function(ent) ent:killSelf() end)
             foreach_entity_oftype('global.characters.Vault', function(ent) ent:killSelf() end)
             foreach_entity_oftype('global.collectibles.OneUp', function(ent) ent:killSelf() end)
+            foreach_entity_oftype('global.collectibles.MaxConfusionUp', function(ent) ent:killSelf() end)  
         else
             GamePrint("ERROR, FAILED TO FIND LEVEL TYPE")
         end
@@ -46,10 +47,6 @@ function CollectibleRemover(Ob)
         elseif strfind(FindScriptObject('LevelScript').Type, 'ww.WWMA') then
                 foreach_entity_oftype('ww.props.PricelessCoin', function(ent) ent:killSelf() end)
                 foreach_entity_oftype('ww.props.Rifle', function(ent) ent:killSelf() end)
-
-        elseif strfind(FindScriptObject('LevelScript').Type, 'bv.BVRB') then
-                foreach_entity_oftype('global.collectibles.MaxConfusionUp', function(ent) ent:killSelf() end)  
-
         
         elseif strfind(FindScriptObject('LevelScript').Type, 'as.ASGR') then
                 foreach_entity_oftype('as.props.AS_hand', function(ent) ent:killSelf() end)

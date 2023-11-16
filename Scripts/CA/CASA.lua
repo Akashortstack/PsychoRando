@@ -202,13 +202,21 @@ function CASA(Ob)
                 local salts = SpawnScript('Global.Collectibles.SmellingSalts', 'SmellingSalts')
                 Global.player:addToInventory(salts,0,1)
             end
-			--Setting to start with Cobweb Duster, or Save that Cobweb Duster is Randomized
-			local cobweb = FindScriptObject('RandoSeed')
-			if (Global.player:isInInventory('CobwebDuster') ~= 1) and cobweb.startcobweb == TRUE then
-				GamePrint('start cobweb = True!')
+
+			--edit Load Seed related settings
+			local settings = FindScriptObject('RandoSeed')
+
+			--edit Setting to start with Levitation in inventory
+			if settings.startlevitation == TRUE then
+				Global:saveGlobal('bGotRandoLevitation', 1)
+				EnablePower(kPOWER_LEVITATION)				
+			end
+
+			--edit Setting to start with Cobweb Duster, or Save that Cobweb Duster is Randomized
+			if settings.startcobweb == TRUE then
 				local duster = SpawnScript('Global.Collectibles.CobwebDuster', 'CobwebDuster')
                 Global.player:addToInventory(duster,0,1)
-			elseif cobweb.randomizecobwebduster == TRUE and Global:loadGlobal('bCobwebRandomized') ~= 1 then
+			elseif settings.randomizecobwebduster == TRUE then
 				Global:saveGlobal('bCobwebRandomized', 1)
 			end
 
@@ -217,6 +225,12 @@ function CASA(Ob)
 
 		--edit Spawn LevelDonePlacer Items
 		self.finished:levelsDone()
+
+		--edit to remove Edgar Goal after level complete
+		if Global:loadGlobal('bBVCompleted') == 1 then
+			Global.goalManager:deactivate('LiberateEdgar')
+		end
+
 
 
         --[[

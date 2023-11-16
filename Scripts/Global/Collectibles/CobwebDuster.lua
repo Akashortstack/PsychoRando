@@ -17,7 +17,6 @@ function CobwebDuster(Ob)
 		Ob.bUseOnly = 1
 
 		--edit
-		Ob.interestFXName = 'Global.Effects.SupremeInterestFX'
 		Ob.bSold = 1
 		Ob.bUseDefaultUncollectedAnim = 1
 
@@ -118,10 +117,6 @@ function CobwebDuster(Ob)
 		end
 	end
 	function Ob:onBeginLevel()	
-
-		if Global:loadGlobal('CobwebDusterCollected') == 1 then
-			self:hide()
-		end
 
 		%Ob.Parent.onBeginLevel(self)
         	self.splinePts = {}
@@ -525,6 +520,11 @@ function CobwebDuster(Ob)
 			Global:saveGlobal('CobwebDusterCollected', 1)
 			Global.goalManager:deactivate('CobwebDuster')
 		end
+
+		--edit sendMessage to Dart
+		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
+
+		
 	end
 
 	function Ob:onHidItem()

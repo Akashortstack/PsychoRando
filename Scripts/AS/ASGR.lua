@@ -288,10 +288,11 @@ function ASGR(Ob)
 
 			SoundMuteNone()
 			
-			local hand = FindScriptObject('LobatoHand')
+			--edit removed to prevent gloria's trophy from moving if spawned in ASGR
+			--[[local hand = FindScriptObject('LobatoHand')
 			if hand and hand.bInInventory ~= 1 then 
 				hand:setHomePosition() 
-			end
+			end]]
 			
 		end
 		
