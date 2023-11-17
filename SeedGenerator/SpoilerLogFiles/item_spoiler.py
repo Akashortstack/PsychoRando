@@ -203,5 +203,5 @@ item_spoiler_list = [
 'Feather',
 
 #Cobweb Duster
-'Cobweb Duster',
+'Rando Cobweb Duster',
 ]

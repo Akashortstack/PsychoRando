@@ -2926,6 +2926,7 @@ function Dart(Ob)
 	--Stores CollectedVault, Increases Rank when you open a vault
 	function Ob:onCollectedVault(name,from)
 		self.stats.CollectedVault[name] = 'collected' 
+		self.stats.totalVaults = self.stats.totalVaults+1
 		GamePrint('Stored '..name)
 		self:incrementRank()
 	end

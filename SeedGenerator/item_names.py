@@ -182,7 +182,7 @@ item_names_list = [
 #5 Rando Arrowhead Bundles Large
 'AHLarge1', 'AHLarge2', 'AHLarge3', 'AHLarge4', 'AHLarge5',
 
-#111 Psicards, filler item, increase if adding more positions
+#112 Psicards, filler item, increase if adding more positions
 'Card1', 'Card2', 'Card3', 'Card4', 'Card5', 'Card6', 'Card7', 'Card8', 'Card9', 'Card10',
 'Card11', 'Card12', 'Card13', 'Card14', 'Card15', 'Card16', 'Card17', 'Card18', 'Card19', 'Card20',
 'Card21', 'Card22', 'Card23', 'Card24', 'Card25', 'Card26', 'Card27', 'Card28', 'Card29', 'Card30', 

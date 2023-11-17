@@ -16,11 +16,13 @@ config.read('config.ini')
 seed_settings_startcobwebduster = config['SeedSettings']['startcobwebduster']
 seed_settings_startlevitation = config['SeedSettings']['startlevitation']
 seed_settings_randomizecobwebduster = config['SeedSettings']['randomizecobwebduster']
-seed_settings_beatoleander = config['SeedSettings']['beatoleander']
 seed_settings_everylocationpossible = config['SeedSettings']['everylocationpossible']
-seed_settings_rank101 = config['SeedSettings']['rank101']
-seed_settings_brainhunt = config['SeedSettings']['brainhunt']
-seed_settings_scavengerhunt = config['SeedSettings']['scavengerhunt']
+
+# Config.ini VictoryConditions
+seed_settings_beatoleander = config['VictoryConditions']['beatoleander']
+seed_settings_rank101 = config['VictoryConditions']['rank101']
+seed_settings_brainhunt = config['VictoryConditions']['brainhunt']
+seed_settings_scavengerhunt = config['VictoryConditions']['scavengerhunt']
 
 # Config.ini QualityOfLife 
 seed_settings_fasterLO = config['QualityOfLife']['fasterLO']
@@ -745,8 +747,8 @@ if seed_settings_spoilerlog == 'True':
         count = 1
         if seed_settings_randomizecobwebduster == 'False' or seed_settings_startcobwebduster == 'True':
             # Remove Cobweb Duster from list and place at end
-            spoiler_names = [item for item in spoiler_names if item != 'Cobweb Duster']
-            spoiler_names.append('Cobweb Duster')
+            spoiler_names = [item for item in spoiler_names if item != 'Rando Cobweb Duster']
+            spoiler_names.append('Rando Cobweb Duster')
             seed = [item for item in seed if item != 364]
             seed.append('364')
         else:

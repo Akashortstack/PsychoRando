@@ -8,8 +8,6 @@ General Bugs:
 
 --Vanilla game bug: Sasha's Shooting Gallery can softlock during tutorial if player doesn't collect Health Drop in time.
 
---Gloria's Trophy will spawn in it's vanilla location if placed within the Asylum Entrance (ASGR)
-
 --Milka's Brain Defaults to Vanilla location in Crow Basket if spawned in Asylum Lower Levels
 
 --KNOWN ASTRALATHE BUG, WW has crashes if you let cutscenes play in entirety,
@@ -29,6 +27,8 @@ skip cutscenes to avoid!!!
     --item in MM Post Office (vanilla baggage) sometimes in floor
 
 THINGS TO DO:
+
+--QOL Fixes for flags in BB and Caravan Door in NI
 
 --Update Item and Location pool to contain Max Confusion Up and ALL its spawn locations
     --Waterloo World on top of Knight House
