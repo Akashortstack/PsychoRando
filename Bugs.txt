@@ -28,8 +28,6 @@ skip cutscenes to avoid!!!
 
 THINGS TO DO:
 
---QOL Fixes for flags in BB and Caravan Door in NI
-
 --Update Item and Location pool to contain Max Confusion Up and ALL its spawn locations
     --Waterloo World on top of Knight House
     --Gloria's Theater Catwalks Slide

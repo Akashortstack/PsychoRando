@@ -607,9 +607,9 @@ def create_seed():
             shuffled_values = [item for item in shuffled_values if item != 364]
             shuffled_values.append(364)
         else:
-            # Remove Card111 and place at end if randomizecobweduster == True
-            shuffled_list = [item for item in shuffled_list if item != 'Card111']
-            shuffled_list.append('Card111')
+            # Remove Card107 and place at end if randomizecobweduster == True
+            shuffled_list = [item for item in shuffled_list if item != 'Card107']
+            shuffled_list.append('Card107')
             shuffled_values = [item for item in shuffled_values if item != 359]
             shuffled_values.append(359)
 
@@ -621,9 +621,9 @@ def create_seed():
             shuffled_values = [item for item in shuffled_values if item != 26]
             shuffled_values.append(26)
         else:
-            # Remove Card111 and place at end if randomizecobweduster == True
-            shuffled_list = [item for item in shuffled_list if item != 'Card112']
-            shuffled_list.append('Card112')
+            # Remove Card108 and place at end if randomizecobweduster == True
+            shuffled_list = [item for item in shuffled_list if item != 'Card108']
+            shuffled_list.append('Card108')
             shuffled_values = [item for item in shuffled_values if item != 360]
             shuffled_values.append(360)
 
@@ -752,9 +752,9 @@ if seed_settings_spoilerlog == 'True':
             seed = [item for item in seed if item != 364]
             seed.append('364')
         else:
-            # Remove Card111 and place at end if randomizecobweduster == True
-            spoiler_names = [item for item in spoiler_names if item != 'Card111']
-            spoiler_names.append('Card111')
+            # Remove Card107 and place at end if randomizecobweduster == True
+            spoiler_names = [item for item in spoiler_names if item != 'Card107']
+            spoiler_names.append('Card107')
             seed = [item for item in seed if item != 359]
             seed.append('359')
 
@@ -766,9 +766,9 @@ if seed_settings_spoilerlog == 'True':
             seed = [item for item in seed if item != 26]
             seed.append('26')
         else:
-            # Remove Card111 and place at end if randomizecobweduster == True
-            spoiler_names = [item for item in spoiler_names if item != 'Card112']
-            spoiler_names.append('Card112')
+            # Remove Card108 and place at end if randomizecobweduster == True
+            spoiler_names = [item for item in spoiler_names if item != 'Card108']
+            spoiler_names.append('Card108')
             seed = [item for item in seed if item != 360]
             seed.append('360')
 

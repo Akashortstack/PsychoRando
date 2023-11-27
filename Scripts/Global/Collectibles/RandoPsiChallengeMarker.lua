@@ -4,7 +4,8 @@ function RandoPsiChallengeMarker(Ob)
 		Ob = CreateObject('Global.Props.HeldObject')
 		Ob.meshName = 'GlobalModels/CO_Collectibles/Co_PSIChallengeMarker02.plb'	-- Editable
 		Ob.spinAnim = 'Anims/PSIChallenge/Spin.jan'
-		Ob.iTriggerSphereRadius = 75
+		--edit increased to make easier to collect, original value 75
+		Ob.iTriggerSphereRadius = 150
 		Ob.iTriggerSphereOffset = 30
 		Ob.displayName = "/GLZB000TO/"--DIALOG=<<PSI Challenge Marker>>
 		Ob.pickupSpriteName = 'PsiChallengeMarker'
