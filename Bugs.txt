@@ -28,11 +28,7 @@ skip cutscenes to avoid!!!
 
 THINGS TO DO:
 
---Update Item and Location pool to contain Max Confusion Up and ALL its spawn locations
-    --Gloria's Theater Catwalks Slide
-    --Waterloo World on top of Knight House
-    --Black Velvetopia Balcony
-    --Meat Circus End of Broken Road
+--Change Campgrounds to load Daytime instead of Nightime levels
 
 --Add functionality for 'Button' item to lock off the campgrounds, setting to start with button in inventory.
 

@@ -50,6 +50,10 @@ function Button(Ob)
 		%Ob.Parent.onAddedToInventory(self)		
 		--sendMessage to Dart
 		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
+
+		--edit save bButtonCollected
+		Global:saveGlobal('bButtonCollected', 1)
+
 	end
 
 

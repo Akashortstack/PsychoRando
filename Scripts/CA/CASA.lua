@@ -220,8 +220,20 @@ function CASA(Ob)
 				Global:saveGlobal('bCobwebRandomized', 1)
 			end
 
+			--edit Setting to start with Button and enable Campgrounds Access
+			if settings.startbutton == TRUE then
+				local button = SpawnScript('Global.Props.Button', 'Button')
+                Global.player:addToInventory(button,0,1)
+			end
+
 			SpawnScript('CA.Props.Psychomaster')
         end
+
+		--edit Remove level load from CASA to CAGP if Button not in inventory
+		if Global:loadGlobal('bButtonCollected') ~= 1 or Global:loadGlobal('bButtonCollected') == nil then
+			local removeload = fso('CASAtoCAGP1')
+			removeload:killSelf()
+		end
 
 		--edit Spawn LevelDonePlacer Items
 		self.finished:levelsDone()

@@ -13,6 +13,7 @@ config = configparser.ConfigParser()
 config.read('config.ini')
 
 # Config.ini SeedSettings 
+seed_settings_startbutton = config['SeedSettings']['startbutton']
 seed_settings_startcobwebduster = config['SeedSettings']['startcobwebduster']
 seed_settings_startlevitation = config['SeedSettings']['startlevitation']
 seed_settings_randomizecobwebduster = config['SeedSettings']['randomizecobwebduster']
@@ -71,7 +72,8 @@ game_graph.add_node("Main Lodge (CALI)", items = [])
 
 # Ford's Sanctuary (CAJA)
 game_graph.add_node("Ford's Sanctuary (CAJA)", items = [])
-game_graph.add_node("Rando Only Rank Checks", items = [])
+game_graph.add_node("Rando Only Rank Checks 5-30", items = [])
+game_graph.add_node("Rando Only Rank Checks 35-101", items = [])
 
 # THORNEY TOWERS
 game_graph.add_node("Asylum Grounds (ASGR)", items = [])  # Need Lungfish Call
@@ -173,46 +175,47 @@ game_graph.add_node("Victory", items = ["Goal",])
 
 # WHISPERING ROCK SUMMER CAMP
 # GPC and Wilderness (CAGP)
-game_graph.add_edge("Start", "GPC and Wilderness (CAGP)")
-game_graph.add_edge("Start", "GPC Squirrel (CAGP)", requirements = ["Invisibility",])  # Need Invisibility
-game_graph.add_edge("Start", "GPC Geyser (CAGP)", requirements = ["Shield",])  # Need Shield
+game_graph.add_edge("Start", "GPC and Wilderness (CAGP)", requirements = ["Button",])
+game_graph.add_edge("Start", "GPC Squirrel (CAGP)", requirements = ["Button", "Invisibility",])  # Need Invisibility
+game_graph.add_edge("Start", "GPC Geyser (CAGP)", requirements = ["Button", "Shield",])  # Need Shield
 
 # Main Campgrounds (CAMA)
-game_graph.add_edge("Start", "Main Campgrounds (CAMA)")
-game_graph.add_edge("Start", "Main Campgrounds: Levitation (CAMA)", requirements = ["Levitation",]) # Need Levitation
+game_graph.add_edge("Start", "Main Campgrounds (CAMA)", requirements = ["Button",])
+game_graph.add_edge("Start", "Main Campgrounds: Levitation (CAMA)", requirements = ["Button", "Levitation",]) # Need Levitation
 
 # Kids' Cabins (CAKC)
-game_graph.add_edge("Start", "Kids' Cabins (CAKC)")
-game_graph.add_edge("Start", "Kids' Cabins: Levitation (CAKC)", requirements = ["Levitation",])  # Need Levitation
-game_graph.add_edge("Start", "Kids' Cabins: Pyrokinesis (CAKC)", requirements = ["Pyrokinesis",])  # Need Pyrokinesis
+game_graph.add_edge("Start", "Kids' Cabins (CAKC)", requirements = ["Button",])
+game_graph.add_edge("Start", "Kids' Cabins: Levitation (CAKC)", requirements = ["Button", "Levitation",])  # Need Levitation
+game_graph.add_edge("Start", "Kids' Cabins: Pyrokinesis (CAKC)", requirements = ["Button", "Pyrokinesis",])  # Need Pyrokinesis
 
 # Reception Area (CARE)
-game_graph.add_edge("Start", "Reception Area (CARE)")
-game_graph.add_edge("Start", "Reception Area: Levitation (CARE)", requirements = ["Levitation",])  # Need Levitation
-game_graph.add_edge("Start", "Reception Area: Marksmanship (CARE)", requirements = ["Marksmanship",])  # Need Marksmanship
+game_graph.add_edge("Start", "Reception Area (CARE)", requirements = ["Button",])
+game_graph.add_edge("Start", "Reception Area: Levitation (CARE)", requirements = ["Button", "Levitation",])  # Need Levitation
+game_graph.add_edge("Start", "Reception Area: Marksmanship (CARE)", requirements = ["Button", "Marksmanship",])  # Need Marksmanship
 
 # Lake and Boathouse (CABH)
-game_graph.add_edge("Start", "Lake and Boathouse (CABH)")
-game_graph.add_edge("Start", "Lake and Boathouse: Levitation (CABH)", requirements = ["Levitation",])  # Need Levitation
+game_graph.add_edge("Start", "Lake and Boathouse (CABH)", requirements = ["Button",])
+game_graph.add_edge("Start", "Lake and Boathouse: Levitation (CABH)", requirements = ["Button", "Levitation",])  # Need Levitation
 
 # Main Lodge (CALI)
-game_graph.add_edge("Start", "Main Lodge (CALI)")
+game_graph.add_edge("Start", "Main Lodge (CALI)", requirements = ["Button",])
 
 # Ford's Sanctuary (CAJA)
 game_graph.add_edge("Start", "Ford's Sanctuary (CAJA)")
-game_graph.add_edge("Start", "Rando Only Rank Checks")
+game_graph.add_edge("Start", "Rando Only Rank Checks 5-30")
+game_graph.add_edge("Start", "Rando Only Rank Checks 35-101", requirements = ["Button",])
 
 # THORNEY TOWERS
-game_graph.add_edge("Start", "Asylum Grounds (ASGR)", requirements = ["Lungfish Call",])  # Need Lungfish Call
-game_graph.add_edge("Start", "Asylum Grounds: Levitation (ASGR)", requirements = ["Levitation", "Lungfish Call",]) # Need Levitation
+game_graph.add_edge("Start", "Asylum Grounds (ASGR)", requirements = ["Button", "Lungfish Call",])  # Need Lungfish Call
+game_graph.add_edge("Start", "Asylum Grounds: Levitation (ASGR)", requirements = ["Button", "Levitation", "Lungfish Call",]) # Need Levitation
 
-game_graph.add_edge("Start", "Asylum Lower Level (ASCO)", requirements = ["Lungfish Call",])
-game_graph.add_edge("Start", "Asylum Lower Level: Levitation (ASCO)", requirements = ["Levitation", "Lungfish Call",]) # Need Levitation
+game_graph.add_edge("Start", "Asylum Lower Level (ASCO)", requirements = ["Button", "Lungfish Call",])
+game_graph.add_edge("Start", "Asylum Lower Level: Levitation (ASCO)", requirements = ["Button", "Levitation", "Lungfish Call",]) # Need Levitation
 
-game_graph.add_edge("Start", "Asylum Upper Level (ASUP)", requirements = ["Lungfish Call", "Gloria's Trophy", "Straight Jacket", "Lobato Painting",])  # Need Gloria's Trophy, Straight Jacket, Lobato Painting
-game_graph.add_edge("Start", "Asylum Upper Level: Telekinesis (ASUP)", requirements = ["Lungfish Call", "Gloria's Trophy", "Straight Jacket", "Lobato Painting", "Telekinesis",])  # Need Telekinesis
+game_graph.add_edge("Start", "Asylum Upper Level (ASUP)", requirements = ["Button", "Lungfish Call", "Gloria's Trophy", "Straight Jacket", "Lobato Painting",])  # Need Gloria's Trophy, Straight Jacket, Lobato Painting
+game_graph.add_edge("Start", "Asylum Upper Level: Telekinesis (ASUP)", requirements = ["Button", "Lungfish Call", "Gloria's Trophy", "Straight Jacket", "Lobato Painting", "Telekinesis",])  # Need Telekinesis
 
-game_graph.add_edge("Start", "Dr. Loboto's Laboratory (ASLB)", requirements = ["Lungfish Call", "Gloria's Trophy", "Straight Jacket", "Lobato Painting", "Telekinesis",])
+game_graph.add_edge("Start", "Dr. Loboto's Laboratory (ASLB)", requirements = ["Button", "Lungfish Call", "Gloria's Trophy", "Straight Jacket", "Lobato Painting", "Telekinesis",])
 
 # BASIC BRAINING
 game_graph.add_edge("Start", "Obstacle Course (BBA1)")
@@ -294,11 +297,15 @@ game_graph.add_edge("Start", "Meat Circus Main: Oly Escort (MCTC)", requirements
 # Collected if all requirements are met
 game_graph.add_edge("Start", "Victory", requirements = [])
 
-# Add Cobweb Duster to logic starting inventory if not randomized
+# Add Button to logic starting inventory if not randomized
+if seed_settings_startbutton == 'True':
+    empty_inventory.append("Button")
+
+# Add Levitation to logic starting inventory if not randomized
 if seed_settings_startlevitation == 'True':
     empty_inventory.append("Levitation")
 
-# Add Levitation to logic starting inventory if starting with it
+# Add CobwebDuster to logic starting inventory if starting with it
 if seed_settings_randomizecobwebduster == 'False' or seed_settings_startcobwebduster == 'True':
     empty_inventory.append("Cobweb Duster")
 
@@ -393,8 +400,10 @@ def fill_locations(graph, item_list):
         #Ford's + Ranks
         if 108<=index<=109:
             graph.nodes["Ford's Sanctuary (CAJA)"]["items"].append(item)
-        if 110<=index<=129:
-            graph.nodes["Rando Only Rank Checks"]["items"].append(item)
+        if 110<=index<=115:
+            graph.nodes["Rando Only Rank Checks 5-30"]["items"].append(item)
+        if 116<=index<=129:
+            graph.nodes["Rando Only Rank Checks 35-101"]["items"].append(item)
 
         #Asylum
         if 130<=index<=132 or 134<=index<=139:
@@ -616,7 +625,7 @@ def create_seed():
         copy_list = item_names_list
         # Shuffle item list with numbers 1 to 366 and item names
         # MUST BE ONE MORE THAN TOTAL ITEMS IN GAME
-        item_values = list(range(1, 367))
+        item_values = list(range(1, 368))
         combined_items = list(zip(copy_list, item_values, item_spoiler_list))
         random.shuffle(combined_items)
         #Unzip
@@ -633,8 +642,8 @@ def create_seed():
             # Remove Cobweb Duster from list and place at end
             shuffled_list = [item for item in shuffled_list if item != 'Cobweb Duster']
             shuffled_list.append('Cobweb Duster')
-            shuffled_values = [item for item in shuffled_values if item != 366]
-            shuffled_values.append(366)
+            shuffled_values = [item for item in shuffled_values if item != 367]
+            shuffled_values.append(367)
         else:
             # Remove Card107 and place at end if randomizecobweduster == True
             shuffled_list = [item for item in shuffled_list if item != 'Card107']
@@ -655,6 +664,20 @@ def create_seed():
             shuffled_list.append('Card108')
             shuffled_values = [item for item in shuffled_values if item != 360]
             shuffled_values.append(360)
+
+        # Handle Start Button Setting
+        if seed_settings_startbutton == 'True':
+            # Remove StartButton from list and place at end
+            shuffled_list = [item for item in shuffled_list if item != 'Button']
+            shuffled_list.append('Button')
+            shuffled_values = [item for item in shuffled_values if item != 365]
+            shuffled_values.append(365)
+        else:
+            # Remove Card109 and place at end if startbutton == True
+            shuffled_list = [item for item in shuffled_list if item != 'Card109']
+            shuffled_list.append('Card109')
+            shuffled_values = [item for item in shuffled_values if item != 361]
+            shuffled_values.append(361)
 
         # Put shuffled items in locations
         fill_locations(world_copy, shuffled_list)
@@ -702,11 +725,15 @@ with open("RandoSeed.lua", "w") as file:
     
     # Section where all settings booleans are written to RandoSeed.lua
 
+    # write startbutton setting, make boolean uppercase for Game
+    startbuttonsetting = str(seed_settings_startbutton).upper()
+    file.write(f"Ob.startbutton = {startbuttonsetting}\n")
+
     # write startcobwebduster setting, make boolean uppercase for Game
     startcobwebsetting = str(seed_settings_startcobwebduster).upper()
     file.write(f"Ob.startcobweb = {startcobwebsetting}\n")
 
-    # write startcobwebduster setting, make boolean uppercase for Game
+    # write startlevitation setting, make boolean uppercase for Game
     startlevitationsetting = str(seed_settings_startlevitation).upper()
     file.write(f"Ob.startlevitation = {startlevitationsetting}\n")
 
@@ -778,8 +805,8 @@ if seed_settings_spoilerlog == 'True':
             # Remove Cobweb Duster from list and place at end
             spoiler_names = [item for item in spoiler_names if item != 'Rando Cobweb Duster']
             spoiler_names.append('Rando Cobweb Duster')
-            seed = [item for item in seed if item != 366]
-            seed.append('366')
+            seed = [item for item in seed if item != 367]
+            seed.append('367')
         else:
             # Remove Card107 and place at end if randomizecobweduster == True
             spoiler_names = [item for item in spoiler_names if item != 'Card107']
@@ -800,6 +827,20 @@ if seed_settings_spoilerlog == 'True':
             spoiler_names.append('Card108')
             seed = [item for item in seed if item != 360]
             seed.append('360')
+
+        # Handle Start Button Setting
+        if seed_settings_startbutton == 'True':
+            # Remove Button from list and place at end
+            spoiler_names = [item for item in spoiler_names if item != 'Button']
+            spoiler_names.append('Button')
+            seed = [item for item in seed if item != 365]
+            seed.append('365')
+        else:
+            # Remove Card109 and place at end if randomizebutton == True
+            spoiler_names = [item for item in spoiler_names if item != 'Card109']
+            spoiler_names.append('Card109')
+            seed = [item for item in seed if item != 361]
+            seed.append('361')
 
         #Seperate Checks by Location
         for location_spoiler_list, seed, spoiler_names in zip(location_spoiler_list, seed, spoiler_names):
