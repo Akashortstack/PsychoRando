@@ -15,3 +15,6 @@ global.characters.Vault CWvault Position X,Y,Z -1297 -509 -5263 Orientation OX,O
 Listing objects of class th.props.Candle
 th.props.Candle Candle Position X,Y,Z 554 2881 -2672 Orientation OX,OY,OZ -5 2 -33
 !!!!!!!!!!!!!!!!!
+Listing objects of class Global.Collectibles.MaxConfusionUp
+global.collectibles.MaxConfusionUp MaxConfutatis Position X,Y,Z -2005, -1315, -1714 Orientation OX,OY,OZ 0, 52, 0
+!!!!!!!!!!!!!!!!!

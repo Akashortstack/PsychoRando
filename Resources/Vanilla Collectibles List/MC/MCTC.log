@@ -15,3 +15,6 @@ global.collectibles.EmotionalBaggage hatboxBAG Position X,Y,Z 1150 -20270 -1840 
 Listing objects of class global.characters.Vault
 global.characters.Vault meatvault Position X,Y,Z -2223 -14639 -3233 Orientation OX,OY,OZ 0 0 0
 !!!!!!!!!!!!!!!!!
+Listing objects of class Global.Collectibles.MaxConfusionUp
+global.collectibles.MaxConfusionUp MaxConfusionAmmo Position X,Y,Z -442, -628, -4057 Orientation OX,OY,OZ 0, -3, 0
+!!!!!!!!!!!!!!!!!

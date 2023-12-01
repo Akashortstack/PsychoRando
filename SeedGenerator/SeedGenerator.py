@@ -354,9 +354,13 @@ if seed_settings_scavengerhunt == 'True':  #Add all scav hunt items to victory r
 
 def fill_locations(graph, item_list):
     for index, item in enumerate(item_list):
+
+        #Sasha's Lab
         if 0<=index<=2:
             # Access the "items" attribute of the Start node and append the item to it
             graph.nodes["Start"]["items"].append(item)
+
+        #Campgrounds
         if 3<=index<=24:
             graph.nodes["GPC and Wilderness (CAGP)"]["items"].append(item)
         if index==25:
@@ -385,10 +389,14 @@ def fill_locations(graph, item_list):
             graph.nodes["Lake and Boathouse: Levitation (CABH)"]["items"].append(item)
         if index==107:
             graph.nodes["Main Lodge (CALI)"]["items"].append(item)
+
+        #Ford's + Ranks
         if 108<=index<=109:
             graph.nodes["Ford's Sanctuary (CAJA)"]["items"].append(item)
         if 110<=index<=129:
             graph.nodes["Rando Only Rank Checks"]["items"].append(item)
+
+        #Asylum
         if 130<=index<=132 or 134<=index<=139:
             graph.nodes["Asylum Grounds (ASGR)"]["items"].append(item)
         if index==133:
@@ -403,26 +411,38 @@ def fill_locations(graph, item_list):
             graph.nodes["Asylum Upper Level: Telekinesis (ASUP)"]["items"].append(item)
         if 175<=index<=182:
             graph.nodes["Dr. Loboto's Laboratory (ASLB)"]["items"].append(item)
+
+        #Basic Braining
         if 183<=index<=191 or 193<=index<=197:
             graph.nodes["Obstacle Course (BBA1)"]["items"].append(item)
         if index==192:
             graph.nodes["Obstacle Course 2: Cobweb (BBA2)"]["items"].append(item)
+
+        #Sasha's
         if 198<=index<=205 or 207<=index<=214:
             graph.nodes["SASHA'S SHOOTING GALLERY (SA)"]["items"].append(item)
         if index==206:
             graph.nodes["Cube Face 2: Levitation (SACU)"]["items"].append(item)
+
+        #Milla's
         if 215<=index<=229:
             graph.nodes["MILLA'S DANCE PARTY (MI)"]["items"].append(item)
+
+        #BrainTankExperiment
         if 230<=index<=232:
             graph.nodes["The Nightmare Woods (NIMP)"]["items"].append(item)
         if 233<=index<=242:
             graph.nodes["The Nightmare Woods: Marksmanship (NIMP)"]["items"].append(item)
         if index==243:
             graph.nodes["The Brain Tank (NIBA)"]["items"].append(item)
+
+        #Lungfishopolis
         if 244<=index<=246:
             graph.nodes["LUNGFISHOPOLIS (LO)"]["items"].append(item)
         if 247<=index<=263:
             graph.nodes["LUNGFISHOPOLIS: Shield (LO)"]["items"].append(item)
+        
+        #Milkman
         if index==264:
             graph.nodes["The Neighborhood 1: Fridge (MMI1)"]["items"].append(item)
         if 265<=index<=267:
@@ -441,6 +461,8 @@ def fill_locations(graph, item_list):
             graph.nodes["The Neighborhood 2 (MMI2)"]["items"].append(item)
         if index==287:
             graph.nodes["The Den Mother (MMDM)"]["items"].append(item)
+
+        # Gloria's Theater
         if index==288 or 290<=index<=291:
             graph.nodes["The Stage (THMS)"]["items"].append(item)
         if index==289:
@@ -449,15 +471,17 @@ def fill_locations(graph, item_list):
             graph.nodes["The Stage: Cobwebs (THMS)"]["items"].append(item)
         if 293<=index<=297:
             graph.nodes["The Stage: Storage Room (THMS)"]["items"].append(item)
-        if 298<=index<=306:
+        if 298<=index<=305:
             graph.nodes["The Catwalks (THCW)"]["items"].append(item)
-        if index==307:
+        if index==306:
             graph.nodes["The Phantom Boss (THFB)"]["items"].append(item)
-        if 308<=index<=310 or 313<=index<=316 or 318<=index<=320 or index==326:
+
+        #Waterloo World
+        if 307<=index<=309 or 312<=index<=315 or 318<=index<=320 or index==326:
             graph.nodes["Game Board (WWMA)"]["items"].append(item)
-        if 311<=index<=312:
+        if 310<=index<=311:
             graph.nodes["Game Board: Carpenter Roof (WWMA)"]["items"].append(item)
-        if index==317:
+        if 316<=index<=317:
             graph.nodes["Game Board: Levitation (WWMA)"]["items"].append(item)
         if 321<=index<=323:
             graph.nodes["Game Board: Cobweb (WWMA)"]["items"].append(item)
@@ -473,11 +497,13 @@ def fill_locations(graph, item_list):
             graph.nodes["Game Board: Villager 2 (WWMA)"]["items"].append(item)
         if 330<=index<=331:
             graph.nodes["Game Board: Villager 3 (WWMA)"]["items"].append(item)
+
+        #Black Velvetopia
         if index==332:
             graph.nodes["Running Against the Bull (BVRB)"]["items"].append(item)
         if 333<=index<=334:
             graph.nodes["Running Against the Bull: Levitation (BVRB)"]["items"].append(item)
-        if 335<=index<=336 or 340<=index<=343:
+        if 335<=index<=336 or 340<=index<=344:
             graph.nodes["Running Against the Bull: Cobweb (BVRB)"]["items"].append(item)
         if index==337:
             graph.nodes["Running Against the Bull: Telekinesis (BVRB)"]["items"].append(item)
@@ -485,22 +511,25 @@ def fill_locations(graph, item_list):
             graph.nodes["Running Against the Bull: Burn Logs (BVRB)"]["items"].append(item)
         if index==339:
             graph.nodes["Running Against the Bull: Garden (BVRB)"]["items"].append(item)
-        if index==344:
+        if index==345:
             graph.nodes["Edgar's Sanctuary: Levitation (BVES)"]["items"].append(item)
-        if 345<=index<=347:
+        if 346<=index<=348:
             graph.nodes["Edgar's Sanctuary (BVES)"]["items"].append(item)
-        if index==348:
-            graph.nodes["Edgar's Sanctuary: Eagle Wrestler (BVES)"]["items"].append(item)
         if index==349:
-            graph.nodes["Edgar's Sanctuary: Cobra (BVES)"]["items"].append(item)
+            graph.nodes["Edgar's Sanctuary: Eagle Wrestler (BVES)"]["items"].append(item)
         if index==350:
+            graph.nodes["Edgar's Sanctuary: Cobra (BVES)"]["items"].append(item)
+        if index==351:
             graph.nodes["Edgar's Sanctuary: Boss (BVES)"]["items"].append(item)
-        if 351<=index<=353:
+
+        #Meat Circus
+        if 352<=index<=355:
             graph.nodes["Meat Circus Main (MCTC)"]["items"].append(item)
-        if 354<=index<=361:
+        if 356<=index<=363:
             graph.nodes["Meat Circus Main: Oly Escort (MCTC)"]["items"].append(item)
+
         #Dummy Location for Cobweb Duster Randomization
-        if 362<=index:
+        if 364<=index:
             graph.nodes["DUMMY LOCATION (NOT COLLECTIBLE)"]["items"].append(item)
 
 
@@ -585,9 +614,9 @@ def create_seed():
     while not beatable and count < 50:
         copy_list = []
         copy_list = item_names_list
-        # Shuffle item list with numbers 1 to 364 and item names
+        # Shuffle item list with numbers 1 to 366 and item names
         # MUST BE ONE MORE THAN TOTAL ITEMS IN GAME
-        item_values = list(range(1, 365))
+        item_values = list(range(1, 367))
         combined_items = list(zip(copy_list, item_values, item_spoiler_list))
         random.shuffle(combined_items)
         #Unzip
@@ -604,8 +633,8 @@ def create_seed():
             # Remove Cobweb Duster from list and place at end
             shuffled_list = [item for item in shuffled_list if item != 'Cobweb Duster']
             shuffled_list.append('Cobweb Duster')
-            shuffled_values = [item for item in shuffled_values if item != 364]
-            shuffled_values.append(364)
+            shuffled_values = [item for item in shuffled_values if item != 366]
+            shuffled_values.append(366)
         else:
             # Remove Card107 and place at end if randomizecobweduster == True
             shuffled_list = [item for item in shuffled_list if item != 'Card107']
@@ -749,8 +778,8 @@ if seed_settings_spoilerlog == 'True':
             # Remove Cobweb Duster from list and place at end
             spoiler_names = [item for item in spoiler_names if item != 'Rando Cobweb Duster']
             spoiler_names.append('Rando Cobweb Duster')
-            seed = [item for item in seed if item != 364]
-            seed.append('364')
+            seed = [item for item in seed if item != 366]
+            seed.append('366')
         else:
             # Remove Card107 and place at end if randomizecobweduster == True
             spoiler_names = [item for item in spoiler_names if item != 'Card107']
@@ -863,19 +892,19 @@ if seed_settings_spoilerlog == 'True':
             if count == 299:
                 file.write(f"\nThe Catwalks (THCW)\n")
 
-            if count == 309:
+            if count == 308:
                 file.write(f"\nWaterloo World (WWMA)\n")
 
             if count == 333:
                 file.write(f"\nRunning Against the Bull (BVRB)\n")
 
-            if count == 345:
+            if count == 346:
                 file.write(f"\nEdgar's Sanctuary (BVES)\n")
 
-            if count == 352:
+            if count == 353:
                 file.write(f"\nMeat Circus Main (MCTC)\n")
                 
-            if count == 363:
+            if count == 365:
                 file.write(f"\nDUMMY LOCATIONS (NOT COLLECTIBLE)\n")
 
             #Write each Location with each shuffled Item

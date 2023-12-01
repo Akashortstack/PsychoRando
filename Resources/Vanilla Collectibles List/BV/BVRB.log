@@ -34,3 +34,6 @@ bv.props.Card DragonPaintingCard Position X,Y,Z -6803 595 -3813 Orientation OX,O
 bv.props.Card CobraPaintingCard Position X,Y,Z 485 1495 -6179 Orientation OX,OY,OZ 0 73 0
 bv.props.Card EaglePaintingCard Position X,Y,Z -2338 1183 -8868 Orientation OX,OY,OZ 0 -30 0
 !!!!!!!!!!!!!!!!!
+Listing objects of class Global.Collectibles.MaxConfusionUp
+global.collectibles.MaxConfusionUp MaxConfusionUP Position X,Y,Z -1633, 1701, -1230 Orientation OX,OY,OZ 0, -89, 0
+!!!!!!!!!!!!!!!!!

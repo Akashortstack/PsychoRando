@@ -32,3 +32,6 @@ ww.props.PricelessCoin Peasant2Item Position X,Y,Z -44408 8978 5315 Orientation 
 Listing objects of class ww.props.Rifle
 ww.props.Rifle Peasant3Item Position X,Y,Z 23210 -19151 18198 Orientation OX,OY,OZ 0 0 0
 !!!!!!!!!!!!!!!!!
+Listing objects of class Global.Collectibles.MaxConfusionUp
+global.collectibles.MaxConfusionUp WW_maxConfusionUp Position X,Y,Z 28178, -17299, 7540 Orientation OX,OY,OZ 0, -59, 0
+!!!!!!!!!!!!!!!!!

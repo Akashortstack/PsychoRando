@@ -352,8 +352,7 @@ location_spoiler_list = [
 "Big Platform Above (Hatbox Tag)",
 "Next to Oatmeal (Dufflebag)",
 "Candle Basket (Candle # 2)",
-"Catwalks Start",
-"After Trampolines",
+"Curtain Slide (Confusion Ammo Up)",
 "Gloria's Theater Complete",
 
 # WATERLOO WORLD (WWMA)
@@ -367,6 +366,7 @@ location_spoiler_list = [
 "Small Arch Below (Purse Tag)",
 "Top of Villager 2's House (Dufflebag Tag)",
 "Top of Villager 3's House (Ammo Up)",
+"Top of Knight's House (Confusion Ammo Up)",
 "Castle Tower (One Up)",
 "Castle Inside (Vault)",
 "Castle Wall (Steamertrunk)",
@@ -396,6 +396,8 @@ location_spoiler_list = [
 "Diego's Bed (Suitcase Tag)",
 "Diego's Room (Hatbox)",
 "Diego's House Grindrail (Suitcase)",
+"Grindrail Balcony (Confusion Ammo Up)",
+
 # Edgar's Sanctuary (BVES)
 "Sanctuary Balcony (Purse Tag)",
 "Sanctuary Ground (Purse)",
@@ -409,7 +411,8 @@ location_spoiler_list = [
 # Meat Circus Main (MCTC)
 "Entrance Awning (Steamertrunk Tag)",
 "Crumbling Path (Steamertrunk)",
-"Crumbling Path End (Hatbox Tag)",
+"Crumbling Path End Right (Hatbox Tag)",
+"Crumbling Path End Left (Confusion Ammo Up)",
 "Ollie Escort Floor (Suitcase Tag)",
 "Ollie Escort Middle (Hatbox)",
 "Ollie Escort Top Left (Vault)",

@@ -2928,25 +2928,16 @@ function Positions(Ob)
             },
             item306 = {        
                 levelName = 'THCW',
-                x = 2999, 
-                y = 1, 
-                z = 2721,
+                x = -2005, 
+                y = -1315, 
+                z = -1714,
                 ox = 0,
-                oy = -169,
-                oz = 0,
-            },
-            item307 = {        
-                levelName = 'THCW',
-                x = 966, 
-                y = -1418, 
-                z = -4787,
-                ox = 0,
-                oy = -177,
+                oy = 52,
                 oz = 0,
             },
 
             --CASA,TH Complete
-            item308 = {        
+            item307 = {        
                 levelName = 'CASA',
                 x = -13645, 
                 y = 11449, 
@@ -2961,7 +2952,7 @@ function Positions(Ob)
             --WW, WATERLOO WORLD
 
             --WWMA, Whole Level
-            item309 = {        
+            item308 = {        
                 levelName = 'WWMA',
                 x = -43786, 
                 y = 9006, 
@@ -2970,7 +2961,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item310 = {        
+            item309 = {        
                 levelName = 'WWMA',
                 x = -44408, 
                 y = 8978, 
@@ -2979,7 +2970,7 @@ function Positions(Ob)
                 oy = 14,
                 oz = 4,
             },
-            item311 = {        
+            item310 = {        
                 levelName = 'WWMA',
                 x = -27225, 
                 y = 140, 
@@ -2988,7 +2979,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item312 = {        
+            item311 = {        
                 levelName = 'WWMA',
                 x = 13099, 
                 y = -17850, 
@@ -2997,7 +2988,7 @@ function Positions(Ob)
                 oy = -15,
                 oz = 0,
             },
-            item313 = {        
+            item312 = {        
                 levelName = 'WWMA',
                 x = 16820, 
                 y = -18717, 
@@ -3006,7 +2997,7 @@ function Positions(Ob)
                 oy = 180,
                 oz = 0,
             },
-            item314 = {        
+            item313 = {        
                 levelName = 'WWMA',
                 x = 20406, 
                 y = -19699, 
@@ -3015,7 +3006,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item315 = {        
+            item314 = {        
                 levelName = 'WWMA',
                 x = 28368, 
                 y = -18617, 
@@ -3024,7 +3015,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item316 = {        
+            item315 = {        
                 levelName = 'WWMA',
                 x = 29109, 
                 y = -19481, 
@@ -3033,7 +3024,7 @@ function Positions(Ob)
                 oy = 18,
                 oz = 0,
             },
-            item317 = {        
+            item316 = {        
                 levelName = 'WWMA',
                 x = 10401, 
                 y = -18337, 
@@ -3042,13 +3033,22 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item318 = {        
+            item317 = {        
                 levelName = 'WWMA',
                 x = 23724, 
                 y = -17634, 
                 z = 12876,
                 ox = 0,
                 oy = 173,
+                oz = 0,
+            },
+            item318 = {        
+                levelName = 'WWMA',
+                x = 28178, 
+                y = -17299, 
+                z = 7540,
+                ox = 0,
+                oy = -59,
                 oz = 0,
             },
             item319 = {        
@@ -3305,10 +3305,18 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-
+            item345 = {        
+                levelName = 'BVRB',
+                x = -1633, 
+                y = 1701, 
+                z = -1230,
+                ox = 0,
+                oy = -89,
+                oz = 0,
+            },
 
             --BVES, Edgar's Sanctuary
-            item345 = {        
+            item346 = {        
                 levelName = 'BVES',
                 x = -1062, 
                 y = 571, 
@@ -3317,7 +3325,7 @@ function Positions(Ob)
                 oy = 20,
                 oz = 0,
             },
-            item346 = {        
+            item347 = {        
                 levelName = 'BVES',
                 x = 2310, 
                 y = 32, 
@@ -3327,7 +3335,7 @@ function Positions(Ob)
                 oz = 0,
             },
             --Tiger Wrestler
-            item347 = {        
+            item348 = {        
                 levelName = 'BVES',
                 x = -2125, 
                 y = 14, 
@@ -3338,7 +3346,7 @@ function Positions(Ob)
                 puzzle = 'tiger'
             },
             --Dragon Wrestler
-            item348 = {        
+            item349 = {        
                 levelName = 'BVES',
                 x = -154, 
                 y = 17, 
@@ -3349,7 +3357,7 @@ function Positions(Ob)
                 puzzle = 'dragon'
             },
             --Eagle Wrestler
-            item349 = {        
+            item350 = {        
                 levelName = 'BVES',
                 x = 680, 
                 y = 13, 
@@ -3360,7 +3368,7 @@ function Positions(Ob)
                 puzzle = 'eagle'
             },
             --Cobra Wrestler
-            item350 = {        
+            item351 = {        
                 levelName = 'BVES',
                 x = 2149, 
                 y = 15, 
@@ -3372,7 +3380,7 @@ function Positions(Ob)
             },
 
             --CASA, BV Complete
-            item351 = {        
+            item352 = {        
                 levelName = 'CASA',
                 x = -13691, 
                 y = 11326, 
@@ -3387,7 +3395,7 @@ function Positions(Ob)
             --MC, MEAT CIRCUS
 
             --MCTC, Main Level
-            item352 = {        
+            item353 = {        
                 levelName = 'MCTC',
                 x = 248, 
                 y = 766, 
@@ -3396,7 +3404,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item353 = {        
+            item354 = {        
                 levelName = 'MCTC',
                 x = -70, 
                 y = -39, 
@@ -3405,7 +3413,7 @@ function Positions(Ob)
                 oy = -3,
                 oz = 0,
             },
-            item354 = {        
+            item355 = {        
                 levelName = 'MCTC',
                 x = 294, 
                 y = -596, 
@@ -3414,7 +3422,16 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item355 = {        
+            item356 = {        
+                levelName = 'MCTC',
+                x = -442, 
+                y = -628, 
+                z = -4057,
+                ox = 0,
+                oy = -3,
+                oz = 0,
+            },
+            item357 = {        
                 levelName = 'MCTC',
                 x = 1719, 
                 y = -23392, 
@@ -3423,7 +3440,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item356 = {        
+            item358 = {        
                 levelName = 'MCTC',
                 x = 1150, 
                 y = -20270, 
@@ -3432,7 +3449,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item357 = {        
+            item359 = {        
                 levelName = 'MCTC',
                 x = -2223, 
                 y = -14639, 
@@ -3441,7 +3458,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item358 = {        
+            item360 = {        
                 levelName = 'MCTC',
                 x = -2163, 
                 y = -14647, 
@@ -3450,7 +3467,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item359 = {        
+            item361 = {        
                 levelName = 'MCTC',
                 x = 1848, 
                 y = 3543, 
@@ -3459,7 +3476,7 @@ function Positions(Ob)
                 oy = 178,
                 oz = 0,
             },
-            item360 = {        
+            item362 = {        
                 levelName = 'MCTC',
                 x = 3856, 
                 y = 3594, 
@@ -3468,7 +3485,7 @@ function Positions(Ob)
                 oy = -69,
                 oz = 0,
             },
-            item361 = {        
+            item363 = {        
                 levelName = 'MCTC',
                 x = -3487, 
                 y = 2103, 
@@ -3477,7 +3494,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item362 = {        
+            item364 = {        
                 levelName = 'MCTC',
                 x = -943, 
                 y = -1373, 
