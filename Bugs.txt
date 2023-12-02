@@ -30,10 +30,6 @@ THINGS TO DO:
 
 --Change Campgrounds to load Daytime instead of Nightime levels
 
---Add functionality for 'Button' item to lock off the campgrounds, setting to start with button in inventory.
-
---Fix BV to start player in BVRB instead of BVES
-
 --Add Edgar's Playing Cards to item pool?
 
 --Create Item Tracker

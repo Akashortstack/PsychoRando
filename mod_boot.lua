@@ -13,6 +13,13 @@ function RandoSetup()
 	if Global:loadGlobal('bHasMentalMagnet') ~= 1 then
 		Global:saveGlobal('bHasMentalMagnet', 1) 
 	end
+
+	--Remove All Tutorials
+	if (Global:loadGlobal('bDisableTutorialBoxes') ~= 1) then
+		Global:saveGlobal('bDisableTutorialBoxes', 1) 
+	end
+
+
 end
 
 add_hook('beginlevel', 'RandoPlacer')

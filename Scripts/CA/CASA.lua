@@ -235,6 +235,12 @@ function CASA(Ob)
 			removeload:killSelf()
 		end
 
+		--edit to load BVRB instead of BVES if not entered yet
+		if Global:loadGlobal('bBVFirstEntry') ~= 1 or Global:loadGlobal('bBVFirstEntry') == nil then
+			local teleport = fso('CU_BVteleporter')
+    		teleport.destLevel = 'BVRB'
+		end
+
 		--edit Spawn LevelDonePlacer Items
 		self.finished:levelsDone()
 

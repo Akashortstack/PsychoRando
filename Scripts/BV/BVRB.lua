@@ -338,6 +338,11 @@ function BVRB(Ob)
 		-- We exceed max mesh frags at default freeze/thaw dists.
 		self.oldFreeze, self.oldThaw = GetFreezeThawDists()
 		SetFreezeThawDists(4000, 4000)
+
+		--edit to save first BV entry
+		if Global:loadGlobal('bBVFirstEntry') ~= 1 or Global:loadGlobal('bBVFirstEntry') == nil then
+			Global:saveGlobal('bBVFirstEntry',1)
+		end
 	end
 
 	
