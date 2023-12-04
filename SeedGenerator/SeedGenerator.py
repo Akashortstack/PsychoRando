@@ -620,7 +620,7 @@ def check_impossible(graph):
 def create_seed():
     beatable = False
     count = 0
-    while not beatable and count < 50:
+    while not beatable and count < 100:
         copy_list = []
         copy_list = item_names_list
         # Shuffle item list with numbers 1 to 366 and item names

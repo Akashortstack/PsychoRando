@@ -2,11 +2,6 @@ function Firestarting(Ob)
 	if not Ob then
 		Ob = CreateObject('Global.Props.HeldObject')
 		Ob.power = 'Firestarting' -- Editable
-		--edit for Firestarting texture, using Clairvoyance Mesh as base
-		Ob.meshName = 'GlobalModels/GO_GlobalObjects/meritbadges/clairvoyance.plb'
-
-		--edit Extra Visibility, helps in night levels
-		Ob.interestFXName = 'Global.Effects.SupremeInterestFX'
 
 		Ob.dependencies = {
 			textures = {
@@ -16,10 +11,10 @@ function Firestarting(Ob)
 	end	
 	
 	function Ob:onBeginLevel()
-		--edit to make mesh match Clairvoyance, moved to Ob.meshname
 	
-		--self.meshName = 'GlobalModels/GO_GlobalObjects/meritbadges/'..strlower(self.power)..'.plb'
-		
+		--edit for Firestarting texture, using Clairvoyance Mesh as base
+		self.meshName = 'GlobalModels/GO_GlobalObjects/meritbadges/clairvoyance.plb'
+
 		--edit
 		if Global.player.stats.RandoFirestarting[self.Name] == 'collected' then
 			self:killSelf()
@@ -49,9 +44,11 @@ function Firestarting(Ob)
 		--edit, swapping texture to match power
 		SetBaseTexture(self,'Textures/icons/PsiPowers/Firestarting.dds')
 
-		--edit removing PsiPowerFX for Visibility
-		--self.effect = SpawnScript('Global.Effects.PsiPowerUpFX')
-		--self.effect:run(self)
+		--edit fixes lighting issues
+		SetEntityAmbientLight(self, 0.8, 0.8, 0.8)
+
+		self.effect = SpawnScript('Global.Effects.PsiPowerUpFX')
+		self.effect:run(self)
 
 		--edit to fix scale and orientation
 		self:setScale(30)
@@ -91,8 +88,7 @@ function Firestarting(Ob)
 		Global.player:replaceSelectedItemInPsack()
 		Global.player.invDisplayer:invItemAdded(self,0,0,nil,1)
 		
-		--edit, effect removed for Visibility
-		--self.effect:stop()
+		self.effect:stop()
 
 		self:makeInvisible(1)
 		self:sleep(.5)
@@ -104,9 +100,8 @@ function Firestarting(Ob)
 			Global.levelScript:addTutorialBox("/GLZF028TO/")
 		end
 
-		--edit, effect removed for Visibility
-		--self.effect:killSelf()
-		--self.effect = nil
+		self.effect:killSelf()
+		self.effect = nil
 
 		--edit to create Progressive Powerups
 		if self.power == 'Firestarting' then

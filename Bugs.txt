@@ -13,8 +13,6 @@ General Bugs:
 --KNOWN ASTRALATHE BUG, WW has crashes if you let cutscenes play in entirety,
 skip cutscenes to avoid!!!
 
---PsiPowers hard to see because of lighting issues. How to fix?
-
 --Below issues can happen randomly, keep trying different fixes
 
     --Geyser item sometimes doesn't load
@@ -28,9 +26,11 @@ skip cutscenes to avoid!!!
 
 THINGS TO DO:
 
---Change Campgrounds to load Daytime instead of Nightime levels
+--Fix LO QualityOfLife
 
---Add Edgar's Playing Cards to item pool?
+--Remove Tutorials?
+
+--Add Edgar's Playing Cards and Paintings to item pool?
 
 --Create Item Tracker
 
@@ -42,3 +42,5 @@ THINGS TO DO:
 
 --Black Velvetopia potential shop painting rando? Needs work...
     --Could remove shop functionality entirely, just be collectible spots. Doesn't feel good.
+
+--Change Campgrounds to load Daytime instead of Nightime levels?

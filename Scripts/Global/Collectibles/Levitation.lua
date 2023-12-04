@@ -2,11 +2,6 @@ function Levitation(Ob)
 	if not Ob then
 		Ob = CreateObject('Global.Props.HeldObject')
 		Ob.power = 'Levitation' -- Editable
-		--edit for Levitation texture, using Clairvoyance Mesh as base
-		Ob.meshName = 'GlobalModels/GO_GlobalObjects/meritbadges/clairvoyance.plb'
-
-		--edit Extra Visibility, helps in night levels
-		Ob.interestFXName = 'Global.Effects.SupremeInterestFX'
 
 		Ob.dependencies = {
 			textures = {
@@ -16,10 +11,10 @@ function Levitation(Ob)
 	end	
 	
 	function Ob:onBeginLevel()
-		--edit to make mesh match Clairvoyance, moved to Ob.meshname
-	
-		--self.meshName = 'GlobalModels/GO_GlobalObjects/meritbadges/'..strlower(self.power)..'.plb'
-		
+
+		--edit for Levitation texture, using Clairvoyance Mesh as base
+		self.meshName = 'GlobalModels/GO_GlobalObjects/meritbadges/clairvoyance.plb'
+
 		--edit
 		if Global.player.stats.RandoLevitation[self.Name] == 'collected' then
 			self:killSelf()
@@ -46,12 +41,14 @@ function Levitation(Ob)
 		end
         
 		%Ob.Parent.onBeginLevel(self)
-		--edit, swapping texture to match power_LIT
-		SetBaseTexture(self,'Textures/icons/PsiPowers/Levitation_LIT.dds')
+		--edit, swapping texture to match power
+		SetBaseTexture(self,'Textures/icons/PsiPowers/Levitation.dds')
+		
+		--edit fixes lighting issues
+		SetEntityAmbientLight(self, 0.8, 0.8, 0.8)
 
-		--edit removing PsiPowerFX for Visibility
-		--self.effect = SpawnScript('Global.Effects.PsiPowerUpFX')
-		--self.effect:run(self)
+		self.effect = SpawnScript('Global.Effects.PsiPowerUpFX')
+		self.effect:run(self)
 
 		--edit to fix scale and orientation
 		self:setScale(30)
@@ -89,10 +86,7 @@ function Levitation(Ob)
 	function Ob:statePickup()
 		Global.player:replaceSelectedItemInPsack()
 		Global.player.invDisplayer:invItemAdded(self,0,0,nil,1)
-		
-		--edit, effect removed for Visibility
-		--self.effect:stop()
-
+		self.effect:stop()
 		self:makeInvisible(1)
 		self:sleep(.5)
 
@@ -106,9 +100,8 @@ function Levitation(Ob)
 			Global.levelScript:addTutorialBox("/GLZF028TO/")
 		end]]
 
-		--edit, effect removed for Visibility
-		--self.effect:killSelf()
-		--self.effect = nil
+		self.effect:killSelf()
+		self.effect = nil
 
 		--edit to create Progressive Powerups
 		if self.power == 'Levitation' then
