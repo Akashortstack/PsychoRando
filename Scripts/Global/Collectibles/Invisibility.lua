@@ -3,6 +3,9 @@ function Invisibility(Ob)
 		Ob = CreateObject('Global.Props.HeldObject')
 		Ob.power = 'Invisibility' -- Editable
 
+		--edit
+		Ob.interestFXName = 'Global.Effects.PsiPowerUpFX'
+		
 		Ob.dependencies = {
 			textures = {
 				'Textures/icons/PsiPowers/Invisibility.dds' --Since we load replace the texture after-the-fact, we tell the game we depend on it so it gets preloaded
@@ -47,9 +50,6 @@ function Invisibility(Ob)
 		--edit fixes lighting issues
 		SetEntityAmbientLight(self, 0.8, 0.8, 0.8)
 
-		self.effect = SpawnScript('Global.Effects.PsiPowerUpFX')
-		self.effect:run(self)
-
 		--edit to fix scale and orientation
 		self:setScale(30)
 		self.mover:setOrientation(ApplyOrientation(0, 0, 0, self.mover:getOrientation()))
@@ -86,7 +86,6 @@ function Invisibility(Ob)
 	function Ob:statePickup()
 		Global.player:replaceSelectedItemInPsack()
 		Global.player.invDisplayer:invItemAdded(self,0,0,nil,1)
-		self.effect:stop()
 		self:makeInvisible(1)
 		self:sleep(.5)
 		--edit removed cutscene
@@ -96,9 +95,6 @@ function Invisibility(Ob)
 			Yield()
 			Global.levelScript:addTutorialBox("/GLZF028TO/")
 		end
-
-		self.effect:killSelf()
-		self.effect = nil
 
 		--edit to create Progressive Powerups
 		if self.power == 'Invisibility' then

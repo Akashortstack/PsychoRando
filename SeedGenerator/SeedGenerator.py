@@ -72,8 +72,8 @@ game_graph.add_node("Main Lodge (CALI)", items = [])
 
 # Ford's Sanctuary (CAJA)
 game_graph.add_node("Ford's Sanctuary (CAJA)", items = [])
-game_graph.add_node("Rando Only Rank Checks 5-30", items = [])
-game_graph.add_node("Rando Only Rank Checks 35-101", items = [])
+game_graph.add_node("Rando Only Rank Checks 5-20", items = [])
+game_graph.add_node("Rando Only Rank Checks 25-101", items = [])
 
 # THORNEY TOWERS
 game_graph.add_node("Asylum Grounds (ASGR)", items = [])  # Need Lungfish Call
@@ -202,8 +202,8 @@ game_graph.add_edge("Start", "Main Lodge (CALI)", requirements = ["Button",])
 
 # Ford's Sanctuary (CAJA)
 game_graph.add_edge("Start", "Ford's Sanctuary (CAJA)")
-game_graph.add_edge("Start", "Rando Only Rank Checks 5-30")
-game_graph.add_edge("Start", "Rando Only Rank Checks 35-101", requirements = ["Button",])
+game_graph.add_edge("Start", "Rando Only Rank Checks 5-20")
+game_graph.add_edge("Start", "Rando Only Rank Checks 25-101", requirements = ["Button",])
 
 # THORNEY TOWERS
 game_graph.add_edge("Start", "Asylum Grounds (ASGR)", requirements = ["Button", "Lungfish Call",])  # Need Lungfish Call
@@ -400,10 +400,10 @@ def fill_locations(graph, item_list):
         #Ford's + Ranks
         if 108<=index<=109:
             graph.nodes["Ford's Sanctuary (CAJA)"]["items"].append(item)
-        if 110<=index<=115:
-            graph.nodes["Rando Only Rank Checks 5-30"]["items"].append(item)
-        if 116<=index<=129:
-            graph.nodes["Rando Only Rank Checks 35-101"]["items"].append(item)
+        if 110<=index<=113:
+            graph.nodes["Rando Only Rank Checks 5-20"]["items"].append(item)
+        if 114<=index<=129:
+            graph.nodes["Rando Only Rank Checks 25-101"]["items"].append(item)
 
         #Asylum
         if 130<=index<=132 or 134<=index<=139:

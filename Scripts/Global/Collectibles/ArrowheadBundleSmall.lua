@@ -26,6 +26,10 @@ function ArrowheadBundleSmall(Ob)
 		SetScale(self, 0.5,0.5,0.5)
 		self.mover:setOrientation(ApplyOrientation(0, 0, 0, self.mover:getOrientation()))
 		self:setState(nil)
+
+		--edit to add collect soundfx
+		self.pickUpSound = LoadSound('ArrowheadPop')
+
 	end
 
 	function Ob:onPostBeginLevel()
@@ -51,12 +55,15 @@ function ArrowheadBundleSmall(Ob)
 	end
 
 	function Ob:statePickup()
-		--edit
+		--edit for adjusting arrowhead total
 		UI_AdjustCollectible('arrowhead', self.value, self)
 		SendMessage(self, self.player, 'Arrowhead', self.value)
 
 		--edit sendMessage to Dart
 		self:sendMessage(Global.player, 'ArrowheadBundleSmall', self.Name, 1)
+
+		--edit for soundfx
+		PlaySound(nil, self.pickUpSound)
 
 		self:killSelf()
 	end

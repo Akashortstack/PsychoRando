@@ -2,6 +2,8 @@ function Firestarting(Ob)
 	if not Ob then
 		Ob = CreateObject('Global.Props.HeldObject')
 		Ob.power = 'Firestarting' -- Editable
+		--edit
+		Ob.interestFXName = 'Global.Effects.PsiPowerUpFX'
 
 		Ob.dependencies = {
 			textures = {
@@ -47,9 +49,6 @@ function Firestarting(Ob)
 		--edit fixes lighting issues
 		SetEntityAmbientLight(self, 0.8, 0.8, 0.8)
 
-		self.effect = SpawnScript('Global.Effects.PsiPowerUpFX')
-		self.effect:run(self)
-
 		--edit to fix scale and orientation
 		self:setScale(30)
 		self.mover:setOrientation(ApplyOrientation(0, 0, 0, self.mover:getOrientation()))
@@ -88,8 +87,6 @@ function Firestarting(Ob)
 		Global.player:replaceSelectedItemInPsack()
 		Global.player.invDisplayer:invItemAdded(self,0,0,nil,1)
 		
-		self.effect:stop()
-
 		self:makeInvisible(1)
 		self:sleep(.5)
 		--edit removed cutscene
@@ -99,9 +96,6 @@ function Firestarting(Ob)
 			Yield()
 			Global.levelScript:addTutorialBox("/GLZF028TO/")
 		end
-
-		self.effect:killSelf()
-		self.effect = nil
 
 		--edit to create Progressive Powerups
 		if self.power == 'Firestarting' then
