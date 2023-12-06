@@ -233,6 +233,11 @@ function CASA(Ob)
 		if Global:loadGlobal('bButtonCollected') ~= 1 or Global:loadGlobal('bButtonCollected') == nil then
 			local removeload = fso('CASAtoCAGP1')
 			removeload:killSelf()
+			local removeladder = fso('ladder10m')
+			removeladder:killSelf()
+			local sashablock = SpawnScript('ca.characters.RandoSasha', 'NO_ENTRY')
+			sashablock:setPosition(18, 1681, 78)
+			sashablock:setOrientation(0, 0, 0)
 		end
 
 		--edit to load BVRB instead of BVES if not entered yet

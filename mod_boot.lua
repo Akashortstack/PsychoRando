@@ -39,5 +39,9 @@ function RandoPlacer()
 	--rando:placeRandoObject(class, name, x, y, z, ox, oy, oz)
 	--EX: rando:placeRandoObject('Global.Characters.Vault', 'Vault1', -5629, 4510, -13242, 0, 0, 0)
 
+	--Find Tutorial Manager and kill it to prevent all tutorial popups
+	--local tutorialkill = fso('global.otherentities.TutorialManager')
+	--tutorialkill:killSelf()
+
 end
 

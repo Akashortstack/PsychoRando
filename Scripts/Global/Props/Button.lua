@@ -26,7 +26,7 @@ function Button(Ob)
         --edit
         self.meshName = 'Characters/CharacterProps/Raz_GPCButton.plb'
         self.pickupSpritePath = 'Textures/icons/InventoryItems/GPC_Button.tga'
-        self.displayName = "Button"--DIALOG=<<Sasha\'s Button>>
+        self.displayName = "Sasha's Button"--DIALOG=<<Sasha\'s Button>>
 		
         %Ob.Parent.onBeginLevel(self)
 		self:setScale(3)

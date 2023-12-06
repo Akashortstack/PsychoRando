@@ -26,8 +26,6 @@ skip cutscenes to avoid!!!
 
 THINGS TO DO:
 
---Fix LO QualityOfLife
-
 --Remove Tutorials?
 
 --Add Edgar's Playing Cards and Paintings to item pool?
