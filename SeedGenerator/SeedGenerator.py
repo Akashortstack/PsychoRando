@@ -163,8 +163,9 @@ game_graph.add_node("Edgar's Sanctuary: Boss (BVES)", items = [])  # Need Cobweb
 game_graph.add_node("Meat Circus Main (MCTC)", items = [])  # Need Cobweb Duster
 game_graph.add_node("Meat Circus Main: Oly Escort (MCTC)", items = [])  # Need Cobweb Duster, Telekinesis, Levitation?
 
-# DUMMY LOCATION FOR COBWEB DUSTER
-game_graph.add_node("DUMMY LOCATION (NOT COLLECTIBLE)", items = []) # Dummy location for handling Cobweb Duster Randomization
+#Shop Cobweb Duster
+#Needed if Cobweb Duster is vanilla, but Button is randomized
+game_graph.add_node("Ford's Shop: Cobweb Duster", items = [])  # Need Button
 
 # Collected if all requirements are met
 game_graph.add_node("Victory", items = ["Goal",])
@@ -293,9 +294,13 @@ game_graph.add_edge("Start", "Edgar's Sanctuary: Boss (BVES)", requirements = ["
 game_graph.add_edge("Start", "Meat Circus Main (MCTC)", requirements = ["Cobweb Duster",])  # Need Cobweb Duster
 game_graph.add_edge("Start", "Meat Circus Main: Oly Escort (MCTC)", requirements = ["Cobweb Duster", "Telekinesis", "Levitation",])  # Need Cobweb Duster, Telekinesis, Levitation?
 
+#Shop Cobweb Duster
+game_graph.add_edge("Start", "Ford's Shop: Cobweb Duster", requirements = ["Button",])  # Need Button
 
 # Collected if all requirements are met
 game_graph.add_edge("Start", "Victory", requirements = [])
+
+
 
 # Add Button to logic starting inventory if not randomized
 if seed_settings_startbutton == 'True':
@@ -306,8 +311,11 @@ if seed_settings_startlevitation == 'True':
     empty_inventory.append("Levitation")
 
 # Add CobwebDuster to logic starting inventory if starting with it
-if seed_settings_randomizecobwebduster == 'False' or seed_settings_startcobwebduster == 'True':
+
+if seed_settings_startcobwebduster == 'True':
     empty_inventory.append("Cobweb Duster")
+elif seed_settings_randomizecobwebduster == 'False':
+    game_graph.nodes["Ford's Shop: Cobweb Duster"]["items"].append("Cobweb Duster")
 
 if seed_settings_everylocationpossible == 'True':
     game_graph.edges["Start", "Victory"]["requirements"].extend(["Cobweb Duster", "Levitation", "Pyrokinesis", "Telekinesis", "Confusion", "Marksmanship", "Clairvoyance", "Shield", "Invisibility", 
@@ -536,10 +544,6 @@ def fill_locations(graph, item_list):
             graph.nodes["Meat Circus Main (MCTC)"]["items"].append(item)
         if 356<=index<=363:
             graph.nodes["Meat Circus Main: Oly Escort (MCTC)"]["items"].append(item)
-
-        #Dummy Location for Cobweb Duster Randomization
-        if 364<=index:
-            graph.nodes["DUMMY LOCATION (NOT COLLECTIBLE)"]["items"].append(item)
 
 
 # Function to collect items in a node
