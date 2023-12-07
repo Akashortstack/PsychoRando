@@ -26,10 +26,16 @@ skip cutscenes to avoid!!!
 
 THINGS TO DO:
 
---Look into applying sounds across all levels using below code
-    --LoadSoundData('mm')
+--Fix "All Baggage Collected" popup from happening
 
---Remove Tutorials?
+--Add items to Hud Popup?
+    --Baggage Tags by type
+
+--Look into applying sounds across all levels using below code
+    --LoadSoundData('mm'), Loads all sounds from Milkman
+    --LoadSoundData('BVEB') loads all baggage sounds, DONE
+
+--Remove More Tutorials?
 
 --Add Edgar's Playing Cards and Paintings to item pool?
 

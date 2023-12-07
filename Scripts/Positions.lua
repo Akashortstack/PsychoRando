@@ -1973,12 +1973,12 @@ function Positions(Ob)
             },
             item207 = {        
                 levelName = 'SACU',
-                x = 4187, 
-                y = -1867, 
-                z = -1747,
-                ox = 0,
-                oy = 0,
-                oz = -90,
+                x = 4490, 
+                y = 780, 
+                z = 128,
+                ox = 180,
+                oy = 85,
+                oz = 90,
                 puzzle = 'face2item3'
             },
 

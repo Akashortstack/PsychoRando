@@ -100,7 +100,8 @@ function LOMACutscenes(Ob)
 		self:endCutscene()
 
 		--Tell the player a little sumthin about shield
-		Global.levelScript:addTutorialBox("/LOZF001TO/", 'Textures/icons/PsiPowers/Shield.dds')--DIALOG=<<Use your PSYCHIC SHIELD to protect you from damage, and reflect SOME enemy attacks back at the attacker! NOTE: You will not be able to maintain a PSYCHIC SHIELD forever, and when this part of your mind is exhausted, you will need to wait a while before you use it again.>>
+		--edit removed!
+		--Global.levelScript:addTutorialBox("/LOZF001TO/", 'Textures/icons/PsiPowers/Shield.dds')--DIALOG=<<Use your PSYCHIC SHIELD to protect you from damage, and reflect SOME enemy attacks back at the attacker! NOTE: You will not be able to maintain a PSYCHIC SHIELD forever, and when this part of your mind is exhausted, you will need to wait a while before you use it again.>>
 	end
 	
 --**************************************************************************************************
