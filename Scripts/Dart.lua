@@ -3014,13 +3014,14 @@ function Dart(Ob)
 			self.stats.baggageCollected[sBaggageType] = 1
 			self.stats.EmotionalBaggageSolved = self.stats.EmotionalBaggageSolved + 1
 			self.stats.baggageMatched = self.stats.baggageMatched + 1
-			if self.stats.EmotionalBaggageSolved == 5 then 
+			--edit removing
+			--[[if self.stats.EmotionalBaggageSolved == 5 then 
 				self:incrementRank()
 				local levelPrefix = Global.levelScript:getLevelPrefix()
 				JournalAddEmoBagItem( levelPrefix.. 'Emo','/GLZD506TO/',levelPrefix) -- add the concept art to the journal
 				Global:save('bEmoBagsComplete', 1)
 				self:collectibleBling("/GLZD438TO/\n/GLZD440TO/", 'Textures/Objects/vault_reel_front_2.dds')
-			end
+			end]]
 		end
 	end
 

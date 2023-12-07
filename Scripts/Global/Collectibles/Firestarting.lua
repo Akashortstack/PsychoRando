@@ -4,6 +4,7 @@ function Firestarting(Ob)
 		Ob.power = 'Firestarting' -- Editable
 		--edit
 		Ob.interestFXName = 'Global.Effects.PsiPowerUpFX'
+		Ob.bDontPutAwayHeldItem = 1
 
 		Ob.dependencies = {
 			textures = {
@@ -84,7 +85,9 @@ function Firestarting(Ob)
 	end
 
 	function Ob:statePickup()
-		Global.player:replaceSelectedItemInPsack()
+		--edit remove to keep held item
+		--Global.player:replaceSelectedItemInPsack()
+				
 		Global.player.invDisplayer:invItemAdded(self,0,0,nil,1)
 		
 		self:makeInvisible(1)

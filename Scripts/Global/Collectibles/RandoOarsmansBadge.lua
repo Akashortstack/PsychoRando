@@ -2,6 +2,9 @@ function RandoOarsmansBadge(Ob)
 	if not Ob then
 		Ob = CreateObject('Global.Props.HeldObject')
 
+		Ob.interestFXName = 'Global.Effects.PsiPowerUpFX'
+		Ob.bDontPutAwayHeldItem = 1
+
 		Ob.dependencies = {
 			meshes = { 'Levels/CA_Campgrounds/Props/OarsmansBadge.plb' }
 		}
@@ -15,9 +18,14 @@ function RandoOarsmansBadge(Ob)
         self.displayName = "Oarsman's Badge"--DIALOG Oarsman's Badge, Needs Localization
         
 		%Ob.Parent.onBeginLevel(self)
+
+		--edit fixes lighting issues
+		SetEntityAmbientLight(self, 0.8, 0.8, 0.8)
+
         --edit to fix scale and orientation
 		self:setScale(11)
         self.mover:setOrientation(ApplyOrientation(0, 180, 90, self.mover:getOrientation()))
+		self:setState(nil)
 
 		--self.mover:setOrientation(ApplyOrientation(0, 0, 0, self.mover:getOrientation()))
 
