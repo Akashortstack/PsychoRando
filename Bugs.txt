@@ -26,6 +26,9 @@ skip cutscenes to avoid!!!
 
 THINGS TO DO:
 
+--Look into applying sounds across all levels using below code
+    --LoadSoundData('mm')
+
 --Remove Tutorials?
 
 --Add Edgar's Playing Cards and Paintings to item pool?

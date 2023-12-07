@@ -13,9 +13,9 @@ config = configparser.ConfigParser()
 config.read('config.ini')
 
 # Config.ini SeedSettings 
-seed_settings_startbutton = config['SeedSettings']['startbutton']
 seed_settings_startcobwebduster = config['SeedSettings']['startcobwebduster']
 seed_settings_startlevitation = config['SeedSettings']['startlevitation']
+seed_settings_startbutton = config['SeedSettings']['startbutton']
 seed_settings_randomizecobwebduster = config['SeedSettings']['randomizecobwebduster']
 seed_settings_everylocationpossible = config['SeedSettings']['everylocationpossible']
 
@@ -725,10 +725,6 @@ with open("RandoSeed.lua", "w") as file:
     
     # Section where all settings booleans are written to RandoSeed.lua
 
-    # write startbutton setting, make boolean uppercase for Game
-    startbuttonsetting = str(seed_settings_startbutton).upper()
-    file.write(f"Ob.startbutton = {startbuttonsetting}\n")
-
     # write startcobwebduster setting, make boolean uppercase for Game
     startcobwebsetting = str(seed_settings_startcobwebduster).upper()
     file.write(f"Ob.startcobweb = {startcobwebsetting}\n")
@@ -736,6 +732,10 @@ with open("RandoSeed.lua", "w") as file:
     # write startlevitation setting, make boolean uppercase for Game
     startlevitationsetting = str(seed_settings_startlevitation).upper()
     file.write(f"Ob.startlevitation = {startlevitationsetting}\n")
+
+    # write startbutton setting, make boolean uppercase for Game
+    startbuttonsetting = str(seed_settings_startbutton).upper()
+    file.write(f"Ob.startbutton = {startbuttonsetting}\n")
 
     # write randomizecobwebduster setting, make boolean uppercase for Game
     randomizecobwebsetting = str(seed_settings_randomizecobwebduster).upper()

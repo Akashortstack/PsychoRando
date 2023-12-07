@@ -115,22 +115,15 @@ function NIMP(Ob)
 		
 		local startState = nil
 
-		--edit removing most of this to prevent spawn issues after completing other levels
-		--[[
-		if (Global:loadGlobal('bNICompleted') == 1) then
-			if (not Global:getPlayerRespawnPointName()) then
-	            Global:setPlayerRespawnPointName('respawnpoint1')
-	        end
-		elseif (Global:loadGlobal('bMICompleted') == 1) then	-- spawn by tree
+		--edit adjusting most of this to prevent spawn issues after completing other levels
+		--if Dogen Cutscene has been seen, but level not completed
+		if (Global:load('bNID1Played') == 1) and (Global:loadGlobal('bNICompleted') ~= 1) then
 			Global:setPlayerRespawnPointName('respawnpoint3')
-			DomainSleep('CENSORS_bathTub', 1)
-			if lungFishGlassWall then
-				lungFishGlassWall:killSelf()
-			end
-		else]]
-		if --[[(Global:loadGlobal('bSACompleted') == 1) or ]](Global:loadGlobal('brokeNIMPEgg') == 1) then	-- spawn at egg
+		--if egg has been broken, but dogen cutscene not reached yet
+		elseif (Global:loadGlobal('brokeNIMPEgg') == 1) then	-- spawn at egg
             Global:setPlayerRespawnPointName('respawnpoint1')
 		else
+		--spawn at caravan
 			SetSwitchableCollisionEnable(2,1)
             Global:setPlayerRespawnPointName('respawnpoint0')
 			startState = 'Intro'
@@ -355,7 +348,8 @@ function NIMP(Ob)
 					self:setState('CaravanSteps')
 				end
 			elseif TV == 'tv_towerbase'then
-				if IsPowerEnabled(kPOWER_LEVITATION) == 1 then
+				--edit changed to always play Dogen cutscene at bottom of tower
+				if Global:load('bNID1Played') == 1 then
 					UnregisterTriggerVolume(self, 'tv_towerbase')
 				else
 					self:setState('DogenScene')
