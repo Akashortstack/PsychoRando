@@ -317,11 +317,14 @@ if seed_settings_startcobwebduster == 'True':
 elif seed_settings_randomizecobwebduster == 'False':
     game_graph.nodes["Ford's Shop: Cobweb Duster"]["items"].append("Cobweb Duster")
 
+#Change Victory Requirement Logic based on Settings
 if seed_settings_everylocationpossible == 'True':
-    game_graph.edges["Start", "Victory"]["requirements"].extend(["Cobweb Duster", "Levitation", "Pyrokinesis", "Telekinesis", "Confusion", "Marksmanship", "Clairvoyance", "Shield", "Invisibility", 
+    game_graph.edges["Start", "Victory"]["requirements"].extend(["Button", "Cobweb Duster", "Levitation", "Pyrokinesis", "Telekinesis", "Confusion", "Marksmanship", "Clairvoyance", "Shield", "Invisibility", 
     "Lungfish Call", "Lobato Painting", "Gloria's Trophy", "Straight Jacket", "Cake", "Candle1", "Candle2", "Megaphone", "Prop Sign", "Prop Plunger", "Prop Flowers", "Prop HedgeTrimmers", "Prop Rolling Pin", "Fred's Letter", "Priceless Coin", "Musket",])
 elif seed_settings_beatoleander == 'True':
-    game_graph.edges["Start", "Victory"]["requirements"].extend(["Cobweb Duster", "Levitation", "Pyrokinesis", "Telekinesis", "Lungfish Call", "Lobato Painting", "Gloria's Trophy", "Straight Jacket", "Cake",])
+    game_graph.edges["Start", "Victory"]["requirements"].extend(["Button", "Cobweb Duster", "Levitation", "Pyrokinesis", "Telekinesis", "Lungfish Call", "Lobato Painting", "Gloria's Trophy", "Straight Jacket", "Cake",])
+else:
+    game_graph.edges["Start", "Victory"]["requirements"].extend(["Cobweb Duster", "Levitation", "Telekinesis",])
 
 if seed_settings_brainhunt == 'True':  #Add all brains to victory requirement
     game_graph.edges["Start", "Victory"]["requirements"].extend([
@@ -591,7 +594,7 @@ def traverse_edge(graph, source_node, target_node, inventory):
         return False 
 
 def check_impossible(graph):
-    if ("Lungfish Call" in graph.nodes["Asylum Grounds (ASGR)"]["items"] or
+    if seed_settings_everylocationpossible == 'True' and ("Lungfish Call" in graph.nodes["Asylum Grounds (ASGR)"]["items"] or
         "Lungfish Call" in graph.nodes["Asylum Grounds: Levitation (ASGR)"]["items"] or  
         "Lungfish Call" in graph.nodes["Asylum Lower Level (ASCO)"]["items"] or   
         "Lungfish Call" in graph.nodes["Asylum Lower Level: Levitation (ASCO)"]["items"] or
@@ -601,19 +604,19 @@ def check_impossible(graph):
         # Lungfish Call behind itself
         print("Failed, Lungfish Call Impossible")
         return False
-    if ("Gloria's Trophy" in graph.nodes["Asylum Upper Level (ASUP)"]["items"] or
+    if seed_settings_everylocationpossible == 'True' and ("Gloria's Trophy" in graph.nodes["Asylum Upper Level (ASUP)"]["items"] or
         "Gloria's Trophy" in graph.nodes["Asylum Upper Level: Telekinesis (ASUP)"]["items"] or
         "Gloria's Trophy" in graph.nodes["Dr. Loboto's Laboratory (ASLB)"]["items"]):  
         # Gloria's Trophy behind itself
         print("Failed, Gloria's Trophy Impossible")
         return False
-    if ("Straight Jacket" in graph.nodes["Asylum Upper Level (ASUP)"]["items"] or
+    if seed_settings_everylocationpossible == 'True' and ("Straight Jacket" in graph.nodes["Asylum Upper Level (ASUP)"]["items"] or
         "Straight Jacket" in graph.nodes["Asylum Upper Level: Telekinesis (ASUP)"]["items"] or
         "Straight Jacket" in graph.nodes["Dr. Loboto's Laboratory (ASLB)"]["items"]):  
         # Straight Jacket behind itself
         print("Failed, Straight Jacket Impossible")
         return False
-    if ("Lobato Painting" in graph.nodes["Asylum Upper Level (ASUP)"]["items"] or
+    if seed_settings_everylocationpossible == 'True' and ("Lobato Painting" in graph.nodes["Asylum Upper Level (ASUP)"]["items"] or
         "Lobato Painting" in graph.nodes["Asylum Upper Level: Telekinesis (ASUP)"]["items"] or
         "Lobato Painting" in graph.nodes["Dr. Loboto's Laboratory (ASLB)"]["items"]):  
         # Lobato Painting behind itself

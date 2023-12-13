@@ -5,8 +5,7 @@ function Invisibility(Ob)
 
 		--edit
 		Ob.interestFXName = 'Global.Effects.PsiPowerUpFX'
-		Ob.bDontPutAwayHeldItem = 1
-		
+
 		Ob.dependencies = {
 			textures = {
 				'Textures/icons/PsiPowers/Invisibility.dds' --Since we load replace the texture after-the-fact, we tell the game we depend on it so it gets preloaded
@@ -85,9 +84,7 @@ function Invisibility(Ob)
 	end
 
 	function Ob:statePickup()
-		--edit remove to keep held item
-		--Global.player:replaceSelectedItemInPsack()
-				
+		Global.player:replaceSelectedItemInPsack()
 		Global.player.invDisplayer:invItemAdded(self,0,0,nil,1)
 		self:makeInvisible(1)
 		self:sleep(.5)

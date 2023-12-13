@@ -1,5 +1,5 @@
 
-For PsychoRando v0.8.0-BETA
+For PsychoRando v0.9.0-BETA
 
 Generating a Seed:
 	Change settings in config.ini to 'True' or 'False' as wanted, then run SeedGenerator.exe
@@ -10,6 +10,9 @@ List of Settings:
 	opening access to more locations from the beginning. Has priority over 'randomizecobwebduster'
 
 	-_startlevitation_: If 'True', Adds one Levitation to starting inventory. Location in seed is replaced with
+	a Psicard.
+
+	-_startbutton_: If 'True', Adds Sasha's Button to starting inventory, unlocking Campgrounds. Location in seed is replaced with
 	a Psicard.
 
 	-_randomizecobwebduster_: If 'True', Removes Cobweb Duster from the shop and adds it to the item pool,

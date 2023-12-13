@@ -5,7 +5,6 @@ function Marksmanship(Ob)
 
 		--edit
 		Ob.interestFXName = 'Global.Effects.PsiPowerUpFX'
-		Ob.bDontPutAwayHeldItem = 1
 
 		Ob.dependencies = {
 			textures = {
@@ -85,9 +84,7 @@ function Marksmanship(Ob)
 	end
 
 	function Ob:statePickup()
-		--edit remove to keep held item
-		--Global.player:replaceSelectedItemInPsack()
-				
+		Global.player:replaceSelectedItemInPsack()
 		Global.player.invDisplayer:invItemAdded(self,0,0,nil,1)
 		
 		self:makeInvisible(1)

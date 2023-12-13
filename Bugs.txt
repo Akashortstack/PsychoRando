@@ -26,12 +26,12 @@ skip cutscenes to avoid!!!
 
 THINGS TO DO:
 
---Fix "All Baggage Collected" popup from happening
+--Add Inventory Popup to MM props, anything else that doesn't yet
 
 --Add items to Hud Popup?
     --Baggage Tags by type
 
---Look into applying sounds across all levels using below code
+--Look into applying sounds across all levels using below codes
     --LoadSoundData('mm'), Loads all sounds from Milkman
     --LoadSoundData('BVEB') loads all baggage sounds, DONE
 
@@ -39,7 +39,7 @@ THINGS TO DO:
 
 --Add Edgar's Playing Cards and Paintings to item pool?
 
---Create Item Tracker
+--Create Item Tracker?
 
 --Add requirements to enter Sasha's and Milla's minds? Learner's Permits?
 
@@ -49,5 +49,3 @@ THINGS TO DO:
 
 --Black Velvetopia potential shop painting rando? Needs work...
     --Could remove shop functionality entirely, just be collectible spots. Doesn't feel good.
-
---Change Campgrounds to load Daytime instead of Nightime levels?
