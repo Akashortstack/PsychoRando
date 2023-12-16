@@ -15,7 +15,10 @@ function PropHelmet(Ob)
 		Ob.pickupSpriteName = 'MM_helihelmet'
 		Ob.clutchAnim = 'Anims/DartNew/BodyParts/Hold_MM_PilotHelmet.jan' -- Editable
 		Ob.collSphereRadius = 30 -- Editable
-		Ob.bAutoSelect = 1
+
+		--edit remove
+		--Ob.bAutoSelect = 1
+
 		Ob.GmanPropName = 'Helmet'
 		-- for moving while on clairvoyance
 		Ob.bClairvoyancePlayerControl = 1

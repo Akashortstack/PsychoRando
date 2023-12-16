@@ -18,7 +18,10 @@ function PropWaterCan(Ob)
 		Ob.pickupSpriteName = 'MM_WateringCan'
 		Ob.clutchAnim = 'Anims/DartNew/BodyParts/Hold_MM_WaterCan.jan' -- Editable
 		Ob.collSphereRadius = 30 -- Editable
-		Ob.bAutoSelect = 1
+		
+		--edit remove
+		--Ob.bAutoSelect = 1
+
 		Ob.GmanPropName = 'WaterCan'
 		-- for moving while on clairvoyance
 		Ob.bClairvoyancePlayerControl = 1

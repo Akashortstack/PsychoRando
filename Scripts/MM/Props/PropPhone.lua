@@ -15,7 +15,10 @@ function PropPhone(Ob)
 		Ob.pickupSpriteName = 'MM_Phone'
 		Ob.clutchAnim = 'Anims/DartNew/BodyParts/Hold_MM_Phone.jan' -- Editable
 		Ob.collSphereRadius = 30 -- Editable
-		Ob.bAutoSelect = 1
+
+		--edit remove
+		--Ob.bAutoSelect = 1
+
 		Ob.GmanPropName = 'Phone'
 		-- for moving while on clairvoyance
 		Ob.bClairvoyancePlayerControl = 1

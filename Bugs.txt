@@ -10,9 +10,6 @@ General Bugs:
 
 --Milka's Brain Defaults to Vanilla location in Crow Basket if spawned in Asylum Lower Levels
 
---KNOWN ASTRALATHE BUG, WW has crashes if you let cutscenes play in entirety,
-skip cutscenes to avoid!!!
-
 --Below issues can happen randomly, keep trying different fixes
 
     --Geyser item sometimes doesn't load

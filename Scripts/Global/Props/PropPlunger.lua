@@ -18,7 +18,10 @@ function PropPlunger(Ob)
 		Ob.pickupSpriteName = 'MM_Plunger'
 		Ob.clutchAnim = 'Anims/DartNew/BodyParts/Hold_MM_Plunger.jan' -- Editable
 		Ob.collSphereRadius = 30 -- Editable
-		Ob.bAutoSelect = 1
+
+		--edit remove
+		--Ob.bAutoSelect = 1
+		
 		Ob.GmanPropName = 'Plunger'
 		-- for moving while on clairvoyance
 		Ob.bClairvoyancePlayerControl = 1

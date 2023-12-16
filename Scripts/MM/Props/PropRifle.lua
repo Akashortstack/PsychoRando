@@ -15,7 +15,10 @@ function PropRifle(Ob)
 		Ob.pickupSpriteName = 'MM_Rifle'
 		Ob.clutchAnim = 'Anims/DartNew/BodyParts/Hold_MM_Rifle.jan' -- Editable
 		Ob.collSphereRadius = 30 -- Editable
-		Ob.bAutoSelect = 1
+
+		--edit remove
+		--Ob.bAutoSelect = 1
+
 		Ob.GmanPropName = 'Rifle'
 		-- for moving while on clairvoyance
 		Ob.bClairvoyancePlayerControl = 1

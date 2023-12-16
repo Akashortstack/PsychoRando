@@ -1,0 +1,30 @@
+HINT 1:
+        [SHIELD1] can be found at: [CAMA] Loudspeaker 1 Platform  (Card)
+
+HINT 2:
+        [RIFLE] can be found at: [CARE] Log Hill Top (Card)
+
+HINT 3:
+        [FREDS NOTE] can be found at: [CARE] Mineshaft Above Upper Entrance (Card)
+
+HINT 4:
+        [CANDLE2] can be found at: [CAJA] PSI Rank 45
+
+HINT 5:
+        [PROP HEDGETRIMMERS] can be found at: [ASUP] Room Opposite Chair Door (Clem's Brain)
+
+HINT 6:
+        [BUTTON] can be found at: [BBA2] Inside Plane Wreckage (Purse)
+
+HINT 7:
+        [STRAIGHT JACKET] can be found at: [NIMP] Forest Path Thorns (Hatbox Tag)
+
+HINT 8:
+        [CLAIRVOYANCE1] can be found at: [MMI1] Landscapers House Table (Purse)
+
+HINT 9:
+        [PYROKINESIS1] can be found at: [THMS] Behind Stage Cobweb (Suitcase)
+
+HINT 10:
+        [GLORIAS TROPHY] can be found at: [THCW] Curtain Slide (Confusion Ammo Up)
+

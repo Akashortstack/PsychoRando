@@ -18,7 +18,10 @@ function PropRollingPin(Ob)
 		Ob.pickupSpriteName = 'MM_RollingPin'
 		Ob.clutchAnim = 'Anims/DartNew/BodyParts/Hold_MM_RollingPin.jan' -- Editable
 		Ob.collSphereRadius = 30 -- Editable
-		Ob.bAutoSelect = 1
+
+		--edit remove
+		--Ob.bAutoSelect = 1
+		
 		Ob.GmanPropName = 'RollingPin'
 		-- for moving while on clairvoyance
 		Ob.bClairvoyancePlayerControl = 1

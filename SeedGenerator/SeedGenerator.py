@@ -29,6 +29,11 @@ seed_settings_scavengerhunt = config['VictoryConditions']['scavengerhunt']
 seed_settings_fasterLO = config['QualityOfLife']['fasterLO']
 
 # Config.ini AdditionalFiles 
+seed_settings_createhints = config['AdditionalFiles']['createhints']
+seed_settings_majorhints = config.getint('AdditionalFiles', 'majorhints')
+seed_settings_powerhints = config.getint('AdditionalFiles', 'powerhints')
+seed_settings_minorhints = config.getint('AdditionalFiles', 'minorhints')
+
 seed_settings_spoilerlog = config['AdditionalFiles']['spoilerlog']
 
 
@@ -768,9 +773,26 @@ with open("RandoSeed.lua", "w") as file:
     scavengerhuntsetting = str(seed_settings_scavengerhunt).upper()
     file.write(f"Ob.scavengerhunt = {scavengerhuntsetting}\n")
 
-    # write fasterLOsetting setting, make boolean uppercase for Game
+    # write fasterLO setting, make boolean uppercase for Game
     fasterLOsetting = str(seed_settings_fasterLO).upper()
     file.write(f"Ob.fasterLO = {fasterLOsetting}\n")
+
+    # write createhintsetting, make boolean uppercase for Game
+    createhintsetting = str(seed_settings_createhints).upper()
+    file.write(f"Ob.createhints = {createhintsetting}\n")
+
+    # write majorhintsetting
+    file.write(f"Ob.majorhints = {seed_settings_majorhints}\n")
+
+    # write powerhintsetting
+    file.write(f"Ob.powerhints = {seed_settings_powerhints}\n")
+
+    # write minorhintsetting
+    file.write(f"Ob.minorhints = {seed_settings_minorhints}\n")
+
+    # write createspoilerlog, make boolean uppercase for Game
+    createspoilerlog = str(seed_settings_spoilerlog).upper()
+    file.write(f"Ob.spoilerlog = {createspoilerlog}\n")
 
 
     text2 = '''end
@@ -850,8 +872,7 @@ if seed_settings_spoilerlog == 'True':
             seed.append('361')
 
         #Seperate Checks by Location
-        for location_spoiler_list, seed, spoiler_names in zip(location_spoiler_list, seed, spoiler_names):
-            # Handle Randomize Cobweb Setting
+        for spoiler_list, spoiler_seed, spoiler_name in zip(location_spoiler_list, seed, spoiler_names):
             
             if count == 1:
                 file.write(f"Sasha's Underground Lab (CASA)\n")
@@ -920,7 +941,7 @@ if seed_settings_spoilerlog == 'True':
                 file.write(f"\nThe Nightmare Woods (NIMP)\n")
 
             if count == 244:
-                file.write(f"\nThe Brain Tank (NIBA)\n")
+                file.write(f"\nThe Brain Tank (NIMP)\n")
 
             if count == 245:
                 file.write(f"\nLungfishopolis City (LOMA)\n")
@@ -956,8 +977,114 @@ if seed_settings_spoilerlog == 'True':
                 file.write(f"\nDUMMY LOCATIONS (NOT COLLECTIBLE)\n")
 
             #Write each Location with each shuffled Item
-            file.write(f"LOCATION {count}: {location_spoiler_list} has ITEM {seed}: {spoiler_names}\n")
+            file.write(f"LOCATION {count}: {spoiler_list} has ITEM {spoiler_seed}: {spoiler_name}\n")
             count += 1
+
+#HINTS NOT FINISHED NEEDS WORK!!!
+
+def generate_hints():
+
+    #Create Table to pull Progression Hints from
+    possible_progression_hints = ["Cake", "Lobato Painting", "Straight Jacket", "Lungfish Call", "Glorias Trophy", ]
+
+    #Handle Starting Item Settings
+    if seed_settings_startcobwebduster == 'False' and seed_settings_randomizecobwebduster == 'True':
+        possible_progression_hints.append('Rando Cobweb Duster',)
+    if seed_settings_startbutton == 'False':
+        possible_progression_hints.append('Button',)
+
+    #Shuffle Possible Progression Hints
+    random.shuffle(possible_progression_hints)
+    progression_hints = possible_progression_hints[:seed_settings_majorhints]    
+
+    #Create Table to pull Power Hints from
+    possible_power_hints = ['Marksmanship1', 'Pyrokinesis1', 'Confusion1', 'Telekinesis1', 'Invisibility1', 'Clairvoyance1', 'Shield1', ]
+
+    #Handle Start Levitation Setting
+    if seed_settings_startlevitation == 'False':
+        possible_power_hints.append('Levitation1',)
+
+    #Shuffle Possible Power Hints
+    random.shuffle(possible_power_hints)
+    power_hints = possible_power_hints[:seed_settings_powerhints]    
+
+    #Create Table to pull Minor Hints from
+    possible_minor_hints = ['Candle1', 'Candle2', 'Megaphone',
+    'Freds Note', 'Priceless Coin', 'Rifle',
+    'Prop Sign', 'Prop Flowers', 'Prop Plunger', 'Prop HedgeTrimmers', 'Prop RollingPin',
+    ]
+    
+    #Shuffle Possible Minor Hints
+    random.shuffle(possible_minor_hints)
+    minor_hints = possible_minor_hints[:seed_settings_minorhints]
+
+    #Combine and Shuffle Lists
+    combined_hints = progression_hints + power_hints + minor_hints
+    random.shuffle(combined_hints)
+    return combined_hints
+
+    
+#Toggles Hint System
+if seed_settings_createhints == 'True':
+    print ('Hints True!')
+    hint_list = generate_hints()
+
+    #Write Hints to Hint File
+    with open("Hints.txt", "w") as file:
+
+        #Handle seed settings if not already done
+        if seed_settings_spoilerlog == 'False':
+            if seed_settings_randomizecobwebduster == 'False' or seed_settings_startcobwebduster == 'True':
+                # Remove Cobweb Duster from list and place at end
+                spoiler_names = [item for item in spoiler_names if item != 'Rando Cobweb Duster']
+                spoiler_names.append('Rando Cobweb Duster')
+                seed = [item for item in seed if item != 367]
+                seed.append('367')
+            else:
+                # Remove Card107 and place at end if randomizecobwebduster == True
+                spoiler_names = [item for item in spoiler_names if item != 'Card107']
+                spoiler_names.append('Card107')
+                seed = [item for item in seed if item != 359]
+                seed.append('359')
+
+            # Handle Start Levitation Setting
+            if seed_settings_startlevitation == 'True':
+                # Remove StartLevitation from list and place at end
+                spoiler_names = [item for item in spoiler_names if item != 'Levitation1']
+                spoiler_names.append('Levitation1')
+                seed = [item for item in seed if item != 26]
+                seed.append('26')
+            else:
+                # Remove Card108 and place at end
+                spoiler_names = [item for item in spoiler_names if item != 'Card108']
+                spoiler_names.append('Card108')
+                seed = [item for item in seed if item != 360]
+                seed.append('360')
+
+            # Handle Start Button Setting
+            if seed_settings_startbutton == 'True':
+                # Remove Button from list and place at end
+                spoiler_names = [item for item in spoiler_names if item != 'Button']
+                spoiler_names.append('Button')
+                seed = [item for item in seed if item != 365]
+                seed.append('365')
+            else:
+                # Remove Card109 and place at end if randomizebutton == False
+                spoiler_names = [item for item in spoiler_names if item != 'Card109']
+                spoiler_names.append('Card109')
+                seed = [item for item in seed if item != 361]
+                seed.append('361')
+
+        count = 1
+        for location, current_spoiler_name in zip(location_spoiler_list, spoiler_names):
+            for item in hint_list:
+                if item in current_spoiler_name:
+                    #Make Uppercase
+                    uppercase_spoiler_name = current_spoiler_name.upper()
+
+                    file.write(f"HINT {count}:\n        [{uppercase_spoiler_name}] can be found at: {location}\n\n")
+                    count += 1
+           
 
 
 

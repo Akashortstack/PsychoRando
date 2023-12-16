@@ -18,7 +18,10 @@ function PropSign(Ob)
 		Ob.pickupSpriteName = 'MM_Sign'
 		Ob.clutchAnim = 'Anims/DartNew/BodyParts/Hold_MM_Sign.jan' -- Editable
 		Ob.collSphereRadius = 30 -- Editable
-		Ob.bAutoSelect = 1
+
+		--edit remove
+		--Ob.bAutoSelect = 1
+
 		Ob.GmanPropName = 'Sign'
 		-- for moving while on clairvoyance
 		Ob.bClairvoyancePlayerControl = 1
