@@ -1,3 +1,5 @@
+import os
+import string
 import networkx as nx
 import random
 import copy
@@ -725,8 +727,20 @@ def create_seed():
 
 seed, spoiler_names = create_seed()
 
+# Function to generate a random string of letters and digits
+def generate_random_string(length):
+    characters = string.ascii_letters + string.digits
+    return ''.join(random.choice(characters) for _ in range(length))
+
+# Create a folder with a randomized name
+random_folder_name = f"Seed {generate_random_string(16)}"
+os.makedirs(random_folder_name)
+
+seed_file_name = f"RandoSeed.lua"
+seed_file_path = os.path.join(random_folder_name, seed_file_name)
+
 # Create and open the output file for RandoSeed
-with open("RandoSeed.lua", "w") as file:
+with open(seed_file_path, "w") as file:
     # First part of coding structure
     text1 = '''function RandoSeed(Ob)
   if ( not Ob ) then
@@ -828,7 +842,9 @@ with open("RandoSeed.lua", "w") as file:
 if seed_settings_spoilerlog == 'True':
     print ('Spoiler Log True!')
     # Create and open the output file for SpoilerLog.txt
-    with open("SpoilerLog.txt", "w") as file:
+    spoilerlog_file_name = f"SpoilerLog.txt"
+    spoilerlog_file_path = os.path.join(random_folder_name, spoilerlog_file_name)
+    with open(spoilerlog_file_path, "w") as file:
         count = 1
         if seed_settings_randomizecobwebduster == 'False' or seed_settings_startcobwebduster == 'True':
             # Remove Cobweb Duster from list and place at end
@@ -980,8 +996,6 @@ if seed_settings_spoilerlog == 'True':
             file.write(f"LOCATION {count}: {spoiler_list} has ITEM {spoiler_seed}: {spoiler_name}\n")
             count += 1
 
-#HINTS NOT FINISHED NEEDS WORK!!!
-
 def generate_hints():
 
     #Create Table to pull Progression Hints from
@@ -1030,7 +1044,9 @@ if seed_settings_createhints == 'True':
     hint_list = generate_hints()
 
     #Write Hints to Hint File
-    with open("Hints.txt", "w") as file:
+    hints_file_name = f"Hints.txt"
+    hints_file_path = os.path.join(random_folder_name, hints_file_name)
+    with open(hints_file_path, "w") as file:
 
         #Handle seed settings if not already done
         if seed_settings_spoilerlog == 'False':
