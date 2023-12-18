@@ -274,6 +274,9 @@ function LOMA(Ob)
 		
 		if (Global:loadGlobal('bLOCompleted') == 1) then
 			RegisterTriggerVolume(self, 'tv_plane1')
+			--edit Remove level load from LOMA to LOCB if LOCompleted to prevent softlocks
+			local removeload = fso('Teleporter')
+			removeload:killSelf()
 		end
 		Global.notSaved.assKickedByTanksScore = 0 -- tracking number to decide if we should give a hint on not getting your ass kicked by a tank
 

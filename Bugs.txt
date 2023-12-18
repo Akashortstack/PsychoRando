@@ -23,8 +23,6 @@ General Bugs:
 
 THINGS TO DO:
 
---Add Inventory Popup to MM props, anything else that doesn't yet
-
 --Add items to Hud Popup?
     --Baggage Tags by type
 
@@ -38,9 +36,9 @@ THINGS TO DO:
 
 --Create Item Tracker?
 
---Add requirements to enter Sasha's and Milla's minds? Learner's Permits?
+--Add requirements to enter minds? Brain Jars with character brains?
 
---Add more junk items? 
+--Add more junk items?
 
 --Update seed generator, add settings page and "Generate" Button
 

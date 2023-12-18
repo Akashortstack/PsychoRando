@@ -733,7 +733,7 @@ def generate_random_string(length):
     return ''.join(random.choice(characters) for _ in range(length))
 
 # Create a folder with a randomized name
-random_folder_name = f"Seed {generate_random_string(16)}"
+random_folder_name = f"Seed {generate_random_string(20)}"
 os.makedirs(random_folder_name)
 
 seed_file_name = f"RandoSeed.lua"
@@ -1098,7 +1098,7 @@ if seed_settings_createhints == 'True':
                     #Make Uppercase
                     uppercase_spoiler_name = current_spoiler_name.upper()
 
-                    file.write(f"HINT {count}:\n        [{uppercase_spoiler_name}] can be found at: {location}\n\n")
+                    file.write(f"HINT {count}:\n[{uppercase_spoiler_name}] can be found at:\n{location}\n\n")
                     count += 1
            
 
