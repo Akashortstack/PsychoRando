@@ -601,6 +601,31 @@ def traverse_edge(graph, source_node, target_node, inventory):
         return False 
 
 def check_impossible(graph):
+    if seed_settings_everylocationpossible == 'True' and seed_settings_startbutton == 'False' and ("Button" in graph.nodes["GPC and Wilderness (CAGP)"]["items"] or
+        "Button" in graph.nodes["GPC Squirrel (CAGP)"]["items"] or
+        "Button" in graph.nodes["GPC Geyser (CAGP)"]["items"] or
+        "Button" in graph.nodes["Main Campgrounds (CAMA)"]["items"] or
+        "Button" in graph.nodes["Main Campgrounds: Levitation (CAMA)"]["items"] or
+        "Button" in graph.nodes["Kids' Cabins (CAKC)"]["items"] or
+        "Button" in graph.nodes["Kids' Cabins: Levitation (CAKC)"]["items"] or
+        "Button" in graph.nodes["Kids' Cabins: Pyrokinesis (CAKC)"]["items"] or
+        "Button" in graph.nodes["Reception Area (CARE)"]["items"] or
+        "Button" in graph.nodes["Reception Area: Levitation (CARE)"]["items"] or
+        "Button" in graph.nodes["Reception Area: Marksmanship (CARE)"]["items"] or
+        "Button" in graph.nodes["Lake and Boathouse (CABH)"]["items"] or
+        "Button" in graph.nodes["Lake and Boathouse: Levitation (CABH)"]["items"] or
+        "Button" in graph.nodes["Main Lodge (CALI)"]["items"] or
+        "Button" in graph.nodes["Rando Only Rank Checks 20-101"]["items"] or
+        "Button" in graph.nodes["Asylum Grounds (ASGR)"]["items"] or
+        "Button" in graph.nodes["Asylum Grounds: Levitation (ASGR)"]["items"] or  
+        "Button" in graph.nodes["Asylum Lower Level (ASCO)"]["items"] or   
+        "Button" in graph.nodes["Asylum Lower Level: Levitation (ASCO)"]["items"] or
+        "Button" in graph.nodes["Asylum Upper Level (ASUP)"]["items"] or
+        "Button" in graph.nodes["Asylum Upper Level: Telekinesis (ASUP)"]["items"] or
+        "Button" in graph.nodes["Dr. Loboto's Laboratory (ASLB)"]["items"]):  
+        # Button behind itself
+        print("Failed, Button Impossible")
+        return False
     if seed_settings_everylocationpossible == 'True' and ("Lungfish Call" in graph.nodes["Asylum Grounds (ASGR)"]["items"] or
         "Lungfish Call" in graph.nodes["Asylum Grounds: Levitation (ASGR)"]["items"] or  
         "Lungfish Call" in graph.nodes["Asylum Lower Level (ASCO)"]["items"] or   

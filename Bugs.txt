@@ -23,7 +23,8 @@ General Bugs:
 
 THINGS TO DO:
 
---Add items to Hud Popup?
+--Add items to Hud Popup
+    --create custom UIElement script
     --Baggage Tags by type
 
 --Look into applying sounds across all levels using below codes
@@ -40,7 +41,7 @@ THINGS TO DO:
 
 --Add more junk items?
 
---Update seed generator, add settings page and "Generate" Button
+--Add settings page and "Generate" Button to Seed Generator
 
 --Black Velvetopia potential shop painting rando? Needs work...
     --Could remove shop functionality entirely, just be collectible spots. Doesn't feel good.
