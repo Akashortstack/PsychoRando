@@ -29,7 +29,7 @@ function Positions(Ob)
                 y = 846, 
                 z = 1587,
                 ox = 0,
-                oy = 0,
+                oy = 180,
                 oz = 0,
             },
             item3 = {        
@@ -234,9 +234,9 @@ function Positions(Ob)
             },
             item25 = {        
                 levelName = 'CAGP',
-                x = 4900, 
-                y = -208, 
-                z = -2750,
+                x = 4863, 
+                y = -150, 
+                z = -2397,
                 ox = 0,
                 oy = 0,
                 oz = 0,
@@ -433,7 +433,7 @@ function Positions(Ob)
                 y = 977, 
                 z = 19992,
                 ox = 0,
-                oy = 0,
+                oy = 180,
                 oz = 0,
             },
             item47 = {        
@@ -625,7 +625,7 @@ function Positions(Ob)
             item67 = {        
                 levelName = 'CARE',
                 x = -18895, 
-                y = 743, 
+                y = 763, 
                 z = -390,
                 ox = 0,
                 oy = 0,
@@ -2114,7 +2114,7 @@ function Positions(Ob)
                 y = 14813, 
                 z = 26121,
                 ox = 0,
-                oy = 71,
+                oy = 250,
                 oz = 0,
             },
             item221 = {        
@@ -2137,11 +2137,11 @@ function Positions(Ob)
             },
             item223 = {        
                 levelName = 'MIFL',
-                x = -19528, 
-                y = 23610, 
-                z = 29712,
+                x = -19431, 
+                y = 23624, 
+                z = 29923,
                 ox = 0,
-                oy = 125,
+                oy = 145,
                 oz = 0,
             },
             item224 = {        
@@ -2224,7 +2224,7 @@ function Positions(Ob)
                 y = 23, 
                 z = 993,
                 ox = 0,
-                oy = -11,
+                oy = 170,
                 oz = 0,
             },
             item232 = {        

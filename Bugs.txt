@@ -23,15 +23,19 @@ General Bugs:
 
 THINGS TO DO:
 
---Add items to Hud Popup
-    --create custom UIElement script
-    --Baggage Tags by type
+--Cleanup Milkman
+    --Make car trunks spawn the items when opened
+    --Make house items only spawn if entering the correct house
 
---Look into applying sounds across all levels using below codes
+--Add settings page and "Generate" Button to Seed Generator
+
+--Look into applying certain sounds across all levels using below codes
     --LoadSoundData('mm'), Loads all sounds from Milkman
     --LoadSoundData('BVEB') loads all baggage sounds, DONE
+    --Need to fix Subtitle issues for most collectibles
 
 --Remove More Tutorials?
+    --bDisableTutorialBoxes only works if in Debug Level Select. Why?
 
 --Add Edgar's Playing Cards and Paintings to item pool?
 
@@ -40,8 +44,6 @@ THINGS TO DO:
 --Add requirements to enter minds? Brain Jars with character brains?
 
 --Add more junk items?
-
---Add settings page and "Generate" Button to Seed Generator
 
 --Black Velvetopia potential shop painting rando? Needs work...
     --Could remove shop functionality entirely, just be collectible spots. Doesn't feel good.

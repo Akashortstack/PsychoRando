@@ -42,9 +42,9 @@ function Vault(Ob)
 		Ob.bSnapEntityToGround = 0
 
 		-- Flee data
-		--edit to make smaller
-		Ob.triggerRadius = 450			--Start fleeing at this point
-		Ob.safeRetreatDist = 470        --Stop fleeing
+		--edit to prevent from running away
+		Ob.triggerRadius = 5			--Start fleeing at this point
+		Ob.safeRetreatDist = 10        --Stop fleeing
 
 		Ob.ts_flee = nil	-- reference to trigger sphere telling us to flee from player
 		Ob.lookAheadDist = 1000

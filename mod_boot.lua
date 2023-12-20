@@ -13,9 +13,6 @@ function RandoSetup()
 	if Global:loadGlobal('bHasMentalMagnet') ~= 1 then
 		Global:saveGlobal('bHasMentalMagnet', 1) 
 	end
-		
-	--Load Sounds for Crying Baggage
-	LoadSoundData('BVEB')
 
 end
 

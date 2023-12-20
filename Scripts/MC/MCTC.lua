@@ -270,7 +270,7 @@ function MCTC(Ob)
 	function Ob:onPostBeginLevel()
 		%Ob.Parent.onPostBeginLevel(self)
 
-		--[[ --edit Prevent entering last level unless player has defeated Oleander BrainTank,
+		--[[ --edit Prevent entering last level unless player has completed goals,
 		check for any settings requirements,
 		spawn DoorFatLady.lua prop as a visual blocker
 		]]
@@ -279,6 +279,7 @@ function MCTC(Ob)
 		local rank101Met = TRUE
 		local brainsMet = TRUE
 		local scavhuntMet = TRUE
+		local alllevelsmet = TRUE
 
 		--check if Coach Oleander defeated
 		if seedsettings.beatoleander == TRUE then
@@ -314,9 +315,18 @@ function MCTC(Ob)
 				scavhuntMet = FALSE
 			end
 		end
+
+		if seedsettings.beatalllevels == TRUE then
+			--check if all levels completed
+			if (Global:loadGlobal('bBBCompleted') == 1) and (Global:loadGlobal('bSACompleted') == 1) and (Global:loadGlobal('bMICompleted') == 1) and (Global:loadGlobal('bNICompleted') == 1) and (Global:loadGlobal('bLOCompleted') == 1) and (Global:loadGlobal('bMMCompleted') == 1) and (Global:loadGlobal('bTHCompleted') == 1) and (Global:loadGlobal('bWWCompleted') == 1) and (Global:loadGlobal('bBVCompleted') == 1) then
+				GamePrint('All Levels Completed!')
+			else 
+				alllevelsmet = FALSE
+			end
+		end
 		
 		
-		if victoryMet == FALSE or brainsMet == FALSE or scavhuntMet == FALSE or rank101Met == FALSE then
+		if victoryMet == FALSE or brainsMet == FALSE or scavhuntMet == FALSE or rank101Met == FALSE or alllevelsmet == FALSE then
 			GamePrint('Missing Win Condition, Spawn Fat Lady')
 			remove = fso('MCTCtoMCBB')
 			remove:killSelf()

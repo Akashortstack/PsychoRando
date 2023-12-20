@@ -28,7 +28,12 @@ function RandoPurse(Ob)
 	--               	SCRIPT INITIALIZATION
 	-------------------------------------------------------------------                     
 	
-	function Ob:onBeginLevel()		  
+	function Ob:onBeginLevel()
+		--edit Load Sounds for Crying Baggage if not in mental level
+        if strfind(FindScriptObject('LevelScript').levelType, 'real') then
+			LoadSoundData('BVEB')
+		end	
+		  
 		if not self.sBaggageType then
 			GamePrint('Warning: EB type not specified.  Defaulting to HatBox.')
 			self.sBaggageType = 'hatbox'

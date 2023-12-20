@@ -26,6 +26,7 @@ seed_settings_beatoleander = config['VictoryConditions']['beatoleander']
 seed_settings_rank101 = config['VictoryConditions']['rank101']
 seed_settings_brainhunt = config['VictoryConditions']['brainhunt']
 seed_settings_scavengerhunt = config['VictoryConditions']['scavengerhunt']
+seed_settings_beatalllevels = config['VictoryConditions']['beatalllevels']
 
 # Config.ini QualityOfLife 
 seed_settings_fasterLO = config['QualityOfLife']['fasterLO']
@@ -325,7 +326,7 @@ elif seed_settings_randomizecobwebduster == 'False':
     game_graph.nodes["Ford's Shop: Cobweb Duster"]["items"].append("Cobweb Duster")
 
 #Change Victory Requirement Logic based on Settings
-if seed_settings_everylocationpossible == 'True':
+if seed_settings_everylocationpossible == 'True' or seed_settings_beatalllevels == 'True':
     game_graph.edges["Start", "Victory"]["requirements"].extend(["Button", "Cobweb Duster", "Levitation", "Pyrokinesis", "Telekinesis", "Confusion", "Marksmanship", "Clairvoyance", "Shield", "Invisibility", 
     "Lungfish Call", "Lobato Painting", "Gloria's Trophy", "Straight Jacket", "Cake", "Candle1", "Candle2", "Megaphone", "Prop Sign", "Prop Plunger", "Prop Flowers", "Prop HedgeTrimmers", "Prop Rolling Pin", "Fred's Letter", "Priceless Coin", "Musket",])
 elif seed_settings_beatoleander == 'True':
@@ -799,6 +800,10 @@ with open(seed_file_path, "w") as file:
     # write everylocationpossible setting, make boolean uppercase for Game
     everylocationpossiblesetting = str(seed_settings_everylocationpossible).upper()
     file.write(f"Ob.everylocationpossible = {everylocationpossiblesetting}\n")
+
+    # write beatalllevels setting, make boolean uppercase for Game
+    beatalllevelssetting = str(seed_settings_beatalllevels).upper()
+    file.write(f"Ob.beatalllevels = {beatalllevelssetting}\n")
 
     # write rank101 setting, make boolean uppercase for Game
     rank101setting = str(seed_settings_rank101).upper()
