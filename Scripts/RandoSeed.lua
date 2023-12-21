@@ -4,13 +4,13 @@ function RandoSeed(Ob)
       Ob.seed = {}
       Ob.startcobweb = FALSE
 Ob.startlevitation = TRUE
-Ob.startbutton = FALSE
+Ob.startbutton = TRUE
 Ob.randomizecobwebduster = TRUE
 Ob.beatoleander = TRUE
 Ob.everylocationpossible = TRUE
 Ob.rank101 = TRUE
 Ob.brainhunt = TRUE
-Ob.scavengerhunt = TRUE
+Ob.scavengerhunt = FALSE
 Ob.fasterLO = TRUE
 Ob.createhints = TRUE
 Ob.majorhints = 3

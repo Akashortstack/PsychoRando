@@ -226,6 +226,12 @@ function CASA(Ob)
                 Global.player:addToInventory(button,0,1)
 			end
 
+			--edit prevent Ford Scav Hunt Cutscene if setting FALSE
+			if settings.scavengerhunt == FALSE then
+				Global:saveGlobal('bRandoScavHuntCutscene', 1)
+			end
+
+			
 			SpawnScript('CA.Props.Psychomaster')
         end
 
@@ -253,6 +259,10 @@ function CASA(Ob)
 		if Global:loadGlobal('bBVCompleted') == 1 then
 			Global.goalManager:deactivate('LiberateEdgar')
 		end
+
+		--edit Make Scavenger Hunt List viewable from beginning
+		Global:save('bFord2ScavengerProxPlayed', 1)
+
 
 
 

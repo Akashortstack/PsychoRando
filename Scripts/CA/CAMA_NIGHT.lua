@@ -89,7 +89,13 @@ function CAMA_NIGHT(Ob)
 		-- Set the shadow culling bias, which is needed for floors made up of very large, non-axis-aligned polys
 		SetShadowCullingBias(-1000)
 
-		--edit Ford Scavenger Hunt, but at night!
+		--edit Ford Scavenger Hunt Cutscene, but at night!
+		--only loads if Scavenger Hunt TRUE, saved in CASA
+		if (Global:loadGlobal('bRandoScavHuntCutscene') ~= 1) then
+			Global:save('bFord2ScavengerProxPlayed', 0)
+			Global:saveGlobal('bRandoScavHuntCutscene', 1)
+		end
+
 		if (Global:load('bFord2ScavengerProxPlayed') ~= 1) then
 			self.ford = SpawnScript('CA.Characters.Ford', 'Ford', '')
 		end

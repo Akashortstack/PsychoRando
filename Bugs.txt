@@ -31,7 +31,6 @@ THINGS TO DO:
 
 --Look into applying certain sounds across all levels using below codes
     --LoadSoundData('mm'), Loads all sounds from Milkman
-    --LoadSoundData('BVEB') loads all baggage sounds, DONE
     --Need to fix Subtitle issues for most collectibles
 
 --Remove More Tutorials?
