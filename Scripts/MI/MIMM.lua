@@ -114,6 +114,7 @@ function MIMM(Ob)
 		
 		if (self.bRaceAlone ~= 1) then
 			self.bobby = SpawnScript('MI.Characters.BobbySplineRacer', 'Bobby', '', 1)
+
 			if self.bobby then
 				self.tracker:registerTrackee(self.bobby)
 				self.numRacers = self.numRacers+1
@@ -180,6 +181,13 @@ function MIMM(Ob)
     	PreloadAnimData('anims/bobby/runball.jan')
     	PreloadAnimData('anims/bobby/props/runball_bubble.jan')
     	PreloadAnimData('anims/campkids/ballride1.jan')
+		--edit, hide Bobby and his levitation ball if QOL True
+		local settings = FindScriptObject('RandoSeed')
+		if settings.easymillarace == TRUE then
+			self.bobby:hide()
+			self.bobby.ball:hide()
+		end
+		
 	end
 
 	function Ob:onSpawn()

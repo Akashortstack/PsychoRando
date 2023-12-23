@@ -209,20 +209,13 @@ function ASGR(Ob)
 		SoundMuteAll()  -- stop all sounds from playing
 		
 		PlaySound(nil, self.rAmbientSound, 1, 0)
-		self.rASExtIntroTheme = LoadSound('AsylumExtIntro')
-
-		--Disable elevator to ASLB if player hasn't yet been there.
-		local bHasSeenASLB = Global:loadGlobal( 'bHasSeenASLB' )
-		if( ( not bHasSeenASLB ) or ( bHasSeenASLB == 0 ) ) then
-			local elevator = FindScriptObject( 'elevator1' )
-			elevator:disable()
-		end		
+		self.rASExtIntroTheme = LoadSound('AsylumExtIntro')	
 			
 	end
 
 	function Ob:onPostBeginLevel()
 		%Ob.Parent.onPostBeginLevel(self)
-		
+
 		--Need to run cutscene right away to avoid the single frame, so do it here
 		if (Global:load('bElevatorDropping') == 1) then
 			Global.cutsceneScript:runCutscene('ElevatorDrop2')
@@ -285,6 +278,23 @@ function ASGR(Ob)
 				--Came from ASLB elevator, so look at him from the side with the camera
 				SetChaseCameraAzimuth(110, Global.player)
 			end
+
+			--edit check setting, if inventory contains all disguise pieces leave elevator open, prevent cutscenes in ASUP and ASCO later
+			local settings = FindScriptObject('RandoSeed')
+			if settings.earlyelevator == TRUE and Global.player:isInInventory('LobatoPainting') == 1 and Global.player:isInInventory('LobatoHand') == 1 and Global.player:isInInventory('StraightJacket') == 1 then
+				Global:saveGlobal('bHasSeenASLB', 1)
+				Global:save('bElevatorArrivePlayed', 1)
+				Global:saveGlobal('SeenSheegorWarning', 1)
+				Global:save('CrispinIntroSeen', 1)
+			end
+
+			--edit moved from onBeginLevel for settings
+			--Disable elevator to ASLB if player hasn't yet been there.
+			local bHasSeenASLB = Global:loadGlobal( 'bHasSeenASLB' )
+			if( ( not bHasSeenASLB ) or ( bHasSeenASLB == 0 ) ) then
+				local elevator = FindScriptObject( 'elevator1' )
+				elevator:disable()
+			end	
 
 			SoundMuteNone()
 			

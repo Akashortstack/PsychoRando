@@ -30,6 +30,8 @@ seed_settings_beatalllevels = config['VictoryConditions']['beatalllevels']
 
 # Config.ini QualityOfLife 
 seed_settings_fasterLO = config['QualityOfLife']['fasterLO']
+seed_settings_easymillarace = config['QualityOfLife']['easymillarace']
+seed_settings_earlyelevator = config['QualityOfLife']['earlyelevator']
 
 # Config.ini AdditionalFiles 
 seed_settings_createhints = config['AdditionalFiles']['createhints']
@@ -820,6 +822,14 @@ with open(seed_file_path, "w") as file:
     # write fasterLO setting, make boolean uppercase for Game
     fasterLOsetting = str(seed_settings_fasterLO).upper()
     file.write(f"Ob.fasterLO = {fasterLOsetting}\n")
+
+    # write easymillarace setting, make boolean uppercase for Game
+    easymillaracesetting = str(seed_settings_easymillarace).upper()
+    file.write(f"Ob.easymillarace = {easymillaracesetting}\n")
+
+    # write earlyelevator setting, make boolean uppercase for Game
+    earlyelevatorsetting = str(seed_settings_earlyelevator).upper()
+    file.write(f"Ob.earlyelevator = {earlyelevatorsetting}\n")
 
     # write createhintsetting, make boolean uppercase for Game
     createhintsetting = str(seed_settings_createhints).upper()

@@ -2,7 +2,7 @@
 
 General Bugs:
 
---Collecting Steamertrunk in BB causes player to teleport to vanilla steamertrunk location
+--If any Peasant Item spawns in WW, item's Peasant has no voicelines unless item is collected, works normal afterwards
 
 --Gloria's Theater can potentially crash very late into a seed. Cause Unknown, possibly goal manager related?
 
@@ -24,8 +24,8 @@ General Bugs:
 THINGS TO DO:
 
 --Cleanup Milkman
-    --Make car trunks spawn the items when opened
     --Make house items only spawn if entering the correct house
+    --changes logic requirements, cobweb duster AND watering can
 
 --Add settings page and "Generate" Button to Seed Generator
 
