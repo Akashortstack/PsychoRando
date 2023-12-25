@@ -18,7 +18,8 @@ function PropHedgeTrimmers(Ob)
 		Ob.pickupSpriteName = 'MM_Clippers'
 		Ob.clutchAnim = 'Anims/DartNew/BodyParts/Hold_MM_HedgeTrimmers.jan' -- Editable
 		Ob.collSphereRadius = 30 -- Editable
-		Ob.bAutoSelect = 1
+		--edit remove
+		--Ob.bAutoSelect = 1
 		Ob.GmanPropName = 'HedgeTrimmers'
 		-- for moving while on clairvoyance
 		Ob.bClairvoyancePlayerControl = 1

@@ -11,8 +11,8 @@ from SpoilerLogFiles.location_spoiler import location_spoiler_list
 # Create a configparser object
 config = configparser.ConfigParser()
 
-# Read the config.ini file
-config.read('config.ini')
+# Read the settings.ini file
+config.read('settings.ini')
 
 # Config.ini SeedSettings 
 seed_settings_startcobwebduster = config['SeedSettings']['startcobwebduster']
@@ -32,6 +32,7 @@ seed_settings_beatalllevels = config['VictoryConditions']['beatalllevels']
 seed_settings_fasterLO = config['QualityOfLife']['fasterLO']
 seed_settings_easymillarace = config['QualityOfLife']['easymillarace']
 seed_settings_earlyelevator = config['QualityOfLife']['earlyelevator']
+seed_settings_mentalmagnet = config['QualityOfLife']['mentalmagnet']
 
 # Config.ini AdditionalFiles 
 seed_settings_createhints = config['AdditionalFiles']['createhints']
@@ -831,18 +832,13 @@ with open(seed_file_path, "w") as file:
     earlyelevatorsetting = str(seed_settings_earlyelevator).upper()
     file.write(f"Ob.earlyelevator = {earlyelevatorsetting}\n")
 
+    # write mentalmagnet setting, make boolean uppercase for Game
+    mentalmagnetsetting = str(seed_settings_mentalmagnet).upper()
+    file.write(f"Ob.mentalmagnet = {mentalmagnetsetting}\n")
+
     # write createhintsetting, make boolean uppercase for Game
     createhintsetting = str(seed_settings_createhints).upper()
     file.write(f"Ob.createhints = {createhintsetting}\n")
-
-    # write majorhintsetting
-    file.write(f"Ob.majorhints = {seed_settings_majorhints}\n")
-
-    # write powerhintsetting
-    file.write(f"Ob.powerhints = {seed_settings_powerhints}\n")
-
-    # write minorhintsetting
-    file.write(f"Ob.minorhints = {seed_settings_minorhints}\n")
 
     # write createspoilerlog, make boolean uppercase for Game
     createspoilerlog = str(seed_settings_spoilerlog).upper()
@@ -959,6 +955,9 @@ if seed_settings_spoilerlog == 'True':
 
             if count == 131:
                 file.write(f"\nAsylum Grounds (ASGR)\n")
+
+            if count == 141:
+                file.write(f"\nAsylum Lower Floors (ASCO)\n")
 
             if count == 150:
                 file.write(f"\nAsylum Upper Level (ASUP)\n")

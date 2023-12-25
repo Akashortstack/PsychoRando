@@ -17,7 +17,8 @@ function PropFlowers(Ob)
 		Ob.pickupSpriteName = 'MM_Flowers'
 		Ob.clutchAnim = 'Anims/DartNew/BodyParts/Hold_MM_Flowers.jan' -- Editable
 		Ob.collSphereRadius = 30 -- Editable
-		Ob.bAutoSelect = 1
+		--edit remove
+		--Ob.bAutoSelect = 1
 		Ob.GmanPropName = 'Flowers'
 		-- for moving while on clairvoyance
 		Ob.bClairvoyancePlayerControl = 1

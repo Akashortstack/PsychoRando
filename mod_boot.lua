@@ -4,15 +4,6 @@ function RandoSetup()
 	if (not Global:load('CALevelState', 'CA')) or Global:load('CALevelState', 'CA') ~= 7 then
 		Global:save('CALevelState', 7, 'CA')
 	end
-	--Makes Brains always visible in menu
-	if Global:loadGlobal('bSeenASIN') ~= 1 then
-		Global:saveGlobal('bSeenASIN', 1)
-	end
-
-	--Start with Mental Magnet
-	if Global:loadGlobal('bHasMentalMagnet') ~= 1 then
-		Global:saveGlobal('bHasMentalMagnet', 1) 
-	end
 
 end
 

@@ -20,8 +20,7 @@ function PropRifle(Ob)
 		Ob.clutchAnim = 'Anims/DartNew/BodyParts/Hold_MM_Rifle.jan' -- Editable
 		Ob.collSphereRadius = 30 -- Editable
 
-		--edit remove
-		--Ob.bAutoSelect = 1
+		Ob.bAutoSelect = 1
 		
 		Ob.GmanPropName = 'Rifle'
 		-- for moving while on clairvoyance

@@ -231,6 +231,10 @@ function CASA(Ob)
 				Global:saveGlobal('bRandoScavHuntCutscene', 1)
 			end
 
+			--edit Setting to Start with Mental Magnet
+			if settings.mentalmagnet == TRUE then
+				Global:saveGlobal('bHasMentalMagnet', 1) 
+			end
 			
 			SpawnScript('CA.Props.Psychomaster')
         end
@@ -261,9 +265,16 @@ function CASA(Ob)
 		end
 
 		--edit Make Scavenger Hunt List viewable from beginning
-		Global:save('bFord2ScavengerProxPlayed', 1)
+		if Global:load('bFord2ScavengerProxPlayed') ~= 1 then
+			Global:save('bFord2ScavengerProxPlayed', 1)
+		end
 
+		--edit Makes Brains always visible in menu
+		if Global:loadGlobal('bSeenASIN') ~= 1 then
+			Global:saveGlobal('bSeenASIN', 1)
+		end
 
+		
 
 
         --[[
