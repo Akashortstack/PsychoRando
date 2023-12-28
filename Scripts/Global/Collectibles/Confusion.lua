@@ -4,6 +4,7 @@ function Confusion(Ob)
 		Ob.power = 'Confusion' -- Editable
 		--edit
 		Ob.interestFXName = 'Global.Effects.PsiPowerUpFX'
+		Ob.SIM_CULL_DIST = 5000	
 
 		Ob.dependencies = {
 			textures = {
@@ -48,6 +49,10 @@ function Confusion(Ob)
 		--edit fixes lighting issues
 		SetEntityAmbientLight(self, 0.8, 0.8, 0.8)
 
+		--edit set cull distance
+		SetEntityFlag(self, ENTITY_DETAIL_CULLING, 1)
+		SetSimulationCullDistance(self, self.SIM_CULL_DIST)
+
 		--edit to fix scale and orientation
 		self:setScale(30)
 		self.mover:setOrientation(ApplyOrientation(0, 0, 0, self.mover:getOrientation()))
@@ -89,7 +94,7 @@ function Confusion(Ob)
 		PlaySound(nil, LoadSound('YouWin'))
 		--edit removed
 		--self:sleep(.5)
-		
+
 		--edit removed cutscene
 		--self:playVideo('cutScenes/prerendered/'..strlower(self.power)..'meritbadge.xmv')		
 		if self:getConstant() == kPOWER_CLAIRVOYANCE then

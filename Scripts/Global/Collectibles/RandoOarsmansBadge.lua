@@ -63,7 +63,7 @@ function RandoOarsmansBadge(Ob)
 	function Ob:statePickup()
 
 		--edit make a sound!
-		PlaySound(nil, LoadSound('YouWin'))
+		--PlaySound(nil, LoadSound('YouWin'))
 
 		--sendMessage to Dart
 		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)

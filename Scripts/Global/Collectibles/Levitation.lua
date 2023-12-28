@@ -5,7 +5,8 @@ function Levitation(Ob)
 
 		--edit
 		Ob.interestFXName = 'Global.Effects.PsiPowerUpFX'
-		
+		Ob.SIM_CULL_DIST = 5000	
+
 		Ob.dependencies = {
 			textures = {
 				'Textures/icons/PsiPowers/Levitation.dds' --Since we load replace the texture after-the-fact, we tell the game we depend on it so it gets preloaded
@@ -49,6 +50,10 @@ function Levitation(Ob)
 		
 		--edit fixes lighting issues
 		SetEntityAmbientLight(self, 0.8, 0.8, 0.8)
+
+		--edit set cull distance
+		SetEntityFlag(self, ENTITY_DETAIL_CULLING, 1)
+		SetSimulationCullDistance(self, self.SIM_CULL_DIST)
 
 		--edit to fix scale and orientation
 		self:setScale(30)
