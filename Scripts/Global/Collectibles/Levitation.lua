@@ -87,7 +87,10 @@ function Levitation(Ob)
 		Global.player:replaceSelectedItemInPsack()
 		Global.player.invDisplayer:invItemAdded(self,0,0,nil,1)
 		self:makeInvisible(1)
-		self:sleep(.5)
+		--edit make a sound!
+		PlaySound(nil, LoadSound('YouWin'))
+		--edit removed
+		--self:sleep(.5)
 
 		--edit removed cutscene
 		--self:playVideo('cutScenes/prerendered/'..strlower(self.power)..'meritbadge.xmv')

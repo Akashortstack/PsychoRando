@@ -236,7 +236,7 @@ function CASA(Ob)
 				Global:saveGlobal('bHasMentalMagnet', 1) 
 			end
 			
-			SpawnScript('CA.Props.Psychomaster')
+			--SpawnScript('CA.Props.Psychomaster')
         end
 
 		--edit Remove level load from CASA to CAGP if Button not in inventory

@@ -36,6 +36,7 @@ seed_settings_mentalmagnet = config['QualityOfLife']['mentalmagnet']
 
 # Config.ini AdditionalFiles 
 seed_settings_createhints = config['AdditionalFiles']['createhints']
+seed_settings_detailedhints = config['AdditionalFiles']['detailedhints']
 seed_settings_majorhints = config.getint('AdditionalFiles', 'majorhints')
 seed_settings_powerhints = config.getint('AdditionalFiles', 'powerhints')
 seed_settings_minorhints = config.getint('AdditionalFiles', 'minorhints')
@@ -762,7 +763,8 @@ def generate_random_string(length):
     return ''.join(random.choice(characters) for _ in range(length))
 
 # Create a folder with a randomized name
-random_folder_name = f"Seed {generate_random_string(20)}"
+seed_name = generate_random_string(16)
+random_folder_name = f"PsychoRandoSeed_{seed_name}"
 os.makedirs(random_folder_name)
 
 seed_file_name = f"RandoSeed.lua"
@@ -777,6 +779,9 @@ with open(seed_file_path, "w") as file:
       Ob.seed = {}
       '''
     file.write(text1)
+
+    #write seed_name to Randoseed.lua
+    file.write(f"Ob.seedname = '{seed_name}'\n")
     
     # Section where all settings booleans are written to RandoSeed.lua
 
@@ -881,7 +886,93 @@ if seed_settings_spoilerlog == 'True':
     spoilerlog_file_name = f"SpoilerLog.txt"
     spoilerlog_file_path = os.path.join(random_folder_name, spoilerlog_file_name)
     with open(spoilerlog_file_path, "w") as file:
-        count = 1
+
+        #write seed_name to Randoseed.lua
+        file.write(f"PSYCHORANDO SEED NAME:\n{seed_name}\n\n")
+        
+        # write all settings
+        file.write(f"SETTINGS:\n")
+
+        # write startcobwebduster setting, make boolean uppercase for Game
+        startcobwebsetting = str(seed_settings_startcobwebduster).upper()
+        file.write(f"startcobweb = {startcobwebsetting}\n")
+
+        # write startlevitation setting, make boolean uppercase for Game
+        startlevitationsetting = str(seed_settings_startlevitation).upper()
+        file.write(f"startlevitation = {startlevitationsetting}\n")
+
+        # write startbutton setting, make boolean uppercase for Game
+        startbuttonsetting = str(seed_settings_startbutton).upper()
+        file.write(f"startbutton = {startbuttonsetting}\n")
+
+        # write randomizecobwebduster setting, make boolean uppercase for Game
+        randomizecobwebsetting = str(seed_settings_randomizecobwebduster).upper()
+        file.write(f"randomizecobwebduster = {randomizecobwebsetting}\n")
+
+        # write beatoleander setting, make boolean uppercase for Game
+        beatoleandersetting = str(seed_settings_beatoleander).upper()
+        file.write(f"beatoleander = {beatoleandersetting}\n")
+
+        # write everylocationpossible setting, make boolean uppercase for Game
+        everylocationpossiblesetting = str(seed_settings_everylocationpossible).upper()
+        file.write(f"everylocationpossible = {everylocationpossiblesetting}\n")
+
+        # write beatalllevels setting, make boolean uppercase for Game
+        beatalllevelssetting = str(seed_settings_beatalllevels).upper()
+        file.write(f"beatalllevels = {beatalllevelssetting}\n")
+
+        # write rank101 setting, make boolean uppercase for Game
+        rank101setting = str(seed_settings_rank101).upper()
+        file.write(f"rank101 = {rank101setting}\n")
+
+        # write brainhunt setting, make boolean uppercase for Game
+        brainhuntsetting = str(seed_settings_brainhunt).upper()
+        file.write(f"brainhunt = {brainhuntsetting}\n")
+
+        # write scavengerhunt setting, make boolean uppercase for Game
+        scavengerhuntsetting = str(seed_settings_scavengerhunt).upper()
+        file.write(f"scavengerhunt = {scavengerhuntsetting}\n")
+
+        # write fasterLO setting, make boolean uppercase for Game
+        fasterLOsetting = str(seed_settings_fasterLO).upper()
+        file.write(f"fasterLO = {fasterLOsetting}\n")
+
+        # write easymillarace setting, make boolean uppercase for Game
+        easymillaracesetting = str(seed_settings_easymillarace).upper()
+        file.write(f"easymillarace = {easymillaracesetting}\n")
+
+        # write earlyelevator setting, make boolean uppercase for Game
+        earlyelevatorsetting = str(seed_settings_earlyelevator).upper()
+        file.write(f"earlyelevator = {earlyelevatorsetting}\n")
+
+        # write mentalmagnet setting, make boolean uppercase for Game
+        mentalmagnetsetting = str(seed_settings_mentalmagnet).upper()
+        file.write(f"mentalmagnet = {mentalmagnetsetting}\n")
+
+        # write createhintsetting, make boolean uppercase for Game
+        createhintsetting = str(seed_settings_createhints).upper()
+        file.write(f"createhints = {createhintsetting}\n")
+
+        # write detailedhintsetting, make boolean uppercase for Game
+        detailedhintsetting = str(seed_settings_detailedhints).upper()
+        file.write(f"detailedhints = {detailedhintsetting}\n")
+
+        # write majorhintsetting, make boolean uppercase for Game
+        majorhintsetting = str(seed_settings_majorhints).upper()
+        file.write(f"majorhints = {majorhintsetting}\n")
+
+        # write powerhintsetting, make boolean uppercase for Game
+        powerhintsetting = str(seed_settings_powerhints).upper()
+        file.write(f"powerhints = {powerhintsetting}\n")
+
+        # write minorhintsetting, make boolean uppercase for Game
+        minorhintsetting = str(seed_settings_minorhints).upper()
+        file.write(f"minorhints = {minorhintsetting}\n")
+
+        file.write(f"\nSPOILER LOG:\n")
+
+        
+        #Handle settings related placements
         if seed_settings_randomizecobwebduster == 'False' or seed_settings_startcobwebduster == 'True':
             # Remove Cobweb Duster from list and place at end
             spoiler_names = [item for item in spoiler_names if item != 'Rando Cobweb Duster']
@@ -922,12 +1013,14 @@ if seed_settings_spoilerlog == 'True':
             spoiler_names.append('Card109')
             seed = [item for item in seed if item != 361]
             seed.append('361')
-
+        
         #Seperate Checks by Location
+        count = 1
+
         for spoiler_list, spoiler_seed, spoiler_name in zip(location_spoiler_list, seed, spoiler_names):
             
             if count == 1:
-                file.write(f"Sasha's Underground Lab (CASA)\n")
+                file.write(f"\nSasha's Underground Lab (CASA)\n")
 
             if count == 4:
                 file.write(f"\nGPC and Wilderness (CAGP)\n")
@@ -1087,6 +1180,9 @@ if seed_settings_createhints == 'True':
     hints_file_path = os.path.join(random_folder_name, hints_file_name)
     with open(hints_file_path, "w") as file:
 
+        #write seed_name to Randoseed.lua
+        file.write(f"PSYCHORANDO SEED NAME:\n{seed_name}\n\n")
+
         #Handle seed settings if not already done
         if seed_settings_spoilerlog == 'False':
             if seed_settings_randomizecobwebduster == 'False' or seed_settings_startcobwebduster == 'True':
@@ -1137,7 +1233,11 @@ if seed_settings_createhints == 'True':
                     #Make Uppercase
                     uppercase_spoiler_name = current_spoiler_name.upper()
 
-                    file.write(f"HINT {count}:\n[{uppercase_spoiler_name}] can be found at:\n{location}\n\n")
+                    #Check for Detailed Hints, only print Level Location if false
+                    if seed_settings_detailedhints == 'True':
+                        file.write(f"HINT {count}:\n[{uppercase_spoiler_name}] can be found at:\n{location}\n\n")
+                    else:
+                        file.write(f"HINT {count}:\n[{uppercase_spoiler_name}] can be found at:\n{location[:6]}\n\n")
                     count += 1
            
 

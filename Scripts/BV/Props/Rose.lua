@@ -33,8 +33,8 @@ function Rose(Ob)
 				else
 					line = "/BVRO002RA/"	-- 'Maybe one of those ladies hiding behind the shutters.'
 				end
+				Global.player:sayLine(line, 0, 1, nil, 1, nil, 1)
 			end
-			Global.player:sayLine(line, 0, 1, nil, 1, nil, 1)
 		end
 	end
 

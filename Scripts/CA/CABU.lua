@@ -922,7 +922,9 @@ function CABU(Ob)
 	-- ****************************************************************************
 
 	function Ob:stateRazSleep()
-		
+		--edit speed up raz falling asleep
+		DebugSetGameSpeed(1.7)
+
 		-- kill the sound timer
 		--KillTimer(self,self.kTIMERID)
 		-- cam path to the chlakboard

@@ -9,6 +9,7 @@ General Bugs:
 --Vanilla game bug: Sasha's Shooting Gallery can softlock during tutorial if player doesn't collect Health Drop in time.
 
 --Milka's Brain Defaults to Vanilla location in Crow Basket if spawned in Asylum Lower Levels
+    --change location to require invis? work like vanilla game?
 
 --Below issues can happen randomly, keep trying different fixes
 
@@ -29,18 +30,23 @@ THINGS TO DO:
 
 --Add settings page and "Generate" Button to Seed Generator
 
---Look into applying certain sounds across all levels using below codes
-    --LoadSoundData('mm'), Loads all sounds from Milkman
-    --Need to fix Subtitle issues for most collectibles
+--Create Item Tracker?
+
+--Look into applying certain sounds across all levels
+    --Using LoadSoundData() game loads ENTIRE LEVEL sounds, instead of just one sound, increases load times significantly
 
 --Remove More Tutorials?
     --bDisableTutorialBoxes only works if in Debug Level Select. Why?
 
 --Add Edgar's Playing Cards and Paintings to item pool?
 
---Create Item Tracker?
-
 --Add requirements to enter minds? Brain Jars with character brains?
+    --Disable random/certain doors?
+
+--Add more locked locations to Campgrounds?
+    --Lili's Bracelet locks Kid's Cabins
+    --Oarsman's Badge locks Lake
+    --What would lock the Recreation area?
 
 --Add more junk items?
 

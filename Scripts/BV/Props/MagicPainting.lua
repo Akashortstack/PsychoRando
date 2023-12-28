@@ -635,7 +635,10 @@ function MagicPainting(Ob)
 	-- ************************ MESSAGES *********************
 
 	function Ob:onActivateFail(data, from)
-		Global.player:sayLine("/BVRO005RA/", 0, 1, nil, 1, nil, 1)	--DIALOG=<<I should find a proper hook for this painting, so it will come to life like that dog said.>>
+		--edit to only work in BV until sound fix
+		if strfind(FindScriptObject('LevelScript').Type, 'bv.BVRB') or strfind(FindScriptObject('LevelScript').Type, 'bv.BVES') then
+			Global.player:sayLine("/BVRO005RA/", 0, 1, nil, 1, nil, 1)	--DIALOG=<<I should find a proper hook for this painting, so it will come to life like that dog said.>>
+		end
 	end
 
 	function Ob:onActivateFromInventory(data, from)

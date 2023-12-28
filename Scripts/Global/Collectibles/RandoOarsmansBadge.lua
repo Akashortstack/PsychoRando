@@ -3,28 +3,33 @@ function RandoOarsmansBadge(Ob)
 		Ob = CreateObject('Global.Props.HeldObject')
 
 		Ob.interestFXName = 'Global.Effects.PsiPowerUpFX'
-		Ob.bDontPutAwayHeldItem = 1
 
 		Ob.dependencies = {
-			meshes = { 'Levels/CA_Campgrounds/Props/OarsmansBadge.plb' }
+			textures = {
+				'Textures/icons/PsiPowers/Orsman.dds' --Since we load replace the texture after-the-fact, we tell the game we depend on it so it gets preloaded
+			}
 		}
 		
 	end	
 	
 	function Ob:onBeginLevel()
 
-		self.meshName = 'Levels/CA_Campgrounds/Props/OarsmansBadge.plb'
-        self.pickupSpritePath = 'Textures/icons/PsiPowers/Orsman.tga'
+		--edit using Clairvoyance Mesh as base
+		self.meshName = 'GlobalModels/GO_GlobalObjects/meritbadges/clairvoyance.plb'        self.pickupSpritePath = 'Textures/icons/PsiPowers/Orsman.tga'
         self.displayName = "Oarsman's Badge"--DIALOG Oarsman's Badge, Needs Localization
         
 		%Ob.Parent.onBeginLevel(self)
+
+		--edit, swapping texture to match power_LIT
+		SetBaseTexture(self,'Textures/icons/PsiPowers/Orsman.dds')
 
 		--edit fixes lighting issues
 		SetEntityAmbientLight(self, 0.8, 0.8, 0.8)
 
         --edit to fix scale and orientation
-		self:setScale(11)
-        self.mover:setOrientation(ApplyOrientation(0, 180, 90, self.mover:getOrientation()))
+		self:setScale(30)
+        --self.mover:setOrientation(ApplyOrientation(0, 180, 90, self.mover:getOrientation()))
+
 		self:setState(nil)
 
 		--self.mover:setOrientation(ApplyOrientation(0, 0, 0, self.mover:getOrientation()))
@@ -33,7 +38,7 @@ function RandoOarsmansBadge(Ob)
 
 	function Ob:onPostBeginLevel()
         %Ob.Parent.onPostBeginLevel(self)
-        self:setPosition(self:getPosInFrontOf(0, 0, -100))
+        --self:setPosition(self:getPosInFrontOf(0, 0, -100))
 
 	end
 
@@ -56,6 +61,9 @@ function RandoOarsmansBadge(Ob)
 	end
 
 	function Ob:statePickup()
+
+		--edit make a sound!
+		PlaySound(nil, LoadSound('YouWin'))
 
 		--sendMessage to Dart
 		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
