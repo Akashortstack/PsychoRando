@@ -62,7 +62,7 @@ Generating a Seed:
 	you start playing. The total number of hints and detail level of the hints is determined by the settings below.
 
 		- _detailedhints_: If 'True', Each hinted item will have a full location description matching the Spoiler Log.
-		If 'False', hinted items will only list the Level they can be found in.
+		If 'False', hinted items will only list the level they can be found in.
 		
 		- _majorhints_: Progression items required to access the Campgrounds, Asylum, and to beat the game.
 		Does not include Cobweb Duster or Sasha's Button if in starting inventory.

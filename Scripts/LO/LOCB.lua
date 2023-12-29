@@ -264,6 +264,9 @@ function LOCB(Ob)
 	function Ob:stateEndLevel()
 		self:playVideo('cutScenes/prerendered/love.xmv')
 		self:playVideo('cutScenes/prerendered/lllv.xmv')
+		--edit refill Marksmanship ammo
+		Global.player.stats.psiBlastAmmo = Global.player.stats.psiBlastMaxAmmo
+		SetPsiBlastAmmo(Global.player.stats.psiBlastAmmo)
 		--edit return to CU instead
 		Global.levelScript:returnToCU()
 		--Global.levelScript:loadNewLevel('ASGR',0,1)		

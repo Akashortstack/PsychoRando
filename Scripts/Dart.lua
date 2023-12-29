@@ -1241,6 +1241,14 @@ function Dart(Ob)
 			AdjustPlayerMood(value)
 		end
 		
+		--edit to introduce 1 Hit KO Setting
+		local seedsettings = fso('RandoSeed', 'Randoseed')
+		if seedsettings.instantdeath == TRUE then
+			if (self.stats.psiHealth < self.stats.maxHealth) then
+				self.stats.psiHealth = 0 
+			end
+		end
+
 		if self.stats.psiHealth < 1 then
 			GameLog('die1', self, value)
 		end

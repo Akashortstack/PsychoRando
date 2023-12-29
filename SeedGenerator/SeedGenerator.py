@@ -20,6 +20,7 @@ seed_settings_startlevitation = config['SeedSettings']['startlevitation']
 seed_settings_startbutton = config['SeedSettings']['startbutton']
 seed_settings_randomizecobwebduster = config['SeedSettings']['randomizecobwebduster']
 seed_settings_everylocationpossible = config['SeedSettings']['everylocationpossible']
+seed_settings_instantdeath = config['SeedSettings']['instantdeath']
 
 # Config.ini VictoryConditions
 seed_settings_beatoleander = config['VictoryConditions']['beatoleander']
@@ -801,13 +802,17 @@ with open(seed_file_path, "w") as file:
     randomizecobwebsetting = str(seed_settings_randomizecobwebduster).upper()
     file.write(f"Ob.randomizecobwebduster = {randomizecobwebsetting}\n")
 
-    # write beatoleander setting, make boolean uppercase for Game
-    beatoleandersetting = str(seed_settings_beatoleander).upper()
-    file.write(f"Ob.beatoleander = {beatoleandersetting}\n")
-
     # write everylocationpossible setting, make boolean uppercase for Game
     everylocationpossiblesetting = str(seed_settings_everylocationpossible).upper()
     file.write(f"Ob.everylocationpossible = {everylocationpossiblesetting}\n")
+
+    # write instantdeath setting, make boolean uppercase for Game
+    instantdeathsetting = str(seed_settings_instantdeath).upper()
+    file.write(f"Ob.instantdeath = {instantdeathsetting}\n")
+
+    # write beatoleander setting, make boolean uppercase for Game
+    beatoleandersetting = str(seed_settings_beatoleander).upper()
+    file.write(f"Ob.beatoleander = {beatoleandersetting}\n")
 
     # write beatalllevels setting, make boolean uppercase for Game
     beatalllevelssetting = str(seed_settings_beatalllevels).upper()
@@ -909,13 +914,17 @@ if seed_settings_spoilerlog == 'True':
         randomizecobwebsetting = str(seed_settings_randomizecobwebduster).upper()
         file.write(f"randomizecobwebduster = {randomizecobwebsetting}\n")
 
-        # write beatoleander setting, make boolean uppercase for Game
-        beatoleandersetting = str(seed_settings_beatoleander).upper()
-        file.write(f"beatoleander = {beatoleandersetting}\n")
-
         # write everylocationpossible setting, make boolean uppercase for Game
         everylocationpossiblesetting = str(seed_settings_everylocationpossible).upper()
         file.write(f"everylocationpossible = {everylocationpossiblesetting}\n")
+
+        # write instantdeath setting, make boolean uppercase for Game
+        instantdeathsetting = str(seed_settings_instantdeath).upper()
+        file.write(f"instantdeath = {instantdeathsetting}\n")
+
+        # write beatoleander setting, make boolean uppercase for Game
+        beatoleandersetting = str(seed_settings_beatoleander).upper()
+        file.write(f"beatoleander = {beatoleandersetting}\n")
 
         # write beatalllevels setting, make boolean uppercase for Game
         beatalllevelssetting = str(seed_settings_beatalllevels).upper()
