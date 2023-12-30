@@ -2,11 +2,11 @@
 
 General Bugs:
 
---If any Peasant Item spawns in WW, item's Peasant has no voicelines unless item is collected, works normal afterwards
+--If any Peasant Item spawns in WW, item's matching Peasant has no voicelines unless item is collected, works normal afterwards
 
 --Gloria's Theater can potentially crash very late into a seed. Cause Unknown, possibly goal manager related?
 
---Vanilla game bug: Sasha's Shooting Gallery can softlock during tutorial if player doesn't collect Health Drop in time.
+--Vanilla game bug: Sasha's Shooting Gallery can softlock during tutorial if player doesn't collect mandatory Health Ammo, leaves stage instead.
 
 --Below issues can happen randomly, keep trying different fixes
 
@@ -24,6 +24,8 @@ THINGS TO DO:
 --Add settings page and "Generate" Button to Seed Generator
 
 --Create Item Tracker?
+
+--Give Brain Jars interestfx for more visibility?
 
 --Milka's Brain Defaults to Vanilla location in Crow Basket if spawned in Asylum Lower Levels
     --change location to require invis? work like vanilla game? Changes logic.
@@ -46,7 +48,7 @@ THINGS TO DO:
 --Add more locked locations to Campgrounds?
     --Lili's Bracelet locks Kid's Cabins
     --Oarsman's Badge locks Lake
-    --What would lock the Recreation area?
+    --What would lock the Recreation area? Crow Feather?
 
 --Add more junk items?
 
