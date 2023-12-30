@@ -5,6 +5,9 @@ Generating a Seed:
 	Change settings in config.ini to 'True' or 'False' as wanted, then run SeedGenerator.exe
 	Place RandoSeed.lua into the PsychoRando Scripts folder, overwrite old file.
 
+Using Presets:
+	Open the desired preset and copy the contents of the file (ctrl+a, ctrl+c), open settings.ini and paste over the old settings (ctrl+a, ctrl+v)
+
 [SeedSettings]
 
 	- _startcobwebduster_: If 'True', Adds the Cobweb Duster to your inventory at the start of the game,
