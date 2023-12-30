@@ -10,17 +10,20 @@ Generating a Seed:
 	- _startcobwebduster_: If 'True', Adds the Cobweb Duster to your inventory at the start of the game,
 	opening access to more locations from the beginning. Has priority over 'randomizecobwebduster'
 
-	-_startlevitation_: If 'True', Adds one Levitation to starting inventory. Location in seed is replaced with
+	- _startlevitation_: If 'True', Adds one Levitation to starting inventory. Location in seed is replaced with
 	a Psicard.
 
-	-_startbutton_: If 'True', Adds Sasha's Button to starting inventory, unlocking Campgrounds. Location in seed is replaced with
+	- _startbutton_: If 'True', Adds Sasha's Button to starting inventory, unlocking Campgrounds. Location in seed is replaced with
 	a Psicard.
 
-	-_randomizecobwebduster_: If 'True', Removes Cobweb Duster from the shop and adds it to the item pool,
+	- _randomizecobwebduster_: If 'True', Removes Cobweb Duster from the shop and adds it to the item pool,
 	replacing a Psicard. Overridden by 'startcobwebduster'.
 
 	- _everylocationpossible_: Want to guarantee every location can be reached for a 100% completion run? 
 	Turn this on to make sure the generator knows no location can be left behind! Does not change player requirements for completing the game.
+
+	- _instantdeath_: WARNING!!! USE AT OWN RISK!!! If 'True', Raz will die instantly upon taking any amount of damage. 
+	Dream Fluffs and defensive measures are your best friend. Just don't make any mistakes.
 
 [VictoryConditions]
 

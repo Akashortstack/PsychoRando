@@ -361,10 +361,13 @@ function BVWA(Ob)
 
 	--subtract a certain amount of health, 0 to 1, iHealthBar is 1 or 2 (left, right)
 	function Ob:subtractHealthLevel(iHealthBar, iSubtractor)
-		--1 hit kill---------------
-		--if iHealthBar==2 then
-		--	iSubtractor=100
-		--end			
+		--edit lose immediately if instantdeath == True
+		local seedsettings = fso('RandoSeed', 'Randoseed')
+		if seedsettings.instantdeath == TRUE then
+			if iHealthBar==1 then
+				iSubtractor=100
+			end
+		end			
 		---------------------------
 		-- turn off ford if he's up
 		if (self.rInstaHintFord) then

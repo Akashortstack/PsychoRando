@@ -893,7 +893,7 @@ if seed_settings_spoilerlog == 'True':
     with open(spoilerlog_file_path, "w") as file:
 
         #write seed_name to Randoseed.lua
-        file.write(f"PSYCHORANDO SEED NAME:\n{seed_name}\n\n")
+        file.write(f"PSYCHORANDO SEED NAME: {seed_name}\n\n")
         
         # write all settings
         file.write(f"SETTINGS:\n")
