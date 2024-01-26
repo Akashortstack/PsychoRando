@@ -1,8 +1,8 @@
 
-For PsychoRando v0.9.0-BETA
+For PsychoRando v1.0.0
 
 Generating a Seed:
-	Change settings in config.ini to 'True' or 'False' as wanted, then run SeedGenerator.exe
+	Change settings in settings.ini to 'True' or 'False' as wanted, then run SeedGenerator.exe
 	Place RandoSeed.lua into the PsychoRando Scripts folder, overwrite old file.
 
 Using Presets:

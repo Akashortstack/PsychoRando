@@ -34,6 +34,7 @@ seed_settings_fasterLO = config['QualityOfLife']['fasterLO']
 seed_settings_easymillarace = config['QualityOfLife']['easymillarace']
 seed_settings_earlyelevator = config['QualityOfLife']['earlyelevator']
 seed_settings_mentalmagnet = config['QualityOfLife']['mentalmagnet']
+seed_settings_removetutorials = config['QualityOfLife']['removetutorials']
 
 # Config.ini AdditionalFiles 
 seed_settings_createhints = config['AdditionalFiles']['createhints']
@@ -105,7 +106,7 @@ game_graph.add_node("Obstacle Course (BBA1)", items = [])
 game_graph.add_node("Obstacle Course 2: Cobweb (BBA2)", items = [])  # Need Cobweb Duster
 
 # SASHA'S SHOOTING GALLERY
-game_graph.add_node("SASHA'S SHOOTING GALLERY (SA)", items = [])
+game_graph.add_node("SASHA'S SHOOTING GALLERY (SACU)", items = [])
 game_graph.add_node("Cube Face 2: Levitation (SACU)", items = [])  # Need Levitation
 
 # MILLA'S DANCE PARTY
@@ -236,7 +237,7 @@ game_graph.add_edge("Start", "Obstacle Course (BBA1)")
 game_graph.add_edge("Start", "Obstacle Course 2: Cobweb (BBA2)", requirements = ["Cobweb Duster",])  # Need Cobweb Duster
 
 # SASHA'S SHOOTING GALLERY
-game_graph.add_edge("Start", "SASHA'S SHOOTING GALLERY (SA)", requirements = ["Marksmanship",])  # Need Marksmanship
+game_graph.add_edge("Start", "SASHA'S SHOOTING GALLERY (SACU)", requirements = ["Marksmanship",])  # Need Marksmanship
 game_graph.add_edge("Start", "Cube Face 2: Levitation (SACU)", requirements = ["Marksmanship", "Levitation",])  # Need Levitation
 
 # MILLA'S DANCE PARTY
@@ -453,7 +454,7 @@ def fill_locations(graph, item_list):
 
         #Sasha's
         if 198<=index<=205 or 207<=index<=214:
-            graph.nodes["SASHA'S SHOOTING GALLERY (SA)"]["items"].append(item)
+            graph.nodes["SASHA'S SHOOTING GALLERY (SACU)"]["items"].append(item)
         if index==206:
             graph.nodes["Cube Face 2: Levitation (SACU)"]["items"].append(item)
 
@@ -846,6 +847,10 @@ with open(seed_file_path, "w") as file:
     mentalmagnetsetting = str(seed_settings_mentalmagnet).upper()
     file.write(f"Ob.mentalmagnet = {mentalmagnetsetting}\n")
 
+    # write removetutorials setting, make boolean uppercase for Game
+    removetutorialssetting = str(seed_settings_removetutorials).upper()
+    file.write(f"Ob.removetutorials = {removetutorialssetting}\n")
+
     # write createhintsetting, make boolean uppercase for Game
     createhintsetting = str(seed_settings_createhints).upper()
     file.write(f"Ob.createhints = {createhintsetting}\n")
@@ -957,6 +962,10 @@ if seed_settings_spoilerlog == 'True':
         # write mentalmagnet setting, make boolean uppercase for Game
         mentalmagnetsetting = str(seed_settings_mentalmagnet).upper()
         file.write(f"mentalmagnet = {mentalmagnetsetting}\n")
+        
+        # write removetutorials setting, make boolean uppercase for Game
+        removetutorialssetting = str(seed_settings_removetutorials).upper()
+        file.write(f"removetutorials = {removetutorialssetting}\n")
 
         # write createhintsetting, make boolean uppercase for Game
         createhintsetting = str(seed_settings_createhints).upper()

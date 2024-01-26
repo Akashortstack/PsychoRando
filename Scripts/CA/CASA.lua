@@ -235,6 +235,11 @@ function CASA(Ob)
 			if settings.mentalmagnet == TRUE then
 				Global:saveGlobal('bHasMentalMagnet', 1) 
 			end
+
+			--edit Setting to Remove all tutorials
+			if settings.removetutorials == TRUE then
+				Global:saveGlobal('bDisableTutorialBoxes', 1) 
+			end
 			
 			--SpawnScript('CA.Props.Psychomaster')
         end

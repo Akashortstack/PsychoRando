@@ -77,11 +77,37 @@ function ScavBone(Ob)
 			if nItems == 8 then
 				-- save variable for ford
 				Global:saveGlobal('bCollected8ScavengerItems', 1)
+
+				--edit to make tutorial window pop-up if disable tutorials is on
+				if Global:loadGlobal('bDisableTutorialBoxes') == 1 then
+					Global:saveGlobal('bDisableTutorialBoxes', 0)
+				end
+
 				Global.levelScript:addTutorialBox("/GLZG042TO/", 'Textures/UI/Sayline Heads/FordScout_sayline.tga')--DIALOG=<<Hey, you\'ve finished half of the scavenger hunt, so you\'ve qualified for the first half of your prize! Go see Ranger Ford for your big promotion!>>
+
+				--edit turn off tutorials again if QOL is on
+				local settings = FindScriptObject('RandoSeed')
+				if settings.removetutorials == TRUE then
+					Global:saveGlobal('bDisableTutorialBoxes', 1)
+				end
+
 				Global.goalManager:activate('ScavengerHunt1')
 			elseif nItems == 16 then
 				Global:saveGlobal('bCollected16ScavengerItems', 1)
+
+				--edit to make tutorial window pop-up if disable tutorials is on
+				if Global:loadGlobal('bDisableTutorialBoxes') == 1 then
+					Global:saveGlobal('bDisableTutorialBoxes', 0)
+				end
+
 				Global.levelScript:addTutorialBox("/GLZG043TO/", 'Textures/UI/Sayline Heads/FordScout_sayline.tga')--DIALOG=<<SCAVENGER HUNT COMPLETE! Congratulations! You found everything! Go see Ranger Ford for the final prize! Nice work!>>
+				
+				--edit turn off tutorials again if QOL is on
+				local settings = FindScriptObject('RandoSeed')
+				if settings.removetutorials == TRUE then
+					Global:saveGlobal('bDisableTutorialBoxes', 1)
+				end
+
 				Global.goalManager:activate('ScavengerHunt2')
 			end
 		else
