@@ -26,6 +26,9 @@ function RandoPlacer()
 	--adds randomized items to current level
 	rando:placeCollectibles()
 
+	--Spawn prop for easyflight QOL setting
+	SpawnScript('global.otherentities.FlightQOL', 'FlightQOL')
+
 	--Use these for spawning specific items for debug
 	--rando:placeRandoObject(class, name, x, y, z, ox, oy, oz)
 	--EX: rando:placeRandoObject('Global.Characters.Vault', 'Vault1', -5629, 4510, -13242, 0, 0, 0)

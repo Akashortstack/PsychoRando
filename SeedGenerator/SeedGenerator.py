@@ -35,6 +35,7 @@ seed_settings_easymillarace = config['QualityOfLife']['easymillarace']
 seed_settings_earlyelevator = config['QualityOfLife']['earlyelevator']
 seed_settings_mentalmagnet = config['QualityOfLife']['mentalmagnet']
 seed_settings_removetutorials = config['QualityOfLife']['removetutorials']
+seed_settings_easyflight = config['QualityOfLife']['easyflight']
 
 # Config.ini AdditionalFiles 
 seed_settings_createhints = config['AdditionalFiles']['createhints']
@@ -851,6 +852,10 @@ with open(seed_file_path, "w") as file:
     removetutorialssetting = str(seed_settings_removetutorials).upper()
     file.write(f"Ob.removetutorials = {removetutorialssetting}\n")
 
+    # write easyflight setting, make boolean uppercase for Game
+    easyflightsetting = str(seed_settings_easyflight).upper()
+    file.write(f"Ob.easyflight = {easyflightsetting}\n")
+
     # write createhintsetting, make boolean uppercase for Game
     createhintsetting = str(seed_settings_createhints).upper()
     file.write(f"Ob.createhints = {createhintsetting}\n")
@@ -966,6 +971,10 @@ if seed_settings_spoilerlog == 'True':
         # write removetutorials setting, make boolean uppercase for Game
         removetutorialssetting = str(seed_settings_removetutorials).upper()
         file.write(f"removetutorials = {removetutorialssetting}\n")
+
+        # write easyflight setting, make boolean uppercase for Game
+        easyflightsetting = str(seed_settings_easyflight).upper()
+        file.write(f"easyflight = {easyflightsetting}\n")
 
         # write createhintsetting, make boolean uppercase for Game
         createhintsetting = str(seed_settings_createhints).upper()

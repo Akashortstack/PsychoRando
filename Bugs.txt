@@ -37,9 +37,6 @@ THINGS TO DO:
 --Look into applying certain sounds across all levels
     --Using LoadSoundData() game loads ENTIRE LEVEL sounds, instead of just one sound, increases load times significantly
 
---Remove More Tutorials?
-    --bDisableTutorialBoxes only works if in Debug Level Select. Why?
-
 --Add Edgar's Playing Cards and Paintings to item pool?
 
 --Add requirements to enter minds? Brain Jars with character brains?
