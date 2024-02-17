@@ -37,8 +37,6 @@ THINGS TO DO:
 --Look into applying certain sounds across all levels
     --Using LoadSoundData() game loads ENTIRE LEVEL sounds, instead of just one sound, increases load times significantly
 
---Add Edgar's Playing Cards and Paintings to item pool?
-
 --Add requirements to enter minds? Brain Jars with character brains?
     --Disable random/certain doors?
 
@@ -48,6 +46,8 @@ THINGS TO DO:
     --What would lock the Recreation area? Crow Feather?
 
 --Add more junk items?
+
+--Add Edgar's Playing Cards and Paintings to item pool?
 
 --Black Velvetopia potential shop painting rando? Needs work...
     --Could remove shop functionality entirely, just be collectible spots. Doesn't feel good.

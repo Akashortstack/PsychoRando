@@ -1,5 +1,4 @@
 function FlightQOL()
-    -- C O N S T R U C T O R
         local Ob = CreateObject('Prop','FlightQOL')
         Ob.dx = 0
         --adjusts vertical velocity value
@@ -20,6 +19,8 @@ function FlightQOL()
             if settings.easyflight == TRUE then
                 self.trigger = 1
                 self:setState(self.stateFloat)
+            else
+                self:killSelf()
             end
         end
 

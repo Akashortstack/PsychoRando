@@ -21,6 +21,7 @@ seed_settings_startbutton = config['SeedSettings']['startbutton']
 seed_settings_randomizecobwebduster = config['SeedSettings']['randomizecobwebduster']
 seed_settings_everylocationpossible = config['SeedSettings']['everylocationpossible']
 seed_settings_instantdeath = config['SeedSettings']['instantdeath']
+seed_settings_harderbutton = config['SeedSettings']['harderbutton']
 
 # Config.ini VictoryConditions
 seed_settings_beatoleander = config['VictoryConditions']['beatoleander']
@@ -667,7 +668,7 @@ def check_impossible(graph):
 def create_seed():
     beatable = False
     count = 0
-    while not beatable and count < 100:
+    while not beatable and count < 1000:
         copy_list = []
         copy_list = item_names_list
         # Shuffle item list with numbers 1 to 366 and item names
@@ -746,11 +747,18 @@ def create_seed():
                 print(f"Player Inventory: {player_inventory}\n")
                 world_count = world_count+1
                 print(f"Current World_Count", world_count)
-        if "Goal" in player_inventory:
+                #Harder Button Settings Check
+                if seed_settings_harderbutton == "True" and (world_count <= 1) and ("Button" in player_inventory):
+                    print(f"Button Too Easy! Try Again.")
+                    button_fail = True
+                    break
+
+        if "Goal" in player_inventory and not button_fail:
             print("Your Winner!")
             beatable = True
         else:
             print("Seed Impossible. Rerolling.")
+            button_fail = False
         count = count+1
     if beatable:
         return shuffled_values, shuffled_names 
@@ -811,6 +819,10 @@ with open(seed_file_path, "w") as file:
     # write instantdeath setting, make boolean uppercase for Game
     instantdeathsetting = str(seed_settings_instantdeath).upper()
     file.write(f"Ob.instantdeath = {instantdeathsetting}\n")
+
+    # write harderbutton setting, make boolean uppercase for Game
+    harderbuttonsetting = str(seed_settings_harderbutton).upper()
+    file.write(f"Ob.harderbutton = {harderbuttonsetting}\n")
 
     # write beatoleander setting, make boolean uppercase for Game
     beatoleandersetting = str(seed_settings_beatoleander).upper()
@@ -931,6 +943,10 @@ if seed_settings_spoilerlog == 'True':
         # write instantdeath setting, make boolean uppercase for Game
         instantdeathsetting = str(seed_settings_instantdeath).upper()
         file.write(f"instantdeath = {instantdeathsetting}\n")
+
+        # write harderbutton setting, make boolean uppercase for Game
+        harderbuttonsetting = str(seed_settings_harderbutton).upper()
+        file.write(f"harderbutton = {harderbuttonsetting}\n")
 
         # write beatoleander setting, make boolean uppercase for Game
         beatoleandersetting = str(seed_settings_beatoleander).upper()
