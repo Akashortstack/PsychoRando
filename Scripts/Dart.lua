@@ -2780,35 +2780,55 @@ function Dart(Ob)
 ------CUSTOM BAGGAGE TAG HANDLER------
 --Stores Collected BaggageTag, Global Key
 	function Ob:onCollectedSuitcaseTag(name,from)
-		self.stats.RandoSuitcaseTag[name] = 'collected' 
+		self.stats.RandoSuitcaseTag[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedSuitcaseTag = self.stats.CollectedSuitcaseTag + value
 	end
 
 	function Ob:onCollectedPurseTag(name,from)
-		self.stats.RandoPurseTag[name] = 'collected' 
+		self.stats.RandoPurseTag[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedPurseTag = self.stats.CollectedPurseTag + value
 	end
 
 	function Ob:onCollectedHatboxTag(name,from)
-		self.stats.RandoHatboxTag[name] = 'collected' 
+		self.stats.RandoHatboxTag[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedHatboxTag = self.stats.CollectedHatboxTag + value
 	end
 
 	function Ob:onCollectedSteamertrunkTag(name,from)
-		self.stats.RandoSteamertrunkTag[name] = 'collected' 
+		self.stats.RandoSteamertrunkTag[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedSteamertrunkTag = self.stats.CollectedSteamertrunkTag + value
 	end
 
 	function Ob:onCollectedDufflebagTag(name,from)
-		self.stats.RandoDufflebagTag[name] = 'collected' 
+		self.stats.RandoDufflebagTag[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedDufflebagTag = self.stats.CollectedDufflebagTag + value
@@ -2819,7 +2839,11 @@ function Dart(Ob)
 ------CUSTOM BAGGAGE HANDLER------
 --Removes Baggage Tag from inventory, stores Collected Baggage, Increases Rank, Global Lock
 	function Ob:onCollectedSuitcase(name,from)
-		self.stats.RandoSuitcase[name] = 'collected' 
+		self.stats.RandoSuitcase[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedSuitcaseTag = self.stats.CollectedSuitcaseTag - value
@@ -2827,7 +2851,11 @@ function Dart(Ob)
 	end
 
 	function Ob:onCollectedPurse(name,from)
-		self.stats.RandoPurse[name] = 'collected' 
+		self.stats.RandoPurse[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedPurseTag = self.stats.CollectedPurseTag - value
@@ -2835,7 +2863,11 @@ function Dart(Ob)
 	end
 
 	function Ob:onCollectedHatbox(name,from)
-		self.stats.RandoHatbox[name] = 'collected' 
+		self.stats.RandoHatbox[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedHatboxTag = self.stats.CollectedHatboxTag - value
@@ -2843,7 +2875,11 @@ function Dart(Ob)
 	end
 
 	function Ob:onCollectedSteamertrunk(name,from)
-		self.stats.RandoSteamertrunk[name] = 'collected' 
+		self.stats.RandoSteamertrunk[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedSteamertrunkTag = self.stats.CollectedSteamertrunkTag - value
@@ -2851,7 +2887,11 @@ function Dart(Ob)
 	end
 
 	function Ob:onCollectedDufflebag(name,from)
-		self.stats.RandoDufflebag[name] = 'collected' 
+		self.stats.RandoDufflebag[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedDufflebagTag = self.stats.CollectedDufflebagTag - value
@@ -2863,42 +2903,74 @@ function Dart(Ob)
 	------CUSTOM RANDOPSIPOWERS HANDLERS------
 	--Stores Collected RandoPsiPowers and Progressive Powerups
 	function Ob:onRandoClairvoyance(name,from)
-		self.stats.RandoClairvoyance[name] = 'collected' 
+		self.stats.RandoClairvoyance[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onRandoConfusion(name,from)
-		self.stats.RandoConfusion[name] = 'collected' 
+		self.stats.RandoConfusion[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onRandoFirestarting(name,from)
-		self.stats.RandoFirestarting[name] = 'collected' 
+		self.stats.RandoFirestarting[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onRandoInvisibility(name,from)
-		self.stats.RandoInvisibility[name] = 'collected' 
+		self.stats.RandoInvisibility[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onRandoLevitation(name,from)
-		self.stats.RandoLevitation[name] = 'collected' 
+		self.stats.RandoLevitation[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onRandoMarksmanship(name,from)
-		self.stats.RandoMarksmanship[name] = 'collected' 
+		self.stats.RandoMarksmanship[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onRandoShield(name,from)
-		self.stats.RandoShield[name] = 'collected' 
+		self.stats.RandoShield[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onRandoTelekinesis(name,from)
-		self.stats.RandoTelekinesis[name] = 'collected' 
+		self.stats.RandoTelekinesis[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 	end
 
@@ -2907,7 +2979,11 @@ function Dart(Ob)
 	------CUSTOM RANDOPSICARD HANDLER------
 	--Stores Collected RandoPsiCard
 	function Ob:onRandoPsiCard(name,from)
-		self.stats.RandoPsiCard[name] = 'collected' 
+		self.stats.RandoPsiCard[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 	end
 
@@ -2916,7 +2992,11 @@ function Dart(Ob)
 	------CUSTOM RANDOPSIMARKER HANDLER------
 	--Stores Collected RandoPsiMarker
 	function Ob:onRandoPsiMarker(name,from)
-		self.stats.RandoPsiMarker[name] = 'collected' 
+		self.stats.RandoPsiMarker[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 	end
 
@@ -2925,7 +3005,11 @@ function Dart(Ob)
 	------CUSTOM RANDOPROP HANDLER------
 	--Stores Collected Prop
 	function Ob:onRandoProp(name,from)
-		self.stats.RandoProp[name] = 'collected' 
+		self.stats.RandoProp[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 	end
 
@@ -2935,6 +3019,10 @@ function Dart(Ob)
 	function Ob:onCollectedVault(name,from)
 		self.stats.CollectedVault[name] = 'collected' 
 		self.stats.totalVaults = self.stats.totalVaults+1
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h)
 		GamePrint('Stored '..name)
 		self:incrementRank()
 	end
@@ -2944,12 +3032,20 @@ function Dart(Ob)
 	------CUSTOM MAXLIVES AND MAXAMMO HANDLER------
 	--Stores RandoLivesUp and RandoAmmoUp
 	function Ob:onRandoLivesUp(name,from)
-		self.stats.RandoLivesUp[name] = 'collected' 
+		self.stats.RandoLivesUp[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onRandoAmmoUp(name,from)
-		self.stats.RandoAmmoUp[name] = 'collected' 
+		self.stats.RandoAmmoUp[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 	end
 
@@ -2958,12 +3054,20 @@ function Dart(Ob)
 	------CUSTOM ARROWHEADBUNDLE HANDLERS------
 	--Stores collected ArrowheadBundles
 	function Ob:onArrowheadBundleSmall(name,from)
-		self.stats.ArrowheadBundleSmall[name] = 'collected' 
+		self.stats.ArrowheadBundleSmall[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onArrowheadBundleMedium(name,from)
-		self.stats.ArrowheadBundleMedium[name] = 'collected' 
+		self.stats.ArrowheadBundleMedium[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
 		GamePrint('Stored '..name)
 	end
 
@@ -2973,6 +3077,10 @@ function Dart(Ob)
 		self.stats.scavengerHuntItems[ItemID] = 'unredeemed'
 		self.stats.numUnredeemedScavengerHuntItems = self.stats.numUnredeemedScavengerHuntItems + 1
 		self.stats.scavItemsFromLevel = self.stats.scavItemsFromLevel + 1
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, ItemID)
+		fclose(h)
 	end
 
 -- ****************************************************************************
