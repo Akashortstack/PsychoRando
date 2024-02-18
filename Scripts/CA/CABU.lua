@@ -925,6 +925,11 @@ function CABU(Ob)
 		--edit speed up raz falling asleep
 		DebugSetGameSpeed(1.7)
 
+		--edit clear ModData
+		local h = fopen("ItemsCollected.txt", "w")
+		fwrite(h, "")
+		fclose(h)
+
 		-- kill the sound timer
 		--KillTimer(self,self.kTIMERID)
 		-- cam path to the chlakboard
