@@ -21,6 +21,8 @@ General Bugs:
 
 THINGS TO DO:
 
+--Make Seed Name visible on Start Screen
+
 --Add settings page and "Generate" Button to Seed Generator
 
 --Create Item Tracker?
