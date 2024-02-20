@@ -1,28 +1,17 @@
--- gets length of a table, used in Ob:randomizeChecks
-function tableLength(tbl)
-    local count = 0
-    local i = 1
-    while tbl[i] ~= nil do
-        count = count + 1
-        i = i + 1
-    end
-    return count
-end
-
-function ShuffleItems(Ob)
+function APReceiver(Ob)
     if ( not Ob ) then
         Ob = CreateObject('ScriptBase')
+        --used in apTableFill
         Ob.randoclassList = {}
         Ob.randonameList = {}
-
+        --used in checkReceivedList()
+        Ob.numbersTable = {}
     end
 
-    --[[ function that randomizes all checks in the game, keeping class paired with name
-    Ex. item 1 in oldclassTable always pairs with item 1 in oldnameTable
-    ]]
-    function Ob:randomizeChecks()
-        --LIST MUST MATCH oldnameTable ONE FOR ONE, OR ELSE...
-        local oldclassTable = {
+    --used to avoid max lua variable limitations
+    function Ob:apTableFill()
+        --LIST MUST MATCH nameTable ONE FOR ONE, OR ELSE...
+        local classTable = {
             --Current Props from AS, 6 total
             'global.props.AS_SeaUrchinWhistle',
             'global.props.AS_hand', 
@@ -441,329 +430,11 @@ function ShuffleItems(Ob)
             --Cobweb Duster
             'global.collectibles.CobwebDuster',
 
-            --APPlaceholder
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
-            'global.collectibles.APPlaceholder',
 
         }
 
-        --LIST MUST MATCH oldclassTable ONE FOR ONE, OR ELSE...
-        local oldnameTable = {
+        --LIST MUST MATCH classTable ONE FOR ONE, OR ELSE...
+        local nameTable = {
 
             --Current Props from AS, 6 total
             'SeaUrchinWhistle', 'LobatoHand', 'StraightJacket', 'LobatoPainting', 'Cake', 'LiliBracelet', 
@@ -976,353 +647,123 @@ function ShuffleItems(Ob)
 
             --Cobweb Duster
             'CobwebDuster',
-
-            --AP Placeholders, 317 Total
-            'AP Item 1',
-            'AP Item 2',
-            'AP Item 3',
-            'AP Item 4',
-            'AP Item 5',
-            'AP Item 6',
-            'AP Item 7',
-            'AP Item 8',
-            'AP Item 9',
-            'AP Item 10',
-            'AP Item 11',
-            'AP Item 12',
-            'AP Item 13',
-            'AP Item 14',
-            'AP Item 15',
-            'AP Item 16',
-            'AP Item 17',
-            'AP Item 18',
-            'AP Item 19',
-            'AP Item 20',
-            'AP Item 21',
-            'AP Item 22',
-            'AP Item 23',
-            'AP Item 24',
-            'AP Item 25',
-            'AP Item 26',
-            'AP Item 27',
-            'AP Item 28',
-            'AP Item 29',
-            'AP Item 30',
-            'AP Item 31',
-            'AP Item 32',
-            'AP Item 33',
-            'AP Item 34',
-            'AP Item 35',
-            'AP Item 36',
-            'AP Item 37',
-            'AP Item 38',
-            'AP Item 39',
-            'AP Item 40',
-            'AP Item 41',
-            'AP Item 42',
-            'AP Item 43',
-            'AP Item 44',
-            'AP Item 45',
-            'AP Item 46',
-            'AP Item 47',
-            'AP Item 48',
-            'AP Item 49',
-            'AP Item 50',
-            'AP Item 51',
-            'AP Item 52',
-            'AP Item 53',
-            'AP Item 54',
-            'AP Item 55',
-            'AP Item 56',
-            'AP Item 57',
-            'AP Item 58',
-            'AP Item 59',
-            'AP Item 60',
-            'AP Item 61',
-            'AP Item 62',
-            'AP Item 63',
-            'AP Item 64',
-            'AP Item 65',
-            'AP Item 66',
-            'AP Item 67',
-            'AP Item 68',
-            'AP Item 69',
-            'AP Item 70',
-            'AP Item 71',
-            'AP Item 72',
-            'AP Item 73',
-            'AP Item 74',
-            'AP Item 75',
-            'AP Item 76',
-            'AP Item 77',
-            'AP Item 78',
-            'AP Item 79',
-            'AP Item 80',
-            'AP Item 81',
-            'AP Item 82',
-            'AP Item 83',
-            'AP Item 84',
-            'AP Item 85',
-            'AP Item 86',
-            'AP Item 87',
-            'AP Item 88',
-            'AP Item 89',
-            'AP Item 90',
-            'AP Item 91',
-            'AP Item 92',
-            'AP Item 93',
-            'AP Item 94',
-            'AP Item 95',
-            'AP Item 96',
-            'AP Item 97',
-            'AP Item 98',
-            'AP Item 99',
-            'AP Item 100',
-            'AP Item 101',
-            'AP Item 102',
-            'AP Item 103',
-            'AP Item 104',
-            'AP Item 105',
-            'AP Item 106',
-            'AP Item 107',
-            'AP Item 108',
-            'AP Item 109',
-            'AP Item 110',
-            'AP Item 111',
-            'AP Item 112',
-            'AP Item 113',
-            'AP Item 114',
-            'AP Item 115',
-            'AP Item 116',
-            'AP Item 117',
-            'AP Item 118',
-            'AP Item 119',
-            'AP Item 120',
-            'AP Item 121',
-            'AP Item 122',
-            'AP Item 123',
-            'AP Item 124',
-            'AP Item 125',
-            'AP Item 126',
-            'AP Item 127',
-            'AP Item 128',
-            'AP Item 129',
-            'AP Item 130',
-            'AP Item 131',
-            'AP Item 132',
-            'AP Item 133',
-            'AP Item 134',
-            'AP Item 135',
-            'AP Item 136',
-            'AP Item 137',
-            'AP Item 138',
-            'AP Item 139',
-            'AP Item 140',
-            'AP Item 141',
-            'AP Item 142',
-            'AP Item 143',
-            'AP Item 144',
-            'AP Item 145',
-            'AP Item 146',
-            'AP Item 147',
-            'AP Item 148',
-            'AP Item 149',
-            'AP Item 150',
-            'AP Item 151',
-            'AP Item 152',
-            'AP Item 153',
-            'AP Item 154',
-            'AP Item 155',
-            'AP Item 156',
-            'AP Item 157',
-            'AP Item 158',
-            'AP Item 159',
-            'AP Item 160',
-            'AP Item 161',
-            'AP Item 162',
-            'AP Item 163',
-            'AP Item 164',
-            'AP Item 165',
-            'AP Item 166',
-            'AP Item 167',
-            'AP Item 168',
-            'AP Item 169',
-            'AP Item 170',
-            'AP Item 171',
-            'AP Item 172',
-            'AP Item 173',
-            'AP Item 174',
-            'AP Item 175',
-            'AP Item 176',
-            'AP Item 177',
-            'AP Item 178',
-            'AP Item 179',
-            'AP Item 180',
-            'AP Item 181',
-            'AP Item 182',
-            'AP Item 183',
-            'AP Item 184',
-            'AP Item 185',
-            'AP Item 186',
-            'AP Item 187',
-            'AP Item 188',
-            'AP Item 189',
-            'AP Item 190',
-            'AP Item 191',
-            'AP Item 192',
-            'AP Item 193',
-            'AP Item 194',
-            'AP Item 195',
-            'AP Item 196',
-            'AP Item 197',
-            'AP Item 198',
-            'AP Item 199',
-            'AP Item 200',
-            'AP Item 201',
-            'AP Item 202',
-            'AP Item 203',
-            'AP Item 204',
-            'AP Item 205',
-            'AP Item 206',
-            'AP Item 207',
-            'AP Item 208',
-            'AP Item 209',
-            'AP Item 210',
-            'AP Item 211',
-            'AP Item 212',
-            'AP Item 213',
-            'AP Item 214',
-            'AP Item 215',
-            'AP Item 216',
-            'AP Item 217',
-            'AP Item 218',
-            'AP Item 219',
-            'AP Item 220',
-            'AP Item 221',
-            'AP Item 222',
-            'AP Item 223',
-            'AP Item 224',
-            'AP Item 225',
-            'AP Item 226',
-            'AP Item 227',
-            'AP Item 228',
-            'AP Item 229',
-            'AP Item 230',
-            'AP Item 231',
-            'AP Item 232',
-            'AP Item 233',
-            'AP Item 234',
-            'AP Item 235',
-            'AP Item 236',
-            'AP Item 237',
-            'AP Item 238',
-            'AP Item 239',
-            'AP Item 240',
-            'AP Item 241',
-            'AP Item 242',
-            'AP Item 243',
-            'AP Item 244',
-            'AP Item 245',
-            'AP Item 246',
-            'AP Item 247',
-            'AP Item 248',
-            'AP Item 249',
-            'AP Item 250',
-            'AP Item 251',
-            'AP Item 252',
-            'AP Item 253',
-            'AP Item 254',
-            'AP Item 255',
-            'AP Item 256',
-            'AP Item 257',
-            'AP Item 258',
-            'AP Item 259',
-            'AP Item 260',
-            'AP Item 261',
-            'AP Item 262',
-            'AP Item 263',
-            'AP Item 264',
-            'AP Item 265',
-            'AP Item 266',
-            'AP Item 267',
-            'AP Item 268',
-            'AP Item 269',
-            'AP Item 270',
-            'AP Item 271',
-            'AP Item 272',
-            'AP Item 273',
-            'AP Item 274',
-            'AP Item 275',
-            'AP Item 276',
-            'AP Item 277',
-            'AP Item 278',
-            'AP Item 279',
-            'AP Item 280',
-            'AP Item 281',
-            'AP Item 282',
-            'AP Item 283',
-            'AP Item 284',
-            'AP Item 285',
-            'AP Item 286',
-            'AP Item 287',
-            'AP Item 288',
-            'AP Item 289',
-            'AP Item 290',
-            'AP Item 291',
-            'AP Item 292',
-            'AP Item 293',
-            'AP Item 294',
-            'AP Item 295',
-            'AP Item 296',
-            'AP Item 297',
-            'AP Item 298',
-            'AP Item 299',
-            'AP Item 300',
-            'AP Item 301',
-            'AP Item 302',
-            'AP Item 303',
-            'AP Item 304',
-            'AP Item 305',
-            'AP Item 306',
-            'AP Item 307',
-            'AP Item 308',
-            'AP Item 309',
-            'AP Item 310',
-            'AP Item 311',
-            'AP Item 312',
-            'AP Item 313',
-            'AP Item 314',
-            'AP Item 315',
-            'AP Item 316',
-            'AP Item 317',
         }
-
-        local newclassTable = {}
-
-        local newnameTable = {}
-
-        --get RandoSeed numbers table
-        local CurrentSeed = fso('RandoSeed', 'RandoSeed')
-        local randolist = CurrentSeed.seed
-
-        --get total number of items in oldclassTable
-        local n = tableLength(randolist)
-        GamePrint('Length of Seed Table = '..n)
-
-        --pairing loop, uses value from RandoSeed to find index in oldclassTable and arrange items in order
-        --sent to Randomizer.lua to pair with the positions list
-        local index = 1
-        for i = 1, n do
-            local j = randolist[index]
-            newclassTable[i] = oldclassTable[j] 
-            newnameTable[i] = oldnameTable[j]
-            index = index+1
-        end
         --write results to new tables
-        self.randoclassList = newclassTable
-        self.randonameList = newnameTable
-       
+        self.randoclassList = classTable
+        self.randonameList = nameTable
+
+        --[[Print the index and value of each number in the table
+        for k, v in self.randoclassList do
+            if k ~= 'n' then
+                GamePrint(k..", "..v)
+            end
+        end
+
+        --Print the index and value of each number in the table
+        for k, v in self.randonameList do
+            if k ~= 'n' then
+                GamePrint(k..", "..v)
+            end
+        end]]
     end
+
+    function Ob:onPostBeginLevel()
+        %Ob.Parent.onPostBeginLevel(self)
+        --fill tables
+        self:apTableFill()
+        --check to make sure we're not in the opening menu or creating a new profile
+        local level = (Global.levelScript:getLevelName())
+        if level ~= 'CABU' and level ~= 'STMU' then
+            --start looping to check for items from ItemsReceived.txt
+            self:setState('CompareAPTable')
+        end
+    end
+
+    function Ob:stateCompareAPTable()
+        --wait so function isn't called constantly
+        self:sleep(1.0)
+        --update self.numbersTable
+        self:checkReceivedList()
+        --check if any items need to be given to player
+        self:setState('CheckSendToPlayer')
+    end
+
+    function Ob:checkReceivedList()
+        -- Create an empty table to store numbers
+        self.numbersTable = {}
+
+        --read from ItemsReceived.txt for items sent by AP Client
+        local h = fopen("ItemsReceived.txt", "r")
+
+        -- function to fill table with numbers from ItemsReceived.txt
+        local checkstuff = TRUE
+        while checkstuff == TRUE do
+            --Read a single line from the file (Lua 4 uses "*l" to read a line)
+            --each line should contain a single number
+            local line = fread(h, "*l")
+            --stop if line is blank
+            if line == nil then
+                --GamePrint('End of List')
+                break
+            else
+                --add number to table 
+                tinsert(self.numbersTable, line)        
+                --GamePrint(line)
+            end
+        end
+
+        --Print the index and value of each number in the table
+        --[[for k, v in self.numbersTable do
+            if k ~= 'n' then
+                GamePrint(k..", "..v)
+            end
+        end
+        ]]
+
+        -- Close the file
+        fclose(h)
         
+    end
+
+    function Ob:stateCheckSendToPlayer()
+        -- loops through self.numbersTable to send items to player
+        for k, v in self.numbersTable do
+            if k ~= 'n' then
+                --convert value to a number
+                local index = tonumber(v)
+                -- match the value with the index of class and name from rando tables
+                local apClass = self.randoclassList[index]
+                local apName = self.randonameList[index]
+                --check player save data for items already sent by AP, skip if already collected
+                if Global.player.stats.APItem[apName] ~= 'collected' then
+                    -- send the item to the player
+                    self:getRandoItem(apClass, apName)
+                    -- pause so they don't all spawn at once
+                    self:sleep(2.0)
+                end
+
+            end
+        end
+        self:setState('CompareAPTable')
+
+    end
+
+    --Gives item to player
+    function Ob:getRandoItem(class, name)
+        local sentitem = SpawnScript(class, name)
+        --break open brain jars and vaults automatically
+        if class == 'global.collectibles.BrainJar' or class == 'Global.Characters.Vault' then
+            sentitem:setPosition(0, -100000, 0)
+            sentitem:onNewMoveMelee()           
+        else
+            --set item position on top of player, instantly collected
+            local dart = fso('Dart')
+            local x, y, z = dart:getPosition()
+            sentitem:setPosition(x, y, z)
+        end
+        --Stores collected APItem in Save Data
+        Global.player.stats.APItem[name] = 'collected'
+    end
+
     return Ob
 end

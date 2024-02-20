@@ -926,9 +926,13 @@ function CABU(Ob)
 		DebugSetGameSpeed(1.7)
 
 		--edit clear ModData
-		local h = fopen("ItemsCollected.txt", "w")
-		fwrite(h, "")
-		fclose(h)
+		local a = fopen("ItemsCollected.txt", "w")
+		fwrite(a, "")
+		fclose(a)
+
+		--[[local b = fopen("ItemsReceived.txt", "w")
+		fwrite(b, "")
+		fclose(b)]]
 
 		-- kill the sound timer
 		--KillTimer(self,self.kTIMERID)

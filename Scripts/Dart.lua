@@ -1074,6 +1074,8 @@ function Dart(Ob)
 			'RandoLevitation', 'RandoClairvoyance', 'RandoConfusion', 'RandoFirestarting', 'RandoInvisibility', 'RandoMarksmanship', 'RandoShield', 'RandoTelekinesis',
 			'ArrowheadBundleSmall', 'ArrowheadBundleMedium',
 			'CollectedVault', 'RandoPsiCard', 'RandoPsiMarker', 'RandoLivesUp', 'RandoAmmoUp', 'RandoProp',
+			--edit AP StatName
+			'APItem', 'APPlaceholder',
 			}
 
 	--Called whenever the player saves their game
@@ -1183,7 +1185,13 @@ function Dart(Ob)
 			self.stats[statID] = {}
 		--edit adding all RandoProp Items as Table
 		elseif statID == 'RandoProp' then
-			self.stats[statID] = {}				
+			self.stats[statID] = {}	
+		--edit adding all APItem Items as Table
+		elseif statID == 'APItem' then
+			self.stats[statID] = {}
+		--edit adding all APPlaceholder Items as Table
+		elseif statID == 'APPlaceholder' then
+			self.stats[statID] = {}								
 		else
 			self.stats[statID] = 0
 		end
@@ -3064,6 +3072,19 @@ function Dart(Ob)
 
 	function Ob:onArrowheadBundleMedium(name,from)
 		self.stats.ArrowheadBundleMedium[name] = 'collected'
+		--write to text file for storage
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, name.."\n")
+		fclose(h) 
+		GamePrint('Stored '..name)
+	end
+
+-- ****************************************************************************
+
+	------CUSTOM APPLACEHOLDER HANDLERS------
+	--Stores collected APPlaceholders
+	function Ob:onAPPlaceholder(name,from)
+		self.stats.APPlaceholder[name] = 'collected'
 		--write to text file for storage
 		local h = fopen("ItemsCollected.txt", "a")
 		fwrite(h, name.."\n")

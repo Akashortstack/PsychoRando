@@ -33,5 +33,8 @@ function RandoPlacer()
 	--rando:placeRandoObject(class, name, x, y, z, ox, oy, oz)
 	--EX: rando:placeRandoObject('Global.Characters.Vault', 'Vault1', -5629, 4510, -13242, 0, 0, 0)
 
+	--AP Related Stuff
+	SpawnScript('APReceiver', 'APReceiver')
+
 end
 

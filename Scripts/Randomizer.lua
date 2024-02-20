@@ -24,8 +24,6 @@ function Randomizer(Ob)
             randoClass = classes.randoclassList[index]      
             randoName = names.randonameList[index]
             randoPosition = positions.positionsList['item'..index]
-            --HACK, prints "Spoiler Log"
-            --GamePrint("Spoiler Item"..index..", Class "..randoClass..", Name "..randoName)
 
             --compare item's level type to current level, sends to spawn if true
             if randoPosition.levelName == level then   
