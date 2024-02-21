@@ -2447,6 +2447,12 @@ function Dart(Ob)
 		self.stats.totalBrainsHeld = self.stats.totalBrainsHeld + 1
 		self.stats.brainsFromLevel = self.stats.brainsFromLevel + 1
 		self.stats.brains[brainID] = 'held'
+
+		--edit to print to ItemsCollected.txt
+		local h = fopen("ItemsCollected.txt", "a")
+		fwrite(h, brainID.."\n")
+		fclose(h) 
+
 	end
 
 -- ****************************************************************************
@@ -3013,12 +3019,15 @@ function Dart(Ob)
 	------CUSTOM RANDOPROP HANDLER------
 	--Stores Collected Prop
 	function Ob:onRandoProp(name,from)
-		self.stats.RandoProp[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		--check to make sure it's not being reincarnated in inventory
+		if self.stats.RandoProp[name] ~= 'collected' then
+			self.stats.RandoProp[name] = 'collected'
+			--write to text file for storage
+			local h = fopen("ItemsCollected.txt", "a")
+			fwrite(h, name.."\n")
+			fclose(h) 
+			GamePrint('Stored '..name)
+		end
 	end
 
 -- ****************************************************************************
@@ -3100,7 +3109,7 @@ function Dart(Ob)
 		self.stats.scavItemsFromLevel = self.stats.scavItemsFromLevel + 1
 		--write to text file for storage
 		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, ItemID)
+		fwrite(h, ItemID.."\n")
 		fclose(h)
 	end
 
