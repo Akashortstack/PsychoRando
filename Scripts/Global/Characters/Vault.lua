@@ -117,6 +117,9 @@ function Vault(Ob)
 		if Global.player.stats.CollectedVault[self.Name] == 'collected' then
 			self:killSelf()
 		end
+		 --edit for displaying when collected
+		self.pickupSpritePath = 'Textures/icons/InventoryItems/Journal_Vault.tga'
+        self.displayName = 'Memory Vault'
 
 		--edit Removed
 		--[[
@@ -210,6 +213,9 @@ function Vault(Ob)
 	function Ob:stateDie()
 		--edit sendMessage to Dart
         self:sendMessage(Global.player, 'CollectedVault', self.Name, 1)
+		-- display that we got a Vault
+		Global.player.invDisplayer:journalItemAdded(self)
+
 
 		--edit removing cutscene to prevent taking away player control, handled below instead
 		--Global.cutsceneScript.vault = self

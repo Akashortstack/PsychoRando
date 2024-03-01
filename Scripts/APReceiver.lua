@@ -749,7 +749,6 @@ function APReceiver(Ob)
             'global.collectibles.APPlaceholder',
             'global.collectibles.APPlaceholder',
 
-
         }
 
         --LIST MUST MATCH classTable ONE FOR ONE, OR ELSE...
@@ -1286,6 +1285,7 @@ function APReceiver(Ob)
             'AP Item 315',
             'AP Item 316',
             'AP Item 317',
+            
         }
         --write results to new tables
         self.randoclassList = classTable
