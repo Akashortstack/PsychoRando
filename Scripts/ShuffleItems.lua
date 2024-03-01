@@ -315,6 +315,18 @@ function ShuffleItems(Ob)
             'global.collectibles.ArrowheadBundleMedium',
             'global.collectibles.ArrowheadBundleMedium',
 
+            --Oarsman's Badge
+            'global.collectibles.RandoOarsmansBadge',
+
+            --Sasha's Button
+            'global.props.Button',
+
+            --Crow Feather
+            'global.props.AS_CrowFeather',
+
+            --Cobweb Duster
+            'global.collectibles.CobwebDuster',
+
             --110 Psicards, filler item, increase if adding more positions
             --Increase name too!
             'global.collectibles.RandoPsiCard',
@@ -428,18 +440,6 @@ function ShuffleItems(Ob)
             'global.collectibles.RandoPsiCard',
             'global.collectibles.RandoPsiCard',
             'global.collectibles.RandoPsiCard',
-
-            --Oarsman's Badge
-            'global.collectibles.RandoOarsmansBadge',
-
-            --Sasha's Button
-            'global.props.Button',
-
-            --Crow Feather
-            'global.props.AS_CrowFeather',
-
-            --Cobweb Duster
-            'global.collectibles.CobwebDuster',
 
             --APPlaceholder
             'global.collectibles.APPlaceholder',
@@ -952,6 +952,18 @@ function ShuffleItems(Ob)
             --5 Rando Arrowhead Bundles Medium
             'AHMedium1', 'AHMedium2', 'AHMedium3', 'AHMedium4', 'AHMedium5',
 
+            --Oarsman's Badge
+            'Oarsmans Badge',
+
+            --Sasha's Button
+            'Button',
+
+            --Crow Feather
+            'Feather',
+
+            --Cobweb Duster
+            'CobwebDuster',
+
             --111 Psicards, filler item, increase if adding more positions
             'Card1', 'Card2', 'Card3', 'Card4', 'Card5', 'Card6', 'Card7', 'Card8', 'Card9', 'Card10',
             'Card11', 'Card12', 'Card13', 'Card14', 'Card15', 'Card16', 'Card17', 'Card18', 'Card19', 'Card20',
@@ -965,18 +977,7 @@ function ShuffleItems(Ob)
             'Card91', 'Card92', 'Card93', 'Card94', 'Card95', 'Card96', 'Card97', 'Card98', 'Card99', 'Card100',
             'Card101', 'Card102', 'Card103', 'Card104', 'Card105', 'Card106', 'Card107', 'Card108', 'Card109', 'Card110',
             'Card111',
-            --Oarsman's Badge
-            'Oarsmans Badge',
-
-            --Sasha's Button
-            'Button',
-
-            --Crow Feather
-            'Feather',
-
-            --Cobweb Duster
-            'CobwebDuster',
-
+            
             --AP Placeholders, 317 Total
             'AP Item 1',
             'AP Item 2',

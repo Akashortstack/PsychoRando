@@ -690,14 +690,14 @@ def create_seed():
             # Remove Cobweb Duster from list and place at end
             shuffled_list = [item for item in shuffled_list if item != 'Cobweb Duster']
             shuffled_list.append('Cobweb Duster')
-            shuffled_values = [item for item in shuffled_values if item != 367]
-            shuffled_values.append(367)
+            shuffled_values = [item for item in shuffled_values if item != 256]
+            shuffled_values.append(256)
         else:
             # Remove Card107 and place at end if randomizecobweduster == True
             shuffled_list = [item for item in shuffled_list if item != 'Card107']
             shuffled_list.append('Card107')
-            shuffled_values = [item for item in shuffled_values if item != 359]
-            shuffled_values.append(359)
+            shuffled_values = [item for item in shuffled_values if item != 363]
+            shuffled_values.append(363)
 
         # Handle Start Levitation Setting
         if seed_settings_startlevitation == 'True':
@@ -710,28 +710,29 @@ def create_seed():
             # Remove Card108 and place at end if randomizecobweduster == True
             shuffled_list = [item for item in shuffled_list if item != 'Card108']
             shuffled_list.append('Card108')
-            shuffled_values = [item for item in shuffled_values if item != 360]
-            shuffled_values.append(360)
+            shuffled_values = [item for item in shuffled_values if item != 364]
+            shuffled_values.append(364)
 
         # Handle Start Button Setting
         if seed_settings_startbutton == 'True':
             # Remove StartButton from list and place at end
             shuffled_list = [item for item in shuffled_list if item != 'Button']
             shuffled_list.append('Button')
-            shuffled_values = [item for item in shuffled_values if item != 365]
-            shuffled_values.append(365)
+            shuffled_values = [item for item in shuffled_values if item != 254]
+            shuffled_values.append(254)
         else:
             # Remove Card109 and place at end if startbutton == True
             shuffled_list = [item for item in shuffled_list if item != 'Card109']
             shuffled_list.append('Card109')
-            shuffled_values = [item for item in shuffled_values if item != 361]
-            shuffled_values.append(361)
+            shuffled_values = [item for item in shuffled_values if item != 365]
+            shuffled_values.append(365)
 
         # Put shuffled items in locations
         fill_locations(world_copy, shuffled_list)
 
         # Check if Seed is Beatable
         base_check = True
+        button_fail = False
         base_check = check_impossible(world_copy)  #Make sure no common illegal placements
         if base_check == False:
             print("Base Check Failed.")
@@ -748,12 +749,12 @@ def create_seed():
                 world_count = world_count+1
                 print(f"Current World_Count", world_count)
                 #Harder Button Settings Check
-                if seed_settings_harderbutton == "True" and (world_count <= 1) and ("Button" in player_inventory):
+                if seed_settings_harderbutton == "True" and seed_settings_startbutton == "False" and (world_count <= 1) and ("Button" in player_inventory):
                     print(f"Button Too Easy! Try Again.")
                     button_fail = True
                     break
 
-        if "Goal" in player_inventory and not button_fail:
+        if "Goal" in player_inventory and button_fail == False:
             print("Your Winner!")
             beatable = True
         else:
@@ -880,7 +881,6 @@ with open(seed_file_path, "w") as file:
     text2 = '''end
 
   function Ob:fillTable()
-      --PASTE SEED STRING HERE
       local SEED_GOES_HERE = {
       
   
@@ -1020,14 +1020,14 @@ if seed_settings_spoilerlog == 'True':
             # Remove Cobweb Duster from list and place at end
             spoiler_names = [item for item in spoiler_names if item != 'Rando Cobweb Duster']
             spoiler_names.append('Rando Cobweb Duster')
-            seed = [item for item in seed if item != 367]
-            seed.append('367')
+            seed = [item for item in seed if item != 256]
+            seed.append('256')
         else:
             # Remove Card107 and place at end if randomizecobweduster == True
             spoiler_names = [item for item in spoiler_names if item != 'Card107']
             spoiler_names.append('Card107')
-            seed = [item for item in seed if item != 359]
-            seed.append('359')
+            seed = [item for item in seed if item != 363]
+            seed.append('363')
 
         # Handle Start Levitation Setting
         if seed_settings_startlevitation == 'True':
@@ -1040,22 +1040,22 @@ if seed_settings_spoilerlog == 'True':
             # Remove Card108 and place at end if randomizecobweduster == True
             spoiler_names = [item for item in spoiler_names if item != 'Card108']
             spoiler_names.append('Card108')
-            seed = [item for item in seed if item != 360]
-            seed.append('360')
+            seed = [item for item in seed if item != 364]
+            seed.append('364')
 
         # Handle Start Button Setting
         if seed_settings_startbutton == 'True':
             # Remove Button from list and place at end
             spoiler_names = [item for item in spoiler_names if item != 'Button']
             spoiler_names.append('Button')
-            seed = [item for item in seed if item != 365]
-            seed.append('365')
+            seed = [item for item in seed if item != 254]
+            seed.append('254')
         else:
             # Remove Card109 and place at end if randomizebutton == True
             spoiler_names = [item for item in spoiler_names if item != 'Card109']
             spoiler_names.append('Card109')
-            seed = [item for item in seed if item != 361]
-            seed.append('361')
+            seed = [item for item in seed if item != 365]
+            seed.append('365')
         
         #Seperate Checks by Location
         count = 1
@@ -1099,7 +1099,7 @@ if seed_settings_spoilerlog == 'True':
                 file.write(f"\nAsylum Upper Level (ASUP)\n")
 
             if count == 176:
-                file.write(f"\nDr. Lobato's Laboratory (ASLB)\n")
+                file.write(f"\nDr. Loboto's Laboratory (ASLB)\n")
 
             if count == 184:
                 file.write(f"\nObstacle Course 1 (BBA1)\n")
@@ -1232,14 +1232,14 @@ if seed_settings_createhints == 'True':
                 # Remove Cobweb Duster from list and place at end
                 spoiler_names = [item for item in spoiler_names if item != 'Rando Cobweb Duster']
                 spoiler_names.append('Rando Cobweb Duster')
-                seed = [item for item in seed if item != 367]
-                seed.append('367')
+                seed = [item for item in seed if item != 256]
+                seed.append('256')
             else:
                 # Remove Card107 and place at end if randomizecobwebduster == True
                 spoiler_names = [item for item in spoiler_names if item != 'Card107']
                 spoiler_names.append('Card107')
-                seed = [item for item in seed if item != 359]
-                seed.append('359')
+                seed = [item for item in seed if item != 363]
+                seed.append('363')
 
             # Handle Start Levitation Setting
             if seed_settings_startlevitation == 'True':
@@ -1252,22 +1252,22 @@ if seed_settings_createhints == 'True':
                 # Remove Card108 and place at end
                 spoiler_names = [item for item in spoiler_names if item != 'Card108']
                 spoiler_names.append('Card108')
-                seed = [item for item in seed if item != 360]
-                seed.append('360')
+                seed = [item for item in seed if item != 364]
+                seed.append('364')
 
             # Handle Start Button Setting
             if seed_settings_startbutton == 'True':
                 # Remove Button from list and place at end
                 spoiler_names = [item for item in spoiler_names if item != 'Button']
                 spoiler_names.append('Button')
-                seed = [item for item in seed if item != 365]
-                seed.append('365')
+                seed = [item for item in seed if item != 254]
+                seed.append('254')
             else:
                 # Remove Card109 and place at end if randomizebutton == False
                 spoiler_names = [item for item in spoiler_names if item != 'Card109']
                 spoiler_names.append('Card109')
-                seed = [item for item in seed if item != 361]
-                seed.append('361')
+                seed = [item for item in seed if item != 365]
+                seed.append('365')
 
         count = 1
         for location, current_spoiler_name in zip(location_spoiler_list, spoiler_names):

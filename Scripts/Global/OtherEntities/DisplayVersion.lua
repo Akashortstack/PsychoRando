@@ -16,7 +16,7 @@ function DisplayVersion(Ob)
         self.modVersionHandle = DisplayText(self.version, 10, 60)
         --find seed name info
         local seedsettings = fso('RandoSeed', 'Randoseed')
-        self.modSeedHandle = DisplayText("Seed# "..seedsettings.seedname, 10, 470)
+        self.modSeedHandle = DisplayText(seedsettings.seedname, 10, 470)
 
     end
 

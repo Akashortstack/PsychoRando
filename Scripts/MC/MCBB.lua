@@ -346,6 +346,10 @@ end
 			self.rEvilDad:onPhaseEnd(phaseNum)
 		end	
 		if (self.rTwoHeadedButcher and self.rTwoHeadedButcher.onPhaseEnd) then
+			--write to text file for storage
+			local h = fopen("ItemsCollected.txt", "a")
+			fwrite(h, "Victory\n")
+			fclose(h)
 			self.rTwoHeadedButcher:onPhaseEnd(phaseNum)
 		end
 		if (self.rGhostDad) then

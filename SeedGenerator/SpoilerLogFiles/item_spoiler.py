@@ -1,6 +1,6 @@
 item_spoiler_list = [
 #Current Props from AS, 6 total
-'Lungfish Call', 'Glorias Trophy', 'Straight Jacket', 'Lobato Painting', 'Cake', 'Lilis Bracelet',
+'Lungfish Call', 'Glorias Trophy', 'Straight Jacket', 'Loboto Painting', 'Cake', 'Lilis Bracelet',
 
 #Current Props from MM, 6 total
 'Prop Sign', 'Prop Flowers', 'Prop Plunger', 'Prop HedgeTrimmers', 'Prop RollingPin', 'Prop WaterCan',
@@ -186,6 +186,18 @@ item_spoiler_list = [
 #5 Rando Arrowhead Bundles Large
 'AHLarge1', 'AHLarge2', 'AHLarge3', 'AHLarge4', 'AHLarge5',
 
+#Oarsman's Badge
+'Oarsmans Badge',
+
+#Sasha's Button
+'Button',
+
+#Crow Feather
+'Feather',
+
+#Cobweb Duster
+'Rando Cobweb Duster',
+
 #111 Psicards, filler item, increase if adding more positions
 'Card1', 'Card2', 'Card3', 'Card4', 'Card5', 'Card6', 'Card7', 'Card8', 'Card9', 'Card10',
 'Card11', 'Card12', 'Card13', 'Card14', 'Card15', 'Card16', 'Card17', 'Card18', 'Card19', 'Card20',
@@ -199,15 +211,5 @@ item_spoiler_list = [
 'Card91', 'Card92', 'Card93', 'Card94', 'Card95', 'Card96', 'Card97', 'Card98', 'Card99', 'Card100',
 'Card101', 'Card102', 'Card103', 'Card104', 'Card105', 'Card106', 'Card107', 'Card108', 'Card109', 'Card110',
 'Card111',
-#Oarsman's Badge
-'Oarsmans Badge',
 
-#Sasha's Button
-'Button',
-
-#Crow Feather
-'Feather',
-
-#Cobweb Duster
-'Rando Cobweb Duster',
 ]
