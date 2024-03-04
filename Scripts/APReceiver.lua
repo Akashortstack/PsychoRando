@@ -1378,7 +1378,7 @@ function APReceiver(Ob)
                     -- send the item to the player
                     self:getRandoItem(apClass, apName)
                     -- pause so they don't all spawn at once
-                    self:sleep(2.0)
+                    self:sleep(1.5)
                 end
 
             end

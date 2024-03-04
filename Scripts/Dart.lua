@@ -2435,6 +2435,10 @@ function Dart(Ob)
 -- ****************************************************************************
 
 	function Ob:onBrain(brainID,from)
+		--edit to print to ItemsCollected.txt
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem("BrainJar"..brainID)
+
 		brainID = strlower(brainID)	-- make sure brainID is all lowercase because that's how we store them to be safe
 		if not brainID then
 			GamePrint('ERROR: Brain '..from.Name..' had nil ID.')
@@ -2446,12 +2450,7 @@ function Dart(Ob)
 		end
 		self.stats.totalBrainsHeld = self.stats.totalBrainsHeld + 1
 		self.stats.brainsFromLevel = self.stats.brainsFromLevel + 1
-		self.stats.brains[brainID] = 'held'
-
-		--edit to print to ItemsCollected.txt
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, brainID.."\n")
-		fclose(h) 
+		self.stats.brains[brainID] = 'held'	
 
 	end
 
@@ -2795,10 +2794,8 @@ function Dart(Ob)
 --Stores Collected BaggageTag, Global Key
 	function Ob:onCollectedSuitcaseTag(name,from)
 		self.stats.RandoSuitcaseTag[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedSuitcaseTag = self.stats.CollectedSuitcaseTag + value
@@ -2806,10 +2803,8 @@ function Dart(Ob)
 
 	function Ob:onCollectedPurseTag(name,from)
 		self.stats.RandoPurseTag[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedPurseTag = self.stats.CollectedPurseTag + value
@@ -2817,10 +2812,8 @@ function Dart(Ob)
 
 	function Ob:onCollectedHatboxTag(name,from)
 		self.stats.RandoHatboxTag[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedHatboxTag = self.stats.CollectedHatboxTag + value
@@ -2828,10 +2821,8 @@ function Dart(Ob)
 
 	function Ob:onCollectedSteamertrunkTag(name,from)
 		self.stats.RandoSteamertrunkTag[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedSteamertrunkTag = self.stats.CollectedSteamertrunkTag + value
@@ -2839,10 +2830,8 @@ function Dart(Ob)
 
 	function Ob:onCollectedDufflebagTag(name,from)
 		self.stats.RandoDufflebagTag[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedDufflebagTag = self.stats.CollectedDufflebagTag + value
@@ -2854,10 +2843,8 @@ function Dart(Ob)
 --Removes Baggage Tag from inventory, stores Collected Baggage, Increases Rank, Global Lock
 	function Ob:onCollectedSuitcase(name,from)
 		self.stats.RandoSuitcase[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedSuitcaseTag = self.stats.CollectedSuitcaseTag - value
@@ -2866,10 +2853,8 @@ function Dart(Ob)
 
 	function Ob:onCollectedPurse(name,from)
 		self.stats.RandoPurse[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedPurseTag = self.stats.CollectedPurseTag - value
@@ -2878,10 +2863,8 @@ function Dart(Ob)
 
 	function Ob:onCollectedHatbox(name,from)
 		self.stats.RandoHatbox[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedHatboxTag = self.stats.CollectedHatboxTag - value
@@ -2890,10 +2873,8 @@ function Dart(Ob)
 
 	function Ob:onCollectedSteamertrunk(name,from)
 		self.stats.RandoSteamertrunk[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedSteamertrunkTag = self.stats.CollectedSteamertrunkTag - value
@@ -2902,10 +2883,8 @@ function Dart(Ob)
 
 	function Ob:onCollectedDufflebag(name,from)
 		self.stats.RandoDufflebag[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedDufflebagTag = self.stats.CollectedDufflebagTag - value
@@ -2918,73 +2897,57 @@ function Dart(Ob)
 	--Stores Collected RandoPsiPowers and Progressive Powerups
 	function Ob:onRandoClairvoyance(name,from)
 		self.stats.RandoClairvoyance[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onRandoConfusion(name,from)
 		self.stats.RandoConfusion[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onRandoFirestarting(name,from)
 		self.stats.RandoFirestarting[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onRandoInvisibility(name,from)
 		self.stats.RandoInvisibility[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onRandoLevitation(name,from)
 		self.stats.RandoLevitation[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onRandoMarksmanship(name,from)
 		self.stats.RandoMarksmanship[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onRandoShield(name,from)
 		self.stats.RandoShield[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onRandoTelekinesis(name,from)
 		self.stats.RandoTelekinesis[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 	end
 
@@ -2994,10 +2957,8 @@ function Dart(Ob)
 	--Stores Collected RandoPsiCard
 	function Ob:onRandoPsiCard(name,from)
 		self.stats.RandoPsiCard[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 	end
 
@@ -3007,10 +2968,8 @@ function Dart(Ob)
 	--Stores Collected RandoPsiMarker
 	function Ob:onRandoPsiMarker(name,from)
 		self.stats.RandoPsiMarker[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 	end
 
@@ -3022,10 +2981,8 @@ function Dart(Ob)
 		--check to make sure it's not being reincarnated in inventory
 		if self.stats.RandoProp[name] ~= 'collected' then
 			self.stats.RandoProp[name] = 'collected'
-			--write to text file for storage
-			local h = fopen("ItemsCollected.txt", "a")
-			fwrite(h, name.."\n")
-			fclose(h) 
+			local apcollect = fso('APCollected', 'APCollected')
+			apcollect:writeCollectedItem(name)
 			GamePrint('Stored '..name)
 		end
 	end
@@ -3036,10 +2993,8 @@ function Dart(Ob)
 	function Ob:onCollectedVault(name,from)
 		self.stats.CollectedVault[name] = 'collected' 
 		self.stats.totalVaults = self.stats.totalVaults+1
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h)
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		self:incrementRank()
 	end
@@ -3050,19 +3005,15 @@ function Dart(Ob)
 	--Stores RandoLivesUp and RandoAmmoUp
 	function Ob:onRandoLivesUp(name,from)
 		self.stats.RandoLivesUp[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onRandoAmmoUp(name,from)
 		self.stats.RandoAmmoUp[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 	end
 
@@ -3072,19 +3023,15 @@ function Dart(Ob)
 	--Stores collected ArrowheadBundles
 	function Ob:onArrowheadBundleSmall(name,from)
 		self.stats.ArrowheadBundleSmall[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 	end
 
 	function Ob:onArrowheadBundleMedium(name,from)
 		self.stats.ArrowheadBundleMedium[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 	end
 
@@ -3094,10 +3041,8 @@ function Dart(Ob)
 	--Stores collected APPlaceholders
 	function Ob:onAPPlaceholder(name,from)
 		self.stats.APPlaceholder[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 	end
 
@@ -3107,10 +3052,9 @@ function Dart(Ob)
 		self.stats.scavengerHuntItems[ItemID] = 'unredeemed'
 		self.stats.numUnredeemedScavengerHuntItems = self.stats.numUnredeemedScavengerHuntItems + 1
 		self.stats.scavItemsFromLevel = self.stats.scavItemsFromLevel + 1
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, ItemID.."\n")
-		fclose(h)
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(ItemID)
+
 	end
 
 -- ****************************************************************************

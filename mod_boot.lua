@@ -35,6 +35,6 @@ function RandoPlacer()
 
 	--AP Related Stuff
 	SpawnScript('APReceiver', 'APReceiver')
-
+	SpawnScript('APCollected', 'APCollected')
 end
 
