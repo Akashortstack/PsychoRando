@@ -78,12 +78,6 @@ function ShuffleItems(Ob)
             'Global.Collectibles.RandoAmmoUp',
             'Global.Collectibles.RandoAmmoUp',
 
-            --4 Confusion Ammo Up
-            'Global.Collectibles.RandoConfusionUp',
-            'Global.Collectibles.RandoConfusionUp',
-            'Global.Collectibles.RandoConfusionUp',
-            'Global.Collectibles.RandoConfusionUp',
-
             --6 Max Lives Up
             'Global.Collectibles.RandoLivesUp',
             'Global.Collectibles.RandoLivesUp',
@@ -91,6 +85,12 @@ function ShuffleItems(Ob)
             'Global.Collectibles.RandoLivesUp',
             'Global.Collectibles.RandoLivesUp',
             'Global.Collectibles.RandoLivesUp',
+
+            --4 Confusion Ammo Up
+            'Global.Collectibles.RandoConfusionUp',
+            'Global.Collectibles.RandoConfusionUp',
+            'Global.Collectibles.RandoConfusionUp',
+            'Global.Collectibles.RandoConfusionUp',
 
             --10 Challenge Markers
             'global.collectibles.RandoPsiChallengeMarker',
@@ -808,12 +808,6 @@ function ShuffleItems(Ob)
             'AmmoUp5',
             'AmmoUp6',
 
-            --4 Confusion Ammo Up
-            'ConfusionUp1',
-            'ConfusionUp2',
-            'ConfusionUp3',
-            'ConfusionUp4',
-
             --6 Max Lives Up
             'LivesUp1',
             'LivesUp2',
@@ -821,6 +815,12 @@ function ShuffleItems(Ob)
             'LivesUp4',
             'LivesUp5',
             'LivesUp6',
+            
+            --4 Confusion Ammo Up
+            'ConfusionUp1',
+            'ConfusionUp2',
+            'ConfusionUp3',
+            'ConfusionUp4',
 
             --10 Challenge Markers
             'Marker1',

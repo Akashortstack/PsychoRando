@@ -309,6 +309,10 @@ end
 		elseif (nextPhase == 4) then
 			Global.cutsceneScript:runCutscene('PhaseTransition34a', 1)
 		elseif (nextPhase == 5) then
+			--write to text file for storage, 365 is victory location
+			local h = fopen("ItemsCollected.txt", "a")
+			fwrite(h, "365\n")
+			fclose(h)
 			UnlockAchievement('ACH_COMP_MC')
 			FadeToColor( 0, 0, 0, 0, 0, 255 , 255, 255, 255,0, 0 )
 			Yield()
@@ -346,10 +350,6 @@ end
 			self.rEvilDad:onPhaseEnd(phaseNum)
 		end	
 		if (self.rTwoHeadedButcher and self.rTwoHeadedButcher.onPhaseEnd) then
-			--write to text file for storage, 365 is victory location
-			local h = fopen("ItemsCollected.txt", "a")
-			fwrite(h, "365\n")
-			fclose(h)
 			self.rTwoHeadedButcher:onPhaseEnd(phaseNum)
 		end
 		if (self.rGhostDad) then

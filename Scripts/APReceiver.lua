@@ -67,12 +67,6 @@ function APReceiver(Ob)
             'Global.Collectibles.RandoAmmoUp',
             'Global.Collectibles.RandoAmmoUp',
 
-            --4 Confusion Ammo Up
-            'Global.Collectibles.RandoConfusionUp',
-            'Global.Collectibles.RandoConfusionUp',
-            'Global.Collectibles.RandoConfusionUp',
-            'Global.Collectibles.RandoConfusionUp',
-
             --6 Max Lives Up
             'Global.Collectibles.RandoLivesUp',
             'Global.Collectibles.RandoLivesUp',
@@ -80,6 +74,12 @@ function APReceiver(Ob)
             'Global.Collectibles.RandoLivesUp',
             'Global.Collectibles.RandoLivesUp',
             'Global.Collectibles.RandoLivesUp',
+
+            --4 Confusion Ammo Up
+            'Global.Collectibles.RandoConfusionUp',
+            'Global.Collectibles.RandoConfusionUp',
+            'Global.Collectibles.RandoConfusionUp',
+            'Global.Collectibles.RandoConfusionUp',
 
             --10 Challenge Markers
             'global.collectibles.RandoPsiChallengeMarker',
@@ -797,12 +797,6 @@ function APReceiver(Ob)
             'AmmoUp5',
             'AmmoUp6',
 
-            --4 Confusion Ammo Up
-            'ConfusionUp1',
-            'ConfusionUp2',
-            'ConfusionUp3',
-            'ConfusionUp4',
-
             --6 Max Lives Up
             'LivesUp1',
             'LivesUp2',
@@ -810,6 +804,12 @@ function APReceiver(Ob)
             'LivesUp4',
             'LivesUp5',
             'LivesUp6',
+
+            --4 Confusion Ammo Up
+            'ConfusionUp1',
+            'ConfusionUp2',
+            'ConfusionUp3',
+            'ConfusionUp4',
 
             --10 Challenge Markers
             'Marker1',
@@ -1378,7 +1378,7 @@ function APReceiver(Ob)
                     -- send the item to the player
                     self:getRandoItem(apClass, apName)
                     -- pause so they don't all spawn at once
-                    self:sleep(1.5)
+                    self:sleep(1.0)
                 end
 
             end
@@ -1400,8 +1400,7 @@ function APReceiver(Ob)
             local x, y, z = dart:getPosition()
             sentitem:setPosition(x, y, z)
         end
-        --Stores collected APItem in Save Data
-        Global.player.stats.APItem[name] = 'collected'
+        
     end
 
     return Ob

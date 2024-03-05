@@ -361,6 +361,15 @@ function CABU(Ob)
 		%Ob.Parent.onBeginLevel(self)
 
 		self.playerDart = FindScriptObject( 'Dart' )
+
+		--edit clear ModData
+		local a = fopen("ItemsCollected.txt", "w")
+		fwrite(a, "")
+		fclose(a)
+
+		local b = fopen("ItemsReceived.txt", "w")
+		fwrite(b, "")
+		fclose(b)
 		
 		-- init the bunkhouse control handler
 		ActivateBunkControlHandler()
@@ -924,15 +933,6 @@ function CABU(Ob)
 	function Ob:stateRazSleep()
 		--edit speed up raz falling asleep
 		DebugSetGameSpeed(1.7)
-
-		--edit clear ModData
-		local a = fopen("ItemsCollected.txt", "w")
-		fwrite(a, "")
-		fclose(a)
-
-		--[[local b = fopen("ItemsReceived.txt", "w")
-		fwrite(b, "")
-		fclose(b)]]
 
 		-- kill the sound timer
 		--KillTimer(self,self.kTIMERID)
