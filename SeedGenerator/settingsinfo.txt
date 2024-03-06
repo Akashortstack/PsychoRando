@@ -28,6 +28,9 @@ Using Presets:
 	- _instantdeath_: WARNING!!! USE AT OWN RISK!!! If 'True', Raz will die instantly upon taking any amount of damage. 
 	Dream Fluffs and defensive measures are your best friend. Just don't make any mistakes.
 
+	- _harderbutton_: Want to make Sasha's Button harder to find? Use this setting to force its placement behind another progression item.
+
+
 [VictoryConditions]
 
 	- _beatoleander_: The original win condition, if 'True' this requires getting to the top of the Asylum
@@ -58,6 +61,11 @@ Using Presets:
 	already got all required powers and the cake.
 
 	- _mentalmagnet_: If 'True', start with the Mental Magnet badge in your inventory for easy health and ammo pickups.
+
+	- _removetutorials_: If 'True', removes ALL tutorial popups from the game (except the Ford Scavenger Hunt reminders).
+
+	- _easyflight_: Makes the levitation glitch obsolete, by letting Raz float UPWARDS instead of Downwards
+	while using psifloat. No more cramping hands or requiring high frame rates.
 
 [AdditionalFiles]
 
