@@ -1373,14 +1373,15 @@ function APReceiver(Ob)
                 -- match the value with the index of class and name from rando tables
                 local apClass = self.randoclassList[index]
                 local apName = self.randonameList[index]
-                --check player save data for items already sent by AP, skip if already collected
-                if Global.player.stats.APItem[apName] ~= 'collected' then
-                    -- send the item to the player
-                    self:getRandoItem(apClass, apName)
-                    -- pause so they don't all spawn at once
-                    self:sleep(1.0)
+                if apClass ~= 'global.collectibles.RandoSuitcase' and apClass ~= 'global.collectibles.RandoPurse' and apClass ~= 'global.collectibles.RandoHatbox' and apClass ~= 'global.collectibles.RandoSteamertrunk' and apClass ~= 'global.collectibles.RandoDufflebag' then
+                    --check player save data for items already sent by AP, skip if already collected
+                    if Global.player.stats.APItem[apName] ~= 'collected' then
+                        -- send the item to the player
+                        self:getRandoItem(apClass, apName)
+                        -- pause so they don't all spawn at once
+                        self:sleep(1.0)
+                    end
                 end
-
             end
         end
         self:setState('CompareAPTable')
