@@ -1390,7 +1390,19 @@ function APReceiver(Ob)
 
     --Gives item to player
     function Ob:getRandoItem(class, name)
-        local sentitem = SpawnScript(class, name)
+        -- check if the item currently exists
+        local sentitem = nil
+        local existing_item = FindScriptObject(name)
+        if (not existing_item) then
+            -- item doesn't exist, spawn a new one
+            GamePrint(name.." Don't Exist! Spawn it!")
+            sentitem = SpawnScript(class, name)
+        else
+            -- item exists, move it onto the player    
+            GamePrint(name.." Exists! Move it!")
+            sentitem = existing_item
+        end
+
         --break open brain jars and vaults automatically
         if class == 'global.collectibles.BrainJar' or class == 'Global.Characters.Vault' then
             sentitem:setPosition(0, -100000, 0)
