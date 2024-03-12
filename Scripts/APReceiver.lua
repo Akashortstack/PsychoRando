@@ -1395,11 +1395,9 @@ function APReceiver(Ob)
         local existing_item = FindScriptObject(name)
         if (not existing_item) then
             -- item doesn't exist, spawn a new one
-            GamePrint(name.." Don't Exist! Spawn it!")
             sentitem = SpawnScript(class, name)
         else
             -- item exists, move it onto the player    
-            GamePrint(name.." Exists! Move it!")
             sentitem = existing_item
         end
 

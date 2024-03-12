@@ -279,8 +279,8 @@ function CASA(Ob)
 			Global:saveGlobal('bSeenASIN', 1)
 		end
 
-		
-
+		--edit to make Ford's Sanctuary open with fast travel
+		Global:save('cajaStump', 1, 'CA')
 
         --[[
 		if (Global:loadGlobal('bMCEntered') == 1) then

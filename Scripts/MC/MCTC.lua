@@ -275,7 +275,7 @@ function MCTC(Ob)
 		spawn DoorFatLady.lua prop as a visual blocker
 		]]
 		local seedsettings = fso('RandoSeed', 'RandoSeed')
-		local victoryMet = TRUE
+		local oleanderDefeated = TRUE
 		local rank101Met = TRUE
 		local brainsMet = TRUE
 		local scavhuntMet = TRUE
@@ -283,10 +283,10 @@ function MCTC(Ob)
 
 		--check if Coach Oleander defeated
 		if seedsettings.beatoleander == TRUE then
-			if (Global:loadGlobal('bSavedLili') == 1) then
-				GamePrint('Lili Saved!')
+			if (Global:loadGlobal('bOleanderDefeated') == 1) then
+				GamePrint('Oleander Defeated!')
 			else
-				victoryMet = FALSE
+				oleanderDefeated = FALSE
 			end
 		end
 
@@ -299,9 +299,9 @@ function MCTC(Ob)
 		end
 
 		if seedsettings.brainhunt == TRUE then
-			--check if all 19 brains have been redeemed
-			if (Global:loadGlobal('totalBrainsRedeemed') == 19) then
-				GamePrint('All Brains Redeemed!') 
+			--check if required number of brains have been redeemed
+			if (Global:loadGlobal('totalBrainsRedeemed') >= seedsettings.brainsrequired) then
+				GamePrint('Required Brains Redeemed!') 
 			else 
 				brainsMet = FALSE
 			end
@@ -326,7 +326,7 @@ function MCTC(Ob)
 		end
 		
 		
-		if victoryMet == FALSE or brainsMet == FALSE or scavhuntMet == FALSE or rank101Met == FALSE or alllevelsmet == FALSE then
+		if oleanderDefeated == FALSE or brainsMet == FALSE or scavhuntMet == FALSE or rank101Met == FALSE or alllevelsmet == FALSE then
 			GamePrint('Missing Win Condition, Spawn Fat Lady')
 			remove = fso('MCTCtoMCBB')
 			remove:killSelf()

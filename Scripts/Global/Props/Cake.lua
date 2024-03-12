@@ -39,22 +39,13 @@ function Cake(Ob)
 	end
     
 --************************************************************************************************* 
-
-	function Ob:onBeginLevel()
-		-- call parent's stateinit
-		self:setPosition(self.homeX, self.homeY, self.homeZ)
-        %Ob.Parent.onBeginLevel(self)                             
-		self:setPosition(self.homeX, self.homeY, self.homeZ)
---		local saw = Global:loadGlobal('SawSheegorIntro')
---		if (saw ~= 1) then
---			self:beNotPickupable()
---		end
-	end
 	
 	function Ob:onPostBeginLevel()
         %Ob.Parent.onPostBeginLevel(self)                             
 		local pokey = FindScriptObject('Pokeylope')
 		if (pokey) then
+			--edit fixing bug where cake is created by AP while inside ASLB
+			pokey:setState('FindCake')
 			pokey:activateCakeFollowing()
 		end
 	end

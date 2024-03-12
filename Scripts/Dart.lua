@@ -2473,6 +2473,19 @@ function Dart(Ob)
 		self.stats.brains[brainID] = 'redeemed'
 		self:incrementMaxHealth(1)
 
+		-- edit check for Victory Condition
+		local seedsettings = fso('RandoSeed', 'Randoseed')
+		if seedsettings.brainhunt == TRUE and seedsettings.requireMC == FALSE then
+			if seedsettings.beatoleander == FALSE or Global:loadGlobal('bOleanderDefeated') == 1 then
+				if self.stats.totalBrainsRedeemed >= seedsettings.brainsrequired then
+					--write to text file for client to read
+					local h = fopen("victory.txt", "w")
+					fwrite(h, "victory\n")
+					fclose(h)
+				end
+			end
+		end
+
 		if self.stats.totalBrainsRedeemed == 19 then
 			UnlockAchievement('ACH_RET_ALLBRAINS')
 		end

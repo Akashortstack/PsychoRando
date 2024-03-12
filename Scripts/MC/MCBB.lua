@@ -309,10 +309,11 @@ end
 		elseif (nextPhase == 4) then
 			Global.cutsceneScript:runCutscene('PhaseTransition34a', 1)
 		elseif (nextPhase == 5) then
-			--write to text file for storage, 365 is victory location
-			local h = fopen("ItemsCollected.txt", "a")
-			fwrite(h, "365\n")
+			--write to text file for client to read
+			local h = fopen("victory.txt", "w")
+			fwrite(h, "victory\n")
 			fclose(h)
+			
 			UnlockAchievement('ACH_COMP_MC')
 			FadeToColor( 0, 0, 0, 0, 0, 255 , 255, 255, 255,0, 0 )
 			Yield()
