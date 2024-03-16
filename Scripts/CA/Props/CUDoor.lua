@@ -12,7 +12,7 @@ function CUDoor(Ob)
 		%Ob.Parent.onPostBeginLevel(self)
 		self.llv = FindScriptObject(self.levelLoadVolName)
 		--edit close doors if we haven't found their mind yet
-		if self.level == 'BB' and Global:loadGlobal('bCoachmindfound') ~= 1 then
+		if self.level == 'BB' and Global:loadGlobal('bCoachMindfound') ~= 1 then
 			self:close(1)
 		elseif self.level == 'SA' and Global:loadGlobal('bSashaMindfound') ~= 1 then
 			self:close(1)
