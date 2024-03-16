@@ -970,15 +970,15 @@ function APReceiver(Ob)
             'SquirrelDinner',
 
             --9 Mind Unlocks
-            'Coach',
-            'Sasha',
-            'Milla',
-            'Linda',
-            'Boyd',
-            'Gloria',
-            'Fred',
-            'Edgar',
-            'Oly',
+            'CoachMind',
+            'SashaMind',
+            'MillaMind',
+            'LindaMind',
+            'BoydMind',
+            'GloriaMind',
+            'FredMind',
+            'EdgarMind',
+            'OlyMind',
 
             --110 Psicards, filler item, increase if adding more positions
             'Card1', 'Card2', 'Card3', 'Card4', 'Card5', 'Card6', 'Card7', 'Card8', 'Card9', 'Card10',
@@ -1418,7 +1418,7 @@ function APReceiver(Ob)
     function Ob:getRandoItem(class, name)
         -- check if the item currently exists
         local sentitem = nil
-        local existing_item = FindScriptObject(name)
+        local existing_item = fso(class, name)
         if (not existing_item) then
             -- item doesn't exist, spawn a new one
             sentitem = SpawnScript(class, name)

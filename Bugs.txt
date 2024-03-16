@@ -2,6 +2,8 @@
 
 General Bugs:
 
+--Milla's QOL bugged? can cause speed ups in other levels outside of milla's, something not reset properly?
+
 --If any Peasant Item spawns in WW, item's matching Peasant has no voicelines unless item is collected, works normal afterwards
 
 --Gloria's Theater can potentially crash very late into a seed. Cause Unknown, possibly goal manager related?

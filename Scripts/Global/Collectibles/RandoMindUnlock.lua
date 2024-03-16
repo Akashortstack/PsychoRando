@@ -9,27 +9,27 @@ function RandoMindUnlock(Ob)
         Ob.interestFXName = 'Global.Effects.PsiPowerUpFX'
 
         Ob.pickupSpritePaths = {
-            Coach = "Textures/ui/sayline heads/coach.dds",
-            Sasha = "Textures/ui/sayline heads/sasha_sayline.dds",
-            Milla = "Textures/ui/sayline heads/milla.dds",
-            Linda = "Textures/ui/sayline heads/lungfish.dds",
-            Boyd = "Textures/ui/sayline heads/boyd.dds",
-            Gloria = "Textures/ui/sayline heads/gloria.dds",
-            Fred = "Textures/ui/sayline heads/fred.dds",
-            Edgar = "Textures/ui/sayline heads/edgar.dds",
-            Oly = "Textures/ui/sayline heads/kidcoach.dds",
+            CoachMind = "Textures/ui/sayline heads/coach.dds",
+            SashaMind = "Textures/ui/sayline heads/sasha_sayline.dds",
+            MillaMind = "Textures/ui/sayline heads/milla.dds",
+            LindaMind = "Textures/ui/sayline heads/lungfish.dds",
+            BoydMind = "Textures/ui/sayline heads/boyd.dds",
+            GloriaMind = "Textures/ui/sayline heads/gloria.dds",
+            FredMind = "Textures/ui/sayline heads/fred.dds",
+            EdgarMind = "Textures/ui/sayline heads/edgar.dds",
+            OlyMind = "Textures/ui/sayline heads/kidcoach.dds",
         }
 
         Ob.displayNames = {
-            Coach = "Adult Coach's Mind",
-            Sasha = "Sasha's Mind",
-            Milla = "Milla's Mind",
-            Linda = "Linda's Mind",
-            Boyd = "Boyd's Mind",
-            Gloria = "Gloria's Mind",
-            Fred = "Fred's Mind",
-            Edgar = "Edgar's Mind",
-            Oly = "Kid Coach's Mind",
+            CoachMind = "Adult Coach's Mind",
+            SashaMind = "Sasha's Mind",
+            MillaMind = "Milla's Mind",
+            LindaMind = "Linda's Mind",
+            BoydMind = "Boyd's Mind",
+            GloriaMind = "Gloria's Mind",
+            FredMind = "Fred's Mind",
+            EdgarMind = "Edgar's Mind",
+            OlyMind = "Kid Coach's Mind",
         }
 		
 	end	
@@ -70,7 +70,50 @@ function RandoMindUnlock(Ob)
 		self:sendMessage(Global.player, 'APPlaceholder', self.Name, 1)
 		--edit for soundfx
 		PlaySound(nil, self.pickUpSound)
-        Global:saveGlobal('b'..self.Name..'mindfound', 1)
+        Global:saveGlobal('b'..self.Name..'found', 1)
+
+		-- if in CASA, open the appropriate door
+		if Global.levelScript:getLevelName() == 'CASA' then
+			if self.Name == 'CoachMind' then
+				local door = FindScriptObject('CU_BBdoor')
+				door:open(1)
+			end
+			if self.Name == 'SashaMind' then
+				local door = FindScriptObject('CU_SAdoor')
+				door:open(1)
+			end
+			if self.Name == 'MillaMind' then
+				local door = FindScriptObject('CU_MIdoor')
+				door:open(1)
+			end
+			if self.Name == 'LindaMind' then
+				local door = FindScriptObject('CU_LOdoor')
+				door:open(1)
+			end
+			if self.Name == 'BoydMind' then
+				local door = FindScriptObject('CU_MMdoor')
+				door:open(1)
+			end
+			if self.Name == 'GloriaMind' then
+				local door = FindScriptObject('CU_THdoor')
+				door:open(1)
+			end
+			if self.Name == 'FredMind' then
+				local door = FindScriptObject('CU_WWdoor')
+				door:open(1)
+			end
+			if self.Name == 'EdgarMind' then
+				local door = FindScriptObject('CU_BVdoor')
+				door:open(1)
+			end
+			if self.Name == 'OlyMind' then
+				local door = FindScriptObject('CU_MCdoor')
+				door:open(1)
+			end
+			
+		end
+	
+
 
 		self:killSelf()
 	end

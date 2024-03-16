@@ -981,15 +981,15 @@ function ShuffleItems(Ob)
             'SquirrelDinner',
 
             --9 Mind Unlocks
-            'Coach',
-            'Sasha',
-            'Milla',
-            'Linda',
-            'Boyd',
-            'Gloria',
-            'Fred',
-            'Edgar',
-            'Oly',
+            'CoachMind',
+            'SashaMind',
+            'MillaMind',
+            'LindaMind',
+            'BoydMind',
+            'GloriaMind',
+            'FredMind',
+            'EdgarMind',
+            'OlyMind',
 
             --110 Psicards, filler item, increase if adding more positions
             'Card1', 'Card2', 'Card3', 'Card4', 'Card5', 'Card6', 'Card7', 'Card8', 'Card9', 'Card10',
