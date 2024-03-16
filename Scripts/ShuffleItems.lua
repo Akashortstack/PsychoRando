@@ -327,9 +327,22 @@ function ShuffleItems(Ob)
             --Cobweb Duster
             'global.collectibles.CobwebDuster',
 
-            --110 Psicards, filler item, increase if adding more positions
+            --Squirrel Dinner
+            'global.props.RandoSquirrelDinner',
+
+            --9 Mind Unlocks
+            'global.collectibles.RandoMindUnlock',
+            'global.collectibles.RandoMindUnlock',
+            'global.collectibles.RandoMindUnlock',
+            'global.collectibles.RandoMindUnlock',
+            'global.collectibles.RandoMindUnlock',
+            'global.collectibles.RandoMindUnlock',
+            'global.collectibles.RandoMindUnlock',
+            'global.collectibles.RandoMindUnlock',
+            'global.collectibles.RandoMindUnlock',
+
+            --101 Psicards, filler item, increase if adding more positions
             --Increase name too!
-            'global.collectibles.RandoPsiCard',
             'global.collectibles.RandoPsiCard',
             'global.collectibles.RandoPsiCard',
             'global.collectibles.RandoPsiCard',
@@ -964,7 +977,21 @@ function ShuffleItems(Ob)
             --Cobweb Duster
             'CobwebDuster',
 
-            --111 Psicards, filler item, increase if adding more positions
+            --Squirrel Dinner
+            'SquirrelDinner',
+
+            --9 Mind Unlocks
+            'Coach',
+            'Sasha',
+            'Milla',
+            'Linda',
+            'Boyd',
+            'Gloria',
+            'Fred',
+            'Edgar',
+            'Oly',
+
+            --110 Psicards, filler item, increase if adding more positions
             'Card1', 'Card2', 'Card3', 'Card4', 'Card5', 'Card6', 'Card7', 'Card8', 'Card9', 'Card10',
             'Card11', 'Card12', 'Card13', 'Card14', 'Card15', 'Card16', 'Card17', 'Card18', 'Card19', 'Card20',
             'Card21', 'Card22', 'Card23', 'Card24', 'Card25', 'Card26', 'Card27', 'Card28', 'Card29', 'Card30', 
@@ -975,8 +1002,7 @@ function ShuffleItems(Ob)
             'Card71', 'Card72', 'Card73', 'Card74', 'Card75', 'Card76', 'Card77', 'Card78', 'Card79', 'Card80', 
             'Card81', 'Card82', 'Card83', 'Card84', 'Card85', 'Card86', 'Card87', 'Card88', 'Card89', 'Card90', 
             'Card91', 'Card92', 'Card93', 'Card94', 'Card95', 'Card96', 'Card97', 'Card98', 'Card99', 'Card100',
-            'Card101', 'Card102', 'Card103', 'Card104', 'Card105', 'Card106', 'Card107', 'Card108', 'Card109', 'Card110',
-            'Card111',
+            'Card101', 'Card102', 'Card103', 'Card104', 'Card105', 'Card106', 'Card107', 'Card108', 'Card109', 'Card110', 
             
             --AP Placeholders, 317 Total
             'AP Item 1',

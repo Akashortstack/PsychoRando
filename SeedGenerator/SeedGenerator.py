@@ -27,6 +27,7 @@ seed_settings_harderbutton = config['SeedSettings']['harderbutton']
 seed_settings_beatoleander = config['VictoryConditions']['beatoleander']
 seed_settings_rank101 = config['VictoryConditions']['rank101']
 seed_settings_brainhunt = config['VictoryConditions']['brainhunt']
+seed_settings_requiredbrains = config['VictoryConditions']['requiredbrains']
 seed_settings_scavengerhunt = config['VictoryConditions']['scavengerhunt']
 seed_settings_beatalllevels = config['VictoryConditions']['beatalllevels']
 
@@ -46,8 +47,6 @@ seed_settings_powerhints = config.getint('AdditionalFiles', 'powerhints')
 seed_settings_minorhints = config.getint('AdditionalFiles', 'minorhints')
 
 seed_settings_spoilerlog = config['AdditionalFiles']['spoilerlog']
-
-
 
 # Create Game Graph
 game_graph = nx.Graph()
@@ -840,6 +839,10 @@ with open(seed_file_path, "w") as file:
     # write brainhunt setting, make boolean uppercase for Game
     brainhuntsetting = str(seed_settings_brainhunt).upper()
     file.write(f"Ob.brainhunt = {brainhuntsetting}\n")
+
+    # write requiredbrains setting, make boolean uppercase for Game
+    requiredbrainssetting = seed_settings_requiredbrains
+    file.write(f"Ob.requiredbrains = {requiredbrainssetting}\n")
 
     # write scavengerhunt setting, make boolean uppercase for Game
     scavengerhuntsetting = str(seed_settings_scavengerhunt).upper()

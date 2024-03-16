@@ -38,3 +38,12 @@ function RandoPlacer()
 	SpawnScript('APCollected', 'APCollected')
 end
 
+add_hook('postbeginlevel', 'RandoCleanup')
+function RandoCleanup()
+	--remove psycho portal to prevent logic breaking
+	local brainerdoor = fso('Brainer')
+	if brainerdoor ~= nil then
+		brainerdoor:killSelf()
+	end
+end
+

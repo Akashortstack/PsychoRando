@@ -1949,7 +1949,17 @@ function Dart(Ob)
 		if (Global.levelScript.demoLevel == 1) then
 			GamePrint('Dart has died, but this is a demo level.  Respawning.')
 			self:setState('Respawn')
-		elseif self.stats.dartLives <= 0 and Global.levelScript.levelType == 'mental' then
+
+		--edit return to CU when running out of lives, NO MATTER WHAT
+		elseif self.stats.dartLives <= 0 then
+			GamePrint('Dart has died and is out of lives.  Returning to real world.')
+
+			self:deathSequence(1)
+			
+			Global:saveGlobal('bKickedOut', 1)
+			Global.levelScript:returnToCU()
+
+		--[[elseif self.stats.dartLives <= 0 and Global.levelScript.levelType == 'mental' then
 			GamePrint('Dart has died and is out of lives.  Returning to real world.')
 
 			self:deathSequence(1)
@@ -1989,7 +1999,7 @@ function Dart(Ob)
 				else
 					Global.levelScript:loadNewLevel('CAKC')
 				end
-			end
+			end]]
 		else
 			GamePrint('Dart has died, but is not in a mental world, or is not out of lives.  Respawning.')
 			self:setState('Respawn')

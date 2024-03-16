@@ -47,7 +47,10 @@ function LilisBracelet(Ob)
 			self.ownerName = 'Lili' 
 		end	
 
-        %Ob.Parent.onBeginLevel(self)                             
+        %Ob.Parent.onBeginLevel(self) 
+		--edit make bigger?
+		self:setScale(1.5, 1.5, 1.5) 
+                            
 	end
 	
 	--edit
@@ -61,6 +64,9 @@ function LilisBracelet(Ob)
 
 		--edit sendMessage to Dart
 		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
+
+		--edit save found
+		Global:saveGlobal('bGotLiliBracelet', 1)
 
 		self:setState(nil)
 	end

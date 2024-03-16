@@ -186,14 +186,11 @@ function CASA(Ob)
             local startRank = Global.player.stats.rank or 1
             Global.player:setRank(1)
 
-            if (not Global:load('CALevelState', 'CA')) then
-                Global:save('CALevelState', 2, 'CA')
-            end
-
-            if (Global.player:isInInventory('Brainer') ~= 1) then
+			--edit don't get the brainer, killSelf from mod_boot to prevent logic breaks
+            --[[if (Global.player:isInInventory('Brainer') ~= 1) then
                 local brainer = SpawnScript('Global.Props.Brainer', 'Brainer')
                 Global.player:addToInventory(brainer,0,1)
-            end
+            end]]
             if (Global.player:isInInventory('Bacon') ~= 1) then
                 local bacon = SpawnScript('Global.Props.InstaHintFordItem', 'Bacon')
                 Global.player:addToInventory(bacon,0,1)
