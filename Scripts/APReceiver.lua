@@ -1405,7 +1405,7 @@ function APReceiver(Ob)
                         -- send the item to the player
                         self:getRandoItem(apClass, apName)
                         -- pause so they don't all spawn at once
-                        self:sleep(1.0)
+                        self:sleep(1.2)
                     end
                 end
             end
@@ -1418,7 +1418,7 @@ function APReceiver(Ob)
     function Ob:getRandoItem(class, name)
         -- check if the item currently exists
         local sentitem = nil
-        local existing_item = fso(class, name)
+        local existing_item = FindScriptObject(name)
         if (not existing_item) then
             -- item doesn't exist, spawn a new one
             sentitem = SpawnScript(class, name)

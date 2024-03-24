@@ -37,15 +37,7 @@ THINGS TO DO:
 --Look into applying certain sounds across all levels
     --Using LoadSoundData() game loads ENTIRE LEVEL sounds, instead of just one sound, increases load times significantly
 
---Add requirements to enter minds? Brain Jars with character brains?
-    --Disable random/certain doors?
-
---Add more locked locations to Campgrounds?
-    --Lili's Bracelet locks Kid's Cabins
-    --Oarsman's Badge locks Lake
-    --What would lock the Recreation area? Crow Feather?
-
---Add more junk items?
+--Add more junk items
 
 --Add Edgar's Playing Cards and Paintings to item pool?
 

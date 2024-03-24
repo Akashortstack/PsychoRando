@@ -484,8 +484,9 @@ function TKBrainTank(Ob)
 		Global.cutsceneScript:runCutscene('ASRUBothBrainsInTank',1,0,0)
 		Global:saveGlobal('RazIsABrainNow', 0)
 		-- unlock achievement
-		UnlockAchievement('ACH_COMP_AS')		
-		Global.levelScript:loadNewLevel('MCTC')		
+		UnlockAchievement('ACH_COMP_AS')
+		--edit send back to the CU instead, to avoid logic breaks		
+		Global.levelScript:returnToCU()
 		self:setState(nil)
 	end					  
 

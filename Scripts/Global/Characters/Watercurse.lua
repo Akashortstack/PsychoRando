@@ -247,6 +247,10 @@ function Watercurse(Ob)
 	end
 	
 	function Ob:stateArmGrab()
+		--edit call Deathlink
+		local deathlink = fso('Deathlink', 'Deathlink')
+		deathlink:triggerDeathlink()
+		
 		SetEntityAlpha(self, .7,0.7)
 
 		-- send message out to listeners
