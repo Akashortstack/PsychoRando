@@ -10,9 +10,6 @@ function Deathlink(Ob)
         %Ob.Parent.onBeginLevel(self) 
         --register with Dart to check when Raz dies
         Global.player:addSpamListener('DartDie', self)
-        --TODO make WaterCurse trigger Deathlink
-            --WaterCurse has multiple scripts
-        --self.waterCurse = FindScriptObject('WaterCurse')
     end
 
     function Ob:onPostBeginLevel()
@@ -57,9 +54,27 @@ function Deathlink(Ob)
     function Ob:stateSendDeaths()
         while self.deathCount >= 1 do
             GamePrint('Deathlink Incoming! Make Raz Die!')
-            Global.player:setState('DartDie')
-            --wait for another death
-            self:sleep(4.8)
+            -- If you have a dream fluff, use that instead
+            local fluffs = Global:loadGlobal('DreamFluffsInInv') or 0 
+            if fluffs > 0 then
+                -- Find a dream fluff
+                local fluff
+                for k, v in Global.saved.Inventory['all'] do
+                    if v.Type == 'global.collectibles.DreamFluff' then
+                        fluff = FindScriptObject(k)
+                    end
+                end
+                if not fluff then
+                    GamePrint('ERROR: DreamFluffsInInv is greater than 0, but Raz has no fluffs!')
+                else
+                    fluff:setState('UsePolitely')
+                end
+                self:sleep(3.0)
+            else
+                Global.player:setState('DartDie')
+                --wait for another death
+                self:sleep(4.8)
+            end
             self.deathCount = self.deathCount - 1
         end
         self:setState('CheckforDeath')

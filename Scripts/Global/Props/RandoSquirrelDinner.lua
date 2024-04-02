@@ -40,6 +40,9 @@ function RandoSquirrelDinner(Ob)
 		self:beNotPickupable()
 		self.player:addToInventory(self, (self.bAutoSelect == 1 and 1) or bHoldImmediately, bSilent)
 
+		--edit make a sound!
+		PlaySound(nil, LoadSound('YouWin'))
+		
 		--edit sendMessage to Dart
 		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
 		--edit save found

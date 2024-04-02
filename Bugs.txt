@@ -6,17 +6,7 @@ General Bugs:
 
 --If any Peasant Item spawns in WW, item's matching Peasant has no voicelines unless item is collected, works normal afterwards
 
---Gloria's Theater can potentially crash very late into a seed. Cause Unknown, possibly goal manager related?
-
 --Vanilla game bug: Sasha's Shooting Gallery can softlock during tutorial if player doesn't collect mandatory Health Ammo, leaves stage instead.
-
---Below issues can happen randomly, keep trying different fixes
-
-    --Geyser item sometimes doesn't load
-
-    --Squirrel Disappears sometimes
-
-    --Hornet Nest sometimes doesn't spawn, maybe because fertility idol already collected?
 
 --Some locations need adjusting cleanup
     --item in MM Post Office (vanilla baggage) sometimes in floor
@@ -37,7 +27,7 @@ THINGS TO DO:
 --Look into applying certain sounds across all levels
     --Using LoadSoundData() game loads ENTIRE LEVEL sounds, instead of just one sound, increases load times significantly
 
---Add more junk items
+--Add more junk items?
 
 --Add Edgar's Playing Cards and Paintings to item pool?
 

@@ -117,7 +117,9 @@ function CAMA_NIGHT(Ob)
 
 		--edit move this Bastard
 		local coug = fso('Cougar2')
-		coug:setPosition(-1126, 3607, 9542)
+		if coug ~= nil then
+			coug:setPosition(-1126, 3607, 9542)
+		end
 
 		--edit require Oarsman's Badge for Lake access
 		if Global:loadGlobal('bGotOrsmansBadge') ~= 1 then

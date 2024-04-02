@@ -30,7 +30,7 @@ function APPlaceholder(Ob)
 
         --edit to change Pickup Image and displayed item name
 
-        self.pickupSpritePath = 'Textures/icons/InventoryItems/BrainJar.tga'
+        self.pickupSpritePath = 'Textures/Objects/AP_Symbol.dds'
         self.displayName = "AP Item"
 
 	end

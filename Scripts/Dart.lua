@@ -3161,9 +3161,10 @@ function Dart(Ob)
 -- ****************************************************************************
 
 	function Ob:onEmotionalBaggage(sBaggageType,from)
-		if self.stats.baggageCollected[sBaggageType] == 1 then
-			GamePrint('ERROR! Some how Raz picked up '.. sBaggageType .. 'twice in this level')
-		else
+		--edit adjusteed to ignore dupluicate baggage in a level
+		--if self.stats.baggageCollected[sBaggageType] == 1 then
+		--	GamePrint('ERROR! Some how Raz picked up '.. sBaggageType .. 'twice in this level')
+		--else
 			self.stats.baggageCollected[sBaggageType] = 1
 			self.stats.EmotionalBaggageSolved = self.stats.EmotionalBaggageSolved + 1
 			self.stats.baggageMatched = self.stats.baggageMatched + 1
@@ -3175,7 +3176,7 @@ function Dart(Ob)
 				Global:save('bEmoBagsComplete', 1)
 				self:collectibleBling("/GLZD438TO/\n/GLZD440TO/", 'Textures/Objects/vault_reel_front_2.dds')
 			end]]
-		end
+		--end
 	end
 
 	--Shows collectible bling after rankup cheer is done

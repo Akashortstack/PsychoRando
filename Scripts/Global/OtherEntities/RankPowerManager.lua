@@ -203,7 +203,8 @@ function RankPowerManager(Ob)
 			end
 
 			--Keep all rank specific functionality in a separate function
-			self:onRank(index, bSilent)
+			--edit removing
+			--self:onRank(index, bSilent)
 		end
 		
 		if (bSilent ~= 1) then
@@ -293,7 +294,8 @@ function RankPowerManager(Ob)
 	end
 	
 	--Put any special code you need for a certain rank inside of this function
-	function Ob:onRank(rank, bSilent)
+	--edit remove this to stop the Cobweb Duster Goals
+	--[[function Ob:onRank(rank, bSilent)
 		if (rank == 20) and (Global:isInInventory('CobwebDuster') ~= 1) then
 			Global.goalManager:activate('CobwebDuster', bSilent)
 			if (Global:isInInventory('DowsingRod') ~= 1) then
@@ -302,7 +304,7 @@ function RankPowerManager(Ob)
 				Global.goalManager:activate('UseDowsingRod', bSilent)
 			end
 		end
-	end
+	end]]
 	
 	function Ob:setConfusionRadius(value)
 		--Used in ConfusionGrenade.lua
