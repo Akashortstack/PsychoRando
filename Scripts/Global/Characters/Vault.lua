@@ -211,12 +211,14 @@ function Vault(Ob)
     
 	--Got Melee'd.  Vault must die. 
 	function Ob:stateDie()
-		--edit sendMessage to Dart
-        self:sendMessage(Global.player, 'CollectedVault', self.Name, 1)
 		-- display that we got a Vault
 		Global.player.invDisplayer:journalItemAdded(self)
+		--edit sendMessage to Dart
+        self:sendMessage(Global.player, 'CollectedVault', self.Name, 1)
 
-
+		--Display Rewards generated in Dart
+		PrintMessage("Arrowheads: "..Global.player.arrowsMessage.."!\nRanks: "..Global.player.rankMessage, 0)
+		
 		--edit removing cutscene to prevent taking away player control, handled below instead
 		--Global.cutsceneScript.vault = self
 		--Global.cutsceneScript:runCutscene('VaultCollection',1,0,0)
@@ -227,13 +229,11 @@ function Vault(Ob)
 		
 		self.Dying = 1
 		self:killAllTimers()
-		self.proximityLine = nil
-		Global.player:myProximityHintChanged(self)
+		
 		-- impact sound
 		self:playSound(self.rMeleeImpactSound)
 
-		--edit fixing arrowhead
-		self:spawnGoodie(kGOODIE_ARROWHEAD)
+		--edit removing arrowhead
 		--[[
 		local arrowhead = SpawnScript('Global.Collectibles.MentalArrowhead')
 
@@ -251,9 +251,12 @@ function Vault(Ob)
 		
 --		SetEntityVisible(self.reel,1)
 		self:playSound(self.vaultOpenSound)
+		--edit add the arrowhead sound effect here
+		self:playSound("ArrowheadPop")
+
 		self:playAnimBlocking(self.animsTable.Open)
 	
-		self:sleep(.2)
+		self:sleep(3.2)
 		--edit removing reel related stuff
 		--[[Global:saveGlobal(self.saveVariable, 1)
 		self:sendMessage(Global.player, 'Vault', self.reelName)
@@ -273,6 +276,7 @@ function Vault(Ob)
 		end]]
 		
 --		self.reel:killSelf()
+
 		self:killSelf()
 		self:setState(nil)
 

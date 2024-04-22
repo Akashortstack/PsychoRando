@@ -3,7 +3,7 @@ function RandoSetup()
 	--set CA Level State to 7
 	if (not Global:load('CALevelState', 'CA')) or Global:load('CALevelState', 'CA') ~= 7 then
 		Global:save('CALevelState', 7, 'CA')
-	end	
+	end
 
 end
 

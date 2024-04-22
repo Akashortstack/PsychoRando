@@ -60,6 +60,10 @@ function RandoMindUnlock(Ob)
 
 	function Ob:beginStatePickup()
 		self:beNotPickupable()
+		if self.interestFX then 
+			self.interestFX:stop(0, 0, 1)
+			self.interestFX = nil
+		end
 	end
 
 	function Ob:statePickup()
@@ -112,18 +116,8 @@ function RandoMindUnlock(Ob)
 			end
 			
 		end
-	
-
 
 		self:killSelf()
-	end
-
-	function Ob:onDestroyed(bBecause)
-		%Ob.Parent.onDestroyed(self, bBecause)
-		if self.effect and bBecause ~= 1 then
-			self.effect:killSelf()
-			self.effect = nil
-		end
 	end
 
 	function Ob:onItem(itemName, from)
@@ -133,7 +127,9 @@ function RandoMindUnlock(Ob)
     function Ob:setPosition(x, y, z)
         y = y+100
 		%Ob.Parent.setPosition(self, x, y, z)
-        self.interestFX:setPosition(25, 0, 0)
+		if self.interestFX ~= nil then
+        	self.interestFX:setPosition(25, 0, 0)
+		end
 	end
 	
 	return Ob

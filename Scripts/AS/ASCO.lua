@@ -96,6 +96,12 @@ function ASCO(Ob)
 	function Ob:onPreBeginLevel()
 		%Ob.Parent.onPreBeginLevel(self)
 		self.hackLastBrainingLevel = Global:loadGlobal('LastBrainingLevel')
+		--edit fix Edgar looking at the wrong place if BV is completed
+		if Global:loadGlobal('bBVCompleted') == 1 then
+			if (Global:load('bASCOCompletedBVPlayed') ~= 1) then
+				Global:save('bASCOCompletedBVPlayed', 1)
+			end
+		end
 	end
 
 	function Ob:onBeginLevel()

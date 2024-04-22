@@ -1425,6 +1425,8 @@ function APReceiver(Ob)
         else
             -- item exists, move it onto the player    
             sentitem = existing_item
+            --make sure item isn't hidden
+            sentitem:show()
         end
 
         --break open brain jars and vaults automatically

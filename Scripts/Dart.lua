@@ -505,6 +505,9 @@ function Dart(Ob)
 		Ob.TIMER_DETONATE_ENTITIES_ACROSS_FRAMES = '1011'
 		Ob.TIMER_HEALTH_REGENERATION = '1012'
 
+		--edit New Timer for Vault Text
+		Ob.TIMER_VAULT_REWARD = '1013'
+
 		-- PSI POWER RANKING VARIABLES
 		-- Many of these are only read by the engine; don't delete them just because you don't see scripts that refer to them.
 		Ob.PsiBlastRange = 2000         -- starting range    
@@ -1235,6 +1238,12 @@ function Dart(Ob)
 			return nil
 		end
 
+		--edit Adjust value with damage multiplier, unless Instant Death
+		local seedsettings = fso('RandoSeed', 'Randoseed')
+		if value < 0 and seedsettings.instantdeath == FALSE then
+			value = (value*seedsettings.enemydamagemultiplier)
+		end
+
 		value = tonumber(value)
 		
 		--this will unset the paused chase cam, anytime raz is damaged (and possibly moved, or respawn)
@@ -1253,7 +1262,6 @@ function Dart(Ob)
 		end
 		
 		--edit to introduce 1 Hit KO Setting
-		local seedsettings = fso('RandoSeed', 'Randoseed')
 		if seedsettings.instantdeath == TRUE then
 			if (self.stats.psiHealth < self.stats.maxHealth) then
 				self.stats.psiHealth = 0 
@@ -1291,7 +1299,7 @@ function Dart(Ob)
 			return
 		end
 		
-		if (value < 0 and bDontPlaySound ~= 1) then
+		if (value <= 0 and bDontPlaySound ~= 1) then
 			self:sayRandomOuchLines()
 		end
 		
@@ -3040,8 +3048,55 @@ function Dart(Ob)
 		self.stats.totalVaults = self.stats.totalVaults+1
 		local apcollect = fso('APCollected', 'APCollected')
 		apcollect:writeCollectedItem(name)
+
+		local seedsettings = fso('RandoSeed', 'Randoseed')
+		if seedsettings.lootboxvaults == TRUE then
+			--Random Rewards! Loot Box!
+			--Random value of arrowheads to receive
+			self.randArrows = random (10, 100)
+			--Roll some RNG for Jackpots/Ranks to recieve
+			self.jackpotArrows = random (1, 50)
+			self.jackpotRanks = random (1, 50)
+		else
+			--Make Result Static, One Rank and 50 Arrowheads
+			self.randArrows = 25
+			self.jackpotArrows = 1
+			self.JackpotRanks = 26
+		end
+		
+		--2% chance for 500 arrowheads instead
+		if self.jackpotArrows == 50 then
+			UI_AdjustCollectible('arrowhead', 500, self)
+			SendMessage(self, self, 'Arrowhead', 500)
+			self.arrowsMessage = "500!!"
+		--8% chance for 250 arrowheads instead
+		elseif self.jackpotArrows >= 46 then
+			UI_AdjustCollectible('arrowhead', 250, self)
+			SendMessage(self, self, 'Arrowhead', 250)
+			self.arrowsMessage = "250!!"
+		else
+			UI_AdjustCollectible('arrowhead', self.randArrows, self)
+			SendMessage(self, self, 'Arrowhead', self.randArrows)
+			self.arrowsMessage = self.randArrows
+		end
+
+		--2% chance for 5 Ranks
+		if self.jackpotRanks == 50 then
+			self:incrementRank(5)
+			self.rankMessage = "Five Ranks!!!"
+		--8% chance for Two Ranks
+		elseif self.jackpotRanks >= 46 then
+			self:incrementRank(2)
+			self.rankMessage = "Two Ranks!"
+		--50% chance for One Rank
+		elseif self.jackpotRanks >= 26 then
+			self:incrementRank()
+			self.rankMessage = "One Rank!"
+		else
+			self.rankMessage = "None..."
+		end
 		GamePrint('Stored '..name)
-		self:incrementRank()
+		
 	end
 
 -- ****************************************************************************
