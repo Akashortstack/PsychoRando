@@ -1469,10 +1469,10 @@ function APReceiver(Ob)
                     if isNonLocal and apClass == 'global.props.Candle' then
                         -- Locally placed items with duplicates are placed starting from their first available ID, so
                         -- if only 1 candle is placed locally, it is guaranteed to be 'Candle1'.
-                        -- We don't rely on checking `Global.player.stats.APItem['Candle2'] == 'collected'` because if
-                        -- two non-local candles are received in quick succession, it's possible that the first candle
-                        -- won't have been collected by the time the second candle is received.
-                        if nonLocalCandlesReceived == 0 then
+                        -- We don't rely on checking only `Global.player.stats.APItem['Candle2'] ~= 'collected'` because
+                        -- if two non-local candles are received in quick succession, it's possible that the first
+                        -- candle won't have been collected by the time the second candle is received.
+                        if nonLocalCandlesReceived == 0 and Global.player.stats.APItem['Candle2'] ~= 'collected' then
                             apName = 'Candle2'
                             nonLocalCandlesReceived = 1
                         else
