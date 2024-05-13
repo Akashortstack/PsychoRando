@@ -33,10 +33,33 @@ function RandoPlacer()
 	--rando:placeRandoObject(class, name, x, y, z, ox, oy, oz)
 	--EX: rando:placeRandoObject('Global.Characters.Vault', 'Vault1', -5629, 4510, -13242, 0, 0, 0)
 
-	--AP Related Stuff
+	--check if seed folder in ModData exists. If not, create it
+	local folderName = seed.APfoldername
+	if direxists(folderName) ~= TRUE then
+		mkdirs(folderName)
+		--create required files 
+		local a = fopen(folderName.."/ItemsCollected.txt", "w")
+		fwrite(a, "")
+		fclose(a)
+
+		local b = fopen(folderName.."/ItemsReceived.txt", "w")
+		fwrite(b, "")
+		fclose(b)
+
+		local c = fopen(folderName.."/DeathlinkIn.txt", "w")
+		fwrite(c, "")
+		fclose(c)
+
+		local d = fopen(folderName.."/DeathlinkOut.txt", "w")
+		fwrite(d, "")
+		fclose(d)
+	end
+
+	--AP Related Scripts
 	SpawnScript('APReceiver', 'APReceiver')
 	SpawnScript('APCollected', 'APCollected')
 	SpawnScript('Deathlink', 'Deathlink')
+
 end
 
 add_hook('postbeginlevel', 'RandoCleanup')

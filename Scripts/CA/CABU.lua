@@ -361,23 +361,6 @@ function CABU(Ob)
 		%Ob.Parent.onBeginLevel(self)
 
 		self.playerDart = FindScriptObject( 'Dart' )
-
-		--edit clear ModData for a fresh start, creates files if they don't exist
-		local a = fopen("ItemsCollected.txt", "w")
-		fwrite(a, "")
-		fclose(a)
-
-		local b = fopen("ItemsReceived.txt", "w")
-		fwrite(b, "")
-		fclose(b)
-
-		local c = fopen("DeathlinkIn.txt", "w")
-		fwrite(c, "")
-		fclose(c)
-
-		local d = fopen("DeathlinkOut.txt", "w")
-		fwrite(d, "")
-		fclose(d)
 		
 		-- init the bunkhouse control handler
 		ActivateBunkControlHandler()

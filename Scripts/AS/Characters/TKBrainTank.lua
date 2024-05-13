@@ -470,10 +470,13 @@ function TKBrainTank(Ob)
 		--edit write Victory if settings require it
 		Global:saveGlobal('bOleanderDefeated', 1)
 		local seedsettings = fso('RandoSeed', 'Randoseed')
+		--find the matching seed folder in ModData
+        local folderName = seedsettings.APfoldername
+        local filePath = folderName.."/victory.txt"
 		if seedsettings.beatoleander == TRUE and seedsettings.requireMC == FALSE then
 			if seedsettings.brainhunt == FALSE or (Global:loadGlobal('totalBrainsRedeemed') >= seedsettings.brainsrequired) then
 				--write to text file for client to read
-				local h = fopen("victory.txt", "w")
+				local h = fopen(filePath, "w")
 				fwrite(h, "victory\n")
 				fclose(h)
 			end

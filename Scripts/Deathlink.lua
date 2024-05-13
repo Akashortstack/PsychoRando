@@ -26,8 +26,12 @@ function Deathlink(Ob)
         --wait so function isn't called constantly
         self:sleep(1.0)
 
+        --find the matching seed folder in ModData
+        local seedsettings = fso('RandoSeed', 'Randoseed')
+        local folderName = seedsettings.APfoldername
+        self.DeathlinkInfilePath = folderName.."/DeathlinkIn.txt"
         --read from DeathlinkIn.txt for deathlinks sent by client
-        local h = fopen("DeathlinkIn.txt", "r")
+        local h = fopen(self.DeathlinkInfilePath, "r")
 
         -- function to check for incoming deaths
         local checkstuff = TRUE
@@ -45,7 +49,7 @@ function Deathlink(Ob)
         fclose(h)
 
         --clear the file 
-        local h = fopen("DeathlinkIn.txt", "w")
+        local h = fopen(self.DeathlinkInfilePath, "w")
         fwrite(h, (""))
         fclose(h)
         self:setState('SendDeaths')
@@ -82,8 +86,13 @@ function Deathlink(Ob)
 
 
     function Ob:listenerDartDie()
+        --find the matching seed folder in ModData
+        local seedsettings = fso('RandoSeed', 'Randoseed')
+        local folderName = seedsettings.APfoldername
+        self.DeathlinkOutfilePath = folderName.."/DeathlinkOut.txt"
+
         --write to text file for storage
-        local h = fopen("DeathlinkOut.txt", "w")
+        local h = fopen(self.DeathlinkOutfilePath, "w")
         if self.deathCount == 0 then
             fwrite(h, ("Raz Died! Send Deathlink!\n"))
             GamePrint("Raz Died! Send Deathlink!")
@@ -92,8 +101,13 @@ function Deathlink(Ob)
     end
 
     function Ob:triggerDeathlink()
+        --find the matching seed folder in ModData
+        local seedsettings = fso('RandoSeed', 'Randoseed')
+        local folderName = seedsettings.APfoldername
+        self.DeathlinkOutfilePath = folderName.."/DeathlinkOut.txt"
+
         --write to text file for storage
-        local h = fopen("DeathlinkOut.txt", "w")
+        local h = fopen(self.DeathlinkOutfilePath, "w")
         if self.deathCount == 0 then
             fwrite(h, ("Raz Died! Send Deathlink!\n"))
             GamePrint("Raz Died! Send Deathlink!")
