@@ -1078,7 +1078,7 @@ function Dart(Ob)
 			'ArrowheadBundleSmall', 'ArrowheadBundleMedium',
 			'CollectedVault', 'RandoPsiCard', 'RandoPsiMarker', 'RandoLivesUp', 'RandoAmmoUp', 'RandoProp', 'BrainJar',
 			--edit AP StatName
-			'APItem', 'APPlaceholder',
+			'APItem', 'APPlaceholder', 'APLastIndex',
 			}
 
 	--Called whenever the player saves their game
@@ -1197,7 +1197,10 @@ function Dart(Ob)
 			self.stats[statID] = {}
 		--edit adding all APPlaceholder Items as Table
 		elseif statID == 'APPlaceholder' then
-			self.stats[statID] = {}								
+			self.stats[statID] = {}
+		--edit adding last item index from Archipelago
+		elseif statID == 'APLastIndex' then
+			self.stats[statID] = -1
 		else
 			self.stats[statID] = 0
 		end
@@ -2820,55 +2823,66 @@ function Dart(Ob)
 	end
 
 -- ****************************************************************************
+--AP Collection Helper. Returns whether to write to item specific save data.
+	function Ob:genericAPCollect(name)
+		-- '_' prefix specifies that the item is a non-local copy received from the AP multiworld.
+		if strsub(name, 1, 1) == '_' then
+			GamePrint('Collected non-local copy ' .. name)
+			-- There should be no item that spawns in a level whose name matches this item.
+			return FALSE
+		else
+			self.stats.APItem[name] = 'collected'
+			-- Tell AP that the locally placed item has been collected from its location, sending an item out into the
+			-- multiworld if the item was an AP placeholder.
+			local apcollect = fso('APCollected', 'APCollected')
+			apcollect:writeCollectedItem(name)
+			GamePrint('Collected and stored local ' .. name)
+			-- Item specific save data should be written to. This prevents the item from spawning again when loading the
+			-- level again.
+			return TRUE
+		end
+	end
+
+-- ****************************************************************************
 
 ------CUSTOM BAGGAGE TAG HANDLER------
 --Stores Collected BaggageTag, Global Key
 	function Ob:onCollectedSuitcaseTag(name,from)
-		self.stats.RandoSuitcaseTag[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoSuitcaseTag[name] = 'collected'
+		end
 		local value = 1
 		self.stats.CollectedSuitcaseTag = self.stats.CollectedSuitcaseTag + value
 	end
 
 	function Ob:onCollectedPurseTag(name,from)
-		self.stats.RandoPurseTag[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoPurseTag[name] = 'collected'
+		end
 		local value = 1
 		self.stats.CollectedPurseTag = self.stats.CollectedPurseTag + value
 	end
 
 	function Ob:onCollectedHatboxTag(name,from)
-		self.stats.RandoHatboxTag[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoHatboxTag[name] = 'collected'
+		end
 		local value = 1
 		self.stats.CollectedHatboxTag = self.stats.CollectedHatboxTag + value
 	end
 
 	function Ob:onCollectedSteamertrunkTag(name,from)
-		self.stats.RandoSteamertrunkTag[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoSteamertrunkTag[name] = 'collected'
+		end
 		local value = 1
 		self.stats.CollectedSteamertrunkTag = self.stats.CollectedSteamertrunkTag + value
 	end
 
 	function Ob:onCollectedDufflebagTag(name,from)
-		self.stats.RandoDufflebagTag[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoDufflebagTag[name] = 'collected'
+		end
 		local value = 1
 		self.stats.CollectedDufflebagTag = self.stats.CollectedDufflebagTag + value
 	end
@@ -2937,67 +2951,51 @@ function Dart(Ob)
 	------CUSTOM RANDOPSIPOWERS HANDLERS------
 	--Stores Collected RandoPsiPowers and Progressive Powerups
 	function Ob:onRandoClairvoyance(name,from)
-		self.stats.RandoClairvoyance[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoClairvoyance[name] = 'collected'
+		end
 	end
 
 	function Ob:onRandoConfusion(name,from)
-		self.stats.RandoConfusion[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoConfusion[name] = 'collected'
+		end
 	end
 
 	function Ob:onRandoFirestarting(name,from)
-		self.stats.RandoFirestarting[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoFirestarting[name] = 'collected'
+		end
 	end
 
 	function Ob:onRandoInvisibility(name,from)
-		self.stats.RandoInvisibility[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoInvisibility[name] = 'collected'
+		end
 	end
 
 	function Ob:onRandoLevitation(name,from)
-		self.stats.RandoLevitation[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoLevitation[name] = 'collected'
+		end
 	end
 
 	function Ob:onRandoMarksmanship(name,from)
-		self.stats.RandoMarksmanship[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoMarksmanship[name] = 'collected'
+		end
 	end
 
 	function Ob:onRandoShield(name,from)
-		self.stats.RandoShield[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoShield[name] = 'collected'
+		end
 	end
 
 	function Ob:onRandoTelekinesis(name,from)
-		self.stats.RandoTelekinesis[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoTelekinesis[name] = 'collected'
+		end
 	end
 
 -- ****************************************************************************
@@ -3005,11 +3003,9 @@ function Dart(Ob)
 	------CUSTOM RANDOPSICARD HANDLER------
 	--Stores Collected RandoPsiCard
 	function Ob:onRandoPsiCard(name,from)
-		self.stats.RandoPsiCard[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoPsiCard[name] = 'collected'
+		end
 	end
 
 -- ****************************************************************************
@@ -3017,11 +3013,9 @@ function Dart(Ob)
 	------CUSTOM RANDOPSIMARKER HANDLER------
 	--Stores Collected RandoPsiMarker
 	function Ob:onRandoPsiMarker(name,from)
-		self.stats.RandoPsiMarker[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoPsiMarker[name] = 'collected'
+		end
 	end
 
 -- ****************************************************************************
@@ -3043,11 +3037,10 @@ function Dart(Ob)
 	------CUSTOM VAULT HANDLER------
 	--Stores CollectedVault, Increases Rank when you open a vault
 	function Ob:onCollectedVault(name,from)
-		self.stats.CollectedVault[name] = 'collected'
-		self.stats.APItem[name] = 'collected' 
+		if self:genericAPCollect(name) then
+			self.stats.CollectedVault[name] = 'collected'
+		end
 		self.stats.totalVaults = self.stats.totalVaults+1
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
 
 		local seedsettings = fso('RandoSeed', 'Randoseed')
 		if seedsettings.lootboxvaults == TRUE then
@@ -3095,7 +3088,6 @@ function Dart(Ob)
 		else
 			self.rankMessage = "None..."
 		end
-		GamePrint('Stored '..name)
 		
 	end
 
@@ -3104,19 +3096,15 @@ function Dart(Ob)
 	------CUSTOM MAXLIVES AND MAXAMMO HANDLER------
 	--Stores RandoLivesUp and RandoAmmoUp
 	function Ob:onRandoLivesUp(name,from)
-		self.stats.RandoLivesUp[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoLivesUp[name] = 'collected'
+		end
 	end
 
 	function Ob:onRandoAmmoUp(name,from)
-		self.stats.RandoAmmoUp[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoAmmoUp[name] = 'collected'
+		end
 	end
 
 -- ****************************************************************************
@@ -3124,19 +3112,15 @@ function Dart(Ob)
 	------CUSTOM ARROWHEADBUNDLE HANDLERS------
 	--Stores collected ArrowheadBundles
 	function Ob:onArrowheadBundleSmall(name,from)
-		self.stats.ArrowheadBundleSmall[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.ArrowheadBundleSmall[name] = 'collected'
+		end
 	end
 
 	function Ob:onArrowheadBundleMedium(name,from)
-		self.stats.ArrowheadBundleMedium[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.ArrowheadBundleMedium[name] = 'collected'
+		end
 	end
 
 -- ****************************************************************************
