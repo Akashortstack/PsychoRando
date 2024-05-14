@@ -1446,7 +1446,8 @@ function APReceiver(Ob)
         -- If an item in the sequence gets skipped somehow, only print the warning once per iteration of
         -- `self.numbersTable`.
         local printedDesyncWarning = FALSE
-        GamePrint("Current num received items: " .. lastApIndex)
+        --used for debugging AP issues
+        --GamePrint("Current num received items: " .. lastApIndex)
         for k, v in self.numbersTable do
             if k ~= 'n' then
                 --split the line "apIndex,index,isNonLocal" into its parts

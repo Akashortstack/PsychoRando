@@ -33,11 +33,15 @@ function RandoPlacer()
 	--rando:placeRandoObject(class, name, x, y, z, ox, oy, oz)
 	--EX: rando:placeRandoObject('Global.Characters.Vault', 'Vault1', -5629, 4510, -13242, 0, 0, 0)
 
-	--check if seed folder in ModData exists. If not, create it
-	local folderName = seed.APfoldername
-	if direxists(folderName) ~= TRUE then
+	--check ModData for seed specific folder
+	local folderName = seed.APfoldername	
+	if direxists(folderName) then
+		--do nothing, Seed Folder exists already 
+	else
+		--create a new seed folder
+		GamePrint("Seed Folder not found, creating new folder.")
 		mkdirs(folderName)
-		--create required files 
+		--creates required files inside new folder
 		local a = fopen(folderName.."/ItemsCollected.txt", "w")
 		fwrite(a, "")
 		fclose(a)
@@ -55,7 +59,7 @@ function RandoPlacer()
 		fclose(d)
 	end
 
-	--AP Related Scripts
+	-- spawn AP Related Scripts
 	SpawnScript('APReceiver', 'APReceiver')
 	SpawnScript('APCollected', 'APCollected')
 	SpawnScript('Deathlink', 'Deathlink')
