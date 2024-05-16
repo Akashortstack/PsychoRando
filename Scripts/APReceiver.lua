@@ -1400,8 +1400,6 @@ function APReceiver(Ob)
         local folderName = seedsettings.APfoldername
         local filePath = folderName.."/ItemsReceived.txt"
 
-        GamePrint(filePath)
-
         --read from ItemsReceived.txt for items sent by AP Client
         local h = fopen(filePath, "r")
 
@@ -1412,12 +1410,10 @@ function APReceiver(Ob)
             local line = fread(h, "*l")
             --stop if line is blank
             if line == nil then
-                --GamePrint('End of List')
                 break
             else
                 --add number to table 
                 tinsert(self.numbersTable, line)        
-                --GamePrint(line)
             end
         end
 
