@@ -178,6 +178,13 @@ function CABH_NIGHT(Ob)
 			bathosdoor:killSelf()
 		end
 
+		-- edit This deep arrowhead (worth 130 arrowheads) spawns out of bounds behind the cliff side.
+		--      Move it to the top of the big rock by the bathysphere instead
+		local deepArrowHead3 = FindScriptObject('MegaArrowhead3')
+		if deepArrowHead3 then
+		    deepArrowHead3:setPosition(14403, 995, 12852)
+		end
+
 		--[[ if LO is beaten, don't bring up the bathosphere again
 		if (Global:loadGlobal('bLOCompleted') == 1) then
 			local bathosphere = FindScriptObject('bathosphere')
