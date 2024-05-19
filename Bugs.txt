@@ -17,9 +17,6 @@ THINGS TO DO:
 
 --Give Brain Jars interestfx for more visibility?
 
---Milka's Brain Defaults to Vanilla location in Crow Basket if spawned in Asylum Lower Levels
-    --change location to require invis? work like vanilla game? Changes logic.
-
 --Cleanup Milkman
     --Make house items only spawn if entering the correct house
     --changes logic requirements, cobweb duster AND watering can
