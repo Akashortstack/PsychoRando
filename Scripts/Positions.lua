@@ -1361,8 +1361,9 @@ function Positions(Ob)
                 y = 208, 
                 z = 1586,
                 ox = 0,
-                oy = 0,
+                oy = 90,
                 oz = 0,
+                puzzle = 'bucket'
             },
             item143 = {        
                 levelName = 'ASCO',

@@ -1395,23 +1395,25 @@ function APReceiver(Ob)
         -- Create an empty table to store numbers
         self.numbersTable = {}
 
+        --find the matching seed folder in ModData
+        local seedsettings = fso('RandoSeed', 'Randoseed')
+        local folderName = seedsettings.APfoldername
+        local filePath = folderName.."/ItemsReceived.txt"
+
         --read from ItemsReceived.txt for items sent by AP Client
-        local h = fopen("ItemsReceived.txt", "r")
+        local h = fopen(filePath, "r")
 
         -- function to fill table with numbers from ItemsReceived.txt
         local checkstuff = TRUE
         while checkstuff == TRUE do
             --Read a single line from the file (Lua 4 uses "*l" to read a line)
-            --each line should contain a single number
             local line = fread(h, "*l")
             --stop if line is blank
             if line == nil then
-                --GamePrint('End of List')
                 break
             else
                 --add number to table 
                 tinsert(self.numbersTable, line)        
-                --GamePrint(line)
             end
         end
 
@@ -1440,7 +1442,8 @@ function APReceiver(Ob)
         -- If an item in the sequence gets skipped somehow, only print the warning once per iteration of
         -- `self.numbersTable`.
         local printedDesyncWarning = FALSE
-        GamePrint("Current num received items: " .. lastApIndex)
+        --used for debugging AP issues
+        --GamePrint("Current num received items: " .. lastApIndex)
         for k, v in self.numbersTable do
             if k ~= 'n' then
                 --split the line "apIndex,index,isNonLocal" into its parts

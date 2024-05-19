@@ -2496,11 +2496,14 @@ function Dart(Ob)
 
 		-- edit check for Victory Condition
 		local seedsettings = fso('RandoSeed', 'Randoseed')
+		--find the matching seed folder in ModData
+        local folderName = seedsettings.APfoldername
+        local filePath = folderName.."/victory.txt"
 		if seedsettings.brainhunt == TRUE and seedsettings.requireMC == FALSE then
 			if seedsettings.beatoleander == FALSE or Global:loadGlobal('bOleanderDefeated') == 1 then
 				if self.stats.totalBrainsRedeemed >= seedsettings.brainsrequired then
 					--write to text file for client to read
-					local h = fopen("victory.txt", "w")
+					local h = fopen(filePath, "w")
 					fwrite(h, "victory\n")
 					fclose(h)
 				end
@@ -3046,27 +3049,27 @@ function Dart(Ob)
 		if seedsettings.lootboxvaults == TRUE then
 			--Random Rewards! Loot Box!
 			--Random value of arrowheads to receive
-			self.randArrows = random (10, 100)
+			self.randArrows = random (10, 75)
 			--Roll some RNG for Jackpots/Ranks to recieve
 			self.jackpotArrows = random (1, 50)
 			self.jackpotRanks = random (1, 50)
 		else
-			--Make Result Static, One Rank and 50 Arrowheads
+			--Make Result Static, One Rank and 25 Arrowheads
 			self.randArrows = 25
 			self.jackpotArrows = 1
 			self.JackpotRanks = 26
 		end
 		
-		--2% chance for 500 arrowheads instead
+		--2% chance for 250 arrowheads instead
 		if self.jackpotArrows == 50 then
-			UI_AdjustCollectible('arrowhead', 500, self)
-			SendMessage(self, self, 'Arrowhead', 500)
-			self.arrowsMessage = "500!!"
-		--8% chance for 250 arrowheads instead
-		elseif self.jackpotArrows >= 46 then
 			UI_AdjustCollectible('arrowhead', 250, self)
 			SendMessage(self, self, 'Arrowhead', 250)
 			self.arrowsMessage = "250!!"
+		--8% chance for 100 arrowheads instead
+		elseif self.jackpotArrows >= 46 then
+			UI_AdjustCollectible('arrowhead', 100, self)
+			SendMessage(self, self, 'Arrowhead', 100)
+			self.arrowsMessage = "100!!"
 		else
 			UI_AdjustCollectible('arrowhead', self.randArrows, self)
 			SendMessage(self, self, 'Arrowhead', self.randArrows)

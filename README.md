@@ -8,6 +8,8 @@ Special Thanks To:
 
 Jill, for creating the Astralathe Mod loader that made this possible, as well as assisting me with coding questions and being an all around fantastic resource for information on the game.
 
+Mysteryem, for creating the Psychonauts Pop Tracker and contributing to the development of Psychonauts Archipelago.
+
 Roromaniac, for helping with more of my stupid coding questions and generally being a great resource and friend.
 
 Haalyle, for streaming, bug hunting, and giving feedback to motivate me to continue this project.

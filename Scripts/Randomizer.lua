@@ -69,6 +69,12 @@ function Randomizer(Ob)
                 ref.huntItem = name
             end
 
+            --code for Crow Bucket puzzle in ASCO
+            if puzzle == 'bucket' then
+                local ref = FindScriptObject('AS_Bucket')
+                ref.randoitem = name
+            end 
+
             --[[code for RankUp checks, each level is separate
             Handled by RankUpPlacer, spawned in CAJA levelscript]]
             --Rank5

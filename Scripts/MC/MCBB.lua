@@ -309,8 +309,12 @@ end
 		elseif (nextPhase == 4) then
 			Global.cutsceneScript:runCutscene('PhaseTransition34a', 1)
 		elseif (nextPhase == 5) then
+			local seedsettings = fso('RandoSeed', 'Randoseed')
+			--find the matching seed folder in ModData
+			local folderName = seedsettings.APfoldername
+			local filePath = folderName.."/victory.txt"
 			--write to text file for client to read
-			local h = fopen("victory.txt", "w")
+			local h = fopen(filePath, "w")
 			fwrite(h, "victory\n")
 			fclose(h)
 			
