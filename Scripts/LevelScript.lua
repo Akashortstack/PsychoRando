@@ -12,6 +12,7 @@ function LevelScript(Ob)
 		Ob.dependencies = {
 			scripts = {
 				'Global.Collectibles.CobwebDuster',
+				'Global.Collectibles.DowsingRod',
 				'Global.Collectibles.SmellingSalts',
 			},
 			animations = {

@@ -14,6 +14,10 @@ function DowsingRod(Ob)
 		Ob.bLarge = 1
 		Ob.bUseOnly = 1
 
+		--edit
+		Ob.bSold = 1
+		Ob.bUseDefaultUncollectedAnim = 1
+
 		Ob.level = 'all'	-- this will make this object stay in raz's inventory forever once he gets it
 
 		Ob.idleAnim = 'Anims/Objects/DowsingRod/DRod_Idle.jan'
@@ -54,7 +58,6 @@ function DowsingRod(Ob)
 		-- Shop shelf location  Pos:(6229.11, 271.529, -6219.5) Orientation:(125,15,0)
 		-- END SHOP STUFF
 		Ob.bPutAwayOnMelee = 1
-		Ob.level = 'real'
 
 		--after this long of using the rod, if there isn't a megahead within a great distance, say failure line
 		Ob.TIMER_FAILURE = '6004'
@@ -95,6 +98,23 @@ function DowsingRod(Ob)
 		self.hPullSound = self:loadSound( 'ArrowheadDeepPull' )
 		self.hPopSound = self:loadSound( 'ArrowheadDeepPop' )
 	end
+
+	function Ob:onPostBeginLevel()
+		%Ob.Parent.onPostBeginLevel(self)
+
+		--edit to work properly inside the shop, no animation or interestFX
+		local options = FindScriptObject('RandoSeed')
+		if options.randomizeDowsingRod == FALSE and (Global.player:isInInventory('DowsingRod') ~= 1) then
+			self.bSold = 0
+			self.interestFX:stop(1, 0, 1)
+			self.interestFX = nil
+			DetachEntityFromParent(self)
+			KillScript(self.mover)
+			self.mover = nil
+
+		end
+	end
+
 
 	function Ob:onActivateFromInventory()
 		if Global.cutsceneScript.cutscenePlaying == 1 then return end
@@ -264,6 +284,9 @@ function DowsingRod(Ob)
 				Global.goalManager:activate('UseDowsingRod')
 			end
 		end
+
+		--edit sendMessage to Dart
+		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
 	end
 
 	function Ob:onDomainChange(old, new)
