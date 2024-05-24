@@ -103,11 +103,15 @@ MAIN_ITEM_DATA_TABLE = {
     --19 Vaults
     {'Global.Characters.Vault', 'Vault', 19},
 
-    --30 Rando Arrowhead Bundles Small
-    {'global.collectibles.ArrowheadBundleSmall', 'AHSmall', 30},
+    --59 Rando Arrowhead Bundles Small
+    --30 are used by default
+    --29 are added for Deep Arrowhead Shuffle
+    {'global.collectibles.ArrowheadBundleSmall', 'AHSmall', 30 + 29},
 
-    --5 Rando Arrowhead Bundles Medium
-    {'global.collectibles.ArrowheadBundleMedium', 'AHMedium', 5},
+    --25 Rando Arrowhead Bundles Medium
+    --5 are used by default
+    --20 are added for Deep Arrowhead Shuffle
+    {'global.collectibles.ArrowheadBundleMedium', 'AHMedium', 5 + 20},
 
     --Oarsman's Badge
     {'global.collectibles.RandoOarsmansBadge', 'Oarsmans Badge'},
