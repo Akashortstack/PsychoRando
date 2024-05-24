@@ -12,6 +12,7 @@ function RandoPlacer()
 	local rando = SpawnScript('Randomizer', 'Randomizer')
 	local remover = SpawnScript('CollectibleRemover', 'CollectibleRemover')
 	local pos = SpawnScript('Positions', 'Positions')
+	local itemTables = SpawnScript('RandoItemTables', 'RandoItemTables') -- Used by ShuffleItems and APReceiver
 	local seed = SpawnScript('RandoSeed', 'RandoSeed')
 	local shuffle = SpawnScript('ShuffleItems', 'ShuffleItems')
 
@@ -20,7 +21,7 @@ function RandoPlacer()
 	seed:fillTable()
 
 	--shuffles item Class and Name tables for Randomizer.lua to use
-	shuffle:randomizeChecks()
+	shuffle:randomizeChecks(itemTables)
 	--removes vanilla items from current level
     remover:removeCollectibles()
 	--adds randomized items to current level
