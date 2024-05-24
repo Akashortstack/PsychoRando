@@ -135,6 +135,9 @@ MAIN_ITEM_DATA_TABLE = {
     {'global.collectibles.RandoMindUnlock', 'EdgarMind'},
     {'global.collectibles.RandoMindUnlock', 'OlyMind'},
 
+    --Dowsing Rod
+    {'global.collectibles.DowsingRod', 'DowsingRod'},
+
     --110 Psicards, filler item, increase if adding more positions
     {'global.collectibles.RandoPsiCard', 'Card', 110},
 
