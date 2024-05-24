@@ -81,6 +81,16 @@ function DowsingRod(Ob)
 	end
 
 	function Ob:onBeginLevel()
+		-- Cannot get `FindScriptObject('RandoSeed').randomizeDowsingRod` at this point, so read the global that gets
+		-- set instead.
+		if Global:loadGlobal('bDowsingRodRandomized') ~= 1 then
+			-- The Dowsing Rod is only useful within the real world. If it has not been randomized, then only make it
+			-- show in Raz's inventory when in the real world.
+			-- the super call of HeldObject.onBeginLevel is where self.level is read and used to remove the item from
+			-- the inventory, so this must be set before the super call is made below.
+			self.level = 'real'
+		end
+
 		%Ob.Parent.onBeginLevel(self)
 		SetMeshIsBackwards(self,1)
 		LoadAnim(self, self.idleAnim, 0, 0)
@@ -104,14 +114,13 @@ function DowsingRod(Ob)
 
 		--edit to work properly inside the shop, no animation or interestFX
 		local options = FindScriptObject('RandoSeed')
-		if options.randomizeDowsingRod == FALSE and (Global.player:isInInventory('DowsingRod') ~= 1) then
+		if options.randomizeDowsingRod == FALSE and Global.player:isInInventory('DowsingRod') ~= 1 then
 			self.bSold = 0
 			self.interestFX:stop(1, 0, 1)
 			self.interestFX = nil
 			DetachEntityFromParent(self)
 			KillScript(self.mover)
 			self.mover = nil
-
 		end
 	end
 
