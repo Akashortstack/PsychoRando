@@ -1,5 +1,8 @@
+-- The order and item counts must match the standalone seed generator's item_names.py.
+-- The order must match the Archipelago World's PsychoRandoItems.py. The item counts will be adjusted using a separate
+-- table when Archipelago is used.
 MAIN_ITEM_DATA_TABLE = {
-    -- Class | Base Name | Count (If set, items will have a number appended to their name, when not set, only 1 item will exist)
+    -- Class | Base Name | Count (defaults to 1. when more than 1, the items are suffixed with a number)
     --Current Props from AS, 6 total
     {'global.props.AS_SeaUrchinWhistle', 'SeaUrchinWhistle'},
     {'global.props.AS_hand', 'LobatoHand'},
@@ -103,15 +106,11 @@ MAIN_ITEM_DATA_TABLE = {
     --19 Vaults
     {'Global.Characters.Vault', 'Vault', 19},
 
-    --59 Rando Arrowhead Bundles Small
-    --30 are used by default
-    --29 are added for Deep Arrowhead Shuffle
-    {'global.collectibles.ArrowheadBundleSmall', 'AHSmall', 30 + 29},
+    --30 Rando Arrowhead Bundles Small
+    {'global.collectibles.ArrowheadBundleSmall', 'AHSmall', 30},
 
-    --25 Rando Arrowhead Bundles Medium
-    --5 are used by default
-    --20 are added for Deep Arrowhead Shuffle
-    {'global.collectibles.ArrowheadBundleMedium', 'AHMedium', 5 + 20},
+    --5 Rando Arrowhead Bundles Medium
+    {'global.collectibles.ArrowheadBundleMedium', 'AHMedium', 5},
 
     --Oarsman's Badge
     {'global.collectibles.RandoOarsmansBadge', 'Oarsmans Badge'},
@@ -125,44 +124,95 @@ MAIN_ITEM_DATA_TABLE = {
     --Cobweb Duster
     {'global.collectibles.CobwebDuster', 'CobwebDuster'},
 
-    --Squirrel Dinner
-    {'global.props.RandoSquirrelDinner', 'SquirrelDinner'},
+    --Squirrel Dinner, currently AP only
+    {'global.props.RandoSquirrelDinner', 'SquirrelDinner', 0},
 
-    --9 Mind Unlocks
-    {'global.collectibles.RandoMindUnlock', 'CoachMind'},
-    {'global.collectibles.RandoMindUnlock', 'SashaMind'},
-    {'global.collectibles.RandoMindUnlock', 'MillaMind'},
-    {'global.collectibles.RandoMindUnlock', 'LindaMind'},
-    {'global.collectibles.RandoMindUnlock', 'BoydMind'},
-    {'global.collectibles.RandoMindUnlock', 'GloriaMind'},
-    {'global.collectibles.RandoMindUnlock', 'FredMind'},
-    {'global.collectibles.RandoMindUnlock', 'EdgarMind'},
-    {'global.collectibles.RandoMindUnlock', 'OlyMind'},
+    --9 Mind Unlocks, currently AP only
+    {'global.collectibles.RandoMindUnlock', 'CoachMind', 0},
+    {'global.collectibles.RandoMindUnlock', 'SashaMind', 0},
+    {'global.collectibles.RandoMindUnlock', 'MillaMind', 0},
+    {'global.collectibles.RandoMindUnlock', 'LindaMind', 0},
+    {'global.collectibles.RandoMindUnlock', 'BoydMind', 0},
+    {'global.collectibles.RandoMindUnlock', 'GloriaMind', 0},
+    {'global.collectibles.RandoMindUnlock', 'FredMind', 0},
+    {'global.collectibles.RandoMindUnlock', 'EdgarMind', 0},
+    {'global.collectibles.RandoMindUnlock', 'OlyMind', 0},
 
-    --Dowsing Rod
-    {'global.collectibles.DowsingRod', 'DowsingRod'},
+    --Dowsing Rod - AP Only
+    {'global.collectibles.DowsingRod', 'DowsingRod', 0},
 
-    --110 Psicards, filler item, increase if adding more positions
-    {'global.collectibles.RandoPsiCard', 'Card', 110},
+    --111 Psicards, filler item, increase if adding more positions
+    {'global.collectibles.RandoPsiCard', 'Card', 111},
 
     --AP Placeholders, 317 Total
-    {'global.collectibles.APPlaceholder', 'AP Item ', 317},
+    {'global.collectibles.APPlaceholder', 'AP Item ', 0},
+}
+
+-- Differing item counts for AP.
+AP_ITEM_COUNTS = {
+    --Required to access the Reception Area in AP
+    ['SquirrelDinner'] = 1,
+
+    --Mind unlocks
+    ['CoachMind'] = 1,
+    ['SashaMind'] = 1,
+    ['MillaMind'] = 1,
+    ['LindaMind'] = 1,
+    ['BoydMind'] = 1,
+    ['GloriaMind'] = 1,
+    ['FredMind'] = 1,
+    ['EdgarMind'] = 1,
+    ['OlyMind'] = 1,
+
+    --AP has 1 less PSI Card by default since it has the Squirrel Roast Dinner taking up a location
+    ['Card'] = 110,
+    --AP Placeholders, one for each location that can place an item into the game world
+    ['AP Item '] = 317,
+    --Added for the Deep Arrowhead Shuffle option
+    ['DowsingRod'] = 1,
+    --29 are added for the Deep Arrowhead Shuffle option
+    ['AHSmall'] = 59,
+    --20 are added for the Deep Arrowhead Shuffle option
+    ['AHMedium'] = 25,
 }
 
 function RandoItemTables(Ob)
     if ( not Ob ) then
         Ob = CreateObject('ScriptBase')
+        Ob.classTable = {}
+        Ob.nameTable = {}
+    end
+
+    function Ob:initTables(randoSeed)
+        local adjustedItemCounts = {}
+        -- Make a table of the default item counts.
+        for _, itemData in MAIN_ITEM_DATA_TABLE do
+            local name = itemData[2]
+            local defaultCount = itemData[3] or 1
+            adjustedItemCounts[name] = defaultCount
+        end
+
+        -- Adjust the item counts for Archipelago usage.
+        if randoSeed.isAP then
+            for name, adjustedCount in AP_ITEM_COUNTS do
+                adjustedItemCounts[name] = adjustedCount
+            end
+        end
+
         local classTable = {}
         local nameTable = {}
+        
+        for i = 1, getn(MAIN_ITEM_DATA_TABLE) do
+            local itemData = MAIN_ITEM_DATA_TABLE[i]
+            local itemClass = itemData[1]
+            local itemName = itemData[2]
+            local itemCount = adjustedItemCounts[itemName]
 
-        for _, itemData in MAIN_ITEM_DATA_TABLE do
-            itemClass = itemData[1]
-            itemName = itemData[2]
-            itemCount = itemData[3]
-            if itemCount == nil then
+            if itemCount == 1 then
+                -- Add the item without a number suffix
                 tinsert(classTable, itemClass)
                 tinsert(nameTable, itemName)
-            else
+            elseif itemCount > 1 then
                 --Add each item with a number suffix
                 for i = 1, itemCount do
                     tinsert(classTable, itemClass)
@@ -171,10 +221,8 @@ function RandoItemTables(Ob)
             end
         end
 
-        Ob.classTable = classTable
-        Ob.nameTable = nameTable
-
-
+        self.classTable = classTable
+        self.nameTable = nameTable
     end
 
     return Ob

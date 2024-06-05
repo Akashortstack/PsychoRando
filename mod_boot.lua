@@ -14,6 +14,8 @@ function RandoPlacer()
 	local pos = SpawnScript('Positions', 'Positions')
 	local itemTables = SpawnScript('RandoItemTables', 'RandoItemTables') -- Used by ShuffleItems and APReceiver
 	local seed = SpawnScript('RandoSeed', 'RandoSeed')
+	-- Initialize the tables based on the RandoSeed settings.
+	itemTables:initTables(seed)
 	local shuffle = SpawnScript('ShuffleItems', 'ShuffleItems')
 
 	--fillTable used to avoid Lua max variable limitations
