@@ -27,7 +27,8 @@ function ShuffleItems(Ob)
 
         --pairing loop, uses value from RandoSeed to find index in oldclassTable and arrange items in order
         --sent to Randomizer.lua to pair with the positions list
-        for i, j in randolist do
+        for i = 1, n do
+            local j = randolist[i]
             newclassTable[i] = oldclassTable[j]
             newnameTable[i] = oldnameTable[j]
         end
