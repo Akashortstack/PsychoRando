@@ -1446,6 +1446,11 @@ function APReceiver(Ob)
         --GamePrint("Current num received items: " .. lastApIndex)
         for k, v in self.numbersTable do
             if k ~= 'n' then
+                --make sure a cutscene isn't playing when we receive our items
+                while Global.cutsceneScript.cutscenePlaying == 1 do
+                    self:sleep(1.0)
+                end
+
                 --split the line "apIndex,index,isNonLocal" into its parts
                 local split = {}
                 -- Match groups of characters that are not ",". For each matched group, call a function to insert
