@@ -165,15 +165,16 @@ AP_ITEM_COUNTS = {
     ['OlyMind'] = 1,
 
     --AP has 1 less PSI Card by default since it has the Squirrel Roast Dinner taking up a location
-    ['Card'] = 110,
+    --54 are added for the Cobweb Shuffle option
+    ['Card'] = 110 + 54,
     --AP Placeholders, one for each location that can place an item into the game world
     ['AP Item '] = 317,
     --Added for the Deep Arrowhead Shuffle option
     ['DowsingRod'] = 1,
     --29 are added for the Deep Arrowhead Shuffle option
-    ['AHSmall'] = 59,
+    ['AHSmall'] = 30 + 29,
     --20 are added for the Deep Arrowhead Shuffle option
-    ['AHMedium'] = 25,
+    ['AHMedium'] = 5 + 20,
 }
 
 function RandoItemTables(Ob)

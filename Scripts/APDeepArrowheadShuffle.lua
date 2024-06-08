@@ -52,10 +52,10 @@ local mega_arrowhead_names = {
 }
 
 local start_id = 503
-location_to_id = {}
+mega_arrowhead_name_to_id = {}
 for i = 1, getn(mega_arrowhead_names) do
     local name = mega_arrowhead_names[i]
-    location_to_id[name] = start_id + i - 1
+    mega_arrowhead_name_to_id[name] = start_id + i - 1
 end
 
 
@@ -65,7 +65,7 @@ function APDeepArrowheadShuffle(Ob)
     end
 
     function Ob:collectedDeepArrowhead(name)
-        location_id = location_to_id[name]
+        location_id = mega_arrowhead_name_to_id[name]
         if location_id then
             apcollected = fso('APCollected', 'APCollected')
             apcollected:writeCollectedLocation(location_id)

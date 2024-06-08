@@ -2764,7 +2764,15 @@ function Dart(Ob)
 	function Ob:onCollectedCobweb(value,from)
 		value = (value and tonumber(value)) or 1
 		self.stats.cobwebs = self.stats.cobwebs + value
-		self.stats.websInInv = self.stats.websInInv + value
+		-- Check if Cobweb Shuffle is enabled.
+		local settings = FindScriptObject('RandoSeed')
+		if settings.cobwebShuffle == TRUE then
+			-- Send an AP location check instead of adding a cobweb to the player's inventory.
+			local cobwebShuffle = fso('APCobwebShuffle', 'APCobwebShuffle')
+			cobwebShuffle:collectedCobweb(from.Name)
+		else
+			self.stats.websInInv = self.stats.websInInv + value
+		end
 		self.stats.cobwebsFromEntireLevel = self.stats.cobwebsFromEntireLevel + value
 
 		if self.stats.cobwebsFromEntireLevel == Global.cobwebsPerLevel[Global.levelScript:getLevelPrefix()] then
