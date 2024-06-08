@@ -144,6 +144,7 @@ function APReceiver(Ob)
         local printedDesyncWarning = FALSE
         --used for debugging AP issues
         --GamePrint("Current num received items: " .. lastApIndex)
+    
         local numbersTable = self.numbersTable
         for i = 1, getn(numbersTable) do
             line = numbersTable[i]
