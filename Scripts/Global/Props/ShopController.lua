@@ -741,6 +741,17 @@ function ShopController(Ob)
 							self.tItems[i] = nil
 						end
 
+					--edit to check dowsing rod status, remove from shop if needed
+					elseif self.tItems[i].Type == 'global.collectibles.DowsingRod' then
+						if Global.player:isInInventory('DowsingRod') == 1 then
+							self.tItems[i]:removeFromNeighbors()
+							self.tItems[i] = nil
+						elseif Global:loadGlobal('bDowsingRodRandomized') == 1 then
+							self.tItems[i]:removeFromNeighbors()
+							self.tItems[i]:killSelf()
+							self.tItems[i] = nil
+						end
+
 					else
 						if Global.player:isInInventory(self.tItems[i].Name) == 1 then
 							if self.tItems[i].removeFromNeighbors then

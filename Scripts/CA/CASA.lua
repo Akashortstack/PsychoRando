@@ -217,6 +217,11 @@ function CASA(Ob)
 				Global:saveGlobal('bCobwebRandomized', 1)
 			end
 
+			--edit Setting to save that Dowsing Rod is Randomzied
+			if settings.randomizeDowsingRod == TRUE then
+				Global:saveGlobal('bDowsingRodRandomized', 1)
+			end
+
 			--edit Setting to start with Button and enable Campgrounds Access
 			if settings.startbutton == TRUE then
 				local button = SpawnScript('Global.Props.Button', 'Button')
