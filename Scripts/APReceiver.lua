@@ -147,6 +147,12 @@ function APReceiver(Ob)
     
         local numbersTable = self.numbersTable
         for i = 1, getn(numbersTable) do
+
+            --make sure a cutscene isn't playing when receiving items from AP
+            while Global.cutsceneScript.cutscenePlaying == 1 do
+                self:sleep(1.0)
+            end
+
             line = numbersTable[i]
             --split the line "apIndex,index,isNonLocal" into its parts
             local split = {}
