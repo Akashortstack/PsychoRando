@@ -148,6 +148,9 @@ function AS_Painting(Ob)
 		self:beNotPickupable()
 		self.player:addToInventory(self, (self.bAutoSelect == 1 and 1) or bHoldImmediately, bSilent)
 		--self:setVelocity(0, 0, 0)
+		
+		--edit make a sound!
+		PlaySound(nil, LoadSound('YouWin'))
 
 		--edit sendMessage to Dart
 		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)

@@ -286,6 +286,12 @@ function DowsingRod(Ob)
 
 		if (self.bReincarnated ~= 1) then
 			Global.player:collectDowsingRodText()
+
+			--edit make a sound if dowsing rod was randomized
+			if Global:loadGlobal('bDowsingRodRandomized') == 1 then
+				PlaySound(nil, LoadSound('YouWin'))
+			end
+
 			Global:saveGlobal('DowsingRodCollected', 1)
 
 			Global.goalManager:deactivate('GetDowsingRod')

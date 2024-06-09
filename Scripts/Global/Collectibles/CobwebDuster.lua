@@ -517,6 +517,8 @@ function CobwebDuster(Ob)
 
 		if (self.bReincarnated ~= 1) then
 			Global.player:collectDusterText()
+			--edit make a sound!
+			PlaySound(nil, LoadSound('YouWin'))
 			Global:saveGlobal('CobwebDusterCollected', 1)
 			Global.goalManager:deactivate('CobwebDuster')
 		end

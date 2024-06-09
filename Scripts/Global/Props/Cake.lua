@@ -57,6 +57,11 @@ function Cake(Ob)
 			pokey:activateCakeFollowing()
 		end
 
+		--edit make a sound!
+		if (self.bReincarnated ~= 1) then
+			PlaySound(nil, LoadSound('YouWin'))
+		end
+
 		--edit sendMessage to Dart
 		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
 

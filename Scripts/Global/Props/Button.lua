@@ -49,7 +49,9 @@ function Button(Ob)
 	function Ob:onAddedToInventory()
 		%Ob.Parent.onAddedToInventory(self)
 		--edit make a sound!
-		PlaySound(nil, LoadSound('YouWin'))
+		if (self.bReincarnated ~= 1) then
+			PlaySound(nil, LoadSound('YouWin'))
+		end
 				
 		--sendMessage to Dart
 		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
