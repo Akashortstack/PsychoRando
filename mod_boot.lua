@@ -66,6 +66,7 @@ function RandoPlacer()
 	SpawnScript('APReceiver', 'APReceiver')
 	SpawnScript('APCollected', 'APCollected')
 	SpawnScript('APDeepArrowheadShuffle', 'APDeepArrowheadShuffle')
+	SpawnScript('APCobwebShuffle', 'APCobwebShuffle')
 	SpawnScript('Deathlink', 'Deathlink')
 
 end
