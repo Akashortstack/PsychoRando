@@ -61,8 +61,12 @@ function ScavengerSquirrel(Ob)
 			self.invisTestThread = SpawnScript('Locator', self.Name..'InvisTestThread')
 			local me = self
 			self.invisTestThread.stateCheckInvis = function(self)
+				--edit function to "detach acorn" if Invisibility True in trigger volume
 				if GetPlayerInvisibility() ~= 1 then
 					%me:scare()
+				else
+					self.acorn:show()
+					self.acorn = nil
 				end
 			end
 			self:setState(nil)
