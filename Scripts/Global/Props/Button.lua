@@ -48,9 +48,17 @@ function Button(Ob)
 
 	function Ob:onAddedToInventory()
 		%Ob.Parent.onAddedToInventory(self)
-		--edit make a sound!
+		--edit make a sound, check if CASA is current level and bring back load zone if true
 		if (self.bReincarnated ~= 1) then
 			PlaySound(nil, LoadSound('YouWin'))
+			if GetCurrentLevelName() == 'CASA' then
+				local sasha = fso('NO_ENTRY')
+				local removeload = fso('CASAtoCAGP1')
+				local removeladder = fso('ladder10m')
+				sasha:killSelf()
+				removeload:show()
+				removeladder:show()
+			end			
 		end
 				
 		--sendMessage to Dart

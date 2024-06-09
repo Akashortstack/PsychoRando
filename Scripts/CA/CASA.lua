@@ -249,9 +249,9 @@ function CASA(Ob)
 		--edit Remove level load from CASA to CAGP if Button not in inventory
 		if Global:loadGlobal('bButtonCollected') ~= 1 or Global:loadGlobal('bButtonCollected') == nil then
 			local removeload = fso('CASAtoCAGP1')
-			removeload:killSelf()
+			removeload:hide()
 			local removeladder = fso('ladder10m')
-			removeladder:killSelf()
+			removeladder:hide()
 			local sashablock = SpawnScript('ca.characters.RandoSasha', 'NO_ENTRY')
 			sashablock:setPosition(18, 1681, 78)
 			sashablock:setOrientation(0, 0, 0)
