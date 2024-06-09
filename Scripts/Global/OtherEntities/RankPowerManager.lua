@@ -291,6 +291,12 @@ function RankPowerManager(Ob)
 			self:setbHealthRegeneration(1, 1)
 			GamePrint('ClairUp Enabled!')
 		end
+
+		--Palm Bomb Upgrade, Super Slam
+		if (Global:loadGlobal('bAirMeleeCharge') == 1) then
+			self:setbAirMeleeCharge(1, 1)
+			GamePrint('AirMeleeCharge Enabled!')
+		end
 	end
 	
 	--Put any special code you need for a certain rank inside of this function

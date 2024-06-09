@@ -212,7 +212,6 @@ function BVES(Ob)
 
 		--edit spawn BVItemPlacer
 		self.itemPlacer = SpawnScript('BV.BVItemPlacer', 'BVItemPlacer')
-		
 
 		self.rTornadoSoundHandle = LoadSound('Tornado')
 		Global.player.charName = 'BVraz'

@@ -38,6 +38,9 @@ MAIN_ITEM_DATA_TABLE = {
     {'global.collectibles.Clairvoyance', 'Clairvoyance', 2},
     {'global.collectibles.Shield', 'Shield', 3},
 
+    --Super Palm Bomb
+    {'global.collectibles.SuperPalmBomb', 'SuperPalmBomb'},
+
     --6 Max Ammo Up
     {'Global.Collectibles.RandoAmmoUp', 'AmmoUp', 6},
 
@@ -144,7 +147,7 @@ MAIN_ITEM_DATA_TABLE = {
     --111 Psicards, filler item, increase if adding more positions
     {'global.collectibles.RandoPsiCard', 'Card', 111},
 
-    --AP Placeholders, 317 Total
+    --AP Placeholders, 318 Total
     {'global.collectibles.APPlaceholder', 'AP Item ', 0},
 }
 
@@ -167,7 +170,7 @@ AP_ITEM_COUNTS = {
     --AP has 1 less PSI Card by default since it has the Squirrel Roast Dinner taking up a location
     ['Card'] = 110,
     --AP Placeholders, one for each location that can place an item into the game world
-    ['AP Item '] = 317,
+    ['AP Item '] = 318,
     --Added for the Deep Arrowhead Shuffle option
     ['DowsingRod'] = 1,
     --29 are added for the Deep Arrowhead Shuffle option

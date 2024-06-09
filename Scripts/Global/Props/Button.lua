@@ -47,7 +47,10 @@ function Button(Ob)
 	end
 
 	function Ob:onAddedToInventory()
-		%Ob.Parent.onAddedToInventory(self)		
+		%Ob.Parent.onAddedToInventory(self)
+		--edit make a sound!
+		PlaySound(nil, LoadSound('YouWin'))
+				
 		--sendMessage to Dart
 		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
 

@@ -149,6 +149,9 @@ function CABH_NIGHT(Ob)
 
 		-- trigger for milla getting kidnapped cutscene
 		RegisterTriggerVolume(self, 'tv_MillaKidnappingScene', 0)
+
+		--edit spawn LLDoneItemPlacer
+		self.itemPlacer = SpawnScript('CA.LLDoneItemPlacer', 'LLDoneItemPlacer')
 		
 -- 		self:setState(nil)		
 	end
@@ -162,31 +165,25 @@ function CABH_NIGHT(Ob)
 				self:setState('PlayCALK')
 			end
 		end
-		
-		if Global:loadGlobal('bLLCompleted') == 1 and Global:loadGlobal('bLOCompleted') ~= 1 then
+
+		--edit removing this since it seems useless?		
+		--[[if Global:loadGlobal('bLLCompleted') == 1 and Global:loadGlobal('bLOCompleted') ~= 1 then
 			Global.player:setPosition(14423.3, 659.3, 15428.4)
+		end]]
+
+		--edit place player next to old bathosphere location after completing LLLL
+		local lastPrefix = Global:loadGlobal('LastLevel')
+		if lastPrefix == "LLLL" then
+			Global.player:setPosition(13997, 506, 15987)
+			Global.player:setOrientation(0, 165, 0)
+			MoveCameraToIdeal()
 		end
+
+		--edit show the item if LLLL is completed
+		self.itemPlacer:checkItem()
 		
-		--edit Removing bathosphere entirely, go find the Lungfish Call instead!
-
-		local bathosphere = FindScriptObject('bathosphere')
-		if bathosphere then
-			bathosphere:killSelf()
-		end
-		local bathosdoor = FindScriptObject('BathosphereDoor')
-		if bathosdoor then
-			bathosdoor:killSelf()
-		end
-
-		-- edit This deep arrowhead (worth 130 arrowheads) spawns out of bounds behind the cliff side.
-		--      Move it to the top of the big rock by the bathysphere instead
-		local deepArrowHead3 = FindScriptObject('MegaArrowhead3')
-		if deepArrowHead3 then
-		    deepArrowHead3:setPosition(14403, 995, 12852)
-		end
-
-		--[[ if LO is beaten, don't bring up the bathosphere again
-		if (Global:loadGlobal('bLOCompleted') == 1) then
+		--edit bathosphere disappears after finishing LL instead of LO
+		if (Global:loadGlobal('bLLCompleted') == 1) then
 			local bathosphere = FindScriptObject('bathosphere')
 			if bathosphere then
 				bathosphere:killSelf()
@@ -198,7 +195,15 @@ function CABH_NIGHT(Ob)
 		else
 			RegisterTriggerVolume(self, 'tv_Bathosphere')
 			FindScriptObject('Sealnet'):killSelf()
-		end]]
+		end
+
+		-- edit This deep arrowhead (worth 130 arrowheads) spawns out of bounds behind the cliff side.
+		--      Move it to the top of the big rock by the bathysphere instead
+		local deepArrowHead3 = FindScriptObject('MegaArrowhead3')
+		if deepArrowHead3 then
+		    deepArrowHead3:setPosition(14403, 995, 12852)
+		end
+
 	end
 	
 	function Ob:statePlayCALK()

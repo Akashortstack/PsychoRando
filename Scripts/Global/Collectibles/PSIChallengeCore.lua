@@ -17,7 +17,7 @@ function PSIChallengeCore(Ob)
 		
 		-- SHOP STUFF
 		--edit increase price
-		Ob.iPrice = 100
+		Ob.iPrice = 200
 		Ob.iNumStock = -1 -- Editable
 		--edit Name change, Needs Localization!
 		Ob.sItemDescription = "Psi Challenge Marker" --DIALOG=<<PSI Challenge Marker>>

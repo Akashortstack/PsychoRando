@@ -73,7 +73,7 @@ function MegaArrowhead(Ob)
 
         -- Check if Deep Arrowhead Shuffle is enabled.
         local settings = FindScriptObject('RandoSeed')
-        if settings.deepArrowheadShuffle == TRUE and not self:getRespawnTime() then
+        if Global.levelScript:getLevelName() ~= 'LLLL' and settings.deepArrowheadShuffle == TRUE and not self:getRespawnTime() then
             GamePrint("Collected deep arrowhead for the first time, sending location check instead of arrowheads")
             -- Reduce respawn time to 10 minutes when collected for the first time and shuffle is enabled.
             self:setRespawnTime(600)

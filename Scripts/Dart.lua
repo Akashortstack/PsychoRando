@@ -3049,13 +3049,13 @@ function Dart(Ob)
 		if seedsettings.lootboxvaults == TRUE then
 			--Random Rewards! Loot Box!
 			--Random value of arrowheads to receive
-			self.randArrows = random (10, 75)
+			self.randArrows = random (10, 50)
 			--Roll some RNG for Jackpots/Ranks to recieve
 			self.jackpotArrows = random (1, 50)
 			self.jackpotRanks = random (1, 50)
 		else
-			--Make Result Static, One Rank and 25 Arrowheads
-			self.randArrows = 25
+			--Make Result Static, One Rank and 15 Arrowheads
+			self.randArrows = 15
 			self.jackpotArrows = 1
 			self.JackpotRanks = 26
 		end
