@@ -5,9 +5,8 @@ function SuperPalmBomb(Ob)
 		Ob.interestFXName = 'Global.Effects.PsiPowerUpFX'
 
 		Ob.dependencies = {
-		--TODO: needs custom texture for Super Palm Bomb
 		textures = {
-				'Textures/icons/Bubble/EmptySlot.dds' --Since we load replace the texture after-the-fact, we tell the game we depend on it so it gets preloaded
+				'Textures/Objects/Super_Palm_Bomb.dds' --Since we load replace the texture after-the-fact, we tell the game we depend on it so it gets preloaded
 			}
 		}
 		
@@ -18,14 +17,14 @@ function SuperPalmBomb(Ob)
 		--edit using Clairvoyance Mesh as base
 		self.meshName = 'GlobalModels/GO_GlobalObjects/meritbadges/clairvoyance.plb'
 		--TODO: needs custom texture for Super Palm Bomb
-		self.pickupSpritePath = 'Textures/icons/Bubble/EmptySlot.dds'
+		self.pickupSpritePath = 'Textures/Objects/Super_Palm_Bomb.dds'
         self.displayName = "Super Palm Bomb"--DIALOG Super Palm Bomb, Needs Localization
         
 		%Ob.Parent.onBeginLevel(self)
 
 		--edit, swapping texture, 
 		--TODO: needs custom texture for Super Palm Bomb
-		SetBaseTexture(self,'Textures/icons/Bubble/EmptySlot.dds')
+		SetBaseTexture(self,'Textures/Objects/Super_Palm_Bomb.dds')
 
 		--edit fixes lighting issues
 		SetEntityAmbientLight(self, 0.8, 0.8, 0.8)
