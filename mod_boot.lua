@@ -62,6 +62,11 @@ function RandoPlacer()
 		fclose(d)
 	end
 
+	-- Update the current level
+	local mapFile = fopen(folderName.."/CurrentLevel.txt", "w")
+	fwrite(mapFile, Global.levelScript:getLevelName())
+	fclose(mapFile)
+
 	-- spawn AP Related Scripts
 	SpawnScript('APReceiver', 'APReceiver')
 	SpawnScript('APCollected', 'APCollected')
