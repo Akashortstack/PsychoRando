@@ -131,12 +131,8 @@ function LungfishBubble(Ob)
 		SplineOrientationFlag(self, 0)
 	    self.bMoving = 1
 		--edit make it faster! Original is 1
-		self.settings = FindScriptObject('RandoSeed')
-		if self.settings.fasterLLLL ~= nil and self.settings.fasterLLLL = TRUE then
-			self.splineSpeed = 1.5
-		else
-			self.splineSpeed = 1
-		end
+		self.splineSpeed = 1.5
+
 		Global.player.waterRespawnLSOName = 'respawnBubble' .. (self.bossMain.part-1)
 			
 		--start orienting towards first marker
@@ -670,11 +666,7 @@ function LungfishBubble(Ob)
 		if (from == Global.player and self.bossMain.phase == 2 and strsub(data, 1,11) == 'tv_slowPath' and self.bossMain.waterArms.state_name ~= 'RespawnRaz') then
 			GamePrint("ENTERING SLOW ZONE")
 			--edit go faster! original 0.5
-			if self.settings.fasterLLLL ~= nil and self.settings.fasterLLLL = TRUE then
-				self.splineSpeed = 1
-			else
-				self.splineSpeed = 0.5
-			end			
+			self.splineSpeed = 1
 			SplineSpeedRel( self, self.splineSpeed)
 		end
 	end
@@ -683,11 +675,7 @@ function LungfishBubble(Ob)
 		if (from == Global.player and self.bossMain.phase == 2 and strsub(data, 1,11) == 'tv_slowPath' and self.bossMain.waterArms.state_name ~= 'RespawnRaz') then
 			GamePrint("EXITING SLOW ZONE")
 			--edit go faster! original is 1
-			if self.settings.fasterLLLL ~= nil and self.settings.fasterLLLL = TRUE then
-				self.splineSpeed = 1.5
-			else
-				self.splineSpeed = 1
-			end
+			self.splineSpeed = 1.5
 			SplineSpeedRel( self, self.splineSpeed)
 		end
 	end
