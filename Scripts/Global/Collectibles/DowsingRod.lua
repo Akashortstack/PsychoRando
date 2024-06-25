@@ -151,9 +151,15 @@ function DowsingRod(Ob)
 	function Ob:stateVictory()
 		self.currentHead:pickUp()
 		self.currentHead = nil
+		--edit sounds now happen instantly, redeuces dowsing time
+		self:playSound( self.hPullSound)
+		self:playSound( self.hPopSound)
+		--[[
 		self:playSound( self.hPullSound, nil, 1, 1 )
 		self:playSound( self.hPopSound, nil, 1, 1 )
-		self:sleep( 2 )
+		]]
+		--edit reduce sleep time from 2.0
+		self:sleep(0.5)
 		self:setState('Dowsing')
 	end
 
@@ -294,10 +300,13 @@ function DowsingRod(Ob)
 
 			Global:saveGlobal('DowsingRodCollected', 1)
 
+			--edit remove goal manager popups
+			--[[
 			Global.goalManager:deactivate('GetDowsingRod')
 			if (Global.player.stats.arrowheads < 800) then
 				Global.goalManager:activate('UseDowsingRod')
 			end
+			]]
 		end
 
 		--edit sendMessage to Dart
