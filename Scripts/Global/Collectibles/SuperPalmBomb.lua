@@ -16,14 +16,12 @@ function SuperPalmBomb(Ob)
 
 		--edit using Clairvoyance Mesh as base
 		self.meshName = 'GlobalModels/GO_GlobalObjects/meritbadges/clairvoyance.plb'
-		--TODO: needs custom texture for Super Palm Bomb
 		self.pickupSpritePath = 'Textures/Objects/Super_Palm_Bomb.dds'
-        self.displayName = "Super Palm Bomb"--DIALOG Super Palm Bomb, Needs Localization
+        self.displayName = "Palm Megabomb"--DIALOG Palm Megabomb, Needs Localization
         
 		%Ob.Parent.onBeginLevel(self)
 
 		--edit, swapping texture, 
-		--TODO: needs custom texture for Super Palm Bomb
 		SetBaseTexture(self,'Textures/Objects/Super_Palm_Bomb.dds')
 
 		--edit fixes lighting issues

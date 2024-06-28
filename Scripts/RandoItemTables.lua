@@ -38,8 +38,8 @@ MAIN_ITEM_DATA_TABLE = {
     {'global.collectibles.Clairvoyance', 'Clairvoyance', 2},
     {'global.collectibles.Shield', 'Shield', 3},
 
-    --Super Palm Bomb
-    {'global.collectibles.SuperPalmBomb', 'SuperPalmBomb'},
+    --Palm Megabomb
+    {'global.collectibles.SuperPalmBomb', 'PalmMegabomb'},
 
     --6 Max Ammo Up
     {'Global.Collectibles.RandoAmmoUp', 'AmmoUp', 6},
