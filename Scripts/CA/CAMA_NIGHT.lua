@@ -120,63 +120,6 @@ function CAMA_NIGHT(Ob)
 		if coug ~= nil then
 			coug:setPosition(-1126, 3607, 9542)
 		end
-
-		--edit require Oarsman's Badge for Lake access
-		if Global:loadGlobal('bGotOrsmansBadge') ~= 1 then
-			self:ChangeCABHTeleporter('CAMAtoCABH2')
-			self:ChangeCABHTeleporter('CAMAtoCABH1')
-		end
-
-		--edit require Squirrel Dinner for Recreation access
-		if Global:loadGlobal('bGotSquirrelDinner') ~= 1 then
-			self:ChangeCARETeleporter('CAMAtoCARE1')
-		end
-
-		--edit require Lili's Bracelet for Cabins access
-		if Global:loadGlobal('bGotLiliBracelet') ~= 1 then
-			self:ChangeCAKCTeleporter('CAMAtoCAKC1')
-			self:ChangeCAKCTeleporter('CAMAtoCAKC2')
-		end
-
-	end
-    
-	function Ob:ChangeCABHTeleporter(name)
-		local teleporter = fso(name)
-		teleporter.destLevel = nil
-		teleporter.warningText = "The Lake is Closed! Find the Oarsman's Badge!"
-		-- coordinates go here
-		teleporter.dx = 391
-		teleporter.dy = 4160
-		teleporter.dz = 5929
-		teleporter.dox = 0
-		teleporter.doy = -81
-		teleporter.doz = 0
-	end
-
-	function Ob:ChangeCARETeleporter(name)
-		local teleporter = fso(name)
-		teleporter.destLevel = nil
-		teleporter.warningText = "Reception Area Closed! Find the Squirrel Dinner!"
-		-- coordinates go here
-		teleporter.dx = -18521
-		teleporter.dy = 644
-		teleporter.dz = 12800
-		teleporter.dox = 0
-		teleporter.doy = -4
-		teleporter.doz = 0
-	end
-
-	function Ob:ChangeCAKCTeleporter(name)
-		local teleporter = fso(name)
-		teleporter.destLevel = nil
-		teleporter.warningText = "Kids' Cabins Closed! Find Lili's Bracelet!"
-		-- coordinates go here
-		teleporter.dx = -8949
-		teleporter.dy = 4294
-		teleporter.dz = 5116
-		teleporter.dox = 0
-		teleporter.doy = 6
-		teleporter.doz = 0
 	end
 
 	return Ob
