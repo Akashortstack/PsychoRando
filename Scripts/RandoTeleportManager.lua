@@ -1,4 +1,4 @@
-function TeleportManager(Ob)
+function RandoTeleportManager(Ob)
 	if not Ob then
 		Ob = CreateObject('ScriptBase')
 		-- Some of the warningText messages are used by multiple levels, so store them here.

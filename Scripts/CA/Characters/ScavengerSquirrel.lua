@@ -65,7 +65,9 @@ function ScavengerSquirrel(Ob)
 				if GetPlayerInvisibility() ~= 1 then
 					%me:scare()
 				else
-					self.acorn:show()
+					if self.acorn then
+						self.acorn:show()
+					end
 					self.acorn = nil
 				end
 			end

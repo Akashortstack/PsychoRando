@@ -72,7 +72,7 @@ function RandoOarsmansBadge(Ob)
         Global:saveGlobal('bGotOrsmansBadge', 1)
 
 		-- edit open any closed teleports to CABH
-		fso('TeleportManager'):OpenTeleportsToCABH()
+		fso('RandoTeleportManager'):OpenTeleportsToCABH()
 		self:killSelf()
 	end
 

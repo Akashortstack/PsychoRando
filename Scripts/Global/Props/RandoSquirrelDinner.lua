@@ -48,7 +48,7 @@ function RandoSquirrelDinner(Ob)
 		--edit save found
 		Global:saveGlobal('bGotSquirrelDinner', 1)
 		--edit open any closed teleports to CARE
-		fso('TeleportManager'):OpenTeleportsToCARE()
+		fso('RandoTeleportManager'):OpenTeleportsToCARE()
 
 		self:setState(nil)		
 

@@ -17,7 +17,7 @@ function RandoPlacer()
 	-- Initialize the tables based on the RandoSeed settings.
 	itemTables:initTables(seed)
 	local shuffle = SpawnScript('ShuffleItems', 'ShuffleItems')
-	SpawnScript('TeleportManager', 'TeleportManager')
+	SpawnScript('RandoTeleportManager', 'RandoTeleportManager')
 
 	--fillTable used to avoid Lua max variable limitations
 	pos:fillTable()
