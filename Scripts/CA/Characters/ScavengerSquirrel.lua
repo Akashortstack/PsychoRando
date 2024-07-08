@@ -65,10 +65,11 @@ function ScavengerSquirrel(Ob)
 				if GetPlayerInvisibility() ~= 1 then
 					%me:scare()
 				else
-					if self.acorn then
-						self.acorn:show()
+					if %me.acorn then
+						%me.acorn:show()
+						%me.acorn:setPosition(10455, 0, -3724)
 					end
-					self.acorn = nil
+					%me.acorn = nil
 				end
 			end
 			self:setState(nil)
@@ -113,7 +114,8 @@ function ScavengerSquirrel(Ob)
 			--self.acorn:beNotPickupable()
 
 			self.acorn:setOrientation(0,0,0)
-			LoadAnim(self.acorn, self.acornFlee , 0, 0)
+			--edit remove janky animations
+			--LoadAnim(self.acorn, self.acornFlee , 0, 0)
 		end
 		self:setOrientation(0,0,0)
 		self:playAnimBlocking(self.animsTable.flee)
@@ -146,7 +148,8 @@ function ScavengerSquirrel(Ob)
 		if self.acorn then
 			self.acorn:show()
 			SetEntityAlpha(self.acorn, 1, .2)
-			LoadAnim(self.acorn, self.acornEmerge , 0, 0)
+			--edit remove janky animations
+			--LoadAnim(self.acorn, self.acornEmerge , 0, 0)
 		end
 	end
 
@@ -154,7 +157,8 @@ function ScavengerSquirrel(Ob)
 		self:playAnimBlocking(self.animsTable.emerge)
 		self:setAnim(self.animsTable.idle)
 		if self.acorn then
-			LoadAnim(self.acorn, self.acornIdle)
+			--edit remove janky animations
+			--LoadAnim(self.acorn, self.acornIdle)
 			--edit changed to show()
 			self.acorn:show()
 			--self.acorn:bePickupable()
