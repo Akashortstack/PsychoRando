@@ -3065,7 +3065,7 @@ function Dart(Ob)
 			--Make Result Static, One Rank and 15 Arrowheads
 			self.randArrows = 15
 			self.jackpotArrows = 1
-			self.JackpotRanks = 26
+			self.jackpotRanks = 26
 		end
 		
 		--2% chance for 250 arrowheads instead

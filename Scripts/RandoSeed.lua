@@ -2,7 +2,7 @@ function RandoSeed(Ob)
         if ( not Ob ) then
             Ob = CreateObject('ScriptBase')
             Ob.seed = {}
-               Ob.APfoldername = 'AP-76074518482133089472-P3'
+               Ob.APfoldername = 'AP-76074518482133089472-P39'
        Ob.seedname = 'AP-P39-PsyStack'
            Ob.startlevitation = FALSE
            Ob.mentalmagnet = TRUE
