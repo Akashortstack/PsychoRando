@@ -121,9 +121,9 @@ function MCBB(Ob)
 		self.rTwoHeadedButcher = FindScriptObject('TwoHeadedButcher')
 
 		--Player must have gotten at least this far
-		--Global:setLevelToCompleted('TH')
-		--Global:setLevelToCompleted('WW')
-		--Global:setLevelToCompleted('BV')
+		Global:setLevelToCompleted('TH')
+		Global:setLevelToCompleted('WW')
+		Global:setLevelToCompleted('BV')
 
 		%Ob.Parent.onBeginLevel(self)		
 

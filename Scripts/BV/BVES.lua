@@ -105,7 +105,7 @@ function BVES(Ob)
 	
 	function Ob:onBeginLevel()
 		--Player must have completed at least up to MM
-		--Global:setLevelToCompleted('MM')
+		Global:setLevelToCompleted('MM')
 
 		%Ob.Parent.onBeginLevel(self)
 		--SetLightRadius(FindLight(FindScriptObject('Bull1'), 'pointLight1'), 2500)

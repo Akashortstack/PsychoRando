@@ -167,7 +167,7 @@ end
 	end
 
 	function Ob:onBeginLevel()
-		--Global:setLevelToCompleted('LO')
+		Global:setLevelToCompleted('LO')
 		Global:saveGlobal('bGotClairvoyance', 1)
         
 		%Ob.Parent.onBeginLevel(self)

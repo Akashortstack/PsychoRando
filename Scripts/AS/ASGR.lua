@@ -133,7 +133,7 @@ function ASGR(Ob)
 	end
 
 	function Ob:onBeginLevel()
-		--Global:setLevelToCompleted('LO')
+		Global:setLevelToCompleted('LO')
 
 		self.rMusicIntroTrigHandle = TriggerOBB_Lookup(nil, 'tv_ASGRExtMusic')
 		Trigger_RegisterListener(self.rMusicIntroTrigHandle, self)

@@ -34,7 +34,7 @@ function NIBA(Ob)
 	end
 	
 	function Ob:onBeginLevel()
-		--Global:setLevelToCompleted('MI')
+		Global:setLevelToCompleted('MI')
 		--Global:saveGlobal('NIPhase', 4)
 
 		%Ob.Parent.onBeginLevel(self)

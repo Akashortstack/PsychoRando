@@ -65,7 +65,7 @@ function LLLL(Ob)
 		-- Debug hacks
 		--Player must have gotten at least this far
 		--edit remove set level to complete
-		--Global:setLevelToCompleted('NI')
+		Global:setLevelToCompleted('NI')
 		if Global.player:isInInventory('Brainer') ~= 1 then
 			Global.player:addToInventory(SpawnScript('Global.Props.Brainer', 'Brainer', '', 1), 0, 1)
 		end

@@ -179,7 +179,7 @@ function LOMA(Ob)
 
 		-- Debug hacks
 		--Player must have gotten at least this far
-		--Global:setLevelToCompleted('NI')
+		Global:setLevelToCompleted('NI')
 		%Ob.Parent.onBeginLevel(self)
 		Global.player.Razilla = 1
 		self.RazillaWalk = LoadSound('LOFootsteps')

@@ -205,7 +205,7 @@ function BVRB(Ob)
 	function Ob:onBeginLevel()
 		--Player must have gotten at least this far
 		--edit Removed
-		--Global:setLevelToCompleted('MM')
+		Global:setLevelToCompleted('MM')
 
 		%Ob.Parent.onBeginLevel(self)
 		

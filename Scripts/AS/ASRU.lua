@@ -47,9 +47,9 @@ function ASRU(Ob)
 
 	function Ob:onBeginLevel()
 		--Player must have gotten at least this far
-		--Global:setLevelToCompleted('TH')
-		--Global:setLevelToCompleted('WW')
-		--Global:setLevelToCompleted('BV')
+		Global:setLevelToCompleted('TH')
+		Global:setLevelToCompleted('WW')
+		Global:setLevelToCompleted('BV')
 
 		-- once you see the brain tank, no more going back to CAJA
 		Global:saveGlobal('bFordReturnToCAJADisabled',1)

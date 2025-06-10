@@ -46,7 +46,7 @@ function BVWA(Ob)
 		self.winOutTheme = LoadSound('BlackVelvetopia')
 		
 		--Player must have completed at least up to MM
-		--Global:setLevelToCompleted('MM')
+		Global:setLevelToCompleted('MM')
 
 		%Ob.Parent.onBeginLevel(self)
         

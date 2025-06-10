@@ -58,7 +58,7 @@ function THFB(Ob)
 																				  
 	function Ob:onBeginLevel()
 		--Player must have gotten at least this far
-		--Global:setLevelToCompleted('MM')
+		Global:setLevelToCompleted('MM')
 		%Ob.Parent.onBeginLevel(self)
 		self.camControl:pushAndSetChase(nil, 1200, 10, 300)
 		

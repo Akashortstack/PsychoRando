@@ -68,7 +68,7 @@ function MMDM(Ob)
 
 	function Ob:onBeginLevel()
 		--Player must have gotten at least this far
-		--Global:setLevelToCompleted('LO')
+		Global:setLevelToCompleted('LO')
 		Global:saveGlobal('bGotClairvoyance', 1)
         
 		%Ob.Parent.onBeginLevel(self)

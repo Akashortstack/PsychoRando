@@ -58,7 +58,7 @@ function ASUP(Ob)
 
 	function Ob:onBeginLevel()
 		--Player must have gotten at least this far
-		--Global:setLevelToCompleted('MI')
+		Global:setLevelToCompleted('MI')
 
 		%Ob.Parent.onBeginLevel(self)
 

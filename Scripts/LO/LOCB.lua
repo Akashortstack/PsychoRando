@@ -91,7 +91,7 @@ function LOCB(Ob)
 		-- ##build night hack end
 
 		--Player must have gotten at least this far
-		--Global:setLevelToCompleted('NI')
+		Global:setLevelToCompleted('NI')
 		Global:saveGlobal('bGotShield', 1)
 		Global:saveGlobal('bLOMACompleted', 1)
 

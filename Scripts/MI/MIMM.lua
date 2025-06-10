@@ -62,7 +62,7 @@ function MIMM(Ob)
 			--edit removed
 			--EnablePower(kPOWER_LEVITATION, 1)
 			--Global:saveGlobal('bHasLevitationLearnersPermit', 1)
-			--Global:setLevelToCompleted('SA')
+			Global:setLevelToCompleted('SA')
 		end
 	end
 

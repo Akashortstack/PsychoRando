@@ -400,7 +400,7 @@ function THMS(Ob)
 																				  
 	function Ob:onBeginLevel()
 		--Player must have gotten at least this far
-		--Global:setLevelToCompleted('MM')
+		Global:setLevelToCompleted('MM')
 		%Ob.Parent.onBeginLevel(self)
 
 		self.trapDoors = self:getPool('TH.Props.TrapDoor')

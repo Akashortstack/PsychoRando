@@ -151,9 +151,9 @@ function MCTC(Ob)
 		self:setupRailslides()
 
 		--Player must have gotten at least this far
-		--Global:setLevelToCompleted('TH')
-		--Global:setLevelToCompleted('WW')
-		--Global:setLevelToCompleted('BV')
+		Global:setLevelToCompleted('TH')
+		Global:setLevelToCompleted('WW')
+		Global:setLevelToCompleted('BV')
 		
 		-- Post brain raz mode variables.. from here on, no more mental worlds.  only real world you return to is CAJA
 		Global:saveGlobal('bFordReturnToCAJADisabled',1)

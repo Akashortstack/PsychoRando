@@ -59,9 +59,9 @@ function ASLB(Ob)
 	
 	function Ob:onBeginLevel()
 		--Player must have gotten at least this far
-	--	Global:setLevelToCompleted('TH')
-	--	Global:setLevelToCompleted('WW')
---		Global:setLevelToCompleted('BV')
+		Global:setLevelToCompleted('TH')
+		Global:setLevelToCompleted('WW')
+		Global:setLevelToCompleted('BV')
 		
 		--Save that we have been here, to enable the elevator in ASGR
 		Global:saveGlobal('bHasSeenASLB', 1)

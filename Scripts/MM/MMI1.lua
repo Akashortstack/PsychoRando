@@ -194,7 +194,7 @@ function MMI1(Ob)
 	end
 
 	function Ob:onBeginLevel()
-		--Global:setLevelToCompleted('LO')
+		Global:setLevelToCompleted('LO')
 		
 		%Ob.Parent.onBeginLevel(self)
         

@@ -67,7 +67,7 @@ function BVMA(Ob)
 	
 	function Ob:onBeginLevel()
 		--Player must have completed at least up to MM
-		--Global:setLevelToCompleted('MM')
+		Global:setLevelToCompleted('MM')
 
 		--Player must have gotten confusion from playing BVRB
 		Global:saveGlobal('bGotConfusion', 1)
