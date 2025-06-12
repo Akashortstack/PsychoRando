@@ -2494,7 +2494,7 @@ function Dart(Ob)
 		self.stats.brains[brainID] = 'redeemed'
 		self:incrementMaxHealth(1)
 
-		-- edit check for Victory Condition
+		--edit check for Victory Condition
 		local seedsettings = fso('RandoSeed', 'Randoseed')
 		--find the matching seed folder in ModData
         local folderName = seedsettings.APfoldername

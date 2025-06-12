@@ -70,7 +70,7 @@ function LilisBracelet(Ob)
 
 		--edit save found
 		Global:saveGlobal('bGotLiliBracelet', 1)
-		-- edit open any closed teleports to CAKC
+		--edit open any closed teleports to CAKC
 		fso('RandoTeleportManager'):OpenTeleportsToCAKC()
 
 		self:setState(nil)

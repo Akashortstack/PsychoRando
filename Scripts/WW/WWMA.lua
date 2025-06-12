@@ -195,7 +195,7 @@ function WWMA(Ob)
 --*************************************************************************************************
 
 	function Ob:onBeginLevel()
-		--edit Removed
+		
 		Global:setLevelToCompleted('MM')
 
 		%Ob.Parent.onBeginLevel(self)

@@ -197,7 +197,7 @@ function CABH_NIGHT(Ob)
 			FindScriptObject('Sealnet'):killSelf()
 		end
 
-		-- edit This deep arrowhead (worth 130 arrowheads) spawns out of bounds behind the cliff side.
+		--edit This deep arrowhead (worth 130 arrowheads) spawns out of bounds behind the cliff side.
 		--      Move it to the top of the big rock by the bathysphere instead
 		local deepArrowHead3 = FindScriptObject('MegaArrowhead3')
 		if deepArrowHead3 then

@@ -71,7 +71,7 @@ function RandoOarsmansBadge(Ob)
         Global.player.invDisplayer:invItemAdded(self,0,0,nil,1)
         Global:saveGlobal('bGotOrsmansBadge', 1)
 
-		-- edit open any closed teleports to CABH
+		--edit open any closed teleports to CABH
 		fso('RandoTeleportManager'):OpenTeleportsToCABH()
 		self:killSelf()
 	end
