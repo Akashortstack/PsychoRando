@@ -4,7 +4,6 @@ function ASGR_hooks(Ob)
 
     function Ob:onBeginLevel()
         %onBeginLevel_original(self)
-        GamePrint("Open the Gate!")
 		--edit to make gate always open
 		if (self.gate) then
 			self:sendMessage(self.gate, 'Open')

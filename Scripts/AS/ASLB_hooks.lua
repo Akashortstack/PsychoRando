@@ -9,7 +9,6 @@ function ASLB_hooks(Ob)
         (Can't happen in Vanilla because you need the cake from the table first)
         ]]
 		if from == Global.player and (data == 'tv_TeaRoomIntro' and Global.player:isInInventory('PokeyProp') == 1 ) then
-            GamePrint("Put Pokeylope's Brain on the pedestal!")
 			local pokeyBrain = FindScriptObject('PokeyBrain')
 			if (pokeyBrain ~= nil) then
 				pokeyBrain:moveToPedstalTwo()
