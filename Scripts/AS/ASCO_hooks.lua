@@ -4,7 +4,7 @@ function ASCO_hooks(Ob)
 
     function Ob:onPreBeginLevel()
         %onPreBeginLevel_original(self)
-        --edit fix Edgar looking at the wrong place if BV is completed
+        --fix Edgar looking at the wrong place if BV is completed
 		if Global:loadGlobal('bBVCompleted') == 1 then
 			if (Global:load('bASCOCompletedBVPlayed') ~= 1) then
 				Global:save('bASCOCompletedBVPlayed', 1)

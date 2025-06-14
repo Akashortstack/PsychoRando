@@ -1,30 +1,17 @@
+function Rose_hooks(Ob)
+    --edit name to appear properly, NEEDS LOCALIZATION
+	Ob.displayName = "Rose"--DIALOG=<<Rose>>
+    --changing from 3 to appear later in inventory pages
+	Ob.invSortKey = 9
 
-function Rose(Ob)
-	if not Ob then 
-		Ob = CreateObject('Global.Props.HeldObject')
-		Ob.meshName = 'Levels/BV_BlackVelvetopia/Props/BV_Rose.plb'
-		--edit NEEDS LOCALIZATION
-		Ob.displayName = "Rose"--DIALOG=<<Rose>>
-		Ob.clutchAnim = 'Anims/DartNew/BodyParts/Hold_FistLoosePalmIn_ArmLf.jan'
-		Ob.HeldPosX = 2.2   
-		Ob.HeldPosY = 3.3    
-		Ob.HeldPosZ = -2.7    
-		Ob.HeldRotX = -13
-		Ob.HeldRotY = 36.167
-		Ob.HeldRotZ = 10.629
-		Ob.pickupSpriteName = 'Rose'
-		--edit from 3
-		Ob.invSortKey = 9
-		Ob.iActivateFailCounter = 0
-	end
-	
-	function Ob:onActivateFail(data, from)
-		-- only say something if Raz is not looking at anyone
+    --FULL FUNCTION OVERRIDE
+    function Ob:onActivateFail(data, from)
+		--only say something if Raz is not looking at anyone
 		local targ = GetLookTarget(Global.player)
 		if (not targ) then
 			self.iActivateFailCounter = self.iActivateFailCounter + 1
 			local line
-			--edit to not work outside BV until subtitles can be fixed
+		    --Only play the sound if inside BV, random text otherwise
 			if strfind(FindScriptObject('LevelScript').Type, 'bv.BVRB') or strfind(FindScriptObject('LevelScript').Type, 'bv.BVES') then
 				if (self.iActivateFailCounter < 3) then
 					line = "/BVRO000RA/"	-- 'I should give this rose to someone who\'d appreciate it.'
@@ -38,5 +25,4 @@ function Rose(Ob)
 		end
 	end
 
-    	return Ob
 end

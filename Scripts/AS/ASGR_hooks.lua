@@ -4,7 +4,7 @@ function ASGR_hooks(Ob)
 
     function Ob:onBeginLevel()
         %onBeginLevel_original(self)
-		--edit to make gate always open
+		--make asylum gate always open, don't have to complete MM first
 		if (self.gate) then
 			self:sendMessage(self.gate, 'Open')
 		end
