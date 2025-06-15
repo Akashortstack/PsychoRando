@@ -62,6 +62,11 @@ function CASA_hooks(Ob)
 			if settings.removetutorials == TRUE then
 				Global:saveGlobal('bDisableTutorialBoxes', 1) 
 			end
+
+            --Setting for Faster LO movement
+            if settings.fasterLO == TRUE then
+				Global:saveGlobal('bFasterLO', 1) 
+			end
 			
         end
 

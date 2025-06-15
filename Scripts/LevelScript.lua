@@ -1748,9 +1748,7 @@ function LevelScript(Ob)
 		self.bUseLOAnims = 1
 
 		--edit adjust value from .55 to .75 for LO QOL
-		local seedsettings = fso('RandoSeed', 'RandoSeed')
-		if seedsettings.fasterLO == TRUE then
-			GamePrint("ZOOM!")
+		if Global:loadGlobal('bFasterLO') == 1 then
 			SetAnimSpeedScale(Global.player, .75)
 			Global.player:setPhysicsConstants()
 		else
