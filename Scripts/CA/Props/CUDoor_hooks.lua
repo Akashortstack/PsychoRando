@@ -1,17 +1,13 @@
+--[[This checks what Mind items the player has collected and opens the corresponding door portals when entering CASA
+Overwrites any other logic for opening/closing doors from the Vanilla game]]
 
-function CUDoor(Ob)
-	if not Ob then
-		Ob = CreateObject('Global.Props.SimpleDoor')
+function CUDoor_hooks(Ob)
 
-		Ob.level = 'NI' -- Editable
-		Ob.levelLoadVolName = '' -- Editable
-		
-	end
-
-	function Ob:onPostBeginLevel()
+    --FULL FUNCTION OVERRIDE
+    function Ob:onPostBeginLevel()
 		%Ob.Parent.onPostBeginLevel(self)
 		self.llv = FindScriptObject(self.levelLoadVolName)
-		--edit close doors if we haven't found their mind yet
+        --check the door's corresponding level with matching Mind found, close if false
 		if self.level == 'BB' and Global:loadGlobal('bCoachMindfound') ~= 1 then
 			self:close(1)
 		elseif self.level == 'SA' and Global:loadGlobal('bSashaMindfound') ~= 1 then
@@ -31,20 +27,9 @@ function CUDoor(Ob)
 		elseif self.level == 'MC' and Global:loadGlobal('bOlyMindfound') ~= 1 then
 			self:close(1)
 		else
+            --Matching mind found, open door
 			self:open(1)
 		end
 
 	end
-
-	function Ob:open(bImm, bBl)
-		%Ob.Parent.open(self, bImm, bBl)
-		self.llv:enable()
-	end
-
-	function Ob:close(bImm, bBl)
-		%Ob.Parent.close(self, bImm, bBl)
-		self.llv:disable()
-	end
-
-	return Ob
 end
