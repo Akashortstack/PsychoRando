@@ -1,5 +1,6 @@
 function MIFLCutscenes_hooks(Ob)
 
+	--FULL FUNCTION OVERRIDE
     function Ob:stateIntro()
 		Global.player:loadAnim('anims/dartnew/default_pose_lf.jan',0,0)
 
