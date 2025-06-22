@@ -2,31 +2,35 @@
 
 General Bugs:
 
---Milla's QOL bugged? can cause speed ups in other levels outside of milla's, something not reset properly?
+If any Peasant Item spawns in WW, item's matching Peasant has no voicelines unless item is collected, works normal afterwards
 
---If any Peasant Item spawns in WW, item's matching Peasant has no voicelines unless item is collected, works normal afterwards
+Vanilla game bug: Sasha's Shooting Gallery can softlock during tutorial if player doesn't collect mandatory Health Ammo, leaves stage instead.
 
---Vanilla game bug: Sasha's Shooting Gallery can softlock during tutorial if player doesn't collect mandatory Health Ammo, leaves stage instead.
-
---Some locations need adjusting cleanup
-    --item in MM Post Office (vanilla baggage) sometimes in floor
+Some locations need adjusting cleanup
+    item in MM Post Office (vanilla baggage) sometimes in floor
 
 THINGS TO DO:
 
---Add settings page and "Generate" Button to Seed Generator
+Give Brain Jars interestfx for more visibility?
 
---Give Brain Jars interestfx for more visibility?
+Cleanup Milkman
+    Make house items only spawn if entering the correct house
+    changes logic requirements, cobweb duster AND watering can
 
---Cleanup Milkman
-    --Make house items only spawn if entering the correct house
-    --changes logic requirements, cobweb duster AND watering can
+Look into applying certain sounds across all levels
+    Using LoadSoundData() game loads ENTIRE LEVEL sounds, instead of just one sound, increases load times significantly
 
---Look into applying certain sounds across all levels
-    --Using LoadSoundData() game loads ENTIRE LEVEL sounds, instead of just one sound, increases load times significantly
+Add more junk items?
 
---Add more junk items?
+Add Edgar's Playing Cards and Paintings to item pool?
 
---Add Edgar's Playing Cards and Paintings to item pool?
+Black Velvetopia potential shop painting rando? Needs work...
+    Could remove shop functionality entirely, just be collectible spots. Doesn't feel good.
 
---Black Velvetopia potential shop painting rando? Needs work...
-    --Could remove shop functionality entirely, just be collectible spots. Doesn't feel good.
+
+Scripts still needing Reworked to Hooks:
+    Dart.lua
+    LevelScript.lua
+    Global/Characters/Vault.lua
+    Global/Collectibles
+    Global/Props
