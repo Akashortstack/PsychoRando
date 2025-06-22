@@ -120,68 +120,56 @@ function RankPowerManager_hooks(Ob)
 		--PsiBlast Upgrades
 		if (Global:loadGlobal('bChainBlast') == 1) then
 			self:setbChainBlast(1, 1)
-			GamePrint('ChainBlast Enabled!')
 		end
 		if (Global:loadGlobal('bSuperChainBlast') == 1) then
 			self:setbSuperChainBlast(1, 1)
-			GamePrint('SuperChainBlast Enabled!')
 		end
 
 		--Levitation Upgrades
 		if (Global:loadGlobal('bSpikeBall') == 1) then
 			self:setbSpikeBall(1, 1)
-			GamePrint('SpikeBall Enabled!')
 		end
 		if (Global:loadGlobal('bSuperSpikeBall') == 1) then
 			self:setbSuperSpikeBall(1, 1)
-			GamePrint('SuperSpikeBall Enabled!')
 		end
 
 		--Shield Upgrades
 		if (Global:loadGlobal('bSuperShield') == 1) then
 			self:setSuperShield(1, 1)
-			GamePrint('SuperShield Enabled!')
 		end
 		if (Global:loadGlobal('bDamageShield') == 1) then
 			self:setbDamageShield(1, 1)
-			GamePrint('DamageShield Enabled!')
 		end
 
 		--Pyrokinesis/Firestarting Upgrade
 		if (Global:loadGlobal('bPKDetonate') == 1) then
 			self:setbPKDetonate(1, 1)
-			GamePrint('bPKDetonate Enabled!')
 		end
 
 		--Telekinesis Upgrade
 		if (Global:loadGlobal('bTelekinesisUp') == 1) then
 			self:setTKRange(6, 1)
 			self:setTKDamage(2, 1)
-			GamePrint('TelekinesisUp Enabled!')
 		end
 
 		--Confusion Upgrade
 		if (Global:loadGlobal('bConfusionUp') == 1) then
 			self:setConfusionDuration(8, 1)
-			GamePrint('ConfusionUp Enabled!')
 		end
 
 		--Invisibility Upgrade
 		if (Global:loadGlobal('bInvisUp') == 1) then
 			self:setInvisDuration(20, 1)
-			GamePrint('InvisUp Enabled!')
 		end
 
 		--Clairvoyance Upgrade, Health Regen
 		if (Global:loadGlobal('bClairUp') == 1) then
 			self:setbHealthRegeneration(1, 1)
-			GamePrint('ClairUp Enabled!')
 		end
 
 		--Palm Bomb Upgrade, Super Slam
 		if (Global:loadGlobal('bAirMeleeCharge') == 1) then
 			self:setbAirMeleeCharge(1, 1)
-			GamePrint('AirMeleeCharge Enabled!')
 		end
     end
 
