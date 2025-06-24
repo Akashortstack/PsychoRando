@@ -32,5 +32,5 @@ Scripts still needing Reworked to Hooks:
     Dart.lua
     LevelScript.lua
     Global/Characters/Vault.lua
-    Global/Collectibles
-    Global/Props
+    Entire Folder Global/Collectibles
+    Entire Folder Global/Props
