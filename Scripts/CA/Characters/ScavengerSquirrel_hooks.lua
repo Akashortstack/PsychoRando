@@ -6,6 +6,16 @@ Using hide() and show() instead of bePickupable() and beNotPickupable(), since t
 
 function ScavengerSquirrel_hooks(Ob)
 
+	--FULL FUNCTION OVERRIDE
+	--[[This normally looks for the Golden Acorn and removes the squirrel if already collected.
+	Removing all of that to function properly]]
+	function Ob:onBeginLevel()
+		%Ob.Parent.onBeginLevel(self)
+		SetPhysicsFlag(self, PHYSICS_APPLYGRAVITY, 0)
+		SetPhysicsFlag(self, PHYSICS_COLLIDER, 0)
+		SetPhysicsFlag(self, PHYSICS_COLLIDEE, 0)			 
+	end
+
     --FULL FUNCTION OVERRIDE
     function Ob:onPostBeginLevel()
 		--check if the item has already been collected, kill squirrel if missing
