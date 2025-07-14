@@ -9,14 +9,11 @@ function BVRB_hooks(Ob)
 		if Global:loadGlobal('bBVFirstEntry') ~= 1 or Global:loadGlobal('bBVFirstEntry') == nil then
 			Global:saveGlobal('bBVFirstEntry',1)
 		end
-        --resetting this value to 0, set by the stateLevelSetup hook below
-        self.demoLevel = 0
     end
 
     function Ob:stateLevelSetup()
-        --hacky way of preventing the game from disabling confusion, since bGotConfusion is never enabled the rando
-        --game checks if Demo level when disabling
-        self.demoLevel = 1
+        --hacky way of preventing the game from disabling confusion, since bGotConfusion is replaced with bGotRandoConfusion
+        Global:saveGlobal('bGotConfusion', 1)
         %stateLevelSetup_original(self)
     end
 
