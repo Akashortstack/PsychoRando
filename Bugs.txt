@@ -2,54 +2,35 @@
 
 General Bugs:
 
---If any Peasant Item spawns in WW, item's matching Peasant has no voicelines unless item is collected, works normal afterwards
+If any Peasant Item spawns in WW, item's matching Peasant has no voicelines unless item is collected, works normal afterwards
 
---Gloria's Theater can potentially crash very late into a seed. Cause Unknown, possibly goal manager related?
+Vanilla game bug: Sasha's Shooting Gallery can softlock during tutorial if player doesn't collect mandatory Health Ammo, leaves stage instead.
 
---Vanilla game bug: Sasha's Shooting Gallery can softlock during tutorial if player doesn't collect mandatory Health Ammo, leaves stage instead.
-
---Below issues can happen randomly, keep trying different fixes
-
-    --Geyser item sometimes doesn't load
-
-    --Squirrel Disappears sometimes
-
-    --Hornet Nest sometimes doesn't spawn, maybe because fertility idol already collected?
-
---Some locations need adjusting cleanup
-    --item in MM Post Office (vanilla baggage) sometimes in floor
+Some locations need adjusting cleanup
+    item in MM Post Office (vanilla baggage) sometimes in floor
 
 THINGS TO DO:
 
---Make Seed Name visible on Start Screen
+Give Brain Jars interestfx for more visibility?
 
---Add settings page and "Generate" Button to Seed Generator
+Cleanup Milkman
+    Make house items only spawn if entering the correct house
+    changes logic requirements, cobweb duster AND watering can
 
---Create Item Tracker?
+Look into applying certain sounds across all levels
+    Using LoadSoundData() game loads ENTIRE LEVEL sounds, instead of just one sound, increases load times significantly
 
---Give Brain Jars interestfx for more visibility?
+Add more junk items?
 
---Milka's Brain Defaults to Vanilla location in Crow Basket if spawned in Asylum Lower Levels
-    --change location to require invis? work like vanilla game? Changes logic.
+Add Edgar's Playing Cards and Paintings to item pool?
 
---Cleanup Milkman
-    --Make house items only spawn if entering the correct house
-    --changes logic requirements, cobweb duster AND watering can
+Black Velvetopia potential shop painting rando? Needs work...
+    Could remove shop functionality entirely, just be collectible spots. Doesn't feel good.
 
---Look into applying certain sounds across all levels
-    --Using LoadSoundData() game loads ENTIRE LEVEL sounds, instead of just one sound, increases load times significantly
 
---Add requirements to enter minds? Brain Jars with character brains?
-    --Disable random/certain doors?
-
---Add more locked locations to Campgrounds?
-    --Lili's Bracelet locks Kid's Cabins
-    --Oarsman's Badge locks Lake
-    --What would lock the Recreation area? Crow Feather?
-
---Add more junk items?
-
---Add Edgar's Playing Cards and Paintings to item pool?
-
---Black Velvetopia potential shop painting rando? Needs work...
-    --Could remove shop functionality entirely, just be collectible spots. Doesn't feel good.
+Scripts still needing Reworked to Hooks:
+    Dart.lua
+    LevelScript.lua
+    Global/Characters/Vault.lua
+    Entire Folder Global/Collectibles
+    Entire Folder Global/Props

@@ -63,13 +63,16 @@ function RandoOarsmansBadge(Ob)
 	function Ob:statePickup()
 
 		--edit make a sound!
-		--PlaySound(nil, LoadSound('YouWin'))
+		PlaySound(nil, LoadSound('YouWin'))
 
 		--sendMessage to Dart
 		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)
 
         Global.player.invDisplayer:invItemAdded(self,0,0,nil,1)
         Global:saveGlobal('bGotOrsmansBadge', 1)
+
+		--edit open any closed teleports to CABH
+		fso('RandoTeleportManager'):OpenTeleportsToCABH()
 		self:killSelf()
 	end
 

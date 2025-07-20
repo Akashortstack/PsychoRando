@@ -267,6 +267,11 @@ function AS_hand(Ob)
 	function Ob:onAddedToInventory(data, from)
 		%Ob.Parent.onAddedToInventory(self, data, from)
 		self:stopGlint()
+		
+		--edit make a sound!
+		if (self.bReincarnated ~= 1) then
+			PlaySound(nil, LoadSound('YouWin'))
+		end
 
 		--edit sendMessage to Dart
 		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)

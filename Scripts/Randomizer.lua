@@ -20,12 +20,10 @@ function Randomizer(Ob)
         local randoName
         local randoPosition
         --loops through each item in Seed.randoclassList, Seed.randonameList, and Positions.positionsList
-        while positions.positionsList['item'..index] ~= nil do
+        while positions.positionsList['position'..index] ~= nil do
             randoClass = classes.randoclassList[index]      
             randoName = names.randonameList[index]
-            randoPosition = positions.positionsList['item'..index]
-            --HACK, prints "Spoiler Log"
-            --GamePrint("Spoiler Item"..index..", Class "..randoClass..", Name "..randoName)
+            randoPosition = positions.positionsList['position'..index]
 
             --compare item's level type to current level, sends to spawn if true
             if randoPosition.levelName == level then   
@@ -70,6 +68,12 @@ function Randomizer(Ob)
                 local ref = FindScriptObject('ScavHornetNest')
                 ref.huntItem = name
             end
+
+            --code for Crow Bucket puzzle in ASCO
+            if puzzle == 'bucket' then
+                local ref = FindScriptObject('AS_Bucket')
+                ref.randoitem = name
+            end 
 
             --[[code for RankUp checks, each level is separate
             Handled by RankUpPlacer, spawned in CAJA levelscript]]
@@ -355,6 +359,10 @@ function Randomizer(Ob)
             if puzzle == 'bvDone' then
                 local ref = FindScriptObject('LevelDonePlacer')
                 ref.bvDone = name
+            end
+            if puzzle == 'llDone' then
+                local ref = FindScriptObject('LLDoneItemPlacer')
+                ref.llDone = name
             end
 
             --if more items need conditional changes, add code here

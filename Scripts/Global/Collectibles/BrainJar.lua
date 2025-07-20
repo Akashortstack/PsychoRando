@@ -83,6 +83,9 @@ function BrainJar(Ob)
 			foreach_entity_oftype('Global.Collectibles.BrainJar', function(ent) ent:proxHintOff() end)  
 		end
 
+		--edit sendMessage to Dart
+		self:sendMessage(Global.player, 'BrainJar', self.Name, 1)
+
 		local brain = SpawnScript('Global.Collectibles.Brain','Brain'..self.who,'self.who=\''..self.who..'\'',1)
 		brain:setPosition(self:getPosition())
 		brain:onItem('', Global.player)

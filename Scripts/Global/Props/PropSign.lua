@@ -13,7 +13,7 @@ function PropSign(Ob)
 		Ob.HeldRotZ = 0 -- Editable
 
 		--edit to make name appear in all levels. *STILL NEEDS LOCALIZATION*
-		Ob.displayName = "Sign"	--DIALOG=<<Sign>>
+		Ob.displayName = "Stop Sign"	--DIALOG=<<Stop Sign>>
 
 		Ob.pickupSpriteName = 'MM_Sign'
 		Ob.clutchAnim = 'Anims/DartNew/BodyParts/Hold_MM_Sign.jan' -- Editable

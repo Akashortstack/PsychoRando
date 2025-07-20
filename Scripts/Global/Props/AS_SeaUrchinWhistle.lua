@@ -40,10 +40,12 @@ function AS_SeaUrchinWhistle(Ob)
 		}
 	end
 
-	--edit to sendMessage to Dart on pickup
+	--edit to sendMessage to Dart on pickup, make sound if first time
 	function Ob:onAddedToInventory(data, from)
 		%Ob.Parent.onAddedToInventory(self, data, from)
-		--edit sendMessage to Dart
+		if (self.bReincarnated ~= 1) then
+			PlaySound(nil, LoadSound('YouWin'))
+		end
 		self:sendMessage(Global.player, 'RandoProp', self.Name, 1)	
 	end
 

@@ -1,3 +1,7 @@
+--[[
+NPC of Sasha used to block off access to the Main Campgrounds until
+Sasha's Button is collected.
+]]
 
 function RandoSasha(Ob)
 	if not Ob then
@@ -66,16 +70,16 @@ function RandoSasha(Ob)
 		self.responseHandler.bLinePriority = 1
 		self.responseHandler:addDialog(self.tDialogue)											
 		
-		----------- end setup of sasha's dialog tree  -------------
-
+		--list of potential Raz voicelines when speaking to Sasha, one picked at random
 		self.stateActivateResponses = {
 			"/CAGH000RA/",--DIALOG=<<Is this going to hurt?>>
+			"/CAGH001RA/",--DIALOG=<<Have you tested this thing out on humans yet?>>
 			"/CAFW004RA/",--DIALOG=<<Won\'t you help?>>
 			"/CAGH002RA/",--DIALOG=<<Will I get in trouble with Milla? She told me not to take any paranormal training while I'm here.>>
 			"/CAGH003RA/",--DIALOG=<<Could you try it first?>>
 		}
 
-        self:setState(nil)
+        --self:setState(nil)
 		
 	end
 	
@@ -102,8 +106,10 @@ function RandoSasha(Ob)
 	end
 
 	function Ob:stateActivateResponseState()
-		local responseCode = self.stateActivateResponses[RandInt(1, 4)]
+		--picks a random voiceline from table for Raz
+		local responseCode = self.stateActivateResponses[RandInt(1, 5)]
 		Global.player:sayLine(responseCode, 1, 1, nil, 1, nil, 1)
+		--same response from Sasha every time
 		self:sayLine("/SLAM002SA/", 1, 0, nil, 1, nil, 1) --DIALOG=<<Step up to the brain tumbler when you\'re ready.>>
 		self:setState(nil)
 	end

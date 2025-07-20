@@ -505,6 +505,9 @@ function Dart(Ob)
 		Ob.TIMER_DETONATE_ENTITIES_ACROSS_FRAMES = '1011'
 		Ob.TIMER_HEALTH_REGENERATION = '1012'
 
+		--edit New Timer for Vault Text
+		Ob.TIMER_VAULT_REWARD = '1013'
+
 		-- PSI POWER RANKING VARIABLES
 		-- Many of these are only read by the engine; don't delete them just because you don't see scripts that refer to them.
 		Ob.PsiBlastRange = 2000         -- starting range    
@@ -1073,7 +1076,9 @@ function Dart(Ob)
 			'RandoHatboxTag', 'RandoSuitcaseTag', 'RandoPurseTag', 'RandoSteamertrunkTag', 'RandoDufflebagTag',
 			'RandoLevitation', 'RandoClairvoyance', 'RandoConfusion', 'RandoFirestarting', 'RandoInvisibility', 'RandoMarksmanship', 'RandoShield', 'RandoTelekinesis',
 			'ArrowheadBundleSmall', 'ArrowheadBundleMedium',
-			'CollectedVault', 'RandoPsiCard', 'RandoPsiMarker', 'RandoLivesUp', 'RandoAmmoUp', 'RandoProp',
+			'CollectedVault', 'RandoPsiCard', 'RandoPsiMarker', 'RandoLivesUp', 'RandoAmmoUp', 'RandoProp', 'BrainJar',
+			--edit AP StatName
+			'APItem', 'APPlaceholder', 'APLastIndex',
 			}
 
 	--Called whenever the player saves their game
@@ -1183,7 +1188,19 @@ function Dart(Ob)
 			self.stats[statID] = {}
 		--edit adding all RandoProp Items as Table
 		elseif statID == 'RandoProp' then
-			self.stats[statID] = {}				
+			self.stats[statID] = {}
+		--edit adding BrainJar Items as Table
+		elseif statID == 'BrainJar' then
+			self.stats[statID] = {}	
+		--edit adding all APItem Items as Table
+		elseif statID == 'APItem' then
+			self.stats[statID] = {}
+		--edit adding all APPlaceholder Items as Table
+		elseif statID == 'APPlaceholder' then
+			self.stats[statID] = {}
+		--edit adding last item index from Archipelago
+		elseif statID == 'APLastIndex' then
+			self.stats[statID] = -1
 		else
 			self.stats[statID] = 0
 		end
@@ -1224,6 +1241,12 @@ function Dart(Ob)
 			return nil
 		end
 
+		--edit Adjust value with damage multiplier, unless Instant Death
+		local seedsettings = fso('RandoSeed', 'Randoseed')
+		if value < 0 and seedsettings.instantdeath == FALSE then
+			value = (value*seedsettings.enemydamagemultiplier)
+		end
+
 		value = tonumber(value)
 		
 		--this will unset the paused chase cam, anytime raz is damaged (and possibly moved, or respawn)
@@ -1242,7 +1265,6 @@ function Dart(Ob)
 		end
 		
 		--edit to introduce 1 Hit KO Setting
-		local seedsettings = fso('RandoSeed', 'Randoseed')
 		if seedsettings.instantdeath == TRUE then
 			if (self.stats.psiHealth < self.stats.maxHealth) then
 				self.stats.psiHealth = 0 
@@ -1280,7 +1302,7 @@ function Dart(Ob)
 			return
 		end
 		
-		if (value < 0 and bDontPlaySound ~= 1) then
+		if (value <= 0 and bDontPlaySound ~= 1) then
 			self:sayRandomOuchLines()
 		end
 		
@@ -1938,7 +1960,17 @@ function Dart(Ob)
 		if (Global.levelScript.demoLevel == 1) then
 			GamePrint('Dart has died, but this is a demo level.  Respawning.')
 			self:setState('Respawn')
-		elseif self.stats.dartLives <= 0 and Global.levelScript.levelType == 'mental' then
+
+		--edit return to CU when running out of lives, NO MATTER WHAT
+		elseif self.stats.dartLives <= 0 then
+			GamePrint('Dart has died and is out of lives.  Returning to real world.')
+
+			self:deathSequence(1)
+			
+			Global:saveGlobal('bKickedOut', 1)
+			Global.levelScript:returnToCU()
+
+		--[[elseif self.stats.dartLives <= 0 and Global.levelScript.levelType == 'mental' then
 			GamePrint('Dart has died and is out of lives.  Returning to real world.')
 
 			self:deathSequence(1)
@@ -1978,7 +2010,7 @@ function Dart(Ob)
 				else
 					Global.levelScript:loadNewLevel('CAKC')
 				end
-			end
+			end]]
 		else
 			GamePrint('Dart has died, but is not in a mental world, or is not out of lives.  Respawning.')
 			self:setState('Respawn')
@@ -2427,6 +2459,7 @@ function Dart(Ob)
 -- ****************************************************************************
 
 	function Ob:onBrain(brainID,from)
+
 		brainID = strlower(brainID)	-- make sure brainID is all lowercase because that's how we store them to be safe
 		if not brainID then
 			GamePrint('ERROR: Brain '..from.Name..' had nil ID.')
@@ -2438,7 +2471,8 @@ function Dart(Ob)
 		end
 		self.stats.totalBrainsHeld = self.stats.totalBrainsHeld + 1
 		self.stats.brainsFromLevel = self.stats.brainsFromLevel + 1
-		self.stats.brains[brainID] = 'held'
+		self.stats.brains[brainID] = 'held'	
+
 	end
 
 -- ****************************************************************************
@@ -2459,6 +2493,22 @@ function Dart(Ob)
 		self.stats.totalBrainsRedeemed = self.stats.totalBrainsRedeemed + 1		
 		self.stats.brains[brainID] = 'redeemed'
 		self:incrementMaxHealth(1)
+
+		--edit check for Victory Condition
+		local seedsettings = fso('RandoSeed', 'Randoseed')
+		--find the matching seed folder in ModData
+        local folderName = seedsettings.APfoldername
+        local filePath = folderName.."/victory.txt"
+		if seedsettings.brainhunt == TRUE and seedsettings.requireMC == FALSE then
+			if seedsettings.beatoleander == FALSE or Global:loadGlobal('bOleanderDefeated') == 1 then
+				if self.stats.totalBrainsRedeemed >= seedsettings.brainsrequired then
+					--write to text file for client to read
+					local h = fopen(filePath, "w")
+					fwrite(h, "victory\n")
+					fclose(h)
+				end
+			end
+		end
 
 		if self.stats.totalBrainsRedeemed == 19 then
 			UnlockAchievement('ACH_RET_ALLBRAINS')
@@ -2714,7 +2764,15 @@ function Dart(Ob)
 	function Ob:onCollectedCobweb(value,from)
 		value = (value and tonumber(value)) or 1
 		self.stats.cobwebs = self.stats.cobwebs + value
-		self.stats.websInInv = self.stats.websInInv + value
+		-- Check if Cobweb Shuffle is enabled.
+		local settings = FindScriptObject('RandoSeed')
+		if settings.cobwebShuffle == TRUE then
+			-- Send an AP location check instead of adding a cobweb to the player's inventory.
+			local cobwebShuffle = fso('APCobwebShuffle', 'APCobwebShuffle')
+			cobwebShuffle:collectedCobweb(from.Name)
+		else
+			self.stats.websInInv = self.stats.websInInv + value
+		end
 		self.stats.cobwebsFromEntireLevel = self.stats.cobwebsFromEntireLevel + value
 
 		if self.stats.cobwebsFromEntireLevel == Global.cobwebsPerLevel[Global.levelScript:getLevelPrefix()] then
@@ -2776,60 +2834,66 @@ function Dart(Ob)
 	end
 
 -- ****************************************************************************
+--AP Collection Helper. Returns whether to write to item specific save data.
+	function Ob:genericAPCollect(name)
+		-- '_' prefix specifies that the item is a non-local copy received from the AP multiworld.
+		if strsub(name, 1, 1) == '_' then
+			GamePrint('Collected non-local copy ' .. name)
+			-- There should be no item that spawns in a level whose name matches this item.
+			return FALSE
+		else
+			self.stats.APItem[name] = 'collected'
+			-- Tell AP that the locally placed item has been collected from its location, sending an item out into the
+			-- multiworld if the item was an AP placeholder.
+			local apcollect = fso('APCollected', 'APCollected')
+			apcollect:writeCollectedItem(name)
+			GamePrint('Collected and stored local ' .. name)
+			-- Item specific save data should be written to. This prevents the item from spawning again when loading the
+			-- level again.
+			return TRUE
+		end
+	end
+
+-- ****************************************************************************
 
 ------CUSTOM BAGGAGE TAG HANDLER------
 --Stores Collected BaggageTag, Global Key
 	function Ob:onCollectedSuitcaseTag(name,from)
-		self.stats.RandoSuitcaseTag[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoSuitcaseTag[name] = 'collected'
+		end
 		local value = 1
 		self.stats.CollectedSuitcaseTag = self.stats.CollectedSuitcaseTag + value
 	end
 
 	function Ob:onCollectedPurseTag(name,from)
-		self.stats.RandoPurseTag[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoPurseTag[name] = 'collected'
+		end
 		local value = 1
 		self.stats.CollectedPurseTag = self.stats.CollectedPurseTag + value
 	end
 
 	function Ob:onCollectedHatboxTag(name,from)
-		self.stats.RandoHatboxTag[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoHatboxTag[name] = 'collected'
+		end
 		local value = 1
 		self.stats.CollectedHatboxTag = self.stats.CollectedHatboxTag + value
 	end
 
 	function Ob:onCollectedSteamertrunkTag(name,from)
-		self.stats.RandoSteamertrunkTag[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoSteamertrunkTag[name] = 'collected'
+		end
 		local value = 1
 		self.stats.CollectedSteamertrunkTag = self.stats.CollectedSteamertrunkTag + value
 	end
 
 	function Ob:onCollectedDufflebagTag(name,from)
-		self.stats.RandoDufflebagTag[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoDufflebagTag[name] = 'collected'
+		end
 		local value = 1
 		self.stats.CollectedDufflebagTag = self.stats.CollectedDufflebagTag + value
 	end
@@ -2840,10 +2904,9 @@ function Dart(Ob)
 --Removes Baggage Tag from inventory, stores Collected Baggage, Increases Rank, Global Lock
 	function Ob:onCollectedSuitcase(name,from)
 		self.stats.RandoSuitcase[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		self.stats.APItem[name] = 'collected'
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedSuitcaseTag = self.stats.CollectedSuitcaseTag - value
@@ -2852,10 +2915,9 @@ function Dart(Ob)
 
 	function Ob:onCollectedPurse(name,from)
 		self.stats.RandoPurse[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		self.stats.APItem[name] = 'collected'
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedPurseTag = self.stats.CollectedPurseTag - value
@@ -2864,10 +2926,9 @@ function Dart(Ob)
 
 	function Ob:onCollectedHatbox(name,from)
 		self.stats.RandoHatbox[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		self.stats.APItem[name] = 'collected'
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedHatboxTag = self.stats.CollectedHatboxTag - value
@@ -2876,10 +2937,9 @@ function Dart(Ob)
 
 	function Ob:onCollectedSteamertrunk(name,from)
 		self.stats.RandoSteamertrunk[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		self.stats.APItem[name] = 'collected'
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedSteamertrunkTag = self.stats.CollectedSteamertrunkTag - value
@@ -2888,10 +2948,9 @@ function Dart(Ob)
 
 	function Ob:onCollectedDufflebag(name,from)
 		self.stats.RandoDufflebag[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		self.stats.APItem[name] = 'collected'
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
 		self.stats.CollectedDufflebagTag = self.stats.CollectedDufflebagTag - value
@@ -2903,75 +2962,51 @@ function Dart(Ob)
 	------CUSTOM RANDOPSIPOWERS HANDLERS------
 	--Stores Collected RandoPsiPowers and Progressive Powerups
 	function Ob:onRandoClairvoyance(name,from)
-		self.stats.RandoClairvoyance[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoClairvoyance[name] = 'collected'
+		end
 	end
 
 	function Ob:onRandoConfusion(name,from)
-		self.stats.RandoConfusion[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoConfusion[name] = 'collected'
+		end
 	end
 
 	function Ob:onRandoFirestarting(name,from)
-		self.stats.RandoFirestarting[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoFirestarting[name] = 'collected'
+		end
 	end
 
 	function Ob:onRandoInvisibility(name,from)
-		self.stats.RandoInvisibility[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoInvisibility[name] = 'collected'
+		end
 	end
 
 	function Ob:onRandoLevitation(name,from)
-		self.stats.RandoLevitation[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoLevitation[name] = 'collected'
+		end
 	end
 
 	function Ob:onRandoMarksmanship(name,from)
-		self.stats.RandoMarksmanship[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoMarksmanship[name] = 'collected'
+		end
 	end
 
 	function Ob:onRandoShield(name,from)
-		self.stats.RandoShield[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoShield[name] = 'collected'
+		end
 	end
 
 	function Ob:onRandoTelekinesis(name,from)
-		self.stats.RandoTelekinesis[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoTelekinesis[name] = 'collected'
+		end
 	end
 
 -- ****************************************************************************
@@ -2979,12 +3014,9 @@ function Dart(Ob)
 	------CUSTOM RANDOPSICARD HANDLER------
 	--Stores Collected RandoPsiCard
 	function Ob:onRandoPsiCard(name,from)
-		self.stats.RandoPsiCard[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoPsiCard[name] = 'collected'
+		end
 	end
 
 -- ****************************************************************************
@@ -2992,12 +3024,9 @@ function Dart(Ob)
 	------CUSTOM RANDOPSIMARKER HANDLER------
 	--Stores Collected RandoPsiMarker
 	function Ob:onRandoPsiMarker(name,from)
-		self.stats.RandoPsiMarker[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoPsiMarker[name] = 'collected'
+		end
 	end
 
 -- ****************************************************************************
@@ -3005,26 +3034,72 @@ function Dart(Ob)
 	------CUSTOM RANDOPROP HANDLER------
 	--Stores Collected Prop
 	function Ob:onRandoProp(name,from)
-		self.stats.RandoProp[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		--check to make sure it's not being reincarnated in inventory
+		if self.stats.RandoProp[name] ~= 'collected' then
+			self.stats.RandoProp[name] = 'collected'
+			self.stats.APItem[name] = 'collected'
+			local apcollect = fso('APCollected', 'APCollected')
+			apcollect:writeCollectedItem(name)
+			GamePrint('Stored '..name)
+		end
 	end
 
 -- ****************************************************************************
 	------CUSTOM VAULT HANDLER------
 	--Stores CollectedVault, Increases Rank when you open a vault
 	function Ob:onCollectedVault(name,from)
-		self.stats.CollectedVault[name] = 'collected' 
+		if self:genericAPCollect(name) then
+			self.stats.CollectedVault[name] = 'collected'
+		end
 		self.stats.totalVaults = self.stats.totalVaults+1
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h)
-		GamePrint('Stored '..name)
-		self:incrementRank()
+
+		local seedsettings = fso('RandoSeed', 'Randoseed')
+		if seedsettings.lootboxvaults == TRUE then
+			--Random Rewards! Loot Box!
+			--Random value of arrowheads to receive
+			self.randArrows = random (10, 50)
+			--Roll some RNG for Jackpots/Ranks to recieve
+			self.jackpotArrows = random (1, 50)
+			self.jackpotRanks = random (1, 50)
+		else
+			--Make Result Static, One Rank and 15 Arrowheads
+			self.randArrows = 15
+			self.jackpotArrows = 1
+			self.jackpotRanks = 26
+		end
+		
+		--2% chance for 250 arrowheads instead
+		if self.jackpotArrows == 50 then
+			UI_AdjustCollectible('arrowhead', 250, self)
+			SendMessage(self, self, 'Arrowhead', 250)
+			self.arrowsMessage = "250!!"
+		--8% chance for 100 arrowheads instead
+		elseif self.jackpotArrows >= 46 then
+			UI_AdjustCollectible('arrowhead', 100, self)
+			SendMessage(self, self, 'Arrowhead', 100)
+			self.arrowsMessage = "100!!"
+		else
+			UI_AdjustCollectible('arrowhead', self.randArrows, self)
+			SendMessage(self, self, 'Arrowhead', self.randArrows)
+			self.arrowsMessage = self.randArrows
+		end
+
+		--2% chance for 5 Ranks
+		if self.jackpotRanks == 50 then
+			self:incrementRank(5)
+			self.rankMessage = "Five Ranks!!!"
+		--8% chance for Two Ranks
+		elseif self.jackpotRanks >= 46 then
+			self:incrementRank(2)
+			self.rankMessage = "Two Ranks!"
+		--50% chance for One Rank
+		elseif self.jackpotRanks >= 26 then
+			self:incrementRank()
+			self.rankMessage = "One Rank!"
+		else
+			self.rankMessage = "None..."
+		end
+		
 	end
 
 -- ****************************************************************************
@@ -3032,21 +3107,15 @@ function Dart(Ob)
 	------CUSTOM MAXLIVES AND MAXAMMO HANDLER------
 	--Stores RandoLivesUp and RandoAmmoUp
 	function Ob:onRandoLivesUp(name,from)
-		self.stats.RandoLivesUp[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoLivesUp[name] = 'collected'
+		end
 	end
 
 	function Ob:onRandoAmmoUp(name,from)
-		self.stats.RandoAmmoUp[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.RandoAmmoUp[name] = 'collected'
+		end
 	end
 
 -- ****************************************************************************
@@ -3054,20 +3123,38 @@ function Dart(Ob)
 	------CUSTOM ARROWHEADBUNDLE HANDLERS------
 	--Stores collected ArrowheadBundles
 	function Ob:onArrowheadBundleSmall(name,from)
-		self.stats.ArrowheadBundleSmall[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
-		GamePrint('Stored '..name)
+		if self:genericAPCollect(name) then
+			self.stats.ArrowheadBundleSmall[name] = 'collected'
+		end
 	end
 
 	function Ob:onArrowheadBundleMedium(name,from)
-		self.stats.ArrowheadBundleMedium[name] = 'collected'
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, name.."\n")
-		fclose(h) 
+		if self:genericAPCollect(name) then
+			self.stats.ArrowheadBundleMedium[name] = 'collected'
+		end
+	end
+
+-- ****************************************************************************
+
+	------CUSTOM BRAINJAR HANDLERS------
+	--Stores collected BrainJars
+	function Ob:onBrainJar(name,from)
+		self.stats.BrainJar[name] = 'collected'
+		self.stats.APItem[name] = 'collected'
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
+		GamePrint('Stored '..name)
+	end
+
+-- ****************************************************************************
+
+	------CUSTOM APPLACEHOLDER HANDLERS------
+	--Stores collected APPlaceholders
+	function Ob:onAPPlaceholder(name,from)
+		self.stats.APPlaceholder[name] = 'collected'
+		self.stats.APItem[name] = 'collected'
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 	end
 
@@ -3077,10 +3164,10 @@ function Dart(Ob)
 		self.stats.scavengerHuntItems[ItemID] = 'unredeemed'
 		self.stats.numUnredeemedScavengerHuntItems = self.stats.numUnredeemedScavengerHuntItems + 1
 		self.stats.scavItemsFromLevel = self.stats.scavItemsFromLevel + 1
-		--write to text file for storage
-		local h = fopen("ItemsCollected.txt", "a")
-		fwrite(h, ItemID)
-		fclose(h)
+		self.stats.APItem[ItemID] = 'collected'
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(ItemID)
+
 	end
 
 -- ****************************************************************************
@@ -3124,9 +3211,10 @@ function Dart(Ob)
 -- ****************************************************************************
 
 	function Ob:onEmotionalBaggage(sBaggageType,from)
-		if self.stats.baggageCollected[sBaggageType] == 1 then
-			GamePrint('ERROR! Some how Raz picked up '.. sBaggageType .. 'twice in this level')
-		else
+		--edit adjusteed to ignore dupluicate baggage in a level
+		--if self.stats.baggageCollected[sBaggageType] == 1 then
+		--	GamePrint('ERROR! Some how Raz picked up '.. sBaggageType .. 'twice in this level')
+		--else
 			self.stats.baggageCollected[sBaggageType] = 1
 			self.stats.EmotionalBaggageSolved = self.stats.EmotionalBaggageSolved + 1
 			self.stats.baggageMatched = self.stats.baggageMatched + 1
@@ -3138,7 +3226,7 @@ function Dart(Ob)
 				Global:save('bEmoBagsComplete', 1)
 				self:collectibleBling("/GLZD438TO/\n/GLZD440TO/", 'Textures/Objects/vault_reel_front_2.dds')
 			end]]
-		end
+		--end
 	end
 
 	--Shows collectible bling after rankup cheer is done

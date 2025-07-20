@@ -14,7 +14,7 @@ function Positions(Ob)
             --CA, CAMPGROUNDS
 
             --CASA, Sasha's Lab
-            item1 = {        
+            position1 = {        
                 levelName = 'CASA',
                 x = 1032, 
                 y = 8, 
@@ -23,7 +23,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item2 = {        
+            position2 = {        
                 levelName = 'CASA',
                 x = 505, 
                 y = 846, 
@@ -32,7 +32,7 @@ function Positions(Ob)
                 oy = 180,
                 oz = 0,
             },
-            item3 = {        
+            position3 = {        
                 levelName = 'CASA',
                 x = 20, 
                 y = 1907, 
@@ -43,7 +43,7 @@ function Positions(Ob)
             },
 
             --CAGP, GPC & Wilderness
-            item4 = {        
+            position4 = {        
                 levelName = 'CAGP',
                 x = 6257, 
                 y = 2282, 
@@ -52,7 +52,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item5 = {        
+            position5 = {        
                 levelName = 'CAGP',
                 x = 7253, 
                 y = 556, 
@@ -61,7 +61,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item6 = {        
+            position6 = {        
                 levelName = 'CAGP',
                 x = 2955, 
                 y = 866, 
@@ -70,7 +70,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item7 = {        
+            position7 = {        
                 levelName = 'CAGP',
                 x = 8571, 
                 y = 628, 
@@ -79,7 +79,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item8 = {        
+            position8 = {        
                 levelName = 'CAGP',
                 x = 10620, 
                 y = 1122, 
@@ -88,7 +88,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item9 = {        
+            position9 = {        
                 levelName = 'CAGP',
                 x = 11570, 
                 y = 1996, 
@@ -97,7 +97,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item10 = {        
+            position10 = {        
                 levelName = 'CAGP',
                 x = 9382, 
                 y = 460, 
@@ -106,7 +106,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item11 = {        
+            position11 = {        
                 levelName = 'CAGP',
                 x = 10946, 
                 y = 78, 
@@ -115,7 +115,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item12 = {        
+            position12 = {        
                 levelName = 'CAGP',
                 x = 8753, 
                 y = 621, 
@@ -124,7 +124,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item13 = {        
+            position13 = {        
                 levelName = 'CAGP',
                 x = 6018, 
                 y = 607, 
@@ -133,7 +133,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item14 = {        
+            position14 = {        
                 levelName = 'CAGP',
                 x = 3200, 
                 y = 1086, 
@@ -142,7 +142,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item15 = {        
+            position15 = {        
                 levelName = 'CAGP',
                 x = 1626, 
                 y = 1730, 
@@ -151,7 +151,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item16 = {        
+            position16 = {        
                 levelName = 'CAGP',
                 x = 266, 
                 y = 2537, 
@@ -160,7 +160,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item17 = {        
+            position17 = {        
                 levelName = 'CAGP',
                 x = -1400, 
                 y = 1815, 
@@ -169,7 +169,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item18 = {        
+            position18 = {        
                 levelName = 'CAGP',
                 x = -3200, 
                 y = -85, 
@@ -178,7 +178,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item19 = {        
+            position19 = {        
                 levelName = 'CAGP',
                 x = 1798, 
                 y = 1349, 
@@ -187,7 +187,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item20 = {        
+            position20 = {        
                 levelName = 'CAGP',
                 x = 67, 
                 y = 666, 
@@ -196,7 +196,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item21 = {        
+            position21 = {        
                 levelName = 'CAGP',
                 x = 5703, 
                 y = 2543, 
@@ -205,7 +205,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item22 = {        
+            position22 = {        
                 levelName = 'CAGP',
                 x = 7571, 
                 y = 2747, 
@@ -214,7 +214,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item23 = {        
+            position23 = {        
                 levelName = 'CAGP',
                 x = 6913, 
                 y = 4212, 
@@ -223,7 +223,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item24 = {        
+            position24 = {        
                 levelName = 'CAGP',
                 x = 9262, 
                 y = 1626, 
@@ -232,7 +232,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item25 = {        
+            position25 = {        
                 levelName = 'CAGP',
                 x = 4863, 
                 y = -150, 
@@ -242,7 +242,7 @@ function Positions(Ob)
                 oz = 0,
             },
             --Squirrel Puzzle
-            item26 = {        
+            position26 = {        
                 levelName = 'CAGP',
                 x = 10455, 
                 y = 0, 
@@ -253,7 +253,7 @@ function Positions(Ob)
                 puzzle = 'squirrel'
             },
             --Two Geysers puzzle
-            item27 = {        
+            position27 = {        
                 levelName = 'CAGP',
                 x = 10498, 
                 y = -34, 
@@ -265,7 +265,7 @@ function Positions(Ob)
             },
             
             --CAMA, Main Campgrounds
-            item28 = {        
+            position28 = {        
                 levelName = 'CAMA',
                 x = -10705, 
                 y = 4058, 
@@ -274,7 +274,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item29 = {        
+            position29 = {        
                 levelName = 'CAMA',
                 x = -5943, 
                 y = 3684, 
@@ -283,7 +283,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item30 = {        
+            position30 = {        
                 levelName = 'CAMA',
                 x = -1053, 
                 y = 4746, 
@@ -292,7 +292,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item31 = {        
+            position31 = {        
                 levelName = 'CAMA',
                 x = -4279, 
                 y = 4537, 
@@ -301,7 +301,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item32 = {        
+            position32 = {        
                 levelName = 'CAMA',
                 x = -681, 
                 y = 5333, 
@@ -310,7 +310,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item33 = {        
+            position33 = {        
                 levelName = 'CAMA',
                 x = -3949, 
                 y = 6050, 
@@ -319,7 +319,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item34 = {        
+            position34 = {        
                 levelName = 'CAMA',
                 x = -3423, 
                 y = 6213, 
@@ -328,7 +328,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item35 = {        
+            position35 = {        
                 levelName = 'CAMA',
                 x = -4785, 
                 y = 6022, 
@@ -337,7 +337,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item36 = {        
+            position36 = {        
                 levelName = 'CAMA',
                 x = -4655, 
                 y = 6811, 
@@ -346,7 +346,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item37 = {        
+            position37 = {        
                 levelName = 'CAMA',
                 x = -4452, 
                 y = 5881, 
@@ -355,7 +355,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item38 = {        
+            position38 = {        
                 levelName = 'CAMA',
                 x = -9584, 
                 y = 5164, 
@@ -364,7 +364,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item39 = {        
+            position39 = {        
                 levelName = 'CAMA',
                 x = -13491, 
                 y = 3037, 
@@ -373,7 +373,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item40 = {        
+            position40 = {        
                 levelName = 'CAMA',
                 x = -13157, 
                 y = 2954, 
@@ -382,7 +382,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item41 = {        
+            position41 = {        
                 levelName = 'CAMA',
                 x = -14181, 
                 y = 2745, 
@@ -391,7 +391,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item42 = {        
+            position42 = {        
                 levelName = 'CAMA',
                 x = -19302, 
                 y = 2531, 
@@ -400,7 +400,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item43 = {        
+            position43 = {        
                 levelName = 'CAMA',
                 x = -18501, 
                 y = 228, 
@@ -409,7 +409,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item44 = {        
+            position44 = {        
                 levelName = 'CAMA',
                 x = -18284, 
                 y = 899, 
@@ -418,7 +418,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item45 = {        
+            position45 = {        
                 levelName = 'CAMA',
                 x = -23384, 
                 y = 504, 
@@ -427,7 +427,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item46 = {        
+            position46 = {        
                 levelName = 'CAMA',
                 x = -20810, 
                 y = 977, 
@@ -436,7 +436,7 @@ function Positions(Ob)
                 oy = 180,
                 oz = 0,
             },
-            item47 = {        
+            position47 = {        
                 levelName = 'CAMA',
                 x = -20821, 
                 y = 1018, 
@@ -445,7 +445,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item48 = {        
+            position48 = {        
                 levelName = 'CAMA',
                 x = -14761, 
                 y = 1839, 
@@ -456,7 +456,7 @@ function Positions(Ob)
             },
 
             --CAKC, Kids Cabins
-            item49 = {          
+            position49 = {          
                 levelName = 'CAKC',
                 x = -3621, 
                 y = 5509, 
@@ -465,7 +465,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item50 = {            
+            position50 = {            
                 levelName = 'CAKC',
                 x = -5629,   
                 y = 4510, 
@@ -474,7 +474,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item51 = {        
+            position51 = {        
                 levelName = 'CAKC',
                 x = -3861, 
                 y = 5656, 
@@ -483,7 +483,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item52 = {        
+            position52 = {        
                 levelName = 'CAKC',
                 x = -4437,   
                 y = 5240, 
@@ -492,7 +492,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item53 = {        
+            position53 = {        
                 levelName = 'CAKC',
                 x = -5826,   
                 y = 5921, 
@@ -501,7 +501,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item54 = {        
+            position54 = {        
                 levelName = 'CAKC',
                 x = -5282, 
                 y = 7580, 
@@ -510,7 +510,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item55 = {
+            position55 = {
                 levelName = 'CAKC',
                 x = -6662,   
                 y = 4834, 
@@ -519,7 +519,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item56 = {        
+            position56 = {        
                 levelName = 'CAKC',
                 x = -8250,   
                 y = 4672, 
@@ -528,7 +528,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item57 = {        
+            position57 = {        
                 levelName = 'CAKC',
                 x = -8245,   
                 y = 5489, 
@@ -537,7 +537,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item58 = {        
+            position58 = {        
                 levelName = 'CAKC',
                 x = -8241, 
                 y = 6295, 
@@ -546,7 +546,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item59 = {
+            position59 = {
                 levelName = 'CAKC',
                 x = -6797,   
                 y = 3365, 
@@ -555,7 +555,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item60 = {            
+            position60 = {            
                 levelName = 'CAKC',
                 x = -8613,   
                 y = 3409, 
@@ -564,7 +564,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item61 = {        
+            position61 = {        
                 levelName = 'CAKC',
                 x = -9914, 
                 y = 8434, 
@@ -574,7 +574,7 @@ function Positions(Ob)
                 oz = 0,
             },
             --Ice Block Puzzle
-            item62 = {        
+            position62 = {        
                 levelName = 'CAKC',
                 x = -4885, 
                 y = 4255, 
@@ -586,7 +586,7 @@ function Positions(Ob)
             },
 
             --CARE, Reception Area
-            item63 = {        
+            position63 = {        
                 levelName = 'CARE',
                 x = -22146, 
                 y = 1329, 
@@ -595,7 +595,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item64 = {        
+            position64 = {        
                 levelName = 'CARE',
                 x = -19190, 
                 y = 409, 
@@ -604,7 +604,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item65 = {        
+            position65 = {        
                 levelName = 'CARE',
                 x = -16137, 
                 y = -161, 
@@ -613,7 +613,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item66 = {        
+            position66 = {        
                 levelName = 'CARE',
                 x = -16401, 
                 y = 1240, 
@@ -622,7 +622,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item67 = {        
+            position67 = {        
                 levelName = 'CARE',
                 x = -18895, 
                 y = 763, 
@@ -631,7 +631,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item68 = {        
+            position68 = {        
                 levelName = 'CARE',
                 x = -18291, 
                 y = 1305, 
@@ -640,7 +640,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item69 = {        
+            position69 = {        
                 levelName = 'CARE',
                 x = -17152, 
                 y = 2097, 
@@ -649,7 +649,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item70 = {        
+            position70 = {        
                 levelName = 'CARE',
                 x = -15952, 
                 y = 1742, 
@@ -658,7 +658,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item71 = {        
+            position71 = {        
                 levelName = 'CARE',
                 x = -13590, 
                 y = 1378, 
@@ -667,7 +667,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item72 = {        
+            position72 = {        
                 levelName = 'CARE',
                 x = -14063, 
                 y = 1328, 
@@ -676,7 +676,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item73 = {        
+            position73 = {        
                 levelName = 'CARE',
                 x = -12774, 
                 y = 1195, 
@@ -685,7 +685,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item74 = {        
+            position74 = {        
                 levelName = 'CARE',
                 x = -10781, 
                 y = 1949, 
@@ -694,7 +694,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item75 = {        
+            position75 = {        
                 levelName = 'CARE',
                 x = -11233, 
                 y = 119, 
@@ -703,7 +703,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item76 = {        
+            position76 = {        
                 levelName = 'CARE',
                 x = -7218, 
                 y = 489, 
@@ -712,7 +712,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item77 = {        
+            position77 = {        
                 levelName = 'CARE',
                 x = -7650, 
                 y = 458, 
@@ -721,7 +721,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item78 = {        
+            position78 = {        
                 levelName = 'CARE',
                 x = -9140, 
                 y = 1094, 
@@ -730,7 +730,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item79 = {        
+            position79 = {        
                 levelName = 'CARE',
                 x = -8918, 
                 y = 319, 
@@ -739,7 +739,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item80 = {        
+            position80 = {        
                 levelName = 'CARE',
                 x = -12076, 
                 y = 1170, 
@@ -748,7 +748,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item81 = {        
+            position81 = {        
                 levelName = 'CARE',
                 x = -11880, 
                 y = 1270, 
@@ -757,7 +757,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item82 = {        
+            position82 = {        
                 levelName = 'CARE',
                 x = -11871, 
                 y = 2059, 
@@ -766,7 +766,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item83 = {        
+            position83 = {        
                 levelName = 'CARE',
                 x = -12362, 
                 y = 552, 
@@ -775,7 +775,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item84 = {        
+            position84 = {        
                 levelName = 'CARE',
                 x = -14396, 
                 y = -981, 
@@ -784,7 +784,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item85 = {        
+            position85 = {        
                 levelName = 'CARE',
                 x = -12376, 
                 y = 766, 
@@ -793,7 +793,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item86 = {        
+            position86 = {        
                 levelName = 'CARE',
                 x = -14964, 
                 y = 1414, 
@@ -802,7 +802,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item87 = {        
+            position87 = {        
                 levelName = 'CARE',
                 x = -16416, 
                 y = 3254, 
@@ -811,7 +811,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item88 = {        
+            position88 = {        
                 levelName = 'CARE',
                 x = -10000, 
                 y = -10000, 
@@ -823,7 +823,7 @@ function Positions(Ob)
             },
                         
             --CABH, Lake/Boat House
-            item89 = {        
+            position89 = {        
                 levelName = 'CABH',
                 x = 3817, 
                 y = 1411, 
@@ -832,7 +832,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item90 = {        
+            position90 = {        
                 levelName = 'CABH',
                 x = 7382, 
                 y = 747, 
@@ -841,7 +841,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item91 = {        
+            position91 = {        
                 levelName = 'CABH',
                 x = 9243, 
                 y = 1861, 
@@ -850,7 +850,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item92 = {        
+            position92 = {        
                 levelName = 'CABH',
                 x = 13225, 
                 y = 709, 
@@ -859,7 +859,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item93 = {        
+            position93 = {        
                 levelName = 'CABH',
                 x = 14043, 
                 y = 1715, 
@@ -868,7 +868,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item94 = {        
+            position94 = {        
                 levelName = 'CABH',
                 x = 13397, 
                 y = 378, 
@@ -877,7 +877,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item95 = {        
+            position95 = {        
                 levelName = 'CABH',
                 x = 10974, 
                 y = 955, 
@@ -886,7 +886,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item96 = {        
+            position96 = {        
                 levelName = 'CABH',
                 x = 9722, 
                 y = 1326, 
@@ -895,7 +895,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item97 = {        
+            position97 = {        
                 levelName = 'CABH',
                 x = 8979, 
                 y = 2250, 
@@ -904,7 +904,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item98 = {        
+            position98 = {        
                 levelName = 'CABH',
                 x = 6988, 
                 y = 2114, 
@@ -913,7 +913,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item99 = {        
+            position99 = {        
                 levelName = 'CABH',
                 x = 6025, 
                 y = 2423, 
@@ -922,7 +922,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item100 = {        
+            position100 = {        
                 levelName = 'CABH',
                 x = 7494, 
                 y = 720, 
@@ -931,7 +931,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item101 = {        
+            position101 = {        
                 levelName = 'CABH',
                 x = 5066, 
                 y = 2685, 
@@ -940,7 +940,7 @@ function Positions(Ob)
                 oy = 164,
                 oz = 0,
             },
-            item102 = {        
+            position102 = {        
                 levelName = 'CABH',
                 x = 4637, 
                 y = 2674, 
@@ -949,7 +949,7 @@ function Positions(Ob)
                 oy = 155,
                 oz = 0,
             },
-            item103 = {        
+            position103 = {        
                 levelName = 'CABH',
                 x = 7218, 
                 y = 2356, 
@@ -958,7 +958,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item104 = {        
+            position104 = {        
                 levelName = 'CABH',
                 x = 12594, 
                 y = 375, 
@@ -967,7 +967,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item105 = {        
+            position105 = {        
                 levelName = 'CABH',
                 x = 11949, 
                 y = 421, 
@@ -976,7 +976,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item106 = {        
+            position106 = {        
                 levelName = 'CABH',
                 x = 10977, 
                 y = 2042, 
@@ -985,7 +985,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item107 = {        
+            position107 = {        
                 levelName = 'CABH',
                 x = 7812, 
                 y = 1673, 
@@ -996,7 +996,7 @@ function Positions(Ob)
             },
 
             --CALI, Lodge Non-Shop Items
-            item108 = {        
+            position108 = {        
                 levelName = 'CALI',
                 x = 7636, 
                 y = 984, 
@@ -1007,7 +1007,7 @@ function Positions(Ob)
             },
 
             --CAJA, Non-rank spawns
-            item109 = {        
+            position109 = {        
                 levelName = 'CAJA',
                 x = 2498, 
                 y = 1670, 
@@ -1016,7 +1016,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item110 = {        
+            position110 = {        
                 levelName = 'CAJA',
                 x = 3029, 
                 y = -36, 
@@ -1030,7 +1030,7 @@ function Positions(Ob)
             Spawns item for every 5 ranks, moved to Main Platform on Rank requirement
             ]]
             --Rank 5
-            item111 = {        
+            position111 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1041,7 +1041,7 @@ function Positions(Ob)
                 puzzle = 'rank5'
             },
             --Rank 10
-            item112 = {        
+            position112 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1052,7 +1052,7 @@ function Positions(Ob)
                 puzzle = 'rank10'
             },
             --Rank 15
-            item113 = {        
+            position113 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1063,7 +1063,7 @@ function Positions(Ob)
                 puzzle = 'rank15'
             },
             --Rank 20
-            item114 = {        
+            position114 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1074,7 +1074,7 @@ function Positions(Ob)
                 puzzle = 'rank20'
             },
             --Rank 25
-            item115 = {        
+            position115 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1085,7 +1085,7 @@ function Positions(Ob)
                 puzzle = 'rank25'
             },
             --Rank 30
-            item116 = {        
+            position116 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1096,7 +1096,7 @@ function Positions(Ob)
                 puzzle = 'rank30'
             },
             --Rank 35
-            item117 = {        
+            position117 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1107,7 +1107,7 @@ function Positions(Ob)
                 puzzle = 'rank35'
             },
             --Rank 40
-            item118 = {        
+            position118 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1118,7 +1118,7 @@ function Positions(Ob)
                 puzzle = 'rank40'
             },
             --Rank 45
-            item119 = {        
+            position119 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1129,7 +1129,7 @@ function Positions(Ob)
                 puzzle = 'rank45'
             },
             --Rank 50
-            item120 = {        
+            position120 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1140,7 +1140,7 @@ function Positions(Ob)
                 puzzle = 'rank50'
             },
             --Rank 55
-            item121 = {        
+            position121 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1151,7 +1151,7 @@ function Positions(Ob)
                 puzzle = 'rank55'
             },
             --Rank 60
-            item122 = {        
+            position122 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1162,7 +1162,7 @@ function Positions(Ob)
                 puzzle = 'rank60'
             },
             --Rank 65
-            item123 = {        
+            position123 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1173,7 +1173,7 @@ function Positions(Ob)
                 puzzle = 'rank65'
             },
             --Rank 70
-            item124 = {        
+            position124 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1184,7 +1184,7 @@ function Positions(Ob)
                 puzzle = 'rank70'
             },
             --Rank 75
-            item125 = {        
+            position125 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1195,7 +1195,7 @@ function Positions(Ob)
                 puzzle = 'rank75'
             },
             --Rank 80
-            item126 = {        
+            position126 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1206,7 +1206,7 @@ function Positions(Ob)
                 puzzle = 'rank80'
             },
             --Rank 85
-            item127 = {        
+            position127 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1217,7 +1217,7 @@ function Positions(Ob)
                 puzzle = 'rank85'
             },
             --Rank 90
-            item128 = {        
+            position128 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1228,7 +1228,7 @@ function Positions(Ob)
                 puzzle = 'rank90'
             },
             --Rank 95
-            item129 = {        
+            position129 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1239,7 +1239,7 @@ function Positions(Ob)
                 puzzle = 'rank95'
             },
             --Rank 101
-            item130 = {        
+            position130 = {        
                 levelName = 'CAJA',
                 x = -10000, 
                 y = -10000, 
@@ -1254,7 +1254,7 @@ function Positions(Ob)
             --AS, THORNEY TOWERS ASYLUM
 
             --ASGR, Starting Grounds
-            item131 = {        
+            position131 = {        
                 levelName = 'ASGR',
                 x = 184, 
                 y = -1498, 
@@ -1263,7 +1263,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item132 = {        
+            position132 = {        
                 levelName = 'ASGR',
                 x = -403, 
                 y = -1233, 
@@ -1272,7 +1272,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item133 = {        
+            position133 = {        
                 levelName = 'ASGR',
                 x = -562, 
                 y = 399, 
@@ -1281,7 +1281,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item134 = {        
+            position134 = {        
                 levelName = 'ASGR',
                 x = 267, 
                 y = 668, 
@@ -1290,7 +1290,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item135 = {        
+            position135 = {        
                 levelName = 'ASGR',
                 x = 99, 
                 y = 756, 
@@ -1299,7 +1299,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item136 = {        
+            position136 = {        
                 levelName = 'ASGR',
                 x = -845, 
                 y = 30, 
@@ -1308,7 +1308,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item137 = {        
+            position137 = {        
                 levelName = 'ASGR',
                 x = 981, 
                 y = 298, 
@@ -1317,7 +1317,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item138 = {        
+            position138 = {        
                 levelName = 'ASGR',
                 x = -854, 
                 y = 323, 
@@ -1326,7 +1326,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item139 = {        
+            position139 = {        
                 levelName = 'ASGR',
                 x = 2389, 
                 y = -54, 
@@ -1335,7 +1335,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item140 = {        
+            position140 = {        
                 levelName = 'ASGR',
                 x = 2110, 
                 y = 305, 
@@ -1346,7 +1346,7 @@ function Positions(Ob)
             },
 
             --ASCO, Lower Floors
-            item141 = {        
+            position141 = {        
                 levelName = 'ASCO',
                 x = 558, 
                 y = 948, 
@@ -1355,16 +1355,17 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item142 = {        
+            position142 = {        
                 levelName = 'ASCO',
                 x = -866, 
                 y = 208, 
                 z = 1586,
                 ox = 0,
-                oy = 0,
+                oy = 90,
                 oz = 0,
+                puzzle = 'bucket'
             },
-            item143 = {        
+            position143 = {        
                 levelName = 'ASCO',
                 x = -1040, 
                 y = 1178, 
@@ -1373,7 +1374,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item144 = {        
+            position144 = {        
                 levelName = 'ASCO',
                 x = -1495, 
                 y = 1206, 
@@ -1382,7 +1383,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item145 = {        
+            position145 = {        
                 levelName = 'ASCO',
                 x = 319, 
                 y = 955, 
@@ -1391,7 +1392,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item146 = {        
+            position146 = {        
                 levelName = 'ASCO',
                 x = -2302, 
                 y = 1249, 
@@ -1400,7 +1401,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item147 = {        
+            position147 = {        
                 levelName = 'ASCO',
                 x = -175, 
                 y = 814, 
@@ -1409,7 +1410,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item148 = {        
+            position148 = {        
                 levelName = 'ASCO',
                 x = 1570, 
                 y = 514, 
@@ -1418,7 +1419,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item149 = {        
+            position149 = {        
                 levelName = 'ASCO',
                 x = -1394, 
                 y = 2209, 
@@ -1429,7 +1430,7 @@ function Positions(Ob)
             },
             
             --ASUP, Upper Floors
-            item150 = {        
+            position150 = {        
                 levelName = 'ASUP',
                 x = -1723, 
                 y = 3617, 
@@ -1438,7 +1439,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item151 = {        
+            position151 = {        
                 levelName = 'ASUP',
                 x = -2719, 
                 y = 4300, 
@@ -1447,7 +1448,7 @@ function Positions(Ob)
                 oy = 137,
                 oz = 0,
             },
-            item152 = {        
+            position152 = {        
                 levelName = 'ASUP',
                 x = -357, 
                 y = 4380, 
@@ -1456,7 +1457,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item153 = {        
+            position153 = {        
                 levelName = 'ASUP',
                 x = -1547, 
                 y = 3633, 
@@ -1465,7 +1466,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item154 = {        
+            position154 = {        
                 levelName = 'ASUP',
                 x = -457, 
                 y = 4299, 
@@ -1474,7 +1475,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item155 = {        
+            position155 = {        
                 levelName = 'ASUP',
                 x = 1026, 
                 y = 4971, 
@@ -1483,7 +1484,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item156 = {        
+            position156 = {        
                 levelName = 'ASUP',
                 x = 1771, 
                 y = 5214, 
@@ -1492,7 +1493,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item157 = {        
+            position157 = {        
                 levelName = 'ASUP',
                 x = 2421, 
                 y = 6422, 
@@ -1501,7 +1502,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item158 = {        
+            position158 = {        
                 levelName = 'ASUP',
                 x = 1296, 
                 y = 6544, 
@@ -1510,7 +1511,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item159 = {        
+            position159 = {        
                 levelName = 'ASUP',
                 x = -1954, 
                 y = 6401, 
@@ -1519,7 +1520,7 @@ function Positions(Ob)
                 oy = -47,
                 oz = 0,
             },
-            item160 = {        
+            position160 = {        
                 levelName = 'ASUP',
                 x = -969, 
                 y = 7468, 
@@ -1528,7 +1529,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item161 = {        
+            position161 = {        
                 levelName = 'ASUP',
                 x = -1649, 
                 y = 8398, 
@@ -1537,7 +1538,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item162 = {        
+            position162 = {        
                 levelName = 'ASUP',
                 x = 151, 
                 y = 10061, 
@@ -1546,7 +1547,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item163 = {        
+            position163 = {        
                 levelName = 'ASUP',
                 x = -121, 
                 y = 10762, 
@@ -1555,7 +1556,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item164 = {        
+            position164 = {        
                 levelName = 'ASUP',
                 x = -312, 
                 y = 11220, 
@@ -1564,7 +1565,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item165 = {        
+            position165 = {        
                 levelName = 'ASUP',
                 x = 344, 
                 y = 12358, 
@@ -1573,7 +1574,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item166 = {        
+            position166 = {        
                 levelName = 'ASUP',
                 x = -1385, 
                 y = 13121, 
@@ -1582,7 +1583,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item167 = {        
+            position167 = {        
                 levelName = 'ASUP',
                 x = 1893, 
                 y = 13857, 
@@ -1591,7 +1592,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item168 = {        
+            position168 = {        
                 levelName = 'ASUP',
                 x = -1120, 
                 y = 14462, 
@@ -1600,7 +1601,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item169 = {        
+            position169 = {        
                 levelName = 'ASUP',
                 x = -676, 
                 y = 15603, 
@@ -1609,7 +1610,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item170 = {        
+            position170 = {        
                 levelName = 'ASUP',
                 x = 1226, 
                 y = 17755, 
@@ -1618,7 +1619,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item171 = {        
+            position171 = {        
                 levelName = 'ASUP',
                 x = 994, 
                 y = 17737, 
@@ -1627,7 +1628,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item172 = {        
+            position172 = {        
                 levelName = 'ASUP',
                 x = 830, 
                 y = 18831, 
@@ -1636,7 +1637,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item173 = {        
+            position173 = {        
                 levelName = 'ASUP',
                 x = 1350, 
                 y = 19200, 
@@ -1645,7 +1646,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item174 = {        
+            position174 = {        
                 levelName = 'ASUP',
                 x = 563, 
                 y = 20956, 
@@ -1654,7 +1655,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item175 = {        
+            position175 = {        
                 levelName = 'ASUP',
                 x = 74, 
                 y = 22016, 
@@ -1665,7 +1666,7 @@ function Positions(Ob)
             },
             
             --ASLB, Lobato's Lab
-            item176 = {        
+            position176 = {        
                 levelName = 'ASLB',
                 x = -304, 
                 y = 1509, 
@@ -1674,7 +1675,7 @@ function Positions(Ob)
                 oy = 165,
                 oz = 0,
             },
-            item177 = {        
+            position177 = {        
                 levelName = 'ASLB',
                 x = -682, 
                 y = 1347, 
@@ -1683,7 +1684,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item178 = {        
+            position178 = {        
                 levelName = 'ASLB',
                 x = 480, 
                 y = 2298, 
@@ -1692,7 +1693,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item179 = {        
+            position179 = {        
                 levelName = 'ASLB',
                 x = 1512, 
                 y = 2869, 
@@ -1701,7 +1702,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item180 = {        
+            position180 = {        
                 levelName = 'ASLB',
                 x = 1357, 
                 y = 3182, 
@@ -1710,7 +1711,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item181 = {        
+            position181 = {        
                 levelName = 'ASLB',
                 x = -1768, 
                 y = 2951, 
@@ -1719,7 +1720,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item182 = {        
+            position182 = {        
                 levelName = 'ASLB',
                 x = -319, 
                 y = 3440, 
@@ -1728,7 +1729,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item183 = {        
+            position183 = {        
                 levelName = 'ASLB',
                 x = 142, 
                 y = 3364, 
@@ -1742,7 +1743,7 @@ function Positions(Ob)
             --BB, BASIC BRAINING
 
             --BBA1, Opening Level
-            item184 = {        
+            position184 = {        
                 levelName = 'BBA1',
                 x = -8089, 
                 y = -2453, 
@@ -1751,7 +1752,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item185 = {        
+            position185 = {        
                 levelName = 'BBA1',
                 x = -6261, 
                 y = -2491, 
@@ -1760,7 +1761,7 @@ function Positions(Ob)
                 oy = -90,
                 oz = 0,
             },
-            item186 = {        
+            position186 = {        
                 levelName = 'BBA1',
                 x = -4451, 
                 y = -1115, 
@@ -1769,7 +1770,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item187 = {        
+            position187 = {        
                 levelName = 'BBA1',
                 x = 6656, 
                 y = -104, 
@@ -1780,7 +1781,7 @@ function Positions(Ob)
             },
 
             --BBA2, After Plane Drop
-            item188 = {        
+            position188 = {        
                 levelName = 'BBA2',
                 x = -3763, 
                 y = 9543, 
@@ -1789,7 +1790,7 @@ function Positions(Ob)
                 oy = -75,
                 oz = 0,
             },
-            item189 = {        
+            position189 = {        
                 levelName = 'BBA2',
                 x = -407, 
                 y = 9695, 
@@ -1798,7 +1799,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item190 = {        
+            position190 = {        
                 levelName = 'BBA2',
                 x = -435, 
                 y = 9601, 
@@ -1807,7 +1808,7 @@ function Positions(Ob)
                 oy = -145,
                 oz = 0,
             },
-            item191 = {        
+            position191 = {        
                 levelName = 'BBA2',
                 x = 2247, 
                 y = 10327, 
@@ -1816,7 +1817,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item192 = {        
+            position192 = {        
                 levelName = 'BBA2',
                 x = -599, 
                 y = -128, 
@@ -1825,7 +1826,7 @@ function Positions(Ob)
                 oy = 99,
                 oz = 0,
             },
-            item193 = {        
+            position193 = {        
                 levelName = 'BBA2',
                 x = -927, 
                 y = 2559, 
@@ -1834,7 +1835,7 @@ function Positions(Ob)
                 oy = -111,
                 oz = 0,
             },
-            item194 = {        
+            position194 = {        
                 levelName = 'BBA2',
                 x = -2457, 
                 y = 3034, 
@@ -1843,7 +1844,7 @@ function Positions(Ob)
                 oy = 136,
                 oz = 0,
             },
-            item195 = {        
+            position195 = {        
                 levelName = 'BBA2',
                 x = -1744, 
                 y = 3794, 
@@ -1854,7 +1855,7 @@ function Positions(Ob)
             },            
 
             --BBLT, Finishing Podium
-            item196 = {        
+            position196 = {        
                 levelName = 'BBLT',
                 x = -6407, 
                 y = -1931, 
@@ -1863,7 +1864,7 @@ function Positions(Ob)
                 oy = 153,
                 oz = 0,
             },
-            item197 = {        
+            position197 = {        
                 levelName = 'BBLT',
                 x = -6864, 
                 y = -1914, 
@@ -1873,7 +1874,7 @@ function Positions(Ob)
                 oz = 0,
             },
             --CASA, BB Complete
-            item198 = {        
+            position198 = {        
                 levelName = 'CASA',
                 x = -12954, 
                 y = 11560, 
@@ -1889,7 +1890,7 @@ function Positions(Ob)
             --SA, SASHA'S SHOOTING GALLERY
             --SACU           
             --Cube Face One
-            item199 = {        
+            position199 = {        
                 levelName = 'SACU',
                 x = -7, 
                 y = 487, 
@@ -1899,7 +1900,7 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'face1item1'
             },
-            item200 = {        
+            position200 = {        
                 levelName = 'SACU',
                 x = -262, 
                 y = 564, 
@@ -1909,7 +1910,7 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'face1item2'
             },
-            item201 = {        
+            position201 = {        
                 levelName = 'SACU',
                 x = -1371, 
                 y = 751, 
@@ -1919,7 +1920,7 @@ function Positions(Ob)
                 oz = -32,
                 puzzle = 'face1item3'
             },
-            item202 = {        
+            position202 = {        
                 levelName = 'SACU',
                 x = -1455, 
                 y = 5, 
@@ -1929,7 +1930,7 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'face1item4'
             },
-            item203 = {        
+            position203 = {        
                 levelName = 'SACU',
                 x = 1832, 
                 y = 799, 
@@ -1939,7 +1940,7 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'face1item5'
             },
-            item204 = {        
+            position204 = {        
                 levelName = 'SACU',
                 x = -274, 
                 y = 1748, 
@@ -1951,7 +1952,7 @@ function Positions(Ob)
             },
 
             --Cube Face Two
-            item205 = {        
+            position205 = {        
                 levelName = 'SACU',
                 x = 2021, 
                 y = -1558, 
@@ -1961,7 +1962,7 @@ function Positions(Ob)
                 oz = -90,
                 puzzle = 'face2item1'
             },
-            item206 = {        
+            position206 = {        
                 levelName = 'SACU',
                 x = 3920, 
                 y = -900, 
@@ -1971,7 +1972,7 @@ function Positions(Ob)
                 oz = -90,
                 puzzle = 'face2item2'
             },
-            item207 = {        
+            position207 = {        
                 levelName = 'SACU',
                 x = 4490, 
                 y = 780, 
@@ -1983,7 +1984,7 @@ function Positions(Ob)
             },
 
             --Cube Face Three
-            item208 = {        
+            position208 = {        
                 levelName = 'SACU',
                 x = -1984, 
                 y = -1913, 
@@ -1993,7 +1994,7 @@ function Positions(Ob)
                 oz = -90,
                 puzzle = 'face3item1'
             },
-            item209 = {        
+            position209 = {        
                 levelName = 'SACU',
                 x = 19, 
                 y = -2128, 
@@ -2003,7 +2004,7 @@ function Positions(Ob)
                 oz = 61,
                 puzzle = 'face3item2'
             },
-            item210 = {        
+            position210 = {        
                 levelName = 'SACU',
                 x = -291, 
                 y = -538, 
@@ -2013,7 +2014,7 @@ function Positions(Ob)
                 oz = 3,
                 puzzle = 'face3item3'
             },
-            item211 = {        
+            position211 = {        
                 levelName = 'SACU',
                 x = 1853, 
                 y = -2948, 
@@ -2025,7 +2026,7 @@ function Positions(Ob)
             },
           
             --Cube Face Four
-            item212 = {        
+            position212 = {        
                 levelName = 'SACU',
                 x = 398, 
                 y = -4056, 
@@ -2035,7 +2036,7 @@ function Positions(Ob)
                 oz = 0,
                 puzzle = 'face4item1'
             },
-            item213 = {        
+            position213 = {        
                 levelName = 'SACU',
                 x = 379, 
                 y = -4962, 
@@ -2045,7 +2046,7 @@ function Positions(Ob)
                 oz = -8,
                 puzzle = 'face4item2'
             },
-            item214 = {        
+            position214 = {        
                 levelName = 'SACU',
                 x = 273, 
                 y = -5024, 
@@ -2057,7 +2058,7 @@ function Positions(Ob)
             },
 
             --CASA, SA Complete
-            item215 = {        
+            position215 = {        
                 levelName = 'CASA',
                 x = -13922, 
                 y = 11352, 
@@ -2072,7 +2073,7 @@ function Positions(Ob)
             --MI, MILLA'S DANCE PARTY
 
             --MIFL, Starting area
-            item216 = {        
+            position216 = {        
                 levelName = 'MIFL',
                 x = -19249, 
                 y = 7142, 
@@ -2081,7 +2082,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item217 = {        
+            position217 = {        
                 levelName = 'MIFL',
                 x = -19976, 
                 y = 10155, 
@@ -2090,7 +2091,7 @@ function Positions(Ob)
                 oy = -81,
                 oz = 0,
             },
-            item218 = {        
+            position218 = {        
                 levelName = 'MIFL',
                 x = -23438, 
                 y = 11229, 
@@ -2099,7 +2100,7 @@ function Positions(Ob)
                 oy = 24,
                 oz = 0,
             },
-            item219 = {        
+            position219 = {        
                 levelName = 'MIFL',
                 x = -20143, 
                 y = 11734, 
@@ -2108,7 +2109,7 @@ function Positions(Ob)
                 oy = -159,
                 oz = 0,
             },
-            item220 = {        
+            position220 = {        
                 levelName = 'MIFL',
                 x = -18415, 
                 y = 14813, 
@@ -2117,7 +2118,7 @@ function Positions(Ob)
                 oy = 250,
                 oz = 0,
             },
-            item221 = {        
+            position221 = {        
                 levelName = 'MIFL',
                 x = -22356, 
                 y = 15996, 
@@ -2126,7 +2127,7 @@ function Positions(Ob)
                 oy = 134,
                 oz = 0,
             },
-            item222 = {        
+            position222 = {        
                 levelName = 'MIFL',
                 x = -18472, 
                 y = 22382, 
@@ -2135,7 +2136,7 @@ function Positions(Ob)
                 oy = -30,
                 oz = 0,
             },
-            item223 = {        
+            position223 = {        
                 levelName = 'MIFL',
                 x = -19431, 
                 y = 23624, 
@@ -2144,7 +2145,7 @@ function Positions(Ob)
                 oy = 145,
                 oz = 0,
             },
-            item224 = {        
+            position224 = {        
                 levelName = 'MIFL',
                 x = -22571, 
                 y = 23009, 
@@ -2153,7 +2154,7 @@ function Positions(Ob)
                 oy = 125,
                 oz = 0,
             },
-            item225 = {        
+            position225 = {        
                 levelName = 'MIFL',
                 x = -21000, 
                 y = 29640, 
@@ -2164,7 +2165,7 @@ function Positions(Ob)
             },
 
             --MILL, After Race
-            item226 = {        
+            position226 = {        
                 levelName = 'MILL',
                 x = 17393, 
                 y = -5479, 
@@ -2173,7 +2174,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item227 = {        
+            position227 = {        
                 levelName = 'MILL',
                 x = 18938, 
                 y = -1889, 
@@ -2182,7 +2183,7 @@ function Positions(Ob)
                 oy = -164,
                 oz = 0,
             },
-            item228 = {        
+            position228 = {        
                 levelName = 'MILL',
                 x = 19431, 
                 y = -1669, 
@@ -2191,7 +2192,7 @@ function Positions(Ob)
                 oy = -76,
                 oz = 0,
             },
-            item229 = {        
+            position229 = {        
                 levelName = 'MILL',
                 x = 21816, 
                 y = -1771, 
@@ -2202,7 +2203,7 @@ function Positions(Ob)
             },
 
             --CASA, MI Complete
-            item230 = {        
+            position230 = {        
                 levelName = 'CASA',
                 x = -10778, 
                 y = 11432, 
@@ -2218,7 +2219,7 @@ function Positions(Ob)
             --NI, Brain Tumbler Experiment
 
             --NIMP, Main Level
-            item231 = {        
+            position231 = {        
                 levelName = 'NIMP',
                 x = 34503, 
                 y = 23, 
@@ -2227,7 +2228,7 @@ function Positions(Ob)
                 oy = 170,
                 oz = 0,
             },
-            item232 = {        
+            position232 = {        
                 levelName = 'NIMP',
                 x = -2209, 
                 y = -3186, 
@@ -2236,7 +2237,7 @@ function Positions(Ob)
                 oy = 46,
                 oz = 0,
             },
-            item233 = {        
+            position233 = {        
                 levelName = 'NIMP',
                 x = 2693, 
                 y = -645, 
@@ -2245,7 +2246,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item234 = {        
+            position234 = {        
                 levelName = 'NIMP',
                 x = 1900, 
                 y = -604, 
@@ -2254,7 +2255,7 @@ function Positions(Ob)
                 oy = 9,
                 oz = 0,
             },
-            item235 = {        
+            position235 = {        
                 levelName = 'NIMP',
                 x = 545, 
                 y = 716, 
@@ -2263,7 +2264,7 @@ function Positions(Ob)
                 oy = -62,
                 oz = 0,
             },
-            item236 = {        
+            position236 = {        
                 levelName = 'NIMP',
                 x = -1805, 
                 y = -228, 
@@ -2272,7 +2273,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item237 = {        
+            position237 = {        
                 levelName = 'NIMP',
                 x = 650, 
                 y = -510, 
@@ -2281,7 +2282,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item238 = {        
+            position238 = {        
                 levelName = 'NIMP',
                 x = 4077, 
                 y = 426, 
@@ -2290,7 +2291,7 @@ function Positions(Ob)
                 oy = 158,
                 oz = 0,
             },
-            item239 = {        
+            position239 = {        
                 levelName = 'NIMP',
                 x = 604, 
                 y = 1113, 
@@ -2299,7 +2300,7 @@ function Positions(Ob)
                 oy = 124,
                 oz = 0,
             },
-            item240 = {        
+            position240 = {        
                 levelName = 'NIMP',
                 x = 3869, 
                 y = -82, 
@@ -2308,7 +2309,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item241 = {        
+            position241 = {        
                 levelName = 'NIMP',
                 x = 13527, 
                 y = 293, 
@@ -2317,7 +2318,7 @@ function Positions(Ob)
                 oy = 119,
                 oz = 0,
             },
-            item242 = {        
+            position242 = {        
                 levelName = 'NIMP',
                 x = 12707, 
                 y = 421, 
@@ -2326,7 +2327,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item243 = {        
+            position243 = {        
                 levelName = 'NIMP',
                 x = 13624, 
                 y = 430, 
@@ -2337,7 +2338,7 @@ function Positions(Ob)
             },
 
             --CASA, NI Complete
-            item244 = {        
+            position244 = {        
                 levelName = 'CASA',
                 x = -11139, 
                 y = 11486, 
@@ -2354,7 +2355,7 @@ function Positions(Ob)
             --LO, LUNGFISHOPOLIS
 
             --LOMA, Main City
-            item245 = {        
+            position245 = {        
                 levelName = 'LOMA',
                 x = -1665, 
                 y = 916, 
@@ -2363,7 +2364,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item246 = {        
+            position246 = {        
                 levelName = 'LOMA',
                 x = 224, 
                 y = 4, 
@@ -2372,7 +2373,7 @@ function Positions(Ob)
                 oy = -132,
                 oz = 0,
             },
-            item247 = {        
+            position247 = {        
                 levelName = 'LOMA',
                 x = 2328, 
                 y = 685, 
@@ -2381,7 +2382,7 @@ function Positions(Ob)
                 oy = 15,
                 oz = 0,
             },
-            item248 = {        
+            position248 = {        
                 levelName = 'LOMA',
                 x = -2233, 
                 y = 11, 
@@ -2390,7 +2391,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item249 = {        
+            position249 = {        
                 levelName = 'LOMA',
                 x = -1843, 
                 y = 0, 
@@ -2399,7 +2400,7 @@ function Positions(Ob)
                 oy = 119,
                 oz = 0,
             },
-            item250 = {        
+            position250 = {        
                 levelName = 'LOMA',
                 x = -545, 
                 y = 7, 
@@ -2408,7 +2409,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item251 = {        
+            position251 = {        
                 levelName = 'LOMA',
                 x = 8421, 
                 y = 2092, 
@@ -2417,7 +2418,7 @@ function Positions(Ob)
                 oy = -12,
                 oz = 0,
             },
-            item252 = {        
+            position252 = {        
                 levelName = 'LOMA',
                 x = 8442, 
                 y = 2076, 
@@ -2426,7 +2427,7 @@ function Positions(Ob)
                 oy = 123,
                 oz = 0,
             },
-            item253 = {        
+            position253 = {        
                 levelName = 'LOMA',
                 x = 7971, 
                 y = 2402, 
@@ -2435,7 +2436,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item254 = {        
+            position254 = {        
                 levelName = 'LOMA',
                 x = 10615, 
                 y = 3051, 
@@ -2444,7 +2445,7 @@ function Positions(Ob)
                 oy = -58,
                 oz = 0,
             },
-            item255 = {        
+            position255 = {        
                 levelName = 'LOMA',
                 x = 12049, 
                 y = 2099, 
@@ -2453,7 +2454,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item256 = {        
+            position256 = {        
                 levelName = 'LOMA',
                 x = 16172, 
                 y = 2595, 
@@ -2462,7 +2463,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item257 = {        
+            position257 = {        
                 levelName = 'LOMA',
                 x = 17297, 
                 y = 2081, 
@@ -2471,7 +2472,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item258 = {        
+            position258 = {        
                 levelName = 'LOMA',
                 x = 17657, 
                 y = 2761, 
@@ -2480,7 +2481,7 @@ function Positions(Ob)
                 oy = -65,
                 oz = 0,
             },
-            item259 = {        
+            position259 = {        
                 levelName = 'LOMA',
                 x = 18667, 
                 y = 2196, 
@@ -2489,7 +2490,7 @@ function Positions(Ob)
                 oy = -9,
                 oz = 0,
             },
-            item260 = {        
+            position260 = {        
                 levelName = 'LOMA',
                 x = 21356, 
                 y = 4471, 
@@ -2498,7 +2499,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item261 = {        
+            position261 = {        
                 levelName = 'LOMA',
                 x = 21818, 
                 y = 4446, 
@@ -2509,7 +2510,7 @@ function Positions(Ob)
             },
             
             --LOCB, Kochamara Boss Fight
-            item262 = {        
+            position262 = {        
                 levelName = 'LOCB',
                 x = 239, 
                 y = 396, 
@@ -2518,7 +2519,7 @@ function Positions(Ob)
                 oy = -58,
                 oz = 0,
             },
-            item263 = {        
+            position263 = {        
                 levelName = 'LOCB',
                 x = 310, 
                 y = 447, 
@@ -2529,7 +2530,7 @@ function Positions(Ob)
             },
 
             --CASA, LO Complete
-            item264 = {        
+            position264 = {        
                 levelName = 'CASA',
                 x = -11962, 
                 y = 11615, 
@@ -2545,7 +2546,7 @@ function Positions(Ob)
             --MM, MILKMAN CONSPIRACY
 
             --MMI1, Neighborhood
-            item265 = {        
+            position265 = {        
                 levelName = 'MMI1',
                 x = 16807, 
                 y = 9324, 
@@ -2554,7 +2555,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 89,
             },
-            item266 = {        
+            position266 = {        
                 levelName = 'MMI1',
                 x = 15603, 
                 y = 1464, 
@@ -2563,7 +2564,7 @@ function Positions(Ob)
                 oy = -89,
                 oz = 0,
             },
-            item267 = {        
+            position267 = {        
                 levelName = 'MMI1',
                 x = 14012, 
                 y = 1472, 
@@ -2572,7 +2573,7 @@ function Positions(Ob)
                 oy = 151,
                 oz = -3,
             },
-            item268 = {        
+            position268 = {        
                 levelName = 'MMI1',
                 x = 46391, 
                 y = -29286, 
@@ -2581,7 +2582,7 @@ function Positions(Ob)
                 oy = 168,
                 oz = -53,
             },
-            item269 = {        
+            position269 = {        
                 levelName = 'MMI1',
                 x = 49303, 
                 y = -32124, 
@@ -2590,7 +2591,7 @@ function Positions(Ob)
                 oy = 38,
                 oz = 0,
             },
-            item270 = {        
+            position270 = {        
                 levelName = 'MMI1',
                 x = 52485, 
                 y = -29921, 
@@ -2599,7 +2600,7 @@ function Positions(Ob)
                 oy = -110,
                 oz = 0,
             },
-            item271 = {        
+            position271 = {        
                 levelName = 'MMI1',
                 x = 52339, 
                 y = -28808, 
@@ -2608,7 +2609,7 @@ function Positions(Ob)
                 oy = 44,
                 oz = 75,
             },
-            item272 = {        
+            position272 = {        
                 levelName = 'MMI1',
                 x = 51818, 
                 y = -31178, 
@@ -2617,7 +2618,7 @@ function Positions(Ob)
                 oy = -67,
                 oz = 36,
             },
-            item273 = {        
+            position273 = {        
                 levelName = 'MMI1',
                 x = 54275, 
                 y = -33701, 
@@ -2626,7 +2627,7 @@ function Positions(Ob)
                 oy = 33,
                 oz = -85,
             },
-            item274 = {        
+            position274 = {        
                 levelName = 'MMI1',
                 x = 54655, 
                 y = -34030, 
@@ -2635,7 +2636,7 @@ function Positions(Ob)
                 oy = -138,
                 oz = -78,
             },
-            item275 = {        
+            position275 = {        
                 levelName = 'MMI1',
                 x = 55736, 
                 y = -38952, 
@@ -2644,7 +2645,7 @@ function Positions(Ob)
                 oy = 172,
                 oz = -65,
             },
-            item276 = {        
+            position276 = {        
                 levelName = 'MMI1',
                 x = 49127, 
                 y = -31686, 
@@ -2653,7 +2654,7 @@ function Positions(Ob)
                 oy = 30,
                 oz = -86,
             },
-            item277 = {        
+            position277 = {        
                 levelName = 'MMI1',
                 x = 49643, 
                 y = -26013, 
@@ -2662,7 +2663,7 @@ function Positions(Ob)
                 oy = 360,
                 oz = 0,
             },
-            item278 = {        
+            position278 = {        
                 levelName = 'MMI1',
                 x = 48881, 
                 y = -23596, 
@@ -2671,7 +2672,7 @@ function Positions(Ob)
                 oy = 168,
                 oz = 16,
             },
-            item279 = {        
+            position279 = {        
                 levelName = 'MMI1',
                 x = 49974, 
                 y = -23919, 
@@ -2680,7 +2681,7 @@ function Positions(Ob)
                 oy = 141,
                 oz = 66,
             },
-            item280 = {        
+            position280 = {        
                 levelName = 'MMI1',
                 x = -12940, 
                 y = 3048, 
@@ -2689,7 +2690,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item281 = {        
+            position281 = {        
                 levelName = 'MMI1',
                 x = 46881, 
                 y = -32509, 
@@ -2698,7 +2699,7 @@ function Positions(Ob)
                 oy = 20,
                 oz = 8,
             },
-            item282 = {        
+            position282 = {        
                 levelName = 'MMI1',
                 x = 18174, 
                 y = 1410, 
@@ -2707,7 +2708,7 @@ function Positions(Ob)
                 oy = 5,
                 oz = 0,
             },
-            item283 = {        
+            position283 = {        
                 levelName = 'MMI1',
                 x = 19236, 
                 y = 1462, 
@@ -2716,7 +2717,7 @@ function Positions(Ob)
                 oy = -77,
                 oz = 0,
             },
-            item284 = {        
+            position284 = {        
                 levelName = 'MMI1',
                 x = 38276, 
                 y = -36118, 
@@ -2725,7 +2726,7 @@ function Positions(Ob)
                 oy = 50,
                 oz = -4,
             },
-            item285 = {        
+            position285 = {        
                 levelName = 'MMI1',
                 x = 37993, 
                 y = -38043, 
@@ -2734,7 +2735,7 @@ function Positions(Ob)
                 oy = 179,
                 oz = 11,
             },
-            item286 = {        
+            position286 = {        
                 levelName = 'MMI1',
                 x = 37449, 
                 y = -36123, 
@@ -2745,7 +2746,7 @@ function Positions(Ob)
             },
             
             --MMI2, Book Depository
-            item287 = {        
+            position287 = {        
                 levelName = 'MMI2',
                 x = 42685, 
                 y = -30805, 
@@ -2756,7 +2757,7 @@ function Positions(Ob)
             },
             
             --CASA, MM Complete
-            item288 = {        
+            position288 = {        
                 levelName = 'CASA',
                 x = -11357, 
                 y = 11476, 
@@ -2771,7 +2772,7 @@ function Positions(Ob)
             --TH, GLORIA'S THEATER
 
             --THMS, Main Stage
-            item289 = {        
+            position289 = {        
                 levelName = 'THMS',
                 x = 2634, 
                 y = 619, 
@@ -2780,7 +2781,7 @@ function Positions(Ob)
                 oy = -107,
                 oz = 0,
             },
-            item290 = {        
+            position290 = {        
                 levelName = 'THMS',
                 x = 1882, 
                 y = 1329, 
@@ -2789,7 +2790,7 @@ function Positions(Ob)
                 oy = -63,
                 oz = 0,
             },
-            item291 = {        
+            position291 = {        
                 levelName = 'THMS',
                 x = -2141, 
                 y = -250, 
@@ -2798,7 +2799,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item292 = {        
+            position292 = {        
                 levelName = 'THMS',
                 x = 1993, 
                 y = 0, 
@@ -2807,7 +2808,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item293 = {        
+            position293 = {        
                 levelName = 'THMS',
                 x = 2354, 
                 y = 0, 
@@ -2816,7 +2817,7 @@ function Positions(Ob)
                 oy = -116,
                 oz = 0,
             },
-            item294 = {        
+            position294 = {        
                 levelName = 'THMS',
                 x = -3133, 
                 y = 421, 
@@ -2825,7 +2826,7 @@ function Positions(Ob)
                 oy = -70,
                 oz = 0,
             },
-            item295 = {        
+            position295 = {        
                 levelName = 'THMS',
                 x = -2673, 
                 y = 1467, 
@@ -2834,7 +2835,7 @@ function Positions(Ob)
                 oy = -125,
                 oz = 0,
             },
-            item296 = {        
+            position296 = {        
                 levelName = 'THMS',
                 x = -4366, 
                 y = 1467, 
@@ -2843,7 +2844,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item297 = {        
+            position297 = {        
                 levelName = 'THMS',
                 x = -4017, 
                 y = 2198, 
@@ -2852,7 +2853,7 @@ function Positions(Ob)
                 oy = -79,
                 oz = 0,
             },
-            item298 = {        
+            position298 = {        
                 levelName = 'THMS',
                 x = -5320, 
                 y = 282, 
@@ -2863,7 +2864,7 @@ function Positions(Ob)
             },
 
             --THCW, Catwalks
-            item299 = {        
+            position299 = {        
                 levelName = 'THCW',
                 x = -1692, 
                 y = -1766, 
@@ -2872,7 +2873,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item300 = {        
+            position300 = {        
                 levelName = 'THCW',
                 x = 424, 
                 y = -516, 
@@ -2881,7 +2882,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item301 = {        
+            position301 = {        
                 levelName = 'THCW',
                 x = -1297, 
                 y = -509, 
@@ -2890,7 +2891,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item302 = {        
+            position302 = {        
                 levelName = 'THCW',
                 x = -437, 
                 y = -324, 
@@ -2899,7 +2900,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item303 = {        
+            position303 = {        
                 levelName = 'THCW',
                 x = -308, 
                 y = 302, 
@@ -2908,7 +2909,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item304 = {        
+            position304 = {        
                 levelName = 'THCW',
                 x = -3463, 
                 y = 877, 
@@ -2917,7 +2918,7 @@ function Positions(Ob)
                 oy = 179,
                 oz = 0,
             },
-            item305 = {        
+            position305 = {        
                 levelName = 'THCW',
                 x = 554, 
                 y = 2881, 
@@ -2926,7 +2927,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item306 = {        
+            position306 = {        
                 levelName = 'THCW',
                 x = -2005, 
                 y = -1315, 
@@ -2937,7 +2938,7 @@ function Positions(Ob)
             },
 
             --CASA,TH Complete
-            item307 = {        
+            position307 = {        
                 levelName = 'CASA',
                 x = -13645, 
                 y = 11449, 
@@ -2952,7 +2953,7 @@ function Positions(Ob)
             --WW, WATERLOO WORLD
 
             --WWMA, Whole Level
-            item308 = {        
+            position308 = {        
                 levelName = 'WWMA',
                 x = -43786, 
                 y = 9006, 
@@ -2961,7 +2962,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item309 = {        
+            position309 = {        
                 levelName = 'WWMA',
                 x = -44408, 
                 y = 8978, 
@@ -2970,7 +2971,7 @@ function Positions(Ob)
                 oy = 14,
                 oz = 4,
             },
-            item310 = {        
+            position310 = {        
                 levelName = 'WWMA',
                 x = -27225, 
                 y = 140, 
@@ -2979,7 +2980,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item311 = {        
+            position311 = {        
                 levelName = 'WWMA',
                 x = 13099, 
                 y = -17850, 
@@ -2988,7 +2989,7 @@ function Positions(Ob)
                 oy = -15,
                 oz = 0,
             },
-            item312 = {        
+            position312 = {        
                 levelName = 'WWMA',
                 x = 16820, 
                 y = -18717, 
@@ -2997,7 +2998,7 @@ function Positions(Ob)
                 oy = 180,
                 oz = 0,
             },
-            item313 = {        
+            position313 = {        
                 levelName = 'WWMA',
                 x = 20406, 
                 y = -19699, 
@@ -3006,7 +3007,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item314 = {        
+            position314 = {        
                 levelName = 'WWMA',
                 x = 28368, 
                 y = -18617, 
@@ -3015,7 +3016,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item315 = {        
+            position315 = {        
                 levelName = 'WWMA',
                 x = 29109, 
                 y = -19481, 
@@ -3024,7 +3025,7 @@ function Positions(Ob)
                 oy = 18,
                 oz = 0,
             },
-            item316 = {        
+            position316 = {        
                 levelName = 'WWMA',
                 x = 10401, 
                 y = -18337, 
@@ -3033,7 +3034,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item317 = {        
+            position317 = {        
                 levelName = 'WWMA',
                 x = 23724, 
                 y = -17634, 
@@ -3042,7 +3043,7 @@ function Positions(Ob)
                 oy = 173,
                 oz = 0,
             },
-            item318 = {        
+            position318 = {        
                 levelName = 'WWMA',
                 x = 28178, 
                 y = -17299, 
@@ -3051,7 +3052,7 @@ function Positions(Ob)
                 oy = -59,
                 oz = 0,
             },
-            item319 = {        
+            position319 = {        
                 levelName = 'WWMA',
                 x = 20285, 
                 y = -18438, 
@@ -3060,7 +3061,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item320 = {        
+            position320 = {        
                 levelName = 'WWMA',
                 x = 19216, 
                 y = -18331, 
@@ -3069,7 +3070,7 @@ function Positions(Ob)
                 oy = -15,
                 oz = 0,
             },
-            item321 = {        
+            position321 = {        
                 levelName = 'WWMA',
                 x = 20430, 
                 y = -19300, 
@@ -3078,7 +3079,7 @@ function Positions(Ob)
                 oy = 86,
                 oz = 0,
             },
-            item322 = {        
+            position322 = {        
                 levelName = 'WWMA',
                 x = 17248, 
                 y = -19397, 
@@ -3087,7 +3088,7 @@ function Positions(Ob)
                 oy = -61,
                 oz = 0,
             },
-            item323 = {        
+            position323 = {        
                 levelName = 'WWMA',
                 x = 21656, 
                 y = -20134, 
@@ -3096,7 +3097,7 @@ function Positions(Ob)
                 oy = 37,
                 oz = 0,
             },
-            item324 = {        
+            position324 = {        
                 levelName = 'WWMA',
                 x = 25559, 
                 y = -18312, 
@@ -3105,7 +3106,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item325 = {        
+            position325 = {        
                 levelName = 'WWMA',
                 x = 23066, 
                 y = -18398, 
@@ -3115,7 +3116,7 @@ function Positions(Ob)
                 oz = 0,
             },
             --Musket Haybale location
-            item326 = {        
+            position326 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 
@@ -3126,7 +3127,7 @@ function Positions(Ob)
                 puzzle = 'haybale'
             },
             --Carpenter Helped
-            item327 = {        
+            position327 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 
@@ -3137,7 +3138,7 @@ function Positions(Ob)
                 puzzle = 'CarpHelp'
             },
             --Peasant 1 Helped
-            item328 = {        
+            position328 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 
@@ -3148,7 +3149,7 @@ function Positions(Ob)
                 puzzle = 'p1Help'
             },
             --Knight Helped
-            item329 = {        
+            position329 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 
@@ -3159,7 +3160,7 @@ function Positions(Ob)
                 puzzle = 'KnightHelp'
             },
             --Peasant 2 Helped
-            item330 = {        
+            position330 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 
@@ -3170,7 +3171,7 @@ function Positions(Ob)
                 puzzle = 'p2Help'
             },
             --Peasant 3 Helped
-            item331 = {        
+            position331 = {        
                 levelName = 'WWMA',
                 x = -10000, 
                 y = -25000, 
@@ -3182,7 +3183,7 @@ function Positions(Ob)
             },
 
             --CASA, WW Complete
-            item332 = {        
+            position332 = {        
                 levelName = 'CASA',
                 x = -10758, 
                 y = 11438, 
@@ -3197,7 +3198,7 @@ function Positions(Ob)
             --BV, BLACK VELVETOPIA
 
             --BVRB, Main Streets
-            item333 = {        
+            position333 = {        
                 levelName = 'BVRB',
                 x = 1104, 
                 y = 136, 
@@ -3206,7 +3207,7 @@ function Positions(Ob)
                 oy = -43,
                 oz = 0,
             },
-            item334 = {        
+            position334 = {        
                 levelName = 'BVRB',
                 x = -2284, 
                 y = 920, 
@@ -3215,7 +3216,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item335 = {        
+            position335 = {        
                 levelName = 'BVRB',
                 x = -6709, 
                 y = 2471, 
@@ -3224,7 +3225,7 @@ function Positions(Ob)
                 oy = -168,
                 oz = 0,
             },
-            item336 = {        
+            position336 = {        
                 levelName = 'BVRB',
                 x = -3152, 
                 y = 2906, 
@@ -3233,7 +3234,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item337 = {        
+            position337 = {        
                 levelName = 'BVRB',
                 x = -7967, 
                 y = -72, 
@@ -3242,7 +3243,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item338 = {        
+            position338 = {        
                 levelName = 'BVRB',
                 x = 8, 
                 y = 150, 
@@ -3251,7 +3252,7 @@ function Positions(Ob)
                 oy = -27,
                 oz = 0,
             },
-            item339 = {        
+            position339 = {        
                 levelName = 'BVRB',
                 x = -10083, 
                 y = 1028, 
@@ -3260,7 +3261,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item340 = {        
+            position340 = {        
                 levelName = 'BVRB',
                 x = -11151, 
                 y = 2332, 
@@ -3269,7 +3270,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item341 = {        
+            position341 = {        
                 levelName = 'BVRB',
                 x = 2032, 
                 y = 2680, 
@@ -3278,7 +3279,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item342 = {        
+            position342 = {        
                 levelName = 'BVRB',
                 x = -583, 
                 y = 1946, 
@@ -3287,7 +3288,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item343 = {        
+            position343 = {        
                 levelName = 'BVRB',
                 x = -2112, 
                 y = 1943, 
@@ -3296,7 +3297,7 @@ function Positions(Ob)
                 oy = 177,
                 oz = 0,
             },
-            item344 = {        
+            position344 = {        
                 levelName = 'BVRB',
                 x = 827, 
                 y = 1624, 
@@ -3305,7 +3306,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item345 = {        
+            position345 = {        
                 levelName = 'BVRB',
                 x = -1633, 
                 y = 1701, 
@@ -3316,7 +3317,7 @@ function Positions(Ob)
             },
 
             --BVES, Edgar's Sanctuary
-            item346 = {        
+            position346 = {        
                 levelName = 'BVES',
                 x = -1062, 
                 y = 571, 
@@ -3325,7 +3326,7 @@ function Positions(Ob)
                 oy = 20,
                 oz = 0,
             },
-            item347 = {        
+            position347 = {        
                 levelName = 'BVES',
                 x = 2310, 
                 y = 32, 
@@ -3335,7 +3336,7 @@ function Positions(Ob)
                 oz = 0,
             },
             --Tiger Wrestler
-            item348 = {        
+            position348 = {        
                 levelName = 'BVES',
                 x = -2125, 
                 y = 14, 
@@ -3346,7 +3347,7 @@ function Positions(Ob)
                 puzzle = 'tiger'
             },
             --Dragon Wrestler
-            item349 = {        
+            position349 = {        
                 levelName = 'BVES',
                 x = -154, 
                 y = 17, 
@@ -3357,7 +3358,7 @@ function Positions(Ob)
                 puzzle = 'dragon'
             },
             --Eagle Wrestler
-            item350 = {        
+            position350 = {        
                 levelName = 'BVES',
                 x = 680, 
                 y = 13, 
@@ -3368,7 +3369,7 @@ function Positions(Ob)
                 puzzle = 'eagle'
             },
             --Cobra Wrestler
-            item351 = {        
+            position351 = {        
                 levelName = 'BVES',
                 x = 2149, 
                 y = 15, 
@@ -3380,7 +3381,7 @@ function Positions(Ob)
             },
 
             --CASA, BV Complete
-            item352 = {        
+            position352 = {        
                 levelName = 'CASA',
                 x = -13691, 
                 y = 11326, 
@@ -3395,7 +3396,7 @@ function Positions(Ob)
             --MC, MEAT CIRCUS
 
             --MCTC, Main Level
-            item353 = {        
+            position353 = {        
                 levelName = 'MCTC',
                 x = 248, 
                 y = 766, 
@@ -3404,7 +3405,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item354 = {        
+            position354 = {        
                 levelName = 'MCTC',
                 x = -70, 
                 y = -39, 
@@ -3413,7 +3414,7 @@ function Positions(Ob)
                 oy = -3,
                 oz = 0,
             },
-            item355 = {        
+            position355 = {        
                 levelName = 'MCTC',
                 x = 294, 
                 y = -596, 
@@ -3422,7 +3423,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item356 = {        
+            position356 = {        
                 levelName = 'MCTC',
                 x = -442, 
                 y = -628, 
@@ -3431,7 +3432,7 @@ function Positions(Ob)
                 oy = -3,
                 oz = 0,
             },
-            item357 = {        
+            position357 = {        
                 levelName = 'MCTC',
                 x = 1719, 
                 y = -23392, 
@@ -3440,7 +3441,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item358 = {        
+            position358 = {        
                 levelName = 'MCTC',
                 x = 1150, 
                 y = -20270, 
@@ -3449,7 +3450,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item359 = {        
+            position359 = {        
                 levelName = 'MCTC',
                 x = -2223, 
                 y = -14639, 
@@ -3458,7 +3459,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item360 = {        
+            position360 = {        
                 levelName = 'MCTC',
                 x = -2163, 
                 y = -14647, 
@@ -3467,7 +3468,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item361 = {        
+            position361 = {        
                 levelName = 'MCTC',
                 x = 1848, 
                 y = 3543, 
@@ -3476,7 +3477,7 @@ function Positions(Ob)
                 oy = 178,
                 oz = 0,
             },
-            item362 = {        
+            position362 = {        
                 levelName = 'MCTC',
                 x = 3856, 
                 y = 3594, 
@@ -3485,7 +3486,7 @@ function Positions(Ob)
                 oy = -69,
                 oz = 0,
             },
-            item363 = {        
+            position363 = {        
                 levelName = 'MCTC',
                 x = -3487, 
                 y = 2103, 
@@ -3494,7 +3495,7 @@ function Positions(Ob)
                 oy = 0,
                 oz = 0,
             },
-            item364 = {        
+            position364 = {        
                 levelName = 'MCTC',
                 x = -943, 
                 y = -1373, 
@@ -3505,7 +3506,17 @@ function Positions(Ob)
             },
             
             --*******************************************************--
-
+            --CABH, Complete LLLL
+            position365 = {        
+                levelName = 'CABH',
+                x = 14494, 
+                y = 655, 
+                z = 14932,
+                ox = 0,
+                oy = -24,
+                oz = 0,
+                puzzle = 'llDone'
+            },
         
         }
         self.positionsList = posTable
