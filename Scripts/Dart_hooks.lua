@@ -1,0 +1,585 @@
+function Dart_hooks(Ob)
+
+    --add New Timer for Vault Text
+	Ob.TIMER_VAULT_REWARD = '1013'
+
+    --add some custom stat names to track at the end of the list
+    Ob.savedGlobalStatNames = {'scavengerHuntItems', 'numUnredeemedScavengerHuntItems', 
+			'numRedeemedScavengerHuntItems', 'rank', 'cardsInInv', 'coresInInv', 'websInInv',
+			'figmentPoints', 'brains', 'totalBrainsHeld', 'totalBrainsRedeemed', 'maxHealth', 'psiHealth', 'maxLives', 'dartLives', 'arrowheads', 'numUnredeemedPsitanium',
+			'psiBlastMaxAmmo', 'psiBlastAmmo', 'totalVaults', 
+			'confusionMaxAmmo', 'confusionAmmo',
+			'cardsRedeemed','cobwebsRedeemed', 'bSaveGame', 'baggageMatched',
+		    --achievement stats
+		    'shownpokey', 'clairvoyanced',
+			--Custom StatNames
+			'CollectedSuitcaseTag', 'CollectedPurseTag', 'CollectedHatboxTag', 'CollectedSteamertrunkTag', 'CollectedDufflebagTag',
+			'RandoHatbox', 'RandoSuitcase', 'RandoPurse', 'RandoSteamertrunk', 'RandoDufflebag',
+			'RandoHatboxTag', 'RandoSuitcaseTag', 'RandoPurseTag', 'RandoSteamertrunkTag', 'RandoDufflebagTag',
+			'RandoLevitation', 'RandoClairvoyance', 'RandoConfusion', 'RandoFirestarting', 'RandoInvisibility', 'RandoMarksmanship', 'RandoShield', 'RandoTelekinesis',
+			'ArrowheadBundleSmall', 'ArrowheadBundleMedium',
+			'CollectedVault', 'RandoPsiCard', 'RandoPsiMarker', 'RandoLivesUp', 'RandoAmmoUp', 'RandoProp', 'BrainJar',
+			--AP StatNames
+			'APItem', 'APPlaceholder', 'APLastIndex',
+			}
+
+    
+    --loads player stats at start of level
+    local loadStats_original = Ob.loadStats
+    function Ob:loadStats()
+        %loadStats_original(self)
+		--make PsiCores in inventory always equal 100
+		self.stats.PSIChallengeCores = 100
+		self.stats.coresInInv = 100
+    end
+
+    --FULL FUNCTION OVERRIDE
+    --Some stats don't reset to 0; this handles that logic.
+    --adding a long list of tables for randomizer item names to be stored
+	function Ob:resetStat(statID)
+		if statID == 'baggageCollected' or statID == 'bagTagsCollected' then
+			-- baggage stats
+			self.stats[statID] = {}   
+			self.stats[statID].hatbox = 0
+			self.stats[statID].suitcase = 0
+			self.stats[statID].steamertrunk = 0
+			self.stats[statID].purse = 0
+			self.stats[statID].dufflebag = 0
+		elseif statID == 'scavengerHuntItems' or statID == 'brains' or statID == 'vaultsFromLevel' or statID == 'shownpokey' or statID == 'clairvoyanced' then
+			-- stats that reset to an empty table
+			self.stats[statID] = {}
+		elseif statID == 'rank' then
+			-- stats that reset to 1
+			self.stats[statID] = 1
+		elseif statID == 'maxLives' then
+			self.stats[statID] = 5
+		elseif statID == 'dartLives' then
+			self.stats[statID] = self.stats.maxLives or 5
+		elseif statID == 'maxHealth' or statID == 'psiHealth' then
+			self.stats[statID] = 12
+		elseif statID == 'psiBlastMaxAmmo' then
+			self.stats[statID] = 30
+		elseif statID == 'psiBlastAmmo' then
+			self.stats[statID] = self.stats.psiBlastMaxAmmo or 30
+		elseif statID == 'confusionMaxAmmo' then
+			self.stats[statID] = 5
+		elseif statID == 'confusionAmmo' then
+			self.stats[statID] = self.stats.confusionMaxAmmo or 5
+		--adding all Rando Baggage as Tables
+		elseif statID == 'RandoHatbox' or statID == 'RandoSuitcase' or statID == 'RandoPurse' or statID == 'RandoSteamertrunk' or statID == 'RandoDufflebag' then
+			self.stats[statID] = {}
+		--adding all Rando Baggage Tags as Tables
+		elseif statID == 'RandoHatboxTag' or statID == 'RandoSuitcaseTag' or statID == 'RandoPurseTag' or statID == 'RandoSteamertrunkTag' or statID == 'RandoDufflebagTag' then
+			self.stats[statID] = {}
+		--adding Vaults, PsiCards, PsiMarkers, and ArrowheadBundles as Tables
+		elseif statID == 'CollectedVault' or statID == 'RandoPsiCard' or statID == 'RandoPsiMarker' or statID == 'ArrowheadBundleSmall' or statID == 'ArrowheadBundleMedium' then
+			self.stats[statID] = {}
+		--adding all PsiPowers with Progressive powers as Tables
+		elseif statID == 'RandoClairvoyance' or statID == 'RandoConfusion' or statID == 'RandoFirestarting' or statID == 'RandoInvisibility' or statID == 'RandoLevitation' or statID == 'RandoMarksmanship' or statID == 'RandoShield' or statID == 'RandoTelekinesis' then
+			self.stats[statID] = {}
+		--adding RandoLivesUp and RandoAmmoUp as Tables
+		elseif statID == 'RandoLivesUp' or statID == 'RandoAmmoUp' then
+			self.stats[statID] = {}
+		--adding all RandoProp Items as Table
+		elseif statID == 'RandoProp' then
+			self.stats[statID] = {}
+		--adding BrainJar Items as Table
+		elseif statID == 'BrainJar' then
+			self.stats[statID] = {}	
+		--adding all APItem Items as Table
+		elseif statID == 'APItem' then
+			self.stats[statID] = {}
+		--adding all APPlaceholder Items as Table
+		elseif statID == 'APPlaceholder' then
+			self.stats[statID] = {}
+		--adding last item index from Archipelago
+		elseif statID == 'APLastIndex' then
+			self.stats[statID] = -1
+		else
+			self.stats[statID] = 0
+		end
+	end
+
+    --FULL FUNCTION OVERRIDE
+    --[[when Raz takes damage, this gets called after. 
+    includes changes for Damage Multiplier and Instant Death
+    ]]
+    function Ob:adjustHealth(value,bDontPlaySound)
+		if not value then
+			GamePrint('ERROR: tried called dart.adjustHealth(nil)!')
+			return nil
+		end
+
+		--Adjust value with damage multiplier, unless Instant Death
+		local seedsettings = fso('RandoSeed', 'Randoseed')
+		if value < 0 and seedsettings.instantdeath == FALSE then
+			value = (value*seedsettings.enemydamagemultiplier)
+		end
+
+		value = tonumber(value)
+		
+		--this will unset the paused chase cam, anytime raz is damaged (and possibly moved, or respawn)
+		SetChaseCameraPaused(0)
+		if ( self.bDartIsDying ~= 1) then
+			self.stats.psiHealth = self.stats.psiHealth + value
+			-- to keep Dart's health below maxHealth
+			if (self.stats.psiHealth > self.stats.maxHealth) then
+				self.stats.psiHealth = self.stats.maxHealth
+			end
+			if (self.stats.psiHealth < 0) then 
+				self.stats.psiHealth = 0 
+			end
+			self:playWarningSound()
+			AdjustPlayerMood(value)
+		end
+		
+		--check for 1 Hit KO Setting, set health to 0 if true
+		if seedsettings.instantdeath == TRUE then
+			if (self.stats.psiHealth < self.stats.maxHealth) then
+				self.stats.psiHealth = 0 
+			end
+		end
+
+		if self.stats.psiHealth < 1 then
+			GameLog('die1', self, value)
+		end
+
+		-- drop out if death routines , else continue with damage voice lines
+		local fluffs = Global:loadGlobal('DreamFluffsInInv') or 0 
+		if self.stats.psiHealth < 1 and fluffs > 0 then
+			-- Find a dream fluff
+			local fluff
+			for k, v in Global.saved.Inventory['all'] do
+				if v.Type == 'global.collectibles.DreamFluff' then
+					fluff = FindScriptObject(k)
+				end
+			end
+			if not fluff then
+				GamePrint('ERROR: DreamFluffsInInv is greater than 0, but Raz has no fluffs!')
+			else
+				fluff:setState('UsePolitely')
+			end
+		elseif self.stats.psiHealth < 1 then
+			--dart is dead and has no lives left
+			--if dart has run out of health, but a cutscene just started playing, lets cheat and let the
+			--cutscene play and not let raz die, and add 1 unit of health back to raz
+			if (Global.cutsceneScript.cutscenePlaying == 1 or Global.levelScript.cutscenePlaying == 1) then
+				self.stats.psiHealth = self.stats.psiHealth + 1
+			else
+				self:setState('DartDie')
+			end
+			return
+		end
+		
+		if (value <= 0 and bDontPlaySound ~= 1) then
+			self:sayRandomOuchLines()
+		end
+		
+		return 1
+	end
+
+
+    --FULL FUNCTION OVERRIDE
+    --Major change that will always return Raz to the CU when he dies. 
+    --Vanilla can cause returns to the Kid's Cabins inside the real world, 
+    --or next to the character's mind you're inside currently
+    function Ob:stateDartDie()
+		self.bUninterruptibleState = 0	
+		
+		self:stopSound(self.deathWarningSound)
+		
+		self:fireDissipate()
+
+		self:callSpamListeners('DartDie')	
+
+		self:killTimer( self.TIMER_CONFUSED )
+
+		if (Global.levelScript:isTrainingLevel() ~= 1) then
+			self.stats.dartLives = max(0,self.stats.dartLives - 1)
+		end
+
+		--return to CU when running out of lives, NO MATTER WHAT
+		if self.stats.dartLives <= 0 then
+			GamePrint('Dart has died and is out of lives. Returning to the CU.')
+
+			self:deathSequence(1)
+			
+			Global:saveGlobal('bKickedOut', 1)
+			Global.levelScript:returnToCU()
+		else
+			self:setState('Respawn')
+		end
+	end
+
+
+    --when redeeming brains at ford's sanctuary, Checks victory condition to trigger victory
+    --if brainhunt is a goal, meat circus not required, and beatoleander is either false or has been done already
+    local onBrainRedeemed_original = Ob.onBrainRedeemed
+    function Ob:onBrainRedeemed(brainID, from)
+        %onBrainRedeemed_original(self, brainID, from)
+		--load the settings
+		local seedsettings = fso('RandoSeed', 'Randoseed')
+		--find the matching seed folder in ModData
+        local folderName = seedsettings.APfoldername
+        local filePath = folderName.."/victory.txt"
+        --check if enough brains have been redeeemed for victory
+		if self.stats.totalBrainsRedeemed >= seedsettings.brainsrequired then
+            --make sure brainhunt is our goal, and Meat Circus isn't required
+		    if seedsettings.brainhunt == TRUE and seedsettings.requireMC == FALSE then
+                --check if beatoleander is NOT our goal, OR Oleander already defeated
+			    if seedsettings.beatoleander == FALSE or Global:loadGlobal('bOleanderDefeated') == 1 then
+					--write victory to text file for client to read, Victory!
+					local h = fopen(filePath, "w")
+					fwrite(h, "victory\n")
+					fclose(h)
+				end
+			end
+		end
+    end
+
+-- ****************************************************************************
+--AP Collection Helper. Returns whether to write to item specific save data.
+	function Ob:genericAPCollect(name)
+		-- '_' prefix specifies that the item is a non-local copy received from the AP multiworld.
+		if strsub(name, 1, 1) == '_' then
+			GamePrint('Collected non-local copy ' .. name)
+			-- There should be no item that spawns in a level whose name matches this item.
+			return FALSE
+		else
+			self.stats.APItem[name] = 'collected'
+			-- Tell AP that the locally placed item has been collected from its location, sending an item out into the
+			-- multiworld if the item was an AP placeholder.
+			local apcollect = fso('APCollected', 'APCollected')
+			apcollect:writeCollectedItem(name)
+			GamePrint('Collected and stored local ' .. name)
+			-- Item specific save data should be written to. This prevents the item from spawning again when loading the
+			-- level again.
+			return TRUE
+		end
+	end
+
+-- ****************************************************************************
+
+	------CUSTOM BAGGAGE TAG HANDLER------
+--Stores Collected BaggageTag, Global Key
+	function Ob:onCollectedSuitcaseTag(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.RandoSuitcaseTag[name] = 'collected'
+		end
+		local value = 1
+		self.stats.CollectedSuitcaseTag = self.stats.CollectedSuitcaseTag + value
+	end
+
+	function Ob:onCollectedPurseTag(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.RandoPurseTag[name] = 'collected'
+		end
+		local value = 1
+		self.stats.CollectedPurseTag = self.stats.CollectedPurseTag + value
+	end
+
+	function Ob:onCollectedHatboxTag(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.RandoHatboxTag[name] = 'collected'
+		end
+		local value = 1
+		self.stats.CollectedHatboxTag = self.stats.CollectedHatboxTag + value
+	end
+
+	function Ob:onCollectedSteamertrunkTag(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.RandoSteamertrunkTag[name] = 'collected'
+		end
+		local value = 1
+		self.stats.CollectedSteamertrunkTag = self.stats.CollectedSteamertrunkTag + value
+	end
+
+	function Ob:onCollectedDufflebagTag(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.RandoDufflebagTag[name] = 'collected'
+		end
+		local value = 1
+		self.stats.CollectedDufflebagTag = self.stats.CollectedDufflebagTag + value
+	end
+
+-- ****************************************************************************
+
+------CUSTOM BAGGAGE HANDLER------
+--Removes Baggage Tag from inventory, stores Collected Baggage, Increases Rank, Global Lock
+	function Ob:onCollectedSuitcase(name,from)
+		self.stats.RandoSuitcase[name] = 'collected'
+		self.stats.APItem[name] = 'collected'
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
+		GamePrint('Stored '..name)
+		local value = 1
+		self.stats.CollectedSuitcaseTag = self.stats.CollectedSuitcaseTag - value
+		self:incrementRank()
+	end
+
+	function Ob:onCollectedPurse(name,from)
+		self.stats.RandoPurse[name] = 'collected'
+		self.stats.APItem[name] = 'collected'
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
+		GamePrint('Stored '..name)
+		local value = 1
+		self.stats.CollectedPurseTag = self.stats.CollectedPurseTag - value
+		self:incrementRank()
+	end
+
+	function Ob:onCollectedHatbox(name,from)
+		self.stats.RandoHatbox[name] = 'collected'
+		self.stats.APItem[name] = 'collected'
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
+		GamePrint('Stored '..name)
+		local value = 1
+		self.stats.CollectedHatboxTag = self.stats.CollectedHatboxTag - value
+		self:incrementRank()
+	end
+
+	function Ob:onCollectedSteamertrunk(name,from)
+		self.stats.RandoSteamertrunk[name] = 'collected'
+		self.stats.APItem[name] = 'collected'
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
+		GamePrint('Stored '..name)
+		local value = 1
+		self.stats.CollectedSteamertrunkTag = self.stats.CollectedSteamertrunkTag - value
+		self:incrementRank()
+	end
+
+	function Ob:onCollectedDufflebag(name,from)
+		self.stats.RandoDufflebag[name] = 'collected'
+		self.stats.APItem[name] = 'collected'
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
+		GamePrint('Stored '..name)
+		local value = 1
+		self.stats.CollectedDufflebagTag = self.stats.CollectedDufflebagTag - value
+		self:incrementRank()
+	end
+
+-- ****************************************************************************
+
+	------CUSTOM RANDOPSIPOWERS HANDLERS------
+	--Stores Collected RandoPsiPowers and Progressive Powerups
+	function Ob:onRandoClairvoyance(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.RandoClairvoyance[name] = 'collected'
+		end
+	end
+
+	function Ob:onRandoConfusion(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.RandoConfusion[name] = 'collected'
+		end
+	end
+
+	function Ob:onRandoFirestarting(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.RandoFirestarting[name] = 'collected'
+		end
+	end
+
+	function Ob:onRandoInvisibility(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.RandoInvisibility[name] = 'collected'
+		end
+	end
+
+	function Ob:onRandoLevitation(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.RandoLevitation[name] = 'collected'
+		end
+	end
+
+	function Ob:onRandoMarksmanship(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.RandoMarksmanship[name] = 'collected'
+		end
+	end
+
+	function Ob:onRandoShield(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.RandoShield[name] = 'collected'
+		end
+	end
+
+	function Ob:onRandoTelekinesis(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.RandoTelekinesis[name] = 'collected'
+		end
+	end
+
+-- ****************************************************************************
+
+	------CUSTOM RANDOPSICARD HANDLER------
+	--Stores Collected RandoPsiCard
+	function Ob:onRandoPsiCard(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.RandoPsiCard[name] = 'collected'
+		end
+	end
+
+-- ****************************************************************************
+
+	------CUSTOM RANDOPSIMARKER HANDLER------
+	--Stores Collected RandoPsiMarker
+	function Ob:onRandoPsiMarker(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.RandoPsiMarker[name] = 'collected'
+		end
+	end
+
+-- ****************************************************************************
+
+	------CUSTOM RANDOPROP HANDLER------
+	--Stores Collected Prop
+	function Ob:onRandoProp(name,from)
+		--check to make sure it's not being reincarnated in inventory
+		if self.stats.RandoProp[name] ~= 'collected' then
+			self.stats.RandoProp[name] = 'collected'
+			self.stats.APItem[name] = 'collected'
+			local apcollect = fso('APCollected', 'APCollected')
+			apcollect:writeCollectedItem(name)
+			GamePrint('Stored '..name)
+		end
+	end
+
+-- ****************************************************************************
+	------CUSTOM VAULT HANDLER------
+	--Stores CollectedVault, Increases Rank when you open a vault
+	function Ob:onCollectedVault(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.CollectedVault[name] = 'collected'
+		end
+		self.stats.totalVaults = self.stats.totalVaults+1
+
+		local seedsettings = fso('RandoSeed', 'Randoseed')
+		if seedsettings.lootboxvaults == TRUE then
+			--Random Rewards! Loot Box!
+			--Random value of arrowheads to receive
+			self.randArrows = random (10, 50)
+			--Roll some RNG for Jackpots/Ranks to recieve
+			self.jackpotArrows = random (1, 50)
+			self.jackpotRanks = random (1, 50)
+		else
+			--Make Result Static, One Rank and 15 Arrowheads
+			self.randArrows = 15
+			self.jackpotArrows = 1
+			self.jackpotRanks = 26
+		end
+		
+		--2% chance for 250 arrowheads instead
+		if self.jackpotArrows == 50 then
+			UI_AdjustCollectible('arrowhead', 250, self)
+			SendMessage(self, self, 'Arrowhead', 250)
+			self.arrowsMessage = "250!!"
+		--8% chance for 100 arrowheads instead
+		elseif self.jackpotArrows >= 46 then
+			UI_AdjustCollectible('arrowhead', 100, self)
+			SendMessage(self, self, 'Arrowhead', 100)
+			self.arrowsMessage = "100!!"
+		else
+			UI_AdjustCollectible('arrowhead', self.randArrows, self)
+			SendMessage(self, self, 'Arrowhead', self.randArrows)
+			self.arrowsMessage = self.randArrows
+		end
+
+		--2% chance for 5 Ranks
+		if self.jackpotRanks == 50 then
+			self:incrementRank(5)
+			self.rankMessage = "Five Ranks!!!"
+		--8% chance for Two Ranks
+		elseif self.jackpotRanks >= 46 then
+			self:incrementRank(2)
+			self.rankMessage = "Two Ranks!"
+		--50% chance for One Rank
+		elseif self.jackpotRanks >= 26 then
+			self:incrementRank()
+			self.rankMessage = "One Rank!"
+		else
+			self.rankMessage = "None..."
+		end
+		
+	end
+
+-- ****************************************************************************
+
+	------CUSTOM MAXLIVES AND MAXAMMO HANDLER------
+	--Stores RandoLivesUp and RandoAmmoUp
+	function Ob:onRandoLivesUp(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.RandoLivesUp[name] = 'collected'
+		end
+	end
+
+	function Ob:onRandoAmmoUp(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.RandoAmmoUp[name] = 'collected'
+		end
+	end
+
+-- ****************************************************************************
+
+	------CUSTOM ARROWHEADBUNDLE HANDLERS------
+	--Stores collected ArrowheadBundles
+	function Ob:onArrowheadBundleSmall(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.ArrowheadBundleSmall[name] = 'collected'
+		end
+	end
+
+	function Ob:onArrowheadBundleMedium(name,from)
+		if self:genericAPCollect(name) then
+			self.stats.ArrowheadBundleMedium[name] = 'collected'
+		end
+	end
+
+-- ****************************************************************************
+
+	------CUSTOM BRAINJAR HANDLERS------
+	--Stores collected BrainJars
+	function Ob:onBrainJar(name,from)
+		self.stats.BrainJar[name] = 'collected'
+		self.stats.APItem[name] = 'collected'
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
+		GamePrint('Stored '..name)
+	end
+
+-- ****************************************************************************
+
+	------CUSTOM APPLACEHOLDER HANDLERS------
+	--Stores collected APPlaceholders
+	function Ob:onAPPlaceholder(name,from)
+		self.stats.APPlaceholder[name] = 'collected'
+		self.stats.APItem[name] = 'collected'
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(name)
+		GamePrint('Stored '..name)
+	end
+
+-- ****************************************************************************
+
+--[Orignal Collectible Functions Overrides]
+	local onScavengerHuntItem_original = Ob.onScavengerHuntItem
+	function Ob:onScavengerHuntItem(ItemID,from)
+		%onScavengerHuntItem_original(self,ItemID,from)
+		self.stats.APItem[ItemID] = 'collected'
+		local apcollect = fso('APCollected', 'APCollected')
+		apcollect:writeCollectedItem(ItemID)
+	end
+
+	--FULL FUNCTION OVERRIDE
+	--adjusted to ignore duplicate baggage in a level, multiples are fine!
+	function Ob:onEmotionalBaggage(sBaggageType,from)
+		self.stats.baggageCollected[sBaggageType] = 1
+		self.stats.EmotionalBaggageSolved = self.stats.EmotionalBaggageSolved + 1
+		self.stats.baggageMatched = self.stats.baggageMatched + 1
+	end
+
+
+end
