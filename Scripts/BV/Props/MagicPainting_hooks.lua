@@ -1,7 +1,16 @@
 function MagicPainting_hooks(Ob)
 
-    local onBeginLevel_original = Ob.onBeginLevel
+    --[[HACK!!! Prevent's Gloria's Theater Crashing, BUT also prevents Paintings from being randomized.
+    Until crash cause is found, this will have to do... 
 
+    Makes paintings only appear in inventory and usable inside of Black Velvetopia
+    ]]
+    Ob.level = 'prefixBased'
+
+
+    --[[Until fix for Gloria's Theater Crashing is found, this is unnecessary
+
+    local onBeginLevel_original = Ob.onBeginLevel
     function Ob:onBeginLevel()
         %onBeginLevel_original(self)
 
@@ -33,4 +42,5 @@ function MagicPainting_hooks(Ob)
 			Global.player:sayLine("/BVRO005RA/", 0, 1, nil, 1, nil, 1)	--DIALOG=<<I should find a proper hook for this painting, so it will come to life like that dog said.>>
 		end
 	end
+    ]]
 end
