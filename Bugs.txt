@@ -11,6 +11,38 @@ Some locations need adjusting cleanup
 
 THINGS TO DO:
 
+Convert Rank Rewards to automatically spawn, not at Ford's
+    Remove Baggage from spawning on ranks in APWorld
+    Update Positions List, remove all rank spawn locations (YUCK)
+
+Add Figment Percentage Checks
+    20% Increments, use gathered table data 
+    Need to test logic for all levels, what percent can be collected in each region sphere? Without Levitation?
+
+Rework Vaults, lootboxes suck
+    Trap item with slideshow somehow?
+    Hints? Strong Flavor here, but what to hint?
+
+Rework Baggage, make rewards progressive
+    Not sure if Poptracker will be fixed by this change, but makes logic straightforward
+
+Change AP Placeholder item model to option-based
+    Choose between classic bunny, AP symbol, others?
+
+Change Camp unlock models to different objects
+    Kids Cabins unlock to a Cabin
+    Recepetion Area to a Campfire
+
+Can we add MORE check locations? 
+    Scavenger Hunt Rewards, complete 50% and all for a check each
+        Makes scav items progression, also a lot of work for only two check locations, maybe a yaml setting?
+    Shop Locations! Buy something, get check
+        Painting Shops in BV, could be worth until fully randomizing possible
+        Shop in Camp Store, currently just Colorizer, not exciting
+
+
+
+
 Give Brain Jars interestfx for more visibility?
 
 Cleanup Milkman
@@ -23,13 +55,12 @@ Look into applying certain sounds across all levels
 Add more junk items?
 
 Add Edgar's Playing Cards and Paintings to item pool?
+    Paintings cause Gloria's Theater Bug! How fix???
 
 Black Velvetopia potential shop painting rando? Needs work...
-    Could remove shop functionality entirely, just be collectible spots. Doesn't feel good.
 
 
 Scripts still needing Reworked to Hooks:
-    Dart.lua
     LevelScript.lua
     Global/Characters/Vault.lua
     Entire Folder Global/Collectibles

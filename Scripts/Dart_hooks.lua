@@ -565,6 +565,7 @@ function Dart_hooks(Ob)
 -- ****************************************************************************
 
 --[Orignal Collectible Functions Overrides]
+
 	local onScavengerHuntItem_original = Ob.onScavengerHuntItem
 	function Ob:onScavengerHuntItem(ItemID,from)
 		%onScavengerHuntItem_original(self,ItemID,from)
@@ -580,6 +581,48 @@ function Dart_hooks(Ob)
 		self.stats.EmotionalBaggageSolved = self.stats.EmotionalBaggageSolved + 1
 		self.stats.baggageMatched = self.stats.baggageMatched + 1
 	end
+
+	--FULL FUNCTION OVERRIDE
+	function Ob:onCollectedCobweb(value,from)
+		value = (value and tonumber(value)) or 1
+		self.stats.cobwebs = self.stats.cobwebs + value
+		-- Check if Cobweb Shuffle is enabled.
+		local settings = FindScriptObject('RandoSeed')
+		if settings.cobwebShuffle == TRUE then
+			-- Send an AP location check instead of adding a cobweb to the player's inventory.
+			local cobwebShuffle = fso('APCobwebShuffle', 'APCobwebShuffle')
+			cobwebShuffle:collectedCobweb(from.Name)
+		else
+			self.stats.websInInv = self.stats.websInInv + value
+		end
+		self.stats.cobwebsFromEntireLevel = self.stats.cobwebsFromEntireLevel + value
+
+		if self.stats.cobwebsFromEntireLevel == Global.cobwebsPerLevel[Global.levelScript:getLevelPrefix()] then
+			Global:save('bCobwebsComplete', 1)
+			self:collectibleBling("/GLZD437TO/", 'Textures/icons/InventoryItems/Journal_Cobweb.dds')
+ 			GamePrint('All cobwebs in level collected!!!')
+		end
+	end	
+
+
+
+
+	---------------------------------------------
+
+	local setRank_original = Ob.setRank
+	function Ob:setRank(num, bRunEffect)
+		%setRank_original(self,num,bRunEffect)
+		if not Global:loadGlobal("APRankMax") then
+			Global:saveGlobal("APRankMax", 1)
+		end
+		-- Send an AP location when increasing rank
+		local rankShuffle = fso('APRankShuffle', 'APRankShuffle')
+		if rankShuffle then
+			rankShuffle:collectedRank(num)
+		end
+	
+	end
+	
 
 
 end
