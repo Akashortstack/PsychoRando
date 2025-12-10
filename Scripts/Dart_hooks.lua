@@ -604,11 +604,7 @@ function Dart_hooks(Ob)
 		end
 	end	
 
-
-
-
-	---------------------------------------------
-
+	--called whenever rank changes (increase)
 	local setRank_original = Ob.setRank
 	function Ob:setRank(num, bRunEffect)
 		%setRank_original(self,num,bRunEffect)
@@ -620,8 +616,18 @@ function Dart_hooks(Ob)
 		if rankShuffle then
 			rankShuffle:collectedRank(num)
 		end
-	
 	end
+
+	--called whenever a figment is collected
+	local onFigment_original = Ob.onFigment
+	function Ob:onFigment(value, from)
+		%onFigment_original(self,value,from)
+		--call the figment handler
+		local figmentHandler = fso('RandoFigmentHandler', 'RandoFigmentHandler')			
+		figmentHandler:collectedFigment()
+	end
+
+
 	
 
 

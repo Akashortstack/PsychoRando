@@ -1,5 +1,5 @@
 
--- there are 100 different "rank up" locations since you start at 1, go to 101 (max in vanilla), one 
+-- there are 100 different "rank up" locations since you start at 1, go to 101 (max in vanilla),
 -- one reward every rank for RankSanity, every five ranks normally
 local rank_names = {
     "Rank2",
@@ -117,21 +117,21 @@ function APRankShuffle(Ob)
     end
 
     function Ob:collectedRank(num)
-    local current_checked_rank = Global:loadGlobal("APRankMax") or 0
+        local current_checked_rank = Global:loadGlobal("APRankMax") or 0
 
-    for rank = current_checked_rank + 1, num do
-        local name = "Rank" .. rank  -- concatenate to get proper rank name
-        local location_id = rank_name_to_id[name]
-        
-        if location_id then
-            local apcollected = fso('APCollected', 'APCollected')
-            apcollected:writeCollectedLocation(location_id)
-            Global:saveGlobal("APRankMax", rank)  -- update max rank collected
-        else
-            GamePrint(name .. " is not a valid rank name")
+        for rank = current_checked_rank + 1, num do
+            local name = "Rank" .. rank  -- concatenate to get proper rank name
+            local location_id = rank_name_to_id[name]
+            
+            if location_id then
+                local apcollected = fso('APCollected', 'APCollected')
+                apcollected:writeCollectedLocation(location_id)
+                Global:saveGlobal("APRankMax", rank)  -- update max rank collected
+            else
+                GamePrint(name .. " is not a valid rank name")
+            end
         end
     end
-end
 
 
     return Ob

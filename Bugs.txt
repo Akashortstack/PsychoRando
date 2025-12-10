@@ -11,10 +11,6 @@ Some locations need adjusting cleanup
 
 THINGS TO DO:
 
-Convert Rank Rewards to automatically spawn, not at Ford's
-    Remove Baggage from spawning on ranks in APWorld
-    Update Positions List, remove all rank spawn locations (YUCK)
-
 Add Figment Percentage Checks
     20% Increments, use gathered table data 
     Need to test logic for all levels, what percent can be collected in each region sphere? Without Levitation?

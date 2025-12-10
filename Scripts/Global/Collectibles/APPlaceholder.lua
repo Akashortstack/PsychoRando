@@ -4,6 +4,7 @@ function APPlaceholder(Ob)
 
 		Ob.dependencies = {
 			meshes = { 'Characters/MeatCircus_Bunny.plb' }
+			--meshes = { 'Textures/Objects/AP_Symbol.plb' }
 		}
 		Ob.collSphereRadius = 50
 		
@@ -12,6 +13,7 @@ function APPlaceholder(Ob)
 	function Ob:onBeginLevel()
 
 		self.meshName = 'Characters/MeatCircus_Bunny.plb'
+		--self.meshName = 'Textures/Objects/AP_Symbol.plb'
 
 		--edit
 		if Global.player.stats.APPlaceholder[self.Name] == 'collected' then
