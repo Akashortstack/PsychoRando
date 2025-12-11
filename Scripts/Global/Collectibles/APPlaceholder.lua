@@ -12,9 +12,13 @@ function APPlaceholder(Ob)
 	end	
 	
 	function Ob:onBeginLevel()
-		--check for AP Item model settings
+		--[[check for AP Item model settings
+		0 = Archipelago
+		1 = Classic (bunny)
+		Can always add more custom models in the future!
+		]]
 		local seedsettings = fso('RandoSeed', 'Randoseed')
-		if seedsettings.apItemModel == "Classic" then
+		if seedsettings.apItemModel == 1 then
 			self.meshName = 'Characters/MeatCircus_Bunny.plb' --classic bunny model
 		else
 			self.meshName = 'APModels/apitem.plb' --default to Archipelago Logo Model
