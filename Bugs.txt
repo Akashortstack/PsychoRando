@@ -11,9 +11,8 @@ Some locations need adjusting cleanup
 
 THINGS TO DO:
 
-Add Figment Percentage Checks
-    Rando Mod working, Update APWorld 
-    Need to test logic for all levels, what percent can be collected in each region sphere? Without Levitation?
+Test Logic for Figment Percentage Checks
+    what percent can be collected in each region sphere? Without Levitation?
 
 Rework Vaults, lootboxes suck
     Trap item with slideshow somehow?
@@ -21,9 +20,6 @@ Rework Vaults, lootboxes suck
 
 Rework Baggage, make rewards progressive
     Not sure if Poptracker will be fixed by this change, but makes logic straightforward
-
-Change AP Placeholder item model to option-based
-    Choose between classic bunny, AP symbol, others?
 
 Change Camp unlock models to different objects
     Kids Cabins unlock to a Cabin
