@@ -12,7 +12,7 @@ Some locations need adjusting cleanup
 THINGS TO DO:
 
 Add Figment Percentage Checks
-    20% Increments, use gathered table data 
+    Rando Mod working, Update APWorld 
     Need to test logic for all levels, what percent can be collected in each region sphere? Without Levitation?
 
 Rework Vaults, lootboxes suck

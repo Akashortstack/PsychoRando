@@ -101,7 +101,7 @@ function RandoFigmentHandler(Ob)
             local percent = i * 20 --multiply by 20 to get the percentage threshold
             local apCollected = Global:loadGlobal('percentFigments'..levelPrefix..percent) or 0
             if totalFigments >= value then
-                -- Send an AP location when increasing rank
+                -- Send an AP location
 		        local figmentShuffle = fso('APFigmentShuffle', 'APFigmentShuffle')
 		        if figmentShuffle and (apCollected ~= 1) then --only call if not collected yet
                     GamePrint("Collected "..percent.." percent of figments in "..levelPrefix)

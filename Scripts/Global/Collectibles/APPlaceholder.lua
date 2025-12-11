@@ -3,35 +3,41 @@ function APPlaceholder(Ob)
 		Ob = CreateObject('Global.Props.HeldObject')
 
 		Ob.dependencies = {
-			meshes = { 'Characters/MeatCircus_Bunny.plb' }
-			--meshes = { 'Textures/Objects/AP_Symbol.plb' }
+			meshes = { 'Characters/MeatCircus_Bunny.plb', 
+					   'APModels/apitem.plb' }
+			--meshes = { 'APModels/apitem.plb' }
 		}
 		Ob.collSphereRadius = 50
 		
 	end	
 	
 	function Ob:onBeginLevel()
+		--check for AP Item model settings
+		local seedsettings = fso('RandoSeed', 'Randoseed')
+		if seedsettings.apItemModel == "Classic" then
+			self.meshName = 'Characters/MeatCircus_Bunny.plb' --classic bunny model
+		else
+			self.meshName = 'APModels/apitem.plb' --default to Archipelago Logo Model
+		end
 
-		self.meshName = 'Characters/MeatCircus_Bunny.plb'
-		--self.meshName = 'Textures/Objects/AP_Symbol.plb'
-
-		--edit
 		if Global.player.stats.APPlaceholder[self.Name] == 'collected' then
 			self:killSelf()
 		end
         
 		%Ob.Parent.onBeginLevel(self)
 
+		SetEntityAmbientLight(self, 0.8, 0.8, 0.8)
+
+
 		--edit to fix scale and orientation
 		--SetScale(self, 1,1,1)
 		--self.mover:setOrientation(ApplyOrientation(0, 0, 0, self.mover:getOrientation()))
 		self:setState(nil)
 
-		--edit to add collect soundfx
+		--collect soundfx
 		self.pickUpSound = LoadSound('ArrowheadPop')
 
-        --edit to change Pickup Image and displayed item name
-
+        --Pickup Image and displayed item name
         self.pickupSpritePath = 'Textures/Objects/AP_Symbol.dds'
         self.displayName = "AP Item"
 
@@ -45,9 +51,9 @@ function APPlaceholder(Ob)
 
         Global.player.invDisplayer:invItemAdded(self,0,0,nil,1,0)
 
-		--edit sendMessage to Dart
+		--sendMessage to Dart
 		self:sendMessage(Global.player, 'APPlaceholder', self.Name, 1)
-		--edit for soundfx
+		--soundfx
 		PlaySound(nil, self.pickUpSound)
 
 		self:killSelf()
