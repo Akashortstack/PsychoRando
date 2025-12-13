@@ -14,16 +14,18 @@ THINGS TO DO:
 Test Logic for Figment Percentage Checks
     what percent can be collected in each region sphere? Without Levitation?
 
+Add Unique Client image, use Hat in Time for Example, search "yatta"
+
 Rework Vaults, lootboxes suck
     Trap item with slideshow somehow?
-    Hints? Strong Flavor here, but what to hint?
+    Hints? Strong Flavor here, but what to hint? How to hint?
 
 Rework Baggage, make rewards progressive
     Not sure if Poptracker will be fixed by this change, but makes logic straightforward
 
 Change Camp unlock models to different objects
     Kids Cabins unlock to a Cabin
-    Recepetion Area to a Campfire
+    Reception Area to a Campfire
 
 Can we add MORE check locations? 
     Scavenger Hunt Rewards, complete 50% and all for a check each

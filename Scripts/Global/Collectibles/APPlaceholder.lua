@@ -4,8 +4,8 @@ function APPlaceholder(Ob)
 
 		Ob.dependencies = {
 			meshes = { 'Characters/MeatCircus_Bunny.plb', 
-					   'APModels/apitem.plb' }
-			--meshes = { 'APModels/apitem.plb' }
+					   'APModels/apitem.plb',
+					   'APModels/apitem_present.plb', }
 		}
 		Ob.collSphereRadius = 50
 		
@@ -15,11 +15,14 @@ function APPlaceholder(Ob)
 		--[[check for AP Item model settings
 		0 = Archipelago
 		1 = Classic (bunny)
+		2 = Present
 		Can always add more custom models in the future!
 		]]
 		local seedsettings = fso('RandoSeed', 'Randoseed')
 		if seedsettings.apItemModel == 1 then
 			self.meshName = 'Characters/MeatCircus_Bunny.plb' --classic bunny model
+		elseif seedsettings.apItemModel == 2 then
+			self.meshName = 'APModels/apitem_present.plb' --christmas present model
 		else
 			self.meshName = 'APModels/apitem.plb' --default to Archipelago Logo Model
 		end
