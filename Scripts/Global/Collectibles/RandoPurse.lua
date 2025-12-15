@@ -222,7 +222,7 @@ function RandoPurse(Ob)
 	--if i'm activated while raz holding a tag
 	function Ob:stateActivated()
 		--edit stat type
-		if (Global.player.stats.CollectedPurseTag >= 1) then -- player has collected our matching tag
+		if (Global.player.stats.CurrentPurseTags >= 1) then -- player has collected our matching tag
 			--edit to remove from total count
 			self:sendMessage(Global.player, 'CollectedPurse', self.Name, 1)
 			GamePrint('GotItem '..self.Name)

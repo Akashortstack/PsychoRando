@@ -13,7 +13,8 @@ function Dart_hooks(Ob)
 		    --achievement stats
 		    'shownpokey', 'clairvoyanced',
 			--Custom StatNames
-			'CollectedSuitcaseTag', 'CollectedPurseTag', 'CollectedHatboxTag', 'CollectedSteamertrunkTag', 'CollectedDufflebagTag',
+			'CurrentSuitcaseTags', 'CurrentPurseTags', 'CurrentHatboxTags', 'CurrentSteamertrunkTags', 'CurrentDufflebagTags',
+			'TotalSuitcase', 'TotalPurse', 'TotalHatbox', 'TotalSteamertrunk', 'TotalDufflebag',
 			'RandoHatbox', 'RandoSuitcase', 'RandoPurse', 'RandoSteamertrunk', 'RandoDufflebag',
 			'RandoHatboxTag', 'RandoSuitcaseTag', 'RandoPurseTag', 'RandoSteamertrunkTag', 'RandoDufflebagTag',
 			'RandoLevitation', 'RandoClairvoyance', 'RandoConfusion', 'RandoFirestarting', 'RandoInvisibility', 'RandoMarksmanship', 'RandoShield', 'RandoTelekinesis',
@@ -262,44 +263,44 @@ function Dart_hooks(Ob)
 
 	------CUSTOM BAGGAGE TAG HANDLER------
 --Stores Collected BaggageTag, Global Key
-	function Ob:onCollectedSuitcaseTag(name,from)
+	function Ob:onCurrentSuitcaseTags(name,from)
 		if self:genericAPCollect(name) then
 			self.stats.RandoSuitcaseTag[name] = 'collected'
 		end
 		local value = 1
-		self.stats.CollectedSuitcaseTag = self.stats.CollectedSuitcaseTag + value
+		self.stats.CurrentSuitcaseTags = self.stats.CurrentSuitcaseTags + value
 	end
 
-	function Ob:onCollectedPurseTag(name,from)
+	function Ob:onCurrentPurseTags(name,from)
 		if self:genericAPCollect(name) then
 			self.stats.RandoPurseTag[name] = 'collected'
 		end
 		local value = 1
-		self.stats.CollectedPurseTag = self.stats.CollectedPurseTag + value
+		self.stats.CurrentPurseTags = self.stats.CurrentPurseTags + value
 	end
 
-	function Ob:onCollectedHatboxTag(name,from)
+	function Ob:onCurrentHatboxTags(name,from)
 		if self:genericAPCollect(name) then
 			self.stats.RandoHatboxTag[name] = 'collected'
 		end
 		local value = 1
-		self.stats.CollectedHatboxTag = self.stats.CollectedHatboxTag + value
+		self.stats.CurrentHatboxTags = self.stats.CurrentHatboxTags + value
 	end
 
-	function Ob:onCollectedSteamertrunkTag(name,from)
+	function Ob:onCurrentSteamertrunkTags(name,from)
 		if self:genericAPCollect(name) then
 			self.stats.RandoSteamertrunkTag[name] = 'collected'
 		end
 		local value = 1
-		self.stats.CollectedSteamertrunkTag = self.stats.CollectedSteamertrunkTag + value
+		self.stats.CurrentSteamertrunkTags = self.stats.CurrentSteamertrunkTags + value
 	end
 
-	function Ob:onCollectedDufflebagTag(name,from)
+	function Ob:onCurrentDufflebagTags(name,from)
 		if self:genericAPCollect(name) then
 			self.stats.RandoDufflebagTag[name] = 'collected'
 		end
 		local value = 1
-		self.stats.CollectedDufflebagTag = self.stats.CollectedDufflebagTag + value
+		self.stats.CurrentDufflebagTags = self.stats.CurrentDufflebagTags + value
 	end
 
 -- ****************************************************************************
@@ -313,7 +314,18 @@ function Dart_hooks(Ob)
 		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
-		self.stats.CollectedSuitcaseTag = self.stats.CollectedSuitcaseTag - value
+		self.stats.CurrentSuitcaseTags = self.stats.CurrentSuitcaseTags - value
+		self.stats.TotalSuitcase = self.stats.TotalSuitcase + value
+
+		--send progressive baggage check
+		local settings = FindScriptObject('RandoSeed')
+		local suitcaseCount = self.stats.TotalSuitcase
+		if (settings.progressiveBaggage == TRUE) and (settings.progressiveBaggageMax >= suitcaseCount) then
+			-- Send an AP location check 
+			local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
+			baggageShuffle:collectedProgBaggageLocation("Suitcase"..suitcaseCount)
+		end
+		-- Rank Up Reward
 		self:incrementRank()
 	end
 
@@ -324,7 +336,18 @@ function Dart_hooks(Ob)
 		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
-		self.stats.CollectedPurseTag = self.stats.CollectedPurseTag - value
+		self.stats.CurrentPurseTags = self.stats.CurrentPurseTags - value
+		self.stats.TotalPurse = self.stats.TotalPurse + value
+
+		--send progressive baggage check
+		local settings = FindScriptObject('RandoSeed')
+		local purseCount = self.stats.TotalPurse
+		if (settings.progressiveBaggage == TRUE) and (settings.progressiveBaggageMax >= purseCount) then
+			-- Send an AP location check 
+			local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
+			baggageShuffle:collectedProgBaggageLocation("Purse"..purseCount)
+		end
+		-- Rank Up Reward
 		self:incrementRank()
 	end
 
@@ -335,7 +358,18 @@ function Dart_hooks(Ob)
 		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
-		self.stats.CollectedHatboxTag = self.stats.CollectedHatboxTag - value
+		self.stats.CurrentHatboxTags = self.stats.CurrentHatboxTags - value
+		self.stats.TotalHatbox = self.stats.TotalHatbox + value
+
+		--send progressive baggage check
+		local settings = FindScriptObject('RandoSeed')
+		local hatboxCount = self.stats.TotalHatbox
+		if (settings.progressiveBaggage == TRUE) and (settings.progressiveBaggageMax >= hatboxCount) then
+			-- Send an AP location check 
+			local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
+			baggageShuffle:collectedProgBaggageLocation("Hatbox"..hatboxCount)
+		end
+		-- Rank Up Reward
 		self:incrementRank()
 	end
 
@@ -346,7 +380,18 @@ function Dart_hooks(Ob)
 		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
-		self.stats.CollectedSteamertrunkTag = self.stats.CollectedSteamertrunkTag - value
+		self.stats.CurrentSteamertrunkTags = self.stats.CurrentSteamertrunkTags - value
+		self.stats.TotalSteamertrunk = self.stats.TotalSteamertrunk + value
+
+		--send progressive baggage check
+		local settings = FindScriptObject('RandoSeed')
+		local steamertrunkCount = self.stats.TotalSteamertrunk
+		if (settings.progressiveBaggage == TRUE) and (settings.progressiveBaggageMax >= steamertrunkCount) then
+			-- Send an AP location check 
+			local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
+			baggageShuffle:collectedProgBaggageLocation("Steamertrunk"..steamertrunkCount)
+		end
+		-- Rank Up Reward
 		self:incrementRank()
 	end
 
@@ -357,7 +402,18 @@ function Dart_hooks(Ob)
 		apcollect:writeCollectedItem(name)
 		GamePrint('Stored '..name)
 		local value = 1
-		self.stats.CollectedDufflebagTag = self.stats.CollectedDufflebagTag - value
+		self.stats.CurrentDufflebagTags = self.stats.CurrentDufflebagTags - value
+		self.stats.TotalDufflebag = self.stats.TotalDufflebag + value
+
+		--send progressive baggage check
+		local settings = FindScriptObject('RandoSeed')
+		local dufflebagCount = self.stats.TotalDufflebag
+		if (settings.progressiveBaggage == TRUE) and (settings.progressiveBaggageMax >= dufflebagCount) then
+			-- Send an AP location check 
+			local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
+			baggageShuffle:collectedProgBaggageLocation("Dufflebag"..dufflebagCount)
+		end
+		-- Rank Up Reward
 		self:incrementRank()
 	end
 

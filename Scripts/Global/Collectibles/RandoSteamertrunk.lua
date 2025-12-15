@@ -221,7 +221,7 @@ function RandoSteamertrunk(Ob)
 	--if i'm activated while raz holding a tag
 	function Ob:stateActivated()
 		--edit stat type
-		if (Global.player.stats.CollectedSteamertrunkTag >= 1) then -- player has collected our matching tag
+		if (Global.player.stats.CurrentSteamertrunkTags >= 1) then -- player has collected our matching tag
 			--edit to remove from total count
 			self:sendMessage(Global.player, 'CollectedSteamertrunk', self.Name, 1)
 			GamePrint('GotItem '..self.Name)

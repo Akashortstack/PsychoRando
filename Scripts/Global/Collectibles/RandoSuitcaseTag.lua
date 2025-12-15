@@ -138,7 +138,7 @@ function RandoSuitcaseTag(Ob)
 		end	
 		Yield()   --so the default anim loads so the clutch looks right
 		--edit to sendMessage to Dart
-		self:sendMessage(Global.player, 'CollectedSuitcaseTag', self.Name, 1)
+		self:sendMessage(Global.player, 'CurrentSuitcaseTags', self.Name, 1)
 		GamePrint('GotItem '..self.Name)
 
 		Global.player.invDisplayer:journalItemAdded(self)

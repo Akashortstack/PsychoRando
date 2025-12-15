@@ -221,7 +221,7 @@ function RandoSuitcase(Ob)
 	--if i'm activated while raz holding a tag
 	function Ob:stateActivated()
 		--edit stat type
-		if (Global.player.stats.CollectedSuitcaseTag >= 1) then -- player has collected our matching tag
+		if (Global.player.stats.CurrentSuitcaseTags >= 1) then -- player has collected our matching tag
 			--edit to sendMessage to Dart
 			self:sendMessage(Global.player, 'CollectedSuitcase', self.Name, 1)
 			GamePrint('GotItem '..self.Name)
