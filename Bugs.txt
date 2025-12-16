@@ -11,16 +11,10 @@ Some locations need adjusting cleanup
 
 THINGS TO DO:
 
-Linda Boss did not send location
-
-Figment Percents have Baggage on them
-
-Progressive Baggage, Update Rando to send out check locations!
+Remove Psychonauts only Starting Inventory options, add StartInventoryPool
 
 Test Logic for Figment Percentage Checks
     what percent can be collected in each region sphere? Without Levitation?
-
-Add Unique Client image, use Hat in Time for Example, search "yatta"
 
 Rework Vaults, lootboxes suck
     Trap item with slideshow somehow?
