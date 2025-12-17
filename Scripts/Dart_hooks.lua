@@ -306,16 +306,19 @@ function Dart_hooks(Ob)
 -- ****************************************************************************
 
 ------CUSTOM BAGGAGE HANDLER------
---Removes Baggage Tag from inventory, stores Collected Baggage, Increases Rank, Global Lock
 	function Ob:onCollectedSuitcase(name,from)
-		self.stats.RandoSuitcase[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
-		local value = 1
-		self.stats.CurrentSuitcaseTags = self.stats.CurrentSuitcaseTags - value
-		self.stats.TotalSuitcase = self.stats.TotalSuitcase + value
+		-- Removes Baggage Tag from inventory, stores Collected Baggage, Global Lock
+		-- If Baggage is named NonLocal, SKIP
+		if name ~= 'NonLocalSuitcase' then
+			self.stats.RandoSuitcase[name] = 'collected'
+			self.stats.APItem[name] = 'collected'
+			local apcollect = fso('APCollected', 'APCollected')
+			apcollect:writeCollectedItem(name)
+			GamePrint('Stored '..name)
+			self.stats.CurrentSuitcaseTags = self.stats.CurrentSuitcaseTags - 1
+		end
+		--Always increment total Suitcase count
+		self.stats.TotalSuitcase = self.stats.TotalSuitcase + 1
 
 		--send progressive baggage check
 		local settings = FindScriptObject('RandoSeed')
@@ -330,14 +333,19 @@ function Dart_hooks(Ob)
 	end
 
 	function Ob:onCollectedPurse(name,from)
-		self.stats.RandoPurse[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
-		local value = 1
-		self.stats.CurrentPurseTags = self.stats.CurrentPurseTags - value
-		self.stats.TotalPurse = self.stats.TotalPurse + value
+		-- Removes Baggage Tag from inventory, stores Collected Baggage, Global Lock
+		-- If Baggage is named NonLocal, SKIP
+		if name ~= 'NonLocalPurse' then
+			self.stats.RandoPurse[name] = 'collected'
+			self.stats.APItem[name] = 'collected'
+			local apcollect = fso('APCollected', 'APCollected')
+			apcollect:writeCollectedItem(name)
+			GamePrint('Stored '..name)
+			self.stats.CurrentPurseTags = self.stats.CurrentPurseTags - 1
+		end
+
+		--Always increment total Purse count
+		self.stats.TotalPurse = self.stats.TotalPurse + 1
 
 		--send progressive baggage check
 		local settings = FindScriptObject('RandoSeed')
@@ -352,14 +360,18 @@ function Dart_hooks(Ob)
 	end
 
 	function Ob:onCollectedHatbox(name,from)
-		self.stats.RandoHatbox[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
-		local value = 1
-		self.stats.CurrentHatboxTags = self.stats.CurrentHatboxTags - value
-		self.stats.TotalHatbox = self.stats.TotalHatbox + value
+		-- Removes Baggage Tag from inventory, stores Collected Baggage, Global Lock
+		-- If Baggage is named NonLocal, SKIP
+		if name ~= 'NonLocalHatbox' then
+			self.stats.RandoHatbox[name] = 'collected'
+			self.stats.APItem[name] = 'collected'
+			local apcollect = fso('APCollected', 'APCollected')
+			apcollect:writeCollectedItem(name)
+			GamePrint('Stored '..name)
+			self.stats.CurrentHatboxTags = self.stats.CurrentHatboxTags - 1
+		end
+		--Always increment total Hatbox count
+		self.stats.TotalHatbox = self.stats.TotalHatbox + 1
 
 		--send progressive baggage check
 		local settings = FindScriptObject('RandoSeed')
@@ -374,14 +386,18 @@ function Dart_hooks(Ob)
 	end
 
 	function Ob:onCollectedSteamertrunk(name,from)
-		self.stats.RandoSteamertrunk[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
-		local value = 1
-		self.stats.CurrentSteamertrunkTags = self.stats.CurrentSteamertrunkTags - value
-		self.stats.TotalSteamertrunk = self.stats.TotalSteamertrunk + value
+		-- Removes Baggage Tag from inventory, stores Collected Baggage, Global Lock
+		-- If Baggage is named NonLocal, SKIP
+		if name ~= 'NonLocalSteamertrunk' then
+			self.stats.RandoSteamertrunk[name] = 'collected'
+			self.stats.APItem[name] = 'collected'
+			local apcollect = fso('APCollected', 'APCollected')
+			apcollect:writeCollectedItem(name)
+			GamePrint('Stored '..name)
+			self.stats.CurrentSteamertrunkTags = self.stats.CurrentSteamertrunkTags - 1
+		end
+		--Always increment total Steamertrunk count
+		self.stats.TotalSteamertrunk = self.stats.TotalSteamertrunk + 1
 
 		--send progressive baggage check
 		local settings = FindScriptObject('RandoSeed')
@@ -396,14 +412,18 @@ function Dart_hooks(Ob)
 	end
 
 	function Ob:onCollectedDufflebag(name,from)
-		self.stats.RandoDufflebag[name] = 'collected'
-		self.stats.APItem[name] = 'collected'
-		local apcollect = fso('APCollected', 'APCollected')
-		apcollect:writeCollectedItem(name)
-		GamePrint('Stored '..name)
-		local value = 1
-		self.stats.CurrentDufflebagTags = self.stats.CurrentDufflebagTags - value
-		self.stats.TotalDufflebag = self.stats.TotalDufflebag + value
+		-- Removes Baggage Tag from inventory, stores Collected Baggage, Global Lock
+		-- If Baggage is named NonLocal, SKIP
+		if name ~= 'NonLocalDufflebag' then
+			self.stats.RandoDufflebag[name] = 'collected'
+			self.stats.APItem[name] = 'collected'
+			local apcollect = fso('APCollected', 'APCollected')
+			apcollect:writeCollectedItem(name)
+			GamePrint('Stored '..name)
+			self.stats.CurrentDufflebagTags = self.stats.CurrentDufflebagTags - 1
+		end
+		--Always increment total Dufflebag count
+		self.stats.TotalDufflebag = self.stats.TotalDufflebag + 1
 
 		--send progressive baggage check
 		local settings = FindScriptObject('RandoSeed')

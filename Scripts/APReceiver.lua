@@ -34,6 +34,11 @@ function APReceiver(Ob)
             'Global.Collectibles.RandoLivesUp',
             'Global.Collectibles.RandoConfusionUp',
             'global.collectibles.RandoPsiChallengeMarker',
+            'global.collectibles.RandoSuitcase',
+            'global.collectibles.RandoPurse',
+            'global.collectibles.RandoHatbox',
+            'global.collectibles.RandoSteamertrunk',
+            'global.collectibles.RandoDufflebag',
             'global.collectibles.RandoSuitcaseTag',
             'global.collectibles.RandoPurseTag',
             'global.collectibles.RandoHatboxTag',
@@ -201,16 +206,13 @@ function APReceiver(Ob)
                     apName = '_' .. apName
                 end
 
-                -- Ignore baggage, because those are always collected locally.
-                if apClass ~= 'global.collectibles.RandoSuitcase' and apClass ~= 'global.collectibles.RandoPurse' and apClass ~= 'global.collectibles.RandoHatbox' and apClass ~= 'global.collectibles.RandoSteamertrunk' and apClass ~= 'global.collectibles.RandoDufflebag' then
-                    -- If the item is not a non-local copy, check player save data and skip if the item has already
-                    -- been collected.
-                    if isNonLocalCopy or Global.player.stats.APItem[apName] ~= 'collected' then
-                        -- send the item to the player
-                        self:getRandoItem(apClass, apName, isNonLocalCopy)
-                        -- pause so they don't all spawn at once
-                        self:sleep(1.2)
-                    end
+                -- If the item is not a non-local copy, check player save data and skip if the item has already
+                -- been collected.
+                if isNonLocalCopy or Global.player.stats.APItem[apName] ~= 'collected' then
+                    -- send the item to the player
+                    self:getRandoItem(apClass, apName, isNonLocalCopy)
+                    -- pause so they don't all spawn at once
+                    self:sleep(1.2)
                 end
 
                 -- Update the index of the last received item.
@@ -264,8 +266,30 @@ function APReceiver(Ob)
         --break open brain jars and vaults automatically
         if class == 'global.collectibles.BrainJar' or class == 'Global.Characters.Vault' then
             sentitem:setPosition(0, -100000, 0)
-            sentitem:onNewMoveMelee()           
+            sentitem:onNewMoveMelee()
+        --each baggage class has a seperate message handler in Dart, so a different message gets sent
+        elseif class == 'global.collectibles.RandoSuitcase' then
+            --send message to Dart, special name because nonlocal
+            self:sendMessage(Global.player, 'CollectedSuitcase', 'NonLocalSuitcase', 1)
+            sentitem:setState('Collection')
+        elseif class == 'global.collectibles.RandoPurse' then
+            --send message to Dart, special name because nonlocal
+            self:sendMessage(Global.player, 'CollectedPurse', 'NonLocalPurse', 1)
+            sentitem:setState('Collection')
+        elseif class == 'global.collectibles.RandoHatbox' then
+            --send message to Dart, special name because nonlocal
+            self:sendMessage(Global.player, 'CollectedHatbox', 'NonLocalHatbox', 1)
+            sentitem:setState('Collection')
+        elseif class == 'global.collectibles.RandoSteamertrunk' then
+            --send message to Dart, special name because nonlocal
+            self:sendMessage(Global.player, 'CollectedSteamertrunk', 'NonLocalSteamertrunk', 1)
+            sentitem:setState('Collection')
+        elseif class == 'global.collectibles.RandoDufflebag' then
+            --send message to Dart, special name because nonlocal
+            self:sendMessage(Global.player, 'CollectedDufflebag', 'NonLocalDufflebag', 1)
+            sentitem:setState('Collection')
         else
+            --not a vault, brain jar, or baggage
             --set item position on top of player, instantly collected
             local dart = fso('Dart')
             local x, y, z = dart:getPosition()
@@ -276,3 +300,4 @@ function APReceiver(Ob)
 
     return Ob
 end
+
