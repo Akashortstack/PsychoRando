@@ -11,7 +11,8 @@ Some locations need adjusting cleanup
 
 THINGS TO DO:
 
-Remove Psychonauts only Starting Inventory options, add StartInventoryPool
+Make baggage send Hint to client when interacted but can't collect.
+    outputs location ID to text file, client needs to read file and send hint
 
 Test Logic for Figment Percentage Checks
     what percent can be collected in each region sphere? Without Levitation?

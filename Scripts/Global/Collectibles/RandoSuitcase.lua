@@ -234,6 +234,14 @@ function RandoSuitcase(Ob)
 			Global.levelScript.emoBagCollectionRunning = 1
 			self:setState('Collection')
 		else	-- player hasnt picked up our tag yet
+
+			--edit Tell the client to hint this baggage if setting TRUE
+        	local seedsettings = fso('RandoSeed', 'Randoseed')
+			if seedsettings.baggageHints == TRUE then
+				local baggage_hinter = fso('APBaggageHints', 'APBaggageHints')
+				baggage_hinter:findBaggageID(self.Name)
+			end
+
 			self:playSound(self.noMatchSound,0,0)
 			if (self.sBaggageType == 'dufflebag') then
 				Global.player:sayLine("/GLEB000RA/",1, 1, nil, 1, nil, 1)	--DIALOG=<<This guy needs a duffle bag tag.>>
@@ -252,7 +260,7 @@ function RandoSuitcase(Ob)
 			end
 			self:setState(nil)			
 		end
-	end							
+	end
 	
 	function Ob:endStateActivated()
 		self.bProcessingActivated = nil
