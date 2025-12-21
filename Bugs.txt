@@ -11,9 +11,6 @@ Some locations need adjusting cleanup
 
 THINGS TO DO:
 
-Make baggage send Hint to client when interacted but can't collect.
-    outputs location ID to text file, client needs to read file and send hint
-
 Test Logic for Figment Percentage Checks
     what percent can be collected in each region sphere? Without Levitation?
 
@@ -31,7 +28,6 @@ Can we add MORE check locations?
     Shop Locations! Buy something, get check
         Painting Shops in BV, could be worth until fully randomizing possible
         Shop in Camp Store, currently just Colorizer, not exciting
-
 
 
 

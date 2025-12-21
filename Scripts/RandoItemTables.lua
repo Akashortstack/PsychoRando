@@ -171,8 +171,7 @@ AP_ITEM_COUNTS = {
     --54 are added for the Cobweb Shuffle option
     --80 are added for RankSanity
     --50 are added for FigmentPercents
-    --50 are added for Progressive Baggage
-    ['Card'] = 110 + 54 + 80 + 50 + 50,
+    ['Card'] = 110 + 54 + 80 + 50,
     --AP Placeholders, one for each location that can place an item into the game world
     ['AP Item '] = 318,
     --Added for the Deep Arrowhead Shuffle option
@@ -181,6 +180,9 @@ AP_ITEM_COUNTS = {
     ['AHSmall'] = 30 + 29,
     --20 are added for the Deep Arrowhead Shuffle option
     ['AHMedium'] = 5 + 20,
+    --10 are in the default item pool
+    --50 are added for Progressive Baggage
+    ['Marker'] = 10 + 50,
 }
 
 function RandoItemTables(Ob)

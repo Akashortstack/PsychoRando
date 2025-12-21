@@ -307,9 +307,9 @@ function Dart_hooks(Ob)
 
 ------CUSTOM BAGGAGE HANDLER------
 	function Ob:onCollectedSuitcase(name,from)
-		-- Removes Baggage Tag from inventory, stores Collected Baggage, Global Lock
 		-- If Baggage is named NonLocal, SKIP
 		if name ~= 'NonLocalSuitcase' then
+			-- Removes Baggage Tag from inventory, stores Collected Baggage, Global Lock
 			self.stats.RandoSuitcase[name] = 'collected'
 			self.stats.APItem[name] = 'collected'
 			local apcollect = fso('APCollected', 'APCollected')
@@ -327,9 +327,10 @@ function Dart_hooks(Ob)
 			-- Send an AP location check 
 			local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
 			baggageShuffle:collectedProgBaggageLocation("Suitcase"..suitcaseCount)
+		else
+			-- Rank Up Reward instead
+			self:incrementRank()
 		end
-		-- Rank Up Reward
-		self:incrementRank()
 	end
 
 	function Ob:onCollectedPurse(name,from)
@@ -354,9 +355,10 @@ function Dart_hooks(Ob)
 			-- Send an AP location check 
 			local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
 			baggageShuffle:collectedProgBaggageLocation("Purse"..purseCount)
+		else
+			-- Rank Up Reward instead
+			self:incrementRank()
 		end
-		-- Rank Up Reward
-		self:incrementRank()
 	end
 
 	function Ob:onCollectedHatbox(name,from)
@@ -380,9 +382,10 @@ function Dart_hooks(Ob)
 			-- Send an AP location check 
 			local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
 			baggageShuffle:collectedProgBaggageLocation("Hatbox"..hatboxCount)
+		else
+			-- Rank Up Reward instead
+			self:incrementRank()
 		end
-		-- Rank Up Reward
-		self:incrementRank()
 	end
 
 	function Ob:onCollectedSteamertrunk(name,from)
@@ -406,9 +409,10 @@ function Dart_hooks(Ob)
 			-- Send an AP location check 
 			local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
 			baggageShuffle:collectedProgBaggageLocation("Steamertrunk"..steamertrunkCount)
+		else
+			-- Rank Up Reward instead
+			self:incrementRank()
 		end
-		-- Rank Up Reward
-		self:incrementRank()
 	end
 
 	function Ob:onCollectedDufflebag(name,from)
@@ -432,9 +436,10 @@ function Dart_hooks(Ob)
 			-- Send an AP location check 
 			local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
 			baggageShuffle:collectedProgBaggageLocation("Dufflebag"..dufflebagCount)
+		else
+			-- Rank Up Reward instead
+			self:incrementRank()
 		end
-		-- Rank Up Reward
-		self:incrementRank()
 	end
 
 -- ****************************************************************************
