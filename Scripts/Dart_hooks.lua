@@ -539,51 +539,15 @@ function Dart_hooks(Ob)
 		self.stats.totalVaults = self.stats.totalVaults+1
 
 		local seedsettings = fso('RandoSeed', 'Randoseed')
-		if seedsettings.lootboxvaults == TRUE then
-			--Random Rewards! Loot Box!
-			--Random value of arrowheads to receive
-			self.randArrows = random (10, 50)
-			--Roll some RNG for Jackpots/Ranks to recieve
-			self.jackpotArrows = random (1, 50)
-			self.jackpotRanks = random (1, 50)
-		else
-			--Make Result Static, One Rank and 15 Arrowheads
-			self.randArrows = 15
-			self.jackpotArrows = 1
-			self.jackpotRanks = 26
-		end
-		
-		--2% chance for 250 arrowheads instead
-		if self.jackpotArrows == 50 then
-			UI_AdjustCollectible('arrowhead', 250, self)
-			SendMessage(self, self, 'Arrowhead', 250)
-			self.arrowsMessage = "250!!"
-		--8% chance for 100 arrowheads instead
-		elseif self.jackpotArrows >= 46 then
-			UI_AdjustCollectible('arrowhead', 100, self)
-			SendMessage(self, self, 'Arrowhead', 100)
-			self.arrowsMessage = "100!!"
-		else
-			UI_AdjustCollectible('arrowhead', self.randArrows, self)
-			SendMessage(self, self, 'Arrowhead', self.randArrows)
-			self.arrowsMessage = self.randArrows
+		if seedsettings.vaultHints == TRUE then
+			local vault_hints = fso('APVaultHints', 'APVaultHints')
+			vault_hints:writeVaultHint('Hint!')
 		end
 
-		--2% chance for 5 Ranks
-		if self.jackpotRanks == 50 then
-			self:incrementRank(5)
-			self.rankMessage = "Five Ranks!!!"
-		--8% chance for Two Ranks
-		elseif self.jackpotRanks >= 46 then
-			self:incrementRank(2)
-			self.rankMessage = "Two Ranks!"
-		--50% chance for One Rank
-		elseif self.jackpotRanks >= 26 then
-			self:incrementRank()
-			self.rankMessage = "One Rank!"
-		else
-			self.rankMessage = "None..."
-		end
+		-- Get 15 Arrowheads and One Rank
+		UI_AdjustCollectible('arrowhead', 15, self)
+		SendMessage(self, self, 'Arrowhead', 15)
+		self:incrementRank()
 		
 	end
 

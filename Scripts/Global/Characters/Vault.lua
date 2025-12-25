@@ -215,9 +215,6 @@ function Vault(Ob)
 		Global.player.invDisplayer:journalItemAdded(self)
 		--edit sendMessage to Dart
         self:sendMessage(Global.player, 'CollectedVault', self.Name, 1)
-
-		--Display Rewards generated in Dart
-		PrintMessage("Arrowheads: "..Global.player.arrowsMessage.."!\nRanks: "..Global.player.rankMessage, 0)
 		
 		--edit removing cutscene to prevent taking away player control, handled below instead
 		--Global.cutsceneScript.vault = self
