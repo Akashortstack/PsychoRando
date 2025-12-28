@@ -11,12 +11,12 @@ Some locations need adjusting cleanup
 
 THINGS TO DO:
 
-Test Logic for Figment Percentage Checks
-    what percent can be collected in each region sphere? Without Levitation?
+Add Vault quantity option to pair with VaultHints option?
+    Remove rank reward, increase arrowheads?
 
-Rework Vaults, lootboxes suck
-    Trap item with slideshow somehow?
-    Hints? Strong Flavor here, but what to hint? How to hint?
+Add extra goal messages to Bacon Hints from Ford
+    Maybe add these as well?: Max Progressive Baggage, Cobweb Shuffle, Deep Arowhead Shuffle
+    No good global voicelines
 
 Change Camp unlock models to different objects?
     Kids Cabins unlock to a Cabin

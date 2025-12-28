@@ -183,6 +183,9 @@ AP_ITEM_COUNTS = {
     --10 are in the default item pool
     --50 are added for Progressive Baggage
     ['Marker'] = 10 + 50,
+    --19 are in the default item pool
+    --up to 82 are added to make 101 max
+    ['Vault'] = 19 + 82
 }
 
 function RandoItemTables(Ob)

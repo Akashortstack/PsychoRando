@@ -228,7 +228,7 @@ function Vault(Ob)
 		self:killAllTimers()
 		
 		-- impact sound
-		self:playSound(self.rMeleeImpactSound)
+		Global.player:playSound(self.rMeleeImpactSound)
 
 		--edit removing arrowhead
 		--[[
@@ -247,9 +247,9 @@ function Vault(Ob)
 		self:setAnim(self.animsTable.TakeDamage)
 		
 --		SetEntityVisible(self.reel,1)
-		self:playSound(self.vaultOpenSound)
+		Global.player:playSound(self.vaultOpenSound)
 		--edit add the arrowhead sound effect here
-		self:playSound("ArrowheadPop")
+		Global.player:playSound("ArrowheadPop")
 
 		self:playAnimBlocking(self.animsTable.Open)
 	

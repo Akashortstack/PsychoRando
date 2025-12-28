@@ -544,10 +544,10 @@ function Dart_hooks(Ob)
 			vault_hints:writeVaultHint('Hint!')
 		end
 
-		-- Get 15 Arrowheads and One Rank
-		UI_AdjustCollectible('arrowhead', 15, self)
-		SendMessage(self, self, 'Arrowhead', 15)
-		self:incrementRank()
+		-- Get 25 Arrowheads 
+		UI_AdjustCollectible('arrowhead', 25, self)
+		SendMessage(self, self, 'Arrowhead', 25)
+		--self:incrementRank()
 		
 	end
 
