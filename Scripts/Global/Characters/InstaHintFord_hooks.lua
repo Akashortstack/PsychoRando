@@ -41,6 +41,13 @@ function InstaHintFord_hooks(Ob)
         return responses[responseType] and responses[responseType][value] or nil
     end
 
+    --Creates a forced tutorial textbox when dialog is chosen
+    function Ob:forcedTutorialTextbox(line)
+        Global:saveGlobal('bDisableTutorialBoxes', 0)
+        Global.levelScript:addTutorialBox(line)
+        Global:saveGlobal('bDisableTutorialBoxes', 1)
+    end
+
     --FULL FUNCTION OVERRIDE
     --Add Custom Archipelago responses to the Bacon
     function Ob:makeDialogTreeTable()
@@ -92,28 +99,19 @@ function InstaHintFord_hooks(Ob)
 
         if randoGoalText1 then
             tinsert(table.tResponse.node1_100, {
-                voice = randoGoalVoice1
-            })
-            tinsert(table.tResponse.node1_100, {
-                line  = randoGoalText1,
+                voice = randoGoalVoice1, preCallback = self.forcedTutorialTextbox, preCallbackArg = randoGoalText1
             })
         end
 
         if randoGoalText2 then
             tinsert(table.tResponse.node1_100, {
-                voice = randoGoalVoice2
-            })
-            tinsert(table.tResponse.node1_100, {
-                line  = randoGoalText2,
+                voice = randoGoalVoice2, preCallback = self.forcedTutorialTextbox, preCallbackArg = randoGoalText2
             })
         end
 
         if randoGoalText3 then
             tinsert(table.tResponse.node1_100, {
-                voice = randoGoalVoice3
-            })
-            tinsert(table.tResponse.node1_100, {
-                line  = randoGoalText3,
+                voice = randoGoalVoice3, preCallback = self.forcedTutorialTextbox, preCallbackArg = randoGoalText3
             })
         end
 		
