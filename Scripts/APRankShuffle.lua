@@ -129,6 +129,7 @@ function APRankShuffle(Ob)
                 Global:saveGlobal("APRankMax", rank)  -- update max rank collected
             else
                 GamePrint(name .. " is not a valid rank name")
+                Global:saveGlobal("APRankMax", rank)  -- update max rank collected
             end
         end
     end
