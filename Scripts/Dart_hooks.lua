@@ -543,11 +543,10 @@ function Dart_hooks(Ob)
 			local vault_hints = fso('APVaultHints', 'APVaultHints')
 			vault_hints:writeVaultHint('Hint!')
 		end
-
-		-- Get 25 Arrowheads 
-		UI_AdjustCollectible('arrowhead', 25, self)
-		SendMessage(self, self, 'Arrowhead', 25)
-		--self:incrementRank()
+		-- get a random amount of arrowheads between 25-75
+		local arrowhead_value = RandInt(25, 75)
+		UI_AdjustCollectible('arrowhead', arrowhead_value, self)
+		SendMessage(self, self, 'Arrowhead', arrowhead_value)
 		
 	end
 

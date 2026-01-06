@@ -11,9 +11,6 @@ Some locations need adjusting cleanup
 
 THINGS TO DO:
 
-Add Vault quantity option to pair with VaultHints option?
-    Remove rank reward, increase arrowheads?
-
 Add extra goal messages to Bacon Hints from Ford
     Maybe add these as well?: Max Progressive Baggage, Cobweb Shuffle, Deep Arowhead Shuffle
     No good global voicelines
