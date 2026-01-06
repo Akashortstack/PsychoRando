@@ -94,7 +94,6 @@ function RandoFigmentHandler(Ob)
         --pull the current level's Percent Threshold from the table
         local figmentThresholds = self[levelPrefix]
         local totalFigments = Global:loadGlobal('figmentCount'..levelPrefix)
-        GamePrint("Total Figments = "..totalFigments)
 
         for i = 1, getn(figmentThresholds) do
             local value = figmentThresholds[i]
