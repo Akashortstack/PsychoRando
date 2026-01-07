@@ -34,19 +34,8 @@ function CASA_hooks(Ob)
 			--Load Seed related settings
 			local settings = FindScriptObject('RandoSeed')
 
-			--Setting to start with Levitation in inventory
-			if settings.startlevitation == TRUE then
-				Global:saveGlobal('bGotRandoLevitation', 1)
-				EnablePower(kPOWER_LEVITATION)				
-			end
-
-			--Setting to start with Cobweb Duster, or Save that Cobweb Duster is Randomized
-			if settings.startcobweb == TRUE then
-				local duster = SpawnScript('Global.Collectibles.CobwebDuster', 'CobwebDuster')
-                Global.player:addToInventory(duster,0,1)
-			elseif settings.randomizecobwebduster == TRUE then
-				Global:saveGlobal('bCobwebRandomized', 1)
-			end
+			--Save that Cobweb Duster is Randomized, for Ford's Shop currently
+			Global:saveGlobal('bCobwebRandomized', 1)
 
 			--Setting to save that Dowsing Rod is Randomized
 			if settings.randomizeDowsingRod == TRUE then
@@ -56,6 +45,17 @@ function CASA_hooks(Ob)
 			--Setting to Start with Mental Magnet
 			if settings.mentalmagnet == TRUE then
 				Global:saveGlobal('bHasMentalMagnet', 1) 
+			end
+
+			--Setting to Start with PsiBall Colorizer
+			if settings.startingcolorizer == TRUE then
+				Global:saveGlobal('bCanChangePSIBallColor', 1) 
+			end
+
+			--Setting to start with a set psiball color
+			local rPsiBall = FindScriptObject('ThoughtBubble')
+			if (rPsiBall) then
+				rPsiBall:changeColor(settings.psiballColor)
 			end
 
 			--Setting to Remove all tutorials

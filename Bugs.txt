@@ -11,6 +11,13 @@ Some locations need adjusting cleanup
 
 THINGS TO DO:
 
+Dowsing Rod less button mashing
+
+Universal Tracker support
+
+Start with colorizer option
+
+
 Add extra goal messages to Bacon Hints from Ford
     Maybe add these as well?: Max Progressive Baggage, Cobweb Shuffle, Deep Arowhead Shuffle
     No good global voicelines
