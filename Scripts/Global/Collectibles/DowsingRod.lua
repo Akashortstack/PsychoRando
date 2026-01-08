@@ -112,9 +112,15 @@ function DowsingRod(Ob)
 	function Ob:onPostBeginLevel()
 		%Ob.Parent.onPostBeginLevel(self)
 
+		local settings = FindScriptObject('RandoSeed')
+
+		--edit option to make the dowsing rod require less mashing, vanilla value is 15
+		if settings.betterDowsingRod == TRUE then
+			self.ACTIVATE_INCREMENT = 30
+		end
+
 		--edit to work properly inside the shop, no animation or interestFX
-		local options = FindScriptObject('RandoSeed')
-		if options.randomizeDowsingRod == FALSE and Global.player:isInInventory('DowsingRod') ~= 1 then
+		if settings.randomizeDowsingRod == FALSE and Global.player:isInInventory('DowsingRod') ~= 1 then
 			self.bSold = 0
 			self.interestFX:stop(1, 0, 1)
 			self.interestFX = nil

@@ -5,7 +5,11 @@ function DisplayVersion(Ob)
 
     Ob.modName = "PsychoRando"
     Ob.version = "v2.0.3-BETA"
+    --*******************************************************************
+    --IMPORTANT!!! MUST MATCH APWORLD VERSION PASSED IN RANDOSEED.LUA!!!
+    --DON'T FORGET TO UPDATE!!!
     Ob.apworldExpectedVersion = "0.9.3"
+    --*******************************************************************
 
     Ob.modNameHandle = nil
     Ob.modVersionHandle = nil
@@ -21,8 +25,8 @@ function DisplayVersion(Ob)
 
         -- compare the apworld version in seed versus expected version
         if seedsettings.apworldVersion ~= self.apworldExpectedVersion then
-            DisplayText("RandoSeed version and Mod version not compatible!!!", 10, 100, 1.6, 1.6)
-            DisplayText("Please Update!!!", 10, 390, 1.6, 1.6)
+            DisplayText("RandoSeed version and Mod version not compatible!!!", 10, 100, 1.6, 1.6, 4, 0, 0, 255, 0, 0)
+            DisplayText("Please Update!!!", 10, 390, 1.6, 1.6, 4, 0, 0, 255, 0, 0)
         end
 
     end

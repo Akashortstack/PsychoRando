@@ -11,11 +11,13 @@ Some locations need adjusting cleanup
 
 THINGS TO DO:
 
-Dowsing Rod less button mashing
 
-Universal Tracker support
+Scavenger Hunt Rewards, complete 50% and all for a check each
+        Makes scav items progression, also a lot of work for only two check locations, maybe a yaml setting?
 
-Start with colorizer option
+Add Dream Fluffs to item pool
+
+
 
 
 Add extra goal messages to Bacon Hints from Ford
@@ -27,8 +29,7 @@ Change Camp unlock models to different objects?
     Reception Area to a Campfire
 
 Can we add MORE check locations? 
-    Scavenger Hunt Rewards, complete 50% and all for a check each
-        Makes scav items progression, also a lot of work for only two check locations, maybe a yaml setting?
+    
     Shop Locations! Buy something, get check
         Painting Shops in BV, could be worth until fully randomizing possible
         Shop in Camp Store, currently just Colorizer, not exciting
