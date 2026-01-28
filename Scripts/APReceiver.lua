@@ -269,25 +269,55 @@ function APReceiver(Ob)
             sentitem:onNewMoveMelee()
         --each baggage class has a seperate message handler in Dart, so a different message gets sent
         elseif class == 'global.collectibles.RandoSuitcase' then
-            --send message to Dart, special name because nonlocal
-            self:sendMessage(Global.player, 'CollectedSuitcase', 'NonLocalSuitcase', 1)
-            sentitem:setState('Collection')
+            if isNonLocalCopy then
+                --send message to Dart, special name because nonlocal
+                self:sendMessage(Global.player, 'CollectedSuitcase', 'NonLocalSuitcase', 1)
+                sentitem:setState('Collection')
+            else
+                --send message to Dart, use actual name
+                self:sendMessage(Global.player, 'CollectedSuitcase', name, 1)
+                sentitem:setState('Collection')
+            end
         elseif class == 'global.collectibles.RandoPurse' then
-            --send message to Dart, special name because nonlocal
-            self:sendMessage(Global.player, 'CollectedPurse', 'NonLocalPurse', 1)
-            sentitem:setState('Collection')
+            if isNonLocalCopy then
+                --send message to Dart, special name because nonlocal
+                self:sendMessage(Global.player, 'CollectedPurse', 'NonLocalPurse', 1)
+                sentitem:setState('Collection')
+            else
+                --send message to Dart, use actual name
+                self:sendMessage(Global.player, 'CollectedPurse', name, 1)
+                sentitem:setState('Collection')
+            end
         elseif class == 'global.collectibles.RandoHatbox' then
-            --send message to Dart, special name because nonlocal
-            self:sendMessage(Global.player, 'CollectedHatbox', 'NonLocalHatbox', 1)
-            sentitem:setState('Collection')
+            if isNonLocalCopy then
+                --send message to Dart, special name because nonlocal
+                self:sendMessage(Global.player, 'CollectedHatbox', 'NonLocalHatbox', 1)
+                sentitem:setState('Collection')
+            else
+                --send message to Dart, use actual name
+                self:sendMessage(Global.player, 'CollectedHatbox', name, 1)
+                sentitem:setState('Collection')
+            end
         elseif class == 'global.collectibles.RandoSteamertrunk' then
-            --send message to Dart, special name because nonlocal
-            self:sendMessage(Global.player, 'CollectedSteamertrunk', 'NonLocalSteamertrunk', 1)
-            sentitem:setState('Collection')
+            if isNonLocalCopy then
+                --send message to Dart, special name because nonlocal
+                self:sendMessage(Global.player, 'CollectedSteamertrunk', 'NonLocalSteamertrunk', 1)
+                sentitem:setState('Collection')
+            else
+                --send message to Dart, use actual name
+                self:sendMessage(Global.player, 'CollectedSteamertrunk', name, 1)
+                sentitem:setState('Collection')
+            end
         elseif class == 'global.collectibles.RandoDufflebag' then
-            --send message to Dart, special name because nonlocal
-            self:sendMessage(Global.player, 'CollectedDufflebag', 'NonLocalDufflebag', 1)
-            sentitem:setState('Collection')
+            if isNonLocalCopy then
+                --send message to Dart, special name because nonlocal
+                self:sendMessage(Global.player, 'CollectedDufflebag', 'NonLocalDufflebag', 1)
+                sentitem:setState('Collection')
+            else
+                --send message to Dart, use actual name
+                self:sendMessage(Global.player, 'CollectedDufflebag', name, 1)
+                sentitem:setState('Collection')
+            end
         else
             --not a vault, brain jar, or baggage
             --set item position on top of player, instantly collected

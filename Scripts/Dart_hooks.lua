@@ -307,138 +307,158 @@ function Dart_hooks(Ob)
 
 ------CUSTOM BAGGAGE HANDLER------
 	function Ob:onCollectedSuitcase(name,from)
-		-- If Baggage is named NonLocal, SKIP
-		if name ~= 'NonLocalSuitcase' then
-			-- Removes Baggage Tag from inventory, stores Collected Baggage, Global Lock
-			self.stats.RandoSuitcase[name] = 'collected'
-			self.stats.APItem[name] = 'collected'
-			local apcollect = fso('APCollected', 'APCollected')
-			apcollect:writeCollectedItem(name)
-			GamePrint('Stored '..name)
-			self.stats.CurrentSuitcaseTags = self.stats.CurrentSuitcaseTags - 1
-		end
-		--Always increment total Suitcase count
-		self.stats.TotalSuitcase = self.stats.TotalSuitcase + 1
+		-- Check if baggage already collected,
+		-- Bug can cause single baggage to try collecting multiple times
+		if self.stats.RandoSuitcase[name] ~= 'collected' or self.stats.RandoSuitcase[name] == nil then
+			-- If Baggage is named NonLocal, SKIP
+			if name ~= 'NonLocalSuitcase' then
+				-- Removes Baggage Tag from inventory, stores Collected Baggage, Global Lock
+				self.stats.RandoSuitcase[name] = 'collected'
+				self.stats.APItem[name] = 'collected'
+				local apcollect = fso('APCollected', 'APCollected')
+				apcollect:writeCollectedItem(name)
+				GamePrint('Stored '..name)
+				self.stats.CurrentSuitcaseTags = self.stats.CurrentSuitcaseTags - 1
+			end
+			--Always increment total Suitcase count
+			self.stats.TotalSuitcase = self.stats.TotalSuitcase + 1
 
-		--send progressive baggage check
-		local settings = FindScriptObject('RandoSeed')
-		local suitcaseCount = self.stats.TotalSuitcase
-		if (settings.progressiveBaggage == TRUE) and (settings.progressiveBaggageMax >= suitcaseCount) then
-			-- Send an AP location check 
-			local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
-			baggageShuffle:collectedProgBaggageLocation("Suitcase"..suitcaseCount)
-		else
-			-- Rank Up Reward instead
-			self:incrementRank()
+			--send progressive baggage check
+			local settings = FindScriptObject('RandoSeed')
+			local suitcaseCount = self.stats.TotalSuitcase
+			if (settings.progressiveBaggage == TRUE) and (settings.progressiveBaggageMax >= suitcaseCount) then
+				-- Send an AP location check 
+				local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
+				baggageShuffle:collectedProgBaggageLocation("Suitcase"..suitcaseCount)
+			else
+				-- Rank Up Reward instead
+				self:incrementRank()
+			end
 		end
 	end
 
 	function Ob:onCollectedPurse(name,from)
-		-- Removes Baggage Tag from inventory, stores Collected Baggage, Global Lock
-		-- If Baggage is named NonLocal, SKIP
-		if name ~= 'NonLocalPurse' then
-			self.stats.RandoPurse[name] = 'collected'
-			self.stats.APItem[name] = 'collected'
-			local apcollect = fso('APCollected', 'APCollected')
-			apcollect:writeCollectedItem(name)
-			GamePrint('Stored '..name)
-			self.stats.CurrentPurseTags = self.stats.CurrentPurseTags - 1
-		end
+		-- Check if baggage already collected,
+		-- Bug can cause single baggage to try collecting multiple times
+		if self.stats.RandoPurse[name] ~= 'collected' or self.stats.RandoPurse[name] == nil then
+			-- Removes Baggage Tag from inventory, stores Collected Baggage, Global Lock
+			-- If Baggage is named NonLocal, SKIP
+			if name ~= 'NonLocalPurse' then
+				self.stats.RandoPurse[name] = 'collected'
+				self.stats.APItem[name] = 'collected'
+				local apcollect = fso('APCollected', 'APCollected')
+				apcollect:writeCollectedItem(name)
+				GamePrint('Stored '..name)
+				self.stats.CurrentPurseTags = self.stats.CurrentPurseTags - 1
+			end
 
-		--Always increment total Purse count
-		self.stats.TotalPurse = self.stats.TotalPurse + 1
+			--Always increment total Purse count
+			self.stats.TotalPurse = self.stats.TotalPurse + 1
 
-		--send progressive baggage check
-		local settings = FindScriptObject('RandoSeed')
-		local purseCount = self.stats.TotalPurse
-		if (settings.progressiveBaggage == TRUE) and (settings.progressiveBaggageMax >= purseCount) then
-			-- Send an AP location check 
-			local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
-			baggageShuffle:collectedProgBaggageLocation("Purse"..purseCount)
-		else
-			-- Rank Up Reward instead
-			self:incrementRank()
+			--send progressive baggage check
+			local settings = FindScriptObject('RandoSeed')
+			local purseCount = self.stats.TotalPurse
+			if (settings.progressiveBaggage == TRUE) and (settings.progressiveBaggageMax >= purseCount) then
+				-- Send an AP location check 
+				local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
+				baggageShuffle:collectedProgBaggageLocation("Purse"..purseCount)
+			else
+				-- Rank Up Reward instead
+				self:incrementRank()
+			end
 		end
 	end
 
 	function Ob:onCollectedHatbox(name,from)
-		-- Removes Baggage Tag from inventory, stores Collected Baggage, Global Lock
-		-- If Baggage is named NonLocal, SKIP
-		if name ~= 'NonLocalHatbox' then
-			self.stats.RandoHatbox[name] = 'collected'
-			self.stats.APItem[name] = 'collected'
-			local apcollect = fso('APCollected', 'APCollected')
-			apcollect:writeCollectedItem(name)
-			GamePrint('Stored '..name)
-			self.stats.CurrentHatboxTags = self.stats.CurrentHatboxTags - 1
-		end
-		--Always increment total Hatbox count
-		self.stats.TotalHatbox = self.stats.TotalHatbox + 1
+		-- Check if baggage already collected,
+		-- Bug can cause single baggage to try collecting multiple times
+		if self.stats.RandoPurse[name] ~= 'collected' or self.stats.RandoPurse[name] == nil then
+			-- Removes Baggage Tag from inventory, stores Collected Baggage, Global Lock
+			-- If Baggage is named NonLocal, SKIP
+			if name ~= 'NonLocalHatbox' then
+				self.stats.RandoHatbox[name] = 'collected'
+				self.stats.APItem[name] = 'collected'
+				local apcollect = fso('APCollected', 'APCollected')
+				apcollect:writeCollectedItem(name)
+				GamePrint('Stored '..name)
+				self.stats.CurrentHatboxTags = self.stats.CurrentHatboxTags - 1
+			end
+			--Always increment total Hatbox count
+			self.stats.TotalHatbox = self.stats.TotalHatbox + 1
 
-		--send progressive baggage check
-		local settings = FindScriptObject('RandoSeed')
-		local hatboxCount = self.stats.TotalHatbox
-		if (settings.progressiveBaggage == TRUE) and (settings.progressiveBaggageMax >= hatboxCount) then
-			-- Send an AP location check 
-			local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
-			baggageShuffle:collectedProgBaggageLocation("Hatbox"..hatboxCount)
-		else
-			-- Rank Up Reward instead
-			self:incrementRank()
+			--send progressive baggage check
+			local settings = FindScriptObject('RandoSeed')
+			local hatboxCount = self.stats.TotalHatbox
+			if (settings.progressiveBaggage == TRUE) and (settings.progressiveBaggageMax >= hatboxCount) then
+				-- Send an AP location check 
+				local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
+				baggageShuffle:collectedProgBaggageLocation("Hatbox"..hatboxCount)
+			else
+				-- Rank Up Reward instead
+				self:incrementRank()
+			end
 		end
 	end
 
 	function Ob:onCollectedSteamertrunk(name,from)
-		-- Removes Baggage Tag from inventory, stores Collected Baggage, Global Lock
-		-- If Baggage is named NonLocal, SKIP
-		if name ~= 'NonLocalSteamertrunk' then
-			self.stats.RandoSteamertrunk[name] = 'collected'
-			self.stats.APItem[name] = 'collected'
-			local apcollect = fso('APCollected', 'APCollected')
-			apcollect:writeCollectedItem(name)
-			GamePrint('Stored '..name)
-			self.stats.CurrentSteamertrunkTags = self.stats.CurrentSteamertrunkTags - 1
-		end
-		--Always increment total Steamertrunk count
-		self.stats.TotalSteamertrunk = self.stats.TotalSteamertrunk + 1
+		-- Check if baggage already collected,
+		-- Bug can cause single baggage to try collecting multiple times
+		if self.stats.RandoSteamertrunk[name] ~= 'collected' or self.stats.RandoSteamertrunk[name] == nil then
+			-- Removes Baggage Tag from inventory, stores Collected Baggage, Global Lock
+			-- If Baggage is named NonLocal, SKIP
+			if name ~= 'NonLocalSteamertrunk' then
+				self.stats.RandoSteamertrunk[name] = 'collected'
+				self.stats.APItem[name] = 'collected'
+				local apcollect = fso('APCollected', 'APCollected')
+				apcollect:writeCollectedItem(name)
+				GamePrint('Stored '..name)
+				self.stats.CurrentSteamertrunkTags = self.stats.CurrentSteamertrunkTags - 1
+			end
+			--Always increment total Steamertrunk count
+			self.stats.TotalSteamertrunk = self.stats.TotalSteamertrunk + 1
 
-		--send progressive baggage check
-		local settings = FindScriptObject('RandoSeed')
-		local steamertrunkCount = self.stats.TotalSteamertrunk
-		if (settings.progressiveBaggage == TRUE) and (settings.progressiveBaggageMax >= steamertrunkCount) then
-			-- Send an AP location check 
-			local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
-			baggageShuffle:collectedProgBaggageLocation("Steamertrunk"..steamertrunkCount)
-		else
-			-- Rank Up Reward instead
-			self:incrementRank()
+			--send progressive baggage check
+			local settings = FindScriptObject('RandoSeed')
+			local steamertrunkCount = self.stats.TotalSteamertrunk
+			if (settings.progressiveBaggage == TRUE) and (settings.progressiveBaggageMax >= steamertrunkCount) then
+				-- Send an AP location check 
+				local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
+				baggageShuffle:collectedProgBaggageLocation("Steamertrunk"..steamertrunkCount)
+			else
+				-- Rank Up Reward instead
+				self:incrementRank()
+			end
 		end
 	end
 
 	function Ob:onCollectedDufflebag(name,from)
-		-- Removes Baggage Tag from inventory, stores Collected Baggage, Global Lock
-		-- If Baggage is named NonLocal, SKIP
-		if name ~= 'NonLocalDufflebag' then
-			self.stats.RandoDufflebag[name] = 'collected'
-			self.stats.APItem[name] = 'collected'
-			local apcollect = fso('APCollected', 'APCollected')
-			apcollect:writeCollectedItem(name)
-			GamePrint('Stored '..name)
-			self.stats.CurrentDufflebagTags = self.stats.CurrentDufflebagTags - 1
-		end
-		--Always increment total Dufflebag count
-		self.stats.TotalDufflebag = self.stats.TotalDufflebag + 1
+		-- Check if baggage already collected,
+		-- Bug can cause single baggage to try collecting multiple times
+		if self.stats.RandoDufflebag[name] ~= 'collected' or self.stats.RandoDufflebag[name] == nil then
+			-- Removes Baggage Tag from inventory, stores Collected Baggage, Global Lock
+			-- If Baggage is named NonLocal, SKIP
+			if name ~= 'NonLocalDufflebag' then
+				self.stats.RandoDufflebag[name] = 'collected'
+				self.stats.APItem[name] = 'collected'
+				local apcollect = fso('APCollected', 'APCollected')
+				apcollect:writeCollectedItem(name)
+				GamePrint('Stored '..name)
+				self.stats.CurrentDufflebagTags = self.stats.CurrentDufflebagTags - 1
+			end
+			--Always increment total Dufflebag count
+			self.stats.TotalDufflebag = self.stats.TotalDufflebag + 1
 
-		--send progressive baggage check
-		local settings = FindScriptObject('RandoSeed')
-		local dufflebagCount = self.stats.TotalDufflebag
-		if (settings.progressiveBaggage == TRUE) and (settings.progressiveBaggageMax >= dufflebagCount) then
-			-- Send an AP location check 
-			local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
-			baggageShuffle:collectedProgBaggageLocation("Dufflebag"..dufflebagCount)
-		else
-			-- Rank Up Reward instead
-			self:incrementRank()
+			--send progressive baggage check
+			local settings = FindScriptObject('RandoSeed')
+			local dufflebagCount = self.stats.TotalDufflebag
+			if (settings.progressiveBaggage == TRUE) and (settings.progressiveBaggageMax >= dufflebagCount) then
+				-- Send an AP location check 
+				local baggageShuffle = fso('APProgBaggageShuffle', 'APProgBaggageShuffle')
+				baggageShuffle:collectedProgBaggageLocation("Dufflebag"..dufflebagCount)
+			else
+				-- Rank Up Reward instead
+				self:incrementRank()
+			end
 		end
 	end
 

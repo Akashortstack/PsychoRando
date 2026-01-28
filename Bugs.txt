@@ -11,11 +11,14 @@ Some locations need adjusting cleanup
 
 THINGS TO DO:
 
+BUG: PsiChallengeMarker doesn't work in Crow Basket in AS
+
+Can we make Baggage Cutscene pause Raz movement without causing major bugs?
+
+Add Dream Fluffs to item pool
 
 Scavenger Hunt Rewards, complete 50% and all for a check each
         Makes scav items progression, also a lot of work for only two check locations, maybe a yaml setting?
-
-Add Dream Fluffs to item pool
 
 
 
