@@ -4,11 +4,11 @@ function DisplayVersion(Ob)
     end
 
     Ob.modName = "PsychoRando"
-    Ob.version = "v2.0.3-BETA"
+    Ob.version = "v2.1.0"
     --*******************************************************************
     --IMPORTANT!!! MUST MATCH APWORLD VERSION PASSED IN RANDOSEED.LUA!!!
     --DON'T FORGET TO UPDATE!!!
-    Ob.apworldExpectedVersion = "0.9.3"
+    Ob.apworldExpectedVersion = "1.0.0"
     --*******************************************************************
 
     Ob.modNameHandle = nil

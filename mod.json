@@ -1,9 +1,9 @@
 {
-    "id": "com.akashortstack.psychorandoBETA",
-    "name": "PsychoRandoBETA",
+    "id": "com.akashortstack.psychorando",
+    "name": "PsychoRando",
     "description": "Randomizer mod with full Archipelago support.",
     "author": "Akashortstack, Mysteryem",
-    "version": "2.0.3",
+    "version": "2.1.0",
     
     "dependencies": [
     ]
