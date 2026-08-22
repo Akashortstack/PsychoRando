@@ -11,6 +11,31 @@ Some locations need adjusting cleanup
 
 THINGS TO DO:
 
+BUG: PsiChallengeMarker doesn't work in Crow Basket in AS
+
+ADD TRAPS!!!
+
+Can we make Baggage Cutscene pause Raz movement without causing major bugs?
+
+Add Dream Fluffs to item pool
+
+
+Add extra goal messages to Bacon Hints from Ford
+    Maybe add these as well?: Max Progressive Baggage, Cobweb Shuffle, Deep Arowhead Shuffle
+    No good global voicelines
+
+Change Camp unlock models to different objects?
+    Kids Cabins unlock to a Cabin
+    Reception Area to a Campfire
+
+Can we add MORE check locations? 
+    
+    Shop Locations! Buy something, get check
+        Painting Shops in BV, could be worth until fully randomizing possible
+        Shop in Camp Store, currently just Colorizer, not exciting
+
+
+
 Give Brain Jars interestfx for more visibility?
 
 Cleanup Milkman
@@ -23,13 +48,12 @@ Look into applying certain sounds across all levels
 Add more junk items?
 
 Add Edgar's Playing Cards and Paintings to item pool?
+    Paintings cause Gloria's Theater Bug! How fix???
 
 Black Velvetopia potential shop painting rando? Needs work...
-    Could remove shop functionality entirely, just be collectible spots. Doesn't feel good.
 
 
 Scripts still needing Reworked to Hooks:
-    Dart.lua
     LevelScript.lua
     Global/Characters/Vault.lua
     Entire Folder Global/Collectibles

@@ -61,6 +61,14 @@ function RandoPlacer()
 		local d = fopen(folderName.."/DeathlinkOut.txt", "w")
 		fwrite(d, "")
 		fclose(d)
+
+		local e = fopen(folderName.."/BaggageHints.txt", "w")
+		fwrite(e, "")
+		fclose(e)
+
+		local f = fopen(folderName.."/VaultHints.txt", "w")
+		fwrite(f, "")
+		fclose(f)
 	end
 
 	-- Update the current level
@@ -73,6 +81,12 @@ function RandoPlacer()
 	SpawnScript('APCollected', 'APCollected')
 	SpawnScript('APDeepArrowheadShuffle', 'APDeepArrowheadShuffle')
 	SpawnScript('APCobwebShuffle', 'APCobwebShuffle')
+	SpawnScript('APRankShuffle', 'APRankShuffle')	
+	SpawnScript('APFigmentShuffle', 'APFigmentShuffle')	
+	SpawnScript('APProgBaggageShuffle', 'APProgBaggageShuffle')
+	SpawnScript('APScavHuntShuffle', 'APScavHuntShuffle')
+	SpawnScript('APBaggageHints', 'APBaggageHints')	
+	SpawnScript('APVaultHints', 'APVaultHints')	
 	SpawnScript('Deathlink', 'Deathlink')
 
 end

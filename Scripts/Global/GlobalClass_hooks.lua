@@ -12,4 +12,12 @@ function GlobalClass_hooks(Ob)
             %setLevelToCompleted_original(self)
         end
     end
+
+    --[[FULL FUNCTION OVERRIDE]]
+    --prevents collection achievements from ever being checked.
+    --prevents a bug when getting 100% figments in a level and ranking up at the same time
+    function Ob:CheckCollectionAchievement(key)
+
+    end
+
 end

@@ -169,7 +169,9 @@ AP_ITEM_COUNTS = {
 
     --AP has 1 less PSI Card by default since it has the Squirrel Roast Dinner taking up a location
     --54 are added for the Cobweb Shuffle option
-    ['Card'] = 110 + 54,
+    --80 are added for RankSanity
+    --50 are added for FigmentPercents
+    ['Card'] = 110 + 54 + 80 + 50,
     --AP Placeholders, one for each location that can place an item into the game world
     ['AP Item '] = 318,
     --Added for the Deep Arrowhead Shuffle option
@@ -178,6 +180,12 @@ AP_ITEM_COUNTS = {
     ['AHSmall'] = 30 + 29,
     --20 are added for the Deep Arrowhead Shuffle option
     ['AHMedium'] = 5 + 20,
+    --10 are in the default item pool
+    --50 are added for Progressive Baggage
+    ['Marker'] = 10 + 50,
+    --19 are in the default item pool
+    --up to 82 are added to make 101 max
+    ['Vault'] = 19 + 82
 }
 
 function RandoItemTables(Ob)

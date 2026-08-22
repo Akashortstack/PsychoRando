@@ -138,7 +138,7 @@ function RandoSteamertrunkTag(Ob)
 		end	
 		Yield()   --so the default anim loads so the clutch looks right
 		--edit to sendMessage to Dart
-		self:sendMessage(Global.player, 'CollectedSteamertrunkTag', self.Name, 1)
+		self:sendMessage(Global.player, 'CurrentSteamertrunkTags', self.Name, 1)
 		GamePrint('GotItem '..self.Name)
 
 		Global.player.invDisplayer:journalItemAdded(self)

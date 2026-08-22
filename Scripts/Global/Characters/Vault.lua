@@ -215,9 +215,6 @@ function Vault(Ob)
 		Global.player.invDisplayer:journalItemAdded(self)
 		--edit sendMessage to Dart
         self:sendMessage(Global.player, 'CollectedVault', self.Name, 1)
-
-		--Display Rewards generated in Dart
-		PrintMessage("Arrowheads: "..Global.player.arrowsMessage.."!\nRanks: "..Global.player.rankMessage, 0)
 		
 		--edit removing cutscene to prevent taking away player control, handled below instead
 		--Global.cutsceneScript.vault = self
@@ -231,7 +228,7 @@ function Vault(Ob)
 		self:killAllTimers()
 		
 		-- impact sound
-		self:playSound(self.rMeleeImpactSound)
+		Global.player:playSound(self.rMeleeImpactSound)
 
 		--edit removing arrowhead
 		--[[
@@ -250,9 +247,9 @@ function Vault(Ob)
 		self:setAnim(self.animsTable.TakeDamage)
 		
 --		SetEntityVisible(self.reel,1)
-		self:playSound(self.vaultOpenSound)
+		Global.player:playSound(self.vaultOpenSound)
 		--edit add the arrowhead sound effect here
-		self:playSound("ArrowheadPop")
+		Global.player:playSound("ArrowheadPop")
 
 		self:playAnimBlocking(self.animsTable.Open)
 	

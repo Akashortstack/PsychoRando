@@ -9,8 +9,10 @@ function MCTC_hooks(Ob)
     end
 
     local onPostBeginLevel_original = Ob.onPostBeginLevel
-
     function Ob:onPostBeginLevel()
+		--call original function
+        %onPostBeginLevel_original(self)
+		
         --[[Prevent entering Final Boss unless player has completed goals, check for any settings requirements,
 		spawn DoorFatLady.lua prop to block the door if uncompleted goals still
 		]]
@@ -64,22 +66,41 @@ function MCTC_hooks(Ob)
 				alllevelsmet = FALSE
 			end
 		end
-		
-		
+		--check to remove the trigger volume, or remove fat lady
 		if oleanderDefeated == FALSE or brainsMet == FALSE or scavhuntMet == FALSE or rank101Met == FALSE or alllevelsmet == FALSE then
-			GamePrint('Missing Win Condition, Spawn Fat Lady')
+			GamePrint('Missing a Win Condition, Spawn Fat Lady')
 			remove = fso('MCTCtoMCBB')
 			remove:killSelf()
+
 			--spawn DoorFatLady
 			local door = SpawnScript('global.props.DoorFatLady', 'NO_ENTRY')
 			door:setPosition(-1615, -1597, 16200)
 			door:setOrientation(0, -178, 0)
 		else
-			GamePrint('Remove Fat Lady')
-			--register the end of level trigger volume to add a brain for completing this level
-			RegisterTriggerVolume(self, 'tv_MCTCtoMCBB')
+			Global:save('bFatLadyGone', 1)
+			GamePrint('Fat Lady Removed')
 		end
-        --call original function
-        %onPostBeginLevel_original(self)
+    end
+
+	local onEnteredTriggerVolume_original = Ob.onEnteredTriggerVolume
+    function Ob:onEnteredTriggerVolume(data, from)
+		--check if the trigger volume is the load zone
+		if (data == 'tv_MCTCtoMCBB' and from == Global.player) then
+			--if fat lady is gone, load the zone
+			if (Global:load('bFatLadyGone') == 1) then
+				-- this is the extra brain of health for beating MC
+				if (Global:load('bMCTCCompleted') ~= 1) then
+					Global:save('bMCTCCompleted', 1)
+					Global.player:incrementMaxHealth(4)
+				end
+				self:loadNewLevel('MCBB')
+				return
+			else 
+				--fat lady present, don't load the level
+				return
+			end			
+		end
+		--check original trigger volumes
+        %onEnteredTriggerVolume_original(self,data,from)
     end
 end

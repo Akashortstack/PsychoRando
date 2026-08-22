@@ -19,10 +19,10 @@ function LOMA_hooks(Ob)
     local onBeginLevel_original = Ob.onBeginLevel
     function Ob:onBeginLevel()
         %onBeginLevel_original(self)
-        --edit Remove level load from LOMA to LOCB if LOCompleted to prevent softlocks
+        --Add platforms from LOMA to LOCB if LOCompleted to prevent softlocks
         if (Global:loadGlobal('bLOCompleted') == 1) then
-            local removeload = fso('Teleporter')
-            removeload:killSelf()
+            local lomaCutscenes = SpawnScript('LO.LOMACutscenes', 'LOMACutscenes')
+            lomaCutscenes:toggleBoats(Global.notSaved.dockingBoats, 1)
         end
     end
 

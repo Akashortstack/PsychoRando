@@ -16,6 +16,13 @@ function LOCB_hooks(Ob)
 
     end
 
+    --[[When loading LOCB, save last level as LOMA to prevent Rando Softlocks]]
+    local onPostBeginLevel_original = Ob.onPostBeginLevel
+    function Ob:onPostBeginLevel()
+        %onPostBeginLevel_original(self)
+        Global:save('lastSubLevel', 'LOMA')
+    end
+
     --FULL FUNCTION OVERRIDE
     --final cutscenes after climbing the antenna
     function Ob:stateEndLevel()

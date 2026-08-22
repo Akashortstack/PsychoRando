@@ -6,8 +6,25 @@ function Ford_hooks(Ob)
 	--Called when redeeming scavenger hunt items with Ranger Ford
     function Ob:collectScavItems()
         %collectScavItems_original(self)
-        --save variable used in MCTC to check if full scavenger hunt list is completed, useful for future Scav Hunt settings?
+        --save variable to check if scavenger hunt list is completed
+		--send locations if AP setting is on
+		if (Global:loadGlobal('bCollected8ScavengerItems') == 1 and Global:load('bRedeemed8ScavengerItems') ~= 1) then
+			local settings = FindScriptObject('RandoSeed')
+			if (settings.scavHuntLocations >=1) then
+				-- Send an AP location check 
+				local scavhuntShuffle = fso('APScavHuntShuffle', 'APScavHuntShuffle')
+				scavhuntShuffle:collectedScavHuntLocation("ScavHunt50")
+			end
+			Global:saveGlobal('bRedeemed8ScavengerItems', 1)
+        end
+
         if (Global:loadGlobal('bCollected16ScavengerItems') == 1 and Global:load('bRedeemed16ScavengerItems') ~= 1) then
+			local settings = FindScriptObject('RandoSeed')
+			if (settings.scavHuntLocations >=2) then
+				-- Send an AP location check 
+				local scavhuntShuffle = fso('APScavHuntShuffle', 'APScavHuntShuffle')
+				scavhuntShuffle:collectedScavHuntLocation("ScavHunt100")
+			end
 			Global:saveGlobal('bRedeemed16ScavengerItems', 1)
         end
 

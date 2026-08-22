@@ -21,8 +21,8 @@ function RankPowerManager_hooks(Ob)
             ShieldDuration = 4,
             TKRange = 4,
             TKDamage = 1,
-            --edit Custom Encouragement, NEED LOCALIZATION
-            Encouragement = "Next Item at Rank 5",
+            --edit Custom Encouragement goes here if wanted. NEED LOCALIZATION
+            Encouragement = "",
 
             bAirMeleeCharge = 0,
             bPKDetonate = 0,
@@ -38,7 +38,6 @@ function RankPowerManager_hooks(Ob)
         },
         --[[remove powers and upgrades from rank up,
         Custom Encouragements, NEED LOCALIZATION
-        ]]
         [5] = {
             Encouragement = "Next Item at Rank 10", 
         },
@@ -105,6 +104,7 @@ function RankPowerManager_hooks(Ob)
         [95] = {
             Encouragement = "Next Item at Rank 101", 
         },
+        ]]
         [101] = { 
             bInfiniteAmmo = 1,
             bMaxPsycadetRank = 1,
